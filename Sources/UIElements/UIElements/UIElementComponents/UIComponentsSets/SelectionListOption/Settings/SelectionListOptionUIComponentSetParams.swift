@@ -10,4 +10,8 @@ public struct SelectionListOptionUIComponentSetParams: UIComponentSetParams {
     public static var `default`: SelectionListOptionUIComponentSetParams {
         return .init(title: "SelectionListOptionUIComponentSetParams.title")
     }
+    
+    public init(title: String) {
+        self.title = title
+    }
 }

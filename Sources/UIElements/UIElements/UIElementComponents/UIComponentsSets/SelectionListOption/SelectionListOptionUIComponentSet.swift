@@ -9,7 +9,7 @@ public final class SelectionListOptionUIComponentSet: UIView, UIComponentSet {
     
     private let button = OSButtonUIComponent()
     
-    var action: OSButtonUIComponent.Action?
+    public var action: OSButtonUIComponent.Action?
     
     public var settings: SelectionListOptionUIComponentSetSettings {
         didSet {

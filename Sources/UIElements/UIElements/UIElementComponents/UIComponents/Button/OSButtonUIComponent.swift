@@ -7,7 +7,7 @@ import UIKit
 
 public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
     
-    typealias Action = () -> Void
+    public typealias Action = () -> Void
     
     private(set) var button = UIButton(type: .custom)
     

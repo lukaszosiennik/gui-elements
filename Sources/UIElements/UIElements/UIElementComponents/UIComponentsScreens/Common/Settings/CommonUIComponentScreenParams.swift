@@ -10,4 +10,8 @@ public struct CommonUIComponentScreenParams: UIComponentScreenParams {
     public static var `default`: CommonUIComponentScreenParams {
         return .init(title: "CommonUIComponentScreenParams.title")
     }
+    
+    public init(title: String) {
+        self.title = title
+    }
 }
