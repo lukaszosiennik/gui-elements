@@ -3,9 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-final class DevUIComponentSetStyleFactory: UIElementComponentTypeStyleFactory, UIComponentSetStyleFactoryInterface {
+public final class DevUIComponentSetStyleFactory: UIElementComponentTypeStyleFactory, UIComponentSetStyleFactoryInterface {
     
-    func selectionListOption() -> UIElementComponentStylePack<SelectionListOptionUIComponentSetStyleProperties> {
+    public func selectionListOption() -> UIElementComponentStylePack<SelectionListOptionUIComponentSetStyleProperties> {
         return UIElementComponentStylePack(
             factory: self,
             style: UIElementComponentStyle(

@@ -5,19 +5,19 @@
 
 import UIKit
 
-final class SelectionListOptionUIComponentSet: UIView, UIComponentSet {
+public final class SelectionListOptionUIComponentSet: UIView, UIComponentSet {
     
     private let button = OSButtonUIComponent()
     
     var action: OSButtonUIComponent.Action?
     
-    var settings: SelectionListOptionUIComponentSetSettings {
+    public var settings: SelectionListOptionUIComponentSetSettings {
         didSet {
             setupSettings()
         }
     }
     
-    init(settings: SelectionListOptionUIComponentSetSettings = .default) {
+    public init(settings: SelectionListOptionUIComponentSetSettings = .default) {
         self.settings = settings
         super.init(frame: .zero)
         
@@ -34,15 +34,15 @@ final class SelectionListOptionUIComponentSet: UIView, UIComponentSet {
         setupActions()
     }
     
-    func setupParams() {
+    public func setupParams() {
         button.settings.params = .init(title: settings.params.title)
     }
     
-    func setupNestedStyle() {
+    public func setupNestedStyle() {
         button.settings.styleType = settings.stylePack.style.type
     }
     
-    func setupStyleLook() {
+    public func setupStyleLook() {
         guard let styleProperties = settings.stylePack.style.properties else {
             return
         }
@@ -52,7 +52,7 @@ final class SelectionListOptionUIComponentSet: UIView, UIComponentSet {
         layer.borderColor = styleProperties.look.borderColor.cgColor
     }
     
-    func setupStyleLayout() {
+    public func setupStyleLayout() {
         addSubview(button)
         
         translatesAutoresizingMaskIntoConstraints = false

@@ -3,25 +3,25 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-struct SelectionListOptionUIComponentSetSettings: UIComponentSetSettings {
+public struct SelectionListOptionUIComponentSetSettings: UIComponentSetSettings {
     
-    var params: SelectionListOptionUIComponentSetParams
-    var stylePack: UIElementComponentStylePack<SelectionListOptionUIComponentSetStyleProperties>
+    public var params: SelectionListOptionUIComponentSetParams
+    public var stylePack: UIElementComponentStylePack<SelectionListOptionUIComponentSetStyleProperties>
     
-    init(params: SelectionListOptionUIComponentSetParams) {
+    public init(params: SelectionListOptionUIComponentSetParams) {
         self.init(params: params, stylePack: Self.stylePackFactory?.selectionListOption() ?? .default)
     }
     
-    init(params: SelectionListOptionUIComponentSetParams, styleType: UIStyleType) {
+    public init(params: SelectionListOptionUIComponentSetParams, styleType: UIStyleType) {
         self.init(params: params, stylePack: Self.stylePack(for: styleType))
     }
     
-    init(params: SelectionListOptionUIComponentSetParams, stylePack: UIElementComponentStylePack<SelectionListOptionUIComponentSetStyleProperties>) {
+    public init(params: SelectionListOptionUIComponentSetParams, stylePack: UIElementComponentStylePack<SelectionListOptionUIComponentSetStyleProperties>) {
         self.params = params
         self.stylePack = stylePack
     }
     
-    static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<SelectionListOptionUIComponentSetStyleProperties> {
+    public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<SelectionListOptionUIComponentSetStyleProperties> {
         return Self.stylePackFactory(for: styleType)?.selectionListOption() ?? .default
     }
 }

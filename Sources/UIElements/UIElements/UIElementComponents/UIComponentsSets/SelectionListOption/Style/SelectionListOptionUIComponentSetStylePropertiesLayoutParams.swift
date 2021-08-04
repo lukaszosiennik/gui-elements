@@ -3,4 +3,4 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-struct SelectionListOptionUIComponentSetStylePropertiesLayoutParams: UIComponentSetStylePropertiesLayoutParams {}
+public struct SelectionListOptionUIComponentSetStylePropertiesLayoutParams: UIComponentSetStylePropertiesLayoutParams {}

@@ -3,11 +3,11 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-struct CommonUIComponentScreenParams: UIComponentScreenParams {
+public struct CommonUIComponentScreenParams: UIComponentScreenParams {
     
-    let title: String
+    public let title: String
     
-    static var `default`: CommonUIComponentScreenParams {
+    public static var `default`: CommonUIComponentScreenParams {
         return .init(title: "CommonUIComponentScreenParams.title")
     }
 }

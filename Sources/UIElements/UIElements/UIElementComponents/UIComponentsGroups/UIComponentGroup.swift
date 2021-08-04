@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UIComponentGroup: UIElementComponent {
+public protocol UIComponentGroup: UIElementComponent {
     
     associatedtype UIComponentGroupSettingsType: UIComponentGroupSettings
     

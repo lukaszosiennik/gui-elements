@@ -3,11 +3,11 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-class UIElementComponentTypeStyleFactory: UIElementComponentTypeStyleFactoryInterface {
+public class UIElementComponentTypeStyleFactory: UIElementComponentTypeStyleFactoryInterface {
     
-    let styleType: UIStyleType
+    public let styleType: UIStyleType
     
-    required init(owner: UIElementStyleFactoryInterface) {
+    public required init(owner: UIElementStyleFactoryInterface) {
         self.styleType = owner.styleType
     }
 }

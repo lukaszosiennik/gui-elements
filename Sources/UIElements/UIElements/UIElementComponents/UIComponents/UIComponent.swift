@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UIComponent: UIElementComponent {
+public protocol UIComponent: UIElementComponent {
     
     associatedtype UIComponentSettingsType: UIComponentSettings
     
@@ -14,5 +14,5 @@ protocol UIComponent: UIElementComponent {
 
 extension UIComponent {
     
-    func setupNestedStyle() {}
+    public func setupNestedStyle() {}
 }

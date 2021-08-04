@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-struct UIElementComponentStylePack<StylePropertiesType: UIElementComponentStyleProperties> {
+public struct UIElementComponentStylePack<StylePropertiesType: UIElementComponentStyleProperties> {
     
     let factory: UIElementStyleFactoryInterface?
     let style: UIElementComponentStyle<StylePropertiesType>
@@ -11,11 +11,11 @@ struct UIElementComponentStylePack<StylePropertiesType: UIElementComponentStyleP
 
 extension UIElementComponentStylePack {
     
-    static var `default`: UIElementComponentStylePack<StylePropertiesType> {
+    public static var `default`: UIElementComponentStylePack<StylePropertiesType> {
         return `default`(factory: nil)
     }
     
-    static func `default`(factory: UIElementStyleFactoryInterface?) -> UIElementComponentStylePack<StylePropertiesType> {
+    public static func `default`(factory: UIElementStyleFactoryInterface?) -> UIElementComponentStylePack<StylePropertiesType> {
         return UIElementComponentStylePack<StylePropertiesType>(factory: factory, style: UIElementComponentStyle(type: .os, properties: nil))
     }
 }

@@ -3,4 +3,4 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UIColorPalette: UIPalette {}
+public protocol UIColorPalette: UIPalette {}

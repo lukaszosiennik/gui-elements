@@ -3,9 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactory, UIComponentStyleFactoryInterface {
+public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactory, UIComponentStyleFactoryInterface {
     
-    func label() -> UIElementComponentStylePack<LabelUIComponentStyleProperties> {
+    public func label() -> UIElementComponentStylePack<LabelUIComponentStyleProperties> {
         return UIElementComponentStylePack(
             factory: self,
             style: UIElementComponentStyle(
@@ -18,7 +18,7 @@ final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactory, UICo
         )
     }
     
-    func button() -> UIElementComponentStylePack<ButtonUIComponentStyleProperties> {
+    public func button() -> UIElementComponentStylePack<ButtonUIComponentStyleProperties> {
         return .default(factory: self)
     }
 }

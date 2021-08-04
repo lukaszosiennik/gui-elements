@@ -5,17 +5,17 @@
 
 import UIKit
 
-final class CommonUIComponentScreen: UIView, UIComponentScreen {
+public final class CommonUIComponentScreen: UIView, UIComponentScreen {
     
     private let titleLabel = LabelUIComponent()
     
-    var settings: CommonUIComponentScreenSettings {
+    public var settings: CommonUIComponentScreenSettings {
         didSet {
             setupSettings()
         }
     }
     
-    init(settings: CommonUIComponentScreenSettings = .default) {
+    public init(settings: CommonUIComponentScreenSettings = .default) {
         self.settings = settings
         super.init(frame: .zero)
         
@@ -30,15 +30,15 @@ final class CommonUIComponentScreen: UIView, UIComponentScreen {
         setupSettings()
     }
     
-    func setupParams() {
+    public func setupParams() {
         titleLabel.settings.params = .init(text: settings.params.title)
     }
     
-    func setupNestedStyle() {
+    public func setupNestedStyle() {
         titleLabel.settings.styleType = settings.stylePack.style.type
     }
     
-    func setupStyleLook() {
+    public func setupStyleLook() {
         guard let styleProperties = settings.stylePack.style.properties else {
             return
         }
@@ -46,7 +46,7 @@ final class CommonUIComponentScreen: UIView, UIComponentScreen {
         backgroundColor = styleProperties.look.backgroundColor
     }
     
-    func setupStyleLayout() {
+    public func setupStyleLayout() {
         addSubview(titleLabel)
         
         translatesAutoresizingMaskIntoConstraints = false

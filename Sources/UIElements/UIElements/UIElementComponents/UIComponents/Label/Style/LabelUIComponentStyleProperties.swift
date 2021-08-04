@@ -3,12 +3,12 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-struct LabelUIComponentStyleProperties: UIComponentStyleProperties {
+public struct LabelUIComponentStyleProperties: UIComponentStyleProperties {
     
-    var look: LabelUIComponentStylePropertiesLook
-    var layoutParams: LabelUIComponentStylePropertiesLayoutParams
+    public var look: LabelUIComponentStylePropertiesLook
+    public var layoutParams: LabelUIComponentStylePropertiesLayoutParams
     
-    init(look: LabelUIComponentStylePropertiesLook, layoutParams: LabelUIComponentStylePropertiesLayoutParams) {
+    public init(look: LabelUIComponentStylePropertiesLook, layoutParams: LabelUIComponentStylePropertiesLayoutParams) {
         self.look = look
         self.layoutParams = layoutParams
     }

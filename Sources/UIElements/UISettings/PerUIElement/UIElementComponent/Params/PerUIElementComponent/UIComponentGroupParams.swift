@@ -3,4 +3,4 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UIComponentGroupParams: UIElementComponentParams {}
+public protocol UIComponentGroupParams: UIElementComponentParams {}

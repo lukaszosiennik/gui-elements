@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UILayoutStyleProperties: UIElementStyleProperties {
+public protocol UILayoutStyleProperties: UIElementStyleProperties {
     
     associatedtype UILayoutStylePropertiesParamsType: UILayoutStylePropertiesParams
     

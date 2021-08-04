@@ -3,11 +3,11 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-struct LabelUIComponentParams: UIComponentParams {
+public struct LabelUIComponentParams: UIComponentParams {
     
-    let text: String
+    public let text: String
     
-    static var `default`: LabelUIComponentParams {
+    public static var `default`: LabelUIComponentParams {
         return .init(text: "LabelUIComponentParams.text")
     }
 }

@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UIElementComponentSettings: UIElementSettings {
+public protocol UIElementComponentSettings: UIElementSettings {
     
     associatedtype UIElementComponentParamsType: UIElementComponentParams
     associatedtype UIElementComponentStylePropertiesType: UIElementComponentStyleProperties
@@ -23,11 +23,11 @@ protocol UIElementComponentSettings: UIElementSettings {
 
 extension UIElementComponentSettings {
     
-    static var `default`: Self {
+    public static var `default`: Self {
         return .init(params: .default)
     }
     
-    var styleType: UIStyleType {
+    public var styleType: UIStyleType {
         get {
             return stylePack.factory?.styleType ?? stylePack.style.type
         }
@@ -36,10 +36,10 @@ extension UIElementComponentSettings {
         }
     }
     
-    static var styleFactory: UIElementComponentStyleFactoryInterface? {
+    public static var styleFactory: UIElementComponentStyleFactoryInterface? {
         return styleFactoryProvider.currentFactory
     }
-    static func styleFactory(for styleType: UIStyleType) -> UIElementComponentStyleFactoryInterface? {
+    public static func styleFactory(for styleType: UIStyleType) -> UIElementComponentStyleFactoryInterface? {
         return styleFactoryProvider.factory(for: styleType)
     }
     

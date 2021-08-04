@@ -5,15 +5,15 @@
 
 import UIKit
 
-final class ButtonUIComponent: UIButton, ButtonUIComponentInterface {
+public final class ButtonUIComponent: UIButton, ButtonUIComponentInterface {
     
-    var settings: ButtonUIComponentSettings {
+    public var settings: ButtonUIComponentSettings {
         didSet {
             setupSettings()
         }
     }
     
-    init(settings: ButtonUIComponentSettings = .default) {
+    public init(settings: ButtonUIComponentSettings = .default) {
         self.settings = settings
         super.init(frame: .zero)
         
@@ -24,15 +24,15 @@ final class ButtonUIComponent: UIButton, ButtonUIComponentInterface {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupParams() {
+    public func setupParams() {
         setupParams(for: self)
     }
     
-    func setupStyleLook() {
+    public func setupStyleLook() {
         setupStyleLook(for: self)
     }
     
-    func setupStyleLayout() {
+    public func setupStyleLayout() {
         setupStyleLayout(for: self)
     }
 }

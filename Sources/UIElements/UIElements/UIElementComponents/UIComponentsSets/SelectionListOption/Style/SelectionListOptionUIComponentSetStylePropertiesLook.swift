@@ -5,10 +5,10 @@
 
 import UIKit
 
-struct SelectionListOptionUIComponentSetStylePropertiesLook: UIComponentSetStylePropertiesLook {
+public struct SelectionListOptionUIComponentSetStylePropertiesLook: UIComponentSetStylePropertiesLook {
     
-    let backgroundColor: UIColor
+    public let backgroundColor: UIColor
     
-    let borderWidth: CGFloat
-    let borderColor: UIColor
+    public let borderWidth: CGFloat
+    public let borderColor: UIColor
 }

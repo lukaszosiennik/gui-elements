@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UIElementStyleFactoryInterface {
+public protocol UIElementStyleFactoryInterface {
     
     var styleType: UIStyleType { get }
 }

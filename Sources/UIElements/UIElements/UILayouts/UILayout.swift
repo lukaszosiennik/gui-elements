@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UILayout: UIElement {
+public protocol UILayout: UIElement {
     
     associatedtype UILayoutSettingsType: UILayoutSettings
     

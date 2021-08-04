@@ -3,12 +3,12 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UIStyleConfigurationInterface {
+public protocol UIStyleConfigurationInterface {
     
     static var current: UIStyleType { get }
 }
 
-final class UIStyleConfiguration: UIStyleConfigurationInterface {
+public final class UIStyleConfiguration: UIStyleConfigurationInterface {
     
-    static var current: UIStyleType = .os
+    public static var current: UIStyleType = .os
 }

@@ -3,12 +3,12 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-struct ButtonUIComponentStyleProperties: UIComponentStyleProperties {
+public struct ButtonUIComponentStyleProperties: UIComponentStyleProperties {
     
-    var look: ButtonUIComponentStylePropertiesLook
-    var layoutParams: ButtonUIComponentStylePropertiesLayoutParams
+    public var look: ButtonUIComponentStylePropertiesLook
+    public var layoutParams: ButtonUIComponentStylePropertiesLayoutParams
     
-    init(look: ButtonUIComponentStylePropertiesLook, layoutParams: ButtonUIComponentStylePropertiesLayoutParams) {
+    public init(look: ButtonUIComponentStylePropertiesLook, layoutParams: ButtonUIComponentStylePropertiesLayoutParams) {
         self.look = look
         self.layoutParams = layoutParams
     }

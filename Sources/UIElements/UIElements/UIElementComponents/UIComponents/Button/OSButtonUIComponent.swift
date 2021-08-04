@@ -5,7 +5,7 @@
 
 import UIKit
 
-final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
+public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
     
     typealias Action = () -> Void
     
@@ -13,13 +13,13 @@ final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
     
     var action: Action?
     
-    var settings: ButtonUIComponentSettings {
+    public var settings: ButtonUIComponentSettings {
         didSet {
             setupSettings()
         }
     }
     
-    init(settings: ButtonUIComponentSettings = .default) {
+    public init(settings: ButtonUIComponentSettings = .default) {
         self.settings = settings
         super.init(frame: .zero)
         
@@ -43,15 +43,15 @@ final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
         setupActions()
     }
     
-    func setupParams() {
+    public func setupParams() {
         setupParams(for: button)
     }
     
-    func setupStyleLook() {
+    public func setupStyleLook() {
         setupStyleLook(for: button)
     }
     
-    func setupStyleLayout() {
+    public func setupStyleLayout() {
         subviews.forEach { subview in
             subview.removeFromSuperview()
         }

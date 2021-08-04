@@ -3,8 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-struct UILayoutStyle<PropertiesType: UILayoutStyleProperties>: UIElementStyle {
+public struct UILayoutStyle<PropertiesType: UILayoutStyleProperties>: UIElementStyle {
     
-    let type: UIStyleType
+    public let type: UIStyleType
     let properties: PropertiesType?
 }

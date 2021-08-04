@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-final class UIElementComponentStyleFactoryProvider: UIElementComponentStyleFactoryProviderInterface {
+public final class UIElementComponentStyleFactoryProvider: UIElementComponentStyleFactoryProviderInterface {
     
     private let styleFactory: [UIStyleType: UIElementComponentStyleFactoryInterface]
     
@@ -19,11 +19,11 @@ final class UIElementComponentStyleFactoryProvider: UIElementComponentStyleFacto
         ]
     }
     
-    static var currentFactory: UIElementComponentStyleFactoryInterface? {
+    public static var currentFactory: UIElementComponentStyleFactoryInterface? {
         return factory(for: UIStyleConfiguration.current)
     }
     
-    static func factory(for styleType: UIStyleType) -> UIElementComponentStyleFactoryInterface? {
+    public static func factory(for styleType: UIStyleType) -> UIElementComponentStyleFactoryInterface? {
         return shared.styleFactory[styleType]
     }
 }

@@ -3,11 +3,11 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-struct ButtonUIComponentParams: UIComponentParams {
+public struct ButtonUIComponentParams: UIComponentParams {
     
-    let title: String
+    public let title: String
     
-    static var `default`: ButtonUIComponentParams {
+    public static var `default`: ButtonUIComponentParams {
         return .init(title: "ButtonUIComponentParams.title")
     }
 }

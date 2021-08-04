@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UILayoutSettings: UIElementSettings {
+public protocol UILayoutSettings: UIElementSettings {
     
     associatedtype UILayoutStylePropertiesType: UILayoutStyleProperties
     
@@ -18,7 +18,7 @@ protocol UILayoutSettings: UIElementSettings {
 
 extension UILayoutSettings {
     
-    var styleType: UIStyleType {
+    public var styleType: UIStyleType {
         get {
             return stylePack.factory?.styleType ?? stylePack.style.type
         }

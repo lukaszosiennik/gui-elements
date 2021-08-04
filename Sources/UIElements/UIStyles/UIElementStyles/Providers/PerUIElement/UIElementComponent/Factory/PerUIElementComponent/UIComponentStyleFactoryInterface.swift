@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UIComponentStyleFactoryInterface: UIElementComponentTypeStyleFactoryInterface {
+public protocol UIComponentStyleFactoryInterface: UIElementComponentTypeStyleFactoryInterface {
     
     func label() -> UIElementComponentStylePack<LabelUIComponentStyleProperties>
     func button() -> UIElementComponentStylePack<ButtonUIComponentStyleProperties>

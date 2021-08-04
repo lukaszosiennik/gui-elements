@@ -3,4 +3,4 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UILayoutConstantPalette: UIConstantPalette {}
+public protocol UILayoutConstantPalette: UIConstantPalette {}

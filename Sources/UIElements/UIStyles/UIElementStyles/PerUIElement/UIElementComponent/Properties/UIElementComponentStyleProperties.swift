@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UIElementComponentStyleProperties: UIElementStyleProperties {
+public protocol UIElementComponentStyleProperties: UIElementStyleProperties {
     
     associatedtype UIElementComponentStylePropertiesLookType: UIElementComponentStylePropertiesLook
     associatedtype UIElementComponentStylePropertiesLayoutParamsType: UIElementComponentStylePropertiesLayoutParams

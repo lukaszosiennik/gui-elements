@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UIElementComponentTypeStyleFactoryInterface: UIElementStyleFactoryInterface {
+public protocol UIElementComponentTypeStyleFactoryInterface: UIElementStyleFactoryInterface {
     
     init(owner: UIElementStyleFactoryInterface)
 }

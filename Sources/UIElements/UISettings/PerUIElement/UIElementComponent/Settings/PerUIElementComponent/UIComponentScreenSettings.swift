@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UIComponentScreenSettings: UIElementComponentSettings where
+public protocol UIComponentScreenSettings: UIElementComponentSettings where
     UIElementComponentParamsType: UIComponentScreenParams,
     UIElementComponentStylePropertiesType: UIComponentScreenStyleProperties {
     
@@ -13,11 +13,11 @@ protocol UIComponentScreenSettings: UIElementComponentSettings where
 
 extension UIComponentScreenSettings {
     
-    static var stylePackFactory: UIComponentScreenStyleFactoryInterface? {
+    public static var stylePackFactory: UIComponentScreenStyleFactoryInterface? {
         return styleFactory?.uiComponentScreen
     }
     
-    static func stylePackFactory(for styleType: UIStyleType) -> UIComponentScreenStyleFactoryInterface? {
+    public static func stylePackFactory(for styleType: UIStyleType) -> UIComponentScreenStyleFactoryInterface? {
         return styleFactory(for: styleType)?.uiComponentScreen
     }
 }

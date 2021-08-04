@@ -3,11 +3,11 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-struct SelectionListOptionUIComponentSetParams: UIComponentSetParams {
+public struct SelectionListOptionUIComponentSetParams: UIComponentSetParams {
     
-    let title: String
+    public let title: String
     
-    static var `default`: SelectionListOptionUIComponentSetParams {
+    public static var `default`: SelectionListOptionUIComponentSetParams {
         return .init(title: "SelectionListOptionUIComponentSetParams.title")
     }
 }

@@ -3,12 +3,12 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-struct CommonUIComponentScreenStyleProperties: UIComponentScreenStyleProperties {
+public struct CommonUIComponentScreenStyleProperties: UIComponentScreenStyleProperties {
     
-    var look: CommonUIComponentScreenStylePropertiesLook
-    var layoutParams: CommonUIComponentScreenStylePropertiesLayoutParams
+    public var look: CommonUIComponentScreenStylePropertiesLook
+    public var layoutParams: CommonUIComponentScreenStylePropertiesLayoutParams
     
-    init(look: CommonUIComponentScreenStylePropertiesLook, layoutParams: CommonUIComponentScreenStylePropertiesLayoutParams) {
+    public init(look: CommonUIComponentScreenStylePropertiesLook, layoutParams: CommonUIComponentScreenStylePropertiesLayoutParams) {
         self.look = look
         self.layoutParams = layoutParams
     }

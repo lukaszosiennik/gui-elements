@@ -5,15 +5,15 @@
 
 import UIKit
 
-final class LabelUIComponent: UILabel, UIComponent {
+public final class LabelUIComponent: UILabel, UIComponent {
     
-    var settings: LabelUIComponentSettings {
+    public var settings: LabelUIComponentSettings {
         didSet {
             setupSettings()
         }
     }
     
-    init(settings: LabelUIComponentSettings = .default) {
+    public init(settings: LabelUIComponentSettings = .default) {
         self.settings = settings
         super.init(frame: .zero)
         
@@ -28,17 +28,17 @@ final class LabelUIComponent: UILabel, UIComponent {
         setupSettings()
     }
     
-    func setupParams() {
+    public func setupParams() {
         text = settings.params.text
     }
     
-    func setupStyleLook() {
+    public func setupStyleLook() {
         guard let styleLook = settings.stylePack.style.properties?.look else {
             return
         }
     }
     
-    func setupStyleLayout() {
+    public func setupStyleLayout() {
         translatesAutoresizingMaskIntoConstraints = false
         
         guard let styleLayoutParams = settings.stylePack.style.properties?.layoutParams else {

@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UIComponentGroupSettings: UIElementComponentSettings where
+public protocol UIComponentGroupSettings: UIElementComponentSettings where
     UIElementComponentParamsType: UIComponentGroupParams,
     UIElementComponentStylePropertiesType: UIComponentGroupStyleProperties {
     
@@ -13,11 +13,11 @@ protocol UIComponentGroupSettings: UIElementComponentSettings where
 
 extension UIComponentGroupSettings {
     
-    static var stylePackFactory: UIComponentGroupStyleFactoryInterface? {
+    public static var stylePackFactory: UIComponentGroupStyleFactoryInterface? {
         return styleFactory?.uiComponentGroup
     }
     
-    static func stylePackFactory(for styleType: UIStyleType) -> UIComponentGroupStyleFactoryInterface? {
+    public static func stylePackFactory(for styleType: UIStyleType) -> UIComponentGroupStyleFactoryInterface? {
         return styleFactory(for: styleType)?.uiComponentGroup
     }
 }

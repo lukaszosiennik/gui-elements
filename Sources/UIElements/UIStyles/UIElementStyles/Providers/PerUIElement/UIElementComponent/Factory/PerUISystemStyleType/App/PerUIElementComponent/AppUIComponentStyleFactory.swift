@@ -3,13 +3,13 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-final class AppUIComponentStyleFactory: UIElementComponentTypeStyleFactory, UIComponentStyleFactoryInterface {
+public final class AppUIComponentStyleFactory: UIElementComponentTypeStyleFactory, UIComponentStyleFactoryInterface {
     
-    func label() -> UIElementComponentStylePack<LabelUIComponentStyleProperties> {
+    public func label() -> UIElementComponentStylePack<LabelUIComponentStyleProperties> {
         return .default(factory: self)
     }
     
-    func button() -> UIElementComponentStylePack<ButtonUIComponentStyleProperties> {
+    public func button() -> UIElementComponentStylePack<ButtonUIComponentStyleProperties> {
         return .default(factory: self)
     }
 }

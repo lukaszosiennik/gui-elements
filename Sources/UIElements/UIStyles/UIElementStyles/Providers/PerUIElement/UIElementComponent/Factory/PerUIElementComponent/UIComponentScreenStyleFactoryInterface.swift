@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UIComponentScreenStyleFactoryInterface: UIElementComponentTypeStyleFactoryInterface {
+public protocol UIComponentScreenStyleFactoryInterface: UIElementComponentTypeStyleFactoryInterface {
     
     func common() -> UIElementComponentStylePack<CommonUIComponentScreenStyleProperties>
 }

@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-protocol UIComponentSetStyleFactoryInterface: UIElementComponentTypeStyleFactoryInterface {
+public protocol UIComponentSetStyleFactoryInterface: UIElementComponentTypeStyleFactoryInterface {
     
     func selectionListOption() -> UIElementComponentStylePack<SelectionListOptionUIComponentSetStyleProperties>
 }

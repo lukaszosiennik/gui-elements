@@ -5,7 +5,7 @@
 
 import UIKit
 
-protocol ButtonUIComponentInterface: UIComponent where UIComponentSettingsType == ButtonUIComponentSettings, Self: UIView {}
+public protocol ButtonUIComponentInterface: UIComponent where UIComponentSettingsType == ButtonUIComponentSettings, Self: UIView {}
 
 extension ButtonUIComponentInterface {
     

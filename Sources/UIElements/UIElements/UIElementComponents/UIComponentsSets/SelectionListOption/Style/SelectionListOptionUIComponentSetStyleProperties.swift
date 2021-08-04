@@ -3,12 +3,12 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-struct SelectionListOptionUIComponentSetStyleProperties: UIComponentSetStyleProperties {
+public struct SelectionListOptionUIComponentSetStyleProperties: UIComponentSetStyleProperties {
     
-    var look: SelectionListOptionUIComponentSetStylePropertiesLook
-    var layoutParams: SelectionListOptionUIComponentSetStylePropertiesLayoutParams
+    public var look: SelectionListOptionUIComponentSetStylePropertiesLook
+    public var layoutParams: SelectionListOptionUIComponentSetStylePropertiesLayoutParams
     
-    init(look: SelectionListOptionUIComponentSetStylePropertiesLook, layoutParams: SelectionListOptionUIComponentSetStylePropertiesLayoutParams) {
+    public init(look: SelectionListOptionUIComponentSetStylePropertiesLook, layoutParams: SelectionListOptionUIComponentSetStylePropertiesLayoutParams) {
         self.look = look
         self.layoutParams = layoutParams
     }
