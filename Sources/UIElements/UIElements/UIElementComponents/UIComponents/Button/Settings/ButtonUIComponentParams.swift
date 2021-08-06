@@ -10,4 +10,8 @@ public struct ButtonUIComponentParams: UIComponentParams {
     public static var `default`: ButtonUIComponentParams {
         return .init(title: "ButtonUIComponentParams.title")
     }
+    
+    public init(title: String) {
+        self.title = title
+    }
 }

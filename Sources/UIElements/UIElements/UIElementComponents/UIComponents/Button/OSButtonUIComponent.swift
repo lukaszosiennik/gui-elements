@@ -11,7 +11,7 @@ public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
     
     private(set) var button = UIButton(type: .custom)
     
-    var action: Action?
+    public var action: Action?
     
     public var settings: ButtonUIComponentSettings {
         didSet {

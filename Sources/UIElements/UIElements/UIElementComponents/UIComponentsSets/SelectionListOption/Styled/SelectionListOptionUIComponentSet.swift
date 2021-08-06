@@ -5,11 +5,7 @@
 
 import UIKit
 
-public final class SelectionListOptionUIComponentSet: UIView, UIComponentSet {
-    
-    private let button = OSButtonUIComponent()
-    
-    public var action: OSButtonUIComponent.Action?
+public final class SelectionListOptionUIComponentSet: SelectionListOptionOSButtonUIComponent, UIComponentSet {
     
     public var settings: SelectionListOptionUIComponentSetSettings {
         didSet {
@@ -19,7 +15,7 @@ public final class SelectionListOptionUIComponentSet: UIView, UIComponentSet {
     
     public init(settings: SelectionListOptionUIComponentSetSettings = .default) {
         self.settings = settings
-        super.init(frame: .zero)
+        super.init(button: OSButtonUIComponent())
         
         setup()
     }
@@ -30,8 +26,6 @@ public final class SelectionListOptionUIComponentSet: UIView, UIComponentSet {
     
     private func setup() {
         setupSettings()
-        
-        setupActions()
     }
     
     public func setupParams() {
@@ -53,30 +47,19 @@ public final class SelectionListOptionUIComponentSet: UIView, UIComponentSet {
     }
     
     public func setupStyleLayout() {
-        addSubview(button)
-        
-        translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            button.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
-            button.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
-            button.centerXAnchor.constraint(equalTo: centerXAnchor),
-            button.topAnchor.constraint(greaterThanOrEqualTo: topAnchor),
-            button.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
-            button.centerYAnchor.constraint(equalTo: centerYAnchor),
-        ])
-        
         guard let styleLayoutParams = settings.stylePack.style.properties?.layoutParams else {
             return
         }
     }
+}
+
+public class SelectionListOptionOSButtonUIComponent: SelectionListOption<OSButtonUIComponent> {
     
-    private func setupActions() {
+    override func setupActions() {
+        super.setupActions()
+        
         button.action = { [weak self] in
-            guard let self = self else { return }
-            
-            print("SelectionListOptionUIComponentSet \"\(self.settings.params.title)\" button action")
-            
-            self.action?()
+            self?.action?()
         }
     }
 }
