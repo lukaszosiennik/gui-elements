@@ -5,9 +5,7 @@
 
 import UIKit
 
-public class SelectionListOption<Button: UIView>: UIView {
-    
-    public typealias Action = () -> Void
+public class SelectionListOptionComponentSet<Button: UIView>: UIView, SelectionListOptionComponentSetInterface {
     
     let button: Button
     

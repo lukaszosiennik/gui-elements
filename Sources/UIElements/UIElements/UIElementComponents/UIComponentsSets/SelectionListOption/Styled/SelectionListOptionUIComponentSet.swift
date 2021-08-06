@@ -53,7 +53,7 @@ public final class SelectionListOptionUIComponentSet: SelectionListOptionOSButto
     }
 }
 
-public class SelectionListOptionOSButtonUIComponent: SelectionListOption<OSButtonUIComponent> {
+public class SelectionListOptionOSButtonUIComponent: SelectionListOptionComponentSet<OSButtonUIComponent> {
     
     override func setupActions() {
         super.setupActions()

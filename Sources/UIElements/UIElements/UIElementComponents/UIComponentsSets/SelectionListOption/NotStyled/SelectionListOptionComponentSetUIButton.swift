@@ -5,7 +5,7 @@
 
 import UIKit
 
-public final class SelectionListOptionUIButton: SelectionListOption<UIButton> {
+public final class SelectionListOptionComponentSetUIButton: SelectionListOptionComponentSet<UIButton> {
     
     public init(setupMe: ((UIButton) -> Void)? = nil) {
         super.init(button: UIButton(type: .system))
