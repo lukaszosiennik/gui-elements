@@ -5,7 +5,7 @@
 
 public final class AppUIComponentSetStyleFactory: UIElementComponentTypeStyleFactory, UIComponentSetStyleFactoryInterface {
     
-    public func selectionListOption() -> UIElementComponentStylePack<SelectionListOptionUIComponentSetStyleProperties> {
+    public func navigationMenuOption() -> UIElementComponentStylePack<NavigationMenuOptionUIComponentSetStyleProperties> {
         return .default(factory: self)
     }
 }

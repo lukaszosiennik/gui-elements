@@ -17,4 +17,17 @@ public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyle
             )
         )
     }
+    
+    public func navigationMenu() -> UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties> {
+        return UIElementComponentStylePack(
+            factory: self,
+            style: UIElementComponentStyle(
+                type: styleType,
+                properties: NavigationMenuUIComponentScreenStyleProperties(
+                    look: NavigationMenuUIComponentScreenStylePropertiesLook(),
+                    layoutParams: NavigationMenuUIComponentScreenStylePropertiesLayoutParams()
+                )
+            )
+        )
+    }
 }

@@ -24,6 +24,8 @@ public final class ButtonUIComponent: UIButton, ButtonUIComponentInterface {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func setupNestedSettings() {}
+    
     public func setupParams() {
         setupParams(for: self)
     }

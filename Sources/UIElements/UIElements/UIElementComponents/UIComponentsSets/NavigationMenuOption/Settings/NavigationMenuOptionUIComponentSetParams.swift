@@ -3,12 +3,12 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct SelectionListOptionUIComponentSetParams: UIComponentSetParams {
+public struct NavigationMenuOptionUIComponentSetParams: UIComponentSetParams {
     
     public let title: String
     
-    public static var `default`: SelectionListOptionUIComponentSetParams {
-        return .init(title: "SelectionListOptionUIComponentSetParams.title")
+    public static var `default`: NavigationMenuOptionUIComponentSetParams {
+        return .init(title: "NavigationMenuOptionUIComponentSetParams.title")
     }
     
     public init(title: String) {

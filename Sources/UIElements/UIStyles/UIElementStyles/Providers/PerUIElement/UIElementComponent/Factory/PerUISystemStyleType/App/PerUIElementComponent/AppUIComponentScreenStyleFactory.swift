@@ -8,4 +8,8 @@ public final class AppUIComponentScreenStyleFactory: UIElementComponentTypeStyle
     public func common() -> UIElementComponentStylePack<CommonUIComponentScreenStyleProperties> {
         return .default(factory: self)
     }
+    
+    public func navigationMenu() -> UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties> {
+        return .default(factory: self)
+    }
 }

@@ -5,7 +5,7 @@
 
 import UIKit
 
-public protocol SelectionListOptionComponentSetInterface where Self: UIView {
+public protocol InputUIElementComponentActionInterface where Self: UIView {
     
     typealias Action = () -> Void
     

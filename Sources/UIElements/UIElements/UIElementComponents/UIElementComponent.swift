@@ -5,9 +5,9 @@
 
 public protocol UIElementComponent: UIElement {
     
-    func setupParams()
+    func setupNestedSettings()
     
-    func setupNestedStyle()
+    func setupParams()
     
     func setupStyleLook()
     func setupStyleLayout()
@@ -16,13 +16,13 @@ public protocol UIElementComponent: UIElement {
 extension UIElementComponent {
     
     func setupSettings() {
+        setupNestedSettings()
+        
         setupParams()
         setupStyle()
     }
     
     func setupStyle() {
-        setupNestedStyle()
-        
         setupStyleLook()
         setupStyleLayout()
     }

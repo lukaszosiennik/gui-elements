@@ -28,12 +28,14 @@ public final class LabelUIComponent: UILabel, UIComponent {
         setupSettings()
     }
     
+    public func setupNestedSettings() {}
+    
     public func setupParams() {
         text = settings.params.text
     }
     
     public func setupStyleLook() {
-        guard let styleLook = settings.stylePack.style.properties?.look else {
+        guard let styleProperties = settings.stylePack.style.properties else {
             return
         }
     }
@@ -41,7 +43,7 @@ public final class LabelUIComponent: UILabel, UIComponent {
     public func setupStyleLayout() {
         translatesAutoresizingMaskIntoConstraints = false
         
-        guard let styleLayoutParams = settings.stylePack.style.properties?.layoutParams else {
+        guard let styleProperties = settings.stylePack.style.properties else {
             return
         }
     }

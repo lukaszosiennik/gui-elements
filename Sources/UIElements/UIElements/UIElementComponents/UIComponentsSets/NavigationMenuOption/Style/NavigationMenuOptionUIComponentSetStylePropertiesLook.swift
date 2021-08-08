@@ -5,7 +5,7 @@
 
 import UIKit
 
-public struct SelectionListOptionUIComponentSetStylePropertiesLook: UIComponentSetStylePropertiesLook {
+public struct NavigationMenuOptionUIComponentSetStylePropertiesLook: UIComponentSetStylePropertiesLook {
     
     public let backgroundColor: UIColor
     

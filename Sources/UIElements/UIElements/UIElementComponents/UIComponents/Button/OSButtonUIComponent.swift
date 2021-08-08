@@ -5,9 +5,7 @@
 
 import UIKit
 
-public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
-    
-    public typealias Action = () -> Void
+public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface, InputUIElementComponentActionInterface {
     
     private(set) var button = UIButton(type: .custom)
     
@@ -37,14 +35,18 @@ public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
     func setupSettings() {
         self.button = UIButton(type: settings.stylePack.style.properties == nil ? .system : .custom)
         
+        setupNestedSettings()
+        
         setupParams()
         setupStyle()
-        
-        setupActions()
     }
+    
+    public func setupNestedSettings() {}
     
     public func setupParams() {
         setupParams(for: button)
+        
+        setupActions()
     }
     
     public func setupStyleLook() {
@@ -73,8 +75,6 @@ public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
     }
     
     @objc private func defaultAction() {
-        print("OSButtonUIComponent \"\(settings.params.title)\" button action")
-        
         action?()
     }
 }

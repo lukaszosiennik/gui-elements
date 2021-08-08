@@ -1,27 +1,24 @@
 //
-//  Created by Łukasz Osiennik on 06/08/2021.
+//  Created by Łukasz Osiennik on 07/08/2021.
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
 import UIKit
 
-public final class SelectionListComponentScreen<OptionKey, OptionView: SelectionListOptionComponentSetInterface>: UIView {
+public final class NavigationMenuUIComponentScreen<OptionKey: NavigationMenuOptionKeyInterface>: UIView, UIComponentScreen {
+    
+    private let selectionList = NavigationMenuUIComponentGroup<OptionKey>()
     
     private let viewContainer = UIView()
     
-    private let selectionList: SelectionListComponentSet<OptionKey, OptionView>
-    
-    public var optionViewAction: ((OptionKey) -> Void)? {
-        get {
-            return selectionList.optionViewAction
-        }
-        set {
-            selectionList.optionViewAction = newValue
+    public var settings: NavigationMenuUIComponentScreenSettings<OptionKey> {
+        didSet {
+            setupSettings()
         }
     }
     
-    public init(selectionList: SelectionListComponentSet<OptionKey, OptionView>) {
-        self.selectionList = selectionList
+    public init(settings: NavigationMenuUIComponentScreenSettings<OptionKey> = .default) {
+        self.settings = settings
         super.init(frame: .zero)
 
         setup()
@@ -32,15 +29,31 @@ public final class SelectionListComponentScreen<OptionKey, OptionView: Selection
     }
     
     private func setup() {
-        setupView()
-        setupLayout()
+        setupSettings()
     }
     
-    private func setupView() {
+    public func setupNestedSettings() {
+        selectionList.settings = .init(
+            params: .init(
+                title: settings.params.title,
+                options: settings.params.options,
+                optionsAction: settings.params.optionsAction
+            ),
+            styleType: settings.styleType
+        )
+    }
+    
+    public func setupParams() {}
+    
+    public func setupStyleLook() {
         backgroundColor = .white
+        
+        guard let styleProperties = settings.stylePack.style.properties else {
+            return
+        }
     }
     
-    private func setupLayout() {
+    public func setupStyleLayout() {
         translatesAutoresizingMaskIntoConstraints = false
         addSubview(viewContainer)
         viewContainer.addSubview(selectionList)
@@ -59,5 +72,9 @@ public final class SelectionListComponentScreen<OptionKey, OptionView: Selection
             selectionList.trailingAnchor.constraint(equalTo: viewContainer.trailingAnchor),
             selectionList.centerYAnchor.constraint(equalTo: viewContainer.centerYAnchor),
         ])
+        
+        guard let styleProperties = settings.stylePack.style.properties else {
+            return
+        }
     }
 }

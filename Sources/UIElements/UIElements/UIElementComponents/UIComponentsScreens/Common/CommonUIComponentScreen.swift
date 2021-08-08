@@ -30,13 +30,14 @@ public final class CommonUIComponentScreen: UIView, UIComponentScreen {
         setupSettings()
     }
     
-    public func setupParams() {
-        titleLabel.settings.params = .init(text: settings.params.title)
+    public func setupNestedSettings() {
+        titleLabel.settings = .init(
+            params: .init(text: settings.params.title),
+            styleType: settings.styleType
+        )
     }
     
-    public func setupNestedStyle() {
-        titleLabel.settings.styleType = settings.stylePack.style.type
-    }
+    public func setupParams() {}
     
     public func setupStyleLook() {
         guard let styleProperties = settings.stylePack.style.properties else {
@@ -55,7 +56,7 @@ public final class CommonUIComponentScreen: UIView, UIComponentScreen {
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
         
-        guard let styleLayoutParams = settings.stylePack.style.properties?.layoutParams else {
+        guard let styleProperties = settings.stylePack.style.properties else {
             return
         }
     }
