@@ -5,11 +5,11 @@
 
 import UIKit
 
-public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet, NavigationMenuOptionUIElementComponentInterface {
+public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet {
     
-    private let optionButton = OSButtonUIComponent()
+    private let optionButtonUI = OSButtonUIComponent()
     
-    public var action: Action?
+    private var initialization: Bool = false
     
     public var settings: NavigationMenuOptionUIComponentSetSettings {
         didSet {
@@ -29,19 +29,22 @@ public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet, N
     }
     
     private func setup() {
+        initialization = true
         setupSettings()
+        initialization = false
     }
     
     public func setupNestedSettings() {
-        optionButton.settings = .init(
-            params: .init(title: settings.params.title),
+        optionButtonUI.settings = .init(
+            params: .init(
+                title: settings.params.title,
+                action: settings.params.action
+            ),
             styleType: settings.styleType
         )
     }
     
-    public func setupParams() {
-        setupActions()
-    }
+    public func setupParams() {}
     
     public func setupStyleLook() {
         guard let styleProperties = settings.stylePack.style.properties else {
@@ -54,27 +57,23 @@ public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet, N
     }
     
     public func setupStyleLayout() {
-        translatesAutoresizingMaskIntoConstraints = false
-        addSubview(optionButton)
-        
-        optionButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            optionButton.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
-            optionButton.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
-            optionButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            optionButton.topAnchor.constraint(greaterThanOrEqualTo: topAnchor),
-            optionButton.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
-            optionButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-        ])
+        if initialization {
+            translatesAutoresizingMaskIntoConstraints = false
+            
+            addSubview(optionButtonUI)
+            
+            NSLayoutConstraint.activate([
+                optionButtonUI.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
+                optionButtonUI.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
+                optionButtonUI.centerXAnchor.constraint(equalTo: centerXAnchor),
+                optionButtonUI.topAnchor.constraint(greaterThanOrEqualTo: topAnchor),
+                optionButtonUI.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
+                optionButtonUI.centerYAnchor.constraint(equalTo: centerYAnchor),
+            ])
+        }
         
         guard let styleProperties = settings.stylePack.style.properties else {
             return
-        }
-    }
-    
-    private func setupActions() {
-        optionButton.action = { [weak self] in
-            self?.action?()
         }
     }
 }

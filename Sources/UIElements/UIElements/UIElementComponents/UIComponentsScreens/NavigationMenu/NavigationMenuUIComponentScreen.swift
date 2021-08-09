@@ -5,11 +5,16 @@
 
 import UIKit
 
-public final class NavigationMenuUIComponentScreen<OptionKey: NavigationMenuOptionKeyInterface>: UIView, UIComponentScreen {
+public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComponentActionsKeyInterface>: UIView, UIComponentScreen {
     
-    private let selectionList = NavigationMenuUIComponentGroup<OptionKey>()
+    private let navigationMenuUI = NavigationMenuUIComponentGroup<OptionKey>()
     
     private let viewContainer = UIView()
+    
+    private let leadingSpaceConstraintID = "leadingSpace"
+    private let trailingSpaceConstraintID = "trailingSpace"
+    
+    private var initialization: Bool = false
     
     public var settings: NavigationMenuUIComponentScreenSettings<OptionKey> {
         didSet {
@@ -29,15 +34,17 @@ public final class NavigationMenuUIComponentScreen<OptionKey: NavigationMenuOpti
     }
     
     private func setup() {
+        initialization = true
         setupSettings()
+        initialization = false
     }
     
     public func setupNestedSettings() {
-        selectionList.settings = .init(
+        navigationMenuUI.settings = .init(
             params: .init(
                 title: settings.params.title,
                 options: settings.params.options,
-                optionsAction: settings.params.optionsAction
+                actions: settings.params.actions
             ),
             styleType: settings.styleType
         )
@@ -46,7 +53,9 @@ public final class NavigationMenuUIComponentScreen<OptionKey: NavigationMenuOpti
     public func setupParams() {}
     
     public func setupStyleLook() {
-        backgroundColor = .white
+        if initialization {
+            backgroundColor = .white
+        }
         
         guard let styleProperties = settings.stylePack.style.properties else {
             return
@@ -54,27 +63,47 @@ public final class NavigationMenuUIComponentScreen<OptionKey: NavigationMenuOpti
     }
     
     public func setupStyleLayout() {
-        translatesAutoresizingMaskIntoConstraints = false
-        addSubview(viewContainer)
-        viewContainer.addSubview(selectionList)
-        
-        viewContainer.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            viewContainer.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            viewContainer.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            viewContainer.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            viewContainer.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-        ])
-        
-        selectionList.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            selectionList.leadingAnchor.constraint(equalTo: viewContainer.leadingAnchor),
-            selectionList.trailingAnchor.constraint(equalTo: viewContainer.trailingAnchor),
-            selectionList.centerYAnchor.constraint(equalTo: viewContainer.centerYAnchor),
-        ])
+        if initialization {
+            translatesAutoresizingMaskIntoConstraints = false
+            
+            addSubview(viewContainer)
+            viewContainer.addSubview(navigationMenuUI)
+            
+            let leadingSpaceConstraint = viewContainer.leadingAnchor.constraint(equalTo: leadingAnchor)
+            leadingSpaceConstraint.identifier = leadingSpaceConstraintID
+            let trailingSpaceConstraint = viewContainer.trailingAnchor.constraint(equalTo: trailingAnchor)
+            trailingSpaceConstraint.identifier = trailingSpaceConstraintID
+            
+            viewContainer.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                leadingSpaceConstraint,
+                trailingSpaceConstraint,
+                viewContainer.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+                viewContainer.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            ])
+            
+            NSLayoutConstraint.activate([
+                navigationMenuUI.leadingAnchor.constraint(equalTo: viewContainer.leadingAnchor),
+                navigationMenuUI.trailingAnchor.constraint(equalTo: viewContainer.trailingAnchor),
+                navigationMenuUI.centerYAnchor.constraint(equalTo: viewContainer.centerYAnchor),
+            ])
+        } else {
+            constraint(with: leadingSpaceConstraintID, from: self)?.constant = 0
+            constraint(with: trailingSpaceConstraintID, from: self)?.constant = 0
+        }
         
         guard let styleProperties = settings.stylePack.style.properties else {
             return
         }
+        
+        constraint(with: leadingSpaceConstraintID, from: self)?.constant = styleProperties.layoutParams.leadingSpace
+        constraint(with: trailingSpaceConstraintID, from: self)?.constant = -styleProperties.layoutParams.trailingSpace
+    }
+}
+
+extension NavigationMenuUIComponentScreen {
+    
+    private func constraint(with identifier: String, from view: UIView) -> NSLayoutConstraint? {
+        return view.constraints.first { $0.identifier == identifier }
     }
 }

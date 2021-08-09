@@ -5,7 +5,7 @@
 
 public final class AppUIComponentScreenStyleFactory: UIElementComponentTypeStyleFactory, UIComponentScreenStyleFactoryInterface {
     
-    public func common() -> UIElementComponentStylePack<CommonUIComponentScreenStyleProperties> {
+    public func information() -> UIElementComponentStylePack<InformationUIComponentScreenStyleProperties> {
         return .default(factory: self)
     }
     

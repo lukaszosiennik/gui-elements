@@ -5,17 +5,19 @@
 
 import UIKit
 
-public final class CommonUIComponentScreen: UIView, UIComponentScreen {
+public final class InformationUIComponentScreen: UIView, UIComponentScreen {
     
-    private let titleLabel = LabelUIComponent()
+    private let titleLabelUI = LabelUIComponent()
     
-    public var settings: CommonUIComponentScreenSettings {
+    private var initialization: Bool = false
+    
+    public var settings: InformationUIComponentScreenSettings {
         didSet {
             setupSettings()
         }
     }
     
-    public init(settings: CommonUIComponentScreenSettings = .default) {
+    public init(settings: InformationUIComponentScreenSettings = .default) {
         self.settings = settings
         super.init(frame: .zero)
         
@@ -27,11 +29,13 @@ public final class CommonUIComponentScreen: UIView, UIComponentScreen {
     }
     
     private func setup() {
+        initialization = true
         setupSettings()
+        initialization = false
     }
     
     public func setupNestedSettings() {
-        titleLabel.settings = .init(
+        titleLabelUI.settings = .init(
             params: .init(text: settings.params.title),
             styleType: settings.styleType
         )
@@ -48,13 +52,16 @@ public final class CommonUIComponentScreen: UIView, UIComponentScreen {
     }
     
     public func setupStyleLayout() {
-        addSubview(titleLabel)
-        
-        translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
-        ])
+        if initialization {
+            translatesAutoresizingMaskIntoConstraints = false
+            
+            addSubview(titleLabelUI)
+            
+            NSLayoutConstraint.activate([
+                titleLabelUI.centerXAnchor.constraint(equalTo: centerXAnchor),
+                titleLabelUI.centerYAnchor.constraint(equalTo: centerYAnchor)
+            ])
+        }
         
         guard let styleProperties = settings.stylePack.style.properties else {
             return

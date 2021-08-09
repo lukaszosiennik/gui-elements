@@ -5,14 +5,14 @@
 
 public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyleFactory, UIComponentScreenStyleFactoryInterface {
     
-    public func common() -> UIElementComponentStylePack<CommonUIComponentScreenStyleProperties> {
+    public func information() -> UIElementComponentStylePack<InformationUIComponentScreenStyleProperties> {
         return UIElementComponentStylePack(
             factory: self,
             style: UIElementComponentStyle(
                 type: styleType,
-                properties: CommonUIComponentScreenStyleProperties(
-                    look: CommonUIComponentScreenStylePropertiesLook(backgroundColor: DevUIColorPalette.UIElementComponent.UIComponentScreen.Property.Background.white),
-                    layoutParams: CommonUIComponentScreenStylePropertiesLayoutParams()
+                properties: InformationUIComponentScreenStyleProperties(
+                    look: InformationUIComponentScreenStylePropertiesLook(backgroundColor: DevUIColorPalette.UIElementComponent.UIComponentScreen.Property.Background.white),
+                    layoutParams: InformationUIComponentScreenStylePropertiesLayoutParams()
                 )
             )
         )
@@ -25,7 +25,10 @@ public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyle
                 type: styleType,
                 properties: NavigationMenuUIComponentScreenStyleProperties(
                     look: NavigationMenuUIComponentScreenStylePropertiesLook(),
-                    layoutParams: NavigationMenuUIComponentScreenStylePropertiesLayoutParams()
+                    layoutParams: NavigationMenuUIComponentScreenStylePropertiesLayoutParams(
+                        leadingSpace: 16,
+                        trailingSpace: 16
+                    )
                 )
             )
         )

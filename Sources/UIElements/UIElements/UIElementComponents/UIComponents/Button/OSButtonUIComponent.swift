@@ -5,11 +5,9 @@
 
 import UIKit
 
-public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface, InputUIElementComponentActionInterface {
+public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
     
     private(set) var button = UIButton(type: .custom)
-    
-    public var action: Action?
     
     public var settings: ButtonUIComponentSettings {
         didSet {
@@ -75,6 +73,6 @@ public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface, Inpu
     }
     
     @objc private func defaultAction() {
-        action?()
+        settings.params.action?()
     }
 }

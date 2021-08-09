@@ -3,15 +3,20 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuOptionUIComponentSetParams: UIComponentSetParams {
+public struct NavigationMenuOptionUIComponentSetParams: UIComponentSetParams, InputUIElementComponentParamsActionInterface {
     
     public let title: String
+    public let action: Action?
     
     public static var `default`: NavigationMenuOptionUIComponentSetParams {
-        return .init(title: "NavigationMenuOptionUIComponentSetParams.title")
+        return .init(
+            title: "NavigationMenuOptionUIComponentSetParams.title",
+            action: nil
+        )
     }
     
-    public init(title: String) {
+    public init(title: String, action: Action?) {
         self.title = title
+        self.action = action
     }
 }

@@ -3,7 +3,7 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuUIComponentGroupSettings<OptionKey: NavigationMenuOptionKeyInterface>: UIComponentGroupSettings {
+public struct NavigationMenuUIComponentGroupSettings<OptionKey: InputUIElementComponentActionsKeyInterface>: UIComponentGroupSettings {
     
     public var params: NavigationMenuUIComponentGroupParams<OptionKey>
     public var stylePack: UIElementComponentStylePack<NavigationMenuUIComponentGroupStyleProperties>

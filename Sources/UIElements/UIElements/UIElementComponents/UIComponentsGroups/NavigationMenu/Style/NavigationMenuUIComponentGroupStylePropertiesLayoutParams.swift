@@ -10,6 +10,6 @@ public struct NavigationMenuUIComponentGroupStylePropertiesLayoutParams: UICompo
     public let titleTopSpace: CGFloat
     public let titleBottomSpace: CGFloat
     
-    public let optionHeight: CGFloat
+    public let optionHeight: CGFloat?
     public let optionsSpace: CGFloat
 }

@@ -3,11 +3,9 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-import UIKit
-
-public protocol InputUIElementComponentActionInterface where Self: UIView {
+public protocol InputUIElementComponentParamsActionInterface where Self: UIElementComponentParams {
     
     typealias Action = () -> Void
     
-    var action: Action? { get set }
+    var action: Action? { get }
 }
