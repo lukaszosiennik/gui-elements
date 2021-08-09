@@ -10,4 +10,8 @@ public struct LabelUIComponentParams: UIComponentParams {
     public static var `default`: LabelUIComponentParams {
         return .init(text: "LabelUIComponentParams.text")
     }
+    
+    public init(text: String) {
+        self.text = text
+    }
 }
