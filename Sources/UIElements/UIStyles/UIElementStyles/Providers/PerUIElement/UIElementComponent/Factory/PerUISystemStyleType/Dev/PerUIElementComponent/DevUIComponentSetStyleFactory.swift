@@ -12,9 +12,9 @@ public final class DevUIComponentSetStyleFactory: UIElementComponentTypeStyleFac
                 type: styleType,
                 properties: NavigationMenuOptionUIComponentSetStyleProperties(
                     look: NavigationMenuOptionUIComponentSetStylePropertiesLook(
-                        backgroundColor: DevUIColorPalette.UIElementComponent.UIComponentSet.SelectionListOption.background_white,
-                        borderWidth: DevUIElementComponentConstantPalette.UIElementComponent.UIComponentSet.SelectionListOption.borderWidth_1,
-                        borderColor: DevUIColorPalette.UIElementComponent.UIComponentSet.SelectionListOption.border_black
+                        backgroundColor: DevUIColorPalette.UIElementComponent.UIComponentSet.NavigationMenuOption.background_white,
+                        borderWidth: DevUIElementComponentConstantPalette.UIElementComponent.UIComponentSet.NavigationMenuOption.borderWidth_1,
+                        borderColor: DevUIColorPalette.UIElementComponent.UIComponentSet.NavigationMenuOption.border_black
                     ),
                     layoutParams: NavigationMenuOptionUIComponentSetStylePropertiesLayoutParams()
                 )

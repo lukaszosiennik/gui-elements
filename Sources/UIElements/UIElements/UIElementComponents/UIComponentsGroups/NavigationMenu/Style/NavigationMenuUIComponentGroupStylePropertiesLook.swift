@@ -3,4 +3,9 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuUIComponentGroupStylePropertiesLook: UIComponentGroupStylePropertiesLook {}
+import UIKit
+
+public struct NavigationMenuUIComponentGroupStylePropertiesLook: UIComponentGroupStylePropertiesLook {
+    
+    public let backgroundColor: UIColor
+}

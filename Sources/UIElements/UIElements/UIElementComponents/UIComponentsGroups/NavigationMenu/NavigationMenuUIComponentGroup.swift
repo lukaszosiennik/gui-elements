@@ -72,6 +72,8 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
         guard let styleProperties = settings.stylePack.style.properties else {
             return
         }
+        
+        backgroundColor = styleProperties.look.backgroundColor
     }
     
     public func setupStyleLayout() {

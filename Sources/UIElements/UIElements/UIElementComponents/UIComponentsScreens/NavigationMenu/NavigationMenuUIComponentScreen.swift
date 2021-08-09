@@ -53,13 +53,11 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
     public func setupParams() {}
     
     public func setupStyleLook() {
-        if initialization {
-            backgroundColor = .white
-        }
-        
         guard let styleProperties = settings.stylePack.style.properties else {
             return
         }
+        
+        backgroundColor = styleProperties.look.backgroundColor
     }
     
     public func setupStyleLayout() {

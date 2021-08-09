@@ -11,12 +11,14 @@ public final class DevUIComponentGroupStyleFactory: UIElementComponentTypeStyleF
             style: UIElementComponentStyle(
                 type: styleType,
                 properties: NavigationMenuUIComponentGroupStyleProperties(
-                    look: NavigationMenuUIComponentGroupStylePropertiesLook(),
+                    look: NavigationMenuUIComponentGroupStylePropertiesLook(
+                        backgroundColor: DevUIColorPalette.UIElementComponent.UIComponentGroup.NavigationMenu.background_white
+                    ),
                     layoutParams: NavigationMenuUIComponentGroupStylePropertiesLayoutParams(
-                        titleTopSpace: 16,
-                        titleBottomSpace: 16,
-                        optionHeight: 50,
-                        optionsSpace: 8
+                        titleTopSpace: DevUIElementComponentConstantPalette.UILayout.UIComponentGroup.NavigationMenu.titleMarginTop_16,
+                        titleBottomSpace: DevUIElementComponentConstantPalette.UILayout.UIComponentGroup.NavigationMenu.titleMarginBottom_16,
+                        optionHeight: DevUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup.NavigationMenu.optionSizeHeight_50,
+                        optionsSpace: DevUIElementComponentConstantPalette.UILayout.UIComponentGroup.NavigationMenu.optionsSpace_8
                     )
                 )
             )

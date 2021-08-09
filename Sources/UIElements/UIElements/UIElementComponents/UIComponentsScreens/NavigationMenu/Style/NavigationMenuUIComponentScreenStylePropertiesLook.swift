@@ -3,4 +3,9 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuUIComponentScreenStylePropertiesLook: UIComponentScreenStylePropertiesLook {}
+import UIKit
+
+public struct NavigationMenuUIComponentScreenStylePropertiesLook: UIComponentScreenStylePropertiesLook {
+    
+    public let backgroundColor: UIColor
+}

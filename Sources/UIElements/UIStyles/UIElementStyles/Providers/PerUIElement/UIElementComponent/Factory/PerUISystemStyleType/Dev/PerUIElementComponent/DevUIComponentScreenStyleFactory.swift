@@ -11,7 +11,9 @@ public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyle
             style: UIElementComponentStyle(
                 type: styleType,
                 properties: InformationUIComponentScreenStyleProperties(
-                    look: InformationUIComponentScreenStylePropertiesLook(backgroundColor: DevUIColorPalette.UIElementComponent.UIComponentScreen.Property.Background.white),
+                    look: InformationUIComponentScreenStylePropertiesLook(
+                        backgroundColor: DevUIColorPalette.UIElementComponent.UIComponentScreen.Information.background_white
+                    ),
                     layoutParams: InformationUIComponentScreenStylePropertiesLayoutParams()
                 )
             )
@@ -24,10 +26,12 @@ public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyle
             style: UIElementComponentStyle(
                 type: styleType,
                 properties: NavigationMenuUIComponentScreenStyleProperties(
-                    look: NavigationMenuUIComponentScreenStylePropertiesLook(),
+                    look: NavigationMenuUIComponentScreenStylePropertiesLook(
+                        backgroundColor: DevUIColorPalette.UIElementComponent.UIComponentScreen.NavigationMenuOption.background_white
+                    ),
                     layoutParams: NavigationMenuUIComponentScreenStylePropertiesLayoutParams(
-                        leadingSpace: 16,
-                        trailingSpace: 16
+                        leadingSpace: DevUIElementComponentConstantPalette.UILayout.UIComponentScreen.NavigationMenu.marginLeft_16,
+                        trailingSpace: DevUIElementComponentConstantPalette.UILayout.UIComponentScreen.NavigationMenu.marginRight_16
                     )
                 )
             )
