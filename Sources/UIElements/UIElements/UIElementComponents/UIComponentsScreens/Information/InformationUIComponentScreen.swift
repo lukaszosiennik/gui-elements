@@ -39,7 +39,16 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
             params: .init(
                 text: settings.params.title
             ),
-            styleType: settings.styleType
+            stylePack: .init(
+                factory: UIElementComponentStyleFactoryProvider.factory(for: settings.styleType),
+                style: .init(
+                    type: settings.styleType,
+                    properties: .init(
+                        look: .init(),
+                        layoutParams: .init(linesNumber: 0)
+                    )
+                )
+            )
         )
     }
     
@@ -59,13 +68,19 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
     
     public func setupStyleLayout() {
         if initialization {
+            titleLabelUI.textAlignment = .center
+            
             translatesAutoresizingMaskIntoConstraints = false
             
             addSubview(titleLabelUI)
             
             NSLayoutConstraint.activate([
+                titleLabelUI.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
+                titleLabelUI.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
                 titleLabelUI.centerXAnchor.constraint(equalTo: centerXAnchor),
-                titleLabelUI.centerYAnchor.constraint(equalTo: centerYAnchor)
+                titleLabelUI.topAnchor.constraint(greaterThanOrEqualTo: topAnchor),
+                titleLabelUI.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
+                titleLabelUI.centerYAnchor.constraint(equalTo: centerYAnchor),
             ])
         }
         

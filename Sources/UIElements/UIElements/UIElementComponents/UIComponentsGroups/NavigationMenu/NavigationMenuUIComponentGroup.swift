@@ -45,7 +45,16 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
             params: .init(
                 text: settings.params.title
             ),
-            styleType: settings.styleType
+            stylePack: .init(
+                factory: UIElementComponentStyleFactoryProvider.factory(for: settings.styleType),
+                style: .init(
+                    type: settings.styleType,
+                    properties: .init(
+                        look: .init(),
+                        layoutParams: .init(linesNumber: 0)
+                    )
+                )
+            )
         )
     }
     
@@ -80,7 +89,6 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
     
     public func setupStyleLayout() {
         if initialization {
-            titleLabelUI.numberOfLines = 0
             titleLabelUI.textAlignment = .center
             stackView.axis = .vertical
             stackView.distribution = UIStackView.Distribution.equalSpacing

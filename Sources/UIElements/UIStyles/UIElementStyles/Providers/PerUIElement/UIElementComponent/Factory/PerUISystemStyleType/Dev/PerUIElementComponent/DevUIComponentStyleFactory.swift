@@ -12,7 +12,9 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
                 type: styleType,
                 properties: .init(
                     look: .init(),
-                    layoutParams: .init()
+                    layoutParams: .init(
+                        linesNumber: DevUIElementComponentConstantPalette.UIElementComponent.UIComponent.LabelUIComponent.linesNumber_1
+                    )
                 )
             )
         )

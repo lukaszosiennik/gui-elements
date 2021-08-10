@@ -9,6 +9,7 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
     
     fileprivate enum All {
         
+        static let value_0: CGFloat = 0
         static let value_1: CGFloat = 1
         static let value_8: CGFloat = 8
         static let value_16: CGFloat = 16
@@ -23,7 +24,16 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
                 
                 enum Vertical {
                     
-                    static let height_50: CGFloat = All.value_50
+                    enum Height {
+                        
+                        static let value_50: CGFloat = All.value_50
+                    }
+                    
+                    enum LinesNumber {
+                        
+                        static let value_0: CGFloat = All.value_0
+                        static let value_1: CGFloat = All.value_1
+                    }
                 }
                 
                 enum Horizontal {}
@@ -59,7 +69,14 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
 
 extension DevUIElementComponentConstantPalette.UIElementComponent {
         
-    enum UIComponent {}
+    enum UIComponent {
+        
+        enum LabelUIComponent {
+            
+            static let linesNumber_0: Int = Int(Property.Size.Vertical.LinesNumber.value_0)
+            static let linesNumber_1: Int = Int(Property.Size.Vertical.LinesNumber.value_1)
+        }
+    }
     
     enum UIComponentSet {
         
@@ -73,7 +90,7 @@ extension DevUIElementComponentConstantPalette.UIElementComponent {
         
         enum NavigationMenu {
             
-            static let optionSizeHeight_50: CGFloat = Property.Size.Vertical.height_50
+            static let optionSizeHeight_50: CGFloat = Property.Size.Vertical.Height.value_50
         }
     }
     

@@ -46,5 +46,7 @@ public final class LabelUIComponent: UILabel, UIComponent {
         guard let styleProperties = settings.stylePack.style.properties else {
             return
         }
+        
+        numberOfLines = styleProperties.layoutParams.linesNumber
     }
 }
