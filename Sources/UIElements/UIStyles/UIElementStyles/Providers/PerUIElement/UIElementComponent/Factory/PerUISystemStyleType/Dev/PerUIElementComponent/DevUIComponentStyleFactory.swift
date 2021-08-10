@@ -6,13 +6,13 @@
 public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactory, UIComponentStyleFactoryInterface {
     
     public func label() -> UIElementComponentStylePack<LabelUIComponentStyleProperties> {
-        return UIElementComponentStylePack(
+        return .init(
             factory: self,
-            style: UIElementComponentStyle(
+            style: .init(
                 type: styleType,
-                properties: LabelUIComponentStyleProperties(
-                    look: LabelUIComponentStylePropertiesLook(),
-                    layoutParams: LabelUIComponentStylePropertiesLayoutParams()
+                properties: .init(
+                    look: .init(),
+                    layoutParams: .init()
                 )
             )
         )

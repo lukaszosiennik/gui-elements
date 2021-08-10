@@ -9,11 +9,17 @@ public struct ButtonUIComponentSettings: UIComponentSettings {
     public var stylePack: UIElementComponentStylePack<ButtonUIComponentStyleProperties>
     
     public init(params: ButtonUIComponentParams) {
-        self.init(params: params, stylePack: Self.stylePackFactory?.button() ?? .default)
+        self.init(
+            params: params,
+            stylePack: Self.stylePackFactory?.button() ?? .default
+        )
     }
     
     public init(params: ButtonUIComponentParams, styleType: UIStyleType) {
-        self.init(params: params, stylePack: Self.stylePack(for: styleType))
+        self.init(
+            params: params,
+            stylePack: Self.stylePack(for: styleType)
+        )
     }
     
     public init(params: ButtonUIComponentParams, stylePack: UIElementComponentStylePack<ButtonUIComponentStyleProperties>) {

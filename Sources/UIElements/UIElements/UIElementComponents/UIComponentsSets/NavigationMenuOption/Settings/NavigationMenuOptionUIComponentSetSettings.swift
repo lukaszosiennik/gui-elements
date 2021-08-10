@@ -9,11 +9,17 @@ public struct NavigationMenuOptionUIComponentSetSettings: UIComponentSetSettings
     public var stylePack: UIElementComponentStylePack<NavigationMenuOptionUIComponentSetStyleProperties>
     
     public init(params: NavigationMenuOptionUIComponentSetParams) {
-        self.init(params: params, stylePack: Self.stylePackFactory?.navigationMenuOption() ?? .default)
+        self.init(
+            params: params,
+            stylePack: Self.stylePackFactory?.navigationMenuOption() ?? .default
+        )
     }
     
     public init(params: NavigationMenuOptionUIComponentSetParams, styleType: UIStyleType) {
-        self.init(params: params, stylePack: Self.stylePack(for: styleType))
+        self.init(
+            params: params,
+            stylePack: Self.stylePack(for: styleType)
+        )
     }
     
     public init(params: NavigationMenuOptionUIComponentSetParams, stylePack: UIElementComponentStylePack<NavigationMenuOptionUIComponentSetStyleProperties>) {

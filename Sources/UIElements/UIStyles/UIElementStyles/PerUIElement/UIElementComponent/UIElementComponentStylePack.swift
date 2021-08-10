@@ -16,6 +16,12 @@ extension UIElementComponentStylePack {
     }
     
     public static func `default`(factory: UIElementStyleFactoryInterface?) -> UIElementComponentStylePack<StylePropertiesType> {
-        return UIElementComponentStylePack<StylePropertiesType>(factory: factory, style: UIElementComponentStyle(type: .os, properties: nil))
+        return UIElementComponentStylePack<StylePropertiesType>(
+            factory: factory,
+            style: UIElementComponentStyle(
+                type: .os(true), // TODO: need to be get from Settings init styleType
+                properties: nil
+            )
+        )
     }
 }

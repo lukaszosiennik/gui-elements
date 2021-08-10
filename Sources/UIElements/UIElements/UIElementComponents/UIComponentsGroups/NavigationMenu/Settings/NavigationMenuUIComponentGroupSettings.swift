@@ -9,11 +9,17 @@ public struct NavigationMenuUIComponentGroupSettings<OptionKey: InputUIElementCo
     public var stylePack: UIElementComponentStylePack<NavigationMenuUIComponentGroupStyleProperties>
     
     public init(params: NavigationMenuUIComponentGroupParams<OptionKey>) {
-        self.init(params: params, stylePack: Self.stylePackFactory?.navigationMenu() ?? .default)
+        self.init(
+            params: params,
+            stylePack: Self.stylePackFactory?.navigationMenu() ?? .default
+        )
     }
     
     public init(params: NavigationMenuUIComponentGroupParams<OptionKey>, styleType: UIStyleType) {
-        self.init(params: params, stylePack: Self.stylePack(for: styleType))
+        self.init(
+            params: params,
+            stylePack: Self.stylePack(for: styleType)
+        )
     }
     
     public init(params: NavigationMenuUIComponentGroupParams<OptionKey>, stylePack: UIElementComponentStylePack<NavigationMenuUIComponentGroupStyleProperties>) {

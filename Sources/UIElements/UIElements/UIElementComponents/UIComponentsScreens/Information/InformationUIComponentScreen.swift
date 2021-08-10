@@ -36,7 +36,9 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
     
     public func setupNestedSettings() {
         titleLabelUI.settings = .init(
-            params: .init(text: settings.params.title),
+            params: .init(
+                text: settings.params.title
+            ),
             styleType: settings.styleType
         )
     }
@@ -44,6 +46,10 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
     public func setupParams() {}
     
     public func setupStyleLook() {
+        if settings.styleType == .os(true) {
+            backgroundColor = .white
+        }
+        
         guard let styleProperties = settings.stylePack.style.properties else {
             return
         }

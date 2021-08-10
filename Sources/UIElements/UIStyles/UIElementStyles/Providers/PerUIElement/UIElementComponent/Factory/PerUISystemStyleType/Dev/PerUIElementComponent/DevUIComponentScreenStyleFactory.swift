@@ -6,30 +6,30 @@
 public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyleFactory, UIComponentScreenStyleFactoryInterface {
     
     public func information() -> UIElementComponentStylePack<InformationUIComponentScreenStyleProperties> {
-        return UIElementComponentStylePack(
+        return .init(
             factory: self,
-            style: UIElementComponentStyle(
+            style: .init(
                 type: styleType,
-                properties: InformationUIComponentScreenStyleProperties(
-                    look: InformationUIComponentScreenStylePropertiesLook(
+                properties: .init(
+                    look: .init(
                         backgroundColor: DevUIColorPalette.UIElementComponent.UIComponentScreen.Information.background_white
                     ),
-                    layoutParams: InformationUIComponentScreenStylePropertiesLayoutParams()
+                    layoutParams: .init()
                 )
             )
         )
     }
     
     public func navigationMenu() -> UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties> {
-        return UIElementComponentStylePack(
+        return .init(
             factory: self,
-            style: UIElementComponentStyle(
+            style: .init(
                 type: styleType,
-                properties: NavigationMenuUIComponentScreenStyleProperties(
-                    look: NavigationMenuUIComponentScreenStylePropertiesLook(
+                properties: .init(
+                    look: .init(
                         backgroundColor: DevUIColorPalette.UIElementComponent.UIComponentScreen.NavigationMenuOption.background_white
                     ),
-                    layoutParams: NavigationMenuUIComponentScreenStylePropertiesLayoutParams(
+                    layoutParams: .init(
                         leadingSpace: DevUIElementComponentConstantPalette.UILayout.UIComponentScreen.NavigationMenu.marginLeft_16,
                         trailingSpace: DevUIElementComponentConstantPalette.UILayout.UIComponentScreen.NavigationMenu.marginRight_16
                     )

@@ -9,11 +9,17 @@ public struct NavigationMenuUIComponentScreenSettings<OptionKey: InputUIElementC
     public var stylePack: UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties>
     
     public init(params: NavigationMenuUIComponentScreenParams<OptionKey>) {
-        self.init(params: params, stylePack: Self.stylePackFactory?.navigationMenu() ?? .default)
+        self.init(
+            params: params,
+            stylePack: Self.stylePackFactory?.navigationMenu() ?? .default
+        )
     }
     
     public init(params: NavigationMenuUIComponentScreenParams<OptionKey>, styleType: UIStyleType) {
-        self.init(params: params, stylePack: Self.stylePack(for: styleType))
+        self.init(
+            params: params,
+            stylePack: Self.stylePack(for: styleType)
+        )
     }
     
     public init(params: NavigationMenuUIComponentScreenParams<OptionKey>, stylePack: UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties>) {

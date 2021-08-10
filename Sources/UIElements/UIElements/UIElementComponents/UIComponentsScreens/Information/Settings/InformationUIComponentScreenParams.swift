@@ -8,7 +8,9 @@ public struct InformationUIComponentScreenParams: UIComponentScreenParams {
     public let title: String
     
     public static var `default`: InformationUIComponentScreenParams {
-        return .init(title: "InformationUIComponentScreenParams.title")
+        return .init(
+            title: "InformationUIComponentScreenParams.title"
+        )
     }
     
     public init(title: String) {

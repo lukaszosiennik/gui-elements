@@ -6,15 +6,15 @@
 public final class DevUIComponentGroupStyleFactory: UIElementComponentTypeStyleFactory, UIComponentGroupStyleFactoryInterface {
     
     public func navigationMenu() -> UIElementComponentStylePack<NavigationMenuUIComponentGroupStyleProperties> {
-        return UIElementComponentStylePack(
+        return .init(
             factory: self,
-            style: UIElementComponentStyle(
+            style: .init(
                 type: styleType,
-                properties: NavigationMenuUIComponentGroupStyleProperties(
-                    look: NavigationMenuUIComponentGroupStylePropertiesLook(
+                properties: .init(
+                    look: .init(
                         backgroundColor: DevUIColorPalette.UIElementComponent.UIComponentGroup.NavigationMenu.background_white
                     ),
-                    layoutParams: NavigationMenuUIComponentGroupStylePropertiesLayoutParams(
+                    layoutParams: .init(
                         titleTopSpace: DevUIElementComponentConstantPalette.UILayout.UIComponentGroup.NavigationMenu.titleMarginTop_16,
                         titleBottomSpace: DevUIElementComponentConstantPalette.UILayout.UIComponentGroup.NavigationMenu.titleMarginBottom_16,
                         optionHeight: DevUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup.NavigationMenu.optionSizeHeight_50,

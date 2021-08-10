@@ -42,7 +42,9 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
     
     public func setupNestedSettings() {
         titleLabelUI.settings = .init(
-            params: .init(text: settings.params.title),
+            params: .init(
+                text: settings.params.title
+            ),
             styleType: settings.styleType
         )
     }

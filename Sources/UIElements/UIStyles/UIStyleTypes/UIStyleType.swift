@@ -5,6 +5,13 @@
 
 public enum UIStyleType: Hashable {
     
-    case os
+    case os(_ userFriendly: Bool)
     case system(UISystemStyleType)
+}
+
+extension UIStyleType {
+    
+    public static var os: UIStyleType {
+        return .os(false)
+    }
 }

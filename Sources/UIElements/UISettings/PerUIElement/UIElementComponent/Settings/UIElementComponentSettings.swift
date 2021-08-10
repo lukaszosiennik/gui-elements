@@ -24,7 +24,9 @@ public protocol UIElementComponentSettings: UIElementSettings {
 extension UIElementComponentSettings {
     
     public static var `default`: Self {
-        return .init(params: .default)
+        return .init(
+            params: .default
+        )
     }
     
     public var styleType: UIStyleType {

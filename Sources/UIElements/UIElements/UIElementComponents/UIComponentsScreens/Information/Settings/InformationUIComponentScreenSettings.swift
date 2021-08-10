@@ -9,11 +9,17 @@ public struct InformationUIComponentScreenSettings: UIComponentScreenSettings {
     public var stylePack: UIElementComponentStylePack<InformationUIComponentScreenStyleProperties>
     
     public init(params: InformationUIComponentScreenParams) {
-        self.init(params: params, stylePack: Self.stylePackFactory?.information() ?? .default)
+        self.init(
+            params: params,
+            stylePack: Self.stylePackFactory?.information() ?? .default
+        )
     }
     
     public init(params: InformationUIComponentScreenParams, styleType: UIStyleType) {
-        self.init(params: params, stylePack: Self.stylePack(for: styleType))
+        self.init(
+            params: params,
+            stylePack: Self.stylePack(for: styleType)
+        )
     }
     
     public init(params: InformationUIComponentScreenParams, stylePack: UIElementComponentStylePack<InformationUIComponentScreenStyleProperties>) {

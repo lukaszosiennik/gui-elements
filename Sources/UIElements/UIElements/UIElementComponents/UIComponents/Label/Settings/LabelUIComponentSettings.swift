@@ -9,11 +9,17 @@ public struct LabelUIComponentSettings: UIComponentSettings {
     public var stylePack: UIElementComponentStylePack<LabelUIComponentStyleProperties>
     
     public init(params: LabelUIComponentParams) {
-        self.init(params: params, stylePack: Self.stylePackFactory?.label() ?? .default)
+        self.init(
+            params: params,
+            stylePack: Self.stylePackFactory?.label() ?? .default
+        )
     }
     
     public init(params: LabelUIComponentParams, styleType: UIStyleType) {
-        self.init(params: params, stylePack: Self.stylePack(for: styleType))
+        self.init(
+            params: params,
+            stylePack: Self.stylePack(for: styleType)
+        )
     }
     
     public init(params: LabelUIComponentParams, stylePack: UIElementComponentStylePack<LabelUIComponentStyleProperties>) {

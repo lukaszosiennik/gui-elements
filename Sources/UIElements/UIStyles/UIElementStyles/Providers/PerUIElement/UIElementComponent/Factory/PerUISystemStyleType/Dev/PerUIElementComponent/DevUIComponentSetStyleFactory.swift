@@ -6,17 +6,17 @@
 public final class DevUIComponentSetStyleFactory: UIElementComponentTypeStyleFactory, UIComponentSetStyleFactoryInterface {
     
     public func navigationMenuOption() -> UIElementComponentStylePack<NavigationMenuOptionUIComponentSetStyleProperties> {
-        return UIElementComponentStylePack(
+        return .init(
             factory: self,
-            style: UIElementComponentStyle(
+            style: .init(
                 type: styleType,
-                properties: NavigationMenuOptionUIComponentSetStyleProperties(
-                    look: NavigationMenuOptionUIComponentSetStylePropertiesLook(
+                properties: .init(
+                    look: .init(
                         backgroundColor: DevUIColorPalette.UIElementComponent.UIComponentSet.NavigationMenuOption.background_white,
                         borderWidth: DevUIElementComponentConstantPalette.UIElementComponent.UIComponentSet.NavigationMenuOption.borderWidth_1,
                         borderColor: DevUIColorPalette.UIElementComponent.UIComponentSet.NavigationMenuOption.border_black
                     ),
-                    layoutParams: NavigationMenuOptionUIComponentSetStylePropertiesLayoutParams()
+                    layoutParams: .init()
                 )
             )
         )
