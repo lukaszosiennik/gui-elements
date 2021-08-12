@@ -5,12 +5,13 @@
 
 import UIKit
 
-public final class CardUIComponentGroup: UIView, UIComponentGroup {
-    
+public final class CardUIComponentGroup<BodyContainerContent: UIView>: UIView, UIComponentGroup {
+
     private let titleContainer = UIView()
     private let titleLabelUI = LabelUIComponent()
     
     private let bodyContainer = UIView()
+    private let bodyContainerContent: BodyContainerContent?
     
     private var initialization: Bool = false
     
@@ -20,11 +21,16 @@ public final class CardUIComponentGroup: UIView, UIComponentGroup {
         }
     }
     
-    public init(settings: CardUIComponentGroupSettings = .default) {
+    public init(bodyContainerContent: BodyContainerContent?, settings: CardUIComponentGroupSettings = .default) {
+        self.bodyContainerContent = bodyContainerContent
         self.settings = settings
         super.init(frame: .zero)
 
         setup()
+    }
+    
+    public convenience init(settings: CardUIComponentGroupSettings = .default) {
+        self.init(bodyContainerContent: nil, settings: settings)
     }
     
     required init?(coder: NSCoder) {
@@ -63,22 +69,25 @@ public final class CardUIComponentGroup: UIView, UIComponentGroup {
             addSubview(titleContainer)
             titleContainer.addSubview(titleLabelUI)
             addSubview(bodyContainer)
+            if let bodyContainerContent = bodyContainerContent {
+                bodyContainer.addSubview(bodyContainerContent)
+            }
             
             titleContainer.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 titleContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
                 titleContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
                 titleContainer.topAnchor.constraint(equalTo: topAnchor),
-                titleContainer.bottomAnchor.constraint(equalTo: bodyContainer.bottomAnchor),
+                titleContainer.bottomAnchor.constraint(equalTo: bodyContainer.topAnchor),
             ])
             
             NSLayoutConstraint.activate([
-                titleLabelUI.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
-                titleLabelUI.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
-                titleLabelUI.centerXAnchor.constraint(equalTo: centerXAnchor),
-                titleLabelUI.topAnchor.constraint(greaterThanOrEqualTo: topAnchor),
-                titleLabelUI.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
-                titleLabelUI.centerYAnchor.constraint(equalTo: centerYAnchor),
+                titleLabelUI.leadingAnchor.constraint(greaterThanOrEqualTo: titleContainer.leadingAnchor),
+                titleLabelUI.trailingAnchor.constraint(lessThanOrEqualTo: titleContainer.trailingAnchor),
+                titleLabelUI.centerXAnchor.constraint(equalTo: titleContainer.centerXAnchor),
+                titleLabelUI.topAnchor.constraint(greaterThanOrEqualTo: titleContainer.topAnchor),
+                titleLabelUI.bottomAnchor.constraint(lessThanOrEqualTo: titleContainer.bottomAnchor),
+                titleLabelUI.centerYAnchor.constraint(equalTo: titleContainer.centerYAnchor),
             ])
             
             bodyContainer.translatesAutoresizingMaskIntoConstraints = false
@@ -87,6 +96,16 @@ public final class CardUIComponentGroup: UIView, UIComponentGroup {
                 bodyContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
                 bodyContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
             ])
+            
+            if let bodyContainerContent = bodyContainerContent {
+                bodyContainerContent.translatesAutoresizingMaskIntoConstraints = false
+                NSLayoutConstraint.activate([
+                    bodyContainerContent.leadingAnchor.constraint(equalTo: bodyContainer.leadingAnchor),
+                    bodyContainerContent.trailingAnchor.constraint(equalTo: bodyContainer.trailingAnchor),
+                    bodyContainerContent.topAnchor.constraint(equalTo: bodyContainer.topAnchor),
+                    bodyContainerContent.bottomAnchor.constraint(equalTo: bodyContainer.bottomAnchor),
+                ])
+            }
         }
         
         guard let styleProperties = settings.stylePack.style.properties else {
