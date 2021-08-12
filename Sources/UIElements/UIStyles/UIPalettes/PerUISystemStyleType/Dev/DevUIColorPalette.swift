@@ -12,6 +12,7 @@ enum DevUIColorPalette: UIColorPalette {
         static let clear: UIColor = .clear
         static let black: UIColor = .black
         static let white: UIColor = .white
+        static let green: UIColor = .green
     }
     
     enum UIElementComponent {
@@ -22,6 +23,7 @@ enum DevUIColorPalette: UIColorPalette {
                 
                 static let clear: UIColor = All.clear
                 static let white: UIColor = All.white
+                static let green: UIColor = All.green
             }
             
             enum Border {
@@ -39,7 +41,13 @@ enum DevUIColorPalette: UIColorPalette {
 
 extension DevUIColorPalette.UIElementComponent {
         
-    enum UIComponent {}
+    enum UIComponent {
+        
+        enum Placeholder {
+            
+            static let background_green: UIColor = Property.Background.green
+        }
+    }
     
     enum UIComponentSet {
         

@@ -14,6 +14,7 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
         static let value_8: CGFloat = 8
         static let value_16: CGFloat = 16
         static let value_50: CGFloat = 50
+        static let value_150: CGFloat = 150
     }
     
     enum UIElementComponent {
@@ -27,6 +28,7 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
                     enum Height {
                         
                         static let value_50: CGFloat = All.value_50
+                        static let value_150: CGFloat = All.value_150
                     }
                     
                     enum LinesNumber {
@@ -75,6 +77,11 @@ extension DevUIElementComponentConstantPalette.UIElementComponent {
             
             static let linesNumber_0: Int = Int(Property.Size.Vertical.LinesNumber.value_0)
             static let linesNumber_1: Int = Int(Property.Size.Vertical.LinesNumber.value_1)
+        }
+        
+        enum Placeholder {
+            
+            static let height_150: CGFloat = Property.Size.Vertical.Height.value_150
         }
     }
     

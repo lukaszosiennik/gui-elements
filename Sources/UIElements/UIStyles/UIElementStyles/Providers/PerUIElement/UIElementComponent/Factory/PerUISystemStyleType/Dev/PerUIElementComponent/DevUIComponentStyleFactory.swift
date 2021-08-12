@@ -23,4 +23,21 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
     public func button() -> UIElementComponentStylePack<ButtonUIComponentStyleProperties> {
         return .default(factory: self)
     }
+    
+    public func placeholder() -> UIElementComponentStylePack<PlaceholderUIComponentStyleProperties> {
+        return .init(
+            factory: self,
+            style: .init(
+                type: styleType,
+                properties: .init(
+                    look: .init(
+                        backgroundColor: DevUIColorPalette.UIElementComponent.UIComponent.Placeholder.background_green
+                    ),
+                    layoutParams: .init(
+                        height: DevUIElementComponentConstantPalette.UIElementComponent.UIComponent.Placeholder.height_150
+                    )
+                )
+            )
+        )
+    }
 }

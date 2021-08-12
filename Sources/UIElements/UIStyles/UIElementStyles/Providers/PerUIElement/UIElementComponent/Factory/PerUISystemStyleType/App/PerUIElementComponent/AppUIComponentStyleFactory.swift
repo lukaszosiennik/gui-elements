@@ -12,4 +12,8 @@ public final class AppUIComponentStyleFactory: UIElementComponentTypeStyleFactor
     public func button() -> UIElementComponentStylePack<ButtonUIComponentStyleProperties> {
         return .default(factory: self)
     }
+    
+    public func placeholder() -> UIElementComponentStylePack<PlaceholderUIComponentStyleProperties> {
+        return .default(factory: self)
+    }
 }
