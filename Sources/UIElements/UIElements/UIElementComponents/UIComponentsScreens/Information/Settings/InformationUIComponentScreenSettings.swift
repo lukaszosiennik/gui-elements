@@ -28,6 +28,6 @@ public struct InformationUIComponentScreenSettings: UIComponentScreenSettings {
     }
     
     public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<InformationUIComponentScreenStyleProperties> {
-        return Self.stylePackFactory(for: styleType)?.information() ?? .default
+        return Self.stylePackFactory(for: styleType)?.information() ?? .default(styleType: styleType)
     }
 }

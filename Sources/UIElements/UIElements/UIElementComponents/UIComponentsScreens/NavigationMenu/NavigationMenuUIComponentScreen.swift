@@ -54,7 +54,7 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
     
     public func setupStyleLook() {
         guard let styleProperties = settings.stylePack.style.properties else {
-            if settings.styleType == .os(true) {
+            if settings.styleType != .os(false) {
                 backgroundColor = .white
             } else {
                 let tempView = UIView()

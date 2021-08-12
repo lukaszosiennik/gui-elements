@@ -28,6 +28,6 @@ public struct NavigationMenuUIComponentGroupSettings<OptionKey: InputUIElementCo
     }
     
     public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<NavigationMenuUIComponentGroupStyleProperties> {
-        return Self.stylePackFactory(for: styleType)?.navigationMenu() ?? .default
+        return Self.stylePackFactory(for: styleType)?.navigationMenu() ?? .default(styleType: styleType)
     }
 }

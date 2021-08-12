@@ -28,6 +28,6 @@ public struct LabelUIComponentSettings: UIComponentSettings {
     }
     
     public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<LabelUIComponentStyleProperties> {
-        return Self.stylePackFactory(for: styleType)?.label() ?? .default
+        return Self.stylePackFactory(for: styleType)?.label() ?? .default(styleType: styleType)
     }
 }

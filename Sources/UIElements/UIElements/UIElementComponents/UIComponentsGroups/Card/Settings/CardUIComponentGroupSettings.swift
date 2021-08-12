@@ -28,6 +28,6 @@ public struct CardUIComponentGroupSettings: UIComponentGroupSettings {
     }
     
     public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<CardUIComponentGroupStyleProperties> {
-        return Self.stylePackFactory(for: styleType)?.card() ?? .default
+        return Self.stylePackFactory(for: styleType)?.card() ?? .default(styleType: styleType)
     }
 }

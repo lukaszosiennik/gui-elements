@@ -28,6 +28,6 @@ public struct NavigationMenuUIComponentScreenSettings<OptionKey: InputUIElementC
     }
     
     public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties> {
-        return Self.stylePackFactory(for: styleType)?.navigationMenu() ?? .default
+        return Self.stylePackFactory(for: styleType)?.navigationMenu() ?? .default(styleType: styleType)
     }
 }

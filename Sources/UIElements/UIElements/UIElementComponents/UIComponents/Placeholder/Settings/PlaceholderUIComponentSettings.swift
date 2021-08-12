@@ -28,6 +28,6 @@ public struct PlaceholderUIComponentSettings: UIComponentSettings {
     }
     
     public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<PlaceholderUIComponentStyleProperties> {
-        return Self.stylePackFactory(for: styleType)?.placeholder() ?? .default
+        return Self.stylePackFactory(for: styleType)?.placeholder() ?? .default(styleType: styleType)
     }
 }

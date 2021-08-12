@@ -28,6 +28,6 @@ public struct ButtonUIComponentSettings: UIComponentSettings {
     }
     
     public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<ButtonUIComponentStyleProperties> {
-        return Self.stylePackFactory(for: styleType)?.button() ?? .default
+        return Self.stylePackFactory(for: styleType)?.button() ?? .default(styleType: styleType)
     }
 }

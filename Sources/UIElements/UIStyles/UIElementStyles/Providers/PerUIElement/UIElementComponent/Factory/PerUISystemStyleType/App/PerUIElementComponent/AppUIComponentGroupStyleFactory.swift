@@ -6,10 +6,10 @@
 public final class AppUIComponentGroupStyleFactory: UIElementComponentTypeStyleFactory, UIComponentGroupStyleFactoryInterface {
     
     public func navigationMenu() -> UIElementComponentStylePack<NavigationMenuUIComponentGroupStyleProperties> {
-        return .default(factory: self)
+        return .default(factory: self, styleType: styleType)
     }
     
     public func card() -> UIElementComponentStylePack<CardUIComponentGroupStyleProperties> {
-        return .default(factory: self)
+        return .default(factory: self, styleType: styleType)
     }
 }

@@ -12,14 +12,18 @@ public struct UIElementComponentStylePack<StylePropertiesType: UIElementComponen
 extension UIElementComponentStylePack {
     
     public static var `default`: UIElementComponentStylePack<StylePropertiesType> {
-        return `default`(factory: nil)
+        return `default`(factory: nil, styleType: .os(false))
     }
     
-    public static func `default`(factory: UIElementStyleFactoryInterface?) -> UIElementComponentStylePack<StylePropertiesType> {
+    public static func `default`(styleType: UIStyleType) -> UIElementComponentStylePack<StylePropertiesType> {
+        return `default`(factory: nil, styleType: styleType)
+    }
+    
+    public static func `default`(factory: UIElementStyleFactoryInterface?, styleType: UIStyleType) -> UIElementComponentStylePack<StylePropertiesType> {
         return UIElementComponentStylePack<StylePropertiesType>(
             factory: factory,
             style: UIElementComponentStyle(
-                type: .os(true), // TODO: need to be get from Settings init styleType
+                type: styleType,
                 properties: nil
             )
         )

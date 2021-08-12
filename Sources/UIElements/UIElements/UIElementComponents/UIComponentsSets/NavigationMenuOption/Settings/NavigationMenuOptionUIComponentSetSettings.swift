@@ -28,6 +28,6 @@ public struct NavigationMenuOptionUIComponentSetSettings: UIComponentSetSettings
     }
     
     public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<NavigationMenuOptionUIComponentSetStyleProperties> {
-        return Self.stylePackFactory(for: styleType)?.navigationMenuOption() ?? .default
+        return Self.stylePackFactory(for: styleType)?.navigationMenuOption() ?? .default(styleType: styleType)
     }
 }

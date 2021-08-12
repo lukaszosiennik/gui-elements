@@ -6,10 +6,10 @@
 public final class AppUIComponentScreenStyleFactory: UIElementComponentTypeStyleFactory, UIComponentScreenStyleFactoryInterface {
     
     public func information() -> UIElementComponentStylePack<InformationUIComponentScreenStyleProperties> {
-        return .default(factory: self)
+        return .default(factory: self, styleType: styleType)
     }
     
     public func navigationMenu() -> UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties> {
-        return .default(factory: self)
+        return .default(factory: self, styleType: styleType)
     }
 }
