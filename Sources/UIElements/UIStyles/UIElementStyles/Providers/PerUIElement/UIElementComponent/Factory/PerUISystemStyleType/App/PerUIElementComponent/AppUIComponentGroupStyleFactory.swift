@@ -8,4 +8,8 @@ public final class AppUIComponentGroupStyleFactory: UIElementComponentTypeStyleF
     public func navigationMenu() -> UIElementComponentStylePack<NavigationMenuUIComponentGroupStyleProperties> {
         return .default(factory: self)
     }
+    
+    public func card() -> UIElementComponentStylePack<CardUIComponentGroupStyleProperties> {
+        return .default(factory: self)
+    }
 }

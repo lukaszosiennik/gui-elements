@@ -6,4 +6,5 @@
 public protocol UIComponentGroupStyleFactoryInterface: UIElementComponentTypeStyleFactoryInterface {
     
     func navigationMenu() -> UIElementComponentStylePack<NavigationMenuUIComponentGroupStyleProperties>
+    func card() -> UIElementComponentStylePack<CardUIComponentGroupStyleProperties>
 }
