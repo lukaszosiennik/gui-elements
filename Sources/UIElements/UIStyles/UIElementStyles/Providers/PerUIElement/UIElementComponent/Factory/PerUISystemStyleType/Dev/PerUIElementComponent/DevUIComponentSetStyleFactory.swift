@@ -5,6 +5,9 @@
 
 public final class DevUIComponentSetStyleFactory: UIElementComponentTypeStyleFactory, UIComponentSetStyleFactoryInterface {
     
+    private typealias ColorPalette = DevUIColorPalette.UIElementComponent.UIComponentSet
+    private typealias ConstantPalette = DevUIElementComponentConstantPalette.UIElementComponent.UIComponentSet
+    
     public func navigationMenuOption() -> UIElementComponentStylePack<NavigationMenuOptionUIComponentSetStyleProperties> {
         return .init(
             factory: self,
@@ -12,9 +15,9 @@ public final class DevUIComponentSetStyleFactory: UIElementComponentTypeStyleFac
                 type: styleType,
                 properties: .init(
                     look: .init(
-                        backgroundColor: DevUIColorPalette.UIElementComponent.UIComponentSet.NavigationMenuOption.background_white,
-                        borderWidth: DevUIElementComponentConstantPalette.UIElementComponent.UIComponentSet.NavigationMenuOption.borderWidth_1,
-                        borderColor: DevUIColorPalette.UIElementComponent.UIComponentSet.NavigationMenuOption.border_black
+                        backgroundColor: ColorPalette.NavigationMenuOption.background_white,
+                        borderColor: ColorPalette.NavigationMenuOption.border_black,
+                        borderWidth: ConstantPalette.NavigationMenuOption.UILook.borderWidth_1
                     ),
                     layoutParams: .init()
                 )

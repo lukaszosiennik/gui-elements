@@ -98,7 +98,7 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
             return
         }
         
-        constraint(with: leadingSpaceConstraintID)?.constant = styleProperties.layoutParams.leadingSpace
-        constraint(with: trailingSpaceConstraintID)?.constant = -styleProperties.layoutParams.trailingSpace
+        constraint(with: leadingSpaceConstraintID)?.constant = styleProperties.layoutParams.leftMargin
+        constraint(with: trailingSpaceConstraintID)?.constant = -styleProperties.layoutParams.rightMargin
     }
 }

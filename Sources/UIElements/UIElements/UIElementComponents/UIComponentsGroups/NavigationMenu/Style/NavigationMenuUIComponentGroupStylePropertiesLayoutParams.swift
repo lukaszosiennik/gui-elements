@@ -7,9 +7,8 @@ import UIKit
 
 public struct NavigationMenuUIComponentGroupStylePropertiesLayoutParams: UIComponentGroupStylePropertiesLayoutParams {
     
-    public let titleTopSpace: CGFloat
-    public let titleBottomSpace: CGFloat
-    
     public let optionHeight: CGFloat?
     public let optionsSpace: CGFloat
+    public let titleTopMargin: CGFloat
+    public let titleBottomMargin: CGFloat
 }

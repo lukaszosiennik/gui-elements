@@ -17,6 +17,8 @@ enum DevUIColorPalette: UIColorPalette {
     
     enum UIElementComponent {
         
+        fileprivate typealias UIElementComponentPalette = UIElementComponent
+        
         fileprivate enum Property {
             
             enum Background {
@@ -74,7 +76,7 @@ extension DevUIColorPalette.UIElementComponent {
             
             enum Background {
                 
-                static let white: UIColor = DevUIColorPalette.UIElementComponent.Property.Background.white
+                static let white: UIColor = UIElementComponentPalette.Property.Background.white
             }
         }
         

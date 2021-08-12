@@ -5,6 +5,9 @@
 
 public final class DevUIComponentGroupStyleFactory: UIElementComponentTypeStyleFactory, UIComponentGroupStyleFactoryInterface {
     
+    private typealias ColorPalette = DevUIColorPalette.UIElementComponent.UIComponentGroup
+    private typealias ConstantPalette = DevUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
+    
     public func navigationMenu() -> UIElementComponentStylePack<NavigationMenuUIComponentGroupStyleProperties> {
         return .init(
             factory: self,
@@ -12,13 +15,13 @@ public final class DevUIComponentGroupStyleFactory: UIElementComponentTypeStyleF
                 type: styleType,
                 properties: .init(
                     look: .init(
-                        backgroundColor: DevUIColorPalette.UIElementComponent.UIComponentGroup.NavigationMenu.background_white
+                        backgroundColor: ColorPalette.NavigationMenu.background_white
                     ),
                     layoutParams: .init(
-                        titleTopSpace: DevUIElementComponentConstantPalette.UILayout.UIComponentGroup.NavigationMenu.titleMarginTop_16,
-                        titleBottomSpace: DevUIElementComponentConstantPalette.UILayout.UIComponentGroup.NavigationMenu.titleMarginBottom_16,
-                        optionHeight: DevUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup.NavigationMenu.optionSizeHeight_50,
-                        optionsSpace: DevUIElementComponentConstantPalette.UILayout.UIComponentGroup.NavigationMenu.optionsSpace_8
+                        optionHeight: ConstantPalette.NavigationMenu.UILayoutParams.option_height_50,
+                        optionsSpace: ConstantPalette.NavigationMenu.UILayoutParams.options_space_8,
+                        titleTopMargin: ConstantPalette.NavigationMenu.UILayoutParams.title_margin_top_16,
+                        titleBottomMargin: ConstantPalette.NavigationMenu.UILayoutParams.title_margin_bottom_16
                     )
                 )
             )

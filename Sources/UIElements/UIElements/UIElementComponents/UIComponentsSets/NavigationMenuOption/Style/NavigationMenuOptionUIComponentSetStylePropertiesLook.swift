@@ -8,7 +8,6 @@ import UIKit
 public struct NavigationMenuOptionUIComponentSetStylePropertiesLook: UIComponentSetStylePropertiesLook {
     
     public let backgroundColor: UIColor
-    
-    public let borderWidth: CGFloat
     public let borderColor: UIColor
+    public let borderWidth: CGFloat
 }

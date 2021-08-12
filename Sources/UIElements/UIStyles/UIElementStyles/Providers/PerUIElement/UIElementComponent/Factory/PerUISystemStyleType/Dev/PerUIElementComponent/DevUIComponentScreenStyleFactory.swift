@@ -5,6 +5,9 @@
 
 public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyleFactory, UIComponentScreenStyleFactoryInterface {
     
+    private typealias ColorPalette = DevUIColorPalette.UIElementComponent.UIComponentScreen
+    private typealias ConstantPalette = DevUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
+    
     public func information() -> UIElementComponentStylePack<InformationUIComponentScreenStyleProperties> {
         return .init(
             factory: self,
@@ -12,7 +15,7 @@ public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyle
                 type: styleType,
                 properties: .init(
                     look: .init(
-                        backgroundColor: DevUIColorPalette.UIElementComponent.UIComponentScreen.Information.background_white
+                        backgroundColor: ColorPalette.Information.background_white
                     ),
                     layoutParams: .init()
                 )
@@ -27,11 +30,11 @@ public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyle
                 type: styleType,
                 properties: .init(
                     look: .init(
-                        backgroundColor: DevUIColorPalette.UIElementComponent.UIComponentScreen.NavigationMenuOption.background_white
+                        backgroundColor: ColorPalette.NavigationMenuOption.background_white
                     ),
                     layoutParams: .init(
-                        leadingSpace: DevUIElementComponentConstantPalette.UILayout.UIComponentScreen.NavigationMenu.marginLeft_16,
-                        trailingSpace: DevUIElementComponentConstantPalette.UILayout.UIComponentScreen.NavigationMenu.marginRight_16
+                        leftMargin: ConstantPalette.NavigationMenu.UILayoutParams.margin_left_16,
+                        rightMargin: ConstantPalette.NavigationMenu.UILayoutParams.margin_right_16
                     )
                 )
             )

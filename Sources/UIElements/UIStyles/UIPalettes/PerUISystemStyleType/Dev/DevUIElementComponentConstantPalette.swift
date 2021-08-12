@@ -19,54 +19,67 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
     
     enum UIElementComponent {
         
-        fileprivate enum Property {
+        fileprivate typealias UIElementComponentPalette = UIElementComponent
+        
+        fileprivate typealias UILookPalette = UILook
+        fileprivate enum UILook {
             
-            enum Size {
+            enum Property {
                 
-                enum Vertical {
+                enum BorderRadius {}
+                
+                enum BorderWidth {
                     
-                    enum Height {
-                        
-                        static let value_50: CGFloat = All.value_50
-                        static let value_150: CGFloat = All.value_150
-                    }
+                    static let value_1: CGFloat = All.value_1
+                }
+                
+                enum FontSize {}
+            }
+        }
+        
+        fileprivate typealias UILayoutParamsPalette = UILayoutParams
+        fileprivate enum UILayoutParams {
+            
+            enum Property {
+                
+                enum Margin {
                     
-                    enum LinesNumber {
+                    static let left_16: CGFloat = All.value_16
+                    static let right_16: CGFloat = All.value_16
+                    static let top_16: CGFloat = All.value_16
+                    static let bottom_16: CGFloat = All.value_16
+                }
+                
+                enum Size {
+                    
+                    enum Horizontal {}
+                    
+                    enum Vertical {
                         
-                        static let value_0: CGFloat = All.value_0
-                        static let value_1: CGFloat = All.value_1
+                        enum Height {
+                            
+                            static let value_50: CGFloat = All.value_50
+                            static let value_150: CGFloat = All.value_150
+                        }
+                        
+                        enum LinesNumber {
+                            
+                            static let value_0: CGFloat = All.value_0
+                            static let value_1: CGFloat = All.value_1
+                        }
                     }
                 }
                 
-                enum Horizontal {}
+                enum Space {
+                    
+                    static let value_8: CGFloat = All.value_8
+                }
             }
-        
-            enum FontSize {}
-            
-            enum BorderWidth {
-                
-                static let value_1: CGFloat = All.value_1
-            }
-            
-            enum BorderRadius {}
         }
+
     }
     
-    enum UILayout {
-            
-        fileprivate enum Margin {
-            
-            static let left_16: CGFloat = All.value_16
-            static let right_16: CGFloat = All.value_16
-            static let top_16: CGFloat = All.value_16
-            static let bottom_16: CGFloat = All.value_16
-        }
-        
-        fileprivate enum Space {
-            
-            static let value_8: CGFloat = All.value_8
-        }
-    }
+    enum UILayout {}
 }
 
 extension DevUIElementComponentConstantPalette.UIElementComponent {
@@ -75,13 +88,19 @@ extension DevUIElementComponentConstantPalette.UIElementComponent {
         
         enum LabelUIComponent {
             
-            static let linesNumber_0: Int = Int(Property.Size.Vertical.LinesNumber.value_0)
-            static let linesNumber_1: Int = Int(Property.Size.Vertical.LinesNumber.value_1)
+            enum UILayoutParams {
+                
+                static let linesNumber_0: Int = Int(UILayoutParamsPalette.Property.Size.Vertical.LinesNumber.value_0)
+                static let linesNumber_1: Int = Int(UILayoutParamsPalette.Property.Size.Vertical.LinesNumber.value_1)
+            }
         }
         
         enum Placeholder {
             
-            static let height_150: CGFloat = Property.Size.Vertical.Height.value_150
+            enum UILayoutParams {
+                
+                static let height_150: CGFloat = UILayoutParamsPalette.Property.Size.Vertical.Height.value_150
+            }
         }
     }
     
@@ -89,7 +108,10 @@ extension DevUIElementComponentConstantPalette.UIElementComponent {
         
         enum NavigationMenuOption {
             
-            static let borderWidth_1: CGFloat = Property.BorderWidth.value_1
+            enum UILook {
+                
+                static let borderWidth_1: CGFloat = UILookPalette.Property.BorderWidth.value_1
+            }
         }
     }
     
@@ -97,26 +119,13 @@ extension DevUIElementComponentConstantPalette.UIElementComponent {
         
         enum NavigationMenu {
             
-            static let optionSizeHeight_50: CGFloat = Property.Size.Vertical.Height.value_50
-        }
-    }
-    
-    enum UIComponentScreen {}
-}
-
-extension DevUIElementComponentConstantPalette.UILayout {
-        
-    enum UIComponent {}
-    
-    enum UIComponentSet {}
-    
-    enum UIComponentGroup {
-        
-        enum NavigationMenu {
-            
-            static let titleMarginTop_16: CGFloat = Margin.top_16
-            static let titleMarginBottom_16: CGFloat = Margin.bottom_16
-            static let optionsSpace_8: CGFloat = Space.value_8
+            enum UILayoutParams {
+                
+                static let option_height_50: CGFloat = UILayoutParamsPalette.Property.Size.Vertical.Height.value_50
+                static let options_space_8: CGFloat = UILayoutParamsPalette.Property.Space.value_8
+                static let title_margin_top_16: CGFloat = UILayoutParamsPalette.Property.Margin.top_16
+                static let title_margin_bottom_16: CGFloat = UILayoutParamsPalette.Property.Margin.bottom_16
+            }
         }
     }
     
@@ -124,8 +133,11 @@ extension DevUIElementComponentConstantPalette.UILayout {
         
         enum NavigationMenu {
             
-            static let marginLeft_16: CGFloat = Margin.left_16
-            static let marginRight_16: CGFloat = Margin.right_16
+            enum UILayoutParams {
+            
+                static let margin_left_16: CGFloat = UILayoutParamsPalette.Property.Margin.left_16
+                static let margin_right_16: CGFloat = UILayoutParamsPalette.Property.Margin.right_16
+            }
         }
     }
 }

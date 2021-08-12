@@ -136,8 +136,8 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
         
         stackView.spacing = styleProperties.layoutParams.optionsSpace
         
-        constraint(with: titleTopSpaceConstraintID)?.constant = styleProperties.layoutParams.titleTopSpace
-        constraint(with: titleBottomSpaceConstraintID)?.constant = -styleProperties.layoutParams.titleBottomSpace
+        constraint(with: titleTopSpaceConstraintID)?.constant = styleProperties.layoutParams.titleTopMargin
+        constraint(with: titleBottomSpaceConstraintID)?.constant = -styleProperties.layoutParams.titleBottomMargin
         
         if let optionHeight = styleProperties.layoutParams.optionHeight {
             stackView.arrangedSubviews.forEach { optionView in

@@ -5,6 +5,9 @@
 
 public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactory, UIComponentStyleFactoryInterface {
     
+    private typealias ColorPalette = DevUIColorPalette.UIElementComponent.UIComponent
+    private typealias ConstantPalette = DevUIElementComponentConstantPalette.UIElementComponent.UIComponent
+    
     public func label() -> UIElementComponentStylePack<LabelUIComponentStyleProperties> {
         return .init(
             factory: self,
@@ -13,7 +16,7 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
                 properties: .init(
                     look: .init(),
                     layoutParams: .init(
-                        linesNumber: DevUIElementComponentConstantPalette.UIElementComponent.UIComponent.LabelUIComponent.linesNumber_1
+                        linesNumber: ConstantPalette.LabelUIComponent.UILayoutParams.linesNumber_1
                     )
                 )
             )
@@ -31,10 +34,10 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
                 type: styleType,
                 properties: .init(
                     look: .init(
-                        backgroundColor: DevUIColorPalette.UIElementComponent.UIComponent.Placeholder.background_green
+                        backgroundColor: ColorPalette.Placeholder.background_green
                     ),
                     layoutParams: .init(
-                        height: DevUIElementComponentConstantPalette.UIElementComponent.UIComponent.Placeholder.height_150
+                        height: ConstantPalette.Placeholder.UILayoutParams.height_150
                     )
                 )
             )
