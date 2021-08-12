@@ -13,3 +13,14 @@ public struct LabelUIComponentStyleProperties: UIComponentStyleProperties {
         self.layoutParams = layoutParams
     }
 }
+
+public struct LabelUIComponentStylePropertiesOverwritten {
+    
+    public let look: LabelUIComponentStylePropertiesOverwrittenLook?
+    public let layoutParams: LabelUIComponentStylePropertiesOverwrittenLayoutParams?
+    
+    init(look: LabelUIComponentStylePropertiesOverwrittenLook? = nil, layoutParams: LabelUIComponentStylePropertiesOverwrittenLayoutParams? = nil) {
+        self.look = look
+        self.layoutParams = layoutParams
+    }
+}

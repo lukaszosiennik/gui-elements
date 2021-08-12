@@ -22,6 +22,13 @@ public struct LabelUIComponentSettings: UIComponentSettings {
         )
     }
     
+    public init(params: LabelUIComponentParams, styleType: UIStyleType, overwrittenBy styleProperties: LabelUIComponentStylePropertiesOverwritten) {
+        self.init(
+            params: params,
+            stylePack: Self.stylePack(for: styleType, overwrittenBy: styleProperties)
+        )
+    }
+    
     public init(params: LabelUIComponentParams, stylePack: UIElementComponentStylePack<LabelUIComponentStyleProperties>) {
         self.params = params
         self.stylePack = stylePack
@@ -29,5 +36,29 @@ public struct LabelUIComponentSettings: UIComponentSettings {
     
     public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<LabelUIComponentStyleProperties> {
         return Self.stylePackFactory(for: styleType)?.label() ?? .default(styleType: styleType)
+    }
+    
+    public static func stylePack(for styleType: UIStyleType, overwrittenBy styleProperties: LabelUIComponentStylePropertiesOverwritten) -> UIElementComponentStylePack<LabelUIComponentStyleProperties> {
+        guard let pack = Self.stylePackFactory(for: styleType)?.label() else {
+            return .default(styleType: styleType)
+        }
+        
+        guard let properties = pack.style.properties else {
+            return pack
+        }
+        
+        return .init(
+            pack: pack,
+            overwrittenBy: .init(
+                look: .init(
+                    look: properties.look,
+                    overwrittenBy: styleProperties.look
+                ),
+                layoutParams: .init(
+                    layoutParams: properties.layoutParams,
+                    overwrittenBy: styleProperties.layoutParams
+                )
+            )
+        )
     }
 }

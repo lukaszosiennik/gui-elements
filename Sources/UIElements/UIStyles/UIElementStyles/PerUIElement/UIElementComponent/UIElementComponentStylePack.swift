@@ -7,6 +7,19 @@ public struct UIElementComponentStylePack<StylePropertiesType: UIElementComponen
     
     let factory: UIElementStyleFactoryInterface?
     let style: UIElementComponentStyle<StylePropertiesType>
+    
+    init(factory: UIElementStyleFactoryInterface?, style: UIElementComponentStyle<StylePropertiesType>) {
+        self.factory = factory
+        self.style = style
+    }
+    
+    init(pack: UIElementComponentStylePack<StylePropertiesType>, overwrittenBy styleProperties: StylePropertiesType) {
+        self.factory = pack.factory
+        self.style = .init(
+            type: pack.style.type,
+            properties: styleProperties
+        )
+    }
 }
 
 extension UIElementComponentStylePack {

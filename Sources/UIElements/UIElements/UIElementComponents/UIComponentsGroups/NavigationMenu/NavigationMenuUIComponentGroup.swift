@@ -46,14 +46,10 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
             params: .init(
                 text: settings.params.title
             ),
-            stylePack: .init(
-                factory: UIElementComponentStyleFactoryProvider.factory(for: settings.styleType),
-                style: .init(
-                    type: settings.styleType,
-                    properties: .init(
-                        look: .init(),
-                        layoutParams: .init(linesNumber: 0)
-                    )
+            styleType: settings.styleType,
+            overwrittenBy: .init(
+                layoutParams: .init(
+                    linesNumber: 0
                 )
             )
         )
