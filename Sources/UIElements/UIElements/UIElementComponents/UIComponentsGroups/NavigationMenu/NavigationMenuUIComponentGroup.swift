@@ -126,8 +126,8 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
                 stackViewBackground.bottomAnchor.constraint(equalTo: stackView.bottomAnchor),
             ])
         } else {
-            constraint(with: titleTopSpaceConstraintID, from: self)?.constant = 0
-            constraint(with: titleBottomSpaceConstraintID, from: self)?.constant = 0
+            constraint(with: titleTopSpaceConstraintID)?.constant = 0
+            constraint(with: titleBottomSpaceConstraintID)?.constant = 0
         }
         
         guard let styleProperties = settings.stylePack.style.properties else {
@@ -136,8 +136,8 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
         
         stackView.spacing = styleProperties.layoutParams.optionsSpace
         
-        constraint(with: titleTopSpaceConstraintID, from: self)?.constant = styleProperties.layoutParams.titleTopSpace
-        constraint(with: titleBottomSpaceConstraintID, from: self)?.constant = -styleProperties.layoutParams.titleBottomSpace
+        constraint(with: titleTopSpaceConstraintID)?.constant = styleProperties.layoutParams.titleTopSpace
+        constraint(with: titleBottomSpaceConstraintID)?.constant = -styleProperties.layoutParams.titleBottomSpace
         
         if let optionHeight = styleProperties.layoutParams.optionHeight {
             stackView.arrangedSubviews.forEach { optionView in
@@ -146,12 +146,5 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
                 ])
             }
         }
-    }
-}
-
-extension NavigationMenuUIComponentGroup {
-    
-    private func constraint(with identifier: String, from view: UIView) -> NSLayoutConstraint? {
-        return view.constraints.first { $0.identifier == identifier }
     }
 }

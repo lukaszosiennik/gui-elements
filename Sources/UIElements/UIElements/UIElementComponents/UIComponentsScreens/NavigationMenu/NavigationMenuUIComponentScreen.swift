@@ -90,22 +90,15 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
                 navigationMenuUI.centerYAnchor.constraint(equalTo: container.centerYAnchor),
             ])
         } else {
-            constraint(with: leadingSpaceConstraintID, from: self)?.constant = 0
-            constraint(with: trailingSpaceConstraintID, from: self)?.constant = 0
+            constraint(with: leadingSpaceConstraintID)?.constant = 0
+            constraint(with: trailingSpaceConstraintID)?.constant = 0
         }
         
         guard let styleProperties = settings.stylePack.style.properties else {
             return
         }
         
-        constraint(with: leadingSpaceConstraintID, from: self)?.constant = styleProperties.layoutParams.leadingSpace
-        constraint(with: trailingSpaceConstraintID, from: self)?.constant = -styleProperties.layoutParams.trailingSpace
-    }
-}
-
-extension NavigationMenuUIComponentScreen {
-    
-    private func constraint(with identifier: String, from view: UIView) -> NSLayoutConstraint? {
-        return view.constraints.first { $0.identifier == identifier }
+        constraint(with: leadingSpaceConstraintID)?.constant = styleProperties.layoutParams.leadingSpace
+        constraint(with: trailingSpaceConstraintID)?.constant = -styleProperties.layoutParams.trailingSpace
     }
 }

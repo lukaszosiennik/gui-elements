@@ -51,7 +51,7 @@ public final class PlaceholderUIComponent: UIView, UIComponent {
             return
         }
         
-        if let heightConstraint = constraint(with: heightConstraintID, from: self) {
+        if let heightConstraint = constraint(with: heightConstraintID) {
             heightConstraint.constant = styleProperties.layoutParams.height
         } else {
             let heightConstraint = heightAnchor.constraint(equalToConstant: styleProperties.layoutParams.height)
@@ -61,12 +61,5 @@ public final class PlaceholderUIComponent: UIView, UIComponent {
                 heightConstraint,
             ])
         }
-    }
-}
-
-extension PlaceholderUIComponent {
-    
-    private func constraint(with identifier: String, from view: UIView) -> NSLayoutConstraint? {
-        return view.constraints.first { $0.identifier == identifier }
     }
 }
