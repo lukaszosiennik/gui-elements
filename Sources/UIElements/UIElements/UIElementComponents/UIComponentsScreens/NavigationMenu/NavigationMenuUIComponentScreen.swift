@@ -9,7 +9,7 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
     
     private let navigationMenuUI = NavigationMenuUIComponentGroup<OptionKey>()
     
-    private let viewContainer = UIView()
+    private let container = UIView()
     
     private let leadingSpaceConstraintID = "leadingSpace"
     private let trailingSpaceConstraintID = "trailingSpace"
@@ -68,26 +68,26 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
         if initialization {
             translatesAutoresizingMaskIntoConstraints = false
             
-            addSubview(viewContainer)
-            viewContainer.addSubview(navigationMenuUI)
+            addSubview(container)
+            container.addSubview(navigationMenuUI)
             
-            let leadingSpaceConstraint = viewContainer.leadingAnchor.constraint(equalTo: leadingAnchor)
+            let leadingSpaceConstraint = container.leadingAnchor.constraint(equalTo: leadingAnchor)
             leadingSpaceConstraint.identifier = leadingSpaceConstraintID
-            let trailingSpaceConstraint = viewContainer.trailingAnchor.constraint(equalTo: trailingAnchor)
+            let trailingSpaceConstraint = container.trailingAnchor.constraint(equalTo: trailingAnchor)
             trailingSpaceConstraint.identifier = trailingSpaceConstraintID
             
-            viewContainer.translatesAutoresizingMaskIntoConstraints = false
+            container.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 leadingSpaceConstraint,
                 trailingSpaceConstraint,
-                viewContainer.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-                viewContainer.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+                container.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+                container.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             ])
             
             NSLayoutConstraint.activate([
-                navigationMenuUI.leadingAnchor.constraint(equalTo: viewContainer.leadingAnchor),
-                navigationMenuUI.trailingAnchor.constraint(equalTo: viewContainer.trailingAnchor),
-                navigationMenuUI.centerYAnchor.constraint(equalTo: viewContainer.centerYAnchor),
+                navigationMenuUI.leadingAnchor.constraint(equalTo: container.leadingAnchor),
+                navigationMenuUI.trailingAnchor.constraint(equalTo: container.trailingAnchor),
+                navigationMenuUI.centerYAnchor.constraint(equalTo: container.centerYAnchor),
             ])
         } else {
             constraint(with: leadingSpaceConstraintID, from: self)?.constant = 0

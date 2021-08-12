@@ -5,9 +5,15 @@
 
 public struct CardUIComponentGroupParams: UIComponentGroupParams {
     
+    public let title: String
+    
     public static var `default`: CardUIComponentGroupParams {
-        return .init()
+        return .init(
+            title: "CardUIComponentGroupParams.title"
+        )
     }
     
-    public init() {}
+    public init(title: String) {
+        self.title = title
+    }
 }
