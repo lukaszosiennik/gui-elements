@@ -7,6 +7,8 @@ import UIKit
 
 public final class LabelUIComponent: UILabel, UIComponent {
     
+    private var initialization: Bool = false
+    
     public var settings: LabelUIComponentSettings {
         didSet {
             setupSettings()
@@ -25,7 +27,9 @@ public final class LabelUIComponent: UILabel, UIComponent {
     }
     
     private func setup() {
+        initialization = true
         setupSettings()
+        initialization = false
     }
     
     public func setupNestedSettings() {}
@@ -41,9 +45,14 @@ public final class LabelUIComponent: UILabel, UIComponent {
     }
     
     public func setupStyleLayout() {
-        translatesAutoresizingMaskIntoConstraints = false
+        if initialization {
+            translatesAutoresizingMaskIntoConstraints = false
+        }
         
         guard let styleProperties = settings.stylePack.style.properties else {
+            let tempLabel = UILabel()
+            numberOfLines = tempLabel.numberOfLines
+            
             return
         }
         

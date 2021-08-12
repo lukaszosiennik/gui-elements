@@ -53,11 +53,14 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
     public func setupParams() {}
     
     public func setupStyleLook() {
-        if settings.styleType == .os(true) {
-            backgroundColor = .white
-        }
-        
         guard let styleProperties = settings.stylePack.style.properties else {
+            if settings.styleType == .os(true) {
+                backgroundColor = .white
+            } else {
+                let tempView = UIView()
+                backgroundColor = tempView.backgroundColor
+            }
+            
             return
         }
         
@@ -89,12 +92,11 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
                 navigationMenuUI.trailingAnchor.constraint(equalTo: container.trailingAnchor),
                 navigationMenuUI.centerYAnchor.constraint(equalTo: container.centerYAnchor),
             ])
-        } else {
-            constraint(with: leadingSpaceConstraintID)?.constant = 0
-            constraint(with: trailingSpaceConstraintID)?.constant = 0
         }
         
         guard let styleProperties = settings.stylePack.style.properties else {
+            constraint(with: leadingSpaceConstraintID)?.constant = 0
+            constraint(with: trailingSpaceConstraintID)?.constant = 0
             return
         }
         

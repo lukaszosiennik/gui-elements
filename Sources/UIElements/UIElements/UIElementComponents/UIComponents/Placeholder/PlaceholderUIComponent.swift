@@ -47,7 +47,12 @@ public final class PlaceholderUIComponent: UIView, UIComponent {
     }
     
     public func setupStyleLayout() {
+        if initialization {
+            translatesAutoresizingMaskIntoConstraints = false
+        }
+        
         guard let styleProperties = settings.stylePack.style.properties else {
+            removeConstraintIfExists(with: heightConstraintID)
             return
         }
         

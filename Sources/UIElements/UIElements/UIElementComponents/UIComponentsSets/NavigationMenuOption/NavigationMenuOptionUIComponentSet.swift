@@ -48,12 +48,16 @@ public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet {
     
     public func setupStyleLook() {
         guard let styleProperties = settings.stylePack.style.properties else {
+            let tempView = UIView()
+            backgroundColor = tempView.backgroundColor
+            layer.borderColor = tempView.layer.borderColor
+            layer.borderWidth = tempView.layer.borderWidth
             return
         }
         
         backgroundColor = styleProperties.look.backgroundColor
-        layer.borderWidth = styleProperties.look.borderWidth
         layer.borderColor = styleProperties.look.borderColor.cgColor
+        layer.borderWidth = styleProperties.look.borderWidth
     }
     
     public func setupStyleLayout() {

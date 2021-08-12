@@ -55,11 +55,13 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
     public func setupParams() {}
     
     public func setupStyleLook() {
-        if settings.styleType == .os(true) {
-            backgroundColor = .white
-        }
-        
         guard let styleProperties = settings.stylePack.style.properties else {
+            if settings.styleType == .os(true) {
+                backgroundColor = .white
+            } else {
+                let tempView = UIView()
+                backgroundColor = tempView.backgroundColor
+            }
             return
         }
         

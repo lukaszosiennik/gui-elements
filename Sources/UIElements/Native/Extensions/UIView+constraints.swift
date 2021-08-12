@@ -7,7 +7,22 @@ import UIKit
 
 extension UIView {
     
+    func isConstraintExists(with identifier: String) -> Bool {
+        return constraint(with: identifier) != nil
+    }
+    
     func constraint(with identifier: String) -> NSLayoutConstraint? {
         return constraints.first { $0.identifier == identifier }
+    }
+    
+    @discardableResult
+    func removeConstraintIfExists(with identifier: String) -> Bool {
+        guard let constraint = constraint(with: identifier) else {
+            return false
+        }
+        
+        removeConstraint(constraint)
+        
+        return true
     }
 }

@@ -5,13 +5,12 @@
 
 import UIKit
 
-public protocol ButtonUIComponentInterface: UIComponent where UIComponentSettingsType == ButtonUIComponentSettings, Self: UIView {}
+public protocol ButtonUIComponentInterface: UIComponent where UIComponentSettingsType == ButtonUIComponentSettings, Self: UIView {
+    
+    var initialization: Bool { get }
+}
 
 extension ButtonUIComponentInterface {
-    
-    func setup() {
-        setupSettings()
-    }
     
     func setupParams(for button: UIButton) {
         button.setTitle(settings.params.title, for: .normal)
@@ -19,6 +18,8 @@ extension ButtonUIComponentInterface {
     
     func setupStyleLook(for button: UIButton) {
         guard let styleProperties = settings.stylePack.style.properties else {
+            let tempButton = UIButton(type: button.buttonType)
+            button.setTitleColor(tempButton.titleColor(for: .normal), for: .normal)
             return
         }
         
@@ -26,7 +27,9 @@ extension ButtonUIComponentInterface {
     }
     
     func setupStyleLayout(for button: UIButton) {
-        translatesAutoresizingMaskIntoConstraints = false
+        if initialization {
+            translatesAutoresizingMaskIntoConstraints = false
+        }
         
         guard let styleProperties = settings.stylePack.style.properties else {
             return
