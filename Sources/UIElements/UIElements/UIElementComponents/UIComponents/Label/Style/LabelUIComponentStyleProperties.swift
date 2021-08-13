@@ -14,12 +14,12 @@ public struct LabelUIComponentStyleProperties: UIComponentStyleProperties {
     }
 }
 
-public struct LabelUIComponentStylePropertiesOverwritten {
+public struct LabelUIComponentStylePropertiesOverwritten: UIComponentStylePropertiesOverwritten {
     
-    public let look: LabelUIComponentStylePropertiesOverwrittenLook?
-    public let layoutParams: LabelUIComponentStylePropertiesOverwrittenLayoutParams?
+    public var look: LabelUIComponentStylePropertiesOverwrittenLook?
+    public var layoutParams: LabelUIComponentStylePropertiesOverwrittenLayoutParams?
     
-    init(look: LabelUIComponentStylePropertiesOverwrittenLook? = nil, layoutParams: LabelUIComponentStylePropertiesOverwrittenLayoutParams? = nil) {
+    public init(look: LabelUIComponentStylePropertiesOverwrittenLook? = nil, layoutParams: LabelUIComponentStylePropertiesOverwrittenLayoutParams? = nil) {
         self.look = look
         self.layoutParams = layoutParams
     }
