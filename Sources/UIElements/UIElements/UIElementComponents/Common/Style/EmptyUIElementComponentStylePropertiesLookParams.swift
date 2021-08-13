@@ -3,4 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct EmptyUIElementComponentStylePropertiesLookParams: UIElementComponentStylePropertiesLookParams {}
+public struct EmptyUIComponentStylePropertiesLookParams: UIComponentStylePropertiesLookParams {}
+public struct EmptyUIComponentSetStylePropertiesLookParams: UIComponentSetStylePropertiesLookParams {}
+public struct EmptyUIComponentGroupStylePropertiesLookParams: UIComponentGroupStylePropertiesLookParams {}
+public struct EmptyUIComponentScreenStylePropertiesLookParams: UIComponentScreenStylePropertiesLookParams {}

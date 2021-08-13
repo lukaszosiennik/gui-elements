@@ -3,18 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct LabelUIComponentStyleProperties: UIComponentStyleProperties {
-    
-    public let look: LabelUIComponentStylePropertiesLook?
-    public let lookParams: LabelUIComponentStylePropertiesLookParams?
-    public let layoutParams: LabelUIComponentStylePropertiesLayoutParams?
-    
-    public init(look: LabelUIComponentStylePropertiesLook?, lookParams: LabelUIComponentStylePropertiesLookParams?, layoutParams: LabelUIComponentStylePropertiesLayoutParams?) {
-        self.look = look
-        self.lookParams = lookParams
-        self.layoutParams = layoutParams
-    }
-}
+public typealias LabelUIComponentStyleProperties = UIComponentStylePropertiesTemplate<LabelUIComponentStylePropertiesLook,
+                                                                                      LabelUIComponentStylePropertiesLookParams,
+                                                                                      LabelUIComponentStylePropertiesLayoutParams>
 
 public struct LabelUIComponentStylePropertiesOverwritten: UIComponentStyleProperties {
     
