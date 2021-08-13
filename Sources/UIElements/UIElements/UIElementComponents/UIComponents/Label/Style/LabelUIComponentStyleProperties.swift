@@ -16,7 +16,7 @@ public struct LabelUIComponentStyleProperties: UIComponentStyleProperties {
     }
 }
 
-public struct LabelUIComponentStylePropertiesOverwritten: UIComponentStylePropertiesOverwritten {
+public struct LabelUIComponentStylePropertiesOverwritten: UIComponentStyleProperties {
     
     public var look: LabelUIComponentStylePropertiesOverwrittenLook?
     public var lookParams: LabelUIComponentStylePropertiesOverwrittenLookParams?
