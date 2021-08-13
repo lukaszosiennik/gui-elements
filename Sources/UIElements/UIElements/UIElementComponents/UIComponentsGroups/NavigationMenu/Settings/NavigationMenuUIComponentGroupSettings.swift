@@ -5,7 +5,7 @@
 
 public struct NavigationMenuUIComponentGroupSettings<OptionKey: InputUIElementComponentActionsKeyInterface>: UIComponentGroupSettings {
     
-    public var params: NavigationMenuUIComponentGroupParams<OptionKey>
+    public let params: NavigationMenuUIComponentGroupParams<OptionKey>
     public var stylePack: UIElementComponentStylePack<NavigationMenuUIComponentGroupStyleProperties>
     
     public init(params: NavigationMenuUIComponentGroupParams<OptionKey>) {

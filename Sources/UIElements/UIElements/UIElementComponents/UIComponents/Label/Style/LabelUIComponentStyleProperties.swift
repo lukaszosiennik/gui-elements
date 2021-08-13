@@ -5,11 +5,13 @@
 
 public struct LabelUIComponentStyleProperties: UIComponentStyleProperties {
     
-    public var look: LabelUIComponentStylePropertiesLook
-    public var layoutParams: LabelUIComponentStylePropertiesLayoutParams
+    public let look: LabelUIComponentStylePropertiesLook?
+    public let lookParams: LabelUIComponentStylePropertiesLookParams?
+    public let layoutParams: LabelUIComponentStylePropertiesLayoutParams?
     
-    public init(look: LabelUIComponentStylePropertiesLook, layoutParams: LabelUIComponentStylePropertiesLayoutParams) {
+    public init(look: LabelUIComponentStylePropertiesLook?, lookParams: LabelUIComponentStylePropertiesLookParams?, layoutParams: LabelUIComponentStylePropertiesLayoutParams?) {
         self.look = look
+        self.lookParams = lookParams
         self.layoutParams = layoutParams
     }
 }
@@ -17,10 +19,12 @@ public struct LabelUIComponentStyleProperties: UIComponentStyleProperties {
 public struct LabelUIComponentStylePropertiesOverwritten: UIComponentStylePropertiesOverwritten {
     
     public var look: LabelUIComponentStylePropertiesOverwrittenLook?
+    public var lookParams: LabelUIComponentStylePropertiesOverwrittenLookParams?
     public var layoutParams: LabelUIComponentStylePropertiesOverwrittenLayoutParams?
     
-    public init(look: LabelUIComponentStylePropertiesOverwrittenLook? = nil, layoutParams: LabelUIComponentStylePropertiesOverwrittenLayoutParams? = nil) {
+    public init(look: LabelUIComponentStylePropertiesOverwrittenLook? = nil, lookParams: LabelUIComponentStylePropertiesOverwrittenLookParams? = nil, layoutParams: LabelUIComponentStylePropertiesOverwrittenLayoutParams? = nil) {
         self.look = look
+        self.lookParams = lookParams
         self.layoutParams = layoutParams
     }
 }

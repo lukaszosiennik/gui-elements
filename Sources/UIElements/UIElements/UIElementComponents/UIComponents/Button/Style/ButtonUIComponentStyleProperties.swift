@@ -5,11 +5,13 @@
 
 public struct ButtonUIComponentStyleProperties: UIComponentStyleProperties {
     
-    public var look: ButtonUIComponentStylePropertiesLook
-    public var layoutParams: ButtonUIComponentStylePropertiesLayoutParams
+    public let look: ButtonUIComponentStylePropertiesLook?
+    public let lookParams: EmptyUIElementComponentStylePropertiesLookParams?
+    public let layoutParams: ButtonUIComponentStylePropertiesLayoutParams?
     
-    public init(look: ButtonUIComponentStylePropertiesLook, layoutParams: ButtonUIComponentStylePropertiesLayoutParams) {
+    public init(look: ButtonUIComponentStylePropertiesLook?, lookParams: EmptyUIElementComponentStylePropertiesLookParams?, layoutParams: ButtonUIComponentStylePropertiesLayoutParams?) {
         self.look = look
+        self.lookParams = lookParams
         self.layoutParams = layoutParams
     }
 }

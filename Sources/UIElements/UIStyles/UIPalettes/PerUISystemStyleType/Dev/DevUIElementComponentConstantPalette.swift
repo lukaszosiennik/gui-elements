@@ -37,6 +37,26 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
             }
         }
         
+        fileprivate typealias UILookParamsPalette = UILookParams
+        fileprivate enum UILookParams {
+            
+            enum Property {
+                 
+                enum Size {
+                    
+                    enum Vertical {
+                        
+                        enum LinesNumber {
+                            
+                            static let value_0: CGFloat = All.value_0
+                            static let value_1: CGFloat = All.value_1
+                        }
+                    }
+                }
+            }
+            
+        }
+        
         fileprivate typealias UILayoutParamsPalette = UILayoutParams
         fileprivate enum UILayoutParams {
             
@@ -61,12 +81,6 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
                             static let value_50: CGFloat = All.value_50
                             static let value_150: CGFloat = All.value_150
                         }
-                        
-                        enum LinesNumber {
-                            
-                            static let value_0: CGFloat = All.value_0
-                            static let value_1: CGFloat = All.value_1
-                        }
                     }
                 }
                 
@@ -88,10 +102,10 @@ extension DevUIElementComponentConstantPalette.UIElementComponent {
         
         enum LabelUIComponent {
             
-            enum UILayoutParams {
+            enum UILookParams {
                 
-                static let linesNumber_0: Int = Int(UILayoutParamsPalette.Property.Size.Vertical.LinesNumber.value_0)
-                static let linesNumber_1: Int = Int(UILayoutParamsPalette.Property.Size.Vertical.LinesNumber.value_1)
+                static let linesNumber_0: Int = Int(UILookParamsPalette.Property.Size.Vertical.LinesNumber.value_0)
+                static let linesNumber_1: Int = Int(UILookParamsPalette.Property.Size.Vertical.LinesNumber.value_1)
             }
         }
         

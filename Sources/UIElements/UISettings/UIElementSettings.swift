@@ -5,5 +5,5 @@
 
 public protocol UIElementSettings {
     
-    var styleType: UIStyleType { get set }
+    var styleType: UIStyleType { get }
 }

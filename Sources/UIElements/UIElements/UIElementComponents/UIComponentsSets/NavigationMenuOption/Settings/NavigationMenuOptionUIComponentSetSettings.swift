@@ -5,7 +5,7 @@
 
 public struct NavigationMenuOptionUIComponentSetSettings: UIComponentSetSettings {
     
-    public var params: NavigationMenuOptionUIComponentSetParams
+    public let params: NavigationMenuOptionUIComponentSetParams
     public var stylePack: UIElementComponentStylePack<NavigationMenuOptionUIComponentSetStyleProperties>
     
     public init(params: NavigationMenuOptionUIComponentSetParams) {

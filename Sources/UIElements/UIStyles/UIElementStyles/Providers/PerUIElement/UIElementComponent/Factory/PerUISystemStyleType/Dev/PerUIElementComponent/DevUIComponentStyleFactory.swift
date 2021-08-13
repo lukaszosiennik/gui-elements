@@ -15,9 +15,10 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
                 type: styleType,
                 properties: .init(
                     look: .init(),
-                    layoutParams: .init(
-                        linesNumber: ConstantPalette.LabelUIComponent.UILayoutParams.linesNumber_1
-                    )
+                    lookParams: .init(
+                        linesNumber: ConstantPalette.LabelUIComponent.UILookParams.linesNumber_1
+                    ),
+                    layoutParams: .init()
                 )
             )
         )
@@ -36,6 +37,7 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
                     look: .init(
                         backgroundColor: ColorPalette.Placeholder.background_green
                     ),
+                    lookParams: .init(),
                     layoutParams: .init(
                         height: ConstantPalette.Placeholder.UILayoutParams.height_150
                     )

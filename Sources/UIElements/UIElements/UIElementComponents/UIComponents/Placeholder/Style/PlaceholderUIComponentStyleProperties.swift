@@ -5,11 +5,13 @@
 
 public struct PlaceholderUIComponentStyleProperties: UIComponentStyleProperties {
     
-    public var look: PlaceholderUIComponentStylePropertiesLook
-    public var layoutParams: PlaceholderUIComponentStylePropertiesLayoutParams
+    public let look: PlaceholderUIComponentStylePropertiesLook?
+    public let lookParams: EmptyUIElementComponentStylePropertiesLookParams?
+    public let layoutParams: PlaceholderUIComponentStylePropertiesLayoutParams?
     
-    public init(look: PlaceholderUIComponentStylePropertiesLook, layoutParams: PlaceholderUIComponentStylePropertiesLayoutParams) {
+    public init(look: PlaceholderUIComponentStylePropertiesLook?, lookParams: EmptyUIElementComponentStylePropertiesLookParams?, layoutParams: PlaceholderUIComponentStylePropertiesLayoutParams?) {
         self.look = look
+        self.lookParams = lookParams
         self.layoutParams = layoutParams
     }
 }

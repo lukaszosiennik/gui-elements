@@ -41,7 +41,7 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
             ),
             styleType: settings.styleType,
             overwrittenBy: .init(
-                layoutParams: .init(
+                lookParams: .init(
                     linesNumber: 0
                 )
             )
@@ -51,7 +51,7 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
     public func setupParams() {}
     
     public func setupStyleLook() {
-        guard let styleProperties = settings.stylePack.style.properties else {
+        guard let look = settings.stylePack.style.properties?.look else {
             if settings.styleType != .os(false) {
                 backgroundColor = .white
             } else {
@@ -61,7 +61,13 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
             return
         }
         
-        backgroundColor = styleProperties.look.backgroundColor
+        backgroundColor = look.backgroundColor
+    }
+    
+    public func setupStyleLookParams() {
+        guard let lookParams = settings.stylePack.style.properties?.lookParams else {
+            return
+        }
     }
     
     public func setupStyleLayout() {
@@ -82,7 +88,7 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
             ])
         }
         
-        guard let styleProperties = settings.stylePack.style.properties else {
+        guard let layoutParams = settings.stylePack.style.properties?.layoutParams else {
             return
         }
     }

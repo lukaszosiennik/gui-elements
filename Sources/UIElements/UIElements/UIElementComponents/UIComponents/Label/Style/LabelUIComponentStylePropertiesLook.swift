@@ -7,7 +7,11 @@ public struct LabelUIComponentStylePropertiesLook: UIComponentStylePropertiesLoo
     
     init() {}
     
-    init(look: LabelUIComponentStylePropertiesLook, overwrittenBy newLook: LabelUIComponentStylePropertiesOverwrittenLook?) {}
+    init?(look: LabelUIComponentStylePropertiesLook?, overwrittenBy newLook: LabelUIComponentStylePropertiesOverwrittenLook?) {
+        guard let look = look else {
+            return nil
+        }
+    }
 }
 
 public struct LabelUIComponentStylePropertiesOverwrittenLook: UIComponentStylePropertiesLook {

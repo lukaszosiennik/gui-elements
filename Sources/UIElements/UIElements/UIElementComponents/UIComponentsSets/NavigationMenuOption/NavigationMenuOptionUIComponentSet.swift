@@ -47,7 +47,7 @@ public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet {
     public func setupParams() {}
     
     public func setupStyleLook() {
-        guard let styleProperties = settings.stylePack.style.properties else {
+        guard let look = settings.stylePack.style.properties?.look else {
             let tempView = UIView()
             backgroundColor = tempView.backgroundColor
             layer.borderColor = tempView.layer.borderColor
@@ -55,9 +55,15 @@ public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet {
             return
         }
         
-        backgroundColor = styleProperties.look.backgroundColor
-        layer.borderColor = styleProperties.look.borderColor.cgColor
-        layer.borderWidth = styleProperties.look.borderWidth
+        backgroundColor = look.backgroundColor
+        layer.borderColor = look.borderColor.cgColor
+        layer.borderWidth = look.borderWidth
+    }
+    
+    public func setupStyleLookParams() {
+        guard let lookParams = settings.stylePack.style.properties?.lookParams else {
+            return
+        }
     }
     
     public func setupStyleLayout() {
@@ -76,7 +82,7 @@ public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet {
             ])
         }
         
-        guard let styleProperties = settings.stylePack.style.properties else {
+        guard let layoutParams = settings.stylePack.style.properties?.layoutParams else {
             return
         }
     }

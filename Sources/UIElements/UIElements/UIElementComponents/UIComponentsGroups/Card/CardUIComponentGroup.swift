@@ -55,7 +55,13 @@ public final class CardUIComponentGroup<BodyContainerContent: UIView>: UIView, U
     public func setupParams() {}
     
     public func setupStyleLook() {
-        guard let styleProperties = settings.stylePack.style.properties else {
+        guard let look = settings.stylePack.style.properties?.look else {
+            return
+        }
+    }
+    
+    public func setupStyleLookParams() {
+        guard let lookParams = settings.stylePack.style.properties?.lookParams else {
             return
         }
     }
@@ -108,7 +114,7 @@ public final class CardUIComponentGroup<BodyContainerContent: UIView>: UIView, U
             }
         }
         
-        guard let styleProperties = settings.stylePack.style.properties else {
+        guard let layoutParams = settings.stylePack.style.properties?.layoutParams else {
             return
         }
     }

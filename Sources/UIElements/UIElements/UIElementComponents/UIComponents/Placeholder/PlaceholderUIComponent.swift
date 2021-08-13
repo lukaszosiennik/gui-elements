@@ -39,11 +39,17 @@ public final class PlaceholderUIComponent: UIView, UIComponent {
     public func setupParams() {}
     
     public func setupStyleLook() {
-        guard let styleProperties = settings.stylePack.style.properties else {
+        guard let look = settings.stylePack.style.properties?.look else {
             return
         }
         
-        backgroundColor = styleProperties.look.backgroundColor
+        backgroundColor = look.backgroundColor
+    }
+    
+    public func setupStyleLookParams() {
+        guard let lookParams = settings.stylePack.style.properties?.lookParams else {
+            return
+        }
     }
     
     public func setupStyleLayout() {
@@ -51,15 +57,15 @@ public final class PlaceholderUIComponent: UIView, UIComponent {
             translatesAutoresizingMaskIntoConstraints = false
         }
         
-        guard let styleProperties = settings.stylePack.style.properties else {
+        guard let layoutParams = settings.stylePack.style.properties?.layoutParams else {
             removeConstraintIfExists(with: heightConstraintID)
             return
         }
         
         if let heightConstraint = constraint(with: heightConstraintID) {
-            heightConstraint.constant = styleProperties.layoutParams.height
+            heightConstraint.constant = layoutParams.height
         } else {
-            let heightConstraint = heightAnchor.constraint(equalToConstant: styleProperties.layoutParams.height)
+            let heightConstraint = heightAnchor.constraint(equalToConstant: layoutParams.height)
             heightConstraint.identifier = heightConstraintID
             
             NSLayoutConstraint.activate([

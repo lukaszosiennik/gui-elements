@@ -42,6 +42,10 @@ public final class ButtonUIComponent: UIButton, ButtonUIComponentInterface {
         setupStyleLook(for: self)
     }
     
+    public func setupStyleLookParams() {
+        setupStyleLookParams(for: self)
+    }
+    
     public func setupStyleLayout() {
         setupStyleLayout(for: self)
     }

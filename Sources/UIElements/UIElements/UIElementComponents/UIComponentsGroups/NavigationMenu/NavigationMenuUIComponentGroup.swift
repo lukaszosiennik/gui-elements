@@ -48,7 +48,7 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
             ),
             styleType: settings.styleType,
             overwrittenBy: .init(
-                layoutParams: .init(
+                lookParams: .init(
                     linesNumber: 0
                 )
             )
@@ -77,13 +77,19 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
     }
     
     public func setupStyleLook() {
-        guard let styleProperties = settings.stylePack.style.properties else {
+        guard let look = settings.stylePack.style.properties?.look else {
             let tempView = UIView()
             backgroundColor = tempView.backgroundColor
             return
         }
         
-        backgroundColor = styleProperties.look.backgroundColor
+        backgroundColor = look.backgroundColor
+    }
+    
+    public func setupStyleLookParams() {
+        guard let lookParams = settings.stylePack.style.properties?.lookParams else {
+            return
+        }
     }
     
     public func setupStyleLayout() {
@@ -128,7 +134,7 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
             ])
         }
         
-        guard let styleProperties = settings.stylePack.style.properties else {
+        guard let layoutParams = settings.stylePack.style.properties?.layoutParams else {
             let tempStackView = UIStackView()
             stackView.spacing = tempStackView.spacing
             
@@ -140,11 +146,11 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
             return
         }
         
-        stackView.spacing = styleProperties.layoutParams.optionsSpace
+        stackView.spacing = layoutParams.optionsSpace
         
-        constraint(with: titleTopSpaceConstraintID)?.constant = styleProperties.layoutParams.titleTopMargin
-        constraint(with: titleBottomSpaceConstraintID)?.constant = -styleProperties.layoutParams.titleBottomMargin
-        if let optionHeight = styleProperties.layoutParams.optionHeight {
+        constraint(with: titleTopSpaceConstraintID)?.constant = layoutParams.titleTopMargin
+        constraint(with: titleBottomSpaceConstraintID)?.constant = -layoutParams.titleBottomMargin
+        if let optionHeight = layoutParams.optionHeight {
             stackView.arrangedSubviews.forEach { optionView in
                 if let constraint = optionView.constraint(with: optionViewHeightConstraintID) {
                     constraint.constant = optionHeight

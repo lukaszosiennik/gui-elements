@@ -7,7 +7,7 @@ public protocol UILayoutStyleProperties: UIElementStyleProperties {
     
     associatedtype UILayoutStylePropertiesParamsType: UILayoutStylePropertiesParams
     
-    var params: UILayoutStylePropertiesParamsType { get set }
+    var params: UILayoutStylePropertiesParamsType { get }
     
     init?(styleType: UIStyleType?, params: UILayoutStylePropertiesParamsType)
 }

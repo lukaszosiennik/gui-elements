@@ -5,7 +5,7 @@
 
 public struct PlaceholderUIComponentSettings: UIComponentSettings {
     
-    public var params: PlaceholderUIComponentParams
+    public let params: PlaceholderUIComponentParams
     public var stylePack: UIElementComponentStylePack<PlaceholderUIComponentStyleProperties>
     
     public init(params: PlaceholderUIComponentParams) {

@@ -5,7 +5,7 @@
 
 public struct InformationUIComponentScreenSettings: UIComponentScreenSettings {
     
-    public var params: InformationUIComponentScreenParams
+    public let params: InformationUIComponentScreenParams
     public var stylePack: UIElementComponentStylePack<InformationUIComponentScreenStyleProperties>
     
     public init(params: InformationUIComponentScreenParams) {

@@ -5,11 +5,13 @@
 
 public struct CardUIComponentGroupStyleProperties: UIComponentGroupStyleProperties {
     
-    public var look: CardUIComponentGroupStylePropertiesLook
-    public var layoutParams: CardUIComponentGroupStylePropertiesLayoutParams
+    public let look: CardUIComponentGroupStylePropertiesLook?
+    public let lookParams: EmptyUIElementComponentStylePropertiesLookParams?
+    public let layoutParams: CardUIComponentGroupStylePropertiesLayoutParams?
     
-    public init(look: CardUIComponentGroupStylePropertiesLook, layoutParams: CardUIComponentGroupStylePropertiesLayoutParams) {
+    public init(look: CardUIComponentGroupStylePropertiesLook?, lookParams: EmptyUIElementComponentStylePropertiesLookParams?, layoutParams: CardUIComponentGroupStylePropertiesLayoutParams?) {
         self.look = look
+        self.lookParams = lookParams
         self.layoutParams = layoutParams
     }
 }

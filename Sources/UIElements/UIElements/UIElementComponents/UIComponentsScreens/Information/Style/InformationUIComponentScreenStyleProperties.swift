@@ -5,11 +5,13 @@
 
 public struct InformationUIComponentScreenStyleProperties: UIComponentScreenStyleProperties {
     
-    public var look: InformationUIComponentScreenStylePropertiesLook
-    public var layoutParams: InformationUIComponentScreenStylePropertiesLayoutParams
+    public let look: InformationUIComponentScreenStylePropertiesLook?
+    public let lookParams: EmptyUIElementComponentStylePropertiesLookParams?
+    public let layoutParams: InformationUIComponentScreenStylePropertiesLayoutParams?
     
-    public init(look: InformationUIComponentScreenStylePropertiesLook, layoutParams: InformationUIComponentScreenStylePropertiesLayoutParams) {
+    public init(look: InformationUIComponentScreenStylePropertiesLook?, lookParams: EmptyUIElementComponentStylePropertiesLookParams?, layoutParams: InformationUIComponentScreenStylePropertiesLayoutParams?) {
         self.look = look
+        self.lookParams = lookParams
         self.layoutParams = layoutParams
     }
 }

@@ -5,7 +5,7 @@
 
 public struct CardUIComponentGroupSettings: UIComponentGroupSettings {
     
-    public var params: CardUIComponentGroupParams
+    public let params: CardUIComponentGroupParams
     public var stylePack: UIElementComponentStylePack<CardUIComponentGroupStyleProperties>
     
     public init(params: CardUIComponentGroupParams) {

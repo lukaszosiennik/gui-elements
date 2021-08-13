@@ -55,6 +55,10 @@ public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
         setupStyleLook(for: button)
     }
     
+    public func setupStyleLookParams() {
+        setupStyleLookParams(for: button)
+    }
+    
     public func setupStyleLayout() {
         subviews.forEach { subview in
             subview.removeFromSuperview()

@@ -5,11 +5,13 @@
 
 public struct NavigationMenuUIComponentGroupStyleProperties: UIComponentGroupStyleProperties {
     
-    public var look: NavigationMenuUIComponentGroupStylePropertiesLook
-    public var layoutParams: NavigationMenuUIComponentGroupStylePropertiesLayoutParams
+    public let look: NavigationMenuUIComponentGroupStylePropertiesLook?
+    public let lookParams: EmptyUIElementComponentStylePropertiesLookParams?
+    public let layoutParams: NavigationMenuUIComponentGroupStylePropertiesLayoutParams?
     
-    public init(look: NavigationMenuUIComponentGroupStylePropertiesLook, layoutParams: NavigationMenuUIComponentGroupStylePropertiesLayoutParams) {
+    public init(look: NavigationMenuUIComponentGroupStylePropertiesLook?, lookParams: EmptyUIElementComponentStylePropertiesLookParams?, layoutParams: NavigationMenuUIComponentGroupStylePropertiesLayoutParams?) {
         self.look = look
+        self.lookParams = lookParams
         self.layoutParams = layoutParams
     }
 }

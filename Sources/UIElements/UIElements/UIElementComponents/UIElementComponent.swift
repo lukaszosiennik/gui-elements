@@ -10,6 +10,7 @@ public protocol UIElementComponent: UIElement {
     func setupParams()
     
     func setupStyleLook()
+    func setupStyleLookParams()
     func setupStyleLayout()
 }
 
@@ -24,6 +25,7 @@ extension UIElementComponent {
     
     func setupStyle() {
         setupStyleLook()
+        setupStyleLookParams()
         setupStyleLayout()
     }
 }

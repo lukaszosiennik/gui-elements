@@ -39,9 +39,19 @@ public final class LabelUIComponent: UILabel, UIComponent {
     }
     
     public func setupStyleLook() {
-        guard let styleProperties = settings.stylePack.style.properties else {
+        guard let look = settings.stylePack.style.properties?.look else {
             return
         }
+    }
+    
+    public func setupStyleLookParams() {
+        guard let lookParams = settings.stylePack.style.properties?.lookParams else {
+            let tempLabel = UILabel()
+            numberOfLines = tempLabel.numberOfLines
+            return
+        }
+        
+        numberOfLines = lookParams.linesNumber
     }
     
     public func setupStyleLayout() {
@@ -49,13 +59,8 @@ public final class LabelUIComponent: UILabel, UIComponent {
             translatesAutoresizingMaskIntoConstraints = false
         }
         
-        guard let styleProperties = settings.stylePack.style.properties else {
-            let tempLabel = UILabel()
-            numberOfLines = tempLabel.numberOfLines
-            
+        guard let layoutParams = settings.stylePack.style.properties?.layoutParams else {
             return
         }
-        
-        numberOfLines = styleProperties.layoutParams.linesNumber
     }
 }

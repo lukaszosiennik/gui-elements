@@ -17,13 +17,19 @@ extension ButtonUIComponentInterface {
     }
     
     func setupStyleLook(for button: UIButton) {
-        guard let styleProperties = settings.stylePack.style.properties else {
+        guard let look = settings.stylePack.style.properties?.look else {
             let tempButton = UIButton(type: button.buttonType)
             button.setTitleColor(tempButton.titleColor(for: .normal), for: .normal)
             return
         }
         
-        button.setTitleColor(styleProperties.look.titleColor, for: .normal)
+        button.setTitleColor(look.titleColor, for: .normal)
+    }
+    
+    func setupStyleLookParams(for button: UIButton) {
+        guard let lookParams = settings.stylePack.style.properties?.lookParams else {
+            return
+        }
     }
     
     func setupStyleLayout(for button: UIButton) {
@@ -31,7 +37,7 @@ extension ButtonUIComponentInterface {
             translatesAutoresizingMaskIntoConstraints = false
         }
         
-        guard let styleProperties = settings.stylePack.style.properties else {
+        guard let layoutParams = settings.stylePack.style.properties?.layoutParams else {
             return
         }
     }

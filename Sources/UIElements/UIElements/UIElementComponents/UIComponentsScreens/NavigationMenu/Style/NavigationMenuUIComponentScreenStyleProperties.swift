@@ -5,11 +5,13 @@
 
 public struct NavigationMenuUIComponentScreenStyleProperties: UIComponentScreenStyleProperties {
     
-    public var look: NavigationMenuUIComponentScreenStylePropertiesLook
-    public var layoutParams: NavigationMenuUIComponentScreenStylePropertiesLayoutParams
+    public let look: NavigationMenuUIComponentScreenStylePropertiesLook?
+    public let lookParams: EmptyUIElementComponentStylePropertiesLookParams?
+    public let layoutParams: NavigationMenuUIComponentScreenStylePropertiesLayoutParams?
     
-    public init(look: NavigationMenuUIComponentScreenStylePropertiesLook, layoutParams: NavigationMenuUIComponentScreenStylePropertiesLayoutParams) {
+    public init(look: NavigationMenuUIComponentScreenStylePropertiesLook?, lookParams: EmptyUIElementComponentStylePropertiesLookParams?, layoutParams: NavigationMenuUIComponentScreenStylePropertiesLayoutParams?) {
         self.look = look
+        self.lookParams = lookParams
         self.layoutParams = layoutParams
     }
 }

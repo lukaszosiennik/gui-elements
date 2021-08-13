@@ -5,7 +5,7 @@
 
 public struct LabelUIComponentSettings: UIComponentSettings {
 
-    public var params: LabelUIComponentParams
+    public let params: LabelUIComponentParams
     public var stylePack: UIElementComponentStylePack<LabelUIComponentStyleProperties>
     
     public init(params: LabelUIComponentParams) {
@@ -40,7 +40,23 @@ public struct LabelUIComponentSettings: UIComponentSettings {
     
     public static func stylePack(for styleType: UIStyleType, overwrittenBy styleProperties: LabelUIComponentStylePropertiesOverwritten) -> UIElementComponentStylePack<LabelUIComponentStyleProperties> {
         guard let pack = Self.stylePackFactory(for: styleType)?.label() else {
-            return .default(styleType: styleType)
+            let defaultPack:UIElementComponentStylePack<LabelUIComponentStyleProperties> = .default(styleType: styleType)
+            
+            guard let lookParams = styleProperties.lookParams else {
+                return defaultPack
+            }
+            
+            return .init(
+                pack: defaultPack,
+                overwrittenBy: .init(
+                    look: nil,
+                    lookParams: .init(
+                        lookParams: nil,
+                        overwrittenBy: lookParams
+                    ),
+                    layoutParams: nil
+                )
+            )
         }
         
         guard let properties = pack.style.properties else {
@@ -53,6 +69,10 @@ public struct LabelUIComponentSettings: UIComponentSettings {
                 look: .init(
                     look: properties.look,
                     overwrittenBy: styleProperties.look
+                ),
+                lookParams: .init(
+                    lookParams: properties.lookParams,
+                    overwrittenBy: styleProperties.lookParams
                 ),
                 layoutParams: .init(
                     layoutParams: properties.layoutParams,

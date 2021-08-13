@@ -5,7 +5,7 @@
 
 public struct ButtonUIComponentSettings: UIComponentSettings {
     
-    public var params: ButtonUIComponentParams
+    public let params: ButtonUIComponentParams
     public var stylePack: UIElementComponentStylePack<ButtonUIComponentStyleProperties>
     
     public init(params: ButtonUIComponentParams) {

@@ -8,7 +8,7 @@ public protocol UIElementComponentSettings: UIElementSettings {
     associatedtype UIElementComponentParamsType: UIElementComponentParams
     associatedtype UIElementComponentStylePropertiesType: UIElementComponentStyleProperties
     
-    var params: UIElementComponentParamsType { get set }
+    var params: UIElementComponentParamsType { get }
     var stylePack: UIElementComponentStylePack<UIElementComponentStylePropertiesType> { get set }
     
     init(params: UIElementComponentParamsType)
