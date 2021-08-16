@@ -8,4 +8,12 @@ import UIKit
 public struct PlaceholderUIComponentStylePropertiesLook: UIComponentStylePropertiesLook {
     
     public let backgroundColor: UIColor
+    
+    init(backgroundColor: UIColor) {
+        self.backgroundColor = backgroundColor
+    }
+    
+    public init?(look: Self?, overwrittenBy newLook: EmptyUIComponentStylePropertiesOverwrittenLook?) {
+        return nil
+    }
 }

@@ -41,7 +41,7 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
             ),
             styleType: settings.styleType,
             overwrittenBy: .init(
-                overwrittenLookParams: .init(
+                lookParams: .init(
                     linesNumber: settings.stylePack.style.properties?.lookParams?.titleLinesNumber
                 )
             )

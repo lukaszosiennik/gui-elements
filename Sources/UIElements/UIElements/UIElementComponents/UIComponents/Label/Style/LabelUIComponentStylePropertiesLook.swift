@@ -4,17 +4,12 @@
 //
 
 public struct LabelUIComponentStylePropertiesLook: UIComponentStylePropertiesLook {
-    
+
     init() {}
     
-    init?(look: LabelUIComponentStylePropertiesLook?, overwrittenBy newLook: LabelUIComponentStylePropertiesOverwrittenLook?) {
+    public init?(look: Self?, overwrittenBy newLook: EmptyUIComponentStylePropertiesOverwrittenLook?) {
         guard let look = look else {
             return nil
         }
     }
-}
-
-public struct LabelUIComponentStylePropertiesOverwrittenLook: UIComponentStylePropertiesLook {
-    
-    init() {}
 }

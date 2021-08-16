@@ -3,4 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentStylePropertiesLayoutParams: UIElementComponentStylePropertiesLayoutParams {}
+public protocol UIComponentStylePropertiesLayoutParams: UIElementComponentStylePropertiesLayoutParams {
+    
+    associatedtype UIComponentStylePropertiesOverwrittenLayoutParamsType: UIComponentStylePropertiesOverwrittenLayoutParams
+
+    init?(layoutParams: Self?, overwrittenBy newLayoutParams: UIComponentStylePropertiesOverwrittenLayoutParamsType?)
+}

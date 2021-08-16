@@ -11,7 +11,7 @@ public struct LabelUIComponentStylePropertiesLookParams: UIComponentStylePropert
         self.linesNumber = linesNumber
     }
     
-    init?(lookParams: LabelUIComponentStylePropertiesLookParams?, overwrittenBy newLookParams: LabelUIComponentStylePropertiesOverwrittenLookParams?) {
+    public init?(lookParams: Self?, overwrittenBy newLookParams: LabelUIComponentStylePropertiesOverwrittenLookParams?) {
         guard let linesNumber = newLookParams?.linesNumber ?? lookParams?.linesNumber else {
             return nil
         }
@@ -20,7 +20,7 @@ public struct LabelUIComponentStylePropertiesLookParams: UIComponentStylePropert
     }
 }
 
-public struct LabelUIComponentStylePropertiesOverwrittenLookParams: UIComponentStylePropertiesLookParams {
+public struct LabelUIComponentStylePropertiesOverwrittenLookParams: UIComponentStylePropertiesOverwrittenLookParams {
     
     public let linesNumber: Int?
     

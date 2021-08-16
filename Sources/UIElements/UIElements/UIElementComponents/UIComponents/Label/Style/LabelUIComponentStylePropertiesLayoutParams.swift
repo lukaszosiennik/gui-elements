@@ -7,14 +7,9 @@ public struct LabelUIComponentStylePropertiesLayoutParams: UIComponentStylePrope
     
     init() {}
     
-    init?(layoutParams: LabelUIComponentStylePropertiesLayoutParams?, overwrittenBy newLayoutParams: LabelUIComponentStylePropertiesOverwrittenLayoutParams?) {
+    public init?(layoutParams: Self?, overwrittenBy newLayoutParams: EmptyUIComponentStylePropertiesOverwrittenLayoutParams?) {
         guard let layoutParams = layoutParams else {
             return nil
         }
     }
-}
-
-public struct LabelUIComponentStylePropertiesOverwrittenLayoutParams: UIComponentStylePropertiesLayoutParams {
-    
-    init() {}
 }

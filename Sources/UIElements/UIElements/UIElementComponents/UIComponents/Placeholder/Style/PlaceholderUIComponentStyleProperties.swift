@@ -6,3 +6,7 @@
 public typealias PlaceholderUIComponentStyleProperties = UIComponentStylePropertiesTemplate<PlaceholderUIComponentStylePropertiesLook,
                                                                                             EmptyUIComponentStylePropertiesLookParams,
                                                                                             PlaceholderUIComponentStylePropertiesLayoutParams>
+
+public typealias PlaceholderUIComponentStylePropertiesOverwritten = UIComponentStylePropertiesOverwrittenTemplate<EmptyUIComponentStylePropertiesOverwrittenLook,
+                                                                                                                  EmptyUIComponentStylePropertiesOverwrittenLookParams,
+                                                                                                                  EmptyUIComponentStylePropertiesOverwrittenLayoutParams>

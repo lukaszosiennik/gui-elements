@@ -8,4 +8,12 @@ import UIKit
 public struct PlaceholderUIComponentStylePropertiesLayoutParams: UIComponentStylePropertiesLayoutParams {
     
     public let height: CGFloat
+    
+    init(height: CGFloat) {
+        self.height = height
+    }
+    
+    public init?(layoutParams: Self?, overwrittenBy newLayoutParams: EmptyUIComponentStylePropertiesOverwrittenLayoutParams?) {
+        return nil
+    }
 }
