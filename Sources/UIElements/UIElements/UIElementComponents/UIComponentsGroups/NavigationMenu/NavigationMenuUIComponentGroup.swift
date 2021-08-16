@@ -48,8 +48,8 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
             ),
             styleType: settings.styleType,
             overwrittenBy: .init(
-                lookParams: .init(
-                    linesNumber: 0
+                overwrittenLookParams: .init(
+                    linesNumber: settings.stylePack.style.properties?.lookParams?.titleLinesNumber
                 )
             )
         )

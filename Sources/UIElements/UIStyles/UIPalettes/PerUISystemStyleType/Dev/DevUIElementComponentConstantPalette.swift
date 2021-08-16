@@ -133,6 +133,11 @@ extension DevUIElementComponentConstantPalette.UIElementComponent {
         
         enum NavigationMenu {
             
+            enum UILookParams {
+                
+                static let title_linesNumber_0: Int = Int(UILookParamsPalette.Property.Size.Vertical.LinesNumber.value_0)
+            }
+            
             enum UILayoutParams {
                 
                 static let option_height_50: CGFloat = UILayoutParamsPalette.Property.Size.Vertical.Height.value_50
@@ -144,6 +149,14 @@ extension DevUIElementComponentConstantPalette.UIElementComponent {
     }
     
     enum UIComponentScreen {
+        
+        enum Information {
+            
+            enum UILookParams {
+                
+                static let title_linesNumber_0: Int = Int(UILookParamsPalette.Property.Size.Vertical.LinesNumber.value_0)
+            }
+        }
         
         enum NavigationMenu {
             

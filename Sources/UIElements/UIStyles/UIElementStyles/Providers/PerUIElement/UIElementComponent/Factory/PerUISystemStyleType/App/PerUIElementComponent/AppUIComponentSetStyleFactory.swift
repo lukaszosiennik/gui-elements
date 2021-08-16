@@ -6,6 +6,9 @@
 public final class AppUIComponentSetStyleFactory: UIElementComponentTypeStyleFactory, UIComponentSetStyleFactoryInterface {
     
     public func navigationMenuOption() -> UIElementComponentStylePack<NavigationMenuOptionUIComponentSetStyleProperties> {
-        return .default(factory: self, styleType: styleType)
+        return .default(
+            factory: self,
+            styleType: styleType
+        )
     }
 }

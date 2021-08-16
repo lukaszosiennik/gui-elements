@@ -40,7 +40,7 @@ public struct LabelUIComponentSettings: UIComponentSettings {
     
     public static func stylePack(for styleType: UIStyleType, overwrittenBy styleProperties: LabelUIComponentStylePropertiesOverwritten) -> UIElementComponentStylePack<LabelUIComponentStyleProperties> {
         guard let pack = Self.stylePackFactory(for: styleType)?.label() else {
-            let defaultPack:UIElementComponentStylePack<LabelUIComponentStyleProperties> = .default(styleType: styleType)
+            let defaultPack: UIElementComponentStylePack<LabelUIComponentStyleProperties> = .default(styleType: styleType)
             
             guard let lookParams = styleProperties.lookParams else {
                 return defaultPack

@@ -4,5 +4,5 @@
 //
 
 public typealias NavigationMenuUIComponentGroupStyleProperties = UIComponentGroupStylePropertiesTemplate<NavigationMenuUIComponentGroupStylePropertiesLook,
-                                                                                                         EmptyUIComponentGroupStylePropertiesLookParams,
+                                                                                                         NavigationMenuUIComponentGroupStylePropertiesLookParams,
                                                                                                          NavigationMenuUIComponentGroupStylePropertiesLayoutParams>

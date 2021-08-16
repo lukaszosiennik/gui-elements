@@ -17,7 +17,9 @@ public final class DevUIComponentGroupStyleFactory: UIElementComponentTypeStyleF
                     look: .init(
                         backgroundColor: ColorPalette.NavigationMenu.background_white
                     ),
-                    lookParams: .init(),
+                    lookParams: .init(
+                        titleLinesNumber: ConstantPalette.NavigationMenu.UILookParams.title_linesNumber_0
+                    ),
                     layoutParams: .init(
                         optionHeight: ConstantPalette.NavigationMenu.UILayoutParams.option_height_50,
                         optionsSpace: ConstantPalette.NavigationMenu.UILayoutParams.options_space_8,

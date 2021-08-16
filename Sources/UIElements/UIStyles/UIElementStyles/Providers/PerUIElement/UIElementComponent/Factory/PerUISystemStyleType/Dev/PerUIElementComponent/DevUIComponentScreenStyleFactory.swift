@@ -17,7 +17,9 @@ public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyle
                     look: .init(
                         backgroundColor: ColorPalette.Information.background_white
                     ),
-                    lookParams: .init(),
+                    lookParams: .init(
+                        titleLinesNumber: ConstantPalette.Information.UILookParams.title_linesNumber_0
+                    ),
                     layoutParams: .init()
                 )
             )

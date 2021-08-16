@@ -7,15 +7,13 @@ public typealias LabelUIComponentStyleProperties = UIComponentStylePropertiesTem
                                                                                       LabelUIComponentStylePropertiesLookParams,
                                                                                       LabelUIComponentStylePropertiesLayoutParams>
 
-public struct LabelUIComponentStylePropertiesOverwritten: UIComponentStyleProperties {
+public typealias LabelUIComponentStylePropertiesOverwritten = UIComponentStylePropertiesTemplate<LabelUIComponentStylePropertiesOverwrittenLook,
+                                                                                                 LabelUIComponentStylePropertiesOverwrittenLookParams,
+                                                                                                 LabelUIComponentStylePropertiesOverwrittenLayoutParams>
+
+extension LabelUIComponentStylePropertiesOverwritten {
     
-    public var look: LabelUIComponentStylePropertiesOverwrittenLook?
-    public var lookParams: LabelUIComponentStylePropertiesOverwrittenLookParams?
-    public var layoutParams: LabelUIComponentStylePropertiesOverwrittenLayoutParams?
-    
-    public init(look: LabelUIComponentStylePropertiesOverwrittenLook? = nil, lookParams: LabelUIComponentStylePropertiesOverwrittenLookParams? = nil, layoutParams: LabelUIComponentStylePropertiesOverwrittenLayoutParams? = nil) {
-        self.look = look
-        self.lookParams = lookParams
-        self.layoutParams = layoutParams
+    init(overwrittenLook: LabelUIComponentStylePropertiesOverwrittenLook? = nil, overwrittenLookParams: LabelUIComponentStylePropertiesOverwrittenLookParams? = nil, overwrittenLayoutParams: LabelUIComponentStylePropertiesOverwrittenLayoutParams? = nil) {
+        self.init(look: overwrittenLook, lookParams: overwrittenLookParams, layoutParams: overwrittenLayoutParams)
     }
 }
