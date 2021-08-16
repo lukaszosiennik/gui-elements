@@ -3,6 +3,10 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
+public typealias EmptyUIComponentStylePropertiesOverwritten = UIComponentStylePropertiesOverwrittenTemplate<EmptyUIComponentStylePropertiesOverwrittenLook,
+                                                                                                            EmptyUIComponentStylePropertiesOverwrittenLookParams,
+                                                                                                            EmptyUIComponentStylePropertiesOverwrittenLayoutParams>
+
 public struct EmptyUIComponentStylePropertiesOverwrittenLook: UIComponentStylePropertiesOverwrittenLook {}
 public struct EmptyUIComponentStylePropertiesOverwrittenLookParams: UIComponentStylePropertiesOverwrittenLookParams {}
 public struct EmptyUIComponentStylePropertiesOverwrittenLayoutParams: UIComponentStylePropertiesOverwrittenLayoutParams {}

@@ -6,7 +6,3 @@
 public typealias ButtonUIComponentStyleProperties = UIComponentStylePropertiesTemplate<ButtonUIComponentStylePropertiesLook,
                                                                                        EmptyUIComponentStylePropertiesLookParams,
                                                                                        ButtonUIComponentStylePropertiesLayoutParams>
-
-public typealias ButtonUIComponentStylePropertiesOverwritten = UIComponentStylePropertiesOverwrittenTemplate<EmptyUIComponentStylePropertiesOverwrittenLook,
-                                                                                                             EmptyUIComponentStylePropertiesOverwrittenLookParams,
-                                                                                                             EmptyUIComponentStylePropertiesOverwrittenLayoutParams>
