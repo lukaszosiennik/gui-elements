@@ -3,4 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIElementComponentStylePropertiesLook: UIElementStylePropertiesLook {}
+public protocol UIElementComponentStylePropertiesLook: UIElementStylePropertiesLook {
+    
+    associatedtype UIElementComponentStylePropertiesOverwrittenLookType: UIElementComponentStylePropertiesOverwrittenLook
+
+    init?(look: Self?, overwrittenBy newLook: UIElementComponentStylePropertiesOverwrittenLookType?)
+}

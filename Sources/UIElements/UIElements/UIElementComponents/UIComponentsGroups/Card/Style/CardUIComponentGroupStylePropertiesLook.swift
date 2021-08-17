@@ -3,4 +3,11 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct CardUIComponentGroupStylePropertiesLook: UIComponentGroupStylePropertiesLook {}
+public struct CardUIComponentGroupStylePropertiesLook: UIComponentGroupStylePropertiesLook {
+    
+    init() {}
+    
+    public init?(look: Self?, overwrittenBy newLook: EmptyUIComponentGroupStylePropertiesOverwrittenLook?) {
+        return nil
+    }
+}

@@ -3,7 +3,7 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentScreenStylePropertiesOverwritten: UIElementComponentStyleProperties where
-    UIElementComponentStylePropertiesLookType: UIComponentScreenStylePropertiesOverwrittenLook,
-    UIElementComponentStylePropertiesLookParamsType: UIComponentScreenStylePropertiesOverwrittenLookParams,
-    UIElementComponentStylePropertiesLayoutParamsType: UIComponentScreenStylePropertiesOverwrittenLayoutParams {}
+public protocol UIComponentScreenStylePropertiesOverwritten: UIElementComponentStylePropertiesOverwritten where
+    UIElementComponentStylePropertiesOverwrittenLookType: UIComponentScreenStylePropertiesOverwrittenLook,
+    UIElementComponentStylePropertiesOverwrittenLookParamsType: UIComponentScreenStylePropertiesOverwrittenLookParams,
+    UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIComponentScreenStylePropertiesOverwrittenLayoutParams {}
