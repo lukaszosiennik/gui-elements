@@ -12,8 +12,4 @@ public struct ButtonUIComponentStylePropertiesLook: UIComponentStylePropertiesLo
     init(titleColor: UIColor) {
         self.titleColor = titleColor
     }
-    
-    public init?(look: Self?, overwrittenBy newLook: EmptyUIComponentStylePropertiesOverwrittenLook?) {
-        return nil
-    }
 }

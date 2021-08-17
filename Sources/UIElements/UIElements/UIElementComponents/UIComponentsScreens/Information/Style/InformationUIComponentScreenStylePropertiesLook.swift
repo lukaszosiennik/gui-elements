@@ -12,8 +12,4 @@ public struct InformationUIComponentScreenStylePropertiesLook: UIComponentScreen
     init(backgroundColor: UIColor) {
         self.backgroundColor = backgroundColor
     }
-    
-    public init?(look: Self?, overwrittenBy newLook: EmptyUIComponentScreenStylePropertiesOverwrittenLook?) {
-        return nil
-    }
 }

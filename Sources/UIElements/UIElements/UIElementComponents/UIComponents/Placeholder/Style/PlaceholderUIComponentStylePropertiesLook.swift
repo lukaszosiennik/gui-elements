@@ -12,8 +12,4 @@ public struct PlaceholderUIComponentStylePropertiesLook: UIComponentStylePropert
     init(backgroundColor: UIColor) {
         self.backgroundColor = backgroundColor
     }
-    
-    public init?(look: Self?, overwrittenBy newLook: EmptyUIComponentStylePropertiesOverwrittenLook?) {
-        return nil
-    }
 }

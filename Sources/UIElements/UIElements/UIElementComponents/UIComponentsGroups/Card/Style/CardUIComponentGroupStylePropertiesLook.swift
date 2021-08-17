@@ -6,8 +6,4 @@
 public struct CardUIComponentGroupStylePropertiesLook: UIComponentGroupStylePropertiesLook {
     
     init() {}
-    
-    public init?(look: Self?, overwrittenBy newLook: EmptyUIComponentGroupStylePropertiesOverwrittenLook?) {
-        return nil
-    }
 }

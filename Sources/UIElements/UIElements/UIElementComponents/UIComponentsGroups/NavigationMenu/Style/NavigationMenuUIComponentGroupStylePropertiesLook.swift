@@ -12,8 +12,4 @@ public struct NavigationMenuUIComponentGroupStylePropertiesLook: UIComponentGrou
     init(backgroundColor: UIColor) {
         self.backgroundColor = backgroundColor
     }
-    
-    public init?(look: Self?, overwrittenBy newLook: EmptyUIComponentGroupStylePropertiesOverwrittenLook?) {
-        return nil
-    }
 }

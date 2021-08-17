@@ -18,8 +18,4 @@ public struct NavigationMenuUIComponentGroupStylePropertiesLayoutParams: UICompo
         self.titleTopMargin = titleTopMargin
         self.titleBottomMargin = titleBottomMargin
     }
-    
-    public init?(layoutParams: Self?, overwrittenBy newLayoutParams: EmptyUIComponentGroupStylePropertiesOverwrittenLayoutParams?) {
-        return nil
-    }
 }

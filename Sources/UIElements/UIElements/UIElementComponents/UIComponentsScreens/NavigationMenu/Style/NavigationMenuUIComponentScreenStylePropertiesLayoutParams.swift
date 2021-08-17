@@ -14,8 +14,4 @@ public struct NavigationMenuUIComponentScreenStylePropertiesLayoutParams: UIComp
         self.leftMargin = leftMargin
         self.rightMargin = rightMargin
     }
-    
-    public init?(layoutParams: Self?, overwrittenBy newLayoutParams: EmptyUIComponentScreenStylePropertiesOverwrittenLayoutParams?) {
-        return nil
-    }
 }

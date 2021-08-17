@@ -3,11 +3,4 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuOptionUIComponentSetStylePropertiesLayoutParams: UIComponentSetStylePropertiesLayoutParams {
-    
-    init() {}
-    
-    public init?(layoutParams: Self?, overwrittenBy newLayoutParams: EmptyUIComponentSetStylePropertiesOverwrittenLayoutParams?) {
-        return nil
-    }
-}
+public struct NavigationMenuOptionUIComponentSetStylePropertiesLayoutParams: UIComponentSetStylePropertiesLayoutParams {}

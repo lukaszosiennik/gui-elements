@@ -3,9 +3,4 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct ButtonUIComponentStylePropertiesLayoutParams: UIComponentStylePropertiesLayoutParams {
-    
-    public init?(layoutParams: Self?, overwrittenBy newLayoutParams: EmptyUIComponentStylePropertiesOverwrittenLayoutParams?) {
-        return nil
-    }
-}
+public struct ButtonUIComponentStylePropertiesLayoutParams: UIComponentStylePropertiesLayoutParams {}

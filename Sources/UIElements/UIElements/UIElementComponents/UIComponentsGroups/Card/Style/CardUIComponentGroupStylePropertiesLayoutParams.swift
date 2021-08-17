@@ -3,11 +3,4 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct CardUIComponentGroupStylePropertiesLayoutParams: UIComponentGroupStylePropertiesLayoutParams {
-    
-    init() {}
-    
-    public init?(layoutParams: Self?, overwrittenBy newLayoutParams: EmptyUIComponentGroupStylePropertiesOverwrittenLayoutParams?) {
-        return nil
-    }
-}
+public struct CardUIComponentGroupStylePropertiesLayoutParams: UIComponentGroupStylePropertiesLayoutParams {}

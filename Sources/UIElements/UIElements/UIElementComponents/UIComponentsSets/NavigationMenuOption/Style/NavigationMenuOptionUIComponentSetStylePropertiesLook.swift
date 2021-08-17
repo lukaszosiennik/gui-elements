@@ -16,8 +16,4 @@ public struct NavigationMenuOptionUIComponentSetStylePropertiesLook: UIComponent
         self.borderColor = borderColor
         self.borderWidth = borderWidth
     }
-    
-    public init?(look: Self?, overwrittenBy newLook: EmptyUIComponentSetStylePropertiesOverwrittenLook?) {
-        return nil
-    }
 }

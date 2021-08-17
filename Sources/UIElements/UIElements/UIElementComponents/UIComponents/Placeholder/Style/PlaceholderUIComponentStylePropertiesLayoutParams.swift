@@ -12,8 +12,4 @@ public struct PlaceholderUIComponentStylePropertiesLayoutParams: UIComponentStyl
     init(height: CGFloat) {
         self.height = height
     }
-    
-    public init?(layoutParams: Self?, overwrittenBy newLayoutParams: EmptyUIComponentStylePropertiesOverwrittenLayoutParams?) {
-        return nil
-    }
 }
