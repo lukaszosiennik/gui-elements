@@ -6,7 +6,3 @@
 public typealias EmptyUIComponentStylePropertiesOverwritten = UIComponentStylePropertiesOverwrittenTemplate<EmptyUIComponentStylePropertiesOverwrittenLook,
                                                                                                             EmptyUIComponentStylePropertiesOverwrittenLookParams,
                                                                                                             EmptyUIComponentStylePropertiesOverwrittenLayoutParams>
-
-public struct EmptyUIComponentStylePropertiesOverwrittenLook: UIComponentStylePropertiesOverwrittenLook {}
-public struct EmptyUIComponentStylePropertiesOverwrittenLookParams: UIComponentStylePropertiesOverwrittenLookParams {}
-public struct EmptyUIComponentStylePropertiesOverwrittenLayoutParams: UIComponentStylePropertiesOverwrittenLayoutParams {}
