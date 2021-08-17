@@ -10,8 +10,4 @@ public struct InformationUIComponentScreenStylePropertiesLookParams: UIComponent
     init(titleLinesNumber: Int) {
         self.titleLinesNumber = titleLinesNumber
     }
-    
-    public init?(lookParams: Self?, overwrittenBy newLookParams: EmptyUIComponentScreenStylePropertiesOverwrittenLookParams?) {
-        return nil
-    }
 }
