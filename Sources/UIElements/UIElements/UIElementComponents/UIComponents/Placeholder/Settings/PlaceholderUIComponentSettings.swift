@@ -5,29 +5,21 @@
 
 public struct PlaceholderUIComponentSettings: UIComponentSettings {
     
+    public typealias UIComponentStylePropertiesOverwrittenType = EmptyUIComponentStylePropertiesOverwritten
+    
     public let params: PlaceholderUIComponentParams
     public var stylePack: UIElementComponentStylePack<PlaceholderUIComponentStyleProperties>
-    
-    public init(params: PlaceholderUIComponentParams) {
-        self.init(
-            params: params,
-            stylePack: Self.stylePackFactory?.placeholder() ?? .default
-        )
-    }
-    
-    public init(params: PlaceholderUIComponentParams, styleType: UIStyleType) {
-        self.init(
-            params: params,
-            stylePack: Self.stylePack(for: styleType)
-        )
-    }
     
     public init(params: PlaceholderUIComponentParams, stylePack: UIElementComponentStylePack<PlaceholderUIComponentStyleProperties>) {
         self.params = params
         self.stylePack = stylePack
     }
     
-    public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<PlaceholderUIComponentStyleProperties> {
-        return Self.stylePackFactory(for: styleType)?.placeholder() ?? .default(styleType: styleType)
+    public static var stylePack: UIElementComponentStylePack<PlaceholderUIComponentStyleProperties>? {
+        return Self.stylePackFactory?.placeholder()
+    }
+    
+    public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<PlaceholderUIComponentStyleProperties>? {
+        return Self.stylePackFactory(for: styleType)?.placeholder()
     }
 }
