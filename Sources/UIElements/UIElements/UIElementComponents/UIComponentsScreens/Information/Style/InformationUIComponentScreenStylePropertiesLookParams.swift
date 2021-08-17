@@ -6,4 +6,12 @@
 public struct InformationUIComponentScreenStylePropertiesLookParams: UIComponentScreenStylePropertiesLookParams {
     
     public let titleLinesNumber: Int
+    
+    init(titleLinesNumber: Int) {
+        self.titleLinesNumber = titleLinesNumber
+    }
+    
+    public init?(lookParams: Self?, overwrittenBy newLookParams: EmptyUIComponentScreenStylePropertiesOverwrittenLookParams?) {
+        return nil
+    }
 }

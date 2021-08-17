@@ -3,4 +3,5 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentScreenStylePropertiesLookParams: UIElementComponentStylePropertiesLookParams {}
+public protocol UIComponentScreenStylePropertiesLookParams: UIElementComponentStylePropertiesLookParams where
+    UIElementComponentStylePropertiesOverwrittenLookParamsType: UIComponentScreenStylePropertiesOverwrittenLookParams {}

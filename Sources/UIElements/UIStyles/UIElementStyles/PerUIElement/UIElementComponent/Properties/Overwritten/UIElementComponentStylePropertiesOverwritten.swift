@@ -6,7 +6,7 @@
 public protocol UIElementComponentStylePropertiesOverwritten: UIElementStyleProperties {
     
     associatedtype UIElementComponentStylePropertiesOverwrittenLookType: UIElementComponentStylePropertiesOverwrittenLook
-    associatedtype UIElementComponentStylePropertiesOverwrittenLookParamsType: UIElementComponentStylePropertiesLookParams
+    associatedtype UIElementComponentStylePropertiesOverwrittenLookParamsType: UIElementComponentStylePropertiesOverwrittenLookParams
     associatedtype UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIElementComponentStylePropertiesLayoutParams
     
     var look: UIElementComponentStylePropertiesOverwrittenLookType? { get }

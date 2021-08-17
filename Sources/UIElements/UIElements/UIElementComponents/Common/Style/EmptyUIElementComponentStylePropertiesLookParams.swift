@@ -12,6 +12,29 @@ public struct EmptyUIComponentStylePropertiesLookParams: UIComponentStylePropert
     }
 }
 
-public struct EmptyUIComponentSetStylePropertiesLookParams: UIComponentSetStylePropertiesLookParams {}
-public struct EmptyUIComponentGroupStylePropertiesLookParams: UIComponentGroupStylePropertiesLookParams {}
-public struct EmptyUIComponentScreenStylePropertiesLookParams: UIComponentScreenStylePropertiesLookParams {}
+public struct EmptyUIComponentSetStylePropertiesLookParams: UIComponentSetStylePropertiesLookParams {
+    
+    init() {}
+    
+    public init?(lookParams: Self?, overwrittenBy newLookParams: EmptyUIComponentSetStylePropertiesOverwrittenLookParams?) {
+        return nil
+    }
+}
+
+public struct EmptyUIComponentGroupStylePropertiesLookParams: UIComponentGroupStylePropertiesLookParams {
+    
+    init() {}
+    
+    public init?(lookParams: Self?, overwrittenBy newLookParams: EmptyUIComponentGroupStylePropertiesOverwrittenLookParams?) {
+        return nil
+    }
+}
+
+public struct EmptyUIComponentScreenStylePropertiesLookParams: UIComponentScreenStylePropertiesLookParams {
+    
+    init() {}
+    
+    public init?(lookParams: Self?, overwrittenBy newLookParams: EmptyUIComponentScreenStylePropertiesOverwrittenLookParams?) {
+        return nil
+    }
+}
