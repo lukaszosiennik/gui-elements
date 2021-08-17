@@ -19,12 +19,3 @@ public struct LabelUIComponentStylePropertiesLookParams: UIComponentStylePropert
         self.linesNumber = linesNumber
     }
 }
-
-public struct LabelUIComponentStylePropertiesOverwrittenLookParams: UIComponentStylePropertiesOverwrittenLookParams {
-    
-    public let linesNumber: Int?
-    
-    init(linesNumber: Int? = nil) {
-        self.linesNumber = linesNumber
-    }
-}

@@ -19,12 +19,3 @@ public struct NavigationMenuUIComponentGroupStylePropertiesLookParams: UICompone
         self.titleLinesNumber = titleLinesNumber
     }
 }
-
-public struct NavigationMenuUIComponentGroupStylePropertiesOverwrittenLookParams: UIComponentGroupStylePropertiesOverwrittenLookParams {
-    
-    public let titleLinesNumber: Int?
-    
-    init(titleLinesNumber: Int? = nil) {
-        self.titleLinesNumber = titleLinesNumber
-    }
-}
