@@ -3,4 +3,11 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct InformationUIComponentScreenStylePropertiesLayoutParams: UIComponentScreenStylePropertiesLayoutParams {}
+public struct InformationUIComponentScreenStylePropertiesLayoutParams: UIComponentScreenStylePropertiesLayoutParams {
+    
+    init() {}
+    
+    public init?(layoutParams: Self?, overwrittenBy newLayoutParams: EmptyUIComponentScreenStylePropertiesOverwrittenLayoutParams?) {
+        return nil
+    }
+}

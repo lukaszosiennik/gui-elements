@@ -7,7 +7,7 @@ public protocol UIElementComponentStylePropertiesOverwritten: UIElementStyleProp
     
     associatedtype UIElementComponentStylePropertiesOverwrittenLookType: UIElementComponentStylePropertiesOverwrittenLook
     associatedtype UIElementComponentStylePropertiesOverwrittenLookParamsType: UIElementComponentStylePropertiesOverwrittenLookParams
-    associatedtype UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIElementComponentStylePropertiesLayoutParams
+    associatedtype UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIElementComponentStylePropertiesOverwrittenLayoutParams
     
     var look: UIElementComponentStylePropertiesOverwrittenLookType? { get }
     var lookParams: UIElementComponentStylePropertiesOverwrittenLookParamsType? { get }
