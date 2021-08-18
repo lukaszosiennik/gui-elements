@@ -9,7 +9,7 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
     
     fileprivate enum All {
         
-        static let value_0: CGFloat = 0
+        static let value_0 = DefaultUIElementComponentConstantPalette.All.value_0
         static let value_1: CGFloat = 1
         static let value_8: CGFloat = 8
         static let value_16: CGFloat = 16
@@ -54,7 +54,6 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
                     }
                 }
             }
-            
         }
         
         fileprivate typealias UILayoutParamsPalette = UILayoutParams
@@ -90,7 +89,6 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
                 }
             }
         }
-
     }
     
     enum UILayout {}

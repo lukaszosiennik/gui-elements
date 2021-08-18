@@ -43,7 +43,7 @@ extension UIElementComponentStylePack {
             factory: factory,
             style: UIElementComponentStyle(
                 type: styleType,
-                properties: nil
+                properties: .default
             )
         )
     }

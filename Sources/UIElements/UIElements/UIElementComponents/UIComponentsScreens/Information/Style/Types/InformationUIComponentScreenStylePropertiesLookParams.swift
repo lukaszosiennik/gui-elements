@@ -7,6 +7,12 @@ public struct InformationUIComponentScreenStylePropertiesLookParams: UIComponent
     
     public let titleLinesNumber: Int
     
+    static var `default`: Self? {
+        return .init(
+            titleLinesNumber: DefaultUIComponentScreenConstantPalette.Information.UILookParams.title_linesNumber_0
+        )
+    }
+    
     init(titleLinesNumber: Int) {
         self.titleLinesNumber = titleLinesNumber
     }

@@ -7,6 +7,12 @@ public struct NavigationMenuUIComponentGroupStylePropertiesLookParams: UICompone
     
     public let titleLinesNumber: Int
     
+    static var `default`: Self? {
+        return .init(
+            titleLinesNumber: DefaultUIComponentGroupConstantPalette.NavigationMenu.UILookParams.title_linesNumber_0
+        )
+    }
+    
     init(titleLinesNumber: Int) {
         self.titleLinesNumber = titleLinesNumber
     }

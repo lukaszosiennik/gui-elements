@@ -15,3 +15,18 @@ public protocol UIElementComponentStyleProperties: UIElementStyleProperties {
     
     init(look: UIElementComponentStylePropertiesLookType?, lookParams: UIElementComponentStylePropertiesLookParamsType?, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?)
 }
+
+extension UIElementComponentStyleProperties {
+    
+    static var `default`: Self? {
+        guard let defaultLookParams: UIElementComponentStylePropertiesLookParamsType = .default else {
+            return nil
+        }
+        
+        return .init(
+            look: nil,
+            lookParams: defaultLookParams,
+            layoutParams: nil
+        )
+    }
+}
