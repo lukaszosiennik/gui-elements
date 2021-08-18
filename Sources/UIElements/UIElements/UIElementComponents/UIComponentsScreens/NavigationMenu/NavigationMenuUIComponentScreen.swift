@@ -44,10 +44,10 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
         )
     }
     
-    public func setupParams() {}
+    public func setupParams(_ params: NavigationMenuUIComponentScreenParams<OptionKey>) {}
     
-    public func setupStyleLook() {
-        guard let look = settings.styleProperties?.look else {
+    public func setupStyleLook(_ look: NavigationMenuUIComponentScreenStylePropertiesLook?) {
+        guard let look = look else {
             if settings.styleType != .os(false) {
                 backgroundColor = .white
             } else {
@@ -61,13 +61,13 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
         backgroundColor = look.backgroundColor
     }
     
-    public func setupStyleLookParams() {
-        guard let lookParams = settings.styleProperties?.lookParams else {
+    public func setupStyleLookParams(_ lookParams: EmptyUIComponentScreenStylePropertiesLookParams?) {
+        guard let lookParams = lookParams else {
             return
         }
     }
     
-    public func setupStyleLayout() {
+    public func setupStyleLayout(_ layoutParams: NavigationMenuUIComponentScreenStylePropertiesLayoutParams?) {
         if initialization {
             translatesAutoresizingMaskIntoConstraints = false
             
@@ -94,7 +94,7 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
             ])
         }
         
-        guard let layoutParams = settings.styleProperties?.layoutParams else {
+        guard let layoutParams = layoutParams else {
             constraint(with: leadingSpaceConstraintID)?.constant = 0
             constraint(with: trailingSpaceConstraintID)?.constant = 0
             return

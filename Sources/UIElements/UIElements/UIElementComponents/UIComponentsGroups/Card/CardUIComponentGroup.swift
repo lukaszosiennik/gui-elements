@@ -46,21 +46,21 @@ public final class CardUIComponentGroup<BodyContainerContent: UIView>: UIView, U
         )
     }
     
-    public func setupParams() {}
+    public func setupParams(_ params: CardUIComponentGroupParams) {}
     
-    public func setupStyleLook() {
-        guard let look = settings.styleProperties?.look else {
+    public func setupStyleLook(_ look: CardUIComponentGroupStylePropertiesLook?) {
+        guard let look = look else {
             return
         }
     }
     
-    public func setupStyleLookParams() {
-        guard let lookParams = settings.styleProperties?.lookParams else {
+    public func setupStyleLookParams(_ lookParams: EmptyUIComponentGroupStylePropertiesLookParams?) {
+        guard let lookParams = lookParams else {
             return
         }
     }
     
-    public func setupStyleLayout() {
+    public func setupStyleLayout(_ layoutParams: CardUIComponentGroupStylePropertiesLayoutParams?) {
         if initialization {
             titleLabelUI.textAlignment = .center
             
@@ -108,7 +108,7 @@ public final class CardUIComponentGroup<BodyContainerContent: UIView>: UIView, U
             }
         }
         
-        guard let layoutParams = settings.styleProperties?.layoutParams else {
+        guard let layoutParams = layoutParams else {
             return
         }
     }

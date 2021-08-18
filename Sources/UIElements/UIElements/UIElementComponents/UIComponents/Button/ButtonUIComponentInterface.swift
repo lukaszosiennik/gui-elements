@@ -9,12 +9,12 @@ public protocol ButtonUIComponentInterface: UIComponent where UIElementComponent
 
 extension ButtonUIComponentInterface {
     
-    func setupParams(for button: UIButton) {
-        button.setTitle(settings.params.title, for: .normal)
+    func setupParams(_ params: ButtonUIComponentParams,for button: UIButton) {
+        button.setTitle(params.title, for: .normal)
     }
     
-    func setupStyleLook(for button: UIButton) {
-        guard let look = settings.styleProperties?.look else {
+    func setupStyleLook(_ look: ButtonUIComponentStylePropertiesLook?, for button: UIButton) {
+        guard let look = look else {
             let tempButton = UIButton(type: button.buttonType)
             button.setTitleColor(tempButton.titleColor(for: .normal), for: .normal)
             return
@@ -23,18 +23,18 @@ extension ButtonUIComponentInterface {
         button.setTitleColor(look.titleColor, for: .normal)
     }
     
-    func setupStyleLookParams(for button: UIButton) {
-        guard let lookParams = settings.styleProperties?.lookParams else {
+    func setupStyleLookParams(_ lookParams: EmptyUIComponentStylePropertiesLookParams?, for button: UIButton) {
+        guard let lookParams = lookParams else {
             return
         }
     }
     
-    func setupStyleLayout(for button: UIButton) {
+    func setupStyleLayout(_ layoutParams: ButtonUIComponentStylePropertiesLayoutParams?, for button: UIButton) {
         if initialization {
             translatesAutoresizingMaskIntoConstraints = false
         }
         
-        guard let layoutParams = settings.styleProperties?.layoutParams else {
+        guard let layoutParams = layoutParams else {
             return
         }
     }

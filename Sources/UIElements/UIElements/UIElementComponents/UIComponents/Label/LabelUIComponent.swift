@@ -6,7 +6,7 @@
 import UIKit
 
 public final class LabelUIComponent: UILabel, UIComponent {
-    
+
     public var initialization: Bool = false
     
     public var settings: LabelUIComponentSettings {
@@ -28,32 +28,32 @@ public final class LabelUIComponent: UILabel, UIComponent {
     
     public func setupNestedSettings() {}
     
-    public func setupParams() {
-        text = settings.params.text
+    public func setupParams(_ params: LabelUIComponentParams) {
+        text = params.text
     }
     
-    public func setupStyleLook() {
-        guard let look = settings.styleProperties?.look else {
+    public func setupStyleLook(_ look: LabelUIComponentStylePropertiesLook?) {
+        guard let look = look else {
             return
         }
     }
-    
-    public func setupStyleLookParams() {
-        guard let lookParams = settings.styleProperties?.lookParams else {
+
+    public func setupStyleLookParams(_ lookParams: LabelUIComponentStylePropertiesLookParams?) {
+        guard let lookParams = lookParams else {
             let tempLabel = UILabel()
             numberOfLines = tempLabel.numberOfLines
             return
         }
-        
+
         numberOfLines = lookParams.linesNumber
     }
-    
-    public func setupStyleLayout() {
+
+    public func setupStyleLayout(_ layoutParams: LabelUIComponentStylePropertiesLayoutParams?) {
         if initialization {
             translatesAutoresizingMaskIntoConstraints = false
         }
-        
-        guard let layoutParams = settings.styleProperties?.layoutParams else {
+
+        guard let layoutParams = layoutParams else {
             return
         }
     }

@@ -15,11 +15,11 @@ public protocol UIElementComponent: UIElement {
     
     func setupNestedSettings()
     
-    func setupParams()
+    func setupParams(_ params: UIElementComponentSettingsType.UIElementComponentParamsType)
     
-    func setupStyleLook()
-    func setupStyleLookParams()
-    func setupStyleLayout()
+    func setupStyleLook(_ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookType?)
+    func setupStyleLookParams(_ lookParams: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookParamsType?)
+    func setupStyleLayout(_ layoutParams: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLayoutParamsType?)
 }
 
 extension UIElementComponent {
@@ -39,6 +39,10 @@ extension UIElementComponent {
         setupParams()
         setupStyle()
     }
+    
+    private func setupParams() {
+        setupParams(settings.params)
+    }
 }
 
 extension UIElementComponent {
@@ -47,5 +51,17 @@ extension UIElementComponent {
         setupStyleLook()
         setupStyleLookParams()
         setupStyleLayout()
+    }
+    
+    private func setupStyleLook() {
+        setupStyleLook(settings.styleProperties?.look)
+    }
+    
+    private func setupStyleLookParams() {
+        setupStyleLookParams(settings.styleProperties?.lookParams)
+    }
+    
+    private func setupStyleLayout() {
+        setupStyleLayout(settings.styleProperties?.layoutParams)
     }
 }

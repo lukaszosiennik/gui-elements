@@ -6,7 +6,7 @@
 import UIKit
 
 public final class ButtonUIComponent: UIButton, ButtonUIComponentInterface {
-    
+
     public var initialization: Bool = false
     
     public var settings: ButtonUIComponentSettings {
@@ -28,19 +28,19 @@ public final class ButtonUIComponent: UIButton, ButtonUIComponentInterface {
     
     public func setupNestedSettings() {}
     
-    public func setupParams() {
-        setupParams(for: self)
+    public func setupParams(_ params: ButtonUIComponentParams) {
+        setupParams(params, for: self)
     }
     
-    public func setupStyleLook() {
-        setupStyleLook(for: self)
+    public func setupStyleLook(_ look: ButtonUIComponentStylePropertiesLook?) {
+        setupStyleLook(look, for: self)
     }
     
-    public func setupStyleLookParams() {
-        setupStyleLookParams(for: self)
+    public func setupStyleLookParams(_ lookParams: EmptyUIComponentStylePropertiesLookParams?) {
+        setupStyleLookParams(lookParams, for: self)
     }
     
-    public func setupStyleLayout() {
-        setupStyleLayout(for: self)
+    public func setupStyleLayout(_ layoutParams: ButtonUIComponentStylePropertiesLayoutParams?) {
+        setupStyleLayout(layoutParams, for: self)
     }
 }

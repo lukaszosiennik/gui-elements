@@ -30,28 +30,28 @@ public final class PlaceholderUIComponent: UIView, UIComponent {
     
     public func setupNestedSettings() {}
     
-    public func setupParams() {}
+    public func setupParams(_ params: PlaceholderUIComponentParams) {}
     
-    public func setupStyleLook() {
-        guard let look = settings.styleProperties?.look else {
+    public func setupStyleLook(_ look: PlaceholderUIComponentStylePropertiesLook?) {
+        guard let look = look else {
             return
         }
         
         backgroundColor = look.backgroundColor
     }
     
-    public func setupStyleLookParams() {
-        guard let lookParams = settings.styleProperties?.lookParams else {
+    public func setupStyleLookParams(_ lookParams: EmptyUIComponentStylePropertiesLookParams?) {
+        guard let lookParams = lookParams else {
             return
         }
     }
     
-    public func setupStyleLayout() {
+    public func setupStyleLayout(_ layoutParams: PlaceholderUIComponentStylePropertiesLayoutParams?) {
         if initialization {
             translatesAutoresizingMaskIntoConstraints = false
         }
         
-        guard let layoutParams = settings.styleProperties?.layoutParams else {
+        guard let layoutParams = layoutParams else {
             removeConstraintIfExists(with: heightConstraintID)
             return
         }

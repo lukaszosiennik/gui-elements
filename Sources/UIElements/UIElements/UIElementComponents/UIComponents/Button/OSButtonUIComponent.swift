@@ -40,20 +40,24 @@ public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
     public func setupNestedSettings() {}
     
     public func setupParams() {
-        setupParams(for: button)
+        setupParams(settings.params)
         
         setupActions()
     }
     
-    public func setupStyleLook() {
-        setupStyleLook(for: button)
+    public func setupParams(_ params: ButtonUIComponentParams) {
+        setupParams(params, for: button)
     }
     
-    public func setupStyleLookParams() {
-        setupStyleLookParams(for: button)
+    public func setupStyleLook(_ look: ButtonUIComponentStylePropertiesLook?) {
+        setupStyleLook(look, for: button)
     }
     
-    public func setupStyleLayout() {
+    public func setupStyleLookParams(_ lookParams: EmptyUIComponentStylePropertiesLookParams?) {
+        setupStyleLookParams(lookParams, for: button)
+    }
+    
+    public func setupStyleLayout(_ layoutParams: ButtonUIComponentStylePropertiesLayoutParams?) {
         subviews.forEach { subview in
             subview.removeFromSuperview()
         }
@@ -67,7 +71,7 @@ public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
             button.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
         
-        setupStyleLayout(for: button)
+        setupStyleLayout(layoutParams, for: button)
     }
     
     private func setupActions() {

@@ -49,18 +49,18 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
         )
     }
     
-    public func setupParams() {
+    public func setupParams(_ params: NavigationMenuUIComponentGroupParams<OptionKey>) {
         stackView.arrangedSubviews.forEach {
             stackView.removeArrangedSubview($0)
         }
         
-        settings.params.options.forEach { option in
+        params.options.forEach { option in
             let optionView = NavigationMenuUIOptionComponentSet(
                 settings: .init(
                     params: .init(
                         title: option.value,
-                        action: { [weak self] in
-                            self?.settings.params.actions?(option.key)
+                        action: {
+                            params.actions?(option.key)
                         }),
                     styleType: settings.styleType
                 )
@@ -70,8 +70,8 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
         }
     }
     
-    public func setupStyleLook() {
-        guard let look = settings.styleProperties?.look else {
+    public func setupStyleLook(_ look: NavigationMenuUIComponentGroupStylePropertiesLook?) {
+        guard let look = look else {
             let tempView = UIView()
             backgroundColor = tempView.backgroundColor
             return
@@ -80,13 +80,13 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
         backgroundColor = look.backgroundColor
     }
     
-    public func setupStyleLookParams() {
-        guard let lookParams = settings.styleProperties?.lookParams else {
+    public func setupStyleLookParams(_ lookParams: NavigationMenuUIComponentGroupStylePropertiesLookParams?) {
+        guard let lookParams = lookParams else {
             return
         }
     }
     
-    public func setupStyleLayout() {
+    public func setupStyleLayout(_ layoutParams: NavigationMenuUIComponentGroupStylePropertiesLayoutParams?) {
         if initialization {
             titleLabelUI.textAlignment = .center
             stackView.axis = .vertical
@@ -128,7 +128,7 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
             ])
         }
         
-        guard let layoutParams = settings.styleProperties?.layoutParams else {
+        guard let layoutParams = layoutParams else {
             let tempStackView = UIStackView()
             stackView.spacing = tempStackView.spacing
             

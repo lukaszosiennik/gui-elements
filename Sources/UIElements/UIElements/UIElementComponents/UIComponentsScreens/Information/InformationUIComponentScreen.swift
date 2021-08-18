@@ -42,10 +42,10 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
         )
     }
     
-    public func setupParams() {}
+    public func setupParams(_ params: InformationUIComponentScreenParams) {}
     
-    public func setupStyleLook() {
-        guard let look = settings.styleProperties?.look else {
+    public func setupStyleLook(_ look: InformationUIComponentScreenStylePropertiesLook?) {
+        guard let look = look else {
             if settings.styleType != .os(false) {
                 backgroundColor = .white
             } else {
@@ -58,13 +58,13 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
         backgroundColor = look.backgroundColor
     }
     
-    public func setupStyleLookParams() {
-        guard let lookParams = settings.styleProperties?.lookParams else {
+    public func setupStyleLookParams(_ lookParams: InformationUIComponentScreenStylePropertiesLookParams?) {
+        guard let lookParams = lookParams else {
             return
         }
     }
     
-    public func setupStyleLayout() {
+    public func setupStyleLayout(_ layoutParams: InformationUIComponentScreenStylePropertiesLayoutParams?) {
         if initialization {
             titleLabelUI.textAlignment = .center
             
@@ -82,7 +82,7 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
             ])
         }
         
-        guard let layoutParams = settings.styleProperties?.layoutParams else {
+        guard let layoutParams = layoutParams else {
             return
         }
     }
