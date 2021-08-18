@@ -6,13 +6,15 @@
 public protocol UIElementComponentStylePropertiesLookParams: UIElementStylePropertiesLookParams {
     
     associatedtype UIElementComponentStylePropertiesOverwrittenLookParamsType: UIElementComponentStylePropertiesOverwrittenLookParams
+    
+    static var `default`: Self? { get }
 
     init?(lookParams: Self?, overwrittenBy newLookParams: UIElementComponentStylePropertiesOverwrittenLookParamsType?)
 }
 
 extension UIElementComponentStylePropertiesLookParams {
     
-    static var `default`: Self? {
+    public static var `default`: Self? {
         return nil
     }
 }
