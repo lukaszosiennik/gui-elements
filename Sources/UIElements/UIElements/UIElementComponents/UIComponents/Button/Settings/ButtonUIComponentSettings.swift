@@ -4,8 +4,8 @@
 //
 
 public struct ButtonUIComponentSettings: UIComponentSettings {
-    
-    public typealias UIComponentStylePropertiesOverwrittenType = EmptyUIComponentStylePropertiesOverwritten
+
+    public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentStylePropertiesOverwritten
     
     public let params: ButtonUIComponentParams
     public var stylePack: UIElementComponentStylePack<ButtonUIComponentStyleProperties>

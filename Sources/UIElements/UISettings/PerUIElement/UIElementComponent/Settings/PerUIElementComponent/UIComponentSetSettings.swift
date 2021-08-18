@@ -5,11 +5,8 @@
 
 public protocol UIComponentSetSettings: UIElementComponentSettings where
     UIElementComponentParamsType: UIComponentSetParams,
-    UIElementComponentStylePropertiesType: UIComponentSetStyleProperties {
-    
-    static var stylePackFactory: UIComponentSetStyleFactoryInterface? { get }
-    static func stylePackFactory(for styleType: UIStyleType) -> UIComponentSetStyleFactoryInterface?
-}
+    UIElementComponentStylePropertiesType: UIComponentSetStyleProperties,
+    UIElementComponentStylePropertiesOverwrittenType: UIComponentSetStylePropertiesOverwritten {}
 
 extension UIComponentSetSettings {
     

@@ -5,11 +5,8 @@
 
 public protocol UIComponentGroupSettings: UIElementComponentSettings where
     UIElementComponentParamsType: UIComponentGroupParams,
-    UIElementComponentStylePropertiesType: UIComponentGroupStyleProperties {
-    
-    static var stylePackFactory: UIComponentGroupStyleFactoryInterface? { get }
-    static func stylePackFactory(for styleType: UIStyleType) -> UIComponentGroupStyleFactoryInterface?
-}
+    UIElementComponentStylePropertiesType: UIComponentGroupStyleProperties,
+    UIElementComponentStylePropertiesOverwrittenType: UIComponentGroupStylePropertiesOverwritten {}
 
 extension UIComponentGroupSettings {
     

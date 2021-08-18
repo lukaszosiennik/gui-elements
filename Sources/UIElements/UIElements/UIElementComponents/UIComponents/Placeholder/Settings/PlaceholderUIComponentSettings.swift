@@ -5,7 +5,7 @@
 
 public struct PlaceholderUIComponentSettings: UIComponentSettings {
     
-    public typealias UIComponentStylePropertiesOverwrittenType = EmptyUIComponentStylePropertiesOverwritten
+    public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentStylePropertiesOverwritten
     
     public let params: PlaceholderUIComponentParams
     public var stylePack: UIElementComponentStylePack<PlaceholderUIComponentStyleProperties>

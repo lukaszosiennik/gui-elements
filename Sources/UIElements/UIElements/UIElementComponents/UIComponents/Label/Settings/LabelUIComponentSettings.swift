@@ -3,9 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct LabelUIComponentSettings: UIComponentSettings {
-    
-    public typealias UIComponentStylePropertiesOverwrittenType = LabelUIComponentStylePropertiesOverwritten
+public struct LabelUIComponentSettings: UIComponentSettings {    
+
+    public typealias UIElementComponentStylePropertiesOverwrittenType = LabelUIComponentStylePropertiesOverwritten
 
     public let params: LabelUIComponentParams
     public var stylePack: UIElementComponentStylePack<LabelUIComponentStyleProperties>

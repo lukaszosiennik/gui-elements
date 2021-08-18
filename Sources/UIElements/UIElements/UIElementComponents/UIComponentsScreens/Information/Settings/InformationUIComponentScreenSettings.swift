@@ -5,29 +5,21 @@
 
 public struct InformationUIComponentScreenSettings: UIComponentScreenSettings {
     
+    public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentScreenStylePropertiesOverwritten
+    
     public let params: InformationUIComponentScreenParams
     public var stylePack: UIElementComponentStylePack<InformationUIComponentScreenStyleProperties>
-    
-    public init(params: InformationUIComponentScreenParams) {
-        self.init(
-            params: params,
-            stylePack: Self.stylePackFactory?.information() ?? .default
-        )
-    }
-    
-    public init(params: InformationUIComponentScreenParams, styleType: UIStyleType) {
-        self.init(
-            params: params,
-            stylePack: Self.stylePack(for: styleType)
-        )
-    }
     
     public init(params: InformationUIComponentScreenParams, stylePack: UIElementComponentStylePack<InformationUIComponentScreenStyleProperties>) {
         self.params = params
         self.stylePack = stylePack
     }
     
-    public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<InformationUIComponentScreenStyleProperties> {
-        return Self.stylePackFactory(for: styleType)?.information() ?? .default(styleType: styleType)
+    public static var stylePack: UIElementComponentStylePack<InformationUIComponentScreenStyleProperties>? {
+        return Self.stylePackFactory?.information()
+    }
+    
+    public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<InformationUIComponentScreenStyleProperties>? {
+        return Self.stylePackFactory(for: styleType)?.information()
     }
 }

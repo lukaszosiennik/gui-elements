@@ -5,11 +5,8 @@
 
 public protocol UIComponentScreenSettings: UIElementComponentSettings where
     UIElementComponentParamsType: UIComponentScreenParams,
-    UIElementComponentStylePropertiesType: UIComponentScreenStyleProperties {
-    
-    static var stylePackFactory: UIComponentScreenStyleFactoryInterface? { get }
-    static func stylePackFactory(for styleType: UIStyleType) -> UIComponentScreenStyleFactoryInterface?
-}
+    UIElementComponentStylePropertiesType: UIComponentScreenStyleProperties,
+    UIElementComponentStylePropertiesOverwrittenType: UIComponentScreenStylePropertiesOverwritten {}
 
 extension UIComponentScreenSettings {
     

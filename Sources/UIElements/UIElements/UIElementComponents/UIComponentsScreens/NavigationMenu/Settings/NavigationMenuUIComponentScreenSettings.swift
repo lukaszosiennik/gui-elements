@@ -5,29 +5,21 @@
 
 public struct NavigationMenuUIComponentScreenSettings<OptionKey: InputUIElementComponentActionsKeyInterface>: UIComponentScreenSettings {
     
+    public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentScreenStylePropertiesOverwritten
+    
     public let params: NavigationMenuUIComponentScreenParams<OptionKey>
     public var stylePack: UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties>
-    
-    public init(params: NavigationMenuUIComponentScreenParams<OptionKey>) {
-        self.init(
-            params: params,
-            stylePack: Self.stylePackFactory?.navigationMenu() ?? .default
-        )
-    }
-    
-    public init(params: NavigationMenuUIComponentScreenParams<OptionKey>, styleType: UIStyleType) {
-        self.init(
-            params: params,
-            stylePack: Self.stylePack(for: styleType)
-        )
-    }
     
     public init(params: NavigationMenuUIComponentScreenParams<OptionKey>, stylePack: UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties>) {
         self.params = params
         self.stylePack = stylePack
     }
     
-    public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties> {
-        return Self.stylePackFactory(for: styleType)?.navigationMenu() ?? .default(styleType: styleType)
+    public static var stylePack: UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties>? {
+        return Self.stylePackFactory?.navigationMenu()
+    }
+    
+    public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties>? {
+        return Self.stylePackFactory(for: styleType)?.navigationMenu()
     }
 }

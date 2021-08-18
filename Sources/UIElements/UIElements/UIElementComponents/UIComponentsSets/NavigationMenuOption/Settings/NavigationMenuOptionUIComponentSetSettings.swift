@@ -5,29 +5,21 @@
 
 public struct NavigationMenuOptionUIComponentSetSettings: UIComponentSetSettings {
     
+    public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentSetStylePropertiesOverwritten
+    
     public let params: NavigationMenuOptionUIComponentSetParams
     public var stylePack: UIElementComponentStylePack<NavigationMenuOptionUIComponentSetStyleProperties>
-    
-    public init(params: NavigationMenuOptionUIComponentSetParams) {
-        self.init(
-            params: params,
-            stylePack: Self.stylePackFactory?.navigationMenuOption() ?? .default
-        )
-    }
-    
-    public init(params: NavigationMenuOptionUIComponentSetParams, styleType: UIStyleType) {
-        self.init(
-            params: params,
-            stylePack: Self.stylePack(for: styleType)
-        )
-    }
     
     public init(params: NavigationMenuOptionUIComponentSetParams, stylePack: UIElementComponentStylePack<NavigationMenuOptionUIComponentSetStyleProperties>) {
         self.params = params
         self.stylePack = stylePack
     }
     
-    public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<NavigationMenuOptionUIComponentSetStyleProperties> {
-        return Self.stylePackFactory(for: styleType)?.navigationMenuOption() ?? .default(styleType: styleType)
+    public static var stylePack: UIElementComponentStylePack<NavigationMenuOptionUIComponentSetStyleProperties>? {
+        return Self.stylePackFactory?.navigationMenuOption()
+    }
+    
+    public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<NavigationMenuOptionUIComponentSetStyleProperties>? {
+        return Self.stylePackFactory(for: styleType)?.navigationMenuOption()
     }
 }
