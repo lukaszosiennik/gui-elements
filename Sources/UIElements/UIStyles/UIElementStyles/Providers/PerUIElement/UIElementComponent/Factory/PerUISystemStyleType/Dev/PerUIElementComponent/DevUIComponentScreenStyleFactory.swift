@@ -17,9 +17,7 @@ public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyle
                     look: .init(
                         backgroundColor: ColorPalette.Information.background_white
                     ),
-                    lookParams: .init(
-                        titleLinesNumber: ConstantPalette.Information.UILookParams.title_linesNumber_0
-                    ),
+                    lookParams: .default,
                     layoutParams: .init()
                 )
             )
@@ -35,7 +33,7 @@ public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyle
                     look: .init(
                         backgroundColor: ColorPalette.NavigationMenuOption.background_white
                     ),
-                    lookParams: .init(),
+                    lookParams: .default,
                     layoutParams: .init(
                         leftMargin: ConstantPalette.NavigationMenu.UILayoutParams.margin_left_16,
                         rightMargin: ConstantPalette.NavigationMenu.UILayoutParams.margin_right_16

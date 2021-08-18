@@ -19,7 +19,7 @@ public final class DevUIComponentSetStyleFactory: UIElementComponentTypeStyleFac
                         borderColor: ColorPalette.NavigationMenuOption.border_black,
                         borderWidth: ConstantPalette.NavigationMenuOption.UILook.borderWidth_1
                     ),
-                    lookParams: .init(),
+                    lookParams: .default,
                     layoutParams: .init()
                 )
             )

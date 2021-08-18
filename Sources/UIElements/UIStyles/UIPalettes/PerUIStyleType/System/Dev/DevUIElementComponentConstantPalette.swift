@@ -38,23 +38,7 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
         }
         
         fileprivate typealias UILookParamsPalette = UILookParams
-        fileprivate enum UILookParams {
-            
-            enum Property {
-                 
-                enum Size {
-                    
-                    enum Vertical {
-                        
-                        enum LinesNumber {
-                            
-                            static let value_0: CGFloat = All.value_0
-                            static let value_1: CGFloat = All.value_1
-                        }
-                    }
-                }
-            }
-        }
+        fileprivate enum UILookParams {}
         
         fileprivate typealias UILayoutParamsPalette = UILayoutParams
         fileprivate enum UILayoutParams {
@@ -98,15 +82,6 @@ extension DevUIElementComponentConstantPalette.UIElementComponent {
         
     enum UIComponent {
         
-        enum LabelUIComponent {
-            
-            enum UILookParams {
-                
-                static let linesNumber_0: Int = Int(UILookParamsPalette.Property.Size.Vertical.LinesNumber.value_0)
-                static let linesNumber_1: Int = Int(UILookParamsPalette.Property.Size.Vertical.LinesNumber.value_1)
-            }
-        }
-        
         enum Placeholder {
             
             enum UILayoutParams {
@@ -131,11 +106,6 @@ extension DevUIElementComponentConstantPalette.UIElementComponent {
         
         enum NavigationMenu {
             
-            enum UILookParams {
-                
-                static let title_linesNumber_0: Int = Int(UILookParamsPalette.Property.Size.Vertical.LinesNumber.value_0)
-            }
-            
             enum UILayoutParams {
                 
                 static let option_height_50: CGFloat = UILayoutParamsPalette.Property.Size.Vertical.Height.value_50
@@ -147,14 +117,6 @@ extension DevUIElementComponentConstantPalette.UIElementComponent {
     }
     
     enum UIComponentScreen {
-        
-        enum Information {
-            
-            enum UILookParams {
-                
-                static let title_linesNumber_0: Int = Int(UILookParamsPalette.Property.Size.Vertical.LinesNumber.value_0)
-            }
-        }
         
         enum NavigationMenu {
             
