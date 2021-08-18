@@ -3,4 +3,6 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIElement {}
+import UIKit
+
+public protocol UIElement where Self: UIView {}

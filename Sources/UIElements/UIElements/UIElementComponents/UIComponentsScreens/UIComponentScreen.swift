@@ -3,11 +3,5 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentScreen: UIElementComponent {
-    
-    associatedtype UIComponentScreenSettingsType: UIComponentScreenSettings
-    
-    var settings: UIComponentScreenSettingsType { get set }
-    
-    init(settings: UIComponentScreenSettingsType)
-}
+public protocol UIComponentScreen: UIElementComponent where
+    UIElementComponentSettingsType: UIComponentScreenSettings {}

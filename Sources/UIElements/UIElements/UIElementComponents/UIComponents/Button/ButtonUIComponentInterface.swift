@@ -5,10 +5,7 @@
 
 import UIKit
 
-public protocol ButtonUIComponentInterface: UIComponent where UIComponentSettingsType == ButtonUIComponentSettings, Self: UIView {
-    
-    var initialization: Bool { get }
-}
+public protocol ButtonUIComponentInterface: UIComponent where UIElementComponentSettingsType == ButtonUIComponentSettings {}
 
 extension ButtonUIComponentInterface {
     
@@ -17,7 +14,7 @@ extension ButtonUIComponentInterface {
     }
     
     func setupStyleLook(for button: UIButton) {
-        guard let look = settings.stylePack.style.properties?.look else {
+        guard let look = settings.styleProperties?.look else {
             let tempButton = UIButton(type: button.buttonType)
             button.setTitleColor(tempButton.titleColor(for: .normal), for: .normal)
             return
@@ -27,7 +24,7 @@ extension ButtonUIComponentInterface {
     }
     
     func setupStyleLookParams(for button: UIButton) {
-        guard let lookParams = settings.stylePack.style.properties?.lookParams else {
+        guard let lookParams = settings.styleProperties?.lookParams else {
             return
         }
     }
@@ -37,7 +34,7 @@ extension ButtonUIComponentInterface {
             translatesAutoresizingMaskIntoConstraints = false
         }
         
-        guard let layoutParams = settings.stylePack.style.properties?.layoutParams else {
+        guard let layoutParams = settings.styleProperties?.layoutParams else {
             return
         }
     }

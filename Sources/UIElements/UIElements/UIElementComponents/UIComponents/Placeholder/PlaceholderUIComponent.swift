@@ -9,7 +9,7 @@ public final class PlaceholderUIComponent: UIView, UIComponent {
     
     private let heightConstraintID = "height"
     
-    private var initialization: Bool = false
+    public var initialization: Bool = false
     
     public var settings: PlaceholderUIComponentSettings {
         didSet {
@@ -28,18 +28,12 @@ public final class PlaceholderUIComponent: UIView, UIComponent {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setup() {
-        initialization = true
-        setupSettings()
-        initialization = false
-    }
-    
     public func setupNestedSettings() {}
     
     public func setupParams() {}
     
     public func setupStyleLook() {
-        guard let look = settings.stylePack.style.properties?.look else {
+        guard let look = settings.styleProperties?.look else {
             return
         }
         
@@ -47,7 +41,7 @@ public final class PlaceholderUIComponent: UIView, UIComponent {
     }
     
     public func setupStyleLookParams() {
-        guard let lookParams = settings.stylePack.style.properties?.lookParams else {
+        guard let lookParams = settings.styleProperties?.lookParams else {
             return
         }
     }
@@ -57,7 +51,7 @@ public final class PlaceholderUIComponent: UIView, UIComponent {
             translatesAutoresizingMaskIntoConstraints = false
         }
         
-        guard let layoutParams = settings.stylePack.style.properties?.layoutParams else {
+        guard let layoutParams = settings.styleProperties?.layoutParams else {
             removeConstraintIfExists(with: heightConstraintID)
             return
         }

@@ -9,7 +9,7 @@ public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
     
     private(set) var button = UIButton(type: .custom)
     
-    private(set) public var initialization: Bool = false
+    public var initialization: Bool = false
     
     public var settings: ButtonUIComponentSettings {
         didSet {
@@ -28,14 +28,8 @@ public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setup() {
-        initialization = true
-        setupSettings()
-        initialization = false
-    }
-    
     func setupSettings() {
-        self.button = UIButton(type: settings.stylePack.style.properties == nil ? .system : .custom)
+        self.button = UIButton(type: settings.styleProperties == nil ? .system : .custom)
         
         setupNestedSettings()
         

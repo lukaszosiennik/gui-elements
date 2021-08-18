@@ -7,7 +7,7 @@ import UIKit
 
 public final class ButtonUIComponent: UIButton, ButtonUIComponentInterface {
     
-    private(set) public var initialization: Bool = false
+    public var initialization: Bool = false
     
     public var settings: ButtonUIComponentSettings {
         didSet {
@@ -24,12 +24,6 @@ public final class ButtonUIComponent: UIButton, ButtonUIComponentInterface {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func setup() {
-        initialization = true
-        setupSettings()
-        initialization = false
     }
     
     public func setupNestedSettings() {}

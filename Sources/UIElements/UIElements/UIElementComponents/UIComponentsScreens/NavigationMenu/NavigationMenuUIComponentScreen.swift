@@ -14,7 +14,7 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
     private let leadingSpaceConstraintID = "leadingSpace"
     private let trailingSpaceConstraintID = "trailingSpace"
     
-    private var initialization: Bool = false
+    public var initialization: Bool = false
     
     public var settings: NavigationMenuUIComponentScreenSettings<OptionKey> {
         didSet {
@@ -33,12 +33,6 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setup() {
-        initialization = true
-        setupSettings()
-        initialization = false
-    }
-    
     public func setupNestedSettings() {
         navigationMenuUI.settings = .init(
             params: .init(
@@ -53,7 +47,7 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
     public func setupParams() {}
     
     public func setupStyleLook() {
-        guard let look = settings.stylePack.style.properties?.look else {
+        guard let look = settings.styleProperties?.look else {
             if settings.styleType != .os(false) {
                 backgroundColor = .white
             } else {
@@ -68,7 +62,7 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
     }
     
     public func setupStyleLookParams() {
-        guard let lookParams = settings.stylePack.style.properties?.lookParams else {
+        guard let lookParams = settings.styleProperties?.lookParams else {
             return
         }
     }
@@ -100,7 +94,7 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
             ])
         }
         
-        guard let layoutParams = settings.stylePack.style.properties?.layoutParams else {
+        guard let layoutParams = settings.styleProperties?.layoutParams else {
             constraint(with: leadingSpaceConstraintID)?.constant = 0
             constraint(with: trailingSpaceConstraintID)?.constant = 0
             return

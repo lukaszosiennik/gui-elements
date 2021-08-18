@@ -32,6 +32,10 @@ extension UIElementComponentSettings {
             stylePack = Self.stylePack(for: newValue)
         }
     }
+    
+    public var styleProperties: UIElementComponentStylePropertiesType? {
+        return stylePack.style.properties
+    }
 }
 
 extension UIElementComponentSettings {

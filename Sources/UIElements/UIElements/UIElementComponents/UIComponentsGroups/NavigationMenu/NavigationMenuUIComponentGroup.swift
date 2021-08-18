@@ -16,7 +16,7 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
     private let titleBottomSpaceConstraintID = "titleBottomSpace"
     private let optionViewHeightConstraintID = "optionViewHeight"
     
-    private var initialization: Bool = false
+    public var initialization: Bool = false
     
     public var settings: NavigationMenuUIComponentGroupSettings<OptionKey> {
         didSet {
@@ -35,12 +35,6 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setup() {
-        initialization = true
-        setupSettings()
-        initialization = false
-    }
-    
     public func setupNestedSettings() {
         titleLabelUI.settings = .init(
             params: .init(
@@ -49,7 +43,7 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
             styleType: settings.styleType,
             overwrittenBy: .init(
                 lookParams: .init(
-                    linesNumber: settings.stylePack.style.properties?.lookParams?.titleLinesNumber
+                    linesNumber: settings.styleProperties?.lookParams?.titleLinesNumber
                 )
             )
         )
@@ -77,7 +71,7 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
     }
     
     public func setupStyleLook() {
-        guard let look = settings.stylePack.style.properties?.look else {
+        guard let look = settings.styleProperties?.look else {
             let tempView = UIView()
             backgroundColor = tempView.backgroundColor
             return
@@ -87,7 +81,7 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
     }
     
     public func setupStyleLookParams() {
-        guard let lookParams = settings.stylePack.style.properties?.lookParams else {
+        guard let lookParams = settings.styleProperties?.lookParams else {
             return
         }
     }
@@ -134,7 +128,7 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
             ])
         }
         
-        guard let layoutParams = settings.stylePack.style.properties?.layoutParams else {
+        guard let layoutParams = settings.styleProperties?.layoutParams else {
             let tempStackView = UIStackView()
             stackView.spacing = tempStackView.spacing
             

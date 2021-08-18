@@ -13,7 +13,7 @@ public final class CardUIComponentGroup<BodyContainerContent: UIView>: UIView, U
     private let bodyContainer = UIView()
     private let bodyContainerContent: BodyContainerContent?
     
-    private var initialization: Bool = false
+    public var initialization: Bool = false
     
     public var settings: CardUIComponentGroupSettings {
         didSet {
@@ -37,12 +37,6 @@ public final class CardUIComponentGroup<BodyContainerContent: UIView>: UIView, U
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setup() {
-        initialization = true
-        setupSettings()
-        initialization = false
-    }
-    
     public func setupNestedSettings() {
         titleLabelUI.settings = .init(
             params: .init(
@@ -55,13 +49,13 @@ public final class CardUIComponentGroup<BodyContainerContent: UIView>: UIView, U
     public func setupParams() {}
     
     public func setupStyleLook() {
-        guard let look = settings.stylePack.style.properties?.look else {
+        guard let look = settings.styleProperties?.look else {
             return
         }
     }
     
     public func setupStyleLookParams() {
-        guard let lookParams = settings.stylePack.style.properties?.lookParams else {
+        guard let lookParams = settings.styleProperties?.lookParams else {
             return
         }
     }
@@ -114,7 +108,7 @@ public final class CardUIComponentGroup<BodyContainerContent: UIView>: UIView, U
             }
         }
         
-        guard let layoutParams = settings.stylePack.style.properties?.layoutParams else {
+        guard let layoutParams = settings.styleProperties?.layoutParams else {
             return
         }
     }

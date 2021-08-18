@@ -3,11 +3,5 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentGroup: UIElementComponent {
-    
-    associatedtype UIComponentGroupSettingsType: UIComponentGroupSettings
-    
-    var settings: UIComponentGroupSettingsType { get set }
-    
-    init(settings: UIComponentGroupSettingsType)
-}
+public protocol UIComponentGroup: UIElementComponent where
+    UIElementComponentSettingsType: UIComponentGroupSettings {}

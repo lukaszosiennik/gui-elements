@@ -9,7 +9,7 @@ public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet {
     
     private let optionButtonUI = OSButtonUIComponent()
     
-    private var initialization: Bool = false
+    public var initialization: Bool = false
     
     public var settings: NavigationMenuOptionUIComponentSetSettings {
         didSet {
@@ -28,12 +28,6 @@ public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setup() {
-        initialization = true
-        setupSettings()
-        initialization = false
-    }
-    
     public func setupNestedSettings() {
         optionButtonUI.settings = .init(
             params: .init(
@@ -47,7 +41,7 @@ public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet {
     public func setupParams() {}
     
     public func setupStyleLook() {
-        guard let look = settings.stylePack.style.properties?.look else {
+        guard let look = settings.styleProperties?.look else {
             let tempView = UIView()
             backgroundColor = tempView.backgroundColor
             layer.borderColor = tempView.layer.borderColor
@@ -61,7 +55,7 @@ public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet {
     }
     
     public func setupStyleLookParams() {
-        guard let lookParams = settings.stylePack.style.properties?.lookParams else {
+        guard let lookParams = settings.styleProperties?.lookParams else {
             return
         }
     }
@@ -82,7 +76,7 @@ public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet {
             ])
         }
         
-        guard let layoutParams = settings.stylePack.style.properties?.layoutParams else {
+        guard let layoutParams = settings.styleProperties?.layoutParams else {
             return
         }
     }
