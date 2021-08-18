@@ -69,77 +69,82 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
             stackView.addArrangedSubview(optionView)
         }
     }
+}
+
+extension NavigationMenuUIComponentGroup {
     
-    public func setupStyleLook(_ look: NavigationMenuUIComponentGroupStylePropertiesLook?) {
-        guard let look = look else {
-            let tempView = UIView()
-            backgroundColor = tempView.backgroundColor
-            return
-        }
-        
+    public func setupStyleLookOS() {
+        let tempView = UIView()
+        backgroundColor = tempView.backgroundColor
+    }
+    
+    public func setupStyleLookSystem(_ look: NavigationMenuUIComponentGroupStylePropertiesLook) {
         backgroundColor = look.backgroundColor
     }
+}
+
+extension NavigationMenuUIComponentGroup {
     
-    public func setupStyleLookParams(_ lookParams: NavigationMenuUIComponentGroupStylePropertiesLookParams?) {
-        guard let lookParams = lookParams else {
-            return
+    public func setupStyleLookParamsOS() {}
+    
+    public func setupStyleLookParamsSystem(_ lookParams: NavigationMenuUIComponentGroupStylePropertiesLookParams) {}
+}
+
+extension NavigationMenuUIComponentGroup {
+    
+    public func setupStyleLayoutInitialization() {
+        titleLabelUI.textAlignment = .center
+        stackView.axis = .vertical
+        stackView.distribution = UIStackView.Distribution.equalSpacing
+        stackView.alignment = UIStackView.Alignment.fill
+        
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(titleLabelUI)
+        addSubview(stackViewBackground)
+        addSubview(stackView)
+        
+        let titleTopSpaceConstraint = titleLabelUI.topAnchor.constraint(equalTo: topAnchor)
+        titleTopSpaceConstraint.identifier = titleTopSpaceConstraintID
+        let titleBottomSpaceConstraint = titleLabelUI.bottomAnchor.constraint(equalTo: stackView.topAnchor)
+        titleBottomSpaceConstraint.identifier = titleBottomSpaceConstraintID
+        
+        NSLayoutConstraint.activate([
+            titleLabelUI.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
+            titleLabelUI.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
+            titleLabelUI.centerXAnchor.constraint(equalTo: centerXAnchor),
+            titleTopSpaceConstraint,
+            titleBottomSpaceConstraint,
+        ])
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+        ])
+        
+        stackViewBackground.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            stackViewBackground.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
+            stackViewBackground.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
+            stackViewBackground.topAnchor.constraint(equalTo: stackView.topAnchor),
+            stackViewBackground.bottomAnchor.constraint(equalTo: stackView.bottomAnchor),
+        ])
+    }
+    
+    public func setupStyleLayoutOS() {
+        let tempStackView = UIStackView()
+        stackView.spacing = tempStackView.spacing
+        
+        constraint(with: titleTopSpaceConstraintID)?.constant = 0
+        constraint(with: titleBottomSpaceConstraintID)?.constant = 0
+        stackView.arrangedSubviews.forEach { optionView in
+            optionView.removeConstraintIfExists(with: optionViewHeightConstraintID)
         }
     }
     
-    public func setupStyleLayout(_ layoutParams: NavigationMenuUIComponentGroupStylePropertiesLayoutParams?) {
-        if initialization {
-            titleLabelUI.textAlignment = .center
-            stackView.axis = .vertical
-            stackView.distribution = UIStackView.Distribution.equalSpacing
-            stackView.alignment = UIStackView.Alignment.fill
-            
-            translatesAutoresizingMaskIntoConstraints = false
-            
-            addSubview(titleLabelUI)
-            addSubview(stackViewBackground)
-            addSubview(stackView)
-            
-            let titleTopSpaceConstraint = titleLabelUI.topAnchor.constraint(equalTo: topAnchor)
-            titleTopSpaceConstraint.identifier = titleTopSpaceConstraintID
-            let titleBottomSpaceConstraint = titleLabelUI.bottomAnchor.constraint(equalTo: stackView.topAnchor)
-            titleBottomSpaceConstraint.identifier = titleBottomSpaceConstraintID
-            
-            NSLayoutConstraint.activate([
-                titleLabelUI.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
-                titleLabelUI.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
-                titleLabelUI.centerXAnchor.constraint(equalTo: centerXAnchor),
-                titleTopSpaceConstraint,
-                titleBottomSpaceConstraint,
-            ])
-            
-            stackView.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-                stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-                stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            ])
-            
-            stackViewBackground.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                stackViewBackground.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
-                stackViewBackground.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
-                stackViewBackground.topAnchor.constraint(equalTo: stackView.topAnchor),
-                stackViewBackground.bottomAnchor.constraint(equalTo: stackView.bottomAnchor),
-            ])
-        }
-        
-        guard let layoutParams = layoutParams else {
-            let tempStackView = UIStackView()
-            stackView.spacing = tempStackView.spacing
-            
-            constraint(with: titleTopSpaceConstraintID)?.constant = 0
-            constraint(with: titleBottomSpaceConstraintID)?.constant = 0
-            stackView.arrangedSubviews.forEach { optionView in
-                optionView.removeConstraintIfExists(with: optionViewHeightConstraintID)
-            }
-            return
-        }
-        
+    public func setupStyleLayoutSystem(_ layoutParams: NavigationMenuUIComponentGroupStylePropertiesLayoutParams) {
         stackView.spacing = layoutParams.optionsSpace
         
         constraint(with: titleTopSpaceConstraintID)?.constant = layoutParams.titleTopMargin

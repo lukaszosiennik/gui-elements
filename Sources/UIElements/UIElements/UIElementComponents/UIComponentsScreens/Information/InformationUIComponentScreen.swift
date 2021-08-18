@@ -43,47 +43,51 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
     }
     
     public func setupParams(_ params: InformationUIComponentScreenParams) {}
+}
+
+extension InformationUIComponentScreen {
     
-    public func setupStyleLook(_ look: InformationUIComponentScreenStylePropertiesLook?) {
-        guard let look = look else {
-            if settings.styleType != .os(false) {
-                backgroundColor = .white
-            } else {
-                let tempView = UIView()
-                backgroundColor = tempView.backgroundColor
-            }
-            return
+    public func setupStyleLookOS() {
+        if settings.styleType == .os(true) {
+            backgroundColor = .white
+        } else {
+            let tempView = UIView()
+            backgroundColor = tempView.backgroundColor
         }
-        
+    }
+    
+    public func setupStyleLookSystem(_ look: InformationUIComponentScreenStylePropertiesLook) {
         backgroundColor = look.backgroundColor
     }
+}
+
+extension InformationUIComponentScreen {
     
-    public func setupStyleLookParams(_ lookParams: InformationUIComponentScreenStylePropertiesLookParams?) {
-        guard let lookParams = lookParams else {
-            return
-        }
-    }
+    public func setupStyleLookParamsOS() {}
     
-    public func setupStyleLayout(_ layoutParams: InformationUIComponentScreenStylePropertiesLayoutParams?) {
-        if initialization {
-            titleLabelUI.textAlignment = .center
-            
-            translatesAutoresizingMaskIntoConstraints = false
-            
-            addSubview(titleLabelUI)
-            
-            NSLayoutConstraint.activate([
-                titleLabelUI.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
-                titleLabelUI.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
-                titleLabelUI.centerXAnchor.constraint(equalTo: centerXAnchor),
-                titleLabelUI.topAnchor.constraint(greaterThanOrEqualTo: topAnchor),
-                titleLabelUI.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
-                titleLabelUI.centerYAnchor.constraint(equalTo: centerYAnchor),
-            ])
-        }
+    public func setupStyleLookParamsSystem(_ lookParams: InformationUIComponentScreenStylePropertiesLookParams) {}
+}
+
+extension InformationUIComponentScreen {
+    
+    public func setupStyleLayoutInitialization() {
+        titleLabelUI.textAlignment = .center
         
-        guard let layoutParams = layoutParams else {
-            return
-        }
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(titleLabelUI)
+        
+        NSLayoutConstraint.activate([
+            titleLabelUI.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
+            titleLabelUI.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
+            titleLabelUI.centerXAnchor.constraint(equalTo: centerXAnchor),
+            titleLabelUI.topAnchor.constraint(greaterThanOrEqualTo: topAnchor),
+            titleLabelUI.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
+            titleLabelUI.centerYAnchor.constraint(equalTo: centerYAnchor),
+        ])
     }
+    
+    public func setupStyleLayoutOS() {}
+    
+    public func setupStyleLayoutSystem(_ layoutParams: InformationUIComponentScreenStylePropertiesLayoutParams) {}
 }

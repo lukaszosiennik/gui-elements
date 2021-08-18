@@ -31,31 +31,38 @@ public final class PlaceholderUIComponent: UIView, UIComponent {
     public func setupNestedSettings() {}
     
     public func setupParams(_ params: PlaceholderUIComponentParams) {}
+}
+
+extension PlaceholderUIComponent {
     
-    public func setupStyleLook(_ look: PlaceholderUIComponentStylePropertiesLook?) {
-        guard let look = look else {
-            return
-        }
-        
+    public func setupStyleLookOS() {
+        let tempView = UIView()
+        backgroundColor = tempView.backgroundColor
+    }
+    
+    public func setupStyleLookSystem(_ look: PlaceholderUIComponentStylePropertiesLook) {
         backgroundColor = look.backgroundColor
     }
+}
+
+extension PlaceholderUIComponent {
     
-    public func setupStyleLookParams(_ lookParams: EmptyUIComponentStylePropertiesLookParams?) {
-        guard let lookParams = lookParams else {
-            return
-        }
+    public func setupStyleLookParamsOS() {}
+    
+    public func setupStyleLookParamsSystem(_ lookParams: EmptyUIComponentStylePropertiesLookParams) {}
+}
+
+extension PlaceholderUIComponent {
+    
+    public func setupStyleLayoutInitialization() {
+        translatesAutoresizingMaskIntoConstraints = false
     }
     
-    public func setupStyleLayout(_ layoutParams: PlaceholderUIComponentStylePropertiesLayoutParams?) {
-        if initialization {
-            translatesAutoresizingMaskIntoConstraints = false
-        }
-        
-        guard let layoutParams = layoutParams else {
-            removeConstraintIfExists(with: heightConstraintID)
-            return
-        }
-        
+    public func setupStyleLayoutOS() {
+        removeConstraintIfExists(with: heightConstraintID)
+    }
+    
+    public func setupStyleLayoutSystem(_ layoutParams: PlaceholderUIComponentStylePropertiesLayoutParams) {
         if let heightConstraint = constraint(with: heightConstraintID) {
             heightConstraint.constant = layoutParams.height
         } else {

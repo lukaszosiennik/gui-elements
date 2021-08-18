@@ -45,61 +45,65 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
     }
     
     public func setupParams(_ params: NavigationMenuUIComponentScreenParams<OptionKey>) {}
+}
+
+extension NavigationMenuUIComponentScreen {
     
-    public func setupStyleLook(_ look: NavigationMenuUIComponentScreenStylePropertiesLook?) {
-        guard let look = look else {
-            if settings.styleType != .os(false) {
-                backgroundColor = .white
-            } else {
-                let tempView = UIView()
-                backgroundColor = tempView.backgroundColor
-            }
-            
-            return
+    public func setupStyleLookOS() {
+        if settings.styleType == .os(true) {
+            backgroundColor = .white
+        } else {
+            let tempView = UIView()
+            backgroundColor = tempView.backgroundColor
         }
-        
+    }
+    
+    public func setupStyleLookSystem(_ look: NavigationMenuUIComponentScreenStylePropertiesLook) {
         backgroundColor = look.backgroundColor
     }
+}
+
+extension NavigationMenuUIComponentScreen {
     
-    public func setupStyleLookParams(_ lookParams: EmptyUIComponentScreenStylePropertiesLookParams?) {
-        guard let lookParams = lookParams else {
-            return
-        }
+    public func setupStyleLookParamsOS() {}
+    
+    public func setupStyleLookParamsSystem(_ lookParams: EmptyUIComponentScreenStylePropertiesLookParams) {}
+}
+
+extension NavigationMenuUIComponentScreen {
+    
+    public func setupStyleLayoutInitialization() {
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(container)
+        container.addSubview(navigationMenuUI)
+        
+        let leadingSpaceConstraint = container.leadingAnchor.constraint(equalTo: leadingAnchor)
+        leadingSpaceConstraint.identifier = leadingSpaceConstraintID
+        let trailingSpaceConstraint = container.trailingAnchor.constraint(equalTo: trailingAnchor)
+        trailingSpaceConstraint.identifier = trailingSpaceConstraintID
+        
+        container.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            leadingSpaceConstraint,
+            trailingSpaceConstraint,
+            container.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            container.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+        ])
+        
+        NSLayoutConstraint.activate([
+            navigationMenuUI.leadingAnchor.constraint(equalTo: container.leadingAnchor),
+            navigationMenuUI.trailingAnchor.constraint(equalTo: container.trailingAnchor),
+            navigationMenuUI.centerYAnchor.constraint(equalTo: container.centerYAnchor),
+        ])
     }
     
-    public func setupStyleLayout(_ layoutParams: NavigationMenuUIComponentScreenStylePropertiesLayoutParams?) {
-        if initialization {
-            translatesAutoresizingMaskIntoConstraints = false
-            
-            addSubview(container)
-            container.addSubview(navigationMenuUI)
-            
-            let leadingSpaceConstraint = container.leadingAnchor.constraint(equalTo: leadingAnchor)
-            leadingSpaceConstraint.identifier = leadingSpaceConstraintID
-            let trailingSpaceConstraint = container.trailingAnchor.constraint(equalTo: trailingAnchor)
-            trailingSpaceConstraint.identifier = trailingSpaceConstraintID
-            
-            container.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                leadingSpaceConstraint,
-                trailingSpaceConstraint,
-                container.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-                container.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-            ])
-            
-            NSLayoutConstraint.activate([
-                navigationMenuUI.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-                navigationMenuUI.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-                navigationMenuUI.centerYAnchor.constraint(equalTo: container.centerYAnchor),
-            ])
-        }
-        
-        guard let layoutParams = layoutParams else {
-            constraint(with: leadingSpaceConstraintID)?.constant = 0
-            constraint(with: trailingSpaceConstraintID)?.constant = 0
-            return
-        }
-        
+    public func setupStyleLayoutOS() {
+        constraint(with: leadingSpaceConstraintID)?.constant = 0
+        constraint(with: trailingSpaceConstraintID)?.constant = 0
+    }
+    
+    public func setupStyleLayoutSystem(_ layoutParams: NavigationMenuUIComponentScreenStylePropertiesLayoutParams) {
         constraint(with: leadingSpaceConstraintID)?.constant = layoutParams.leftMargin
         constraint(with: trailingSpaceConstraintID)?.constant = -layoutParams.rightMargin
     }

@@ -49,15 +49,56 @@ public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
         setupParams(params, for: button)
     }
     
-    public func setupStyleLook(_ look: ButtonUIComponentStylePropertiesLook?) {
-        setupStyleLook(look, for: button)
+    private func setupActions() {
+        button.addTarget(self, action: #selector(defaultAction), for: .touchUpInside)
     }
     
-    public func setupStyleLookParams(_ lookParams: EmptyUIComponentStylePropertiesLookParams?) {
-        setupStyleLookParams(lookParams, for: button)
+    @objc private func defaultAction() {
+        settings.params.action?()
+    }
+}
+
+extension OSButtonUIComponent {
+    
+    public func setupStyleLookOS() {
+        setupStyleLookOS(for: button)
     }
     
-    public func setupStyleLayout(_ layoutParams: ButtonUIComponentStylePropertiesLayoutParams?) {
+    public func setupStyleLookSystem(_ look: ButtonUIComponentStylePropertiesLook) {
+        setupStyleLookSystem(look, for: button)
+    }
+}
+
+extension OSButtonUIComponent {
+    
+    public func setupStyleLookParamsOS() {
+        setupStyleLookParamsOS(for: button)
+    }
+    
+    public func setupStyleLookParamsSystem(_ lookParams: EmptyUIComponentStylePropertiesLookParams) {
+        setupStyleLookParamsSystem(lookParams, for: button)
+    }
+}
+
+extension OSButtonUIComponent {
+    
+    public func setupStyleLayoutInitialization() {
+        setupStyleLayoutInitialization(for: button)
+    }
+    
+    public func setupStyleLayoutOS() {
+        setupStyleLayout()
+        
+        setupStyleLayoutOS(for: button)
+    }
+    
+    public func setupStyleLayoutSystem(_ layoutParams: ButtonUIComponentStylePropertiesLayoutParams) {
+        setupStyleLayout()
+        
+        setupStyleLayoutSystem(layoutParams, for: button)
+    }
+    
+    private func setupStyleLayout() {
         subviews.forEach { subview in
             subview.removeFromSuperview()
         }
@@ -70,15 +111,5 @@ public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
             button.topAnchor.constraint(equalTo: topAnchor),
             button.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
-        
-        setupStyleLayout(layoutParams, for: button)
-    }
-    
-    private func setupActions() {
-        button.addTarget(self, action: #selector(defaultAction), for: .touchUpInside)
-    }
-    
-    @objc private func defaultAction() {
-        settings.params.action?()
     }
 }

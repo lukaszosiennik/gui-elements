@@ -38,46 +38,50 @@ public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet {
         )
     }
     
-    public func setupParams(_ params: NavigationMenuOptionUIComponentSetParams) {}
+    public func setupParams(_ params: NavigationMenuOptionUIComponentSetParams) {}    
+}
+
+extension NavigationMenuUIOptionComponentSet {
     
-    public func setupStyleLook(_ look: NavigationMenuOptionUIComponentSetStylePropertiesLook?) {
-        guard let look = look else {
-            let tempView = UIView()
-            backgroundColor = tempView.backgroundColor
-            layer.borderColor = tempView.layer.borderColor
-            layer.borderWidth = tempView.layer.borderWidth
-            return
-        }
-        
+    public func setupStyleLookOS() {
+        let tempView = UIView()
+        backgroundColor = tempView.backgroundColor
+        layer.borderColor = tempView.layer.borderColor
+        layer.borderWidth = tempView.layer.borderWidth
+    }
+    
+    public func setupStyleLookSystem(_ look: NavigationMenuOptionUIComponentSetStylePropertiesLook) {
         backgroundColor = look.backgroundColor
         layer.borderColor = look.borderColor.cgColor
         layer.borderWidth = look.borderWidth
     }
+}
+
+extension NavigationMenuUIOptionComponentSet {
     
-    public func setupStyleLookParams(_ lookParams: EmptyUIComponentSetStylePropertiesLookParams?) {
-        guard let lookParams = lookParams else {
-            return
-        }
-    }
+    public func setupStyleLookParamsOS() {}
     
-    public func setupStyleLayout(_ layoutParams: NavigationMenuOptionUIComponentSetStylePropertiesLayoutParams?) {
-        if initialization {
-            translatesAutoresizingMaskIntoConstraints = false
-            
-            addSubview(optionButtonUI)
-            
-            NSLayoutConstraint.activate([
-                optionButtonUI.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
-                optionButtonUI.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
-                optionButtonUI.centerXAnchor.constraint(equalTo: centerXAnchor),
-                optionButtonUI.topAnchor.constraint(greaterThanOrEqualTo: topAnchor),
-                optionButtonUI.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
-                optionButtonUI.centerYAnchor.constraint(equalTo: centerYAnchor),
-            ])
-        }
+    public func setupStyleLookParamsSystem(_ lookParams: EmptyUIComponentSetStylePropertiesLookParams) {}
+}
+
+extension NavigationMenuUIOptionComponentSet {
+    
+    public func setupStyleLayoutInitialization() {
+        translatesAutoresizingMaskIntoConstraints = false
         
-        guard let layoutParams = layoutParams else {
-            return
-        }
+        addSubview(optionButtonUI)
+        
+        NSLayoutConstraint.activate([
+            optionButtonUI.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
+            optionButtonUI.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
+            optionButtonUI.centerXAnchor.constraint(equalTo: centerXAnchor),
+            optionButtonUI.topAnchor.constraint(greaterThanOrEqualTo: topAnchor),
+            optionButtonUI.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
+            optionButtonUI.centerYAnchor.constraint(equalTo: centerYAnchor),
+        ])
     }
+    
+    public func setupStyleLayoutOS() {}
+    
+    public func setupStyleLayoutSystem(_ layoutParams: NavigationMenuOptionUIComponentSetStylePropertiesLayoutParams) {}
 }

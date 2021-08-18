@@ -31,30 +31,34 @@ public final class LabelUIComponent: UILabel, UIComponent {
     public func setupParams(_ params: LabelUIComponentParams) {
         text = params.text
     }
+}
+
+extension LabelUIComponent {
     
-    public func setupStyleLook(_ look: LabelUIComponentStylePropertiesLook?) {
-        guard let look = look else {
-            return
-        }
+    public func setupStyleLookOS() {}
+    
+    public func setupStyleLookSystem(_ look: LabelUIComponentStylePropertiesLook) {}
+}
+
+extension LabelUIComponent {
+    
+    public func setupStyleLookParamsOS() {
+        let tempLabel = UILabel()
+        numberOfLines = tempLabel.numberOfLines
     }
-
-    public func setupStyleLookParams(_ lookParams: LabelUIComponentStylePropertiesLookParams?) {
-        guard let lookParams = lookParams else {
-            let tempLabel = UILabel()
-            numberOfLines = tempLabel.numberOfLines
-            return
-        }
-
+    
+    public func setupStyleLookParamsSystem(_ lookParams: LabelUIComponentStylePropertiesLookParams) {
         numberOfLines = lookParams.linesNumber
     }
+}
 
-    public func setupStyleLayout(_ layoutParams: LabelUIComponentStylePropertiesLayoutParams?) {
-        if initialization {
-            translatesAutoresizingMaskIntoConstraints = false
-        }
-
-        guard let layoutParams = layoutParams else {
-            return
-        }
+extension LabelUIComponent {
+    
+    public func setupStyleLayoutInitialization() {
+        translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    public func setupStyleLayoutOS() {}
+    
+    public func setupStyleLayoutSystem(_ layoutParams: LabelUIComponentStylePropertiesLayoutParams) {}
 }

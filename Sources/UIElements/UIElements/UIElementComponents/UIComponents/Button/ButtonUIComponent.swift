@@ -31,16 +31,41 @@ public final class ButtonUIComponent: UIButton, ButtonUIComponentInterface {
     public func setupParams(_ params: ButtonUIComponentParams) {
         setupParams(params, for: self)
     }
+}
+
+extension ButtonUIComponent {
     
-    public func setupStyleLook(_ look: ButtonUIComponentStylePropertiesLook?) {
-        setupStyleLook(look, for: self)
+    public func setupStyleLookOS() {
+        setupStyleLookOS(for: self)
     }
     
-    public func setupStyleLookParams(_ lookParams: EmptyUIComponentStylePropertiesLookParams?) {
-        setupStyleLookParams(lookParams, for: self)
+    public func setupStyleLookSystem(_ look: ButtonUIComponentStylePropertiesLook) {
+        setupStyleLookSystem(look, for: self)
+    }
+}
+
+extension ButtonUIComponent {
+    
+    public func setupStyleLookParamsOS() {
+        setupStyleLookParamsOS(for: self)
     }
     
-    public func setupStyleLayout(_ layoutParams: ButtonUIComponentStylePropertiesLayoutParams?) {
-        setupStyleLayout(layoutParams, for: self)
+    public func setupStyleLookParamsSystem(_ lookParams: EmptyUIComponentStylePropertiesLookParams) {
+        setupStyleLookParamsSystem(lookParams, for: self)
+    }
+}
+
+extension ButtonUIComponent {
+    
+    public func setupStyleLayoutInitialization() {
+        setupStyleLayoutInitialization(for: self)
+    }
+    
+    public func setupStyleLayoutOS() {
+        setupStyleLayoutOS(for: self)
+    }
+    
+    public func setupStyleLayoutSystem(_ layoutParams: ButtonUIComponentStylePropertiesLayoutParams) {
+        setupStyleLayoutSystem(layoutParams, for: self)
     }
 }

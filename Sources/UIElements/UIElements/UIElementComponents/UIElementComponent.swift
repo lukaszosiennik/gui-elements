@@ -17,9 +17,13 @@ public protocol UIElementComponent: UIElement {
     
     func setupParams(_ params: UIElementComponentSettingsType.UIElementComponentParamsType)
     
-    func setupStyleLook(_ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookType?)
-    func setupStyleLookParams(_ lookParams: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookParamsType?)
-    func setupStyleLayout(_ layoutParams: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLayoutParamsType?)
+    func setupStyleLookOS()
+    func setupStyleLookSystem(_ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookType)
+    func setupStyleLookParamsOS()
+    func setupStyleLookParamsSystem(_ lookParams: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookParamsType)
+    func setupStyleLayoutInitialization()
+    func setupStyleLayoutOS()
+    func setupStyleLayoutSystem(_ layoutParams: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLayoutParamsType)
 }
 
 extension UIElementComponent {
@@ -54,14 +58,33 @@ extension UIElementComponent {
     }
     
     private func setupStyleLook() {
-        setupStyleLook(settings.styleProperties?.look)
+        guard let look = settings.styleProperties?.look else {
+            setupStyleLookOS()
+            return
+        }
+        
+        setupStyleLookSystem(look)
     }
     
     private func setupStyleLookParams() {
-        setupStyleLookParams(settings.styleProperties?.lookParams)
+        guard let lookParams = settings.styleProperties?.lookParams else {
+            setupStyleLookParamsOS()
+            return
+        }
+        
+        setupStyleLookParamsSystem(lookParams)
     }
     
     private func setupStyleLayout() {
-        setupStyleLayout(settings.styleProperties?.layoutParams)
+        if initialization {
+            setupStyleLayoutInitialization()
+        }
+        
+        guard let layoutParams = settings.styleProperties?.layoutParams else {
+            setupStyleLayoutOS()
+            return
+        }
+        
+        setupStyleLayoutSystem(layoutParams)
     }
 }

@@ -47,69 +47,72 @@ public final class CardUIComponentGroup<BodyContainerContent: UIView>: UIView, U
     }
     
     public func setupParams(_ params: CardUIComponentGroupParams) {}
+}
+
+extension CardUIComponentGroup {
     
-    public func setupStyleLook(_ look: CardUIComponentGroupStylePropertiesLook?) {
-        guard let look = look else {
-            return
-        }
-    }
+    public func setupStyleLookOS() {}
     
-    public func setupStyleLookParams(_ lookParams: EmptyUIComponentGroupStylePropertiesLookParams?) {
-        guard let lookParams = lookParams else {
-            return
-        }
-    }
+    public func setupStyleLookSystem(_ look: CardUIComponentGroupStylePropertiesLook) {}
+}
+
+extension CardUIComponentGroup {
     
-    public func setupStyleLayout(_ layoutParams: CardUIComponentGroupStylePropertiesLayoutParams?) {
-        if initialization {
-            titleLabelUI.textAlignment = .center
-            
-            translatesAutoresizingMaskIntoConstraints = false
-            
-            addSubview(titleContainer)
-            titleContainer.addSubview(titleLabelUI)
-            addSubview(bodyContainer)
-            if let bodyContainerContent = bodyContainerContent {
-                bodyContainer.addSubview(bodyContainerContent)
-            }
-            
-            titleContainer.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                titleContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
-                titleContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
-                titleContainer.topAnchor.constraint(equalTo: topAnchor),
-                titleContainer.bottomAnchor.constraint(equalTo: bodyContainer.topAnchor),
-            ])
-            
-            NSLayoutConstraint.activate([
-                titleLabelUI.leadingAnchor.constraint(greaterThanOrEqualTo: titleContainer.leadingAnchor),
-                titleLabelUI.trailingAnchor.constraint(lessThanOrEqualTo: titleContainer.trailingAnchor),
-                titleLabelUI.centerXAnchor.constraint(equalTo: titleContainer.centerXAnchor),
-                titleLabelUI.topAnchor.constraint(greaterThanOrEqualTo: titleContainer.topAnchor),
-                titleLabelUI.bottomAnchor.constraint(lessThanOrEqualTo: titleContainer.bottomAnchor),
-                titleLabelUI.centerYAnchor.constraint(equalTo: titleContainer.centerYAnchor),
-            ])
-            
-            bodyContainer.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                bodyContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
-                bodyContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
-                bodyContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
-            ])
-            
-            if let bodyContainerContent = bodyContainerContent {
-                bodyContainerContent.translatesAutoresizingMaskIntoConstraints = false
-                NSLayoutConstraint.activate([
-                    bodyContainerContent.leadingAnchor.constraint(equalTo: bodyContainer.leadingAnchor),
-                    bodyContainerContent.trailingAnchor.constraint(equalTo: bodyContainer.trailingAnchor),
-                    bodyContainerContent.topAnchor.constraint(equalTo: bodyContainer.topAnchor),
-                    bodyContainerContent.bottomAnchor.constraint(equalTo: bodyContainer.bottomAnchor),
-                ])
-            }
+    public func setupStyleLookParamsOS() {}
+    
+    public func setupStyleLookParamsSystem(_ lookParams: EmptyUIComponentGroupStylePropertiesLookParams) {}
+}
+
+extension CardUIComponentGroup {
+    
+    public func setupStyleLayoutInitialization() {
+        titleLabelUI.textAlignment = .center
+        
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(titleContainer)
+        titleContainer.addSubview(titleLabelUI)
+        addSubview(bodyContainer)
+        if let bodyContainerContent = bodyContainerContent {
+            bodyContainer.addSubview(bodyContainerContent)
         }
         
-        guard let layoutParams = layoutParams else {
-            return
+        titleContainer.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            titleContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
+            titleContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
+            titleContainer.topAnchor.constraint(equalTo: topAnchor),
+            titleContainer.bottomAnchor.constraint(equalTo: bodyContainer.topAnchor),
+        ])
+        
+        NSLayoutConstraint.activate([
+            titleLabelUI.leadingAnchor.constraint(greaterThanOrEqualTo: titleContainer.leadingAnchor),
+            titleLabelUI.trailingAnchor.constraint(lessThanOrEqualTo: titleContainer.trailingAnchor),
+            titleLabelUI.centerXAnchor.constraint(equalTo: titleContainer.centerXAnchor),
+            titleLabelUI.topAnchor.constraint(greaterThanOrEqualTo: titleContainer.topAnchor),
+            titleLabelUI.bottomAnchor.constraint(lessThanOrEqualTo: titleContainer.bottomAnchor),
+            titleLabelUI.centerYAnchor.constraint(equalTo: titleContainer.centerYAnchor),
+        ])
+        
+        bodyContainer.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            bodyContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
+            bodyContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
+            bodyContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
+        ])
+        
+        if let bodyContainerContent = bodyContainerContent {
+            bodyContainerContent.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                bodyContainerContent.leadingAnchor.constraint(equalTo: bodyContainer.leadingAnchor),
+                bodyContainerContent.trailingAnchor.constraint(equalTo: bodyContainer.trailingAnchor),
+                bodyContainerContent.topAnchor.constraint(equalTo: bodyContainer.topAnchor),
+                bodyContainerContent.bottomAnchor.constraint(equalTo: bodyContainer.bottomAnchor),
+            ])
         }
     }
+    
+    public func setupStyleLayoutOS() {}
+    
+    public func setupStyleLayoutSystem(_ layoutParams: CardUIComponentGroupStylePropertiesLayoutParams) {}
 }
