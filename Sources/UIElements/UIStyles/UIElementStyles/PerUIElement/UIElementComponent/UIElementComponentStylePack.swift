@@ -25,11 +25,17 @@ public struct UIElementComponentStylePack<StylePropertiesType: UIElementComponen
 extension UIElementComponentStylePack {
     
     public static var `default`: UIElementComponentStylePack<StylePropertiesType> {
-        return `default`(factory: nil, styleType: .os(false))
+        return `default`(
+            factory: nil,
+            styleType: .os(false)
+        )
     }
     
     public static func `default`(styleType: UIStyleType) -> UIElementComponentStylePack<StylePropertiesType> {
-        return `default`(factory: nil, styleType: styleType)
+        return `default`(
+            factory: nil,
+            styleType: styleType
+        )
     }
     
     public static func `default`(factory: UIElementStyleFactoryInterface?, styleType: UIStyleType) -> UIElementComponentStylePack<StylePropertiesType> {

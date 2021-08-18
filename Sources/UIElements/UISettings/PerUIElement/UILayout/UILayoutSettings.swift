@@ -26,6 +26,9 @@ extension UILayoutSettings {
             stylePack = Self.stylePack(for: newValue)
         }
     }
+}
+
+extension UILayoutSettings {
     
     static var `default`: Self {
         return .init()

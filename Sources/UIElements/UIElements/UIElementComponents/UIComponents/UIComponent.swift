@@ -11,8 +11,3 @@ public protocol UIComponent: UIElementComponent {
     
     init(settings: UIComponentSettingsType)
 }
-
-extension UIComponent {
-    
-    public func setupNestedStyle() {}
-}
