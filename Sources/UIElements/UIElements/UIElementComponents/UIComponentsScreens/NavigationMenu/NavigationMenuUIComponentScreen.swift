@@ -73,17 +73,14 @@ extension NavigationMenuUIComponentScreen {
 extension NavigationMenuUIComponentScreen {
     
     public func setupStyleLayoutInitialization() {
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        addSubview(container)
-        container.addSubview(navigationMenuUI)
+        add(subview: container)
+        container.add(subview: navigationMenuUI)
         
         let leadingSpaceConstraint = container.leadingAnchor.constraint(equalTo: leadingAnchor)
         leadingSpaceConstraint.identifier = leadingSpaceConstraintID
         let trailingSpaceConstraint = container.trailingAnchor.constraint(equalTo: trailingAnchor)
         trailingSpaceConstraint.identifier = trailingSpaceConstraintID
         
-        container.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             leadingSpaceConstraint,
             trailingSpaceConstraint,

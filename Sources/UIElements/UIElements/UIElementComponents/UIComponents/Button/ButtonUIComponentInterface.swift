@@ -35,9 +35,7 @@ extension ButtonUIComponentInterface {
 
 extension ButtonUIComponentInterface {
     
-    func setupStyleLayoutInitialization(for button: UIButton) {
-        translatesAutoresizingMaskIntoConstraints = false
-    }
+    func setupStyleLayoutInitialization(for button: UIButton) {}
     
     func setupStyleLayoutOS(for button: UIButton) {}
     

@@ -68,16 +68,13 @@ extension CardUIComponentGroup {
     public func setupStyleLayoutInitialization() {
         titleLabelUI.textAlignment = .center
         
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        addSubview(titleContainer)
-        titleContainer.addSubview(titleLabelUI)
-        addSubview(bodyContainer)
+        add(subview: titleContainer)
+        titleContainer.add(subview: titleLabelUI)
+        add(subview: bodyContainer)
         if let bodyContainerContent = bodyContainerContent {
-            bodyContainer.addSubview(bodyContainerContent)
+            bodyContainer.add(subview: bodyContainerContent)
         }
         
-        titleContainer.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             titleContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
             titleContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
@@ -94,7 +91,6 @@ extension CardUIComponentGroup {
             titleLabelUI.centerYAnchor.constraint(equalTo: titleContainer.centerYAnchor),
         ])
         
-        bodyContainer.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             bodyContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
             bodyContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
@@ -102,7 +98,6 @@ extension CardUIComponentGroup {
         ])
         
         if let bodyContainerContent = bodyContainerContent {
-            bodyContainerContent.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 bodyContainerContent.leadingAnchor.constraint(equalTo: bodyContainer.leadingAnchor),
                 bodyContainerContent.trailingAnchor.constraint(equalTo: bodyContainer.trailingAnchor),

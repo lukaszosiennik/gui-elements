@@ -98,11 +98,9 @@ extension NavigationMenuUIComponentGroup {
         stackView.distribution = UIStackView.Distribution.equalSpacing
         stackView.alignment = UIStackView.Alignment.fill
         
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        addSubview(titleLabelUI)
-        addSubview(stackViewBackground)
-        addSubview(stackView)
+        add(subview: titleLabelUI)
+        add(subview: stackViewBackground)
+        add(subview: stackView)
         
         let titleTopSpaceConstraint = titleLabelUI.topAnchor.constraint(equalTo: topAnchor)
         titleTopSpaceConstraint.identifier = titleTopSpaceConstraintID
@@ -117,14 +115,12 @@ extension NavigationMenuUIComponentGroup {
             titleBottomSpaceConstraint,
         ])
         
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
         
-        stackViewBackground.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             stackViewBackground.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
             stackViewBackground.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),

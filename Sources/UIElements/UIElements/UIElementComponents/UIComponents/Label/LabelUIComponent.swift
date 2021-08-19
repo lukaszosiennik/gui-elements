@@ -54,9 +54,7 @@ extension LabelUIComponent {
 
 extension LabelUIComponent {
     
-    public func setupStyleLayoutInitialization() {
-        translatesAutoresizingMaskIntoConstraints = false
-    }
+    public func setupStyleLayoutInitialization() {}
     
     public func setupStyleLayoutOS() {}
     

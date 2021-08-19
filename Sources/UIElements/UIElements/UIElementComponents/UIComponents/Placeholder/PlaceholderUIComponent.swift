@@ -54,9 +54,7 @@ extension PlaceholderUIComponent {
 
 extension PlaceholderUIComponent {
     
-    public func setupStyleLayoutInitialization() {
-        translatesAutoresizingMaskIntoConstraints = false
-    }
+    public func setupStyleLayoutInitialization() {}
     
     public func setupStyleLayoutOS() {
         removeConstraintIfExists(with: heightConstraintID)

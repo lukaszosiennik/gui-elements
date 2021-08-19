@@ -73,9 +73,7 @@ extension InformationUIComponentScreen {
     public func setupStyleLayoutInitialization() {
         titleLabelUI.textAlignment = .center
         
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        addSubview(titleLabelUI)
+        add(subview: titleLabelUI)
         
         NSLayoutConstraint.activate([
             titleLabelUI.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),

@@ -102,9 +102,8 @@ extension OSButtonUIComponent {
         subviews.forEach { subview in
             subview.removeFromSuperview()
         }
-        addSubview(button)
+        add(subview: button)
         
-        button.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             button.leadingAnchor.constraint(equalTo: leadingAnchor),
             button.trailingAnchor.constraint(equalTo: trailingAnchor),
