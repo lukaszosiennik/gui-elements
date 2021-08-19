@@ -9,7 +9,7 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
     
     private let titleLabelUI = LabelUIComponent()
     
-    public var initialization: Bool = false
+    public let initialization = UIElementComponentInitialization()
     
     public var settings: InformationUIComponentScreenSettings {
         didSet {

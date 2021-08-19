@@ -9,7 +9,7 @@ public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet {
     
     private let optionButtonUI = OSButtonUIComponent()
     
-    public var initialization: Bool = false
+    public let initialization = UIElementComponentInitialization()
     
     public var settings: NavigationMenuOptionUIComponentSetSettings {
         didSet {

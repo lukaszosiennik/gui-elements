@@ -3,11 +3,16 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
+public final class UIElementComponentInitialization {
+    
+    fileprivate var isRunning: Bool = false
+}
+
 public protocol UIElementComponent: UIElement {
     
     associatedtype UIElementComponentSettingsType: UIElementComponentSettings
     
-    var initialization: Bool { get set }
+    var initialization: UIElementComponentInitialization { get }
     
     var settings: UIElementComponentSettingsType { get set }
     
@@ -29,9 +34,9 @@ public protocol UIElementComponent: UIElement {
 extension UIElementComponent {
     
     func setup() {
-        initialization = true
+        initialization.isRunning = true
         setupSettings()
-        initialization = false
+        initialization.isRunning = false
     }
 }
 
@@ -76,7 +81,7 @@ extension UIElementComponent {
     }
     
     private func setupStyleLayout() {
-        if initialization {
+        if initialization.isRunning {
             setupStyleLayoutInitialization()
         }
         

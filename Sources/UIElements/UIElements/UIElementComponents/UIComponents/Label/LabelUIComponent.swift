@@ -7,7 +7,7 @@ import UIKit
 
 public final class LabelUIComponent: UILabel, UIComponent {
 
-    public var initialization: Bool = false
+    public let initialization = UIElementComponentInitialization()
     
     public var settings: LabelUIComponentSettings {
         didSet {

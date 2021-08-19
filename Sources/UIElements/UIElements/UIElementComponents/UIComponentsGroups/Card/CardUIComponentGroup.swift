@@ -13,7 +13,7 @@ public final class CardUIComponentGroup<BodyContainerContent: UIView>: UIView, U
     private let bodyContainer = UIView()
     private let bodyContainerContent: BodyContainerContent?
     
-    public var initialization: Bool = false
+    public let initialization = UIElementComponentInitialization()
     
     public var settings: CardUIComponentGroupSettings {
         didSet {

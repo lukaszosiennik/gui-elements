@@ -16,7 +16,7 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
     private let titleBottomSpaceConstraintID = "titleBottomSpace"
     private let optionViewHeightConstraintID = "optionViewHeight"
     
-    public var initialization: Bool = false
+    public let initialization = UIElementComponentInitialization()
     
     public var settings: NavigationMenuUIComponentGroupSettings<OptionKey> {
         didSet {

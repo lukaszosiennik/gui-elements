@@ -14,7 +14,7 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
     private let leadingSpaceConstraintID = "leadingSpace"
     private let trailingSpaceConstraintID = "trailingSpace"
     
-    public var initialization: Bool = false
+    public let initialization = UIElementComponentInitialization()
     
     public var settings: NavigationMenuUIComponentScreenSettings<OptionKey> {
         didSet {

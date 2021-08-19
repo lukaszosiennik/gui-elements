@@ -9,7 +9,7 @@ public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
     
     private(set) var button = UIButton(type: .custom)
     
-    public var initialization: Bool = false
+    public let initialization = UIElementComponentInitialization()
     
     public var settings: ButtonUIComponentSettings {
         didSet {

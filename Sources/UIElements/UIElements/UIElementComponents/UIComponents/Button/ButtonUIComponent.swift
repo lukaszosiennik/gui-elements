@@ -7,7 +7,7 @@ import UIKit
 
 public final class ButtonUIComponent: UIButton, ButtonUIComponentInterface {
 
-    public var initialization: Bool = false
+    public let initialization = UIElementComponentInitialization()
     
     public var settings: ButtonUIComponentSettings {
         didSet {
