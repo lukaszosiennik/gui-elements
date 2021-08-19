@@ -9,9 +9,4 @@ public struct NavigationMenuUIComponentScreenStylePropertiesLayoutParams: UIComp
     
     public let leftMargin: CGFloat
     public let rightMargin: CGFloat
-    
-    init(leftMargin: CGFloat, rightMargin: CGFloat) {
-        self.leftMargin = leftMargin
-        self.rightMargin = rightMargin
-    }
 }

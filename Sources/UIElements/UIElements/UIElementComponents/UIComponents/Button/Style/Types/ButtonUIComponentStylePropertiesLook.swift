@@ -8,8 +8,4 @@ import UIKit
 public struct ButtonUIComponentStylePropertiesLook: UIComponentStylePropertiesLook {
     
     public let titleColor: UIColor
-    
-    init(titleColor: UIColor) {
-        self.titleColor = titleColor
-    }
 }

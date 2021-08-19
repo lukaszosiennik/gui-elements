@@ -8,8 +8,4 @@ import UIKit
 public struct InformationUIComponentScreenStylePropertiesLook: UIComponentScreenStylePropertiesLook {
     
     public let backgroundColor: UIColor
-    
-    init(backgroundColor: UIColor) {
-        self.backgroundColor = backgroundColor
-    }
 }

@@ -8,8 +8,4 @@ import UIKit
 public struct PlaceholderUIComponentStylePropertiesLayoutParams: UIComponentStylePropertiesLayoutParams {
     
     public let height: CGFloat
-    
-    init(height: CGFloat) {
-        self.height = height
-    }
 }
