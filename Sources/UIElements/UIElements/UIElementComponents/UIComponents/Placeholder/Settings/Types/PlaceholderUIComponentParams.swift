@@ -5,7 +5,7 @@
 
 public struct PlaceholderUIComponentParams: UIComponentParams {
     
-    public static var `default`: PlaceholderUIComponentParams {
+    public static var `default`: Self {
         return .init()
     }
     

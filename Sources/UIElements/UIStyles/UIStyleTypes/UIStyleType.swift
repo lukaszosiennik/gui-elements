@@ -11,7 +11,7 @@ public enum UIStyleType: Hashable {
 
 extension UIStyleType {
     
-    public static var os: UIStyleType {
+    public static var os: Self {
         return .os(true)
     }
 }

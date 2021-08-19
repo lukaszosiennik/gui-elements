@@ -7,7 +7,7 @@ public struct InformationUIComponentScreenParams: UIComponentScreenParams {
     
     public let title: String
     
-    public static var `default`: InformationUIComponentScreenParams {
+    public static var `default`: Self {
         return .init(
             title: "InformationUIComponentScreenParams.title"
         )

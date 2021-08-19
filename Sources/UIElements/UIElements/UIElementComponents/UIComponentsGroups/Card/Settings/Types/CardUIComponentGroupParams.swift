@@ -7,7 +7,7 @@ public struct CardUIComponentGroupParams: UIComponentGroupParams {
     
     public let title: String
     
-    public static var `default`: CardUIComponentGroupParams {
+    public static var `default`: Self {
         return .init(
             title: "CardUIComponentGroupParams.title"
         )

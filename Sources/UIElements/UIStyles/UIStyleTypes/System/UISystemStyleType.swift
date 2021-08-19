@@ -11,11 +11,11 @@ public enum UISystemStyleType: Hashable {
 
 extension UISystemStyleType {
     
-    public static var app: UISystemStyleType {
+    public static var app: Self {
         return .app(.default)
     }
     
-    public static var dev: UISystemStyleType {
+    public static var dev: Self {
         return .dev(.default)
     }
 }

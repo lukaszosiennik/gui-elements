@@ -12,7 +12,7 @@ public struct NavigationMenuUIComponentGroupParams<OptionKey: InputUIElementComp
     
     public let actions: Actions?
     
-    public static var `default`: NavigationMenuUIComponentGroupParams {
+    public static var `default`: Self {
         return .init(
             title: "NavigationMenuUIComponentGroupParams.title",
             options: [:],

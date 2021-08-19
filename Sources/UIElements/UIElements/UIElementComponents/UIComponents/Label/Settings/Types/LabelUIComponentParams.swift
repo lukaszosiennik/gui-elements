@@ -7,7 +7,7 @@ public struct LabelUIComponentParams: UIComponentParams {
     
     public let text: String
     
-    public static var `default`: LabelUIComponentParams {
+    public static var `default`: Self {
         return .init(
             text: "LabelUIComponentParams.text"
         )

@@ -8,7 +8,7 @@ public struct ButtonUIComponentParams: UIComponentParams, InputUIElementComponen
     public let title: String
     public let action: Action?
     
-    public static var `default`: ButtonUIComponentParams {
+    public static var `default`: Self {
         return .init(
             title: "ButtonUIComponentParams.title",
             action: nil

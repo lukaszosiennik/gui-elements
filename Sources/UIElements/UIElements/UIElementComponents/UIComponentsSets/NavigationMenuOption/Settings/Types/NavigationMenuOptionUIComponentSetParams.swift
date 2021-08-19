@@ -8,7 +8,7 @@ public struct NavigationMenuOptionUIComponentSetParams: UIComponentSetParams, In
     public let title: String
     public let action: Action?
     
-    public static var `default`: NavigationMenuOptionUIComponentSetParams {
+    public static var `default`: Self {
         return .init(
             title: "NavigationMenuOptionUIComponentSetParams.title",
             action: nil
