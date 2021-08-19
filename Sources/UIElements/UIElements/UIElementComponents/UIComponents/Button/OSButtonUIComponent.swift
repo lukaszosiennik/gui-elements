@@ -102,7 +102,7 @@ extension OSButtonUIComponent {
         subviews.forEach { subview in
             subview.removeFromSuperview()
         }
-        add(subview: button)
+        uie.addSubview(button)
         
         NSLayoutConstraint.activate([
             button.leadingAnchor.constraint(equalTo: leadingAnchor),

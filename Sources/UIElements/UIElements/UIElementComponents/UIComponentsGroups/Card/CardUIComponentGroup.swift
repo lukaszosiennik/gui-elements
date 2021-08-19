@@ -68,11 +68,11 @@ extension CardUIComponentGroup {
     public func setupStyleLayoutInitialization() {
         titleLabelUI.textAlignment = .center
         
-        add(subview: titleContainer)
-        titleContainer.add(subview: titleLabelUI)
-        add(subview: bodyContainer)
+        uie.addSubview(titleContainer)
+        titleContainer.uie.addSubview(titleLabelUI)
+        uie.addSubview(bodyContainer)
         if let bodyContainerContent = bodyContainerContent {
-            bodyContainer.add(subview: bodyContainerContent)
+            bodyContainer.uie.addSubview(bodyContainerContent)
         }
         
         NSLayoutConstraint.activate([

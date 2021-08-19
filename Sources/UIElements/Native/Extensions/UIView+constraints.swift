@@ -5,14 +5,14 @@
 
 import UIKit
 
-extension UIView {
-    
+extension UIElementsExtension where ExtendedType: UIView {
+
     func isConstraintExists(with identifier: String) -> Bool {
         return constraint(with: identifier) != nil
     }
     
     func constraint(with identifier: String) -> NSLayoutConstraint? {
-        return constraints.first { $0.identifier == identifier }
+        return instance.constraints.first { $0.identifier == identifier }
     }
     
     @discardableResult
@@ -21,7 +21,7 @@ extension UIView {
             return false
         }
         
-        removeConstraint(constraint)
+        instance.removeConstraint(constraint)
         
         return true
     }

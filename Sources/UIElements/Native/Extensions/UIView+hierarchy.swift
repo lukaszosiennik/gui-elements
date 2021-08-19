@@ -5,11 +5,11 @@
 
 import UIKit
 
-extension UIView {
+extension UIElementsExtension where ExtendedType: UIView {
     
-    public func add(subview: UIView) {
-        subview.translatesAutoresizingMaskIntoConstraints = false
+    public func addSubview(_ view: UIView) {
+        view.translatesAutoresizingMaskIntoConstraints = false
         
-        addSubview(subview)
+        instance.addSubview(view)
     }
 }

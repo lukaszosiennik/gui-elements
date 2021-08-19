@@ -67,7 +67,7 @@ extension NavigationMenuUIOptionComponentSet {
 extension NavigationMenuUIOptionComponentSet {
     
     public func setupStyleLayoutInitialization() {
-        add(subview: optionButtonUI)
+        uie.addSubview(optionButtonUI)
         
         NSLayoutConstraint.activate([
             optionButtonUI.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),

@@ -57,11 +57,11 @@ extension PlaceholderUIComponent {
     public func setupStyleLayoutInitialization() {}
     
     public func setupStyleLayoutOS() {
-        removeConstraintIfExists(with: heightConstraintID)
+        uie.removeConstraintIfExists(with: heightConstraintID)
     }
     
     public func setupStyleLayoutSystem(_ layoutParams: PlaceholderUIComponentStylePropertiesLayoutParams) {
-        if let heightConstraint = constraint(with: heightConstraintID) {
+        if let heightConstraint = uie.constraint(with: heightConstraintID) {
             heightConstraint.constant = layoutParams.height
         } else {
             let heightConstraint = heightAnchor.constraint(equalToConstant: layoutParams.height)

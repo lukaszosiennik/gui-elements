@@ -73,8 +73,8 @@ extension NavigationMenuUIComponentScreen {
 extension NavigationMenuUIComponentScreen {
     
     public func setupStyleLayoutInitialization() {
-        add(subview: container)
-        container.add(subview: navigationMenuUI)
+        uie.addSubview(container)
+        container.uie.addSubview(navigationMenuUI)
         
         let leadingSpaceConstraint = container.leadingAnchor.constraint(equalTo: leadingAnchor)
         leadingSpaceConstraint.identifier = leadingSpaceConstraintID
@@ -96,12 +96,12 @@ extension NavigationMenuUIComponentScreen {
     }
     
     public func setupStyleLayoutOS() {
-        constraint(with: leadingSpaceConstraintID)?.constant = 0
-        constraint(with: trailingSpaceConstraintID)?.constant = 0
+        uie.constraint(with: leadingSpaceConstraintID)?.constant = 0
+        uie.constraint(with: trailingSpaceConstraintID)?.constant = 0
     }
     
     public func setupStyleLayoutSystem(_ layoutParams: NavigationMenuUIComponentScreenStylePropertiesLayoutParams) {
-        constraint(with: leadingSpaceConstraintID)?.constant = layoutParams.leftMargin
-        constraint(with: trailingSpaceConstraintID)?.constant = -layoutParams.rightMargin
+        uie.constraint(with: leadingSpaceConstraintID)?.constant = layoutParams.leftMargin
+        uie.constraint(with: trailingSpaceConstraintID)?.constant = -layoutParams.rightMargin
     }
 }

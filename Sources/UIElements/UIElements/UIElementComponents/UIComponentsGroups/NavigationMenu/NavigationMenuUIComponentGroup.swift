@@ -98,9 +98,9 @@ extension NavigationMenuUIComponentGroup {
         stackView.distribution = UIStackView.Distribution.equalSpacing
         stackView.alignment = UIStackView.Alignment.fill
         
-        add(subview: titleLabelUI)
-        add(subview: stackViewBackground)
-        add(subview: stackView)
+        uie.addSubview(titleLabelUI)
+        uie.addSubview(stackViewBackground)
+        uie.addSubview(stackView)
         
         let titleTopSpaceConstraint = titleLabelUI.topAnchor.constraint(equalTo: topAnchor)
         titleTopSpaceConstraint.identifier = titleTopSpaceConstraintID
@@ -133,21 +133,21 @@ extension NavigationMenuUIComponentGroup {
         let tempStackView = UIStackView()
         stackView.spacing = tempStackView.spacing
         
-        constraint(with: titleTopSpaceConstraintID)?.constant = 0
-        constraint(with: titleBottomSpaceConstraintID)?.constant = 0
+        uie.constraint(with: titleTopSpaceConstraintID)?.constant = 0
+        uie.constraint(with: titleBottomSpaceConstraintID)?.constant = 0
         stackView.arrangedSubviews.forEach { optionView in
-            optionView.removeConstraintIfExists(with: optionViewHeightConstraintID)
+            optionView.uie.removeConstraintIfExists(with: optionViewHeightConstraintID)
         }
     }
     
     public func setupStyleLayoutSystem(_ layoutParams: NavigationMenuUIComponentGroupStylePropertiesLayoutParams) {
         stackView.spacing = layoutParams.optionsSpace
         
-        constraint(with: titleTopSpaceConstraintID)?.constant = layoutParams.titleTopMargin
-        constraint(with: titleBottomSpaceConstraintID)?.constant = -layoutParams.titleBottomMargin
+        uie.constraint(with: titleTopSpaceConstraintID)?.constant = layoutParams.titleTopMargin
+        uie.constraint(with: titleBottomSpaceConstraintID)?.constant = -layoutParams.titleBottomMargin
         if let optionHeight = layoutParams.optionHeight {
             stackView.arrangedSubviews.forEach { optionView in
-                if let constraint = optionView.constraint(with: optionViewHeightConstraintID) {
+                if let constraint = optionView.uie.constraint(with: optionViewHeightConstraintID) {
                     constraint.constant = optionHeight
                 } else {
                     NSLayoutConstraint.activate([
