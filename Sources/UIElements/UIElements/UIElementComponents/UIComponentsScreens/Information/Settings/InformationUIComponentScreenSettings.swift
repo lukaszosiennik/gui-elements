@@ -5,8 +5,6 @@
 
 public struct InformationUIComponentScreenSettings: UIComponentScreenSettings {
     
-    public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentScreenStylePropertiesOverwritten
-    
     public let params: InformationUIComponentScreenParams
     public var stylePack: UIElementComponentStylePack<InformationUIComponentScreenStyleProperties>
     

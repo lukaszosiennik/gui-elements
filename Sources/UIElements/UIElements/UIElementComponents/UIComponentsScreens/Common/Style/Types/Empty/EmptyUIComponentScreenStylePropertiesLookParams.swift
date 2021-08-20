@@ -3,11 +3,4 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct EmptyUIComponentScreenStylePropertiesLookParams: UIComponentScreenStylePropertiesLookParams {
-    
-    init() {}
-    
-    public init?(lookParams: Self?, overwrittenBy newLookParams: EmptyUIComponentScreenStylePropertiesOverwrittenLookParams?) {
-        return nil
-    }
-}
+public struct EmptyUIComponentScreenStylePropertiesLookParams: UIComponentScreenStylePropertiesLookParams {}

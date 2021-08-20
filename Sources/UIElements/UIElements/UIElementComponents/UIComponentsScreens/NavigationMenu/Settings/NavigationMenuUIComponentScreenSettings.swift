@@ -5,8 +5,6 @@
 
 public struct NavigationMenuUIComponentScreenSettings<OptionKey: InputUIElementComponentActionsKeyInterface>: UIComponentScreenSettings {
     
-    public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentScreenStylePropertiesOverwritten
-    
     public let params: NavigationMenuUIComponentScreenParams<OptionKey>
     public var stylePack: UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties>
     

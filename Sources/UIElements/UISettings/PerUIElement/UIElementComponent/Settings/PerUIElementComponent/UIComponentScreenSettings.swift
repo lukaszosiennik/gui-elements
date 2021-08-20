@@ -6,7 +6,7 @@
 public protocol UIComponentScreenSettings: UIElementComponentSettings where
     UIElementComponentParamsType: UIComponentScreenParams,
     UIElementComponentStylePropertiesType: UIComponentScreenStyleProperties,
-    UIElementComponentStylePropertiesOverwrittenType: UIComponentScreenStylePropertiesOverwritten {}
+    UIElementComponentStylePropertiesOverwrittenType == EmptyUIComponentScreenStylePropertiesOverwritten {}
 
 extension UIComponentScreenSettings {
     

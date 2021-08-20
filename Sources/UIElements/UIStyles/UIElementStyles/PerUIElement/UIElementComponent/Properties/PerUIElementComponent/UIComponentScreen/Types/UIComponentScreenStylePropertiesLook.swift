@@ -5,3 +5,10 @@
 
 public protocol UIComponentScreenStylePropertiesLook: UIElementComponentStylePropertiesLook where
     UIElementComponentStylePropertiesOverwrittenLookType: UIComponentScreenStylePropertiesOverwrittenLook {}
+
+extension UIComponentScreenStylePropertiesLook {
+    
+    public init?(look: Self?, overwrittenBy newLook: EmptyUIComponentScreenStylePropertiesOverwrittenLook?) {
+        return nil
+    }
+}

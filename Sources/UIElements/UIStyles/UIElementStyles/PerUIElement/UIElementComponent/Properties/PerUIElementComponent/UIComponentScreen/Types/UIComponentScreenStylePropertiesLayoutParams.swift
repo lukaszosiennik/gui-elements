@@ -5,3 +5,10 @@
 
 public protocol UIComponentScreenStylePropertiesLayoutParams: UIElementComponentStylePropertiesLayoutParams where
     UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIComponentScreenStylePropertiesOverwrittenLayoutParams {}
+
+extension UIComponentScreenStylePropertiesLayoutParams {
+    
+    public init?(layoutParams: Self?, overwrittenBy newLayoutParams: EmptyUIComponentScreenStylePropertiesOverwrittenLayoutParams?) {
+        return nil
+    }
+}
