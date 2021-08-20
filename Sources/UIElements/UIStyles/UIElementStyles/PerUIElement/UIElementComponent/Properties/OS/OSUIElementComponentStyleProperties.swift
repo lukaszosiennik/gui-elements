@@ -20,7 +20,7 @@ extension OSUIElementComponentStyleProperties {
         return look.isUserFriendly
     }
     
-    var isDefaultLayoutParams: Bool {
-        return layoutParams.isDefault
+    var isPreferredLayoutParams: Bool {
+        return layoutParams.isPreferred
     }
 }

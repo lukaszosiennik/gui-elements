@@ -12,17 +12,17 @@ public enum UIStyleType: Hashable {
 extension UIStyleType {
     
     public static var os: Self {
-        return .os(defaultLayoutParams: false)
+        return .os(preferredLayoutParams: false)
     }
     
-    public static func os(defaultLayoutParams: Bool) -> Self {
+    public static func os(preferredLayoutParams: Bool) -> Self {
         return .os(
             .init(
                 look: .init(
                     isUserFriendly: true
                 ),
                 layoutParams: .init(
-                    isDefault: defaultLayoutParams
+                    isPreferred: preferredLayoutParams
                 )
             )
         )

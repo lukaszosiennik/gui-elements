@@ -5,9 +5,9 @@
 
 public struct OSUIElementComponentStylePropertiesLayoutParams: Hashable {
     
-    let isDefault: Bool
+    let isPreferred: Bool
     
-    public init(isDefault: Bool) {
-        self.isDefault = isDefault
+    public init(isPreferred: Bool) {
+        self.isPreferred = isPreferred
     }
 }

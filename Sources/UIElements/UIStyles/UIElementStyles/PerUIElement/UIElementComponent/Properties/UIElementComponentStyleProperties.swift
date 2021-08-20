@@ -20,7 +20,7 @@ extension UIElementComponentStyleProperties {
     
     static func `default`(styleType: UIStyleType) -> Self {
         var preferredLayoutParams: UIElementComponentStylePropertiesLayoutParamsType? = nil
-        if case let .os(styleProperties) = styleType, styleProperties.isDefaultLayoutParams {
+        if case let .os(styleProperties) = styleType, styleProperties.isPreferredLayoutParams {
             preferredLayoutParams = .preferred
         }
         
