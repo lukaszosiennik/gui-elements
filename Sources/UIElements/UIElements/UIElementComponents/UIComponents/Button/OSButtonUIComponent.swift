@@ -29,7 +29,7 @@ public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
     }
     
     func setupSettings() {
-        self.button = UIButton(type: settings.styleProperties == nil ? .system : .custom)
+        self.button = UIButton(type: settings.styleType.isOS ? .system : .custom)
         
         setupNestedSettings()
         

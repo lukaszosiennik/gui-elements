@@ -8,7 +8,7 @@ public protocol UIComponentScreenStylePropertiesLook: UIElementComponentStylePro
 
 extension UIComponentScreenStylePropertiesLook {
     
-    public init?(look: Self?, overwrittenBy newLook: EmptyUIComponentScreenStylePropertiesOverwrittenLook?) {
-        return nil
+    public init(look: Self, overwrittenBy newLook: EmptyUIComponentScreenStylePropertiesOverwrittenLook?) {
+        self = look
     }
 }

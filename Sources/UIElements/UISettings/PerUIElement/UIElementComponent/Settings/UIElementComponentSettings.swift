@@ -19,7 +19,7 @@ public protocol UIElementComponentSettings: UIElementSettings {
     
     static var stylePackUnwrapped: UIElementComponentStylePack<UIElementComponentStylePropertiesType> { get }
     static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<UIElementComponentStylePropertiesType>
-    static func stylePack(for styleType: UIStyleType, overwrittenBy styleProperties: UIElementComponentStylePropertiesOverwrittenType) -> UIElementComponentStylePack<UIElementComponentStylePropertiesType>
+    static func stylePack(for styleType: UIStyleType, overwrittenBy stylePropertiesOverwritten: UIElementComponentStylePropertiesOverwrittenType) -> UIElementComponentStylePack<UIElementComponentStylePropertiesType>
 }
 
 extension UIElementComponentSettings {
@@ -34,7 +34,7 @@ extension UIElementComponentSettings {
     }
     
     public var styleProperties: UIElementComponentStylePropertiesType {
-        return stylePack.style.properties
+        return stylePack.styleProperties
     }
 }
 
@@ -95,37 +95,42 @@ extension UIElementComponentSettings where
         return Self.stylePack(for: styleType) ?? .default(styleType: styleType)
     }
     
-    public static func stylePack(for styleType: UIStyleType, overwrittenBy styleProperties: UIElementComponentStylePropertiesOverwrittenType) -> UIElementComponentStylePack<UIElementComponentStylePropertiesType> {
+    public static func stylePack(for styleType: UIStyleType, overwrittenBy stylePropertiesOverwritten: UIElementComponentStylePropertiesOverwrittenType) -> UIElementComponentStylePack<UIElementComponentStylePropertiesType> {
         guard let pack = Self.stylePack(for: styleType) else {
             let defaultPack: UIElementComponentStylePack<UIElementComponentStylePropertiesType> = .default(styleType: styleType)
             
-            guard (styleProperties.lookParams != nil || styleProperties.layoutParams != nil) else {
+            guard (stylePropertiesOverwritten.lookParams != nil || stylePropertiesOverwritten.layoutParams != nil) else {
                 return defaultPack
             }
             
             return .init(
                 pack: defaultPack,
                 overwrittenBy: .init(
-                    lookSort: defaultPack.style.properties.lookSort,
+                    lookSort: defaultPack.styleProperties.lookSort,
                     lookParams: .init(
-                        lookParams: defaultPack.style.properties.lookParams,
-                        overwrittenBy: styleProperties.lookParams
+                        lookParams: defaultPack.styleProperties.lookParams,
+                        overwrittenBy: stylePropertiesOverwritten.lookParams
                     ),
                     layoutParams: .init(
-                        layoutParams: defaultPack.style.properties.layoutParams,
-                        overwrittenBy: styleProperties.layoutParams
+                        layoutParams: defaultPack.styleProperties.layoutParams,
+                        overwrittenBy: stylePropertiesOverwritten.layoutParams
                     )
                 )
             )
         }
         
-        let properties = pack.style.properties
+        let styleProperties = pack.styleProperties
         
         let lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookType>
-        if case let .system(look) = properties.lookSort, let look: UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookType = .init(look: look, overwrittenBy: styleProperties.look) {
-            lookSort = .system(look)
+        if case let .system(look) = styleProperties.lookSort  {
+            lookSort = .system(
+                .init(
+                    look: look,
+                    overwrittenBy: stylePropertiesOverwritten.look
+                )
+            )
         } else {
-            lookSort = properties.lookSort
+            lookSort = styleProperties.lookSort
         }
         
         return .init(
@@ -133,12 +138,12 @@ extension UIElementComponentSettings where
             overwrittenBy: .init(
                 lookSort: lookSort,
                 lookParams: .init(
-                    lookParams: properties.lookParams,
-                    overwrittenBy: styleProperties.lookParams
+                    lookParams: styleProperties.lookParams,
+                    overwrittenBy: stylePropertiesOverwritten.lookParams
                 ),
                 layoutParams: .init(
-                    layoutParams: properties.layoutParams,
-                    overwrittenBy: styleProperties.layoutParams
+                    layoutParams: styleProperties.layoutParams,
+                    overwrittenBy: stylePropertiesOverwritten.layoutParams
                 )
             )
         )

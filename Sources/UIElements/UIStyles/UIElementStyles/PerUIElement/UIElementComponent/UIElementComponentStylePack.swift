@@ -43,8 +43,17 @@ extension UIElementComponentStylePack {
             factory: factory,
             style: UIElementComponentStyle(
                 type: styleType,
-                properties: .default(styleType: styleType)
+                properties: .default(
+                    styleType: styleType
+                )
             )
         )
+    }
+}
+
+extension UIElementComponentStylePack {
+    
+    var styleProperties: StylePropertiesType {
+        return style.properties
     }
 }

@@ -19,15 +19,15 @@ public protocol UIElementComponentStyleProperties: UIElementStyleProperties {
 extension UIElementComponentStyleProperties {
     
     static func `default`(styleType: UIStyleType) -> Self {
-        var preferredLayoutParams: UIElementComponentStylePropertiesLayoutParamsType? = nil
+        var layoutParams: UIElementComponentStylePropertiesLayoutParamsType? = nil
         if case let .os(styleProperties) = styleType, styleProperties.isPreferredLayoutParams {
-            preferredLayoutParams = .preferred
+            layoutParams = .preferred
         }
         
         return .init(
             lookSort: .os,
             lookParams: .default,
-            layoutParams: preferredLayoutParams
+            layoutParams: layoutParams
         )
     }
 }
