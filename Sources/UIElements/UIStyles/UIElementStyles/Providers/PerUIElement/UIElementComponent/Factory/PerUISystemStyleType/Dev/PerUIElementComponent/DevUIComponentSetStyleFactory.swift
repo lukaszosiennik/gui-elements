@@ -14,11 +14,11 @@ public final class DevUIComponentSetStyleFactory: UIElementComponentTypeStyleFac
             style: .init(
                 type: styleType,
                 properties: .init(
-                    look: .init(
+                    lookSort: .system(.init(
                         backgroundColor: ColorPalette.NavigationMenuOption.background_white,
                         borderColor: ColorPalette.NavigationMenuOption.border_black,
                         borderWidth: ConstantPalette.NavigationMenuOption.UILook.borderWidth_1
-                    ),
+                    )),
                     lookParams: .default,
                     layoutParams: .init()
                 )

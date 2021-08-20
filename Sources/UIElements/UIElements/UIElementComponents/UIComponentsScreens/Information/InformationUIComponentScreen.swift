@@ -36,7 +36,7 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
             styleType: settings.styleType,
             overwrittenBy: .init(
                 lookParams: .init(
-                    linesNumber: settings.styleProperties?.lookParams?.titleLinesNumber
+                    linesNumber: settings.styleProperties.lookParams?.titleLinesNumber
                 )
             )
         )
@@ -47,8 +47,8 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
 
 extension InformationUIComponentScreen {
     
-    public func setupStyleLookOS() {
-        if settings.styleType == .os(true) {
+    public func setupStyleLookOS(_ lookUserFriendly: UIElementComponentStylePropertiesLookUserFriendlyInterface) {
+        if lookUserFriendly.isUserFriendly {
             backgroundColor = .white
         } else {
             let tempView = UIView()

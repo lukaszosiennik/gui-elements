@@ -35,8 +35,8 @@ public final class ButtonUIComponent: UIButton, ButtonUIComponentInterface {
 
 extension ButtonUIComponent {
     
-    public func setupStyleLookOS() {
-        setupStyleLookOS(for: self)
+    public func setupStyleLookOS(_ lookUserFriendly: UIElementComponentStylePropertiesLookUserFriendlyInterface) {
+        setupStyleLookOS(lookUserFriendly, for: self)
     }
     
     public func setupStyleLookSystem(_ look: ButtonUIComponentStylePropertiesLook) {

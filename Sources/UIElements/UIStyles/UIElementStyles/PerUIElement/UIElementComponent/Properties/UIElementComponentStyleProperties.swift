@@ -9,24 +9,25 @@ public protocol UIElementComponentStyleProperties: UIElementStyleProperties {
     associatedtype UIElementComponentStylePropertiesLookParamsType: UIElementComponentStylePropertiesLookParams
     associatedtype UIElementComponentStylePropertiesLayoutParamsType: UIElementComponentStylePropertiesLayoutParams
     
-    var look: UIElementComponentStylePropertiesLookType? { get }
+    var lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesLookType> { get }
     var lookParams: UIElementComponentStylePropertiesLookParamsType? { get }
     var layoutParams: UIElementComponentStylePropertiesLayoutParamsType? { get }
     
-    init(look: UIElementComponentStylePropertiesLookType?, lookParams: UIElementComponentStylePropertiesLookParamsType?, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?)
+    init(lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesLookType>, lookParams: UIElementComponentStylePropertiesLookParamsType?, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?)
 }
 
 extension UIElementComponentStyleProperties {
     
-    static var `default`: Self? {
-        guard let defaultLookParams: UIElementComponentStylePropertiesLookParamsType = .default else {
-            return nil
+    static func `default`(styleType: UIStyleType) -> Self {
+        var preferredLayoutParams: UIElementComponentStylePropertiesLayoutParamsType? = nil
+        if case let .os(styleProperties) = styleType, styleProperties.isDefaultLayoutParams {
+            preferredLayoutParams = .preferred
         }
         
         return .init(
-            look: nil,
-            lookParams: defaultLookParams,
-            layoutParams: nil
+            lookSort: .os,
+            lookParams: .default,
+            layoutParams: preferredLayoutParams
         )
     }
 }

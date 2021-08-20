@@ -5,13 +5,26 @@
 
 public enum UIStyleType: Hashable {
     
-    case os(_ userFriendly: Bool)
+    case os(_ styleProperties: OSUIElementComponentStyleProperties)
     case system(UISystemStyleType)
 }
 
 extension UIStyleType {
     
     public static var os: Self {
-        return .os(true)
+        return .os(defaultLayoutParams: false)
+    }
+    
+    public static func os(defaultLayoutParams: Bool) -> Self {
+        return .os(
+            .init(
+                look: .init(
+                    isUserFriendly: true
+                ),
+                layoutParams: .init(
+                    isDefault: defaultLayoutParams
+                )
+            )
+        )
     }
 }

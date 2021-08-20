@@ -14,9 +14,9 @@ public final class DevUIComponentGroupStyleFactory: UIElementComponentTypeStyleF
             style: .init(
                 type: styleType,
                 properties: .init(
-                    look: .init(
+                    lookSort: .system(.init(
                         backgroundColor: ColorPalette.NavigationMenu.background_white
-                    ),
+                    )),
                     lookParams: .default,
                     layoutParams: .init(
                         optionHeight: ConstantPalette.NavigationMenu.UILayoutParams.option_height_50,
@@ -35,7 +35,7 @@ public final class DevUIComponentGroupStyleFactory: UIElementComponentTypeStyleF
             style: .init(
                 type: styleType,
                 properties: .init(
-                    look: .init(),
+                    lookSort: .system(.init()),
                     lookParams: .default,
                     layoutParams: .init()
                 )

@@ -16,7 +16,7 @@ extension ButtonUIComponentInterface {
 
 extension ButtonUIComponentInterface {
     
-    func setupStyleLookOS(for button: UIButton) {
+    func setupStyleLookOS(_ lookUserFriendly: UIElementComponentStylePropertiesLookUserFriendlyInterface, for button: UIButton) {
         let tempButton = UIButton(type: button.buttonType)
         button.setTitleColor(tempButton.titleColor(for: .normal), for: .normal)
     }

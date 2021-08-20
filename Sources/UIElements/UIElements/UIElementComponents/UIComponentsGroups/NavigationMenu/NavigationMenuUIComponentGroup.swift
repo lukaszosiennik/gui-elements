@@ -43,7 +43,7 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
             styleType: settings.styleType,
             overwrittenBy: .init(
                 lookParams: .init(
-                    linesNumber: settings.styleProperties?.lookParams?.titleLinesNumber
+                    linesNumber: settings.styleProperties.lookParams?.titleLinesNumber
                 )
             )
         )
@@ -73,7 +73,7 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
 
 extension NavigationMenuUIComponentGroup {
     
-    public func setupStyleLookOS() {
+    public func setupStyleLookOS(_ lookUserFriendly: UIElementComponentStylePropertiesLookUserFriendlyInterface) {
         let tempView = UIView()
         backgroundColor = tempView.backgroundColor
     }

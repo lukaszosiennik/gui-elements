@@ -6,5 +6,5 @@
 public struct UIElementComponentStyle<PropertiesType: UIElementComponentStyleProperties>: UIElementStyle {
     
     public let type: UIStyleType
-    let properties: PropertiesType?
+    let properties: PropertiesType
 }

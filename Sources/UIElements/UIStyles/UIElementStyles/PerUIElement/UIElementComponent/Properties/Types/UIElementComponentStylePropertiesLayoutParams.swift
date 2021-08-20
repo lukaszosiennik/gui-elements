@@ -6,6 +6,8 @@
 public protocol UIElementComponentStylePropertiesLayoutParams: UIElementStylePropertiesLayoutParams {
     
     associatedtype UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIElementComponentStylePropertiesOverwrittenLayoutParams
+    
+    static var preferred: Self? { get }
 
     init?(layoutParams: Self?, overwrittenBy newLayoutParams: UIElementComponentStylePropertiesOverwrittenLayoutParamsType?)
 }

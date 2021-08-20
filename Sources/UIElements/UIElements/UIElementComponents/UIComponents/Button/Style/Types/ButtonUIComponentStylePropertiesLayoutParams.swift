@@ -3,4 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct ButtonUIComponentStylePropertiesLayoutParams: UIComponentStylePropertiesLayoutParams {}
+public struct ButtonUIComponentStylePropertiesLayoutParams: UIComponentStylePropertiesLayoutParams {
+    
+    public static var preferred: Self? {
+        return nil
+    }
+}

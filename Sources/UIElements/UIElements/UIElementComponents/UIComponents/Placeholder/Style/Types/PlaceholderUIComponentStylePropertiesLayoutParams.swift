@@ -8,4 +8,10 @@ import UIKit
 public struct PlaceholderUIComponentStylePropertiesLayoutParams: UIComponentStylePropertiesLayoutParams {
     
     public let height: CGFloat
+    
+    public static var preferred: Self? {
+        return .init(
+            height: DefaultUIComponentConstantPalette.Placeholder.UILayoutParams.height_100
+        )
+    }
 }

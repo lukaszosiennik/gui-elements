@@ -27,7 +27,7 @@ extension UIElementComponentStylePack {
     public static var `default`: Self<StylePropertiesType> {
         return `default`(
             factory: nil,
-            styleType: .os(false)
+            styleType: .os
         )
     }
     
@@ -43,7 +43,7 @@ extension UIElementComponentStylePack {
             factory: factory,
             style: UIElementComponentStyle(
                 type: styleType,
-                properties: .default
+                properties: .default(styleType: styleType)
             )
         )
     }

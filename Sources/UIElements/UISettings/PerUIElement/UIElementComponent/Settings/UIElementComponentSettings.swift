@@ -33,7 +33,7 @@ extension UIElementComponentSettings {
         }
     }
     
-    public var styleProperties: UIElementComponentStylePropertiesType? {
+    public var styleProperties: UIElementComponentStylePropertiesType {
         return stylePack.style.properties
     }
 }
@@ -99,34 +99,39 @@ extension UIElementComponentSettings where
         guard let pack = Self.stylePack(for: styleType) else {
             let defaultPack: UIElementComponentStylePack<UIElementComponentStylePropertiesType> = .default(styleType: styleType)
             
-            guard let lookParams = styleProperties.lookParams else {
+            guard (styleProperties.lookParams != nil || styleProperties.layoutParams != nil) else {
                 return defaultPack
             }
             
             return .init(
                 pack: defaultPack,
                 overwrittenBy: .init(
-                    look: nil,
+                    lookSort: defaultPack.style.properties.lookSort,
                     lookParams: .init(
-                        lookParams: nil,
-                        overwrittenBy: lookParams
+                        lookParams: defaultPack.style.properties.lookParams,
+                        overwrittenBy: styleProperties.lookParams
                     ),
-                    layoutParams: nil
+                    layoutParams: .init(
+                        layoutParams: defaultPack.style.properties.layoutParams,
+                        overwrittenBy: styleProperties.layoutParams
+                    )
                 )
             )
         }
         
-        guard let properties = pack.style.properties else {
-            return pack
+        let properties = pack.style.properties
+        
+        let lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookType>
+        if case let .system(look) = properties.lookSort, let look: UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookType = .init(look: look, overwrittenBy: styleProperties.look) {
+            lookSort = .system(look)
+        } else {
+            lookSort = properties.lookSort
         }
         
         return .init(
             pack: pack,
             overwrittenBy: .init(
-                look: .init(
-                    look: properties.look,
-                    overwrittenBy: styleProperties.look
-                ),
+                lookSort: lookSort,
                 lookParams: .init(
                     lookParams: properties.lookParams,
                     overwrittenBy: styleProperties.lookParams

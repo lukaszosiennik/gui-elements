@@ -35,7 +35,7 @@ public final class PlaceholderUIComponent: UIView, UIComponent {
 
 extension PlaceholderUIComponent {
     
-    public func setupStyleLookOS() {
+    public func setupStyleLookOS(_ lookUserFriendly: UIElementComponentStylePropertiesLookUserFriendlyInterface) {
         let tempView = UIView()
         backgroundColor = tempView.backgroundColor
     }

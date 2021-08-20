@@ -22,7 +22,7 @@ public protocol UIElementComponent: UIElement {
     
     func setupParams(_ params: UIElementComponentSettingsType.UIElementComponentParamsType)
     
-    func setupStyleLookOS()
+    func setupStyleLookOS(_ lookUserFriendly: UIElementComponentStylePropertiesLookUserFriendlyInterface)
     func setupStyleLookSystem(_ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookType)
     func setupStyleLookParamsOS()
     func setupStyleLookParamsSystem(_ lookParams: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookParamsType)
@@ -63,16 +63,19 @@ extension UIElementComponent {
     }
     
     private func setupStyleLook() {
-        guard let look = settings.styleProperties?.look else {
-            setupStyleLookOS()
-            return
+        if case let .os(styleProperties) = settings.styleType {
+            setupStyleLookOS(styleProperties.look)
+        } else {
+            if case let .system(look) = settings.styleProperties.lookSort {
+                setupStyleLookSystem(look)
+            } else {
+                setupStyleLookOS(settings.styleProperties.lookSort.lookUserFriendly)
+            }
         }
-        
-        setupStyleLookSystem(look)
     }
     
     private func setupStyleLookParams() {
-        guard let lookParams = settings.styleProperties?.lookParams else {
+        guard let lookParams = settings.styleProperties.lookParams else {
             setupStyleLookParamsOS()
             return
         }
@@ -85,7 +88,7 @@ extension UIElementComponent {
             setupStyleLayoutInitialization()
         }
         
-        guard let layoutParams = settings.styleProperties?.layoutParams else {
+        guard let layoutParams = settings.styleProperties.layoutParams else {
             setupStyleLayoutOS()
             return
         }

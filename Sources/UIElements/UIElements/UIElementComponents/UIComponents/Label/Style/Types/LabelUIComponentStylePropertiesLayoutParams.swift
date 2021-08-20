@@ -3,4 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct LabelUIComponentStylePropertiesLayoutParams: UIComponentStylePropertiesLayoutParams {}
+public struct LabelUIComponentStylePropertiesLayoutParams: UIComponentStylePropertiesLayoutParams {
+    
+    public static var preferred: Self? {
+        return nil
+    }
+}

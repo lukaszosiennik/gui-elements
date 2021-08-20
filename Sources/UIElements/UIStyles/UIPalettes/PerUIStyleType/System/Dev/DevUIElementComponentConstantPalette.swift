@@ -12,9 +12,9 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
         static let value_0 = DefaultUIElementComponentConstantPalette.All.value_0
         static let value_1: CGFloat = 1
         static let value_8: CGFloat = 8
-        static let value_16: CGFloat = 16
+        static let value_16: CGFloat = DefaultUIElementComponentConstantPalette.All.value_16
         static let value_50: CGFloat = 50
-        static let value_150: CGFloat = 150
+        static let value_200: CGFloat = 200
     }
     
     enum UIElementComponent {
@@ -47,8 +47,6 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
                 
                 enum Margin {
                     
-                    static let left_16: CGFloat = All.value_16
-                    static let right_16: CGFloat = All.value_16
                     static let top_16: CGFloat = All.value_16
                     static let bottom_16: CGFloat = All.value_16
                 }
@@ -62,7 +60,7 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
                         enum Height {
                             
                             static let value_50: CGFloat = All.value_50
-                            static let value_150: CGFloat = All.value_150
+                            static let value_200: CGFloat = All.value_200
                         }
                     }
                 }
@@ -86,7 +84,7 @@ extension DevUIElementComponentConstantPalette.UIElementComponent {
             
             enum UILayoutParams {
                 
-                static let height_150: CGFloat = UILayoutParamsPalette.Property.Size.Vertical.Height.value_150
+                static let height_200: CGFloat = UILayoutParamsPalette.Property.Size.Vertical.Height.value_200
             }
         }
     }
@@ -116,15 +114,5 @@ extension DevUIElementComponentConstantPalette.UIElementComponent {
         }
     }
     
-    enum UIComponentScreen {
-        
-        enum NavigationMenu {
-            
-            enum UILayoutParams {
-            
-                static let margin_left_16: CGFloat = UILayoutParamsPalette.Property.Margin.left_16
-                static let margin_right_16: CGFloat = UILayoutParamsPalette.Property.Margin.right_16
-            }
-        }
-    }
+    enum UIComponentScreen {}
 }

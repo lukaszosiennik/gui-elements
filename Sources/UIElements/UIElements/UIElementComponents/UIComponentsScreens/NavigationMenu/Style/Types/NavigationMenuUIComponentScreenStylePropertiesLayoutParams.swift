@@ -9,4 +9,11 @@ public struct NavigationMenuUIComponentScreenStylePropertiesLayoutParams: UIComp
     
     public let leftMargin: CGFloat
     public let rightMargin: CGFloat
+    
+    public static var preferred: Self? {
+        return .init(
+            leftMargin: DefaultUIComponentScreenConstantPalette.NavigationMenu.UILayoutParams.margin_left_16,
+            rightMargin: DefaultUIComponentScreenConstantPalette.NavigationMenu.UILayoutParams.margin_left_16
+        )
+    }
 }

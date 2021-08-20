@@ -51,7 +51,7 @@ public final class CardUIComponentGroup<BodyContainerContent: UIView>: UIView, U
 
 extension CardUIComponentGroup {
     
-    public func setupStyleLookOS() {}
+    public func setupStyleLookOS(_ lookUserFriendly: UIElementComponentStylePropertiesLookUserFriendlyInterface) {}
     
     public func setupStyleLookSystem(_ look: CardUIComponentGroupStylePropertiesLook) {}
 }

@@ -14,7 +14,7 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
             style: .init(
                 type: styleType,
                 properties: .init(
-                    look: .init(),
+                    lookSort: .system(.init()),
                     lookParams: .default,
                     layoutParams: .init()
                 )
@@ -32,12 +32,12 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
             style: .init(
                 type: styleType,
                 properties: .init(
-                    look: .init(
+                    lookSort: .system(.init(
                         backgroundColor: ColorPalette.Placeholder.background_green
-                    ),
+                    )),
                     lookParams: .default,
                     layoutParams: .init(
-                        height: ConstantPalette.Placeholder.UILayoutParams.height_150
+                        height: ConstantPalette.Placeholder.UILayoutParams.height_200
                     )
                 )
             )
