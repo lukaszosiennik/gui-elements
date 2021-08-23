@@ -5,7 +5,7 @@
 
 public struct UIElementsExtension<ExtendedType> {
     
-    private(set) var instance: ExtendedType
+    let instance: ExtendedType
 
     public init(_ instance: ExtendedType) {
         self.instance = instance

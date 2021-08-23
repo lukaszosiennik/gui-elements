@@ -7,23 +7,17 @@ public protocol UIElementsExtendedTypeInterface {
     
     associatedtype ExtendedType
 
-    static var uie: UIElementsExtension<ExtendedType>.Type { get set }
-    var uie: UIElementsExtension<ExtendedType> { get set }
+    static var uie: UIElementsExtension<ExtendedType>.Type { get }
+    var uie: UIElementsExtension<ExtendedType> { get }
 }
 
 extension UIElementsExtendedTypeInterface {
     
     public static var uie: UIElementsExtension<Self>.Type {
-        get {
-            return UIElementsExtension<Self>.self
-        }
-        set {}
+        return UIElementsExtension<Self>.self
     }
 
     public var uie: UIElementsExtension<Self> {
-        get {
-            return UIElementsExtension(self)
-        }
-        set {}
+        return UIElementsExtension(self)
     }
 }
