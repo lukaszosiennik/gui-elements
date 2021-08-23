@@ -13,7 +13,7 @@ public struct UIElementComponentStylePack<StylePropertiesType: UIElementComponen
         self.style = style
     }
     
-    init(pack: Self<StylePropertiesType>, overwrittenBy styleProperties: StylePropertiesType) {
+    init(pack: Self, overwrittenBy styleProperties: StylePropertiesType) {
         self.factory = pack.factory
         self.style = .init(
             type: pack.style.type,
@@ -22,23 +22,23 @@ public struct UIElementComponentStylePack<StylePropertiesType: UIElementComponen
     }
 }
 
-extension UIElementComponentStylePack {
+extension UIElementComponentStylePack: DefaultValueInterface {
     
-    public static var `default`: Self<StylePropertiesType> {
+    public static var `default`: Self {
         return `default`(
             factory: nil,
             styleType: .os
         )
     }
     
-    public static func `default`(styleType: UIStyleType) -> Self<StylePropertiesType> {
+    public static func `default`(styleType: UIStyleType) -> Self {
         return `default`(
             factory: nil,
             styleType: styleType
         )
     }
     
-    public static func `default`(factory: UIElementStyleFactoryInterface?, styleType: UIStyleType) -> Self<StylePropertiesType> {
+    public static func `default`(factory: UIElementStyleFactoryInterface?, styleType: UIStyleType) -> Self {
         return .init(
             factory: factory,
             style: UIElementComponentStyle(
