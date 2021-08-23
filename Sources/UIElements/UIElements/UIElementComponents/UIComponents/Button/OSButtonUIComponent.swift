@@ -28,7 +28,7 @@ public final class OSButtonUIComponent: UIView, ButtonUIComponentInterface {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupSettings() {
+    public func setupSettings() {
         self.button = UIButton(type: settings.styleType.isOS ? .system : .custom)
         
         setupNestedSettings()

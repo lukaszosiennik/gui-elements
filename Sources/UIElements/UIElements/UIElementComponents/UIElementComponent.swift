@@ -18,6 +18,9 @@ public protocol UIElementComponent: UIElement {
     
     init(settings: UIElementComponentSettingsType)
     
+    // it's here only for OSButtonUIComponent purpose
+    func setupSettings()
+    
     func setupNestedSettings()
     
     func setupParams(_ params: UIElementComponentSettingsType.UIElementComponentParamsType)
@@ -42,12 +45,15 @@ extension UIElementComponent {
 
 extension UIElementComponent {
     
-    func setupSettings() {
+    public func setupSettings() {
         setupNestedSettings()
         
         setupParams()
         setupStyle()
     }
+}
+
+extension UIElementComponent {
     
     private func setupParams() {
         setupParams(settings.params)
