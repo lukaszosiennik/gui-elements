@@ -15,7 +15,11 @@ public final class ButtonUIComponent: UIButton, ButtonUIComponentInterface {
         }
     }
     
-    public init(settings: ButtonUIComponentSettings = .default) {
+    public convenience init() {
+        self.init(settings: .default)
+    }
+    
+    public init(settings: ButtonUIComponentSettings) {
         self.settings = settings
         super.init(frame: .zero)
         

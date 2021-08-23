@@ -16,6 +16,7 @@ public protocol UIElementComponent: UIElement {
     
     var settings: UIElementComponentSettingsType { get set }
     
+    init()
     init(settings: UIElementComponentSettingsType)
     
     // it's here only for OSButtonUIComponent purpose

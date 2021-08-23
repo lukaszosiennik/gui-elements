@@ -15,7 +15,11 @@ public final class LabelUIComponent: UILabel, UIComponent {
         }
     }
     
-    public init(settings: LabelUIComponentSettings = .default) {
+    public convenience init() {
+        self.init(settings: .default)
+    }
+    
+    public init(settings: LabelUIComponentSettings) {
         self.settings = settings
         super.init(frame: .zero)
         

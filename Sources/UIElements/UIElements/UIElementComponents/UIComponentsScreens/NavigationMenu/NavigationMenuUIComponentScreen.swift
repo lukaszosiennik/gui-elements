@@ -22,7 +22,11 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
         }
     }
     
-    public init(settings: NavigationMenuUIComponentScreenSettings<OptionKey> = .default) {
+    public convenience init() {
+        self.init(settings: .default)
+    }
+    
+    public init(settings: NavigationMenuUIComponentScreenSettings<OptionKey>) {
         self.settings = settings
         super.init(frame: .zero)
 

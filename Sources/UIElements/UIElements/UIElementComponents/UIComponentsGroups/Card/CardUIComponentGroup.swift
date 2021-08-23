@@ -21,6 +21,10 @@ public final class CardUIComponentGroup<BodyContainerContent: UIView>: UIView, U
         }
     }
     
+    public convenience init() {
+        self.init(settings: .default)
+    }
+    
     public init(bodyContainerContent: BodyContainerContent?, settings: CardUIComponentGroupSettings = .default) {
         self.bodyContainerContent = bodyContainerContent
         self.settings = settings

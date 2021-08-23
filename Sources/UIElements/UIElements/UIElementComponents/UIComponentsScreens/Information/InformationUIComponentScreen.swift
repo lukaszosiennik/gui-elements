@@ -17,7 +17,11 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
         }
     }
     
-    public init(settings: InformationUIComponentScreenSettings = .default) {
+    public convenience init() {
+        self.init(settings: .default)
+    }
+    
+    public init(settings: InformationUIComponentScreenSettings) {
         self.settings = settings
         super.init(frame: .zero)
         

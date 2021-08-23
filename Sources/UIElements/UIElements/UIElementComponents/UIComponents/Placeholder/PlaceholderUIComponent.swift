@@ -17,7 +17,11 @@ public final class PlaceholderUIComponent: UIView, UIComponent {
         }
     }
     
-    public init(settings: PlaceholderUIComponentSettings = .default) {
+    public convenience init() {
+        self.init(settings: .default)
+    }
+    
+    public init(settings: PlaceholderUIComponentSettings) {
         self.settings = settings
         super.init(frame: .zero)
         

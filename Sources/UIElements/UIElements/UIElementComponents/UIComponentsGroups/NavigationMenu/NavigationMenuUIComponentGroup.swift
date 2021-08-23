@@ -24,7 +24,11 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
         }
     }
     
-    public init(settings: NavigationMenuUIComponentGroupSettings<OptionKey> = .default) {
+    public convenience init() {
+        self.init(settings: .default)
+    }
+    
+    public init(settings: NavigationMenuUIComponentGroupSettings<OptionKey>) {
         self.settings = settings
         super.init(frame: .zero)
 

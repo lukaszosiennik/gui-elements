@@ -17,7 +17,11 @@ public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet {
         }
     }
     
-    public init(settings: NavigationMenuOptionUIComponentSetSettings = .default) {
+    public convenience init() {
+        self.init(settings: .default)
+    }
+    
+    public init(settings: NavigationMenuOptionUIComponentSetSettings) {
         self.settings = settings
         super.init(frame: .zero)
         
