@@ -19,15 +19,3 @@ extension UIElementComponentStylePropertiesLookSort {
         )
     }
 }
-
-extension UIElementComponentStylePropertiesLookSort {
-    
-    var lookUserFriendly: UIElementComponentStylePropertiesLookUserFriendlyInterface {
-        switch self {
-        case .os(let look):
-            return look
-        case .system(let look):
-            return look
-        }
-    }
-}

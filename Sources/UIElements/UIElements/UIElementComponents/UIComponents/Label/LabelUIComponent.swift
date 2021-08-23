@@ -39,7 +39,7 @@ public final class LabelUIComponent: UILabel, UIComponent {
 
 extension LabelUIComponent {
     
-    public func setupStyleLookOS(_ lookUserFriendly: UIElementComponentStylePropertiesLookUserFriendlyInterface) {}
+    public func setupStyleLookOS(_ look: OSUIElementComponentStylePropertiesLook) {}
     
     public func setupStyleLookSystem(_ look: LabelUIComponentStylePropertiesLook) {}
 }

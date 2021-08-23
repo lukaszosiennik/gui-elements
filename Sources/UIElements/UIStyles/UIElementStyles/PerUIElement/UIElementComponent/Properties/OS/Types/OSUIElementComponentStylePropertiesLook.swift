@@ -3,7 +3,7 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct OSUIElementComponentStylePropertiesLook: UIElementComponentStylePropertiesLookUserFriendlyInterface, Hashable {
+public struct OSUIElementComponentStylePropertiesLook: Hashable {
     
     public let isUserFriendly: Bool
     

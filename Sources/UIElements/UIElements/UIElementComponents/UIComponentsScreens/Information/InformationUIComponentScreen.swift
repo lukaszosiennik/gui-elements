@@ -51,8 +51,8 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
 
 extension InformationUIComponentScreen {
     
-    public func setupStyleLookOS(_ lookUserFriendly: UIElementComponentStylePropertiesLookUserFriendlyInterface) {
-        if lookUserFriendly.isUserFriendly {
+    public func setupStyleLookOS(_ look: OSUIElementComponentStylePropertiesLook) {
+        if look.isUserFriendly {
             backgroundColor = .white
         } else {
             let tempView = UIView()
