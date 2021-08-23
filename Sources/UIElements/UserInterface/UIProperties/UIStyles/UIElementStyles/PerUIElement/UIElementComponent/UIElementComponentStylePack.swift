@@ -22,7 +22,7 @@ public struct UIElementComponentStylePack<StylePropertiesType: UIElementComponen
     }
 }
 
-extension UIElementComponentStylePack: DefaultValueInterface {
+extension UIElementComponentStylePack: UIPropertyDefaultValueInterface {
     
     public static var `default`: Self {
         return `default`(

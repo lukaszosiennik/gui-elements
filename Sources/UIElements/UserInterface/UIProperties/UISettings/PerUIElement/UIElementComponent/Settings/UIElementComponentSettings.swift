@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIElementComponentSettings: UIElementSettings, DefaultValueInterface {
+public protocol UIElementComponentSettings: UIElementSettings, UIPropertyDefaultValueInterface {
     
     associatedtype UIElementComponentParamsType: UIElementComponentParams
     associatedtype UIElementComponentStylePropertiesType: UIElementComponentStyleProperties

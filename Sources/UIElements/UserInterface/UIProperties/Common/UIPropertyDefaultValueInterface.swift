@@ -3,7 +3,7 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol DefaultValueInterface {
+public protocol UIPropertyDefaultValueInterface {
     
     static var `default`: Self { get }
 }
