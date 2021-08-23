@@ -54,12 +54,7 @@ public final class NavigationMenuUIComponentScreen<OptionKey: InputUIElementComp
 extension NavigationMenuUIComponentScreen {
     
     public func setupStyleLookOS(_ look: OSUIElementComponentStylePropertiesLook) {
-        if look.isUserFriendly {
-            backgroundColor = .white
-        } else {
-            let tempView = UIView()
-            backgroundColor = tempView.backgroundColor
-        }
+        setupStyleLookOSForUserFriendliness(look.isUserFriendly)
     }
     
     public func setupStyleLookSystem(_ look: NavigationMenuUIComponentScreenStylePropertiesLook) {
