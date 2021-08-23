@@ -7,3 +7,14 @@ public protocol UIElementComponentParams: UIElementParams {
     
     static var `default`: Self { get }
 }
+
+extension UIElementComponentParams {
+    
+    static func structName(dot propertyName: String) -> String {
+        return structName.appending(".").appending(propertyName)
+    }
+    
+    static var structName: String {
+        return String(describing: self)
+    }
+}

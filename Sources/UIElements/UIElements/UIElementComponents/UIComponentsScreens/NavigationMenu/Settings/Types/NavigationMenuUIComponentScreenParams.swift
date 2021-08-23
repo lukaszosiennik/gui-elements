@@ -14,7 +14,7 @@ public struct NavigationMenuUIComponentScreenParams<OptionKey: InputUIElementCom
     
     public static var `default`: Self {
         return .init(
-            title: "NavigationMenuUIComponentScreenParams.title",
+            title: structName(dot: "title"),
             options: [:],
             actions: nil
         )

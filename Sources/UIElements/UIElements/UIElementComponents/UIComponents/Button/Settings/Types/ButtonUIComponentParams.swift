@@ -10,7 +10,7 @@ public struct ButtonUIComponentParams: UIComponentParams, InputUIElementComponen
     
     public static var `default`: Self {
         return .init(
-            title: "ButtonUIComponentParams.title",
+            title: structName(dot: "title"),
             action: nil
         )
     }

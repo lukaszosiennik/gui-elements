@@ -9,7 +9,7 @@ public struct CardUIComponentGroupParams: UIComponentGroupParams {
     
     public static var `default`: Self {
         return .init(
-            title: "CardUIComponentGroupParams.title"
+            title: structName(dot: "title")
         )
     }
     
