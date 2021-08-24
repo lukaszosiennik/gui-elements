@@ -14,7 +14,7 @@ public struct UIElementComponentStyle<PropertiesType: UIElementComponentStylePro
     }
     
     init(style: Self, overwrittenBy styleProperties: PropertiesType) {
-        self = .init(
+        self.init(
             type: style.type,
             properties: styleProperties
         )
