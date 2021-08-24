@@ -10,7 +10,6 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
     
     public func label() -> UIElementComponentStylePack<LabelUIComponentStyleProperties> {
         return .init(
-            factory: self,
             style: .init(
                 type: styleType,
                 properties: .init(
@@ -24,14 +23,12 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
     
     public func button() -> UIElementComponentStylePack<ButtonUIComponentStyleProperties> {
         return .default(
-            factory: self,
             styleType: styleType
         )
     }
     
     public func placeholder() -> UIElementComponentStylePack<PlaceholderUIComponentStyleProperties> {
         return .init(
-            factory: self,
             style: .init(
                 type: styleType,
                 properties: .init(

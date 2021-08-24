@@ -10,7 +10,6 @@ public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyle
     
     public func information() -> UIElementComponentStylePack<InformationUIComponentScreenStyleProperties> {
         return .init(
-            factory: self,
             style: .init(
                 type: styleType,
                 properties: .init(
@@ -26,7 +25,6 @@ public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyle
     
     public func navigationMenu() -> UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties> {
         return .init(
-            factory: self,
             style: .init(
                 type: styleType,
                 properties: .init(

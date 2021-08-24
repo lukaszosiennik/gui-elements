@@ -26,7 +26,7 @@ extension UIElementComponentSettings {
     
     public var styleType: UIStyleType {
         get {
-            return stylePack.factory?.styleType ?? stylePack.style.type
+            return stylePack.style.type
         }
         set {
             stylePack = Self.stylePack(for: newValue)

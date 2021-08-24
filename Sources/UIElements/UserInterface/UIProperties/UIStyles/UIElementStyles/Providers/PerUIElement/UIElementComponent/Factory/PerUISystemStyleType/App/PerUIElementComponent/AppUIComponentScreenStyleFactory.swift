@@ -7,14 +7,12 @@ public final class AppUIComponentScreenStyleFactory: UIElementComponentTypeStyle
     
     public func information() -> UIElementComponentStylePack<InformationUIComponentScreenStyleProperties> {
         return .default(
-            factory: self,
             styleType: styleType
         )
     }
     
     public func navigationMenu() -> UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties> {
         return .default(
-            factory: self,
             styleType: styleType
         )
     }

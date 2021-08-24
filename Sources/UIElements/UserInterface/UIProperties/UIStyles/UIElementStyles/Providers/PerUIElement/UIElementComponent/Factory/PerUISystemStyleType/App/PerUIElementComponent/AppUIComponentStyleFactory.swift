@@ -7,21 +7,18 @@ public final class AppUIComponentStyleFactory: UIElementComponentTypeStyleFactor
     
     public func label() -> UIElementComponentStylePack<LabelUIComponentStyleProperties> {
         return .default(
-            factory: self,
             styleType: styleType
         )
     }
     
     public func button() -> UIElementComponentStylePack<ButtonUIComponentStyleProperties> {
         return .default(
-            factory: self,
             styleType: styleType
         )
     }
     
     public func placeholder() -> UIElementComponentStylePack<PlaceholderUIComponentStyleProperties> {
         return .default(
-            factory: self,
             styleType: styleType
         )
     }

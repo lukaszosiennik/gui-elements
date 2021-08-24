@@ -10,7 +10,6 @@ public final class DevUIComponentSetStyleFactory: UIElementComponentTypeStyleFac
     
     public func navigationMenuOption() -> UIElementComponentStylePack<NavigationMenuOptionUIComponentSetStyleProperties> {
         return .init(
-            factory: self,
             style: .init(
                 type: styleType,
                 properties: .init(

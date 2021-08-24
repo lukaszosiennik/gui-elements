@@ -5,16 +5,13 @@
 
 public struct UIElementComponentStylePack<StylePropertiesType: UIElementComponentStyleProperties> {
     
-    let factory: UIElementStyleFactoryInterface?
     let style: UIElementComponentStyle<StylePropertiesType>
     
-    init(factory: UIElementStyleFactoryInterface?, style: UIElementComponentStyle<StylePropertiesType>) {
-        self.factory = factory
+    init(style: UIElementComponentStyle<StylePropertiesType>) {
         self.style = style
     }
     
     init(pack: Self, overwrittenBy styleProperties: StylePropertiesType) {
-        self.factory = pack.factory
         self.style = .init(
             type: pack.style.type,
             properties: styleProperties
@@ -26,22 +23,13 @@ extension UIElementComponentStylePack: UIPropertyDefaultValueInterface {
     
     public static var `default`: Self {
         return `default`(
-            factory: nil,
             styleType: .os
         )
     }
     
     public static func `default`(styleType: UIStyleType) -> Self {
-        return `default`(
-            factory: nil,
-            styleType: styleType
-        )
-    }
-    
-    public static func `default`(factory: UIElementStyleFactoryInterface?, styleType: UIStyleType) -> Self {
         return .init(
-            factory: factory,
-            style: UIElementComponentStyle(
+            style: .init(
                 type: styleType,
                 properties: .default(
                     styleType: styleType

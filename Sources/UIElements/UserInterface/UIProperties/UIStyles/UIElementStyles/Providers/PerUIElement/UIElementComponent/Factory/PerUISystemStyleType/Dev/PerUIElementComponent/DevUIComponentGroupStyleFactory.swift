@@ -10,7 +10,6 @@ public final class DevUIComponentGroupStyleFactory: UIElementComponentTypeStyleF
     
     public func navigationMenu() -> UIElementComponentStylePack<NavigationMenuUIComponentGroupStyleProperties> {
         return .init(
-            factory: self,
             style: .init(
                 type: styleType,
                 properties: .init(
@@ -31,7 +30,6 @@ public final class DevUIComponentGroupStyleFactory: UIElementComponentTypeStyleF
     
     public func card() -> UIElementComponentStylePack<CardUIComponentGroupStyleProperties> {
         return .init(
-            factory: self,
             style: .init(
                 type: styleType,
                 properties: .init(
