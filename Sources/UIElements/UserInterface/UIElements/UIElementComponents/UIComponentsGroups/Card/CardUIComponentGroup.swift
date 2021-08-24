@@ -11,7 +11,7 @@ public final class CardUIComponentGroup<BodyContainerContent: UIView>: UIView, U
     private let titleLabelUI = LabelUIComponent()
     
     private let bodyContainer = UIView()
-    private let bodyContainerContent: BodyContainerContent?
+    private let bodyContainerContent = BodyContainerContent()
     
     public let initialization = UIElementComponentInitialization()
     
@@ -25,16 +25,11 @@ public final class CardUIComponentGroup<BodyContainerContent: UIView>: UIView, U
         self.init(settings: .default)
     }
     
-    public init(bodyContainerContent: BodyContainerContent?, settings: CardUIComponentGroupSettings = .default) {
-        self.bodyContainerContent = bodyContainerContent
+    public init(settings: CardUIComponentGroupSettings = .default) {
         self.settings = settings
         super.init(frame: .zero)
 
         setup()
-    }
-    
-    public convenience init(settings: CardUIComponentGroupSettings = .default) {
-        self.init(bodyContainerContent: nil, settings: settings)
     }
     
     required init?(coder: NSCoder) {
@@ -75,9 +70,7 @@ extension CardUIComponentGroup {
         uie.addSubview(titleContainer)
         titleContainer.uie.addSubview(titleLabelUI)
         uie.addSubview(bodyContainer)
-        if let bodyContainerContent = bodyContainerContent {
-            bodyContainer.uie.addSubview(bodyContainerContent)
-        }
+        bodyContainer.uie.addSubview(bodyContainerContent)
         
         NSLayoutConstraint.activate([
             titleContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -101,14 +94,12 @@ extension CardUIComponentGroup {
             bodyContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
         
-        if let bodyContainerContent = bodyContainerContent {
-            NSLayoutConstraint.activate([
-                bodyContainerContent.leadingAnchor.constraint(equalTo: bodyContainer.leadingAnchor),
-                bodyContainerContent.trailingAnchor.constraint(equalTo: bodyContainer.trailingAnchor),
-                bodyContainerContent.topAnchor.constraint(equalTo: bodyContainer.topAnchor),
-                bodyContainerContent.bottomAnchor.constraint(equalTo: bodyContainer.bottomAnchor),
-            ])
-        }
+        NSLayoutConstraint.activate([
+            bodyContainerContent.leadingAnchor.constraint(equalTo: bodyContainer.leadingAnchor),
+            bodyContainerContent.trailingAnchor.constraint(equalTo: bodyContainer.trailingAnchor),
+            bodyContainerContent.topAnchor.constraint(equalTo: bodyContainer.topAnchor),
+            bodyContainerContent.bottomAnchor.constraint(equalTo: bodyContainer.bottomAnchor),
+        ])
     }
     
     public func setupStyleLayoutOS() {}
