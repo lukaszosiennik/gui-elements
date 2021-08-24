@@ -8,32 +8,28 @@ public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyle
     private typealias ColorPalette = DevUIColorPalette.UIElementComponent.UIComponentScreen
     private typealias ConstantPalette = DevUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
     
-    public func information() -> UIElementComponentStylePack<InformationUIComponentScreenStyleProperties> {
+    public func information() -> UIElementComponentStyle<InformationUIComponentScreenStyleProperties> {
         return .init(
-            style: .init(
-                type: styleType,
-                properties: .init(
-                    lookSort: .system(.init(
-                        backgroundColor: ColorPalette.Information.background_white
-                    )),
-                    lookParams: .default,
-                    layoutParams: .init()
-                )
+            type: styleType,
+            properties: .init(
+                lookSort: .system(.init(
+                    backgroundColor: ColorPalette.Information.background_white
+                )),
+                lookParams: .default,
+                layoutParams: .init()
             )
         )
     }
     
-    public func navigationMenu() -> UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties> {
+    public func navigationMenu() -> UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties> {
         return .init(
-            style: .init(
-                type: styleType,
-                properties: .init(
-                    lookSort: .system(.init(
-                        backgroundColor: ColorPalette.NavigationMenuOption.background_white
-                    )),
-                    lookParams: .default,
-                    layoutParams: .preferred
-                )
+            type: styleType,
+            properties: .init(
+                lookSort: .system(.init(
+                    backgroundColor: ColorPalette.NavigationMenuOption.background_white
+                )),
+                lookParams: .default,
+                layoutParams: .preferred
             )
         )
     }

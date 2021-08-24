@@ -6,18 +6,18 @@
 public struct NavigationMenuUIComponentScreenSettings<OptionKey: InputUIElementComponentActionsKeyInterface>: UIComponentScreenSettings {
     
     public let params: NavigationMenuUIComponentScreenParams<OptionKey>
-    public var stylePack: UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties>
+    public var style: UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>
     
-    public init(params: NavigationMenuUIComponentScreenParams<OptionKey>, stylePack: UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties>) {
+    public init(params: NavigationMenuUIComponentScreenParams<OptionKey>, style: UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>) {
         self.params = params
-        self.stylePack = stylePack
+        self.style = style
     }
     
-    public static var stylePack: UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties>? {
+    public static var style: UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>? {
         return Self.stylePackFactory?.navigationMenu()
     }
     
-    public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties>? {
+    public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>? {
         return Self.stylePackFactory(for: styleType)?.navigationMenu()
     }
 }

@@ -8,19 +8,17 @@ public final class DevUIComponentSetStyleFactory: UIElementComponentTypeStyleFac
     private typealias ColorPalette = DevUIColorPalette.UIElementComponent.UIComponentSet
     private typealias ConstantPalette = DevUIElementComponentConstantPalette.UIElementComponent.UIComponentSet
     
-    public func navigationMenuOption() -> UIElementComponentStylePack<NavigationMenuOptionUIComponentSetStyleProperties> {
+    public func navigationMenuOption() -> UIElementComponentStyle<NavigationMenuOptionUIComponentSetStyleProperties> {
         return .init(
-            style: .init(
-                type: styleType,
-                properties: .init(
-                    lookSort: .system(.init(
-                        backgroundColor: ColorPalette.NavigationMenuOption.background_white,
-                        borderColor: ColorPalette.NavigationMenuOption.border_black,
-                        borderWidth: ConstantPalette.NavigationMenuOption.UILook.borderWidth_1
-                    )),
-                    lookParams: .default,
-                    layoutParams: .init()
-                )
+            type: styleType,
+            properties: .init(
+                lookSort: .system(.init(
+                    backgroundColor: ColorPalette.NavigationMenuOption.background_white,
+                    borderColor: ColorPalette.NavigationMenuOption.border_black,
+                    borderWidth: ConstantPalette.NavigationMenuOption.UILook.borderWidth_1
+                )),
+                lookParams: .default,
+                layoutParams: .init()
             )
         )
     }

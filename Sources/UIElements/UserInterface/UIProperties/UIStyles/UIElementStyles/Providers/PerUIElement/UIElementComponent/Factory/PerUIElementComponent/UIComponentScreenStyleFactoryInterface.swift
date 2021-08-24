@@ -5,7 +5,7 @@
 
 public protocol UIComponentScreenStyleFactoryInterface: UIElementComponentTypeStyleFactoryInterface {
     
-    func information() -> UIElementComponentStylePack<InformationUIComponentScreenStyleProperties>
+    func information() -> UIElementComponentStyle<InformationUIComponentScreenStyleProperties>
     
-    func navigationMenu() -> UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties>
+    func navigationMenu() -> UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>
 }

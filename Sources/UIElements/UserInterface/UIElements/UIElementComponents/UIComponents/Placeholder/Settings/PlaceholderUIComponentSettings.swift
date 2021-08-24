@@ -8,18 +8,18 @@ public struct PlaceholderUIComponentSettings: UIComponentSettings {
     public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentStylePropertiesOverwritten
     
     public let params: PlaceholderUIComponentParams
-    public var stylePack: UIElementComponentStylePack<PlaceholderUIComponentStyleProperties>
+    public var style: UIElementComponentStyle<PlaceholderUIComponentStyleProperties>
     
-    public init(params: PlaceholderUIComponentParams, stylePack: UIElementComponentStylePack<PlaceholderUIComponentStyleProperties>) {
+    public init(params: PlaceholderUIComponentParams, style: UIElementComponentStyle<PlaceholderUIComponentStyleProperties>) {
         self.params = params
-        self.stylePack = stylePack
+        self.style = style
     }
     
-    public static var stylePack: UIElementComponentStylePack<PlaceholderUIComponentStyleProperties>? {
+    public static var style: UIElementComponentStyle<PlaceholderUIComponentStyleProperties>? {
         return Self.stylePackFactory?.placeholder()
     }
     
-    public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<PlaceholderUIComponentStyleProperties>? {
+    public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<PlaceholderUIComponentStyleProperties>? {
         return Self.stylePackFactory(for: styleType)?.placeholder()
     }
 }

@@ -8,35 +8,31 @@ public final class DevUIComponentGroupStyleFactory: UIElementComponentTypeStyleF
     private typealias ColorPalette = DevUIColorPalette.UIElementComponent.UIComponentGroup
     private typealias ConstantPalette = DevUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
     
-    public func navigationMenu() -> UIElementComponentStylePack<NavigationMenuUIComponentGroupStyleProperties> {
+    public func navigationMenu() -> UIElementComponentStyle<NavigationMenuUIComponentGroupStyleProperties> {
         return .init(
-            style: .init(
-                type: styleType,
-                properties: .init(
-                    lookSort: .system(.init(
-                        backgroundColor: ColorPalette.NavigationMenu.background_white
-                    )),
-                    lookParams: .default,
-                    layoutParams: .init(
-                        optionHeight: ConstantPalette.NavigationMenu.UILayoutParams.option_height_50,
-                        optionsSpace: ConstantPalette.NavigationMenu.UILayoutParams.options_space_8,
-                        titleTopMargin: ConstantPalette.NavigationMenu.UILayoutParams.title_margin_top_16,
-                        titleBottomMargin: ConstantPalette.NavigationMenu.UILayoutParams.title_margin_bottom_16
-                    )
+            type: styleType,
+            properties: .init(
+                lookSort: .system(.init(
+                    backgroundColor: ColorPalette.NavigationMenu.background_white
+                )),
+                lookParams: .default,
+                layoutParams: .init(
+                    optionHeight: ConstantPalette.NavigationMenu.UILayoutParams.option_height_50,
+                    optionsSpace: ConstantPalette.NavigationMenu.UILayoutParams.options_space_8,
+                    titleTopMargin: ConstantPalette.NavigationMenu.UILayoutParams.title_margin_top_16,
+                    titleBottomMargin: ConstantPalette.NavigationMenu.UILayoutParams.title_margin_bottom_16
                 )
             )
         )
     }
     
-    public func card() -> UIElementComponentStylePack<CardUIComponentGroupStyleProperties> {
+    public func card() -> UIElementComponentStyle<CardUIComponentGroupStyleProperties> {
         return .init(
-            style: .init(
-                type: styleType,
-                properties: .init(
-                    lookSort: .system(.init()),
-                    lookParams: .default,
-                    layoutParams: .init()
-                )
+            type: styleType,
+            properties: .init(
+                lookSort: .system(.init()),
+                lookParams: .default,
+                layoutParams: .init()
             )
         )
     }

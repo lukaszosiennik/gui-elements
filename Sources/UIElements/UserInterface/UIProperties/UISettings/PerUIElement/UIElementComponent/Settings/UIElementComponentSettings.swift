@@ -10,31 +10,31 @@ public protocol UIElementComponentSettings: UIElementSettings, UIPropertyDefault
     associatedtype UIElementComponentStylePropertiesOverwrittenType: UIElementComponentStylePropertiesOverwritten
     
     var params: UIElementComponentParamsType { get }
-    var stylePack: UIElementComponentStylePack<UIElementComponentStylePropertiesType> { get set }
+    var style: UIElementComponentStyle<UIElementComponentStylePropertiesType> { get set }
     
-    init(params: UIElementComponentParamsType, stylePack: UIElementComponentStylePack<UIElementComponentStylePropertiesType>)
+    init(params: UIElementComponentParamsType, style: UIElementComponentStyle<UIElementComponentStylePropertiesType>)
     
-    static var stylePack: UIElementComponentStylePack<UIElementComponentStylePropertiesType>? { get }
-    static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<UIElementComponentStylePropertiesType>?
+    static var style: UIElementComponentStyle<UIElementComponentStylePropertiesType>? { get }
+    static func style(for styleType: UIStyleType) -> UIElementComponentStyle<UIElementComponentStylePropertiesType>?
     
-    static var stylePackUnwrapped: UIElementComponentStylePack<UIElementComponentStylePropertiesType> { get }
-    static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<UIElementComponentStylePropertiesType>
-    static func stylePack(for styleType: UIStyleType, overwrittenBy stylePropertiesOverwritten: UIElementComponentStylePropertiesOverwrittenType) -> UIElementComponentStylePack<UIElementComponentStylePropertiesType>
+    static var styleUnwrapped: UIElementComponentStyle<UIElementComponentStylePropertiesType> { get }
+    static func style(for styleType: UIStyleType) -> UIElementComponentStyle<UIElementComponentStylePropertiesType>
+    static func style(for styleType: UIStyleType, overwrittenBy stylePropertiesOverwritten: UIElementComponentStylePropertiesOverwrittenType) -> UIElementComponentStyle<UIElementComponentStylePropertiesType>
 }
 
 extension UIElementComponentSettings {
     
     public var styleType: UIStyleType {
         get {
-            return stylePack.style.type
+            return style.type
         }
         set {
-            stylePack = Self.stylePack(for: newValue)
+            style = Self.style(for: newValue)
         }
     }
     
     public var styleProperties: UIElementComponentStylePropertiesType {
-        return stylePack.styleProperties
+        return style.properties
     }
 }
 
@@ -49,21 +49,21 @@ extension UIElementComponentSettings {
     public init(params: UIElementComponentParamsType) {
         self.init(
             params: params,
-            stylePack: Self.stylePackUnwrapped
+            style: Self.styleUnwrapped
         )
     }
     
     public init(params: UIElementComponentParamsType, styleType: UIStyleType) {
         self.init(
             params: params,
-            stylePack: Self.stylePack(for: styleType)
+            style: Self.style(for: styleType)
         )
     }
     
     public init(params: UIElementComponentParamsType, styleType: UIStyleType, overwrittenBy styleProperties: UIElementComponentStylePropertiesOverwrittenType) {
         self.init(
             params: params,
-            stylePack: Self.stylePack(for: styleType, overwrittenBy: styleProperties)
+            style: Self.style(for: styleType, overwrittenBy: styleProperties)
         )
     }
 }
@@ -87,39 +87,39 @@ extension UIElementComponentSettings where
     UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookParamsType.UIElementComponentStylePropertiesOverwrittenLookParamsType == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLookParamsType,
     UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLayoutParamsType.UIElementComponentStylePropertiesOverwrittenLayoutParamsType == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLayoutParamsType {
     
-    public static var stylePackUnwrapped: UIElementComponentStylePack<UIElementComponentStylePropertiesType> {
-        return Self.stylePack ?? .default
+    public static var styleUnwrapped: UIElementComponentStyle<UIElementComponentStylePropertiesType> {
+        return Self.style ?? .default
     }
     
-    public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<UIElementComponentStylePropertiesType> {
-        return Self.stylePack(for: styleType) ?? .default(styleType: styleType)
+    public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<UIElementComponentStylePropertiesType> {
+        return Self.style(for: styleType) ?? .default(styleType: styleType)
     }
     
-    public static func stylePack(for styleType: UIStyleType, overwrittenBy stylePropertiesOverwritten: UIElementComponentStylePropertiesOverwrittenType) -> UIElementComponentStylePack<UIElementComponentStylePropertiesType> {
-        guard let pack = Self.stylePack(for: styleType) else {
-            let defaultPack: UIElementComponentStylePack<UIElementComponentStylePropertiesType> = .default(styleType: styleType)
+    public static func style(for styleType: UIStyleType, overwrittenBy stylePropertiesOverwritten: UIElementComponentStylePropertiesOverwrittenType) -> UIElementComponentStyle<UIElementComponentStylePropertiesType> {
+        guard let style = Self.style(for: styleType) else {
+            let defaultStyle: UIElementComponentStyle<UIElementComponentStylePropertiesType> = .default(styleType: styleType)
             
             guard (stylePropertiesOverwritten.lookParams != nil || stylePropertiesOverwritten.layoutParams != nil) else {
-                return defaultPack
+                return defaultStyle
             }
             
             return .init(
-                pack: defaultPack,
+                style: defaultStyle,
                 overwrittenBy: .init(
-                    lookSort: defaultPack.styleProperties.lookSort,
+                    lookSort: defaultStyle.properties.lookSort,
                     lookParams: .init(
-                        lookParams: defaultPack.styleProperties.lookParams,
+                        lookParams: defaultStyle.properties.lookParams,
                         overwrittenBy: stylePropertiesOverwritten.lookParams
                     ),
                     layoutParams: .init(
-                        layoutParams: defaultPack.styleProperties.layoutParams,
+                        layoutParams: defaultStyle.properties.layoutParams,
                         overwrittenBy: stylePropertiesOverwritten.layoutParams
                     )
                 )
             )
         }
         
-        let styleProperties = pack.styleProperties
+        let styleProperties = style.properties
         
         let lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookType>
         if case let .system(look) = styleProperties.lookSort {
@@ -134,7 +134,7 @@ extension UIElementComponentSettings where
         }
         
         return .init(
-            pack: pack,
+            style: style,
             overwrittenBy: .init(
                 lookSort: lookSort,
                 lookParams: .init(

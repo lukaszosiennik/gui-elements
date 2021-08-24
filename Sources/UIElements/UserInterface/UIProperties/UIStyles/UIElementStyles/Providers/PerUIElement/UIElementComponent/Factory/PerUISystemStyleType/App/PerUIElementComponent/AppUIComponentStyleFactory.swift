@@ -5,19 +5,19 @@
 
 public final class AppUIComponentStyleFactory: UIElementComponentTypeStyleFactory, UIComponentStyleFactoryInterface {
     
-    public func label() -> UIElementComponentStylePack<LabelUIComponentStyleProperties> {
+    public func label() -> UIElementComponentStyle<LabelUIComponentStyleProperties> {
         return .default(
             styleType: styleType
         )
     }
     
-    public func button() -> UIElementComponentStylePack<ButtonUIComponentStyleProperties> {
+    public func button() -> UIElementComponentStyle<ButtonUIComponentStyleProperties> {
         return .default(
             styleType: styleType
         )
     }
     
-    public func placeholder() -> UIElementComponentStylePack<PlaceholderUIComponentStyleProperties> {
+    public func placeholder() -> UIElementComponentStyle<PlaceholderUIComponentStyleProperties> {
         return .default(
             styleType: styleType
         )

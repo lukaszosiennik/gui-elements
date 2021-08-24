@@ -5,13 +5,13 @@
 
 public final class AppUIComponentScreenStyleFactory: UIElementComponentTypeStyleFactory, UIComponentScreenStyleFactoryInterface {
     
-    public func information() -> UIElementComponentStylePack<InformationUIComponentScreenStyleProperties> {
+    public func information() -> UIElementComponentStyle<InformationUIComponentScreenStyleProperties> {
         return .default(
             styleType: styleType
         )
     }
     
-    public func navigationMenu() -> UIElementComponentStylePack<NavigationMenuUIComponentScreenStyleProperties> {
+    public func navigationMenu() -> UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties> {
         return .default(
             styleType: styleType
         )

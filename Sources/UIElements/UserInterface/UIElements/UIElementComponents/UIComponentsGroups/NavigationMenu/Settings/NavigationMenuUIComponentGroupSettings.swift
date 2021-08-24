@@ -8,18 +8,18 @@ public struct NavigationMenuUIComponentGroupSettings<OptionKey: InputUIElementCo
     public typealias UIElementComponentStylePropertiesOverwrittenType = NavigationMenuUIComponentGroupStylePropertiesOverwritten
     
     public let params: NavigationMenuUIComponentGroupParams<OptionKey>
-    public var stylePack: UIElementComponentStylePack<NavigationMenuUIComponentGroupStyleProperties>
+    public var style: UIElementComponentStyle<NavigationMenuUIComponentGroupStyleProperties>
     
-    public init(params: NavigationMenuUIComponentGroupParams<OptionKey>, stylePack: UIElementComponentStylePack<NavigationMenuUIComponentGroupStyleProperties>) {
+    public init(params: NavigationMenuUIComponentGroupParams<OptionKey>, style: UIElementComponentStyle<NavigationMenuUIComponentGroupStyleProperties>) {
         self.params = params
-        self.stylePack = stylePack
+        self.style = style
     }
     
-    public static var stylePack: UIElementComponentStylePack<NavigationMenuUIComponentGroupStyleProperties>? {
+    public static var style: UIElementComponentStyle<NavigationMenuUIComponentGroupStyleProperties>? {
         return Self.stylePackFactory?.navigationMenu()
     }
     
-    public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<NavigationMenuUIComponentGroupStyleProperties>? {
+    public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<NavigationMenuUIComponentGroupStyleProperties>? {
         return Self.stylePackFactory(for: styleType)?.navigationMenu()
     }
 }

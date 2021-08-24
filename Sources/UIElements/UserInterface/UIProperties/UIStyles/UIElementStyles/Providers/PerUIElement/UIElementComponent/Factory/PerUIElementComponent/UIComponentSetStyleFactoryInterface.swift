@@ -5,5 +5,5 @@
 
 public protocol UIComponentSetStyleFactoryInterface: UIElementComponentTypeStyleFactoryInterface {
     
-    func navigationMenuOption() -> UIElementComponentStylePack<NavigationMenuOptionUIComponentSetStyleProperties>
+    func navigationMenuOption() -> UIElementComponentStyle<NavigationMenuOptionUIComponentSetStyleProperties>
 }

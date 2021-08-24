@@ -6,18 +6,18 @@
 public struct InformationUIComponentScreenSettings: UIComponentScreenSettings {
     
     public let params: InformationUIComponentScreenParams
-    public var stylePack: UIElementComponentStylePack<InformationUIComponentScreenStyleProperties>
+    public var style: UIElementComponentStyle<InformationUIComponentScreenStyleProperties>
     
-    public init(params: InformationUIComponentScreenParams, stylePack: UIElementComponentStylePack<InformationUIComponentScreenStyleProperties>) {
+    public init(params: InformationUIComponentScreenParams, style: UIElementComponentStyle<InformationUIComponentScreenStyleProperties>) {
         self.params = params
-        self.stylePack = stylePack
+        self.style = style
     }
     
-    public static var stylePack: UIElementComponentStylePack<InformationUIComponentScreenStyleProperties>? {
+    public static var style: UIElementComponentStyle<InformationUIComponentScreenStyleProperties>? {
         return Self.stylePackFactory?.information()
     }
     
-    public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<InformationUIComponentScreenStyleProperties>? {
+    public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<InformationUIComponentScreenStyleProperties>? {
         return Self.stylePackFactory(for: styleType)?.information()
     }
 }

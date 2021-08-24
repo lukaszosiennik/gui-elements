@@ -8,18 +8,18 @@ public struct CardUIComponentGroupSettings: UIComponentGroupSettings {
     public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentGroupStylePropertiesOverwritten
     
     public let params: CardUIComponentGroupParams
-    public var stylePack: UIElementComponentStylePack<CardUIComponentGroupStyleProperties>
+    public var style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>
     
-    public init(params: CardUIComponentGroupParams, stylePack: UIElementComponentStylePack<CardUIComponentGroupStyleProperties>) {
+    public init(params: CardUIComponentGroupParams, style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>) {
         self.params = params
-        self.stylePack = stylePack
+        self.style = style
     }
     
-    public static var stylePack: UIElementComponentStylePack<CardUIComponentGroupStyleProperties>? {
+    public static var style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>? {
         return Self.stylePackFactory?.card()
     }
     
-    public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<CardUIComponentGroupStyleProperties>? {
+    public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<CardUIComponentGroupStyleProperties>? {
         return Self.stylePackFactory(for: styleType)?.card()
     }
 }

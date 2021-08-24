@@ -8,18 +8,18 @@ public struct ButtonUIComponentSettings: UIComponentSettings {
     public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentStylePropertiesOverwritten
     
     public let params: ButtonUIComponentParams
-    public var stylePack: UIElementComponentStylePack<ButtonUIComponentStyleProperties>
+    public var style: UIElementComponentStyle<ButtonUIComponentStyleProperties>
     
-    public init(params: ButtonUIComponentParams, stylePack: UIElementComponentStylePack<ButtonUIComponentStyleProperties>) {
+    public init(params: ButtonUIComponentParams, style: UIElementComponentStyle<ButtonUIComponentStyleProperties>) {
         self.params = params
-        self.stylePack = stylePack
+        self.style = style
     }
     
-    public static var stylePack: UIElementComponentStylePack<ButtonUIComponentStyleProperties>? {
+    public static var style: UIElementComponentStyle<ButtonUIComponentStyleProperties>? {
         return Self.stylePackFactory?.button()
     }
     
-    public static func stylePack(for styleType: UIStyleType) -> UIElementComponentStylePack<ButtonUIComponentStyleProperties>? {
+    public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<ButtonUIComponentStyleProperties>? {
         return Self.stylePackFactory(for: styleType)?.button()
     }
 }

@@ -8,37 +8,33 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
     private typealias ColorPalette = DevUIColorPalette.UIElementComponent.UIComponent
     private typealias ConstantPalette = DevUIElementComponentConstantPalette.UIElementComponent.UIComponent
     
-    public func label() -> UIElementComponentStylePack<LabelUIComponentStyleProperties> {
+    public func label() -> UIElementComponentStyle<LabelUIComponentStyleProperties> {
         return .init(
-            style: .init(
-                type: styleType,
-                properties: .init(
-                    lookSort: .system(.init()),
-                    lookParams: .default,
-                    layoutParams: .init()
-                )
+            type: styleType,
+            properties: .init(
+                lookSort: .system(.init()),
+                lookParams: .default,
+                layoutParams: .init()
             )
         )
     }
     
-    public func button() -> UIElementComponentStylePack<ButtonUIComponentStyleProperties> {
+    public func button() -> UIElementComponentStyle<ButtonUIComponentStyleProperties> {
         return .default(
             styleType: styleType
         )
     }
     
-    public func placeholder() -> UIElementComponentStylePack<PlaceholderUIComponentStyleProperties> {
+    public func placeholder() -> UIElementComponentStyle<PlaceholderUIComponentStyleProperties> {
         return .init(
-            style: .init(
-                type: styleType,
-                properties: .init(
-                    lookSort: .system(.init(
-                        backgroundColor: ColorPalette.Placeholder.background_green
-                    )),
-                    lookParams: .default,
-                    layoutParams: .init(
-                        height: ConstantPalette.Placeholder.UILayoutParams.height_200
-                    )
+            type: styleType,
+            properties: .init(
+                lookSort: .system(.init(
+                    backgroundColor: ColorPalette.Placeholder.background_green
+                )),
+                lookParams: .default,
+                layoutParams: .init(
+                    height: ConstantPalette.Placeholder.UILayoutParams.height_200
                 )
             )
         )

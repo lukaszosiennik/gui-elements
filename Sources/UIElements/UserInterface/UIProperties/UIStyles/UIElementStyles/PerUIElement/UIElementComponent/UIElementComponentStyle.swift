@@ -7,4 +7,34 @@ public struct UIElementComponentStyle<PropertiesType: UIElementComponentStylePro
     
     public let type: UIStyleType
     let properties: PropertiesType
+    
+    init(type: UIStyleType, properties: PropertiesType) {
+        self.type = type
+        self.properties = properties
+    }
+    
+    init(style: Self, overwrittenBy styleProperties: PropertiesType) {
+        self = .init(
+            type: style.type,
+            properties: styleProperties
+        )
+    }
+}
+
+extension UIElementComponentStyle: UIPropertyDefaultValueInterface {
+
+    public static var `default`: Self {
+        return `default`(
+            styleType: .os
+        )
+    }
+
+    public static func `default`(styleType: UIStyleType) -> Self {
+        return .init(
+            type: styleType,
+            properties: .default(
+                styleType: styleType
+            )
+        )
+    }
 }
