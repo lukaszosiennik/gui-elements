@@ -16,10 +16,10 @@ public struct PlaceholderUIComponentSettings: UIComponentSettings {
     }
     
     public static var style: UIElementComponentStyle<PlaceholderUIComponentStyleProperties>? {
-        return Self.styleFactory?.placeholder()
+        return styleFactory?.placeholder()
     }
     
     public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<PlaceholderUIComponentStyleProperties>? {
-        return Self.styleFactory(for: styleType)?.placeholder()
+        return styleFactory(for: styleType)?.placeholder()
     }
 }

@@ -16,10 +16,10 @@ public struct NavigationMenuOptionUIComponentSetSettings: UIComponentSetSettings
     }
     
     public static var style: UIElementComponentStyle<NavigationMenuOptionUIComponentSetStyleProperties>? {
-        return Self.styleFactory?.navigationMenuOption()
+        return styleFactory?.navigationMenuOption()
     }
     
     public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<NavigationMenuOptionUIComponentSetStyleProperties>? {
-        return Self.styleFactory(for: styleType)?.navigationMenuOption()
+        return styleFactory(for: styleType)?.navigationMenuOption()
     }
 }

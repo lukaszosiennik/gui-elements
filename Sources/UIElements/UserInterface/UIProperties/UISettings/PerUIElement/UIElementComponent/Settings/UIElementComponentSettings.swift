@@ -88,15 +88,15 @@ extension UIElementComponentSettings where
     UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLayoutParamsType.UIElementComponentStylePropertiesOverwrittenLayoutParamsType == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLayoutParamsType {
     
     public static var styleUnwrapped: UIElementComponentStyle<UIElementComponentStylePropertiesType> {
-        return Self.style ?? .default
+        return style ?? .default
     }
     
     public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<UIElementComponentStylePropertiesType> {
-        return Self.style(for: styleType) ?? .default(styleType: styleType)
+        return style(for: styleType) ?? .default(styleType: styleType)
     }
     
     public static func style(for styleType: UIStyleType, overwrittenBy stylePropertiesOverwritten: UIElementComponentStylePropertiesOverwrittenType) -> UIElementComponentStyle<UIElementComponentStylePropertiesType> {
-        guard let style = Self.style(for: styleType) else {
+        guard let style = style(for: styleType) else {
             let defaultStyle: UIElementComponentStyle<UIElementComponentStylePropertiesType> = .default(styleType: styleType)
             
             guard (stylePropertiesOverwritten.lookParams != nil || stylePropertiesOverwritten.layoutParams != nil) else {

@@ -14,10 +14,10 @@ public struct InformationUIComponentScreenSettings: UIComponentScreenSettings {
     }
     
     public static var style: UIElementComponentStyle<InformationUIComponentScreenStyleProperties>? {
-        return Self.styleFactory?.information()
+        return styleFactory?.information()
     }
     
     public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<InformationUIComponentScreenStyleProperties>? {
-        return Self.styleFactory(for: styleType)?.information()
+        return styleFactory(for: styleType)?.information()
     }
 }

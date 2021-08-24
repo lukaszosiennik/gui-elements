@@ -30,10 +30,10 @@ public struct CardUIComponentGroupSettings<BodyUIElementComponentSettingsType: U
     }
     
     public static var style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>? {
-        return Self.styleFactory?.card()
+        return styleFactory?.card()
     }
     
     public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<CardUIComponentGroupStyleProperties>? {
-        return Self.styleFactory(for: styleType)?.card()
+        return styleFactory(for: styleType)?.card()
     }
 }

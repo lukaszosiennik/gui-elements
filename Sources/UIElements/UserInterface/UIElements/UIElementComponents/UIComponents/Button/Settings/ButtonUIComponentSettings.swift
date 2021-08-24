@@ -16,10 +16,10 @@ public struct ButtonUIComponentSettings: UIComponentSettings {
     }
     
     public static var style: UIElementComponentStyle<ButtonUIComponentStyleProperties>? {
-        return Self.styleFactory?.button()
+        return styleFactory?.button()
     }
     
     public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<ButtonUIComponentStyleProperties>? {
-        return Self.styleFactory(for: styleType)?.button()
+        return styleFactory(for: styleType)?.button()
     }
 }
