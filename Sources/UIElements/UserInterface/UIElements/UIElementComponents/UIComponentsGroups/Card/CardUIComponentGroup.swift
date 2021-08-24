@@ -3,7 +3,7 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class CardUIComponentGroup<BodyContainerContentType: UIElementComponent>: CardUIComponentGroupBasis<BodyContainerContentType, BodyContainerContentType.UIElementComponentSettingsType> {
+public final class CardUIComponentGroup<BodyUIElementComponentType: UIElementComponent>: CardUIComponentGroupBasis<BodyUIElementComponentType, BodyUIElementComponentType.UIElementComponentSettingsType> {
 
     public override func setupNestedSettings() {
         super.setupNestedSettings()

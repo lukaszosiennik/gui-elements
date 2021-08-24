@@ -5,17 +5,17 @@
 
 import UIKit
 
-public class CardUIComponentGroupBasis<BodyContainerContentType: UIView, BodyContainerContentSettingsType: UIElementComponentSettings>: UIView, UIComponentGroup {
+public class CardUIComponentGroupBasis<BodyViewType: UIView, BodyUIElementComponentSettingsType: UIElementComponentSettings>: UIView, UIComponentGroup {
 
     private let titleContainer = UIView()
     private let titleLabelUI = LabelUIComponent()
     
     private let bodyContainer = UIView()
-    let bodyContainerContent = BodyContainerContentType()
+    let bodyContainerContent = BodyViewType()
     
     public let initialization = UIElementComponentInitialization()
     
-    public var settings: CardUIComponentGroupSettings<BodyContainerContentSettingsType> {
+    public var settings: CardUIComponentGroupSettings<BodyUIElementComponentSettingsType> {
         didSet {
             setupSettings()
         }
@@ -25,7 +25,7 @@ public class CardUIComponentGroupBasis<BodyContainerContentType: UIView, BodyCon
         self.init(settings: .default)
     }
     
-    public required init(settings: CardUIComponentGroupSettings<BodyContainerContentSettingsType> = .default) {
+    public required init(settings: CardUIComponentGroupSettings<BodyUIElementComponentSettingsType> = .default) {
         self.settings = settings
         super.init(frame: .zero)
 

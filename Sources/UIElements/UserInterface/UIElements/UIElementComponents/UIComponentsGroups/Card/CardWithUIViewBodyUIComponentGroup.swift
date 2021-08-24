@@ -5,4 +5,4 @@
 
 import UIKit
 
-public final class CardWithUIViewBodyUIComponentGroup<BodyContainerContentType: UIView>: CardUIComponentGroupBasis<BodyContainerContentType, EmptyUIComponentSettings> {}
+public final class CardWithUIViewBodyUIComponentGroup<BodyViewType: UIView>: CardUIComponentGroupBasis<BodyViewType, EmptyUIComponentSettings> {}
