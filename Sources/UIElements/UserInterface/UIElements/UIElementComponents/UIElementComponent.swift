@@ -19,7 +19,7 @@ public protocol UIElementComponent: UIElement {
     init()
     init(settings: UIElementComponentSettingsType)
     
-    // it's here only for OSButtonUIComponent purpose
+    // it's here only for ButtonUIComponent purpose
     func setupSettings()
     
     func setupNestedSettings()
