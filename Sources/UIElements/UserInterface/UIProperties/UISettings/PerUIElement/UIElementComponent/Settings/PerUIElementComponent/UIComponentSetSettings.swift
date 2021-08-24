@@ -10,11 +10,11 @@ public protocol UIComponentSetSettings: UIElementComponentSettings where
 
 extension UIComponentSetSettings {
     
-    public static var stylePackFactory: UIComponentSetStyleFactoryInterface? {
-        return styleFactory?.uiComponentSet
+    public static var styleFactory: UIComponentSetStyleFactoryInterface? {
+        return mainStyleFactory?.uiComponentSet
     }
     
-    public static func stylePackFactory(for styleType: UIStyleType) -> UIComponentSetStyleFactoryInterface? {
-        return styleFactory(for: styleType)?.uiComponentSet
+    public static func styleFactory(for styleType: UIStyleType) -> UIComponentSetStyleFactoryInterface? {
+        return mainStyleFactory(for: styleType)?.uiComponentSet
     }
 }

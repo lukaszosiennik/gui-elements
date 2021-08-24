@@ -14,10 +14,10 @@ public struct NavigationMenuUIComponentScreenSettings<OptionKey: InputUIElementC
     }
     
     public static var style: UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>? {
-        return Self.stylePackFactory?.navigationMenu()
+        return Self.styleFactory?.navigationMenu()
     }
     
     public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>? {
-        return Self.stylePackFactory(for: styleType)?.navigationMenu()
+        return Self.styleFactory(for: styleType)?.navigationMenu()
     }
 }

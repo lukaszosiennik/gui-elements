@@ -16,10 +16,10 @@ public struct NavigationMenuUIComponentGroupSettings<OptionKey: InputUIElementCo
     }
     
     public static var style: UIElementComponentStyle<NavigationMenuUIComponentGroupStyleProperties>? {
-        return Self.stylePackFactory?.navigationMenu()
+        return Self.styleFactory?.navigationMenu()
     }
     
     public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<NavigationMenuUIComponentGroupStyleProperties>? {
-        return Self.stylePackFactory(for: styleType)?.navigationMenu()
+        return Self.styleFactory(for: styleType)?.navigationMenu()
     }
 }

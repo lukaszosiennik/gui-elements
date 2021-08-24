@@ -16,10 +16,10 @@ public struct CardUIComponentGroupSettings: UIComponentGroupSettings {
     }
     
     public static var style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>? {
-        return Self.stylePackFactory?.card()
+        return Self.styleFactory?.card()
     }
     
     public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<CardUIComponentGroupStyleProperties>? {
-        return Self.stylePackFactory(for: styleType)?.card()
+        return Self.styleFactory(for: styleType)?.card()
     }
 }

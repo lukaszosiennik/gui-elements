@@ -10,11 +10,11 @@ public protocol UIComponentScreenSettings: UIElementComponentSettings where
 
 extension UIComponentScreenSettings {
     
-    public static var stylePackFactory: UIComponentScreenStyleFactoryInterface? {
-        return styleFactory?.uiComponentScreen
+    public static var styleFactory: UIComponentScreenStyleFactoryInterface? {
+        return mainStyleFactory?.uiComponentScreen
     }
     
-    public static func stylePackFactory(for styleType: UIStyleType) -> UIComponentScreenStyleFactoryInterface? {
-        return styleFactory(for: styleType)?.uiComponentScreen
+    public static func styleFactory(for styleType: UIStyleType) -> UIComponentScreenStyleFactoryInterface? {
+        return mainStyleFactory(for: styleType)?.uiComponentScreen
     }
 }

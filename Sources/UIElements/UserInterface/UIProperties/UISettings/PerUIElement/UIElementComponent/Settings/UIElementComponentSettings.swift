@@ -70,10 +70,10 @@ extension UIElementComponentSettings {
 
 extension UIElementComponentSettings {
     
-    public static var styleFactory: UIElementComponentStyleFactoryInterface? {
+    public static var mainStyleFactory: UIElementComponentStyleFactoryInterface? {
         return styleFactoryProvider.currentFactory
     }
-    public static func styleFactory(for styleType: UIStyleType) -> UIElementComponentStyleFactoryInterface? {
+    public static func mainStyleFactory(for styleType: UIStyleType) -> UIElementComponentStyleFactoryInterface? {
         return styleFactoryProvider.factory(for: styleType)
     }
     

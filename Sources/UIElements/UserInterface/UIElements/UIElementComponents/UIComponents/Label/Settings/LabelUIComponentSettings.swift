@@ -16,10 +16,10 @@ public struct LabelUIComponentSettings: UIComponentSettings {
     }
     
     public static var style: UIElementComponentStyle<LabelUIComponentStyleProperties>? {
-        return Self.stylePackFactory?.label()
+        return Self.styleFactory?.label()
     }
     
     public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<LabelUIComponentStyleProperties>? {
-        return Self.stylePackFactory(for: styleType)?.label()
+        return Self.styleFactory(for: styleType)?.label()
     }
 }
