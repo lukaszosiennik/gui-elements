@@ -8,6 +8,6 @@ public final class CardUIComponentGroup<BodyUIElementComponentType: UIElementCom
     public override func setupNestedSettings() {
         super.setupNestedSettings()
         
-        bodyContainerContent.settings = settings.bodyContainerContentSettings
+        bodyContainerContent.settings = settings.bodySettings
     }
 }

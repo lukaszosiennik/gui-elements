@@ -3,27 +3,27 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct CardUIComponentGroupSettings<BodyContainerContentSettingsType: UIElementComponentSettings>: UIComponentGroupSettings {
+public struct CardUIComponentGroupSettings<BodyUIElementComponentSettingsType: UIElementComponentSettings>: UIComponentGroupSettings {
 
     public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentGroupStylePropertiesOverwritten
     
     public let params: CardUIComponentGroupParams
     public var style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>
-    
-    public let bodyContainerContentSettings: BodyContainerContentSettingsType
+
+    public let bodySettings: BodyUIElementComponentSettingsType
     
     public init(params: CardUIComponentGroupParams, style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>) {
         self.init(
             params: params,
-            bodyContainerContentSettingsParams: .default,
+            bodySettingsParams: .default,
             style: style
         )
     }
     
-    public init(params: CardUIComponentGroupParams, bodyContainerContentSettingsParams: BodyContainerContentSettingsType.UIElementComponentParamsType, style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>) {
+    public init(params: CardUIComponentGroupParams, bodySettingsParams: BodyUIElementComponentSettingsType.UIElementComponentParamsType, style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>) {
         self.params = params
-        self.bodyContainerContentSettings = .init(
-            params: bodyContainerContentSettingsParams,
+        self.bodySettings = .init(
+            params: bodySettingsParams,
             styleType: style.type
         )
         self.style = style
