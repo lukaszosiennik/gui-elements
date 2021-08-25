@@ -123,12 +123,10 @@ extension UIElementComponentSettings where
         
         let lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesType.OSUIElementComponentStylePropertiesLookType, UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookType>
         if case let .system(look) = styleProperties.lookSort {
-            lookSort = .system(
-                .init(
-                    look: look,
-                    overwrittenBy: stylePropertiesOverwritten.look
-                )
-            )
+            lookSort = .system(.init(
+                look: look,
+                overwrittenBy: stylePropertiesOverwritten.look
+            ))
         } else {
             lookSort = styleProperties.lookSort
         }

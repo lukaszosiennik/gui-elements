@@ -12,10 +12,8 @@ public enum UIElementComponentStylePropertiesLookSort<OSUIElementComponentStyleP
 extension UIElementComponentStylePropertiesLookSort {
     
     public static var os: Self {
-        return .os(
-            .init(
-                isUserFriendly: true
-            )
-        )
+        return .os(.init(
+            isUserFriendly: true
+        ))
     }
 }
