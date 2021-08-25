@@ -43,7 +43,11 @@ public class CardUIComponentGroupBasis<BodyViewType: UIView, BodyUIElementCompon
             ),
             styleType: settings.styleType
         )
+        
+        setupBodyNestedSettings()
     }
+    
+    func setupBodyNestedSettings() {}
     
     public func setupParams(_ params: CardUIComponentGroupParams) {}
 }
