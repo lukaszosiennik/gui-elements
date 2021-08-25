@@ -3,4 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct LabelUIComponentStylePropertiesLook: UIComponentStylePropertiesLook {}
+public struct LabelUIComponentStylePropertiesLook: UIComponentStylePropertiesLook {
+    
+    public init() {}
+}

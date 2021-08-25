@@ -8,4 +8,6 @@ public struct CardUIComponentGroupStylePropertiesLayoutParams: UIComponentGroupS
     public static var preferred: Self? {
         return nil
     }
+    
+    public init() {}
 }

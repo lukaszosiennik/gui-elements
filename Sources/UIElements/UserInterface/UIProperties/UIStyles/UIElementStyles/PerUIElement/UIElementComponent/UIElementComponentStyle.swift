@@ -8,6 +8,11 @@ public struct UIElementComponentStyle<PropertiesType: UIElementComponentStylePro
     public let type: UIStyleType
     let properties: PropertiesType
     
+    public init(properties: PropertiesType) {
+        self.type = .custom
+        self.properties = properties
+    }
+    
     init(type: UIStyleType, properties: PropertiesType) {
         self.type = type
         self.properties = properties
@@ -29,7 +34,7 @@ extension UIElementComponentStyle: UIPropertyDefaultValueInterface {
         )
     }
 
-    public static func `default`(styleType: UIStyleType) -> Self {
+    static func `default`(styleType: UIStyleType) -> Self {
         return .init(
             type: styleType,
             properties: .default(

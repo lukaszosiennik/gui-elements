@@ -20,4 +20,11 @@ public struct NavigationMenuUIComponentGroupStylePropertiesLayoutParams: UICompo
             titleBottomMargin: DefaultUIComponentGroupConstantPalette.NavigationMenu.UILayoutParams.title_margin_bottom_4
         )
     }
+    
+    public init(optionHeight: CGFloat?, optionsSpace: CGFloat, titleTopMargin: CGFloat, titleBottomMargin: CGFloat) {
+        self.optionHeight = optionHeight
+        self.optionsSpace = optionsSpace
+        self.titleTopMargin = titleTopMargin
+        self.titleBottomMargin = titleBottomMargin
+    }
 }

@@ -8,4 +8,8 @@ import UIKit
 public struct NavigationMenuUIComponentGroupStylePropertiesLook: UIComponentGroupStylePropertiesLook {
     
     public let backgroundColor: UIColor
+    
+    public init(backgroundColor: UIColor) {
+        self.backgroundColor = backgroundColor
+    }
 }

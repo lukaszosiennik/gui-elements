@@ -8,4 +8,6 @@ public struct InformationUIComponentScreenStylePropertiesLayoutParams: UICompone
     public static var preferred: Self? {
         return nil
     }
+    
+    public init() {}
 }

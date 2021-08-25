@@ -12,4 +12,8 @@ public struct InformationUIComponentScreenStylePropertiesLookParams: UIComponent
             titleLinesNumber: DefaultUIComponentScreenConstantPalette.Information.UILookParams.title_linesNumber_0
         )
     }
+    
+    public init(titleLinesNumber: Int) {
+        self.titleLinesNumber = titleLinesNumber
+    }
 }

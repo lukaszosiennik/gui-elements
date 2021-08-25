@@ -5,6 +5,8 @@
 
 public enum UIStyleType: Hashable {
     
+    case custom
+    
     case os(_ styleProperties: OSUIElementComponentStyleProperties)
     case system(UISystemStyleType)
 }

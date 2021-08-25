@@ -8,4 +8,6 @@ public struct ButtonUIComponentStylePropertiesLayoutParams: UIComponentStyleProp
     public static var preferred: Self? {
         return nil
     }
+    
+    public init() {}
 }

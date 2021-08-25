@@ -15,18 +15,18 @@ public struct CardUIComponentGroupSettings<BodyUIElementComponentSettingsType: U
     public init(params: CardUIComponentGroupParams, style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>) {
         self.init(
             params: params,
-            bodySettingsParams: .default,
-            style: style
+            style: style,
+            bodySettings: .init(
+                params: .default,
+                styleType: style.type
+            )
         )
     }
     
-    public init(params: CardUIComponentGroupParams, bodySettingsParams: BodyUIElementComponentSettingsType.UIElementComponentParamsType, style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>) {
+    public init(params: CardUIComponentGroupParams, style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>, bodySettings: BodyUIElementComponentSettingsType) {
         self.params = params
-        self.bodySettings = .init(
-            params: bodySettingsParams,
-            styleType: style.type
-        )
         self.style = style
+        self.bodySettings = bodySettings
     }
     
     public static var style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>? {

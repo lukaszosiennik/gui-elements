@@ -16,4 +16,9 @@ public struct NavigationMenuUIComponentScreenStylePropertiesLayoutParams: UIComp
             rightMargin: DefaultUIComponentScreenConstantPalette.NavigationMenu.UILayoutParams.margin_left_16
         )
     }
+    
+    public init(leftMargin: CGFloat, rightMargin: CGFloat) {
+        self.leftMargin = leftMargin
+        self.rightMargin = rightMargin
+    }
 }

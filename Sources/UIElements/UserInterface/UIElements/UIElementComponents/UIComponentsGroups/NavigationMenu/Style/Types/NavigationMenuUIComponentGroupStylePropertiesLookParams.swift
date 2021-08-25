@@ -13,7 +13,7 @@ public struct NavigationMenuUIComponentGroupStylePropertiesLookParams: UICompone
         )
     }
     
-    init(titleLinesNumber: Int) {
+    public init(titleLinesNumber: Int) {
         self.titleLinesNumber = titleLinesNumber
     }
     

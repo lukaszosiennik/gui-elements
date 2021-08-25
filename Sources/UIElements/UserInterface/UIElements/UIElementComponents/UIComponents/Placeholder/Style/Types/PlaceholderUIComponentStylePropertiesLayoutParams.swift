@@ -14,4 +14,8 @@ public struct PlaceholderUIComponentStylePropertiesLayoutParams: UIComponentStyl
             height: DefaultUIComponentConstantPalette.Placeholder.UILayoutParams.height_100
         )
     }
+    
+    public init(height: CGFloat) {
+        self.height = height
+    }
 }

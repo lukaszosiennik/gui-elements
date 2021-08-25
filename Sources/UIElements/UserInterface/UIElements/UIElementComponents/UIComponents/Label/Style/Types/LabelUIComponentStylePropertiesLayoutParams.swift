@@ -8,4 +8,6 @@ public struct LabelUIComponentStylePropertiesLayoutParams: UIComponentStylePrope
     public static var preferred: Self? {
         return nil
     }
+    
+    public init() {}
 }
