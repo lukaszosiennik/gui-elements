@@ -31,7 +31,6 @@ public final class DevUIComponentGroupStyleFactory: UIElementComponentTypeStyleF
             type: styleType,
             properties: .init(
                 lookSort: .system(.init()),
-                lookParams: .default,
                 layoutParams: .init()
             )
         )

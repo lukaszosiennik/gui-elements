@@ -32,10 +32,7 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
                 lookSort: .system(.init(
                     backgroundColor: ColorPalette.Placeholder.background_green
                 )),
-                lookParams: .default,
-                layoutParams: .init(
-                    height: ConstantPalette.Placeholder.UILayoutParams.height_200
-                )
+                layoutParams: .preferred
             )
         )
     }

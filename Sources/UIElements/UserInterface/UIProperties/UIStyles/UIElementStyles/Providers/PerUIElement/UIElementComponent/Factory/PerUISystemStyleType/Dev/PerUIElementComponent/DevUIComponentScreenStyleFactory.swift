@@ -28,7 +28,6 @@ public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyle
                 lookSort: .system(.init(
                     backgroundColor: ColorPalette.NavigationMenuOption.background_white
                 )),
-                lookParams: .default,
                 layoutParams: .preferred
             )
         )

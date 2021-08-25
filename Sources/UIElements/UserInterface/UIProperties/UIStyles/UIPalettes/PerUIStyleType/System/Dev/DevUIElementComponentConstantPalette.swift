@@ -14,7 +14,6 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
         static let value_8: CGFloat = 8
         static let value_16: CGFloat = DefaultUIElementComponentConstantPalette.All.value_16
         static let value_50: CGFloat = 50
-        static let value_200: CGFloat = 200
     }
     
     enum UIElementComponent {
@@ -60,7 +59,6 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
                         enum Height {
                             
                             static let value_50: CGFloat = All.value_50
-                            static let value_200: CGFloat = All.value_200
                         }
                     }
                 }
@@ -78,16 +76,7 @@ enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
 
 extension DevUIElementComponentConstantPalette.UIElementComponent {
         
-    enum UIComponent {
-        
-        enum Placeholder {
-            
-            enum UILayoutParams {
-                
-                static let height_200: CGFloat = UILayoutParamsPalette.Property.Size.Vertical.Height.value_200
-            }
-        }
-    }
+    enum UIComponent {}
     
     enum UIComponentSet {
         
