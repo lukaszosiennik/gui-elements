@@ -5,5 +5,9 @@
 
 public struct LabelUIComponentStylePropertiesLook: UIComponentStylePropertiesLook {
     
-    public init() {}
+    public let textColor: UIColor
+    
+    public init(textColor: UIColor) {
+        self.textColor = textColor
+    }
 }

@@ -12,7 +12,7 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
         return .init(
             type: styleType,
             properties: .init(
-                lookSort: .system(.init()),
+                lookSort: .os,
                 lookParams: .default,
                 layoutParams: .init()
             )
