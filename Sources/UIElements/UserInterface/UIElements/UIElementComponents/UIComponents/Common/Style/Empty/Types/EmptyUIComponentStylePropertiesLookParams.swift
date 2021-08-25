@@ -5,7 +5,7 @@
 
 public struct EmptyUIComponentStylePropertiesLookParams: UIComponentStylePropertiesLookParams {
     
-    public init() {}
+    init() {}
     
     public init?(lookParams: Self?, overwrittenBy newLookParams: EmptyUIComponentStylePropertiesOverwrittenLookParams?) {
         return nil

@@ -3,6 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
+import UIKit
+
 public struct LabelUIComponentStylePropertiesLook: UIComponentStylePropertiesLook {
     
     public let textColor: UIColor
