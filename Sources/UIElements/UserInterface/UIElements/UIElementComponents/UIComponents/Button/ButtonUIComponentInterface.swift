@@ -19,10 +19,12 @@ extension ButtonUIComponentInterface {
     func setupStyleLookOS(_ look: BasicOSUIElementComponentStylePropertiesLook, for button: UIButton) {
         let tempButton = UIButton(type: button.buttonType)
         button.setTitleColor(tempButton.titleColor(for: .normal), for: .normal)
+        button.setTitleColor(tempButton.titleColor(for: .highlighted), for: .highlighted)
     }
     
     func setupStyleLookSystem(_ look: ButtonUIComponentStylePropertiesLook, for button: UIButton) {
-        button.setTitleColor(look.titleColor, for: .normal)
+        button.setTitleColor(look.titleColorNormal, for: .normal)
+        button.setTitleColor(look.titleColorHighlighted, for: .highlighted)
     }
 }
 

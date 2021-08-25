@@ -12,7 +12,9 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
         return .init(
             type: styleType,
             properties: .init(
-                lookSort: .os,
+                lookSort: .system(.init(
+                    textColor: .blue
+                )),
                 lookParams: .default,
                 layoutParams: .init()
             )
@@ -20,8 +22,15 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
     }
     
     public func button() -> UIElementComponentStyle<ButtonUIComponentStyleProperties> {
-        return .default(
-            styleType: styleType
+        return .init(
+            type: styleType,
+            properties: .init(
+                lookSort: .system(.init(
+                    titleColorNormal: .red,
+                    titleColorHighlighted: .green
+                )),
+                layoutParams: .init()
+            )
         )
     }
     

@@ -7,9 +7,11 @@ import UIKit
 
 public struct ButtonUIComponentStylePropertiesLook: UIComponentStylePropertiesLook {
     
-    public let titleColor: UIColor
+    public let titleColorNormal: UIColor
+    public let titleColorHighlighted: UIColor
     
-    public init(titleColor: UIColor) {
-        self.titleColor = titleColor
+    public init(titleColorNormal: UIColor, titleColorHighlighted: UIColor) {
+        self.titleColorNormal = titleColorNormal
+        self.titleColorHighlighted = titleColorHighlighted
     }
 }
