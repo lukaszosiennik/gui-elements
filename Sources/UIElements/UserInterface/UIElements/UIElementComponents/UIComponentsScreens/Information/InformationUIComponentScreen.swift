@@ -51,9 +51,7 @@ public final class InformationUIComponentScreen: UIView, UIComponentScreen {
 
 extension InformationUIComponentScreen {
     
-    public func setupStyleLookOS(_ look: OSUIElementComponentStylePropertiesLook) {
-        setupStyleLookOSForUserFriendliness(look.isUserFriendly)
-    }
+    public func setupScreenStyleLookOS() {}
     
     public func setupStyleLookSystem(_ look: InformationUIComponentScreenStylePropertiesLook) {
         backgroundColor = look.backgroundColor

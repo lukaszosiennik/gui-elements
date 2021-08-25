@@ -6,11 +6,20 @@
 import UIKit
 
 public protocol UIComponentScreen: UIElementComponent where
-    UIElementComponentSettingsType: UIComponentScreenSettings {}
+    UIElementComponentSettingsType: UIComponentScreenSettings {
+    
+    func setupScreenStyleLookOS()
+}
 
 extension UIComponentScreen {
     
-    public func setupStyleLookOSForUserFriendliness(_ isUserFriendly: Bool) {
+    public func setupStyleLookOS(_ look: OSUIElementComponentStylePropertiesLook) {
+        setupStyleLookOSForUserFriendliness(look.isUserFriendly)
+        
+        setupScreenStyleLookOS()
+    }
+    
+    private func setupStyleLookOSForUserFriendliness(_ isUserFriendly: Bool) {
         if isUserFriendly {
             backgroundColor = .white
         } else {
