@@ -12,7 +12,9 @@ enum DevUIColorPalette: UIColorPalette {
         static let clear: UIColor = .clear
         static let black: UIColor = .black
         static let white: UIColor = .white
+        static let blue: UIColor = .blue
         static let green: UIColor = .green
+        static let red: UIColor = .red
     }
     
     enum UIElementComponent {
@@ -35,7 +37,9 @@ enum DevUIColorPalette: UIColorPalette {
         
             enum Text {
                 
-                static let black: UIColor = All.black
+                static let blue: UIColor = All.blue
+                static let green: UIColor = All.green
+                static let red: UIColor = All.red
             }
         }
     }
@@ -44,6 +48,17 @@ enum DevUIColorPalette: UIColorPalette {
 extension DevUIColorPalette.UIElementComponent {
         
     enum UIComponent {
+        
+        enum Button {
+            
+            static let text_normal_green: UIColor = Property.Text.green
+            static let text_highlighted_red: UIColor = Property.Text.red
+        }
+        
+        enum Label {
+            
+            static let text_blue: UIColor = Property.Text.blue
+        }
         
         enum Placeholder {
             
