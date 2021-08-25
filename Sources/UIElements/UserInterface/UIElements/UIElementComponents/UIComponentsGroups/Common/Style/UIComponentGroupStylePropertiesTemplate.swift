@@ -7,11 +7,11 @@ public struct UIComponentGroupStylePropertiesTemplate<UIElementComponentStylePro
                                                       UIElementComponentStylePropertiesLookParamsType: UIComponentGroupStylePropertiesLookParams,
                                                       UIElementComponentStylePropertiesLayoutParamsType: UIComponentGroupStylePropertiesLayoutParams>: UIComponentGroupStyleProperties {
 
-    public let lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesLookType>
+    public let lookSort: UIElementComponentStylePropertiesLookSort<BasicOSUIElementComponentStylePropertiesLook, UIElementComponentStylePropertiesLookType>
     public let lookParams: UIElementComponentStylePropertiesLookParamsType?
     public let layoutParams: UIElementComponentStylePropertiesLayoutParamsType?
     
-    public init(lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesLookType>, lookParams: UIElementComponentStylePropertiesLookParamsType?, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?) {
+    public init(lookSort: UIElementComponentStylePropertiesLookSort<BasicOSUIElementComponentStylePropertiesLook, UIElementComponentStylePropertiesLookType>, lookParams: UIElementComponentStylePropertiesLookParamsType?, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?) {
         self.lookSort = lookSort
         self.lookParams = lookParams
         self.layoutParams = layoutParams

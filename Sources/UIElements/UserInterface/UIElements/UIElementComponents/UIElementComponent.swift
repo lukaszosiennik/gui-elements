@@ -28,7 +28,7 @@ public protocol UIElementComponent: UIElement {
     
     func setupParams(_ params: UIElementComponentSettingsType.UIElementComponentParamsType)
     
-    func setupStyleLookOS(_ look: OSUIElementComponentStylePropertiesLook)
+    func setupStyleLookOS(_ look: BasicOSUIElementComponentStylePropertiesLook)
     func setupStyleLookSystem(_ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookType)
     func setupStyleLookParamsOS()
     func setupStyleLookParamsSystem(_ lookParams: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookParamsType)
@@ -77,7 +77,7 @@ extension UIElementComponent {
         } else {
             switch settings.styleProperties.lookSort {
             case .os(let look):
-                setupStyleLookOS(look)
+                setupStyleLookOS(look.toBasic())
             case .system(let look):
                 setupStyleLookSystem(look)
             }

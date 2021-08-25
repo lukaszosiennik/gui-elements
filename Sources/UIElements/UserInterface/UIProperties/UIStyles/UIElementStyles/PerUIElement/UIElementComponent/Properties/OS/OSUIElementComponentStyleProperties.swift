@@ -5,10 +5,10 @@
 
 public struct OSUIElementComponentStyleProperties: Hashable {
     
-    let look: OSUIElementComponentStylePropertiesLook
+    let look: BasicOSUIElementComponentStylePropertiesLook
     let layoutParams: OSUIElementComponentStylePropertiesLayoutParams
     
-    public init(look: OSUIElementComponentStylePropertiesLook, layoutParams: OSUIElementComponentStylePropertiesLayoutParams) {
+    public init(look: BasicOSUIElementComponentStylePropertiesLook, layoutParams: OSUIElementComponentStylePropertiesLayoutParams) {
         self.look = look
         self.layoutParams = layoutParams
     }

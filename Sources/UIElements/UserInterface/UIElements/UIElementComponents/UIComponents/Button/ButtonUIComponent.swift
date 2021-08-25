@@ -33,7 +33,31 @@ public final class ButtonUIComponent: UIView, ButtonUIComponentInterface {
     }
     
     public func setupSettings() {
-        self.button = UIButton(type: settings.styleType.isOS ? .system : .custom)
+        let buttonType: UIButton.ButtonType
+        if settings.styleType.isOS {
+            if case let .os(look) = settings.styleProperties.lookSort {
+                switch look.buttonStyleType {
+                case .default:
+                    buttonType = .system
+                case .infoLight:
+                    buttonType = .infoLight
+                case .infoDark:
+                    buttonType = .infoDark
+                case .detailDisclosure:
+                    buttonType = .detailDisclosure
+                case .contactAdd:
+                    buttonType = .contactAdd
+                case .close:
+                    buttonType = .close
+                }
+            } else {
+                buttonType = .custom
+            }
+        } else {
+            buttonType = .custom
+        }
+        
+        self.button = UIButton(type: buttonType)
         
         setupNestedSettings()
         
@@ -64,7 +88,7 @@ public final class ButtonUIComponent: UIView, ButtonUIComponentInterface {
 
 extension ButtonUIComponent {
     
-    public func setupStyleLookOS(_ look: OSUIElementComponentStylePropertiesLook) {
+    public func setupStyleLookOS(_ look: BasicOSUIElementComponentStylePropertiesLook) {
         setupStyleLookOS(look, for: button)
     }
     

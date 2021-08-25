@@ -39,7 +39,7 @@ public final class LabelUIComponent: UILabel, UIComponent {
 
 extension LabelUIComponent {
     
-    public func setupStyleLookOS(_ look: OSUIElementComponentStylePropertiesLook) {
+    public func setupStyleLookOS(_ look: BasicOSUIElementComponentStylePropertiesLook) {
         let tempLabel = UILabel()
         textColor = tempLabel.textColor
     }

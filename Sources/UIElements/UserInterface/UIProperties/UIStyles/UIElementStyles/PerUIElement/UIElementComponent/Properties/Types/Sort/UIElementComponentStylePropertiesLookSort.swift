@@ -3,9 +3,9 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesLookType: UIElementComponentStylePropertiesLook> {
+public enum UIElementComponentStylePropertiesLookSort<OSUIElementComponentStylePropertiesLookType: OSUIElementComponentStylePropertiesLook, UIElementComponentStylePropertiesLookType: UIElementComponentStylePropertiesLook> {
     
-    case os(_ look: OSUIElementComponentStylePropertiesLook)
+    case os(_ look: OSUIElementComponentStylePropertiesLookType)
     case system(_ look: UIElementComponentStylePropertiesLookType)
 }
 
