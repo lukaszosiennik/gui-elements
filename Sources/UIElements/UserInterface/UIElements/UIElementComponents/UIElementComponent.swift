@@ -6,6 +6,8 @@
 public final class UIElementComponentInitialization {
     
     fileprivate var isRunning: Bool = false
+    
+    public init() {}
 }
 
 public protocol UIElementComponent: UIElement {
@@ -37,7 +39,7 @@ public protocol UIElementComponent: UIElement {
 
 extension UIElementComponent {
     
-    func setup() {
+    public func setup() {
         initialization.isRunning = true
         setupSettings()
         initialization.isRunning = false
