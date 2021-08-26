@@ -39,7 +39,11 @@ public final class CustomButtonUIComponent: UIButton, ButtonUIComponentInterface
 
 extension CustomButtonUIComponent {
     
-    public func setupStyleLookOS(_ look: BasicOSUIElementComponentStylePropertiesLook) {
+    public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
+        setupStyleLookOSConfiguration(lookConfiguration, for: self)
+    }
+    
+    public func setupStyleLookOS(_ look: ButtonUIComponentStylePropertiesOSLook) {
         setupStyleLookOS(look, for: self)
     }
     

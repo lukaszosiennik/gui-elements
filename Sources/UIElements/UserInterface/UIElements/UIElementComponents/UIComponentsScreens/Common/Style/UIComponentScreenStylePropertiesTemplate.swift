@@ -7,11 +7,11 @@ public struct UIComponentScreenStylePropertiesTemplate<UIElementComponentStylePr
                                                        UIElementComponentStylePropertiesLookParamsType: UIComponentScreenStylePropertiesLookParams,
                                                        UIElementComponentStylePropertiesLayoutParamsType: UIComponentScreenStylePropertiesLayoutParams>: UIComponentScreenStyleProperties {
 
-    public let lookSort: UIElementComponentStylePropertiesLookSort<BasicOSUIElementComponentStylePropertiesLook, UIElementComponentStylePropertiesLookType>
+    public let lookSort: UIElementComponentStylePropertiesLookSort<EmptyUIElementComponentStylePropertiesOSLook, UIElementComponentStylePropertiesLookType>
     public let lookParams: UIElementComponentStylePropertiesLookParamsType?
     public let layoutParams: UIElementComponentStylePropertiesLayoutParamsType?
     
-    public init(lookSort: UIElementComponentStylePropertiesLookSort<BasicOSUIElementComponentStylePropertiesLook, UIElementComponentStylePropertiesLookType>, lookParams: UIElementComponentStylePropertiesLookParamsType?, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?) {
+    public init(lookSort: UIElementComponentStylePropertiesLookSort<EmptyUIElementComponentStylePropertiesOSLook, UIElementComponentStylePropertiesLookType>, lookParams: UIElementComponentStylePropertiesLookParamsType?, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?) {
         self.lookSort = lookSort
         self.lookParams = lookParams
         self.layoutParams = layoutParams

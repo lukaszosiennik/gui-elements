@@ -3,7 +3,7 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct OSUIElementComponentStylePropertiesLayoutParams: Hashable {
+public struct UIElementComponentLayoutParamsOSConfiguration: Hashable {
     
     let isPreferred: Bool
     

@@ -121,7 +121,7 @@ extension UIElementComponentSettings where
         
         let styleProperties = style.properties
         
-        let lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesType.OSUIElementComponentStylePropertiesLookType, UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookType>
+        let lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookType>
         if case let .system(look) = styleProperties.lookSort {
             lookSort = .system(.init(
                 look: look,

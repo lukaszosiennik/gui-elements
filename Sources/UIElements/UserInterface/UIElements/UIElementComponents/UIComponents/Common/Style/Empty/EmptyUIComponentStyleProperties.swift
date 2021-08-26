@@ -3,7 +3,7 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias EmptyUIComponentStyleProperties = UIComponentStylePropertiesTemplate<BasicOSUIComponentStylePropertiesLook,
+public typealias EmptyUIComponentStyleProperties = UIComponentStylePropertiesTemplate<EmptyUIComponentStylePropertiesOSLook,
                                                                                       EmptyUIComponentStylePropertiesLook,
                                                                                       EmptyUIComponentStylePropertiesLookParams,
                                                                                       EmptyUIComponentStylePropertiesLayoutParams>

@@ -77,10 +77,12 @@ public final class NavigationMenuUIComponentGroup<OptionKey: InputUIElementCompo
 
 extension NavigationMenuUIComponentGroup {
     
-    public func setupStyleLookOS(_ look: BasicOSUIElementComponentStylePropertiesLook) {
+    public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
         let tempView = UIView()
         backgroundColor = tempView.backgroundColor
     }
+    
+    public func setupStyleLookOS(_ look: EmptyUIElementComponentStylePropertiesOSLook) {}
     
     public func setupStyleLookSystem(_ look: NavigationMenuUIComponentGroupStylePropertiesLook) {
         backgroundColor = look.backgroundColor

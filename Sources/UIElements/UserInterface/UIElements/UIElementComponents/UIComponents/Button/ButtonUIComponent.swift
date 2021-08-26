@@ -88,7 +88,11 @@ public final class ButtonUIComponent: UIView, ButtonUIComponentInterface {
 
 extension ButtonUIComponent {
     
-    public func setupStyleLookOS(_ look: BasicOSUIElementComponentStylePropertiesLook) {
+    public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
+        setupStyleLookOSConfiguration(lookConfiguration, for: button)
+    }
+    
+    public func setupStyleLookOS(_ look: ButtonUIComponentStylePropertiesOSLook) {
         setupStyleLookOS(look, for: button)
     }
     

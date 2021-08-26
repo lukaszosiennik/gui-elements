@@ -13,8 +13,8 @@ public protocol UIComponentScreen: UIElementComponent where
 
 extension UIComponentScreen {
     
-    public func setupStyleLookOS(_ look: BasicOSUIElementComponentStylePropertiesLook) {
-        setupStyleLookOSForUserFriendliness(look.isUserFriendly)
+    public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
+        setupStyleLookOSForUserFriendliness(lookConfiguration.isUserFriendly)
         
         setupScreenStyleLookOS()
     }

@@ -53,6 +53,8 @@ extension InformationUIComponentScreen {
     
     public func setupScreenStyleLookOS() {}
     
+    public func setupStyleLookOS(_ look: EmptyUIElementComponentStylePropertiesOSLook) {}
+    
     public func setupStyleLookSystem(_ look: InformationUIComponentScreenStylePropertiesLook) {
         backgroundColor = look.backgroundColor
     }

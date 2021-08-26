@@ -54,7 +54,9 @@ public class CardUIComponentGroupBasis<BodyViewType: UIView, BodyUIElementCompon
 
 extension CardUIComponentGroupBasis {
     
-    public func setupStyleLookOS(_ look: BasicOSUIElementComponentStylePropertiesLook) {}
+    public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {}
+    
+    public func setupStyleLookOS(_ look: EmptyUIElementComponentStylePropertiesOSLook) {}
     
     public func setupStyleLookSystem(_ look: CardUIComponentGroupStylePropertiesLook) {}
 }

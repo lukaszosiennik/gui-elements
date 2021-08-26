@@ -7,7 +7,7 @@ public enum UIStyleType: Hashable {
     
     case custom
     
-    case os(_ styleProperties: OSUIElementComponentStyleProperties)
+    case os(_ configuration: UIElementComponentOSConfiguration)
     case system(UISystemStyleType)
 }
 
@@ -20,10 +20,10 @@ extension UIStyleType {
     public static func os(preferredLayoutParams: Bool) -> Self {
         return .os(
             .init(
-                look: .init(
+                lookConfiguration: .init(
                     isUserFriendly: true
                 ),
-                layoutParams: .init(
+                layoutParamsConfiguration: .init(
                     isPreferred: preferredLayoutParams
                 )
             )

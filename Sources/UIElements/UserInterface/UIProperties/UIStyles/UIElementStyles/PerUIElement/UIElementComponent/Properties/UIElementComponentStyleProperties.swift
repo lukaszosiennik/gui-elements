@@ -5,28 +5,28 @@
 
 public protocol UIElementComponentStyleProperties: UIElementStyleProperties {
     
-    associatedtype OSUIElementComponentStylePropertiesLookType: OSUIElementComponentStylePropertiesLook
+    associatedtype UIElementComponentStylePropertiesOSLookType: UIElementComponentStylePropertiesOSLook
     associatedtype UIElementComponentStylePropertiesLookType: UIElementComponentStylePropertiesLook
     associatedtype UIElementComponentStylePropertiesLookParamsType: UIElementComponentStylePropertiesLookParams
     associatedtype UIElementComponentStylePropertiesLayoutParamsType: UIElementComponentStylePropertiesLayoutParams
     
-    var lookSort: UIElementComponentStylePropertiesLookSort<OSUIElementComponentStylePropertiesLookType, UIElementComponentStylePropertiesLookType> { get }
+    var lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesLookType> { get }
     var lookParams: UIElementComponentStylePropertiesLookParamsType? { get }
     var layoutParams: UIElementComponentStylePropertiesLayoutParamsType? { get }
     
-    init(lookSort: UIElementComponentStylePropertiesLookSort<OSUIElementComponentStylePropertiesLookType, UIElementComponentStylePropertiesLookType>, lookParams: UIElementComponentStylePropertiesLookParamsType?, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?)
+    init(lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesLookType>, lookParams: UIElementComponentStylePropertiesLookParamsType?, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?)
 }
 
 extension UIElementComponentStyleProperties {
     
     static func `default`(styleType: UIStyleType) -> Self {
         var layoutParams: UIElementComponentStylePropertiesLayoutParamsType? = nil
-        if case let .os(styleProperties) = styleType, styleProperties.isPreferredLayoutParams {
+        if case let .os(styleProperties) = styleType, styleProperties.isLayoutParamsPreferred {
             layoutParams = .preferred
         }
         
         return .init(
-            lookSort: .os,
+            lookSort: .os(.init()),
             lookParams: .default,
             layoutParams: layoutParams
         )
