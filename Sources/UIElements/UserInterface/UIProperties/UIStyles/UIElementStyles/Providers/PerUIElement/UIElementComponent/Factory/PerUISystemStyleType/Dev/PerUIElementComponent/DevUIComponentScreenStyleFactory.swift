@@ -12,7 +12,7 @@ public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyle
         return .init(
             type: styleType,
             properties: .init(
-                lookSort: .system(.init(
+                lookType: .system(.init(
                     backgroundColor: ColorPalette.Information.background_white
                 )),
                 lookParams: .default,
@@ -25,7 +25,7 @@ public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyle
         return .init(
             type: styleType,
             properties: .init(
-                lookSort: .system(.init(
+                lookType: .system(.init(
                     backgroundColor: ColorPalette.NavigationMenuOption.background_white
                 )),
                 layoutParams: .preferred

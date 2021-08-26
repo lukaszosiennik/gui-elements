@@ -35,7 +35,7 @@ public final class ButtonUIComponent: UIView, ButtonUIComponentInterface {
     public func setupSettings() {
         let buttonType: UIButton.ButtonType
         if settings.styleType.isOS {
-            if case let .os(look) = settings.styleProperties.lookSort {
+            if case let .os(look) = settings.styleProperties.lookType {
                 switch look.buttonStyleType {
                 case .default:
                     buttonType = .system

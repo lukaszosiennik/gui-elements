@@ -12,7 +12,7 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
         return .init(
             type: styleType,
             properties: .init(
-                lookSort: .system(.init(
+                lookType: .system(.init(
                     textColor: ColorPalette.Label.text_blue
                 )),
                 lookParams: .default,
@@ -25,7 +25,7 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
         return .init(
             type: styleType,
             properties: .init(
-                lookSort: .system(.init(
+                lookType: .system(.init(
                     titleColorNormal: ColorPalette.Button.text_normal_green,
                     titleColorHighlighted: ColorPalette.Button.text_highlighted_red
                 )),
@@ -38,7 +38,7 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
         return .init(
             type: styleType,
             properties: .init(
-                lookSort: .system(.init(
+                lookType: .system(.init(
                     backgroundColor: ColorPalette.Placeholder.background_green
                 )),
                 layoutParams: .preferred

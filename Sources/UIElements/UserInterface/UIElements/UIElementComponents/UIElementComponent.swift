@@ -76,7 +76,7 @@ extension UIElementComponent {
         if case let .os(configuration) = settings.styleType {
             setupStyleLookOSConfiguration(configuration.lookConfiguration)
         } else {
-            switch settings.styleProperties.lookSort {
+            switch settings.styleProperties.lookType {
             case .os(let look):
                 setupStyleLookOS(look)
             case .system(let look):

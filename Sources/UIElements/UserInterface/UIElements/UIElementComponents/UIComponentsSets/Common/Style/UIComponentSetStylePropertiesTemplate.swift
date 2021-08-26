@@ -9,12 +9,12 @@ public struct UIComponentSetStylePropertiesTemplate<
     UIComponentSetStylePropertiesLayoutParamsType: UIComponentSetStylePropertiesLayoutParams
 >: UIComponentSetStyleProperties {
 
-    public let lookSort: UIElementComponentStylePropertiesLookSort<EmptyUIElementComponentStylePropertiesOSLook, UIComponentSetStylePropertiesLookType>
+    public let lookType: UIElementComponentStylePropertiesLookType<EmptyUIElementComponentStylePropertiesOSLook, UIComponentSetStylePropertiesLookType>
     public let lookParams: UIComponentSetStylePropertiesLookParamsType?
     public let layoutParams: UIComponentSetStylePropertiesLayoutParamsType?
     
-    public init(lookSort: UIElementComponentStylePropertiesLookSort<EmptyUIElementComponentStylePropertiesOSLook, UIComponentSetStylePropertiesLookType>, lookParams: UIComponentSetStylePropertiesLookParamsType?, layoutParams: UIComponentSetStylePropertiesLayoutParamsType?) {
-        self.lookSort = lookSort
+    public init(lookType: UIElementComponentStylePropertiesLookType<EmptyUIElementComponentStylePropertiesOSLook, UIComponentSetStylePropertiesLookType>, lookParams: UIComponentSetStylePropertiesLookParamsType?, layoutParams: UIComponentSetStylePropertiesLayoutParamsType?) {
+        self.lookType = lookType
         self.lookParams = lookParams
         self.layoutParams = layoutParams
     }

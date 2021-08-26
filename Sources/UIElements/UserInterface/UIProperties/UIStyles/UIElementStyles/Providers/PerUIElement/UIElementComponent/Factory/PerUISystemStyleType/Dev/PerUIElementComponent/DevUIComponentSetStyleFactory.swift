@@ -12,7 +12,7 @@ public final class DevUIComponentSetStyleFactory: UIElementComponentTypeStyleFac
         return .init(
             type: styleType,
             properties: .init(
-                lookSort: .system(.init(
+                lookType: .system(.init(
                     backgroundColor: ColorPalette.NavigationMenuOption.background_white,
                     borderColor: ColorPalette.NavigationMenuOption.border_black,
                     borderWidth: ConstantPalette.NavigationMenuOption.UILook.borderWidth_1

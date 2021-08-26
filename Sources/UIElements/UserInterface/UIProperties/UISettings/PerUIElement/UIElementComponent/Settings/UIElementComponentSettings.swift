@@ -106,7 +106,7 @@ extension UIElementComponentSettings where
             return .init(
                 style: defaultStyle,
                 overwrittenBy: .init(
-                    lookSort: defaultStyle.properties.lookSort,
+                    lookType: defaultStyle.properties.lookType,
                     lookParams: .init(
                         lookParams: defaultStyle.properties.lookParams,
                         overwrittenBy: stylePropertiesOverwritten.lookParams
@@ -121,20 +121,20 @@ extension UIElementComponentSettings where
         
         let styleProperties = style.properties
         
-        let lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesSystemLookType>
-        if case let .system(look) = styleProperties.lookSort {
-            lookSort = .system(.init(
+        let lookType: UIElementComponentStylePropertiesLookType<UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesSystemLookType>
+        if case let .system(look) = styleProperties.lookType {
+            lookType = .system(.init(
                 look: look,
                 overwrittenBy: stylePropertiesOverwritten.look
             ))
         } else {
-            lookSort = styleProperties.lookSort
+            lookType = styleProperties.lookType
         }
         
         return .init(
             style: style,
             overwrittenBy: .init(
-                lookSort: lookSort,
+                lookType: lookType,
                 lookParams: .init(
                     lookParams: styleProperties.lookParams,
                     overwrittenBy: stylePropertiesOverwritten.lookParams

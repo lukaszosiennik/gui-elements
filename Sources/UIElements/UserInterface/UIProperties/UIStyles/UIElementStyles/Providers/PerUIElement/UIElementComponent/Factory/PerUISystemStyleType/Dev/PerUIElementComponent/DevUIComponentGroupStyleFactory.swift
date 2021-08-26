@@ -12,7 +12,7 @@ public final class DevUIComponentGroupStyleFactory: UIElementComponentTypeStyleF
         return .init(
             type: styleType,
             properties: .init(
-                lookSort: .system(.init(
+                lookType: .system(.init(
                     backgroundColor: ColorPalette.NavigationMenu.background_white
                 )),
                 lookParams: .default,
@@ -30,7 +30,7 @@ public final class DevUIComponentGroupStyleFactory: UIElementComponentTypeStyleF
         return .init(
             type: styleType,
             properties: .init(
-                lookSort: .system(.init()),
+                lookType: .system(.init()),
                 layoutParams: .init()
             )
         )

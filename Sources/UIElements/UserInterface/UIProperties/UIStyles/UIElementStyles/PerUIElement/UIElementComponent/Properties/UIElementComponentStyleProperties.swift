@@ -10,11 +10,11 @@ public protocol UIElementComponentStyleProperties: UIElementStyleProperties {
     associatedtype UIElementComponentStylePropertiesLookParamsType: UIElementComponentStylePropertiesLookParams
     associatedtype UIElementComponentStylePropertiesLayoutParamsType: UIElementComponentStylePropertiesLayoutParams
     
-    var lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesSystemLookType> { get }
+    var lookType: UIElementComponentStylePropertiesLookType<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesSystemLookType> { get }
     var lookParams: UIElementComponentStylePropertiesLookParamsType? { get }
     var layoutParams: UIElementComponentStylePropertiesLayoutParamsType? { get }
     
-    init(lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesSystemLookType>, lookParams: UIElementComponentStylePropertiesLookParamsType?, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?)
+    init(lookType: UIElementComponentStylePropertiesLookType<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesSystemLookType>, lookParams: UIElementComponentStylePropertiesLookParamsType?, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?)
 }
 
 extension UIElementComponentStyleProperties {
@@ -26,7 +26,7 @@ extension UIElementComponentStyleProperties {
         }
         
         return .init(
-            lookSort: .os(.init()),
+            lookType: .os(.init()),
             lookParams: .default,
             layoutParams: layoutParams
         )
