@@ -3,7 +3,7 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum UIElementComponentStylePropertiesLayoutParamsSort<
+public enum UIElementComponentStylePropertiesLayoutParamsType<
     UIElementComponentStylePropertiesLayoutParamsType: UIElementComponentStylePropertiesLayoutParams
 > {
     
