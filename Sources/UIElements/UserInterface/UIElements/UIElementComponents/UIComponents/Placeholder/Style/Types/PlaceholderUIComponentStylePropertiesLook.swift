@@ -5,7 +5,7 @@
 
 import UIKit
 
-public struct PlaceholderUIComponentStylePropertiesLook: UIComponentStylePropertiesLook {
+public struct PlaceholderUIComponentStylePropertiesLook: UIComponentStylePropertiesSystemLook {
     
     public let backgroundColor: UIColor
     

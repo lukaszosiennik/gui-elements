@@ -6,15 +6,15 @@
 public protocol UIElementComponentStyleProperties: UIElementStyleProperties {
     
     associatedtype UIElementComponentStylePropertiesOSLookType: UIElementComponentStylePropertiesOSLook
-    associatedtype UIElementComponentStylePropertiesLookType: UIElementComponentStylePropertiesLook
+    associatedtype UIElementComponentStylePropertiesSystemLookType: UIElementComponentStylePropertiesSystemLook
     associatedtype UIElementComponentStylePropertiesLookParamsType: UIElementComponentStylePropertiesLookParams
     associatedtype UIElementComponentStylePropertiesLayoutParamsType: UIElementComponentStylePropertiesLayoutParams
     
-    var lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesLookType> { get }
+    var lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesSystemLookType> { get }
     var lookParams: UIElementComponentStylePropertiesLookParamsType? { get }
     var layoutParams: UIElementComponentStylePropertiesLayoutParamsType? { get }
     
-    init(lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesLookType>, lookParams: UIElementComponentStylePropertiesLookParamsType?, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?)
+    init(lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesSystemLookType>, lookParams: UIElementComponentStylePropertiesLookParamsType?, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?)
 }
 
 extension UIElementComponentStyleProperties {

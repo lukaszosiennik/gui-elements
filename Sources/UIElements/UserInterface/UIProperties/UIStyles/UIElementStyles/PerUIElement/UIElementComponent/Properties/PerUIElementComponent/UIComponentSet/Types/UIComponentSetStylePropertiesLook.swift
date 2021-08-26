@@ -3,5 +3,5 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentSetStylePropertiesLook: UIElementComponentStylePropertiesLook where
+public protocol UIComponentSetStylePropertiesLook: UIElementComponentStylePropertiesSystemLook where
     UIElementComponentStylePropertiesOverwrittenLookType: UIComponentSetStylePropertiesOverwrittenLook {}

@@ -83,7 +83,7 @@ extension UIElementComponentSettings {
 }
 
 extension UIElementComponentSettings where
-    UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookType.UIElementComponentStylePropertiesOverwrittenLookType == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLookType,
+    UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesSystemLookType.UIElementComponentStylePropertiesOverwrittenLookType == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLookType,
     UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookParamsType.UIElementComponentStylePropertiesOverwrittenLookParamsType == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLookParamsType,
     UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLayoutParamsType.UIElementComponentStylePropertiesOverwrittenLayoutParamsType == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLayoutParamsType {
     
@@ -121,7 +121,7 @@ extension UIElementComponentSettings where
         
         let styleProperties = style.properties
         
-        let lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookType>
+        let lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesSystemLookType>
         if case let .system(look) = styleProperties.lookSort {
             lookSort = .system(.init(
                 look: look,

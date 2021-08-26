@@ -5,9 +5,9 @@
 
 public enum UIElementComponentStylePropertiesLookSort<
     UIElementComponentStylePropertiesOSLookType: UIElementComponentStylePropertiesOSLook,
-    UIElementComponentStylePropertiesLookType: UIElementComponentStylePropertiesLook
+    UIElementComponentStylePropertiesSystemLookType: UIElementComponentStylePropertiesSystemLook
 > {
     
     case os(_ look: UIElementComponentStylePropertiesOSLookType)
-    case system(_ look: UIElementComponentStylePropertiesLookType)
+    case system(_ look: UIElementComponentStylePropertiesSystemLookType)
 }

@@ -47,7 +47,7 @@ extension CustomButtonUIComponent {
         setupStyleLookOS(look, for: self)
     }
     
-    public func setupStyleLookSystem(_ look: ButtonUIComponentStylePropertiesLook) {
+    public func setupStyleLookSystem(_ look: ButtonUIComponentStylePropertiesSystemLook) {
         setupStyleLookSystem(look, for: self)
     }
 }

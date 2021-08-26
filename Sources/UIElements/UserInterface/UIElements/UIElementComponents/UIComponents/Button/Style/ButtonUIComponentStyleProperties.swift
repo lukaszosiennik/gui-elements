@@ -5,7 +5,7 @@
 
 public typealias ButtonUIComponentStyleProperties = UIComponentStylePropertiesTemplate<
     ButtonUIComponentStylePropertiesOSLook,
-    ButtonUIComponentStylePropertiesLook,
+    ButtonUIComponentStylePropertiesSystemLook,
     EmptyUIComponentStylePropertiesLookParams,
     ButtonUIComponentStylePropertiesLayoutParams
 >

@@ -30,7 +30,7 @@ public protocol UIElementComponent: UIElement {
     
     func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration)
     func setupStyleLookOS(_ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesOSLookType)
-    func setupStyleLookSystem(_ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookType)
+    func setupStyleLookSystem(_ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesSystemLookType)
     func setupStyleLookParamsOS()
     func setupStyleLookParamsSystem(_ lookParams: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookParamsType)
     func setupStyleLayoutInitialization()

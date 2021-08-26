@@ -6,7 +6,7 @@
 extension UIComponentScreenStyleProperties where
     UIElementComponentStylePropertiesLookParamsType == EmptyUIComponentScreenStylePropertiesLookParams {
     
-    public init(lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesLookType>, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?) {
+    public init(lookSort: UIElementComponentStylePropertiesLookSort<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesSystemLookType>, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?) {
         self = .init(
             lookSort: lookSort,
             lookParams: .init(),

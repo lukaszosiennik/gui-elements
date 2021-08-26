@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentScreenStylePropertiesLook: UIElementComponentStylePropertiesLook where
+public protocol UIComponentScreenStylePropertiesLook: UIElementComponentStylePropertiesSystemLook where
     UIElementComponentStylePropertiesOverwrittenLookType: UIComponentScreenStylePropertiesOverwrittenLook {}
 
 extension UIComponentScreenStylePropertiesLook {

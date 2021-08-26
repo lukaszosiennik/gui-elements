@@ -96,7 +96,7 @@ extension ButtonUIComponent {
         setupStyleLookOS(look, for: button)
     }
     
-    public func setupStyleLookSystem(_ look: ButtonUIComponentStylePropertiesLook) {
+    public func setupStyleLookSystem(_ look: ButtonUIComponentStylePropertiesSystemLook) {
         setupStyleLookSystem(look, for: button)
     }
 }

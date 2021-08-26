@@ -5,7 +5,7 @@
 
 public typealias EmptyUIComponentStyleProperties = UIComponentStylePropertiesTemplate<
     EmptyUIComponentStylePropertiesOSLook,
-    EmptyUIComponentStylePropertiesLook,
+    EmptyUIComponentStylePropertiesSystemLook,
     EmptyUIComponentStylePropertiesLookParams,
     EmptyUIComponentStylePropertiesLayoutParams
 >
