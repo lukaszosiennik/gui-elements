@@ -3,7 +3,9 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuUIComponentGroupSettings<OptionKey: InputUIElementComponentActionsKeyInterface>: UIComponentGroupSettings {
+public struct NavigationMenuUIComponentGroupSettings<
+    OptionKey: InputUIElementComponentActionsKeyInterface
+>: UIComponentGroupSettings {
 
     public typealias UIElementComponentStylePropertiesOverwrittenType = NavigationMenuUIComponentGroupStylePropertiesOverwritten
     

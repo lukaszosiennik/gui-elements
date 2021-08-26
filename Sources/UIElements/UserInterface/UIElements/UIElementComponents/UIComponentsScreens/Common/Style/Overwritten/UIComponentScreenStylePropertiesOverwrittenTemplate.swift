@@ -3,15 +3,17 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct UIComponentScreenStylePropertiesOverwrittenTemplate<UIElementComponentStylePropertiesOverwrittenLookType: UIComponentScreenStylePropertiesOverwrittenLook,
-                                                                  UIElementComponentStylePropertiesOverwrittenLookParamsType: UIComponentScreenStylePropertiesOverwrittenLookParams,
-                                                                  UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIComponentScreenStylePropertiesOverwrittenLayoutParams>: UIComponentScreenStylePropertiesOverwritten {
+public struct UIComponentScreenStylePropertiesOverwrittenTemplate<
+    UIComponentScreenStylePropertiesOverwrittenLookType: UIComponentScreenStylePropertiesOverwrittenLook,
+    UIComponentScreenStylePropertiesOverwrittenLookParamsType: UIComponentScreenStylePropertiesOverwrittenLookParams,
+    UIComponentScreenStylePropertiesOverwrittenLayoutParamsType: UIComponentScreenStylePropertiesOverwrittenLayoutParams
+>: UIComponentScreenStylePropertiesOverwritten {
 
-    public let look: UIElementComponentStylePropertiesOverwrittenLookType?
-    public let lookParams: UIElementComponentStylePropertiesOverwrittenLookParamsType?
-    public let layoutParams: UIElementComponentStylePropertiesOverwrittenLayoutParamsType?
+    public let look: UIComponentScreenStylePropertiesOverwrittenLookType?
+    public let lookParams: UIComponentScreenStylePropertiesOverwrittenLookParamsType?
+    public let layoutParams: UIComponentScreenStylePropertiesOverwrittenLayoutParamsType?
     
-    public init(look: UIElementComponentStylePropertiesOverwrittenLookType? = nil, lookParams: UIElementComponentStylePropertiesOverwrittenLookParamsType? = nil, layoutParams: UIElementComponentStylePropertiesOverwrittenLayoutParamsType? = nil) {
+    public init(look: UIComponentScreenStylePropertiesOverwrittenLookType? = nil, lookParams: UIComponentScreenStylePropertiesOverwrittenLookParamsType? = nil, layoutParams: UIComponentScreenStylePropertiesOverwrittenLayoutParamsType? = nil) {
         self.look = look
         self.lookParams = lookParams
         self.layoutParams = layoutParams

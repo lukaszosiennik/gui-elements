@@ -3,15 +3,17 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct UIComponentSetStylePropertiesTemplate<UIElementComponentStylePropertiesLookType: UIComponentSetStylePropertiesLook,
-                                                    UIElementComponentStylePropertiesLookParamsType: UIComponentSetStylePropertiesLookParams,
-                                                    UIElementComponentStylePropertiesLayoutParamsType: UIComponentSetStylePropertiesLayoutParams>: UIComponentSetStyleProperties {
+public struct UIComponentSetStylePropertiesTemplate<
+    UIComponentSetStylePropertiesLookType: UIComponentSetStylePropertiesLook,
+    UIComponentSetStylePropertiesLookParamsType: UIComponentSetStylePropertiesLookParams,
+    UIComponentSetStylePropertiesLayoutParamsType: UIComponentSetStylePropertiesLayoutParams
+>: UIComponentSetStyleProperties {
 
-    public let lookSort: UIElementComponentStylePropertiesLookSort<EmptyUIElementComponentStylePropertiesOSLook, UIElementComponentStylePropertiesLookType>
-    public let lookParams: UIElementComponentStylePropertiesLookParamsType?
-    public let layoutParams: UIElementComponentStylePropertiesLayoutParamsType?
+    public let lookSort: UIElementComponentStylePropertiesLookSort<EmptyUIElementComponentStylePropertiesOSLook, UIComponentSetStylePropertiesLookType>
+    public let lookParams: UIComponentSetStylePropertiesLookParamsType?
+    public let layoutParams: UIComponentSetStylePropertiesLayoutParamsType?
     
-    public init(lookSort: UIElementComponentStylePropertiesLookSort<EmptyUIElementComponentStylePropertiesOSLook, UIElementComponentStylePropertiesLookType>, lookParams: UIElementComponentStylePropertiesLookParamsType?, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?) {
+    public init(lookSort: UIElementComponentStylePropertiesLookSort<EmptyUIElementComponentStylePropertiesOSLook, UIComponentSetStylePropertiesLookType>, lookParams: UIComponentSetStylePropertiesLookParamsType?, layoutParams: UIComponentSetStylePropertiesLayoutParamsType?) {
         self.lookSort = lookSort
         self.lookParams = lookParams
         self.layoutParams = layoutParams

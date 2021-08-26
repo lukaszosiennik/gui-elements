@@ -3,6 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias EmptyUIComponentStylePropertiesOverwritten = UIComponentStylePropertiesOverwrittenTemplate<EmptyUIComponentStylePropertiesOverwrittenLook,
-                                                                                                            EmptyUIComponentStylePropertiesOverwrittenLookParams,
-                                                                                                            EmptyUIComponentStylePropertiesOverwrittenLayoutParams>
+public typealias EmptyUIComponentStylePropertiesOverwritten = UIComponentStylePropertiesOverwrittenTemplate<
+    EmptyUIComponentStylePropertiesOverwrittenLook,
+    EmptyUIComponentStylePropertiesOverwrittenLookParams,
+    EmptyUIComponentStylePropertiesOverwrittenLayoutParams
+>

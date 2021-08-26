@@ -3,6 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias CardUIComponentGroupStyleProperties = UIComponentGroupStylePropertiesTemplate<CardUIComponentGroupStylePropertiesLook,
-                                                                                               EmptyUIComponentGroupStylePropertiesLookParams,
-                                                                                               CardUIComponentGroupStylePropertiesLayoutParams>
+public typealias CardUIComponentGroupStyleProperties = UIComponentGroupStylePropertiesTemplate<
+    CardUIComponentGroupStylePropertiesLook,
+    EmptyUIComponentGroupStylePropertiesLookParams,
+    CardUIComponentGroupStylePropertiesLayoutParams
+>

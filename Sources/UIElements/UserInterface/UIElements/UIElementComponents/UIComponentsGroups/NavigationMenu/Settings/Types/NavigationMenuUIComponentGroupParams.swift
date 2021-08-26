@@ -3,7 +3,9 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuUIComponentGroupParams<OptionKey: InputUIElementComponentActionsKeyInterface>: UIComponentGroupParams, InputUIElementComponentParamsActionsInterface {
+public struct NavigationMenuUIComponentGroupParams<
+    OptionKey: InputUIElementComponentActionsKeyInterface
+>: UIComponentGroupParams, InputUIElementComponentParamsActionsInterface {
     
     public typealias ActionsKey = OptionKey
     

@@ -3,6 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias InformationUIComponentScreenStyleProperties = UIComponentScreenStylePropertiesTemplate<InformationUIComponentScreenStylePropertiesLook,
-                                                                                                        InformationUIComponentScreenStylePropertiesLookParams,
-                                                                                                        InformationUIComponentScreenStylePropertiesLayoutParams>
+public typealias InformationUIComponentScreenStyleProperties = UIComponentScreenStylePropertiesTemplate<
+    InformationUIComponentScreenStylePropertiesLook,
+    InformationUIComponentScreenStylePropertiesLookParams,
+    InformationUIComponentScreenStylePropertiesLayoutParams
+>

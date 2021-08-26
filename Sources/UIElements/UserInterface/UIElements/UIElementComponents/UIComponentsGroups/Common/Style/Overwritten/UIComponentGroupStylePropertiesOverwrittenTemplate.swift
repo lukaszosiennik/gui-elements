@@ -3,15 +3,17 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct UIComponentGroupStylePropertiesOverwrittenTemplate<UIElementComponentStylePropertiesOverwrittenLookType: UIComponentGroupStylePropertiesOverwrittenLook,
-                                                                 UIElementComponentStylePropertiesOverwrittenLookParamsType: UIComponentGroupStylePropertiesOverwrittenLookParams,
-                                                                 UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIComponentGroupStylePropertiesOverwrittenLayoutParams>: UIComponentGroupStylePropertiesOverwritten {
+public struct UIComponentGroupStylePropertiesOverwrittenTemplate<
+    UIComponentGroupStylePropertiesOverwrittenLookType: UIComponentGroupStylePropertiesOverwrittenLook,
+    UIComponentGroupStylePropertiesOverwrittenLookParamsType: UIComponentGroupStylePropertiesOverwrittenLookParams,
+    UIComponentGroupStylePropertiesOverwrittenLayoutParamsType: UIComponentGroupStylePropertiesOverwrittenLayoutParams
+>: UIComponentGroupStylePropertiesOverwritten {
 
-    public let look: UIElementComponentStylePropertiesOverwrittenLookType?
-    public let lookParams: UIElementComponentStylePropertiesOverwrittenLookParamsType?
-    public let layoutParams: UIElementComponentStylePropertiesOverwrittenLayoutParamsType?
+    public let look: UIComponentGroupStylePropertiesOverwrittenLookType?
+    public let lookParams: UIComponentGroupStylePropertiesOverwrittenLookParamsType?
+    public let layoutParams: UIComponentGroupStylePropertiesOverwrittenLayoutParamsType?
     
-    public init(look: UIElementComponentStylePropertiesOverwrittenLookType? = nil, lookParams: UIElementComponentStylePropertiesOverwrittenLookParamsType? = nil, layoutParams: UIElementComponentStylePropertiesOverwrittenLayoutParamsType? = nil) {
+    public init(look: UIComponentGroupStylePropertiesOverwrittenLookType? = nil, lookParams: UIComponentGroupStylePropertiesOverwrittenLookParamsType? = nil, layoutParams: UIComponentGroupStylePropertiesOverwrittenLayoutParamsType? = nil) {
         self.look = look
         self.lookParams = lookParams
         self.layoutParams = layoutParams

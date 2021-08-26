@@ -3,7 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct UIElementComponentStyle<PropertiesType: UIElementComponentStyleProperties>: UIElementStyle {
+public struct UIElementComponentStyle<
+    PropertiesType: UIElementComponentStyleProperties
+>: UIElementStyle {
     
     public let type: UIStyleType
     let properties: PropertiesType

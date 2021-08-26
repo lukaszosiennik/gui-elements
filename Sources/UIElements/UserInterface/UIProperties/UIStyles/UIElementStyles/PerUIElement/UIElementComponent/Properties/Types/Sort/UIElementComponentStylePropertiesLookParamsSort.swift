@@ -3,7 +3,9 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum UIElementComponentStylePropertiesLookParamsSort<UIElementComponentStylePropertiesLookParamsType: UIElementComponentStylePropertiesLookParams> {
+public enum UIElementComponentStylePropertiesLookParamsSort<
+    UIElementComponentStylePropertiesLookParamsType: UIElementComponentStylePropertiesLookParams
+> {
     
     case os
     case system(_ lookParams: UIElementComponentStylePropertiesLookParamsType)

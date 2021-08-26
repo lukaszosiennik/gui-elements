@@ -3,7 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias ButtonUIComponentStyleProperties = UIComponentStylePropertiesTemplate<ButtonUIComponentStylePropertiesOSLook,
-                                                                                       ButtonUIComponentStylePropertiesLook,
-                                                                                       EmptyUIComponentStylePropertiesLookParams,
-                                                                                       ButtonUIComponentStylePropertiesLayoutParams>
+public typealias ButtonUIComponentStyleProperties = UIComponentStylePropertiesTemplate<
+    ButtonUIComponentStylePropertiesOSLook,
+    ButtonUIComponentStylePropertiesLook,
+    EmptyUIComponentStylePropertiesLookParams,
+    ButtonUIComponentStylePropertiesLayoutParams
+>

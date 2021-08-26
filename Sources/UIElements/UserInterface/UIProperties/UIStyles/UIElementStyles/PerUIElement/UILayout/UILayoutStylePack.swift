@@ -3,7 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct UILayoutStylePack<StylePropertiesType: UILayoutStyleProperties> {
+public struct UILayoutStylePack<
+    StylePropertiesType: UILayoutStyleProperties
+> {
     
     let factory: UIElementStyleFactoryInterface?
     let style: UILayoutStyle<StylePropertiesType>

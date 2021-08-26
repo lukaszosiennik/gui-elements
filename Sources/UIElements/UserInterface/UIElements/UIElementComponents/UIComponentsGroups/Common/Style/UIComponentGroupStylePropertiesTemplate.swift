@@ -3,15 +3,17 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct UIComponentGroupStylePropertiesTemplate<UIElementComponentStylePropertiesLookType: UIComponentGroupStylePropertiesLook,
-                                                      UIElementComponentStylePropertiesLookParamsType: UIComponentGroupStylePropertiesLookParams,
-                                                      UIElementComponentStylePropertiesLayoutParamsType: UIComponentGroupStylePropertiesLayoutParams>: UIComponentGroupStyleProperties {
+public struct UIComponentGroupStylePropertiesTemplate<
+    UIComponentGroupStylePropertiesLookType: UIComponentGroupStylePropertiesLook,
+    UIComponentGroupStylePropertiesLookParamsType: UIComponentGroupStylePropertiesLookParams,
+    UIComponentGroupStylePropertiesLayoutParamsType: UIComponentGroupStylePropertiesLayoutParams
+>: UIComponentGroupStyleProperties {
 
-    public let lookSort: UIElementComponentStylePropertiesLookSort<EmptyUIElementComponentStylePropertiesOSLook, UIElementComponentStylePropertiesLookType>
-    public let lookParams: UIElementComponentStylePropertiesLookParamsType?
-    public let layoutParams: UIElementComponentStylePropertiesLayoutParamsType?
+    public let lookSort: UIElementComponentStylePropertiesLookSort<EmptyUIElementComponentStylePropertiesOSLook, UIComponentGroupStylePropertiesLookType>
+    public let lookParams: UIComponentGroupStylePropertiesLookParamsType?
+    public let layoutParams: UIComponentGroupStylePropertiesLayoutParamsType?
     
-    public init(lookSort: UIElementComponentStylePropertiesLookSort<EmptyUIElementComponentStylePropertiesOSLook, UIElementComponentStylePropertiesLookType>, lookParams: UIElementComponentStylePropertiesLookParamsType?, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?) {
+    public init(lookSort: UIElementComponentStylePropertiesLookSort<EmptyUIElementComponentStylePropertiesOSLook, UIComponentGroupStylePropertiesLookType>, lookParams: UIComponentGroupStylePropertiesLookParamsType?, layoutParams: UIComponentGroupStylePropertiesLayoutParamsType?) {
         self.lookSort = lookSort
         self.lookParams = lookParams
         self.layoutParams = layoutParams

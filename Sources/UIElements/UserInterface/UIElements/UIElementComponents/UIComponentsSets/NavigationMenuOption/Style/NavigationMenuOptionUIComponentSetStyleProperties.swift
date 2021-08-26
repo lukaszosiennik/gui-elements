@@ -3,6 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias NavigationMenuOptionUIComponentSetStyleProperties = UIComponentSetStylePropertiesTemplate<NavigationMenuOptionUIComponentSetStylePropertiesLook,
-                                                                                                           EmptyUIComponentSetStylePropertiesLookParams,
-                                                                                                           NavigationMenuOptionUIComponentSetStylePropertiesLayoutParams>
+public typealias NavigationMenuOptionUIComponentSetStyleProperties = UIComponentSetStylePropertiesTemplate<
+    NavigationMenuOptionUIComponentSetStylePropertiesLook,
+    EmptyUIComponentSetStylePropertiesLookParams,
+    NavigationMenuOptionUIComponentSetStylePropertiesLayoutParams
+>

@@ -3,7 +3,9 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct CardUIComponentGroupSettings<BodyUIElementComponentSettingsType: UIElementComponentSettings>: UIComponentGroupSettings {
+public struct CardUIComponentGroupSettings<
+    BodyUIElementComponentSettingsType: UIElementComponentSettings
+>: UIComponentGroupSettings {
 
     public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentGroupStylePropertiesOverwritten
     

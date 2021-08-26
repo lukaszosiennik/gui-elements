@@ -3,7 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias LabelUIComponentStyleProperties = UIComponentStylePropertiesTemplate<EmptyUIComponentStylePropertiesOSLook,
-                                                                                      LabelUIComponentStylePropertiesLook,
-                                                                                      LabelUIComponentStylePropertiesLookParams,
-                                                                                      LabelUIComponentStylePropertiesLayoutParams>
+public typealias LabelUIComponentStyleProperties = UIComponentStylePropertiesTemplate<
+    EmptyUIComponentStylePropertiesOSLook,
+    LabelUIComponentStylePropertiesLook,
+    LabelUIComponentStylePropertiesLookParams,
+    LabelUIComponentStylePropertiesLayoutParams
+>

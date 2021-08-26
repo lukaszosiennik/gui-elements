@@ -3,7 +3,9 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuUIComponentScreenSettings<OptionKey: InputUIElementComponentActionsKeyInterface>: UIComponentScreenSettings {
+public struct NavigationMenuUIComponentScreenSettings<
+    OptionKey: InputUIElementComponentActionsKeyInterface
+>: UIComponentScreenSettings {
     
     public let params: NavigationMenuUIComponentScreenParams<OptionKey>
     public var style: UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>
