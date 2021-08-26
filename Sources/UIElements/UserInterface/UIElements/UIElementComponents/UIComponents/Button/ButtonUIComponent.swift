@@ -33,31 +33,7 @@ public final class ButtonUIComponent: UIView, ButtonUIComponentInterface {
     }
     
     public func setupSettings() {
-        let buttonType: UIButton.ButtonType
-        if settings.styleType.isOS {
-            if case let .os(look) = settings.styleProperties.lookType {
-                switch look.buttonStyleType {
-                case .default:
-                    buttonType = .system
-                case .infoLight:
-                    buttonType = .infoLight
-                case .infoDark:
-                    buttonType = .infoDark
-                case .detailDisclosure:
-                    buttonType = .detailDisclosure
-                case .contactAdd:
-                    buttonType = .contactAdd
-                case .close:
-                    buttonType = .close
-                }
-            } else {
-                buttonType = .custom
-            }
-        } else {
-            buttonType = .custom
-        }
-        
-        self.button = UIButton(type: buttonType)
+        self.button = UIButton(type: styleLookButtonType(from: settings.styleProperties.lookType))
         
         setupNestedSettings()
         
@@ -90,6 +66,28 @@ extension ButtonUIComponent {
     
     public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
         setupStyleLookOSConfiguration(lookConfiguration, for: button)
+    }
+    
+    private func styleLookButtonType(from lookType: UIElementComponentStylePropertiesLookType<ButtonUIComponentStylePropertiesOSLook, ButtonUIComponentStylePropertiesSystemLook>) -> UIButton.ButtonType {
+        switch lookType {
+        case .os(let look):
+            switch look.buttonStyleType {
+            case .default:
+                return .system
+            case .infoLight:
+                return .infoLight
+            case .infoDark:
+                return .infoDark
+            case .detailDisclosure:
+                return .detailDisclosure
+            case .contactAdd:
+                return .contactAdd
+            case .close:
+                return .close
+            }
+        case .system:
+            return .custom
+        }
     }
     
     public func setupStyleLookOS(_ look: ButtonUIComponentStylePropertiesOSLook) {
