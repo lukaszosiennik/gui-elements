@@ -37,11 +37,16 @@ public final class TextFieldUIComponent: UITextField, UIComponent {
 
 extension TextFieldUIComponent {
     
-    public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {}
+    public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
+        let tempTextField = UITextField()
+        borderStyle = tempTextField.borderStyle
+    }
     
-    public func setupStyleLookOS(_ look: EmptyUIComponentStylePropertiesOSLook) {}
+    public func setupStyleLookOS(_ look: TextFieldUIComponentStylePropertiesOSLook) {
+        borderStyle = look.borderStyle
+    }
     
-    public func setupStyleLookSystem(_ look: TextFieldUIComponentStylePropertiesLook) {}
+    public func setupStyleLookSystem(_ look: TextFieldUIComponentStylePropertiesSystemLook) {}
 }
 
 extension TextFieldUIComponent {

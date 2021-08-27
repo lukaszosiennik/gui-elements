@@ -3,7 +3,7 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct TextFieldUIComponentStylePropertiesLook: UIComponentStylePropertiesSystemLook {
+public struct TextFieldUIComponentStylePropertiesSystemLook: UIComponentStylePropertiesSystemLook {
     
     public init() {}
 }

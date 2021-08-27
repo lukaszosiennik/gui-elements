@@ -38,7 +38,9 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
         return .init(
             type: styleType,
             properties: .init(
-                lookType: .system(.init()),
+                lookType: .os(.init(
+                    borderStyle: .roundedRect
+                )),
                 layoutParams: .init()
             )
         )
