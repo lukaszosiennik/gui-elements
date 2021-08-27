@@ -8,6 +8,16 @@ public final class DevUIComponentGroupStyleFactory: UIElementComponentTypeStyleF
     private typealias ColorPalette = DevUIColorPalette.UIElementComponent.UIComponentGroup
     private typealias ConstantPalette = DevUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
     
+    public func card() -> UIElementComponentStyle<CardUIComponentGroupStyleProperties> {
+        return .init(
+            type: styleType,
+            properties: .init(
+                lookType: .system(.init()),
+                layoutParams: .init()
+            )
+        )
+    }
+    
     public func navigationMenu() -> UIElementComponentStyle<NavigationMenuUIComponentGroupStyleProperties> {
         return .init(
             type: styleType,
@@ -22,16 +32,6 @@ public final class DevUIComponentGroupStyleFactory: UIElementComponentTypeStyleF
                     titleTopMargin: ConstantPalette.NavigationMenu.UILayoutParams.title_margin_top_16,
                     titleBottomMargin: ConstantPalette.NavigationMenu.UILayoutParams.title_margin_bottom_16
                 )
-            )
-        )
-    }
-    
-    public func card() -> UIElementComponentStyle<CardUIComponentGroupStyleProperties> {
-        return .init(
-            type: styleType,
-            properties: .init(
-                lookType: .system(.init()),
-                layoutParams: .init()
             )
         )
     }

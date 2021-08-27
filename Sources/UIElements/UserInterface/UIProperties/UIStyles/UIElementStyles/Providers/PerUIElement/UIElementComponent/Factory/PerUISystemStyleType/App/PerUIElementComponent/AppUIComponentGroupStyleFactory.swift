@@ -5,13 +5,13 @@
 
 public final class AppUIComponentGroupStyleFactory: UIElementComponentTypeStyleFactory, UIComponentGroupStyleFactoryInterface {
     
-    public func navigationMenu() -> UIElementComponentStyle<NavigationMenuUIComponentGroupStyleProperties> {
+    public func card() -> UIElementComponentStyle<CardUIComponentGroupStyleProperties> {
         return .default(
             styleType: styleType
         )
     }
     
-    public func card() -> UIElementComponentStyle<CardUIComponentGroupStyleProperties> {
+    public func navigationMenu() -> UIElementComponentStyle<NavigationMenuUIComponentGroupStyleProperties> {
         return .default(
             styleType: styleType
         )

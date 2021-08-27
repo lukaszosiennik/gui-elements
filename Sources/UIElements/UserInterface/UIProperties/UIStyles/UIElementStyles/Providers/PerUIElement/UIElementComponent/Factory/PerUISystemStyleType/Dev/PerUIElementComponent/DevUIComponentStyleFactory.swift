@@ -8,6 +8,19 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
     private typealias ColorPalette = DevUIColorPalette.UIElementComponent.UIComponent
     private typealias ConstantPalette = DevUIElementComponentConstantPalette.UIElementComponent.UIComponent
     
+    public func button() -> UIElementComponentStyle<ButtonUIComponentStyleProperties> {
+        return .init(
+            type: styleType,
+            properties: .init(
+                lookType: .system(.init(
+                    titleColorNormal: ColorPalette.Button.text_normal_green,
+                    titleColorHighlighted: ColorPalette.Button.text_highlighted_red
+                )),
+                layoutParams: .init()
+            )
+        )
+    }
+    
     public func label() -> UIElementComponentStyle<LabelUIComponentStyleProperties> {
         return .init(
             type: styleType,
@@ -21,14 +34,11 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
         )
     }
     
-    public func button() -> UIElementComponentStyle<ButtonUIComponentStyleProperties> {
+    public func textField() -> UIElementComponentStyle<TextFieldUIComponentStyleProperties> {
         return .init(
             type: styleType,
             properties: .init(
-                lookType: .system(.init(
-                    titleColorNormal: ColorPalette.Button.text_normal_green,
-                    titleColorHighlighted: ColorPalette.Button.text_highlighted_red
-                )),
+                lookType: .system(.init()),
                 layoutParams: .init()
             )
         )
