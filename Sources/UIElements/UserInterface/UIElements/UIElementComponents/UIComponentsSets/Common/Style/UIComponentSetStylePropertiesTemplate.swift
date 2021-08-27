@@ -13,7 +13,11 @@ public struct UIComponentSetStylePropertiesTemplate<
     public let lookParams: UIComponentSetStylePropertiesLookParamsType?
     public let layoutParams: UIComponentSetStylePropertiesLayoutParamsType?
     
-    public init(lookType: UIElementComponentStylePropertiesLookType<EmptyUIElementComponentStylePropertiesOSLook, UIComponentSetStylePropertiesLookType>, lookParams: UIComponentSetStylePropertiesLookParamsType?, layoutParams: UIComponentSetStylePropertiesLayoutParamsType?) {
+    public init(
+        lookType: UIElementComponentStylePropertiesLookType<EmptyUIElementComponentStylePropertiesOSLook, UIComponentSetStylePropertiesLookType>,
+        lookParams: UIComponentSetStylePropertiesLookParamsType?,
+        layoutParams: UIComponentSetStylePropertiesLayoutParamsType?
+    ) {
         self.lookType = lookType
         self.lookParams = lookParams
         self.layoutParams = layoutParams

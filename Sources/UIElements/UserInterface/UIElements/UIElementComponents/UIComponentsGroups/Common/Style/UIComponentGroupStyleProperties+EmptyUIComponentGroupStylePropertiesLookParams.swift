@@ -6,7 +6,10 @@
 extension UIComponentGroupStyleProperties where
     UIElementComponentStylePropertiesLookParamsType == EmptyUIComponentGroupStylePropertiesLookParams {
     
-    public init(lookType: UIElementComponentStylePropertiesLookType<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesSystemLookType>, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?) {
+    public init(
+        lookType: UIElementComponentStylePropertiesLookType<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesSystemLookType>,
+        layoutParams: UIElementComponentStylePropertiesLayoutParamsType?
+    ) {
         self = .init(
             lookType: lookType,
             lookParams: .init(),

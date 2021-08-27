@@ -9,5 +9,8 @@ public protocol UIElementComponentStylePropertiesLayoutParams: UIElementStylePro
     
     static var preferred: Self? { get }
 
-    init?(layoutParams: Self?, overwrittenBy newLayoutParams: UIElementComponentStylePropertiesOverwrittenLayoutParamsType?)
+    init?(
+        layoutParams: Self?,
+        overwrittenBy newLayoutParams: UIElementComponentStylePropertiesOverwrittenLayoutParamsType?
+    )
 }

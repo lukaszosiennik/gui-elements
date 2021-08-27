@@ -17,7 +17,10 @@ public struct NavigationMenuUIComponentScreenStylePropertiesLayoutParams: UIComp
         )
     }
     
-    public init(leftMargin: CGFloat, rightMargin: CGFloat) {
+    public init(
+        leftMargin: CGFloat,
+        rightMargin: CGFloat
+    ) {
         self.leftMargin = leftMargin
         self.rightMargin = rightMargin
     }

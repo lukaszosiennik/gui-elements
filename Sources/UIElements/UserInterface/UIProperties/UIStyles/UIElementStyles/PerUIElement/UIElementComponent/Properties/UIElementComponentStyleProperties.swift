@@ -14,7 +14,11 @@ public protocol UIElementComponentStyleProperties: UIElementStyleProperties {
     var lookParams: UIElementComponentStylePropertiesLookParamsType? { get }
     var layoutParams: UIElementComponentStylePropertiesLayoutParamsType? { get }
     
-    init(lookType: UIElementComponentStylePropertiesLookType<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesSystemLookType>, lookParams: UIElementComponentStylePropertiesLookParamsType?, layoutParams: UIElementComponentStylePropertiesLayoutParamsType?)
+    init(
+        lookType: UIElementComponentStylePropertiesLookType<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesSystemLookType>,
+        lookParams: UIElementComponentStylePropertiesLookParamsType?,
+        layoutParams: UIElementComponentStylePropertiesLayoutParamsType?
+    )
 }
 
 extension UIElementComponentStyleProperties {

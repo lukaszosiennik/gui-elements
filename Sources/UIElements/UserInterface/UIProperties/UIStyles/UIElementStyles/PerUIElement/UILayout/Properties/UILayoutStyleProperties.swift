@@ -9,5 +9,8 @@ public protocol UILayoutStyleProperties: UIElementStyleProperties {
     
     var params: UILayoutStylePropertiesParamsType { get }
     
-    init?(styleType: UIStyleType?, params: UILayoutStylePropertiesParamsType)
+    init?(
+        styleType: UIStyleType?,
+        params: UILayoutStylePropertiesParamsType
+    )
 }

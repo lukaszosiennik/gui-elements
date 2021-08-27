@@ -10,7 +10,10 @@ public struct ButtonUIComponentStylePropertiesSystemLook: UIComponentStyleProper
     public let titleColorNormal: UIColor
     public let titleColorHighlighted: UIColor
     
-    public init(titleColorNormal: UIColor, titleColorHighlighted: UIColor) {
+    public init(
+        titleColorNormal: UIColor,
+        titleColorHighlighted: UIColor
+    ) {
         self.titleColorNormal = titleColorNormal
         self.titleColorHighlighted = titleColorHighlighted
     }

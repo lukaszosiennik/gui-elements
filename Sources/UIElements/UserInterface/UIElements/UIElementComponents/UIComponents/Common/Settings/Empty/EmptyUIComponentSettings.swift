@@ -10,7 +10,10 @@ public struct EmptyUIComponentSettings: UIComponentSettings {
     public let params: EmptyUIComponentParams
     public var style: UIElementComponentStyle<EmptyUIComponentStyleProperties>
     
-    public init(params: EmptyUIComponentParams, style: UIElementComponentStyle<EmptyUIComponentStyleProperties>) {
+    public init(
+        params: EmptyUIComponentParams,
+        style: UIElementComponentStyle<EmptyUIComponentStyleProperties>
+    ) {
         self.params = params
         self.style = style
     }

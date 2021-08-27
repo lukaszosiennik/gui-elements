@@ -10,7 +10,10 @@ public struct NavigationMenuOptionUIComponentSetSettings: UIComponentSetSettings
     public let params: NavigationMenuOptionUIComponentSetParams
     public var style: UIElementComponentStyle<NavigationMenuOptionUIComponentSetStyleProperties>
     
-    public init(params: NavigationMenuOptionUIComponentSetParams, style: UIElementComponentStyle<NavigationMenuOptionUIComponentSetStyleProperties>) {
+    public init(
+        params: NavigationMenuOptionUIComponentSetParams,
+        style: UIElementComponentStyle<NavigationMenuOptionUIComponentSetStyleProperties>
+    ) {
         self.params = params
         self.style = style
     }

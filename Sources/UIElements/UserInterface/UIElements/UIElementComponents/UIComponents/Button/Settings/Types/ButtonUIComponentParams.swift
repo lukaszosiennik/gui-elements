@@ -15,7 +15,10 @@ public struct ButtonUIComponentParams: UIComponentParams, InputUIElementComponen
         )
     }
     
-    public init(title: String, action: Action?) {
+    public init(
+        title: String,
+        action: Action?
+    ) {
         self.title = title
         self.action = action
     }

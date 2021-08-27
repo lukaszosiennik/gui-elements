@@ -14,7 +14,10 @@ public struct CardUIComponentGroupSettings<
 
     public let bodySettings: BodyUIElementComponentSettingsType
     
-    public init(params: CardUIComponentGroupParams, style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>) {
+    public init(
+        params: CardUIComponentGroupParams,
+        style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>
+    ) {
         self.init(
             params: params,
             style: style,
@@ -25,7 +28,11 @@ public struct CardUIComponentGroupSettings<
         )
     }
     
-    public init(params: CardUIComponentGroupParams, style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>, bodySettings: BodyUIElementComponentSettingsType) {
+    public init(
+        params: CardUIComponentGroupParams,
+        style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>,
+        bodySettings: BodyUIElementComponentSettingsType
+    ) {
         self.params = params
         self.style = style
         self.bodySettings = bodySettings

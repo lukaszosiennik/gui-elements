@@ -13,7 +13,11 @@ public struct UIComponentScreenStylePropertiesOverwrittenTemplate<
     public let lookParams: UIComponentScreenStylePropertiesOverwrittenLookParamsType?
     public let layoutParams: UIComponentScreenStylePropertiesOverwrittenLayoutParamsType?
     
-    public init(look: UIComponentScreenStylePropertiesOverwrittenLookType? = nil, lookParams: UIComponentScreenStylePropertiesOverwrittenLookParamsType? = nil, layoutParams: UIComponentScreenStylePropertiesOverwrittenLayoutParamsType? = nil) {
+    public init(
+        look: UIComponentScreenStylePropertiesOverwrittenLookType? = nil,
+        lookParams: UIComponentScreenStylePropertiesOverwrittenLookParamsType? = nil,
+        layoutParams: UIComponentScreenStylePropertiesOverwrittenLayoutParamsType? = nil
+    ) {
         self.look = look
         self.lookParams = lookParams
         self.layoutParams = layoutParams

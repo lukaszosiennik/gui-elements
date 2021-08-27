@@ -10,7 +10,10 @@ public struct ButtonUIComponentSettings: UIComponentSettings {
     public let params: ButtonUIComponentParams
     public var style: UIElementComponentStyle<ButtonUIComponentStyleProperties>
     
-    public init(params: ButtonUIComponentParams, style: UIElementComponentStyle<ButtonUIComponentStyleProperties>) {
+    public init(
+        params: ButtonUIComponentParams,
+        style: UIElementComponentStyle<ButtonUIComponentStyleProperties>
+    ) {
         self.params = params
         self.style = style
     }

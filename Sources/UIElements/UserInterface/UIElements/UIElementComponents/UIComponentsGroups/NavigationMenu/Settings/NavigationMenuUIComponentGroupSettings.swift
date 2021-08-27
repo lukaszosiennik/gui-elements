@@ -12,7 +12,10 @@ public struct NavigationMenuUIComponentGroupSettings<
     public let params: NavigationMenuUIComponentGroupParams<OptionKey>
     public var style: UIElementComponentStyle<NavigationMenuUIComponentGroupStyleProperties>
     
-    public init(params: NavigationMenuUIComponentGroupParams<OptionKey>, style: UIElementComponentStyle<NavigationMenuUIComponentGroupStyleProperties>) {
+    public init(
+        params: NavigationMenuUIComponentGroupParams<OptionKey>,
+        style: UIElementComponentStyle<NavigationMenuUIComponentGroupStyleProperties>
+    ) {
         self.params = params
         self.style = style
     }

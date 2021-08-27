@@ -13,7 +13,11 @@ public struct UIComponentGroupStylePropertiesOverwrittenTemplate<
     public let lookParams: UIComponentGroupStylePropertiesOverwrittenLookParamsType?
     public let layoutParams: UIComponentGroupStylePropertiesOverwrittenLayoutParamsType?
     
-    public init(look: UIComponentGroupStylePropertiesOverwrittenLookType? = nil, lookParams: UIComponentGroupStylePropertiesOverwrittenLookParamsType? = nil, layoutParams: UIComponentGroupStylePropertiesOverwrittenLayoutParamsType? = nil) {
+    public init(
+        look: UIComponentGroupStylePropertiesOverwrittenLookType? = nil,
+        lookParams: UIComponentGroupStylePropertiesOverwrittenLookParamsType? = nil,
+        layoutParams: UIComponentGroupStylePropertiesOverwrittenLayoutParamsType? = nil
+    ) {
         self.look = look
         self.lookParams = lookParams
         self.layoutParams = layoutParams

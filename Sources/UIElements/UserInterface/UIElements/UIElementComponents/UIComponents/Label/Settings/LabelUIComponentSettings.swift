@@ -10,7 +10,10 @@ public struct LabelUIComponentSettings: UIComponentSettings {
     public let params: LabelUIComponentParams
     public var style: UIElementComponentStyle<LabelUIComponentStyleProperties>
     
-    public init(params: LabelUIComponentParams, style: UIElementComponentStyle<LabelUIComponentStyleProperties>) {
+    public init(
+        params: LabelUIComponentParams,
+        style: UIElementComponentStyle<LabelUIComponentStyleProperties>
+    ) {
         self.params = params
         self.style = style
     }

@@ -11,7 +11,10 @@ public struct LabelUIComponentStylePropertiesLookParams: UIComponentStylePropert
         self.linesNumber = linesNumber
     }
     
-    public init?(lookParams: Self?, overwrittenBy newLookParams: LabelUIComponentStylePropertiesOverwrittenLookParams?) {
+    public init?(
+        lookParams: Self?,
+        overwrittenBy newLookParams: LabelUIComponentStylePropertiesOverwrittenLookParams?
+    ) {
         guard let linesNumber = newLookParams?.linesNumber ?? lookParams?.linesNumber else {
             return nil
         }

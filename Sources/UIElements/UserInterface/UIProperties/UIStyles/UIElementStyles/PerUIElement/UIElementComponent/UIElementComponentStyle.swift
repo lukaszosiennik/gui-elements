@@ -15,12 +15,18 @@ public struct UIElementComponentStyle<
         self.properties = properties
     }
     
-    init(type: UIStyleType, properties: PropertiesType) {
+    init(
+        type: UIStyleType,
+        properties: PropertiesType
+    ) {
         self.type = type
         self.properties = properties
     }
     
-    init(style: Self, overwrittenBy styleProperties: PropertiesType) {
+    init(
+        style: Self,
+        overwrittenBy styleProperties: PropertiesType
+    ) {
         self.init(
             type: style.type,
             properties: styleProperties

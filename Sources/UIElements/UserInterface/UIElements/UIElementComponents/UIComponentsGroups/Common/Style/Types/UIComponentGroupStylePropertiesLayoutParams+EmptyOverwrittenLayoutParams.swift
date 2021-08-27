@@ -5,7 +5,10 @@
 
 extension UIComponentGroupStylePropertiesLayoutParams where UIElementComponentStylePropertiesOverwrittenLayoutParamsType == EmptyUIComponentGroupStylePropertiesOverwrittenLayoutParams {
     
-    public init?(layoutParams: Self?, overwrittenBy newLayoutParams: EmptyUIComponentGroupStylePropertiesOverwrittenLayoutParams?) {
+    public init?(
+        layoutParams: Self?,
+        overwrittenBy newLayoutParams: EmptyUIComponentGroupStylePropertiesOverwrittenLayoutParams?
+    ) {
         return nil
     }
 }

@@ -13,5 +13,9 @@ public protocol UIElementComponentStylePropertiesOverwritten: UIElementStyleProp
     var lookParams: UIElementComponentStylePropertiesOverwrittenLookParamsType? { get }
     var layoutParams: UIElementComponentStylePropertiesOverwrittenLayoutParamsType? { get }
     
-    init(look: UIElementComponentStylePropertiesOverwrittenLookType?, lookParams: UIElementComponentStylePropertiesOverwrittenLookParamsType?, layoutParams: UIElementComponentStylePropertiesOverwrittenLayoutParamsType?)
+    init(
+        look: UIElementComponentStylePropertiesOverwrittenLookType?,
+        lookParams: UIElementComponentStylePropertiesOverwrittenLookParamsType?,
+        layoutParams: UIElementComponentStylePropertiesOverwrittenLayoutParamsType?
+    )
 }

@@ -7,7 +7,10 @@ public struct EmptyUIComponentGroupStylePropertiesLookParams: UIComponentGroupSt
     
     init() {}
     
-    public init?(lookParams: Self?, overwrittenBy newLookParams: EmptyUIComponentGroupStylePropertiesOverwrittenLookParams?) {
+    public init?(
+        lookParams: Self?,
+        overwrittenBy newLookParams: EmptyUIComponentGroupStylePropertiesOverwrittenLookParams?
+    ) {
         return nil
     }
 }

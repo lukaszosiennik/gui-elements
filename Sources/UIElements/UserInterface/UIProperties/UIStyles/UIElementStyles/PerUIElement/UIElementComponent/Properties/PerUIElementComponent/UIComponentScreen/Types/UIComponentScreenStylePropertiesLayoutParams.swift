@@ -8,7 +8,10 @@ public protocol UIComponentScreenStylePropertiesLayoutParams: UIElementComponent
 
 extension UIComponentScreenStylePropertiesLayoutParams {
     
-    public init?(layoutParams: Self?, overwrittenBy newLayoutParams: EmptyUIComponentScreenStylePropertiesOverwrittenLayoutParams?) {
+    public init?(
+        layoutParams: Self?,
+        overwrittenBy newLayoutParams: EmptyUIComponentScreenStylePropertiesOverwrittenLayoutParams?
+    ) {
         return nil
     }
 }

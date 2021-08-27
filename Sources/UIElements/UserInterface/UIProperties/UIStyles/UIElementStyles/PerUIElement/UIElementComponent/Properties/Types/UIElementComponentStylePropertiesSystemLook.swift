@@ -7,5 +7,8 @@ public protocol UIElementComponentStylePropertiesSystemLook: UIElementStylePrope
     
     associatedtype UIElementComponentStylePropertiesOverwrittenLookType: UIElementComponentStylePropertiesOverwrittenLook
 
-    init(look: Self, overwrittenBy newLook: UIElementComponentStylePropertiesOverwrittenLookType?)
+    init(
+        look: Self,
+        overwrittenBy newLook: UIElementComponentStylePropertiesOverwrittenLookType?
+    )
 }

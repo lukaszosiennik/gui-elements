@@ -21,7 +21,12 @@ public struct NavigationMenuUIComponentGroupStylePropertiesLayoutParams: UICompo
         )
     }
     
-    public init(optionHeight: CGFloat?, optionsSpace: CGFloat, titleTopMargin: CGFloat, titleBottomMargin: CGFloat) {
+    public init(
+        optionHeight: CGFloat?,
+        optionsSpace: CGFloat,
+        titleTopMargin: CGFloat,
+        titleBottomMargin: CGFloat
+    ) {
         self.optionHeight = optionHeight
         self.optionsSpace = optionsSpace
         self.titleTopMargin = titleTopMargin

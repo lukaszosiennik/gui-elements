@@ -11,7 +11,11 @@ public struct NavigationMenuOptionUIComponentSetStylePropertiesLook: UIComponent
     public let borderColor: UIColor
     public let borderWidth: CGFloat
     
-    public init(backgroundColor: UIColor, borderColor: UIColor, borderWidth: CGFloat) {
+    public init(
+        backgroundColor: UIColor,
+        borderColor: UIColor,
+        borderWidth: CGFloat
+    ) {
         self.backgroundColor = backgroundColor
         self.borderColor = borderColor
         self.borderWidth = borderWidth

@@ -9,7 +9,10 @@ public protocol UIElementComponentStylePropertiesLookParams: UIElementStylePrope
     
     static var `default`: Self? { get }
 
-    init?(lookParams: Self?, overwrittenBy newLookParams: UIElementComponentStylePropertiesOverwrittenLookParamsType?)
+    init?(
+        lookParams: Self?,
+        overwrittenBy newLookParams: UIElementComponentStylePropertiesOverwrittenLookParamsType?
+    )
 }
 
 extension UIElementComponentStylePropertiesLookParams {

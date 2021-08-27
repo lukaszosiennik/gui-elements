@@ -12,14 +12,20 @@ public protocol UIElementComponentSettings: UIElementSettings, UIPropertyDefault
     var params: UIElementComponentParamsType { get }
     var style: UIElementComponentStyle<UIElementComponentStylePropertiesType> { get set }
     
-    init(params: UIElementComponentParamsType, style: UIElementComponentStyle<UIElementComponentStylePropertiesType>)
+    init(
+        params: UIElementComponentParamsType,
+        style: UIElementComponentStyle<UIElementComponentStylePropertiesType>
+    )
     
     static var style: UIElementComponentStyle<UIElementComponentStylePropertiesType>? { get }
     static func style(for styleType: UIStyleType) -> UIElementComponentStyle<UIElementComponentStylePropertiesType>?
     
     static var styleUnwrapped: UIElementComponentStyle<UIElementComponentStylePropertiesType> { get }
     static func style(for styleType: UIStyleType) -> UIElementComponentStyle<UIElementComponentStylePropertiesType>
-    static func style(for styleType: UIStyleType, overwrittenBy stylePropertiesOverwritten: UIElementComponentStylePropertiesOverwrittenType) -> UIElementComponentStyle<UIElementComponentStylePropertiesType>
+    static func style(
+        for styleType: UIStyleType,
+        overwrittenBy stylePropertiesOverwritten: UIElementComponentStylePropertiesOverwrittenType
+    ) -> UIElementComponentStyle<UIElementComponentStylePropertiesType>
 }
 
 extension UIElementComponentSettings {
@@ -53,17 +59,27 @@ extension UIElementComponentSettings {
         )
     }
     
-    public init(params: UIElementComponentParamsType, styleType: UIStyleType) {
+    public init(
+        params: UIElementComponentParamsType,
+        styleType: UIStyleType
+    ) {
         self.init(
             params: params,
             style: Self.style(for: styleType)
         )
     }
     
-    public init(params: UIElementComponentParamsType, styleType: UIStyleType, overwrittenBy styleProperties: UIElementComponentStylePropertiesOverwrittenType) {
+    public init(
+        params: UIElementComponentParamsType,
+        styleType: UIStyleType,
+        overwrittenBy styleProperties: UIElementComponentStylePropertiesOverwrittenType
+    ) {
         self.init(
             params: params,
-            style: Self.style(for: styleType, overwrittenBy: styleProperties)
+            style: Self.style(
+                for: styleType,
+                overwrittenBy: styleProperties
+            )
         )
     }
 }
@@ -95,7 +111,10 @@ extension UIElementComponentSettings where
         return style(for: styleType) ?? .default(styleType: styleType)
     }
     
-    public static func style(for styleType: UIStyleType, overwrittenBy stylePropertiesOverwritten: UIElementComponentStylePropertiesOverwrittenType) -> UIElementComponentStyle<UIElementComponentStylePropertiesType> {
+    public static func style(
+        for styleType: UIStyleType,
+        overwrittenBy stylePropertiesOverwritten: UIElementComponentStylePropertiesOverwrittenType
+    ) -> UIElementComponentStyle<UIElementComponentStylePropertiesType> {
         guard let style = style(for: styleType) else {
             let defaultStyle: UIElementComponentStyle<UIElementComponentStylePropertiesType> = .default(styleType: styleType)
             

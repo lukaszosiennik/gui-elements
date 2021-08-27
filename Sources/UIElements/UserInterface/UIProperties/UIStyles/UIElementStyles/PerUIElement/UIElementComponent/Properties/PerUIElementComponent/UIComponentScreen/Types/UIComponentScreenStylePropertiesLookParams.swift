@@ -8,7 +8,10 @@ public protocol UIComponentScreenStylePropertiesLookParams: UIElementComponentSt
 
 extension UIComponentScreenStylePropertiesLookParams {
     
-    public init?(lookParams: Self?, overwrittenBy newLookParams: EmptyUIComponentScreenStylePropertiesOverwrittenLookParams?) {
+    public init?(
+        lookParams: Self?,
+        overwrittenBy newLookParams: EmptyUIComponentScreenStylePropertiesOverwrittenLookParams?
+    ) {
         return nil
     }
 }

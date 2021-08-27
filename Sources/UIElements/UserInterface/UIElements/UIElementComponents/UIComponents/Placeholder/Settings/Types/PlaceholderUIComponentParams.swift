@@ -17,7 +17,10 @@ public struct PlaceholderUIComponentParams: UIComponentParams {
         )
     }
     
-    public init(color: UIColor? = nil, height: CGFloat?) {
+    public init(
+        color: UIColor? = nil,
+        height: CGFloat?
+    ) {
         self.color = color
         self.height = height
     }

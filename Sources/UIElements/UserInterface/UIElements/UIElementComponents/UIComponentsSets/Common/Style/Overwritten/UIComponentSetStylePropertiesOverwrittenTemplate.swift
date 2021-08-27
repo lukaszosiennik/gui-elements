@@ -13,7 +13,11 @@ public struct UIComponentSetStylePropertiesOverwrittenTemplate<
     public let lookParams: UIComponentSetStylePropertiesOverwrittenLookParamsType?
     public let layoutParams: UIComponentSetStylePropertiesOverwrittenLayoutParamsType?
     
-    public init(look: UIComponentSetStylePropertiesOverwrittenLookType? = nil, lookParams: UIComponentSetStylePropertiesOverwrittenLookParamsType? = nil, layoutParams: UIComponentSetStylePropertiesOverwrittenLayoutParamsType? = nil) {
+    public init(
+        look: UIComponentSetStylePropertiesOverwrittenLookType? = nil,
+        lookParams: UIComponentSetStylePropertiesOverwrittenLookParamsType? = nil,
+        layoutParams: UIComponentSetStylePropertiesOverwrittenLayoutParamsType? = nil
+    ) {
         self.look = look
         self.lookParams = lookParams
         self.layoutParams = layoutParams

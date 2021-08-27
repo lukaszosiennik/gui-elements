@@ -8,7 +8,10 @@ public struct UIElementComponentOSConfiguration: Hashable {
     let lookConfiguration: UIElementComponentLookOSConfiguration
     let layoutParamsConfiguration: UIElementComponentLayoutParamsOSConfiguration
     
-    public init(lookConfiguration: UIElementComponentLookOSConfiguration, layoutParamsConfiguration: UIElementComponentLayoutParamsOSConfiguration) {
+    public init(
+        lookConfiguration: UIElementComponentLookOSConfiguration,
+        layoutParamsConfiguration: UIElementComponentLayoutParamsOSConfiguration
+    ) {
         self.lookConfiguration = lookConfiguration
         self.layoutParamsConfiguration = layoutParamsConfiguration
     }

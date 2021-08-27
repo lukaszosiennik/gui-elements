@@ -17,7 +17,10 @@ public struct NavigationMenuUIComponentGroupStylePropertiesLookParams: UICompone
         self.titleLinesNumber = titleLinesNumber
     }
     
-    public init?(lookParams: Self?, overwrittenBy newLookParams: NavigationMenuUIComponentGroupStylePropertiesOverwrittenLookParams?) {
+    public init?(
+        lookParams: Self?,
+        overwrittenBy newLookParams: NavigationMenuUIComponentGroupStylePropertiesOverwrittenLookParams?
+    ) {
         guard let titleLinesNumber = newLookParams?.titleLinesNumber ?? lookParams?.titleLinesNumber else {
             return nil
         }

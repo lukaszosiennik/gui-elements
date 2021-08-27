@@ -22,7 +22,11 @@ public struct NavigationMenuUIComponentGroupParams<
         )
     }
     
-    public init(title: String, options: KeyValuePairs<OptionKey, String>, actions: Actions?) {
+    public init(
+        title: String,
+        options: KeyValuePairs<OptionKey, String>,
+        actions: Actions?
+    ) {
         self.title = title
         self.options = options
         self.actions = actions

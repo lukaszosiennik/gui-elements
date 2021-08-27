@@ -10,7 +10,10 @@ public struct NavigationMenuUIComponentScreenSettings<
     public let params: NavigationMenuUIComponentScreenParams<OptionKey>
     public var style: UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>
     
-    public init(params: NavigationMenuUIComponentScreenParams<OptionKey>, style: UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>) {
+    public init(
+        params: NavigationMenuUIComponentScreenParams<OptionKey>,
+        style: UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>
+    ) {
         self.params = params
         self.style = style
     }

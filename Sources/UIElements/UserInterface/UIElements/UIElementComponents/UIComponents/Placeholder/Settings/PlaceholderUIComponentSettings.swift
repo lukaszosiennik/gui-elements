@@ -10,7 +10,10 @@ public struct PlaceholderUIComponentSettings: UIComponentSettings {
     public let params: PlaceholderUIComponentParams
     public var style: UIElementComponentStyle<PlaceholderUIComponentStyleProperties>
     
-    public init(params: PlaceholderUIComponentParams, style: UIElementComponentStyle<PlaceholderUIComponentStyleProperties>) {
+    public init(
+        params: PlaceholderUIComponentParams,
+        style: UIElementComponentStyle<PlaceholderUIComponentStyleProperties>
+    ) {
         self.params = params
         self.style = style
     }

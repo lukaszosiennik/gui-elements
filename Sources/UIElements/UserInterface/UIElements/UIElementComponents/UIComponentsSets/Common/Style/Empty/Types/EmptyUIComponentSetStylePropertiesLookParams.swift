@@ -7,7 +7,10 @@ public struct EmptyUIComponentSetStylePropertiesLookParams: UIComponentSetStyleP
     
     init() {}
     
-    public init?(lookParams: Self?, overwrittenBy newLookParams: EmptyUIComponentSetStylePropertiesOverwrittenLookParams?) {
+    public init?(
+        lookParams: Self?,
+        overwrittenBy newLookParams: EmptyUIComponentSetStylePropertiesOverwrittenLookParams?
+    ) {
         return nil
     }
 }
