@@ -4,22 +4,22 @@
 //
 
 public struct UIComponentSetStylePropertiesTemplate<
-    UIComponentSetStylePropertiesLookType: UIComponentSetStylePropertiesLook,
+    UIElementComponentStylePropertiesLookInterfaceType: UIComponentSetStylePropertiesLookInterface,
     UIComponentSetStylePropertiesLookParamsType: UIComponentSetStylePropertiesLookParams,
     UIComponentSetStylePropertiesLayoutParamsType: UIComponentSetStylePropertiesLayoutParams
 >: UIComponentSetStyleProperties {
 
     public let lookType: UIElementComponentStylePropertiesLookType<
-        EmptyUIElementComponentStylePropertiesOSLook,
-        UIComponentSetStylePropertiesLookType
+        UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType,
+        UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType
     >
     public let lookParams: UIComponentSetStylePropertiesLookParamsType?
     public let layoutParams: UIComponentSetStylePropertiesLayoutParamsType?
     
     public init(
         lookType: UIElementComponentStylePropertiesLookType<
-            EmptyUIElementComponentStylePropertiesOSLook,
-            UIComponentSetStylePropertiesLookType
+            UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType,
+            UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType
         >,
         lookParams: UIComponentSetStylePropertiesLookParamsType?,
         layoutParams: UIComponentSetStylePropertiesLayoutParamsType?

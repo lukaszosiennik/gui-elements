@@ -8,8 +8,8 @@ extension UIComponentGroupStyleProperties where
     
     public init(
         lookType: UIElementComponentStylePropertiesLookType<
-            UIElementComponentStylePropertiesOSLookType,
-            UIElementComponentStylePropertiesSystemLookType
+            UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType,
+            UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType
         >,
         layoutParams: UIElementComponentStylePropertiesLayoutParamsType?
     ) {

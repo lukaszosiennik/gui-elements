@@ -5,8 +5,10 @@
 
 public typealias PlaceholderUIComponentStyleProperties =
     UIComponentStylePropertiesTemplate<
-        EmptyUIComponentStylePropertiesOSLook,
-        PlaceholderUIComponentStylePropertiesLook,
+        UIComponentStylePropertiesLookTemplate<
+            EmptyUIComponentStylePropertiesOSLook,
+            PlaceholderUIComponentStylePropertiesLook
+        >,
         EmptyUIComponentStylePropertiesLookParams,
         PlaceholderUIComponentStylePropertiesLayoutParams
     >

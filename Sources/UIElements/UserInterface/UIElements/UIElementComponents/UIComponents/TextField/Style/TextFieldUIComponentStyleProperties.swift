@@ -5,8 +5,10 @@
 
 public typealias TextFieldUIComponentStyleProperties =
     UIComponentStylePropertiesTemplate<
-        TextFieldUIComponentStylePropertiesOSLook,
-        TextFieldUIComponentStylePropertiesSystemLook,
+        UIComponentStylePropertiesLookTemplate<
+            TextFieldUIComponentStylePropertiesOSLook,
+            TextFieldUIComponentStylePropertiesSystemLook
+        >,
         EmptyUIComponentStylePropertiesLookParams,
         TextFieldUIComponentStylePropertiesLayoutParams
     >

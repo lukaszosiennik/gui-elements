@@ -101,7 +101,7 @@ extension UIElementComponentSettings {
 }
 
 extension UIElementComponentSettings where
-    UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesSystemLookType.UIElementComponentStylePropertiesOverwrittenLookType == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLookType,
+    UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType.UIElementComponentStylePropertiesOverwrittenLookType == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLookType,
     UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookParamsType.UIElementComponentStylePropertiesOverwrittenLookParamsType == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLookParamsType,
     UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLayoutParamsType.UIElementComponentStylePropertiesOverwrittenLayoutParamsType == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLayoutParamsType {
     
@@ -142,7 +142,10 @@ extension UIElementComponentSettings where
         
         let styleProperties = style.properties
         
-        let lookType: UIElementComponentStylePropertiesLookType<UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesSystemLookType>
+        let lookType: UIElementComponentStylePropertiesLookType<
+            UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType,
+            UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType
+        >
         if case let .system(look) = styleProperties.lookType {
             lookType = .system(.init(
                 look: look,

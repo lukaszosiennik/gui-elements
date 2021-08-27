@@ -29,8 +29,8 @@ public protocol UIElementComponent: UIElement {
     func setupParams(_ params: UIElementComponentSettingsType.UIElementComponentParamsType)
     
     func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration)
-    func setupStyleLookOS(_ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesOSLookType)
-    func setupStyleLookSystem(_ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesSystemLookType)
+    func setupStyleLookOS(_ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType)
+    func setupStyleLookSystem(_ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType)
     func setupStyleLookParamsOS()
     func setupStyleLookParamsSystem(_ lookParams: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookParamsType)
     func setupStyleLayoutInitialization()

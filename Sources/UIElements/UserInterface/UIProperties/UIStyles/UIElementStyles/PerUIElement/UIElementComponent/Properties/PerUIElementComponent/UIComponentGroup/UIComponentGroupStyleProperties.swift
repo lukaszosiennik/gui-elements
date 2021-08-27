@@ -4,6 +4,6 @@
 //
 
 public protocol UIComponentGroupStyleProperties: UIElementComponentStyleProperties where
-    UIElementComponentStylePropertiesSystemLookType: UIComponentGroupStylePropertiesLook,
+    UIElementComponentStylePropertiesLookInterfaceType: UIComponentGroupStylePropertiesLookInterface,
     UIElementComponentStylePropertiesLookParamsType: UIComponentGroupStylePropertiesLookParams,
     UIElementComponentStylePropertiesLayoutParamsType: UIComponentGroupStylePropertiesLayoutParams {}

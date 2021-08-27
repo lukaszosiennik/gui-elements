@@ -5,22 +5,21 @@
 
 public protocol UIElementComponentStyleProperties: UIElementStyleProperties {
     
-    associatedtype UIElementComponentStylePropertiesOSLookType: UIElementComponentStylePropertiesOSLook
-    associatedtype UIElementComponentStylePropertiesSystemLookType: UIElementComponentStylePropertiesSystemLook
+    associatedtype UIElementComponentStylePropertiesLookInterfaceType: UIElementComponentStylePropertiesLookInterface
     associatedtype UIElementComponentStylePropertiesLookParamsType: UIElementComponentStylePropertiesLookParams
     associatedtype UIElementComponentStylePropertiesLayoutParamsType: UIElementComponentStylePropertiesLayoutParams
     
     var lookType: UIElementComponentStylePropertiesLookType<
-        UIElementComponentStylePropertiesOSLookType,
-        UIElementComponentStylePropertiesSystemLookType
+        UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType,
+        UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType
     > { get }
     var lookParams: UIElementComponentStylePropertiesLookParamsType? { get }
     var layoutParams: UIElementComponentStylePropertiesLayoutParamsType? { get }
     
     init(
         lookType: UIElementComponentStylePropertiesLookType<
-            UIElementComponentStylePropertiesOSLookType,
-            UIElementComponentStylePropertiesSystemLookType
+            UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType,
+            UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType
         >,
         lookParams: UIElementComponentStylePropertiesLookParamsType?,
         layoutParams: UIElementComponentStylePropertiesLayoutParamsType?
