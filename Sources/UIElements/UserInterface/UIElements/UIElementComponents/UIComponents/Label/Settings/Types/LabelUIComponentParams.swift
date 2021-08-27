@@ -9,7 +9,9 @@ public struct LabelUIComponentParams: UIComponentParams {
     
     public static var `default`: Self {
         return .init(
-            text: structName(dot: "text")
+            text: structName(
+                dot: "text"
+            )
         )
     }
     

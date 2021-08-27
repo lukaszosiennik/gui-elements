@@ -7,7 +7,9 @@ import UIKit
 
 public final class CardWithUIViewBodyUIComponentGroup<
     BodyViewType: UIView
->: CardUIComponentGroupBasis<BodyViewType, EmptyUIComponentSettings> {
+>: CardUIComponentGroupBasis<
+    BodyViewType,
+    EmptyUIComponentSettings> {
     
     public var bodyView: BodyViewType {
         return bodyContainerContent

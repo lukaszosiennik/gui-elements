@@ -10,12 +10,18 @@ public struct UIComponentStylePropertiesTemplate<
     UIComponentStylePropertiesLayoutParamsType: UIComponentStylePropertiesLayoutParams
 >: UIComponentStyleProperties {
 
-    public let lookType: UIElementComponentStylePropertiesLookType<UIComponentStylePropertiesOSLookType, UIComponentStylePropertiesSystemLookType>
+    public let lookType: UIElementComponentStylePropertiesLookType<
+        UIComponentStylePropertiesOSLookType,
+        UIComponentStylePropertiesSystemLookType
+    >
     public let lookParams: UIComponentStylePropertiesLookParamsType?
     public let layoutParams: UIComponentStylePropertiesLayoutParamsType?
     
     public init(
-        lookType: UIElementComponentStylePropertiesLookType<UIComponentStylePropertiesOSLookType, UIComponentStylePropertiesSystemLookType>,
+        lookType: UIElementComponentStylePropertiesLookType<
+            UIComponentStylePropertiesOSLookType,
+            UIComponentStylePropertiesSystemLookType
+        >,
         lookParams: UIComponentStylePropertiesLookParamsType?,
         layoutParams: UIComponentStylePropertiesLayoutParamsType?
     ) {

@@ -5,7 +5,9 @@
 
 import UIKit
 
-public final class InformationUIComponentScreen: UIView, UIComponentScreen {
+public final class InformationUIComponentScreen:
+    UIView,
+    UIComponentScreen {
     
     private let titleLabelUI = LabelUIComponent()
     

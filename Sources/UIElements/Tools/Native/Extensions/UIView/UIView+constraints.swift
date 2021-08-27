@@ -13,7 +13,9 @@ extension CommonsExtension where ExtendedType: UIView {
     }
     
     func constraint(with identifier: String) -> NSLayoutConstraint? {
-        return instance.constraints.first { $0.identifier == identifier }
+        return instance.constraints.first {
+            $0.identifier == identifier
+        }
     }
     
     @discardableResult

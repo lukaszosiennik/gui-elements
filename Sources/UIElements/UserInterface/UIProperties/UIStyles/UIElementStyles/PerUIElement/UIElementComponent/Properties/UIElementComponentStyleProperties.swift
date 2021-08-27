@@ -10,12 +10,18 @@ public protocol UIElementComponentStyleProperties: UIElementStyleProperties {
     associatedtype UIElementComponentStylePropertiesLookParamsType: UIElementComponentStylePropertiesLookParams
     associatedtype UIElementComponentStylePropertiesLayoutParamsType: UIElementComponentStylePropertiesLayoutParams
     
-    var lookType: UIElementComponentStylePropertiesLookType<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesSystemLookType> { get }
+    var lookType: UIElementComponentStylePropertiesLookType<
+        UIElementComponentStylePropertiesOSLookType,
+        UIElementComponentStylePropertiesSystemLookType
+    > { get }
     var lookParams: UIElementComponentStylePropertiesLookParamsType? { get }
     var layoutParams: UIElementComponentStylePropertiesLayoutParamsType? { get }
     
     init(
-        lookType: UIElementComponentStylePropertiesLookType<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesSystemLookType>,
+        lookType: UIElementComponentStylePropertiesLookType<
+            UIElementComponentStylePropertiesOSLookType,
+            UIElementComponentStylePropertiesSystemLookType
+        >,
         lookParams: UIElementComponentStylePropertiesLookParamsType?,
         layoutParams: UIElementComponentStylePropertiesLayoutParamsType?
     )

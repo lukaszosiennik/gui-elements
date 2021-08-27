@@ -5,7 +5,8 @@
 
 import UIKit
 
-public protocol ButtonUIComponentInterface: UIComponent where UIElementComponentSettingsType == ButtonUIComponentSettings {}
+public protocol ButtonUIComponentInterface: UIComponent where
+    UIElementComponentSettingsType == ButtonUIComponentSettings {}
 
 extension ButtonUIComponentInterface {
     
@@ -13,7 +14,10 @@ extension ButtonUIComponentInterface {
         _ params: ButtonUIComponentParams,
         for button: UIButton
     ) {
-        button.setTitle(params.title, for: .normal)
+        button.setTitle(
+            params.title,
+            for: .normal
+        )
     }
 }
 
@@ -24,8 +28,18 @@ extension ButtonUIComponentInterface {
         for button: UIButton
     ) {
         let tempButton = UIButton(type: button.buttonType)
-        button.setTitleColor(tempButton.titleColor(for: .normal), for: .normal)
-        button.setTitleColor(tempButton.titleColor(for: .highlighted), for: .highlighted)
+        button.setTitleColor(
+            tempButton.titleColor(
+                for: .normal
+            ),
+            for: .normal
+        )
+        button.setTitleColor(
+            tempButton.titleColor(
+                for: .highlighted
+            ),
+            for: .highlighted
+        )
     }
     
     func setupStyleLookOS(
@@ -37,8 +51,14 @@ extension ButtonUIComponentInterface {
         _ look: ButtonUIComponentStylePropertiesSystemLook,
         for button: UIButton
     ) {
-        button.setTitleColor(look.titleColorNormal, for: .normal)
-        button.setTitleColor(look.titleColorHighlighted, for: .highlighted)
+        button.setTitleColor(
+            look.titleColorNormal,
+            for: .normal
+        )
+        button.setTitleColor(
+            look.titleColorHighlighted,
+            for: .highlighted
+        )
     }
 }
 

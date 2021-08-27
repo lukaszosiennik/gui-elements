@@ -8,7 +8,9 @@ import UIKit
 public class CardUIComponentGroupBasis<
     BodyViewType: UIView,
     BodyUIElementComponentSettingsType: UIElementComponentSettings
->: UIView, UIComponentGroup {
+>:
+    UIView,
+    UIComponentGroup {
 
     private let titleContainer = UIView()
     private let titleLabelUI = LabelUIComponent()

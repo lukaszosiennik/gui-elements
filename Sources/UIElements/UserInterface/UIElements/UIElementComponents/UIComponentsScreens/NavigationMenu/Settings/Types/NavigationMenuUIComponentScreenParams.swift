@@ -5,18 +5,24 @@
 
 public struct NavigationMenuUIComponentScreenParams<
     OptionKey: InputUIElementComponentActionsKeyInterface
->: UIComponentScreenParams, InputUIElementComponentParamsActionsInterface {
+>:
+    UIComponentScreenParams,
+    InputUIElementComponentParamsActionsInterface {
     
     public typealias ActionsKey = OptionKey
     
     public let title: String
-    public let options: KeyValuePairs<OptionKey, String>
+    public let options: KeyValuePairs<
+        OptionKey, String
+    >
     
     public let actions: Actions?
     
     public static var `default`: Self {
         return .init(
-            title: structName(dot: "title"),
+            title: structName(
+                dot: "title"
+            ),
             options: [:],
             actions: nil
         )
@@ -24,7 +30,10 @@ public struct NavigationMenuUIComponentScreenParams<
     
     public init(
         title: String,
-        options: KeyValuePairs<OptionKey, String>,
+        options: KeyValuePairs<
+            OptionKey,
+            String
+        >,
         actions: Actions?
     ) {
         self.title = title

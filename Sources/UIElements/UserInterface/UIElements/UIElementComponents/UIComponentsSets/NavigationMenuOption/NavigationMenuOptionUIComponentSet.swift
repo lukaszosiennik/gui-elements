@@ -5,7 +5,9 @@
 
 import UIKit
 
-public final class NavigationMenuUIOptionComponentSet: UIView, UIComponentSet {
+public final class NavigationMenuUIOptionComponentSet:
+    UIView,
+    UIComponentSet {
     
     private let optionButtonUI = ButtonUIComponent()
     

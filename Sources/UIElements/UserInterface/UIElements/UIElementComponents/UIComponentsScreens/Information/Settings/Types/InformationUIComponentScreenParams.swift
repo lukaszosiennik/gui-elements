@@ -9,7 +9,9 @@ public struct InformationUIComponentScreenParams: UIComponentScreenParams {
     
     public static var `default`: Self {
         return .init(
-            title: structName(dot: "title")
+            title: structName(
+                dot: "title"
+            )
         )
     }
     

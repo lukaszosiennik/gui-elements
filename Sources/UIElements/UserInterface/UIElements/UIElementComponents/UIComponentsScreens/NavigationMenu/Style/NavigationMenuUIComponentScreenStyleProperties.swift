@@ -3,8 +3,9 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias NavigationMenuUIComponentScreenStyleProperties = UIComponentScreenStylePropertiesTemplate<
-    NavigationMenuUIComponentScreenStylePropertiesLook,
-    EmptyUIComponentScreenStylePropertiesLookParams,
-    NavigationMenuUIComponentScreenStylePropertiesLayoutParams
->
+public typealias NavigationMenuUIComponentScreenStyleProperties =
+    UIComponentScreenStylePropertiesTemplate<
+        NavigationMenuUIComponentScreenStylePropertiesLook,
+        EmptyUIComponentScreenStylePropertiesLookParams,
+        NavigationMenuUIComponentScreenStylePropertiesLayoutParams
+    >

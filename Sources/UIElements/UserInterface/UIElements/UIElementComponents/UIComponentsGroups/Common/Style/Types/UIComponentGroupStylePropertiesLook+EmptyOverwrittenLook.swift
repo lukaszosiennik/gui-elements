@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-extension UIComponentGroupStylePropertiesLook where UIElementComponentStylePropertiesOverwrittenLookType == EmptyUIComponentGroupStylePropertiesOverwrittenLook {
+extension UIComponentGroupStylePropertiesLook where
+    UIElementComponentStylePropertiesOverwrittenLookType == EmptyUIComponentGroupStylePropertiesOverwrittenLook {
     
     public init(
         look: Self,

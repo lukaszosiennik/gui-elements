@@ -7,7 +7,9 @@ import UIKit
 
 public final class NavigationMenuUIComponentGroup<
     OptionKey: InputUIElementComponentActionsKeyInterface
->: UIView, UIComponentGroup {
+>:
+    UIView,
+    UIComponentGroup {
     
     private let titleLabelUI = LabelUIComponent()
     

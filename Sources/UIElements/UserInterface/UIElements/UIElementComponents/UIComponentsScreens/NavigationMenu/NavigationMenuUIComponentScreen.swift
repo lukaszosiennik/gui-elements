@@ -7,7 +7,9 @@ import UIKit
 
 public final class NavigationMenuUIComponentScreen<
     OptionKey: InputUIElementComponentActionsKeyInterface
->: UIView, UIComponentScreen {
+>:
+    UIView,
+    UIComponentScreen {
     
     private let navigationMenuUI = NavigationMenuUIComponentGroup<OptionKey>()
     

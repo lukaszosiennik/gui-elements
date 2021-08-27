@@ -9,12 +9,18 @@ public struct UIComponentGroupStylePropertiesTemplate<
     UIComponentGroupStylePropertiesLayoutParamsType: UIComponentGroupStylePropertiesLayoutParams
 >: UIComponentGroupStyleProperties {
 
-    public let lookType: UIElementComponentStylePropertiesLookType<EmptyUIElementComponentStylePropertiesOSLook, UIComponentGroupStylePropertiesLookType>
+    public let lookType: UIElementComponentStylePropertiesLookType<
+        EmptyUIElementComponentStylePropertiesOSLook,
+        UIComponentGroupStylePropertiesLookType
+    >
     public let lookParams: UIComponentGroupStylePropertiesLookParamsType?
     public let layoutParams: UIComponentGroupStylePropertiesLayoutParamsType?
     
     public init(
-        lookType: UIElementComponentStylePropertiesLookType<EmptyUIElementComponentStylePropertiesOSLook, UIComponentGroupStylePropertiesLookType>,
+        lookType: UIElementComponentStylePropertiesLookType<
+            EmptyUIElementComponentStylePropertiesOSLook,
+            UIComponentGroupStylePropertiesLookType
+        >,
         lookParams: UIComponentGroupStylePropertiesLookParamsType?,
         layoutParams: UIComponentGroupStylePropertiesLayoutParamsType?
     ) {

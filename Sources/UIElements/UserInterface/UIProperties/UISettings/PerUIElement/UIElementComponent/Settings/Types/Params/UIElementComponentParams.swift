@@ -3,7 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIElementComponentParams: UIElementParams, UIPropertyDefaultValueInterface {}
+public protocol UIElementComponentParams:
+    UIElementParams,
+    UIPropertyDefaultValueInterface {}
 
 extension UIElementComponentParams {
     
@@ -12,6 +14,8 @@ extension UIElementComponentParams {
     }
     
     static var structName: String {
-        return String(describing: self)
+        return .init(
+            describing: self
+        )
     }
 }

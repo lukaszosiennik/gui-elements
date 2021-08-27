@@ -5,7 +5,9 @@
 
 import UIKit
 
-public final class CustomButtonUIComponent: UIButton, ButtonUIComponentInterface {
+public final class CustomButtonUIComponent:
+    UIButton,
+    ButtonUIComponentInterface {
 
     public let initialization = UIElementComponentInitialization()
     
@@ -33,22 +35,34 @@ public final class CustomButtonUIComponent: UIButton, ButtonUIComponentInterface
     public func setupNestedSettings() {}
     
     public func setupParams(_ params: ButtonUIComponentParams) {
-        setupParams(params, for: self)
+        setupParams(
+            params,
+            for: self
+        )
     }
 }
 
 extension CustomButtonUIComponent {
     
     public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
-        setupStyleLookOSConfiguration(lookConfiguration, for: self)
+        setupStyleLookOSConfiguration(
+            lookConfiguration,
+            for: self
+        )
     }
     
     public func setupStyleLookOS(_ look: ButtonUIComponentStylePropertiesOSLook) {
-        setupStyleLookOS(look, for: self)
+        setupStyleLookOS(
+            look,
+            for: self
+        )
     }
     
     public func setupStyleLookSystem(_ look: ButtonUIComponentStylePropertiesSystemLook) {
-        setupStyleLookSystem(look, for: self)
+        setupStyleLookSystem(
+            look,
+            for: self
+        )
     }
 }
 
@@ -59,7 +73,10 @@ extension CustomButtonUIComponent {
     }
     
     public func setupStyleLookParamsSystem(_ lookParams: EmptyUIComponentStylePropertiesLookParams) {
-        setupStyleLookParamsSystem(lookParams, for: self)
+        setupStyleLookParamsSystem(
+            lookParams,
+            for: self
+        )
     }
 }
 
@@ -74,6 +91,9 @@ extension CustomButtonUIComponent {
     }
     
     public func setupStyleLayoutSystem(_ layoutParams: ButtonUIComponentStylePropertiesLayoutParams) {
-        setupStyleLayoutSystem(layoutParams, for: self)
+        setupStyleLayoutSystem(
+            layoutParams,
+            for: self
+        )
     }
 }

@@ -5,7 +5,9 @@
 
 import UIKit
 
-public final class TextFieldUIComponent: UITextField, UIComponent {
+public final class TextFieldUIComponent:
+    UITextField,
+    UIComponent {
 
     public let initialization = UIElementComponentInitialization()
     

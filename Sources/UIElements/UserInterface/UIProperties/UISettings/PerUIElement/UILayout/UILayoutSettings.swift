@@ -3,7 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UILayoutSettings: UIElementSettings, UIPropertyDefaultValueInterface {
+public protocol UILayoutSettings:
+    UIElementSettings,
+    UIPropertyDefaultValueInterface {
     
     associatedtype UILayoutStylePropertiesType: UILayoutStyleProperties
     

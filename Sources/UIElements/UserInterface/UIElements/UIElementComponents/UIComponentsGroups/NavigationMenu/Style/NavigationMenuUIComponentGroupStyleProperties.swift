@@ -3,8 +3,9 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias NavigationMenuUIComponentGroupStyleProperties = UIComponentGroupStylePropertiesTemplate<
-    NavigationMenuUIComponentGroupStylePropertiesLook,
-    NavigationMenuUIComponentGroupStylePropertiesLookParams,
-    NavigationMenuUIComponentGroupStylePropertiesLayoutParams
->
+public typealias NavigationMenuUIComponentGroupStyleProperties =
+    UIComponentGroupStylePropertiesTemplate<
+        NavigationMenuUIComponentGroupStylePropertiesLook,
+        NavigationMenuUIComponentGroupStylePropertiesLookParams,
+        NavigationMenuUIComponentGroupStylePropertiesLayoutParams
+    >

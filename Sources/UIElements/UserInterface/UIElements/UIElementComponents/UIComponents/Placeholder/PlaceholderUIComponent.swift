@@ -5,7 +5,9 @@
 
 import UIKit
 
-public final class PlaceholderUIComponent: UIView, UIComponent {
+public final class PlaceholderUIComponent:
+    UIView,
+    UIComponent {
     
     private let heightConstraintID = "height"
     

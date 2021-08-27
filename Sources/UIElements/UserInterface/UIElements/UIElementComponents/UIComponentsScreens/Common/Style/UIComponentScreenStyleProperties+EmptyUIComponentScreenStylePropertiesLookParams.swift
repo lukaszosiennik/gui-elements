@@ -7,7 +7,10 @@ extension UIComponentScreenStyleProperties where
     UIElementComponentStylePropertiesLookParamsType == EmptyUIComponentScreenStylePropertiesLookParams {
     
     public init(
-        lookType: UIElementComponentStylePropertiesLookType<UIElementComponentStylePropertiesOSLookType, UIElementComponentStylePropertiesSystemLookType>,
+        lookType: UIElementComponentStylePropertiesLookType<
+            UIElementComponentStylePropertiesOSLookType,
+            UIElementComponentStylePropertiesSystemLookType
+        >,
         layoutParams: UIElementComponentStylePropertiesLayoutParamsType?
     ) {
         self = .init(

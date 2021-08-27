@@ -5,7 +5,9 @@
 
 import UIKit
 
-public final class ButtonUIComponent: UIView, ButtonUIComponentInterface {
+public final class ButtonUIComponent:
+    UIView,
+    ButtonUIComponentInterface {
     
     private(set) var button = UIButton(type: .custom)
     
@@ -33,7 +35,11 @@ public final class ButtonUIComponent: UIView, ButtonUIComponentInterface {
     }
     
     public func setupSettings() {
-        self.button = UIButton(type: styleLookButtonType(from: settings.styleProperties.lookType))
+        self.button = UIButton(
+            type: styleLookButtonType(
+                from: settings.styleProperties.lookType
+            )
+        )
         
         setupNestedSettings()
         
@@ -65,10 +71,18 @@ public final class ButtonUIComponent: UIView, ButtonUIComponentInterface {
 extension ButtonUIComponent {
     
     public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
-        setupStyleLookOSConfiguration(lookConfiguration, for: button)
+        setupStyleLookOSConfiguration(
+            lookConfiguration,
+            for: button
+        )
     }
     
-    private func styleLookButtonType(from lookType: UIElementComponentStylePropertiesLookType<ButtonUIComponentStylePropertiesOSLook, ButtonUIComponentStylePropertiesSystemLook>) -> UIButton.ButtonType {
+    private func styleLookButtonType(
+        from lookType: UIElementComponentStylePropertiesLookType<
+            ButtonUIComponentStylePropertiesOSLook,
+            ButtonUIComponentStylePropertiesSystemLook
+        >
+    ) -> UIButton.ButtonType {
         switch lookType {
         case .os(let look):
             switch look.buttonStyleType {
@@ -91,11 +105,17 @@ extension ButtonUIComponent {
     }
     
     public func setupStyleLookOS(_ look: ButtonUIComponentStylePropertiesOSLook) {
-        setupStyleLookOS(look, for: button)
+        setupStyleLookOS(
+            look,
+            for: button
+        )
     }
     
     public func setupStyleLookSystem(_ look: ButtonUIComponentStylePropertiesSystemLook) {
-        setupStyleLookSystem(look, for: button)
+        setupStyleLookSystem(
+            look,
+            for: button
+        )
     }
 }
 
@@ -106,7 +126,10 @@ extension ButtonUIComponent {
     }
     
     public func setupStyleLookParamsSystem(_ lookParams: EmptyUIComponentStylePropertiesLookParams) {
-        setupStyleLookParamsSystem(lookParams, for: button)
+        setupStyleLookParamsSystem(
+            lookParams,
+            for: button
+        )
     }
 }
 
@@ -125,7 +148,10 @@ extension ButtonUIComponent {
     public func setupStyleLayoutSystem(_ layoutParams: ButtonUIComponentStylePropertiesLayoutParams) {
         setupStyleLayout()
         
-        setupStyleLayoutSystem(layoutParams, for: button)
+        setupStyleLayoutSystem(
+            layoutParams,
+            for: button
+        )
     }
     
     private func setupStyleLayout() {

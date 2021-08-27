@@ -9,12 +9,18 @@ public struct UIComponentScreenStylePropertiesTemplate<
     UIComponentScreenStylePropertiesLayoutParamsType: UIComponentScreenStylePropertiesLayoutParams
 >: UIComponentScreenStyleProperties {
 
-    public let lookType: UIElementComponentStylePropertiesLookType<EmptyUIElementComponentStylePropertiesOSLook, UIComponentScreenStylePropertiesLookType>
+    public let lookType: UIElementComponentStylePropertiesLookType<
+        EmptyUIElementComponentStylePropertiesOSLook,
+        UIComponentScreenStylePropertiesLookType
+    >
     public let lookParams: UIComponentScreenStylePropertiesLookParamsType?
     public let layoutParams: UIComponentScreenStylePropertiesLayoutParamsType?
     
     public init(
-        lookType: UIElementComponentStylePropertiesLookType<EmptyUIElementComponentStylePropertiesOSLook, UIComponentScreenStylePropertiesLookType>,
+        lookType: UIElementComponentStylePropertiesLookType<
+            EmptyUIElementComponentStylePropertiesOSLook,
+            UIComponentScreenStylePropertiesLookType
+        >,
         lookParams: UIComponentScreenStylePropertiesLookParamsType?,
         layoutParams: UIComponentScreenStylePropertiesLayoutParamsType?
     ) {
