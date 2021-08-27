@@ -5,11 +5,4 @@
 
 import UIKit
 
-public struct PlaceholderUIComponentStylePropertiesLook: UIComponentStylePropertiesSystemLook {
-    
-    public let backgroundColor: UIColor
-    
-    public init(backgroundColor: UIColor) {
-        self.backgroundColor = backgroundColor
-    }
-}
+public struct PlaceholderUIComponentStylePropertiesLook: UIComponentStylePropertiesSystemLook {}

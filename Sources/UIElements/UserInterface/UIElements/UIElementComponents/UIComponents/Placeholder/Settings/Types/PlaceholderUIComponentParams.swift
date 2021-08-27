@@ -3,25 +3,23 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-import UIKit
-
 public struct PlaceholderUIComponentParams: UIComponentParams {
     
-    public let color: UIColor?
-    public let height: CGFloat?
+    public let look: PlaceholderUIComponentParamsPropertiesLook?
+    public let layoutParams: PlaceholderUIComponentParamsPropertiesLayoutParams?
     
     public static var `default`: Self {
         return .init(
-            color: nil,
-            height: nil
+            look: nil,
+            layoutParams: nil
         )
     }
     
     public init(
-        color: UIColor? = nil,
-        height: CGFloat?
+        look: PlaceholderUIComponentParamsPropertiesLook? = nil,
+        layoutParams: PlaceholderUIComponentParamsPropertiesLayoutParams?
     ) {
-        self.color = color
-        self.height = height
+        self.look = look
+        self.layoutParams = layoutParams
     }
 }

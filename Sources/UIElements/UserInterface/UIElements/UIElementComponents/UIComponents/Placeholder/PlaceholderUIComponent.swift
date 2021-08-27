@@ -41,14 +41,12 @@ extension PlaceholderUIComponent {
     
     public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
         let tempView = UIView()
-        backgroundColor = settings.params.color ?? tempView.backgroundColor
+        backgroundColor = settings.params.look?.color ?? tempView.backgroundColor
     }
     
     public func setupStyleLookOS(_ look: EmptyUIComponentStylePropertiesOSLook) {}
     
-    public func setupStyleLookSystem(_ look: PlaceholderUIComponentStylePropertiesLook) {
-        backgroundColor = settings.params.color ?? look.backgroundColor
-    }
+    public func setupStyleLookSystem(_ look: PlaceholderUIComponentStylePropertiesLook) {}
 }
 
 extension PlaceholderUIComponent {
@@ -63,7 +61,7 @@ extension PlaceholderUIComponent {
     public func setupStyleLayoutInitialization() {}
     
     public func setupStyleLayoutOS() {
-        if let height = settings.params.height {
+        if let height = settings.params.layoutParams?.height {
             setupStyleLayout(height)
             return
         }
@@ -71,9 +69,7 @@ extension PlaceholderUIComponent {
         uie.removeConstraintIfExists(with: heightConstraintID)
     }
     
-    public func setupStyleLayoutSystem(_ layoutParams: PlaceholderUIComponentStylePropertiesLayoutParams) {
-        setupStyleLayout(settings.params.height ?? layoutParams.height)
-    }
+    public func setupStyleLayoutSystem(_ layoutParams: PlaceholderUIComponentStylePropertiesLayoutParams) {}
     
     private func setupStyleLayout(_ height: CGFloat) {
         if let heightConstraint = uie.constraint(with: heightConstraintID) {

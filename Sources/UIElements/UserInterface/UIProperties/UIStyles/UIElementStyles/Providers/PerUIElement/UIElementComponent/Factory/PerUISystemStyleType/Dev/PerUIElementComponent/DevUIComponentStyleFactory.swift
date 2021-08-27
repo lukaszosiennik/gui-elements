@@ -38,9 +38,7 @@ public final class DevUIComponentStyleFactory: UIElementComponentTypeStyleFactor
         return .init(
             type: styleType,
             properties: .init(
-                lookType: .system(.init(
-                    backgroundColor: ColorPalette.Placeholder.background_green
-                )),
+                lookType: .system(.init()),
                 layoutParams: .preferred
             )
         )
