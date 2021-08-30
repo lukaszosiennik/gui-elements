@@ -7,7 +7,7 @@ public typealias NavigationMenuOptionUIComponentSetStyleProperties =
     UIComponentSetStylePropertiesTemplate<
         UIComponentSetStylePropertiesLookTemplate<
             EmptyUIElementComponentStylePropertiesOSLook,
-            NavigationMenuOptionUIComponentSetStylePropertiesLook
+            NavigationMenuOptionUIComponentSetStylePropertiesSystemLook
         >,
         EmptyUIComponentSetStylePropertiesLookParams,
         NavigationMenuOptionUIComponentSetStylePropertiesLayoutParams

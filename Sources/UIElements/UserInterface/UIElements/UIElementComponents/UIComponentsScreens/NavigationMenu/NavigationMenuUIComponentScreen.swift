@@ -61,7 +61,7 @@ extension NavigationMenuUIComponentScreen {
     
     public func setupStyleLookOS(_ look: EmptyUIElementComponentStylePropertiesOSLook) {}
     
-    public func setupStyleLookSystem(_ look: NavigationMenuUIComponentScreenStylePropertiesLook) {
+    public func setupStyleLookSystem(_ look: NavigationMenuUIComponentScreenStylePropertiesSystemLook) {
         backgroundColor = look.backgroundColor
     }
 }

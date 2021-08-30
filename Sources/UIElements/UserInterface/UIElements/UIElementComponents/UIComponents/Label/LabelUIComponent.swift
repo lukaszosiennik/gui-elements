@@ -46,7 +46,7 @@ extension LabelUIComponent {
     
     public func setupStyleLookOS(_ look: EmptyUIComponentStylePropertiesOSLook) {}
     
-    public func setupStyleLookSystem(_ look: LabelUIComponentStylePropertiesLook) {
+    public func setupStyleLookSystem(_ look: LabelUIComponentStylePropertiesSystemLook) {
         textColor = look.textColor
     }
 }

@@ -88,7 +88,7 @@ extension NavigationMenuUIComponentGroup {
     
     public func setupStyleLookOS(_ look: EmptyUIElementComponentStylePropertiesOSLook) {}
     
-    public func setupStyleLookSystem(_ look: NavigationMenuUIComponentGroupStylePropertiesLook) {
+    public func setupStyleLookSystem(_ look: NavigationMenuUIComponentGroupStylePropertiesSystemLook) {
         backgroundColor = look.backgroundColor
     }
 }

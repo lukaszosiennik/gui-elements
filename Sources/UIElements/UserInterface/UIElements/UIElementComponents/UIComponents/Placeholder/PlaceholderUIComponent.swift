@@ -48,7 +48,7 @@ extension PlaceholderUIComponent {
     
     public func setupStyleLookOS(_ look: EmptyUIComponentStylePropertiesOSLook) {}
     
-    public func setupStyleLookSystem(_ look: PlaceholderUIComponentStylePropertiesLook) {}
+    public func setupStyleLookSystem(_ look: PlaceholderUIComponentStylePropertiesSystemLook) {}
 }
 
 extension PlaceholderUIComponent {

@@ -7,7 +7,7 @@ public typealias CardUIComponentGroupStyleProperties =
     UIComponentGroupStylePropertiesTemplate<
         UIComponentGroupStylePropertiesLookTemplate<
             EmptyUIElementComponentStylePropertiesOSLook,
-            CardUIComponentGroupStylePropertiesLook
+            CardUIComponentGroupStylePropertiesSystemLook
         >,
         EmptyUIComponentGroupStylePropertiesLookParams,
         CardUIComponentGroupStylePropertiesLayoutParams

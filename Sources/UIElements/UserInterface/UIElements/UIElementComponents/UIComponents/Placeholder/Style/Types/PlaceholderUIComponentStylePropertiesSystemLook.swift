@@ -5,4 +5,4 @@
 
 import UIKit
 
-public struct PlaceholderUIComponentStylePropertiesLook: UIComponentStylePropertiesSystemLook {}
+public struct PlaceholderUIComponentStylePropertiesSystemLook: UIComponentStylePropertiesSystemLook {}

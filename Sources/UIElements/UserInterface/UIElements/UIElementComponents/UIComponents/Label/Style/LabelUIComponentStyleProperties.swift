@@ -7,7 +7,7 @@ public typealias LabelUIComponentStyleProperties =
     UIComponentStylePropertiesTemplate<
         UIComponentStylePropertiesLookTemplate<
             EmptyUIComponentStylePropertiesOSLook,
-            LabelUIComponentStylePropertiesLook
+            LabelUIComponentStylePropertiesSystemLook
         >,
         LabelUIComponentStylePropertiesLookParams,
         LabelUIComponentStylePropertiesLayoutParams

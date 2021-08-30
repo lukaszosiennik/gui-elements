@@ -3,10 +3,10 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentScreenStylePropertiesLook: UIElementComponentStylePropertiesSystemLook where
+public protocol UIComponentScreenStylePropertiesSystemLook: UIElementComponentStylePropertiesSystemLook where
     UIElementComponentStylePropertiesOverwrittenLookType: UIComponentScreenStylePropertiesOverwrittenLook {}
 
-extension UIComponentScreenStylePropertiesLook {
+extension UIComponentScreenStylePropertiesSystemLook {
     
     public init(
         look: Self,

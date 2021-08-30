@@ -7,7 +7,7 @@ public typealias InformationUIComponentScreenStyleProperties =
     UIComponentScreenStylePropertiesTemplate<
         UIComponentScreenStylePropertiesLookTemplate<
             EmptyUIElementComponentStylePropertiesOSLook,
-            InformationUIComponentScreenStylePropertiesLook
+            InformationUIComponentScreenStylePropertiesSystemLook
         >,
         InformationUIComponentScreenStylePropertiesLookParams,
         InformationUIComponentScreenStylePropertiesLayoutParams

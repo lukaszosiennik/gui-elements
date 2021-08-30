@@ -5,7 +5,7 @@
 
 import UIKit
 
-public struct InformationUIComponentScreenStylePropertiesLook: UIComponentScreenStylePropertiesLook {
+public struct InformationUIComponentScreenStylePropertiesSystemLook: UIComponentScreenStylePropertiesSystemLook {
     
     public let backgroundColor: UIColor
     

@@ -4,4 +4,4 @@
 //
 
 public protocol UIComponentSetStylePropertiesLookInterface: UIElementComponentStylePropertiesLookInterface where
-    UIElementComponentStylePropertiesSystemLookType: UIComponentSetStylePropertiesLook {}
+    UIElementComponentStylePropertiesSystemLookType: UIComponentSetStylePropertiesSystemLook {}

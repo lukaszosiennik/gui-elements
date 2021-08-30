@@ -5,7 +5,7 @@
 
 import UIKit
 
-public struct NavigationMenuUIComponentScreenStylePropertiesLook: UIComponentScreenStylePropertiesLook {
+public struct NavigationMenuUIComponentGroupStylePropertiesSystemLook: UIComponentGroupStylePropertiesSystemLook {
     
     public let backgroundColor: UIColor
     

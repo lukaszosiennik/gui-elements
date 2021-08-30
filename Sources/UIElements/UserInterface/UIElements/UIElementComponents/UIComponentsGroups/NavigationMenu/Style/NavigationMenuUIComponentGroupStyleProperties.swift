@@ -7,7 +7,7 @@ public typealias NavigationMenuUIComponentGroupStyleProperties =
     UIComponentGroupStylePropertiesTemplate<
         UIComponentGroupStylePropertiesLookTemplate<
             EmptyUIElementComponentStylePropertiesOSLook,
-            NavigationMenuUIComponentGroupStylePropertiesLook
+            NavigationMenuUIComponentGroupStylePropertiesSystemLook
         >,
         NavigationMenuUIComponentGroupStylePropertiesLookParams,
         NavigationMenuUIComponentGroupStylePropertiesLayoutParams

@@ -7,7 +7,7 @@ public typealias NavigationMenuUIComponentScreenStyleProperties =
     UIComponentScreenStylePropertiesTemplate<
         UIComponentScreenStylePropertiesLookTemplate<
             EmptyUIElementComponentStylePropertiesOSLook,
-            NavigationMenuUIComponentScreenStylePropertiesLook
+            NavigationMenuUIComponentScreenStylePropertiesSystemLook
         >,
         EmptyUIComponentScreenStylePropertiesLookParams,
         NavigationMenuUIComponentScreenStylePropertiesLayoutParams

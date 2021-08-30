@@ -58,7 +58,7 @@ extension NavigationMenuUIOptionComponentSet {
     
     public func setupStyleLookOS(_ look: EmptyUIElementComponentStylePropertiesOSLook) {}
     
-    public func setupStyleLookSystem(_ look: NavigationMenuOptionUIComponentSetStylePropertiesLook) {
+    public func setupStyleLookSystem(_ look: NavigationMenuOptionUIComponentSetStylePropertiesSystemLook) {
         backgroundColor = look.backgroundColor
         layer.borderColor = look.borderColor.cgColor
         layer.borderWidth = look.borderWidth
