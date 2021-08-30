@@ -13,7 +13,8 @@ public struct NavigationMenuUIComponentScreenParams<
     
     public let title: String
     public let options: KeyValuePairs<
-        OptionKey, String
+        OptionKey,
+        String
     >
     
     public let actions: Actions?
