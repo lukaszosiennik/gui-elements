@@ -3,7 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class AppUIComponentStyleFactory: UIElementComponentTypeStyleFactory, UIComponentStyleFactoryInterface {
+public final class AppUIComponentStyleFactory:
+    UIElementComponentTypeStyleFactory,
+    UIComponentStyleFactoryInterface {
     
     public func button() -> UIElementComponentStyle<ButtonUIComponentStyleProperties> {
         return .default(

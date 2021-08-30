@@ -11,16 +11,16 @@ public final class NavigationMenuUIComponentGroup<
     UIView,
     UIComponentGroup {
     
-    private let titleLabelUI = LabelUIComponent()
+    private let titleLabelUI: LabelUIComponent = .init()
     
-    private let stackViewBackground = UIView()
-    private let stackView = UIStackView()
+    private let stackViewBackground: UIView = .init()
+    private let stackView: UIStackView = .init()
     
     private let titleTopSpaceConstraintID = "titleTopSpace"
     private let titleBottomSpaceConstraintID = "titleBottomSpace"
     private let optionViewHeightConstraintID = "optionViewHeight"
     
-    public let initialization = UIElementComponentInitialization()
+    public let initialization: UIElementComponentInitialization = .init()
     
     public var settings: NavigationMenuUIComponentGroupSettings<OptionKey> {
         didSet {
@@ -69,7 +69,8 @@ public final class NavigationMenuUIComponentGroup<
                         title: option.value,
                         action: {
                             params.actions?(option.key)
-                        }),
+                        }
+                    ),
                     styleType: settings.styleType
                 )
             )
@@ -82,7 +83,7 @@ public final class NavigationMenuUIComponentGroup<
 extension NavigationMenuUIComponentGroup {
     
     public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
-        let tempView = UIView()
+        let tempView: UIView = .init()
         backgroundColor = tempView.backgroundColor
     }
     
@@ -140,7 +141,7 @@ extension NavigationMenuUIComponentGroup {
     }
     
     public func setupStyleLayoutOS() {
-        let tempStackView = UIStackView()
+        let tempStackView: UIStackView = .init()
         stackView.spacing = tempStackView.spacing
         
         uie.constraint(with: titleTopSpaceConstraintID)?.constant = 0

@@ -9,7 +9,7 @@ public final class CustomButtonUIComponent:
     UIButton,
     ButtonUIComponentInterface {
 
-    public let initialization = UIElementComponentInitialization()
+    public let initialization: UIElementComponentInitialization = .init()
     
     public var settings: ButtonUIComponentSettings {
         didSet {

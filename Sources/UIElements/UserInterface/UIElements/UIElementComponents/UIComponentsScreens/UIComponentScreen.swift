@@ -23,7 +23,7 @@ extension UIComponentScreen {
         if isUserFriendly {
             backgroundColor = .white
         } else {
-            let tempView = UIView()
+            let tempView: UIView = .init()
             backgroundColor = tempView.backgroundColor
         }
     }

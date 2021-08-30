@@ -9,7 +9,7 @@ public final class TextFieldUIComponent:
     UITextField,
     UIComponent {
 
-    public let initialization = UIElementComponentInitialization()
+    public let initialization: UIElementComponentInitialization = .init()
     
     public var settings: TextFieldUIComponentSettings {
         didSet {
@@ -40,7 +40,7 @@ public final class TextFieldUIComponent:
 extension TextFieldUIComponent {
     
     public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
-        let tempTextField = UITextField()
+        let tempTextField: UITextField = .init()
         borderStyle = tempTextField.borderStyle
     }
     

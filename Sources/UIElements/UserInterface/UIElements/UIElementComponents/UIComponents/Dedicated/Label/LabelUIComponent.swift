@@ -5,9 +5,11 @@
 
 import UIKit
 
-public final class LabelUIComponent: UILabel, UIComponent {
+public final class LabelUIComponent:
+    UILabel,
+    UIComponent {
 
-    public let initialization = UIElementComponentInitialization()
+    public let initialization: UIElementComponentInitialization = .init()
     
     public var settings: LabelUIComponentSettings {
         didSet {
@@ -40,7 +42,7 @@ public final class LabelUIComponent: UILabel, UIComponent {
 extension LabelUIComponent {
     
     public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
-        let tempLabel = UILabel()
+        let tempLabel: UILabel = .init()
         textColor = tempLabel.textColor
     }
     
@@ -54,7 +56,7 @@ extension LabelUIComponent {
 extension LabelUIComponent {
     
     public func setupStyleLookParamsOS() {
-        let tempLabel = UILabel()
+        let tempLabel: UILabel = .init()
         numberOfLines = tempLabel.numberOfLines
     }
     

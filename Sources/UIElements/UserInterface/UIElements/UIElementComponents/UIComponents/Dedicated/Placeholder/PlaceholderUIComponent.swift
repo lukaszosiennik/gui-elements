@@ -11,7 +11,7 @@ public final class PlaceholderUIComponent:
     
     private let heightConstraintID = "height"
     
-    public let initialization = UIElementComponentInitialization()
+    public let initialization: UIElementComponentInitialization = .init()
     
     public var settings: PlaceholderUIComponentSettings {
         didSet {
@@ -42,7 +42,7 @@ public final class PlaceholderUIComponent:
 extension PlaceholderUIComponent {
     
     public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
-        let tempView = UIView()
+        let tempView: UIView = .init()
         backgroundColor = settings.params.look?.color ?? tempView.backgroundColor
     }
     

@@ -9,9 +9,9 @@ public final class NavigationMenuUIOptionComponentSet:
     UIView,
     UIComponentSet {
     
-    private let optionButtonUI = ButtonUIComponent()
+    private let optionButtonUI: ButtonUIComponent = .init()
     
-    public let initialization = UIElementComponentInitialization()
+    public let initialization: UIElementComponentInitialization = .init()
     
     public var settings: NavigationMenuOptionUIComponentSetSettings {
         didSet {
@@ -50,7 +50,7 @@ public final class NavigationMenuUIOptionComponentSet:
 extension NavigationMenuUIOptionComponentSet {
     
     public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
-        let tempView = UIView()
+        let tempView: UIView = .init()
         backgroundColor = tempView.backgroundColor
         layer.borderColor = tempView.layer.borderColor
         layer.borderWidth = tempView.layer.borderWidth

@@ -10,8 +10,12 @@ public final class UIElementComponentStyleFactoryProvider: UIElementComponentSty
     static private let shared = UIElementComponentStyleFactoryProvider()
     
     private init() {
-        let appStyleFactory = AppUIElementComponentStyleFactory(styleType: .system(.app))
-        let devStyleFactory = DevUIElementComponentStyleFactory(styleType: .system(.dev))
+        let appStyleFactory: AppUIElementComponentStyleFactory = .init(
+            styleType: .system(.app)
+        )
+        let devStyleFactory: DevUIElementComponentStyleFactory = .init(
+            styleType: .system(.dev)
+        )
         
         self.styleFactory = [
             appStyleFactory.styleType: appStyleFactory,

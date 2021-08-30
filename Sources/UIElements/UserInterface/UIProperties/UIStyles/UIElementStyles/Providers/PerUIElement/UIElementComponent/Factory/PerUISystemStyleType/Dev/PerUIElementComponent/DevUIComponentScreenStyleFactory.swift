@@ -3,7 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class DevUIComponentScreenStyleFactory: UIElementComponentTypeStyleFactory, UIComponentScreenStyleFactoryInterface {
+public final class DevUIComponentScreenStyleFactory:
+    UIElementComponentTypeStyleFactory,
+    UIComponentScreenStyleFactoryInterface {
     
     private typealias ColorPalette = DevUIColorPalette.UIElementComponent.UIComponentScreen
     private typealias ConstantPalette = DevUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen

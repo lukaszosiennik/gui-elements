@@ -12,13 +12,13 @@ public class CardUIComponentGroupBasis<
     UIView,
     UIComponentGroup {
 
-    private let titleContainer = UIView()
-    private let titleLabelUI = LabelUIComponent()
+    private let titleContainer: UIView = .init()
+    private let titleLabelUI: LabelUIComponent = .init()
     
-    private let bodyContainer = UIView()
-    let bodyContainerContent = BodyViewType()
+    private let bodyContainer: UIView = .init()
+    let bodyContainerContent: BodyViewType = .init()
     
-    public let initialization = UIElementComponentInitialization()
+    public let initialization: UIElementComponentInitialization = .init()
     
     public var settings: CardUIComponentGroupSettings<BodyUIElementComponentSettingsType> {
         didSet {

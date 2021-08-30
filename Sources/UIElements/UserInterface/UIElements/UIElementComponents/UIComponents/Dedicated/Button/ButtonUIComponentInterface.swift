@@ -27,17 +27,15 @@ extension ButtonUIComponentInterface {
         _ lookConfiguration: UIElementComponentLookOSConfiguration,
         for button: UIButton
     ) {
-        let tempButton = UIButton(type: button.buttonType)
+        let tempButton: UIButton = .init(
+            type: button.buttonType
+        )
         button.setTitleColor(
-            tempButton.titleColor(
-                for: .normal
-            ),
+            tempButton.titleColor(for: .normal),
             for: .normal
         )
         button.setTitleColor(
-            tempButton.titleColor(
-                for: .highlighted
-            ),
+            tempButton.titleColor(for: .highlighted),
             for: .highlighted
         )
     }

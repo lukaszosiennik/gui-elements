@@ -11,14 +11,14 @@ public final class NavigationMenuUIComponentScreen<
     UIView,
     UIComponentScreen {
     
-    private let navigationMenuUI = NavigationMenuUIComponentGroup<OptionKey>()
+    private let navigationMenuUI: NavigationMenuUIComponentGroup<OptionKey> = .init()
     
-    private let container = UIView()
+    private let container: UIView = .init()
     
     private let leadingSpaceConstraintID = "leadingSpace"
     private let trailingSpaceConstraintID = "trailingSpace"
     
-    public let initialization = UIElementComponentInitialization()
+    public let initialization: UIElementComponentInitialization = .init()
     
     public var settings: NavigationMenuUIComponentScreenSettings<OptionKey> {
         didSet {

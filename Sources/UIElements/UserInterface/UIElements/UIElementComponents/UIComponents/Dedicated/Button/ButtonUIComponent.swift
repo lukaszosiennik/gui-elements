@@ -9,9 +9,11 @@ public final class ButtonUIComponent:
     UIView,
     ButtonUIComponentInterface {
     
-    private(set) var button = UIButton(type: .custom)
+    private(set) var button: UIButton = .init(
+        type: .custom
+    )
     
-    public let initialization = UIElementComponentInitialization()
+    public let initialization: UIElementComponentInitialization = .init()
     
     public var settings: ButtonUIComponentSettings {
         didSet {
@@ -56,11 +58,18 @@ public final class ButtonUIComponent:
     }
     
     public func setupParams(_ params: ButtonUIComponentParams) {
-        setupParams(params, for: button)
+        setupParams(
+            params,
+            for: button
+        )
     }
     
     private func setupActions() {
-        button.addTarget(self, action: #selector(defaultAction), for: .touchUpInside)
+        button.addTarget(
+            self,
+            action: #selector(defaultAction),
+            for: .touchUpInside
+        )
     }
     
     @objc private func defaultAction() {

@@ -3,7 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class AppUIComponentScreenStyleFactory: UIElementComponentTypeStyleFactory, UIComponentScreenStyleFactoryInterface {
+public final class AppUIComponentScreenStyleFactory:
+    UIElementComponentTypeStyleFactory,
+    UIComponentScreenStyleFactoryInterface {
     
     public func information() -> UIElementComponentStyle<InformationUIComponentScreenStyleProperties> {
         return .default(

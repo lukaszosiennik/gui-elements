@@ -3,7 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class DevUIComponentGroupStyleFactory: UIElementComponentTypeStyleFactory, UIComponentGroupStyleFactoryInterface {
+public final class DevUIComponentGroupStyleFactory:
+    UIElementComponentTypeStyleFactory,
+    UIComponentGroupStyleFactoryInterface {
     
     private typealias ColorPalette = DevUIColorPalette.UIElementComponent.UIComponentGroup
     private typealias ConstantPalette = DevUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup

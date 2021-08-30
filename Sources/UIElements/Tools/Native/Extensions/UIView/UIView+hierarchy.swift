@@ -6,7 +6,8 @@
 import UIKit
 import commons
 
-extension CommonsExtension where ExtendedType: UIView {
+extension CommonsExtension where
+    ExtendedType: UIView {
     
     public func addSubview(_ view: UIView) {
         view.translatesAutoresizingMaskIntoConstraints = false

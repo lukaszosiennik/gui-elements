@@ -3,7 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class AppUIComponentGroupStyleFactory: UIElementComponentTypeStyleFactory, UIComponentGroupStyleFactoryInterface {
+public final class AppUIComponentGroupStyleFactory:
+    UIElementComponentTypeStyleFactory,
+    UIComponentGroupStyleFactoryInterface {
     
     public func card() -> UIElementComponentStyle<CardUIComponentGroupStyleProperties> {
         return .default(

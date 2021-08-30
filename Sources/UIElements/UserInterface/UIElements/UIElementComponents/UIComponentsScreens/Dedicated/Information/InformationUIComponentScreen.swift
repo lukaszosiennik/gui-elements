@@ -9,9 +9,9 @@ public final class InformationUIComponentScreen:
     UIView,
     UIComponentScreen {
     
-    private let titleLabelUI = LabelUIComponent()
+    private let titleLabelUI: LabelUIComponent = .init()
     
-    public let initialization = UIElementComponentInitialization()
+    public let initialization: UIElementComponentInitialization = .init()
     
     public var settings: InformationUIComponentScreenSettings {
         didSet {
