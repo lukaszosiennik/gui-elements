@@ -9,7 +9,9 @@ typealias DefaultUIComponentConstantPalette = DefaultUIElementComponentConstantP
 typealias DefaultUIComponentGroupConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
 typealias DefaultUIComponentScreenConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
 
-enum DefaultUIElementComponentConstantPalette: UIElementComponentConstantPalette {
+enum DefaultUIElementComponentConstantPalette:
+    DefaultUIPalette,
+    UIElementComponentConstantPalette {
     
     enum All {
         

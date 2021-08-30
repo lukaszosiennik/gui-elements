@@ -3,4 +3,6 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-enum AppUIFontPalette: UIFontPalette {}
+enum AppUIFontPalette:
+    SystemUIPalette,
+    UIFontPalette {}

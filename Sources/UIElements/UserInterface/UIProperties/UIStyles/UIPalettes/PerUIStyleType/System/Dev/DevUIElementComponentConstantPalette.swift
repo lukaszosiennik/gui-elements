@@ -5,7 +5,9 @@
 
 import UIKit
 
-enum DevUIElementComponentConstantPalette: UIElementComponentConstantPalette {
+enum DevUIElementComponentConstantPalette:
+    SystemUIPalette,
+    UIElementComponentConstantPalette {
     
     fileprivate enum All {
         

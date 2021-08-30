@@ -5,7 +5,9 @@
 
 import UIKit
 
-enum DevUIColorPalette: UIColorPalette {
+enum DevUIColorPalette:
+    SystemUIPalette,
+    UIColorPalette {
     
     fileprivate enum All {
         
