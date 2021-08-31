@@ -30,6 +30,21 @@ public struct CardUIComponentGroupSettings<
     
     public init(
         params: CardUIComponentGroupParams,
+        styleType: UIStyleType,
+        bodySettingsParams: BodyUIElementComponentSettingsType.UIElementComponentParamsType
+    ) {
+        self.init(
+            params: params,
+            style: Self.style(for: styleType),
+            bodySettings: .init(
+                params: bodySettingsParams,
+                styleType: styleType
+            )
+        )
+    }
+    
+    private init(
+        params: CardUIComponentGroupParams,
         style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>,
         bodySettings: BodyUIElementComponentSettingsType
     ) {
