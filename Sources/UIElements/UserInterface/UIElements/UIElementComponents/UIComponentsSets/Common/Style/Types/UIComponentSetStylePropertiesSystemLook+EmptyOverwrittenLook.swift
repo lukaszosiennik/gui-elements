@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-extension UIComponentSetStylePropertiesSystemLook where
+extension UIComponentSetStylePropertiesSystemLook
+where
     UIElementComponentStylePropertiesOverwrittenLookType == EmptyUIComponentSetStylePropertiesOverwrittenLook {
     
     public init(

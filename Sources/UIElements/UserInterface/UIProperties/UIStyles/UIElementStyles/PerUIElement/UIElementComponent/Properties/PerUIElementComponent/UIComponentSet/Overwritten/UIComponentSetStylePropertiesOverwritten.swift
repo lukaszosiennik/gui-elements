@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentSetStylePropertiesOverwritten: UIElementComponentStylePropertiesOverwritten where
+public protocol UIComponentSetStylePropertiesOverwritten: UIElementComponentStylePropertiesOverwritten
+where
     UIElementComponentStylePropertiesOverwrittenLookType: UIComponentSetStylePropertiesOverwrittenLook,
     UIElementComponentStylePropertiesOverwrittenLookParamsType: UIComponentSetStylePropertiesOverwrittenLookParams,
     UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIComponentSetStylePropertiesOverwrittenLayoutParams {}

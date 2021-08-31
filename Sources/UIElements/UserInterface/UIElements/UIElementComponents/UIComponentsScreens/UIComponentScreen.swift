@@ -5,7 +5,8 @@
 
 import UIKit
 
-public protocol UIComponentScreen: UIElementComponent where
+public protocol UIComponentScreen: UIElementComponent
+where
     UIElementComponentSettingsType: UIComponentScreenSettings {
     
     func setupScreenStyleLookOS()

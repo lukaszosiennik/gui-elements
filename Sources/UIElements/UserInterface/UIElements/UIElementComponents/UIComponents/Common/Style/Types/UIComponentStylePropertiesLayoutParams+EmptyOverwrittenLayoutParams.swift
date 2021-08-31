@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-extension UIComponentStylePropertiesLayoutParams where
+extension UIComponentStylePropertiesLayoutParams
+where
     UIElementComponentStylePropertiesOverwrittenLayoutParamsType == EmptyUIComponentStylePropertiesOverwrittenLayoutParams {
     
     public init?(

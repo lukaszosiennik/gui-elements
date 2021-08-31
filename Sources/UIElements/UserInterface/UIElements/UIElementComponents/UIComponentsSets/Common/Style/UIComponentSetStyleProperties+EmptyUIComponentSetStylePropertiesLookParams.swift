@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-extension UIComponentSetStyleProperties where
+extension UIComponentSetStyleProperties
+where
     UIElementComponentStylePropertiesLookParamsType == EmptyUIComponentSetStylePropertiesLookParams {
     
     public init(

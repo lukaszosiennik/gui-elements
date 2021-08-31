@@ -3,6 +3,7 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentStylePropertiesLookInterface: UIElementComponentStylePropertiesLookInterface where
+public protocol UIComponentStylePropertiesLookInterface: UIElementComponentStylePropertiesLookInterface
+where
     UIElementComponentStylePropertiesOSLookType: UIComponentStylePropertiesOSLook,
     UIElementComponentStylePropertiesSystemLookType: UIComponentStylePropertiesSystemLook {}

@@ -5,5 +5,6 @@
 
 import UIKit
 
-public protocol UIElement where
+public protocol UIElement
+where
     Self: UIView {}

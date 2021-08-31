@@ -3,7 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentSettings: UIElementComponentSettings where
+public protocol UIComponentSettings: UIElementComponentSettings
+where
     UIElementComponentParamsType: UIComponentParams,
     UIElementComponentStylePropertiesType: UIComponentStyleProperties,
     UIElementComponentStylePropertiesOverwrittenType: UIComponentStylePropertiesOverwritten {}

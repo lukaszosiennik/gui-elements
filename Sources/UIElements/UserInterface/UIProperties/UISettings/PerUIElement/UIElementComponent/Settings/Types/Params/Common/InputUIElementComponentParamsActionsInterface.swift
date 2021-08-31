@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol InputUIElementComponentParamsActionsInterface where
+public protocol InputUIElementComponentParamsActionsInterface
+where
     Self: UIElementComponentParams {
     
     associatedtype ActionsKey: InputUIElementComponentActionsKeyInterface
