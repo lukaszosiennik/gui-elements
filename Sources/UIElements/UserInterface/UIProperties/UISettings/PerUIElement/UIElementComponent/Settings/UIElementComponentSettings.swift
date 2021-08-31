@@ -5,7 +5,8 @@
 
 public protocol UIElementComponentSettings:
     UIElementSettings,
-    UIPropertyDefaultValueInterface {
+    UIPropertyDefaultValueInterface,
+    SelfInstanceCreatingInterface {
     
     associatedtype UIElementComponentParamsType: UIElementComponentParams
     associatedtype UIElementComponentStylePropertiesType: UIElementComponentStyleProperties

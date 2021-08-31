@@ -3,7 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIElementComponentStylePropertiesSystemLook: UIElementStylePropertiesLook {
+public protocol UIElementComponentStylePropertiesSystemLook:
+    UIElementStylePropertiesLook,
+    SelfInstanceCreatingInterface {
     
     associatedtype UIElementComponentStylePropertiesOverwrittenLookType: UIElementComponentStylePropertiesOverwrittenLook
 
