@@ -3,13 +3,13 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIElementComponentStylePropertiesLayoutParams: UIElementStylePropertiesLayoutParams {
+public protocol UIElementComponentStylePropertiesLayoutParams:
+    UIElementStylePropertiesLayoutParams,
+    UIPropertyPreferredValueInterface {
     
     associatedtype UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIElementComponentStylePropertiesOverwrittenLayoutParams
     
     associatedtype DefaultConstantPalette: DefaultUIPalette & UIElementComponentConstantPalette
-    
-    static var preferred: Self? { get }
 
     init?(
         layoutParams: Self?,

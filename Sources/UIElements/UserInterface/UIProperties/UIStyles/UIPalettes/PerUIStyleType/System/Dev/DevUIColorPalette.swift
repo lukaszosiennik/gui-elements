@@ -47,7 +47,7 @@ public enum DevUIColorPalette {
 extension DevUIColorPalette.UIElementComponent {
         
     public enum UIComponent:
-        SystemUIPalette,
+        DevUIPalette,
         UIColorPalette {
         
         enum Button {
@@ -63,7 +63,7 @@ extension DevUIColorPalette.UIElementComponent {
     }
     
     public enum UIComponentSet:
-        SystemUIPalette,
+        DevUIPalette,
         UIColorPalette {
         
         enum NavigationMenuOption {
@@ -75,7 +75,7 @@ extension DevUIColorPalette.UIElementComponent {
     }
     
     public enum UIComponentGroup:
-        SystemUIPalette,
+        DevUIPalette,
         UIColorPalette {
         
         enum NavigationMenu {
@@ -86,7 +86,7 @@ extension DevUIColorPalette.UIElementComponent {
     }
     
     public enum UIComponentScreen:
-        SystemUIPalette,
+        DevUIPalette,
         UIColorPalette {
         
         fileprivate enum Property {

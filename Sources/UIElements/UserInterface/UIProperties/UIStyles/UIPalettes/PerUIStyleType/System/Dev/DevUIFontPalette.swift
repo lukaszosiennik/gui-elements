@@ -4,5 +4,5 @@
 //
 
 enum DevUIFontPalette:
-    SystemUIPalette,
+    DevUIPalette,
     UIFontPalette {}
