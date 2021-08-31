@@ -6,7 +6,8 @@
 import UIKit
 import commons
 
-extension CommonsExtension where ExtendedType: UIView {
+extension CommonsExtension where
+    ExtendedType: UIView {
 
     func isConstraintExists(with identifier: String) -> Bool {
         return constraint(with: identifier) != nil
