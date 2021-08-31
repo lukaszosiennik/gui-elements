@@ -15,7 +15,8 @@ public struct LabelUIComponentStylePropertiesLookParams: UIComponentStylePropert
         lookParams: Self?,
         overwrittenBy newLookParams: LabelUIComponentStylePropertiesOverwrittenLookParams?
     ) {
-        guard let linesNumber = newLookParams?.linesNumber ?? lookParams?.linesNumber else {
+        guard let linesNumber = newLookParams?.linesNumber ?? lookParams?.linesNumber
+        else {
             return nil
         }
         

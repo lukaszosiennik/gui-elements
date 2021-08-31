@@ -34,7 +34,8 @@ extension UIStyleType {
 extension UIStyleType {
     
     var isOS: Bool {
-        guard case .os = self else {
+        guard case .os = self
+        else {
             return false
         }
         

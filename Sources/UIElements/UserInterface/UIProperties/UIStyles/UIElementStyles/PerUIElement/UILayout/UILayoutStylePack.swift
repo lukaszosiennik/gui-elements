@@ -4,7 +4,8 @@
 //
 
 public struct UILayoutStylePack<
-    StylePropertiesType: UILayoutStyleProperties> {
+    StylePropertiesType: UILayoutStyleProperties
+> {
     
     let factory: UIElementStyleFactoryInterface?
     let style: UILayoutStyle<StylePropertiesType>

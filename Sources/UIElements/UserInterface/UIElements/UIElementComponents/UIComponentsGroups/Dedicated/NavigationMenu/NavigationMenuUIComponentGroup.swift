@@ -16,9 +16,9 @@ public final class NavigationMenuUIComponentGroup<
     private let stackViewBackground: UIView = .init()
     private let stackView: UIStackView = .init()
     
-    private let titleTopSpaceConstraintID = "titleTopSpace"
-    private let titleBottomSpaceConstraintID = "titleBottomSpace"
-    private let optionViewHeightConstraintID = "optionViewHeight"
+    private let titleTopSpaceConstraintID: String = "titleTopSpace"
+    private let titleBottomSpaceConstraintID: String = "titleBottomSpace"
+    private let optionViewHeightConstraintID: String = "optionViewHeight"
     
     public let initialization: UIElementComponentInitialization = .init()
     
@@ -63,7 +63,7 @@ public final class NavigationMenuUIComponentGroup<
         }
         
         params.options.forEach { option in
-            let optionView = NavigationMenuUIOptionComponentSet(
+            let optionView: NavigationMenuUIOptionComponentSet = .init(
                 settings: .init(
                     params: .init(
                         title: option.value,

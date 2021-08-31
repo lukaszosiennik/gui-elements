@@ -4,7 +4,8 @@
 //
 
 public enum UIElementComponentStylePropertiesLayoutParamsType<
-    UIElementComponentStylePropertiesLayoutParamsType: UIElementComponentStylePropertiesLayoutParams> {
+    UIElementComponentStylePropertiesLayoutParamsType: UIElementComponentStylePropertiesLayoutParams
+> {
     
     case os
     case system(_ lookParams: UIElementComponentStylePropertiesLayoutParamsType)

@@ -15,8 +15,8 @@ public final class NavigationMenuUIComponentScreen<
     
     private let container: UIView = .init()
     
-    private let leadingSpaceConstraintID = "leadingSpace"
-    private let trailingSpaceConstraintID = "trailingSpace"
+    private let leadingSpaceConstraintID: String = "leadingSpace"
+    private let trailingSpaceConstraintID: String = "trailingSpace"
     
     public let initialization: UIElementComponentInitialization = .init()
     

@@ -37,7 +37,7 @@ public final class ButtonUIComponent:
     }
     
     public func setupSettings() {
-        self.button = UIButton(
+        self.button = .init(
             type: styleLookButtonType(
                 from: settings.styleProperties.lookType
             )

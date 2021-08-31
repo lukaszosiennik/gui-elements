@@ -21,7 +21,8 @@ extension CommonsExtension where
     
     @discardableResult
     func removeConstraintIfExists(with identifier: String) -> Bool {
-        guard let constraint = constraint(with: identifier) else {
+        guard let constraint = constraint(with: identifier)
+        else {
             return false
         }
         

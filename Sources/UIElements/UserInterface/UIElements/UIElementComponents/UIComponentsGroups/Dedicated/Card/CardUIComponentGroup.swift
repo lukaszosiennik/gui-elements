@@ -5,9 +5,11 @@
 
 public final class CardUIComponentGroup<
     BodyUIElementComponentType: UIElementComponent
->: CardUIComponentGroupBasis<
-    BodyUIElementComponentType,
-    BodyUIElementComponentType.UIElementComponentSettingsType> {
+>:
+    CardUIComponentGroupBasis<
+        BodyUIElementComponentType,
+        BodyUIElementComponentType.UIElementComponentSettingsType
+    > {
 
     override func setupBodyNestedSettings() {
         bodyContainerContent.settings = settings.bodySettings

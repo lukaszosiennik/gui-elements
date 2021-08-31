@@ -9,7 +9,7 @@ public final class PlaceholderUIComponent:
     UIView,
     UIComponent {
     
-    private let heightConstraintID = "height"
+    private let heightConstraintID: String = "height"
     
     public let initialization: UIElementComponentInitialization = .init()
     

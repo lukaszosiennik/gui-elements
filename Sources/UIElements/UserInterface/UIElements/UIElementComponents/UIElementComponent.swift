@@ -86,7 +86,8 @@ extension UIElementComponent {
     }
     
     private func setupStyleLookParams() {
-        guard let lookParams = settings.styleProperties.lookParams else {
+        guard let lookParams = settings.styleProperties.lookParams
+        else {
             setupStyleLookParamsOS()
             return
         }
@@ -99,7 +100,8 @@ extension UIElementComponent {
             setupStyleLayoutInitialization()
         }
         
-        guard let layoutParams = settings.styleProperties.layoutParams else {
+        guard let layoutParams = settings.styleProperties.layoutParams
+        else {
             setupStyleLayoutOS()
             return
         }

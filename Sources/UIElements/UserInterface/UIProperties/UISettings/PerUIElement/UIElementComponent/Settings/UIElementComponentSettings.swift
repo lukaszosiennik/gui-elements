@@ -117,10 +117,14 @@ extension UIElementComponentSettings where
         for styleType: UIStyleType,
         overwrittenBy stylePropertiesOverwritten: UIElementComponentStylePropertiesOverwrittenType
     ) -> UIElementComponentStyle<UIElementComponentStylePropertiesType> {
-        guard let style = style(for: styleType) else {
-            let defaultStyle: UIElementComponentStyle<UIElementComponentStylePropertiesType> = .default(styleType: styleType)
+        guard let style = style(for: styleType)
+        else {
+            let defaultStyle: UIElementComponentStyle<UIElementComponentStylePropertiesType> = .default(
+                styleType: styleType
+            )
             
-            guard (stylePropertiesOverwritten.lookParams != nil || stylePropertiesOverwritten.layoutParams != nil) else {
+            guard (stylePropertiesOverwritten.lookParams != nil || stylePropertiesOverwritten.layoutParams != nil)
+            else {
                 return defaultStyle
             }
             
