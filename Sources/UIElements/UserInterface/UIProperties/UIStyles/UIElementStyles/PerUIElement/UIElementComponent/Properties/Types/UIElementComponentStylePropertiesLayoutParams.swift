@@ -7,6 +7,8 @@ public protocol UIElementComponentStylePropertiesLayoutParams: UIElementStylePro
     
     associatedtype UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIElementComponentStylePropertiesOverwrittenLayoutParams
     
+    associatedtype DefaultConstantPalette: DefaultUIPalette & UIElementComponentConstantPalette
+    
     static var preferred: Self? { get }
 
     init?(

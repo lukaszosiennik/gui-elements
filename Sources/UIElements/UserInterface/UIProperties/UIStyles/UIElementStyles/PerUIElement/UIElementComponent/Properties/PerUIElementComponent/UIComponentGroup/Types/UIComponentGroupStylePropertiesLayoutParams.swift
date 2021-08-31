@@ -4,4 +4,5 @@
 //
 
 public protocol UIComponentGroupStylePropertiesLayoutParams: UIElementComponentStylePropertiesLayoutParams where
-    UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIComponentGroupStylePropertiesOverwrittenLayoutParams {}
+    UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIComponentGroupStylePropertiesOverwrittenLayoutParams,
+    DefaultConstantPalette == DefaultUIComponentGroupConstantPalette {}

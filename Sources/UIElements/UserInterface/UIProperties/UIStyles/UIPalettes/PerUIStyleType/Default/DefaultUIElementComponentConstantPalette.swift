@@ -5,10 +5,10 @@
 
 import UIKit
 
-typealias DefaultUIComponentConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponent
-typealias DefaultUIComponentSetConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentSet
-typealias DefaultUIComponentGroupConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
-typealias DefaultUIComponentScreenConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
+public typealias DefaultUIComponentConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponent
+public typealias DefaultUIComponentSetConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentSet
+public typealias DefaultUIComponentGroupConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
+public typealias DefaultUIComponentScreenConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
 
 public enum DefaultUIElementComponentConstantPalette:
     DefaultUIPalette,
@@ -22,7 +22,7 @@ public enum DefaultUIElementComponentConstantPalette:
         static let value_100: CGFloat = 100
     }
     
-    enum UIElementComponent {
+    public enum UIElementComponent {
         
         fileprivate typealias UILookParamsPalette = UILookParams
         fileprivate enum UILookParams {
@@ -79,7 +79,9 @@ public enum DefaultUIElementComponentConstantPalette:
 
 extension DefaultUIElementComponentConstantPalette.UIElementComponent {
     
-    enum UIComponent {
+    public enum UIComponent:
+        DefaultUIPalette,
+        UIElementComponentConstantPalette {
         
         enum Placeholder {
             
@@ -90,9 +92,13 @@ extension DefaultUIElementComponentConstantPalette.UIElementComponent {
         }
     }
     
-    enum UIComponentSet {}
+    public enum UIComponentSet:
+        DefaultUIPalette,
+        UIElementComponentConstantPalette {}
     
-    enum UIComponentGroup {
+    public enum UIComponentGroup:
+        DefaultUIPalette,
+        UIElementComponentConstantPalette {
         
         enum NavigationMenu {
             
@@ -110,7 +116,9 @@ extension DefaultUIElementComponentConstantPalette.UIElementComponent {
         }
     }
     
-    enum UIComponentScreen {
+    public enum UIComponentScreen:
+        DefaultUIPalette,
+        UIElementComponentConstantPalette {
         
         enum Information {
             

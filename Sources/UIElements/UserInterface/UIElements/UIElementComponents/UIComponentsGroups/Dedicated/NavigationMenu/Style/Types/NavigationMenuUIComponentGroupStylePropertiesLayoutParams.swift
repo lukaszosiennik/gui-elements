@@ -15,9 +15,9 @@ public struct NavigationMenuUIComponentGroupStylePropertiesLayoutParams: UICompo
     public static var preferred: Self? {
         return .init(
             optionHeight: nil,
-            optionsSpace: DefaultUIComponentGroupConstantPalette.NavigationMenu.UILayoutParams.options_space_0,
-            titleTopMargin: DefaultUIComponentGroupConstantPalette.NavigationMenu.UILayoutParams.title_margin_top_4,
-            titleBottomMargin: DefaultUIComponentGroupConstantPalette.NavigationMenu.UILayoutParams.title_margin_bottom_4
+            optionsSpace: DefaultConstantPalette.NavigationMenu.UILayoutParams.options_space_0,
+            titleTopMargin: DefaultConstantPalette.NavigationMenu.UILayoutParams.title_margin_top_4,
+            titleBottomMargin: DefaultConstantPalette.NavigationMenu.UILayoutParams.title_margin_bottom_4
         )
     }
     

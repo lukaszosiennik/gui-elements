@@ -5,4 +5,4 @@
 
 public protocol UIComponentSetStylePropertiesLookParams: UIElementComponentStylePropertiesLookParams where
     UIElementComponentStylePropertiesOverwrittenLookParamsType: UIComponentSetStylePropertiesOverwrittenLookParams,
-    DefaultConstantPalette == DefaultUIElementComponentConstantPalette {}
+    DefaultConstantPalette == DefaultUIComponentSetConstantPalette {}

@@ -9,7 +9,7 @@ public struct NavigationMenuUIComponentGroupStylePropertiesLookParams: UICompone
     
     public static var `default`: Self? {
         return .init(
-            titleLinesNumber: DefaultConstantPalette.UIElementComponent.UIComponentGroup.NavigationMenu.UILookParams.title_linesNumber_0
+            titleLinesNumber: DefaultConstantPalette.NavigationMenu.UILookParams.title_linesNumber_0
         )
     }
     
