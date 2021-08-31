@@ -56,7 +56,7 @@ extension NavigationMenuUIOptionComponentSet {
         layer.borderWidth = tempView.layer.borderWidth
     }
     
-    public func setupStyleLookOS(_ look: EmptyUIElementComponentStylePropertiesOSLook) {}
+    public func setupStyleLookOS(_ look: EmptyUIComponentSetStylePropertiesOSLook) {}
     
     public func setupStyleLookSystem(_ look: NavigationMenuOptionUIComponentSetStylePropertiesSystemLook) {
         backgroundColor = look.backgroundColor

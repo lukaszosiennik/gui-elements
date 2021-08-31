@@ -61,7 +61,7 @@ extension CardUIComponentGroupBasis {
     
     public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {}
     
-    public func setupStyleLookOS(_ look: EmptyUIElementComponentStylePropertiesOSLook) {}
+    public func setupStyleLookOS(_ look: EmptyUIComponentGroupStylePropertiesOSLook) {}
     
     public func setupStyleLookSystem(_ look: CardUIComponentGroupStylePropertiesSystemLook) {}
 }

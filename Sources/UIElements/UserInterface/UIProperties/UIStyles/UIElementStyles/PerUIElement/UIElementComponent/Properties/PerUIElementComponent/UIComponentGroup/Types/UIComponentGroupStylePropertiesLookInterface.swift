@@ -4,4 +4,5 @@
 //
 
 public protocol UIComponentGroupStylePropertiesLookInterface: UIElementComponentStylePropertiesLookInterface where
+    UIElementComponentStylePropertiesOSLookType: UIComponentGroupStylePropertiesOSLook,
     UIElementComponentStylePropertiesSystemLookType: UIComponentGroupStylePropertiesSystemLook {}
