@@ -5,4 +5,4 @@
 
 public protocol UIComponentStylePropertiesLayoutParams: UIElementComponentStylePropertiesLayoutParams where
     UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIComponentStylePropertiesOverwrittenLayoutParams,
-    DefaultConstantPalette == DefaultUIComponentConstantPalette {}
+    DefaultConstantPalette == DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponent {}

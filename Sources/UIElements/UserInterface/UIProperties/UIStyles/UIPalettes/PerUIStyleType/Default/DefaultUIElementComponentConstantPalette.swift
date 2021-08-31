@@ -5,14 +5,7 @@
 
 import UIKit
 
-public typealias DefaultUIComponentConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponent
-public typealias DefaultUIComponentSetConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentSet
-public typealias DefaultUIComponentGroupConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
-public typealias DefaultUIComponentScreenConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
-
-public enum DefaultUIElementComponentConstantPalette:
-    DefaultUIPalette,
-    UIElementComponentConstantPalette {
+public enum DefaultUIElementComponentConstantPalette {
     
     enum All {
         

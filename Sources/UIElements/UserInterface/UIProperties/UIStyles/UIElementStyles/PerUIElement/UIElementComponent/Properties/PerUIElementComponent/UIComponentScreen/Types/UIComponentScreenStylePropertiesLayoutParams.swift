@@ -5,7 +5,7 @@
 
 public protocol UIComponentScreenStylePropertiesLayoutParams: UIElementComponentStylePropertiesLayoutParams where
     UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIComponentScreenStylePropertiesOverwrittenLayoutParams,
-    DefaultConstantPalette == DefaultUIComponentScreenConstantPalette {}
+    DefaultConstantPalette == DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen {}
 
 extension UIComponentScreenStylePropertiesLayoutParams {
     

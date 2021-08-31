@@ -5,9 +5,7 @@
 
 import UIKit
 
-enum DevUIElementComponentConstantPalette:
-    SystemUIPalette,
-    UIElementComponentConstantPalette {
+public enum DevUIElementComponentConstantPalette {
     
     fileprivate enum All {
         
@@ -18,7 +16,7 @@ enum DevUIElementComponentConstantPalette:
         static let value_50: CGFloat = 50
     }
     
-    enum UIElementComponent {
+    public enum UIElementComponent {
         
         fileprivate typealias UIElementComponentPalette = UIElementComponent
         
@@ -78,9 +76,13 @@ enum DevUIElementComponentConstantPalette:
 
 extension DevUIElementComponentConstantPalette.UIElementComponent {
         
-    enum UIComponent {}
+    public enum UIComponent:
+        SystemUIPalette,
+        UIElementComponentConstantPalette {}
     
-    enum UIComponentSet {
+    public enum UIComponentSet:
+        SystemUIPalette,
+        UIElementComponentConstantPalette {
         
         enum NavigationMenuOption {
             
@@ -91,7 +93,9 @@ extension DevUIElementComponentConstantPalette.UIElementComponent {
         }
     }
     
-    enum UIComponentGroup {
+    public enum UIComponentGroup:
+        SystemUIPalette,
+        UIElementComponentConstantPalette {
         
         enum NavigationMenu {
             
@@ -105,5 +109,7 @@ extension DevUIElementComponentConstantPalette.UIElementComponent {
         }
     }
     
-    enum UIComponentScreen {}
+    public enum UIComponentScreen:
+        SystemUIPalette,
+        UIElementComponentConstantPalette {}
 }

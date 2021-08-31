@@ -5,9 +5,7 @@
 
 import UIKit
 
-enum DevUIColorPalette:
-    SystemUIPalette,
-    UIColorPalette {
+public enum DevUIColorPalette {
     
     fileprivate enum All {
         
@@ -19,7 +17,7 @@ enum DevUIColorPalette:
         static let red: UIColor = .red
     }
     
-    enum UIElementComponent {
+    public enum UIElementComponent {
         
         fileprivate typealias UIElementComponentPalette = UIElementComponent
         
@@ -48,7 +46,9 @@ enum DevUIColorPalette:
 
 extension DevUIColorPalette.UIElementComponent {
         
-    enum UIComponent {
+    public enum UIComponent:
+        SystemUIPalette,
+        UIColorPalette {
         
         enum Button {
             
@@ -62,7 +62,9 @@ extension DevUIColorPalette.UIElementComponent {
         }
     }
     
-    enum UIComponentSet {
+    public enum UIComponentSet:
+        SystemUIPalette,
+        UIColorPalette {
         
         enum NavigationMenuOption {
             
@@ -72,7 +74,9 @@ extension DevUIColorPalette.UIElementComponent {
         }
     }
     
-    enum UIComponentGroup {
+    public enum UIComponentGroup:
+        SystemUIPalette,
+        UIColorPalette {
         
         enum NavigationMenu {
             
@@ -81,7 +85,9 @@ extension DevUIColorPalette.UIElementComponent {
         }
     }
     
-    enum UIComponentScreen {
+    public enum UIComponentScreen:
+        SystemUIPalette,
+        UIColorPalette {
         
         fileprivate enum Property {
             
