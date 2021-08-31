@@ -6,10 +6,11 @@
 import UIKit
 
 typealias DefaultUIComponentConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponent
+typealias DefaultUIComponentSetConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentSet
 typealias DefaultUIComponentGroupConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
 typealias DefaultUIComponentScreenConstantPalette = DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
 
-enum DefaultUIElementComponentConstantPalette:
+public enum DefaultUIElementComponentConstantPalette:
     DefaultUIPalette,
     UIElementComponentConstantPalette {
     
@@ -88,6 +89,8 @@ extension DefaultUIElementComponentConstantPalette.UIElementComponent {
             }
         }
     }
+    
+    enum UIComponentSet {}
     
     enum UIComponentGroup {
         

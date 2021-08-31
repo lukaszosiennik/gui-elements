@@ -11,7 +11,7 @@ enum DevUIElementComponentConstantPalette:
     
     fileprivate enum All {
         
-        static let value_0 = DefaultUIElementComponentConstantPalette.All.value_0
+        static let value_0: CGFloat = DefaultUIElementComponentConstantPalette.All.value_0
         static let value_1: CGFloat = 1
         static let value_8: CGFloat = 8
         static let value_16: CGFloat = DefaultUIElementComponentConstantPalette.All.value_16

@@ -7,6 +7,8 @@ public protocol UIElementComponentStylePropertiesLookParams: UIElementStylePrope
     
     associatedtype UIElementComponentStylePropertiesOverwrittenLookParamsType: UIElementComponentStylePropertiesOverwrittenLookParams
     
+    associatedtype DefaultConstantPalette: DefaultUIPalette & UIElementComponentConstantPalette
+    
     static var `default`: Self? { get }
 
     init?(

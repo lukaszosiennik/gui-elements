@@ -9,7 +9,7 @@ public struct InformationUIComponentScreenStylePropertiesLookParams: UIComponent
     
     public static var `default`: Self? {
         return .init(
-            titleLinesNumber: DefaultUIComponentScreenConstantPalette.Information.UILookParams.title_linesNumber_0
+            titleLinesNumber: DefaultConstantPalette.UIElementComponent.UIComponentScreen.Information.UILookParams.title_linesNumber_0
         )
     }
     
