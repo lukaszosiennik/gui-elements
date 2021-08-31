@@ -36,6 +36,16 @@ public final class DevUIComponentStyleFactory:
         )
     }
     
+    public func textArea() -> UIElementComponentStyle<TextAreaUIComponentStyleProperties> {
+        return .init(
+            type: styleType,
+            properties: .init(
+                lookType: .os(.init()),
+                layoutParams: .init()
+            )
+        )
+    }
+    
     public func textField() -> UIElementComponentStyle<TextFieldUIComponentStyleProperties> {
         return .init(
             type: styleType,

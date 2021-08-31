@@ -7,6 +7,7 @@ public protocol UIComponentStyleFactoryInterface: UIElementComponentTypeStyleFac
     
     func button() -> UIElementComponentStyle<ButtonUIComponentStyleProperties>
     func label() -> UIElementComponentStyle<LabelUIComponentStyleProperties>
+    func textArea() -> UIElementComponentStyle<TextAreaUIComponentStyleProperties>
     func textField() -> UIElementComponentStyle<TextFieldUIComponentStyleProperties>
     
     func placeholder() -> UIElementComponentStyle<PlaceholderUIComponentStyleProperties>

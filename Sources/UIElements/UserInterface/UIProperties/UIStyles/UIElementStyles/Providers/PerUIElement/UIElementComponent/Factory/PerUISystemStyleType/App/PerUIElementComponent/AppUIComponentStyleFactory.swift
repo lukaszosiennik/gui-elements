@@ -19,6 +19,12 @@ public final class AppUIComponentStyleFactory:
         )
     }
     
+    public func textArea() -> UIElementComponentStyle<TextAreaUIComponentStyleProperties> {
+        return .default(
+            styleType: styleType
+        )
+    }
+    
     public func textField() -> UIElementComponentStyle<TextFieldUIComponentStyleProperties> {
         return .default(
             styleType: styleType
