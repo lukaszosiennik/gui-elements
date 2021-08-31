@@ -12,7 +12,7 @@ public protocol UIElementComponentSettings:
     associatedtype UIElementComponentStylePropertiesOverwrittenType: UIElementComponentStylePropertiesOverwritten
     
     var params: UIElementComponentParamsType { get }
-    var style: UIElementComponentStyle<UIElementComponentStylePropertiesType> { get set }
+    var style: UIElementComponentStyle<UIElementComponentStylePropertiesType> { get }
     
     init(
         params: UIElementComponentParamsType,
@@ -37,7 +37,10 @@ extension UIElementComponentSettings {
             return style.type
         }
         set {
-            style = Self.style(for: newValue)
+            self = .init(
+                params: params,
+                style: Self.style(for: newValue)
+            )
         }
     }
     
