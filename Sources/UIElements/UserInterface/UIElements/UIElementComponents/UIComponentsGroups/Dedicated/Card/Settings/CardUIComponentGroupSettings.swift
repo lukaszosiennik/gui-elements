@@ -14,6 +14,19 @@ public struct CardUIComponentGroupSettings<
 
     public let bodySettings: BodyUIElementComponentSettingsType
     
+    public var styleType: UIStyleType {
+        get {
+            return style.type
+        }
+        set {
+            self = .init(
+                params: params,
+                styleType: newValue,
+                bodySettingsParams: bodySettings.params
+            )
+        }
+    }
+    
     public init(
         params: CardUIComponentGroupParams,
         style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>
