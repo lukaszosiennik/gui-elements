@@ -99,9 +99,10 @@ extension CardUIComponentGroupBasis {
                 switch border.corners {
                 case .square:
                     layer.cornerRadius = 0
+                    clipsToBounds = false
                 case .rounded:
-//                    clipsToBounds = true
                     layer.cornerRadius = 10
+                    clipsToBounds = true
                 }
                 layer.borderWidth = border.width
                 layer.borderColor = border.color.cgColor
@@ -122,6 +123,7 @@ extension CardUIComponentGroupBasis {
     private func setupStyleLookOS() {
         let tempView: UIView = .init()
         layer.cornerRadius = tempView.layer.cornerRadius
+        clipsToBounds = tempView.clipsToBounds
         layer.borderWidth = tempView.layer.borderWidth
         layer.borderColor = tempView.layer.borderColor
         separatorView.isHidden = true
