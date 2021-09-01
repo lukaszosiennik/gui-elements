@@ -13,4 +13,17 @@ public struct LabelUIComponentStylePropertiesSystemLook:
     public init(textColor: UIColor) {
         self.textColor = textColor
     }
+    
+    public init(
+        look: Self,
+        overwrittenBy newLook: LabelUIComponentStylePropertiesOverwrittenLook?
+    ) {
+        guard let textColor = newLook?.textColor
+        else {
+            self = look
+            return
+        }
+        
+        self.textColor = textColor
+    }
 }

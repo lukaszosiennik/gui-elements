@@ -5,7 +5,7 @@
 
 public typealias LabelUIComponentStylePropertiesOverwritten =
     UIComponentStylePropertiesOverwrittenTemplate<
-        EmptyUIComponentStylePropertiesOverwrittenLook,
+        LabelUIComponentStylePropertiesOverwrittenLook,
         LabelUIComponentStylePropertiesOverwrittenLookParams,
         EmptyUIComponentStylePropertiesOverwrittenLayoutParams
     >

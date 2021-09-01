@@ -60,7 +60,12 @@ public class CardUIComponentGroupBasis<
             params: .init(
                 text: settings.params.title
             ),
-            styleType: settings.styleType
+            styleType: settings.styleType,
+            overwrittenBy: .init(
+                look: .init(
+                    textColor: .yellow
+                )
+            )
         )
         
         setupBodyNestedSettings()
