@@ -14,8 +14,39 @@ public final class DevUIComponentGroupStyleFactory:
         return .init(
             type: styleType,
             properties: .init(
-                lookType: .system(.init()),
-                layoutParams: .init()
+                lookType: .system(.init(
+                    whole: .init(
+                        border: .init(
+                            corners: .square,
+                            width: 1,
+                            color: .black
+                        ),
+                        separator: .init(
+                            width: 1,
+                            color: .black
+                        )
+                    ),
+                    title: .init(
+                        backgroundColor: .red
+                    ),
+                    body: .init(
+                        backgroundColor: .green
+                    )
+                )),
+                layoutParams: .init(
+                    title: .init(
+                        leftMargin: 16,
+                        rightMargin: 16,
+                        topMargin: 8,
+                        bottomMargin: 8
+                    ),
+                    body: .init(
+                        leftMargin: 16,
+                        rightMargin: 16,
+                        topMargin: 8,
+                        bottomMargin: 8
+                    )
+                )
             )
         )
     }
