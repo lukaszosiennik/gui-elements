@@ -19,19 +19,19 @@ public final class DevUIComponentGroupStyleFactory:
                         border: .init(
                             corners: .square,
                             width: 1,
-                            color: .black
+                            color: .init(hex: "#d9dadb") ?? .black
                         ),
                         separator: .init(
                             width: 1,
-                            color: .blue
+                            color: .init(hex: "#d2d3d4") ?? .blue
                         )
                     ),
                     title: .init(
-                        backgroundColor: .red,
-                        textColor: .orange
+                        backgroundColor: .init(hex: "#f0f1f2") ?? .red,
+                        textColor: .init(hex: "#212529") ?? .orange
                     ),
                     body: .init(
-                        backgroundColor: .green
+                        backgroundColor: .init(hex: "#f8f9fa") ?? .green
                     )
                 )),
                 layoutParams: .init(
@@ -44,8 +44,8 @@ public final class DevUIComponentGroupStyleFactory:
                     body: .init(
                         leftMargin: 16,
                         rightMargin: 16,
-                        topMargin: 8,
-                        bottomMargin: 8
+                        topMargin: 16,
+                        bottomMargin: 16
                     )
                 )
             )
