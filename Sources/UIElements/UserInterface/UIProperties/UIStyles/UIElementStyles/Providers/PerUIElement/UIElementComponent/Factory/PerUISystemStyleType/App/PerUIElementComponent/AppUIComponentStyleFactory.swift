@@ -14,8 +14,15 @@ public final class AppUIComponentStyleFactory:
     }
     
     public func label() -> UIElementComponentStyle<LabelUIComponentStyleProperties> {
-        return .default(
-            styleType: styleType
+        return .init(
+            type: styleType,
+            properties: .init(
+                lookType: .system(.init(
+                    textColor: .cyan
+                )),
+                lookParams: .default,
+                layoutParams: .init()
+            )
         )
     }
     
