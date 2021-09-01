@@ -100,7 +100,8 @@ extension CardUIComponentGroupBasis {
                 case .square:
                     layer.cornerRadius = 0
                 case .rounded:
-                    layer.cornerRadius = 5
+//                    clipsToBounds = true
+                    layer.cornerRadius = 10
                 }
                 layer.borderWidth = border.width
                 layer.borderColor = border.color.cgColor
