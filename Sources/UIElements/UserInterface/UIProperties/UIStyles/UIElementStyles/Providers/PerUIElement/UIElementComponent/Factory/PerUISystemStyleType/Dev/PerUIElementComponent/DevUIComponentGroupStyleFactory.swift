@@ -27,7 +27,8 @@ public final class DevUIComponentGroupStyleFactory:
                         )
                     ),
                     title: .init(
-                        backgroundColor: .red
+                        backgroundColor: .red,
+                        textColor: .orange
                     ),
                     body: .init(
                         backgroundColor: .green

@@ -42,9 +42,11 @@ extension CardUIComponentGroupStylePropertiesSystemLook {
     public struct Title {
         
         public let backgroundColor: UIColor
+        public let textColor: UIColor?
         
-        public init(backgroundColor: UIColor) {
+        public init(backgroundColor: UIColor, textColor: UIColor?) {
             self.backgroundColor = backgroundColor
+            self.textColor = textColor
         }
     }
     

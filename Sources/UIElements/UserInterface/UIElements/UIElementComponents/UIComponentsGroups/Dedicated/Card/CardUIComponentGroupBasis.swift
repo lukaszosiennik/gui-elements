@@ -63,7 +63,14 @@ public class CardUIComponentGroupBasis<
             styleType: settings.styleType,
             overwrittenBy: .init(
                 look: .init(
-                    textColor: .yellow
+                    textColor: {
+                        guard case let .system(look) = settings.styleProperties.lookType
+                        else {
+                            return nil
+                        }
+                        
+                        return look.title?.textColor
+                    }()
                 )
             )
         )
