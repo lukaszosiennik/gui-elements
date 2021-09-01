@@ -50,18 +50,24 @@ public final class NavigationMenuUIOptionComponentSet:
 extension NavigationMenuUIOptionComponentSet {
     
     public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
-        let tempView: UIView = .init()
-        backgroundColor = tempView.backgroundColor
-        layer.borderColor = tempView.layer.borderColor
-        layer.borderWidth = tempView.layer.borderWidth
+        setupStyleLookOS()
     }
     
-    public func setupStyleLookOS(_ look: EmptyUIComponentSetStylePropertiesOSLook) {}
+    public func setupStyleLookOS(_ look: EmptyUIComponentSetStylePropertiesOSLook) {
+        setupStyleLookOS()
+    }
     
     public func setupStyleLookSystem(_ look: NavigationMenuOptionUIComponentSetStylePropertiesSystemLook) {
         backgroundColor = look.backgroundColor
         layer.borderColor = look.borderColor.cgColor
         layer.borderWidth = look.borderWidth
+    }
+    
+    private func setupStyleLookOS() {
+        let tempView: UIView = .init()
+        backgroundColor = tempView.backgroundColor
+        layer.borderColor = tempView.layer.borderColor
+        layer.borderWidth = tempView.layer.borderWidth
     }
 }
 

@@ -57,12 +57,21 @@ public final class NavigationMenuUIComponentScreen<
 
 extension NavigationMenuUIComponentScreen {
     
-    public func setupScreenStyleLookOS() {}
+    public func setupScreenStyleLookOS() {
+        setupStyleLookOS()
+    }
     
-    public func setupStyleLookOS(_ look: EmptyUIComponentScreenStylePropertiesOSLook) {}
+    public func setupStyleLookOS(_ look: EmptyUIComponentScreenStylePropertiesOSLook) {
+        setupStyleLookOS()
+    }
     
     public func setupStyleLookSystem(_ look: NavigationMenuUIComponentScreenStylePropertiesSystemLook) {
         backgroundColor = look.backgroundColor
+    }
+    
+    private func setupStyleLookOS() {
+        let tempView: UIView = .init()
+        tempView.backgroundColor = tempView.backgroundColor
     }
 }
 

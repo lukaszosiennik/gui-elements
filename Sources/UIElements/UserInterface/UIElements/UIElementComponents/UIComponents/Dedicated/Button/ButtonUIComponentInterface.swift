@@ -29,23 +29,15 @@ extension ButtonUIComponentInterface {
         _ lookConfiguration: UIElementComponentLookOSConfiguration,
         for button: UIButton
     ) {
-        let tempButton: UIButton = .init(
-            type: button.buttonType
-        )
-        button.setTitleColor(
-            tempButton.titleColor(for: .normal),
-            for: .normal
-        )
-        button.setTitleColor(
-            tempButton.titleColor(for: .highlighted),
-            for: .highlighted
-        )
+        setupStyleLookOS(for: button)
     }
     
     func setupStyleLookOS(
         _ look: ButtonUIComponentStylePropertiesOSLook,
         for button: UIButton
-    ) {}
+    ) {
+        setupStyleLookOS(for: button)
+    }
     
     func setupStyleLookSystem(
         _ look: ButtonUIComponentStylePropertiesSystemLook,
@@ -57,6 +49,20 @@ extension ButtonUIComponentInterface {
         )
         button.setTitleColor(
             look.titleColorHighlighted,
+            for: .highlighted
+        )
+    }
+    
+    private func setupStyleLookOS(for button: UIButton) {
+        let tempButton: UIButton = .init(
+            type: button.buttonType
+        )
+        button.setTitleColor(
+            tempButton.titleColor(for: .normal),
+            for: .normal
+        )
+        button.setTitleColor(
+            tempButton.titleColor(for: .highlighted),
             for: .highlighted
         )
     }

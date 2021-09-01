@@ -42,13 +42,21 @@ public final class PlaceholderUIComponent:
 extension PlaceholderUIComponent {
     
     public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
+        setupStyleLookOS()
+    }
+    
+    public func setupStyleLookOS(_ look: EmptyUIComponentStylePropertiesOSLook) {
+        setupStyleLookOS()
+    }
+    
+    public func setupStyleLookSystem(_ look: PlaceholderUIComponentStylePropertiesSystemLook) {
+        backgroundColor = settings.params.look?.color
+    }
+    
+    private func setupStyleLookOS() {
         let tempView: UIView = .init()
         backgroundColor = settings.params.look?.color ?? tempView.backgroundColor
     }
-    
-    public func setupStyleLookOS(_ look: EmptyUIComponentStylePropertiesOSLook) {}
-    
-    public func setupStyleLookSystem(_ look: PlaceholderUIComponentStylePropertiesSystemLook) {}
 }
 
 extension PlaceholderUIComponent {

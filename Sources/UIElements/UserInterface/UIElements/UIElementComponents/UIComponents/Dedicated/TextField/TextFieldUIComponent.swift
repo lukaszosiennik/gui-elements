@@ -40,15 +40,21 @@ public final class TextFieldUIComponent:
 extension TextFieldUIComponent {
     
     public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
-        let tempTextField: UITextField = .init()
-        borderStyle = tempTextField.borderStyle
+        setupStyleLookOS()
     }
     
     public func setupStyleLookOS(_ look: TextFieldUIComponentStylePropertiesOSLook) {
         borderStyle = look.borderStyle
     }
     
-    public func setupStyleLookSystem(_ look: TextFieldUIComponentStylePropertiesSystemLook) {}
+    public func setupStyleLookSystem(_ look: TextFieldUIComponentStylePropertiesSystemLook) {
+        setupStyleLookOS()
+    }
+    
+    private func setupStyleLookOS() {
+        let tempTextField: UITextField = .init()
+        borderStyle = tempTextField.borderStyle
+    }
 }
 
 extension TextFieldUIComponent {

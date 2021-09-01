@@ -83,14 +83,20 @@ public final class NavigationMenuUIComponentGroup<
 extension NavigationMenuUIComponentGroup {
     
     public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
-        let tempView: UIView = .init()
-        backgroundColor = tempView.backgroundColor
+        setupStyleLookOS()
     }
     
-    public func setupStyleLookOS(_ look: EmptyUIComponentGroupStylePropertiesOSLook) {}
+    public func setupStyleLookOS(_ look: EmptyUIComponentGroupStylePropertiesOSLook) {
+        setupStyleLookOS()
+    }
     
     public func setupStyleLookSystem(_ look: NavigationMenuUIComponentGroupStylePropertiesSystemLook) {
         backgroundColor = look.backgroundColor
+    }
+    
+    private func setupStyleLookOS() {
+        let tempView: UIView = .init()
+        backgroundColor = tempView.backgroundColor
     }
 }
 

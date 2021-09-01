@@ -42,14 +42,20 @@ public final class LabelUIComponent:
 extension LabelUIComponent {
     
     public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
-        let tempLabel: UILabel = .init()
-        textColor = tempLabel.textColor
+        setupStyleLookOS()
     }
     
-    public func setupStyleLookOS(_ look: EmptyUIComponentStylePropertiesOSLook) {}
+    public func setupStyleLookOS(_ look: EmptyUIComponentStylePropertiesOSLook) {
+        setupStyleLookOS()
+    }
     
     public func setupStyleLookSystem(_ look: LabelUIComponentStylePropertiesSystemLook) {
         textColor = look.textColor
+    }
+    
+    private func setupStyleLookOS() {
+        let tempLabel: UILabel = .init()
+        textColor = tempLabel.textColor
     }
 }
 

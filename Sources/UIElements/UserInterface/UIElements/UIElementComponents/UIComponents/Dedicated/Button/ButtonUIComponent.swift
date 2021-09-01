@@ -86,6 +86,20 @@ extension ButtonUIComponent {
         )
     }
     
+    public func setupStyleLookOS(_ look: ButtonUIComponentStylePropertiesOSLook) {
+        setupStyleLookOS(
+            look,
+            for: button
+        )
+    }
+    
+    public func setupStyleLookSystem(_ look: ButtonUIComponentStylePropertiesSystemLook) {
+        setupStyleLookSystem(
+            look,
+            for: button
+        )
+    }
+    
     private func styleLookButtonType(
         from lookType: UIElementComponentStylePropertiesLookType<
             ButtonUIComponentStylePropertiesOSLook,
@@ -111,20 +125,6 @@ extension ButtonUIComponent {
         case .system:
             return .custom
         }
-    }
-    
-    public func setupStyleLookOS(_ look: ButtonUIComponentStylePropertiesOSLook) {
-        setupStyleLookOS(
-            look,
-            for: button
-        )
-    }
-    
-    public func setupStyleLookSystem(_ look: ButtonUIComponentStylePropertiesSystemLook) {
-        setupStyleLookSystem(
-            look,
-            for: button
-        )
     }
 }
 
