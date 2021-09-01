@@ -17,7 +17,7 @@ public final class DevUIComponentGroupStyleFactory:
                 lookType: .system(.init(
                     whole: .init(
                         border: .init(
-                            corners: .square,
+                            corners: .rounded,
                             width: 1,
                             color: .init(hex: "#d9dadbff") ?? .black
                         ),
@@ -38,8 +38,8 @@ public final class DevUIComponentGroupStyleFactory:
                     title: .init(
                         leftMargin: 16,
                         rightMargin: 16,
-                        topMargin: 8,
-                        bottomMargin: 8
+                        topMargin: 12,
+                        bottomMargin: 12
                     ),
                     body: .init(
                         leftMargin: 16,
