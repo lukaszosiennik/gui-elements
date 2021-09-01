@@ -195,28 +195,28 @@ extension CardUIComponentGroupBasis {
     }
     
     public func setupStyleLayoutOS() {
-        uie.constraint(with: titleLabelUILeadingSpaceConstraintID)?.constant = 0
-        uie.constraint(with: titleLabelUITrailingSpaceConstraintID)?.constant = 0
-        uie.constraint(with: titleLabelUITopSpaceConstraintID)?.constant = 0
-        uie.constraint(with: titleLabelUIBottomSpaceConstraintID)?.constant = 0
-        uie.constraint(with: bodyContainerContentLeadingSpaceConstraintID)?.constant = 0
-        uie.constraint(with: bodyContainerContentTrailingSpaceConstraintID)?.constant = 0
-        uie.constraint(with: bodyContainerContentTopSpaceConstraintID)?.constant = 0
-        uie.constraint(with: bodyContainerContentBottomSpaceConstraintID)?.constant = 0
+        titleContainer.uie.constraint(with: titleLabelUILeadingSpaceConstraintID)?.constant = 0
+        titleContainer.uie.constraint(with: titleLabelUITrailingSpaceConstraintID)?.constant = 0
+        titleContainer.uie.constraint(with: titleLabelUITopSpaceConstraintID)?.constant = 0
+        titleContainer.uie.constraint(with: titleLabelUIBottomSpaceConstraintID)?.constant = 0
+        bodyContainer.uie.constraint(with: bodyContainerContentLeadingSpaceConstraintID)?.constant = 0
+        bodyContainer.uie.constraint(with: bodyContainerContentTrailingSpaceConstraintID)?.constant = 0
+        bodyContainer.uie.constraint(with: bodyContainerContentTopSpaceConstraintID)?.constant = 0
+        bodyContainer.uie.constraint(with: bodyContainerContentBottomSpaceConstraintID)?.constant = 0
     }
     
     public func setupStyleLayoutSystem(_ layoutParams: CardUIComponentGroupStylePropertiesLayoutParams) {
         if let title = layoutParams.title {
-            uie.constraint(with: titleLabelUILeadingSpaceConstraintID)?.constant = title.leftMargin
-            uie.constraint(with: titleLabelUITrailingSpaceConstraintID)?.constant = -title.rightMargin
-            uie.constraint(with: titleLabelUITopSpaceConstraintID)?.constant = title.topMargin
-            uie.constraint(with: titleLabelUIBottomSpaceConstraintID)?.constant = -title.bottomMargin
+            titleContainer.uie.constraint(with: titleLabelUILeadingSpaceConstraintID)?.constant = title.leftMargin
+            titleContainer.uie.constraint(with: titleLabelUITrailingSpaceConstraintID)?.constant = -title.rightMargin
+            titleContainer.uie.constraint(with: titleLabelUITopSpaceConstraintID)?.constant = title.topMargin
+            titleContainer.uie.constraint(with: titleLabelUIBottomSpaceConstraintID)?.constant = -title.bottomMargin
         }
         if let body = layoutParams.body {
-            uie.constraint(with: bodyContainerContentLeadingSpaceConstraintID)?.constant = body.leftMargin
-            uie.constraint(with: bodyContainerContentTrailingSpaceConstraintID)?.constant = -body.rightMargin
-            uie.constraint(with: bodyContainerContentTopSpaceConstraintID)?.constant = body.topMargin
-            uie.constraint(with: bodyContainerContentBottomSpaceConstraintID)?.constant = -body.bottomMargin
+            bodyContainer.uie.constraint(with: bodyContainerContentLeadingSpaceConstraintID)?.constant = body.leftMargin
+            bodyContainer.uie.constraint(with: bodyContainerContentTrailingSpaceConstraintID)?.constant = -body.rightMargin
+            bodyContainer.uie.constraint(with: bodyContainerContentTopSpaceConstraintID)?.constant = body.topMargin
+            bodyContainer.uie.constraint(with: bodyContainerContentBottomSpaceConstraintID)?.constant = -body.bottomMargin
         }
     }
 }

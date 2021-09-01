@@ -23,7 +23,7 @@ public final class DevUIComponentGroupStyleFactory:
                         ),
                         separator: .init(
                             width: 1,
-                            color: .black
+                            color: .blue
                         )
                     ),
                     title: .init(
