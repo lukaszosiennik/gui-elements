@@ -3,7 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct InformationUIComponentScreenStylePropertiesLayoutParams: UIComponentScreenStylePropertiesLayoutParams {
+public struct InformationUIComponentScreenStylePropertiesLayoutParams:
+    UIComponentScreenStylePropertiesLayoutParams {
     
     public static var preferred: Self? {
         return nil

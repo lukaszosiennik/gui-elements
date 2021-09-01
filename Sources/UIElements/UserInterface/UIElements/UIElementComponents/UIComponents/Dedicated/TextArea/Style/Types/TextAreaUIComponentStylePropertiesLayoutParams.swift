@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct TextAreaUIComponentStylePropertiesLayoutParams: UIComponentStylePropertiesLayoutParams {
+public struct TextAreaUIComponentStylePropertiesLayoutParams:
+    UIComponentStylePropertiesLayoutParams {
     
     public static var preferred: Self? {
         return nil

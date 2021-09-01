@@ -3,4 +3,5 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct EmptyUIComponentSetStylePropertiesOverwrittenLookParams: UIComponentSetStylePropertiesOverwrittenLookParams {}
+public struct EmptyUIComponentSetStylePropertiesOverwrittenLookParams:
+    UIComponentSetStylePropertiesOverwrittenLookParams {}

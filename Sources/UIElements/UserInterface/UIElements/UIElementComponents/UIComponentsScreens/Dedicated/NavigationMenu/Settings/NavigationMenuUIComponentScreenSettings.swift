@@ -5,7 +5,8 @@
 
 public struct NavigationMenuUIComponentScreenSettings<
     OptionKey: InputUIElementComponentActionsKeyInterface
->: UIComponentScreenSettings {
+>:
+    UIComponentScreenSettings {
     
     public let params: NavigationMenuUIComponentScreenParams<OptionKey>
     public var style: UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>

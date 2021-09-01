@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct UIElementComponentOSConfiguration: Hashable {
+public struct UIElementComponentOSConfiguration:
+    Hashable {
     
     let lookConfiguration: UIElementComponentLookOSConfiguration
     let layoutParamsConfiguration: UIElementComponentLayoutParamsOSConfiguration

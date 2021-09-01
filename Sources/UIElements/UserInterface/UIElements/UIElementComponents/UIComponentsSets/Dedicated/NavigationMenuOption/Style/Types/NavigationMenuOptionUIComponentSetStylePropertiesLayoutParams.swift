@@ -3,7 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuOptionUIComponentSetStylePropertiesLayoutParams: UIComponentSetStylePropertiesLayoutParams {
+public struct NavigationMenuOptionUIComponentSetStylePropertiesLayoutParams:
+    UIComponentSetStylePropertiesLayoutParams {
     
     public static var preferred: Self? {
         return nil

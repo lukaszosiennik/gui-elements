@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentGroupStylePropertiesOverwritten: UIElementComponentStylePropertiesOverwritten
+public protocol UIComponentGroupStylePropertiesOverwritten:
+    UIElementComponentStylePropertiesOverwritten
 where
     UIElementComponentStylePropertiesOverwrittenLookType: UIComponentGroupStylePropertiesOverwrittenLook,
     UIElementComponentStylePropertiesOverwrittenLookParamsType: UIComponentGroupStylePropertiesOverwrittenLookParams,

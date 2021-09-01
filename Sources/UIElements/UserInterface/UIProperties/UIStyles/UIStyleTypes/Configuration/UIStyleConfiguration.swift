@@ -3,7 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class UIStyleConfiguration: UIStyleConfigurationInterface {
+public final class UIStyleConfiguration:
+    UIStyleConfigurationInterface {
     
     public static var current: UIStyleType = .os
 }

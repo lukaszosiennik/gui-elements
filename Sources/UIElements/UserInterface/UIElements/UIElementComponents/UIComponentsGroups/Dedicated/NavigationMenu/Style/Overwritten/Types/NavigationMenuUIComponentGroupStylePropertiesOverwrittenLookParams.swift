@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuUIComponentGroupStylePropertiesOverwrittenLookParams: UIComponentGroupStylePropertiesOverwrittenLookParams {
+public struct NavigationMenuUIComponentGroupStylePropertiesOverwrittenLookParams:
+    UIComponentGroupStylePropertiesOverwrittenLookParams {
     
     public let titleLinesNumber: Int?
     

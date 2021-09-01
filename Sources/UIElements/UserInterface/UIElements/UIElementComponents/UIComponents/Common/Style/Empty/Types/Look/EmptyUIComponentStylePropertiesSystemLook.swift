@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct EmptyUIComponentStylePropertiesSystemLook: UIComponentStylePropertiesSystemLook {
+public struct EmptyUIComponentStylePropertiesSystemLook:
+    UIComponentStylePropertiesSystemLook {
     
     public init() {}
 }

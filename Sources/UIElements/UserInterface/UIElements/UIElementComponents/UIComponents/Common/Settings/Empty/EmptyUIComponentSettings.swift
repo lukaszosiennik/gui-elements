@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct EmptyUIComponentSettings: UIComponentSettings {
+public struct EmptyUIComponentSettings:
+    UIComponentSettings {
 
     public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentStylePropertiesOverwritten
     

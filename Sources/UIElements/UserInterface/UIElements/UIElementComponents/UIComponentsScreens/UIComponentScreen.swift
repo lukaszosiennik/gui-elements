@@ -5,7 +5,8 @@
 
 import UIKit
 
-public protocol UIComponentScreen: UIElementComponent
+public protocol UIComponentScreen:
+    UIElementComponent
 where
     UIElementComponentSettingsType: UIComponentScreenSettings {
     

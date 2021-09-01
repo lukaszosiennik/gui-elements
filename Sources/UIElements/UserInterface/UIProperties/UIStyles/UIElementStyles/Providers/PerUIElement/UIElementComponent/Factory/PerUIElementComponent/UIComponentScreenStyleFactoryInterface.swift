@@ -3,7 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentScreenStyleFactoryInterface: UIElementComponentTypeStyleFactoryInterface {
+public protocol UIComponentScreenStyleFactoryInterface:
+    UIElementComponentTypeStyleFactoryInterface {
     
     func information() -> UIElementComponentStyle<InformationUIComponentScreenStyleProperties>
     func navigationMenu() -> UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>

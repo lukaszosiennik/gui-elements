@@ -3,4 +3,5 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentStylePropertiesOSLook: UIElementComponentStylePropertiesOSLook {}
+public protocol UIComponentStylePropertiesOSLook:
+    UIElementComponentStylePropertiesOSLook {}

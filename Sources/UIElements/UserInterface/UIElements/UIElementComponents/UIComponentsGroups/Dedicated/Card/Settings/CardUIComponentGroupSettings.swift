@@ -5,7 +5,8 @@
 
 public struct CardUIComponentGroupSettings<
     BodyUIElementComponentSettingsType: UIElementComponentSettings
->: UIComponentGroupSettings {
+>:
+    UIComponentGroupSettings {
 
     public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentGroupStylePropertiesOverwritten
     

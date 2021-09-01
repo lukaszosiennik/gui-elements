@@ -5,7 +5,8 @@
 
 import UIKit
 
-public protocol ButtonUIComponentInterface: UIComponent
+public protocol ButtonUIComponentInterface:
+    UIComponent
 where
     UIElementComponentSettingsType == ButtonUIComponentSettings {}
 

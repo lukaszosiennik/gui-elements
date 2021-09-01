@@ -3,6 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentGroup: UIElementComponent
+public protocol UIComponentGroup:
+    UIElementComponent
 where
     UIElementComponentSettingsType: UIComponentGroupSettings {}

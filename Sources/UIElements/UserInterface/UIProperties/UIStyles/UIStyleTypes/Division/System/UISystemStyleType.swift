@@ -3,7 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum UISystemStyleType: Hashable {
+public enum UISystemStyleType:
+    Hashable {
     
     case app(UIAppStyleType)
     case dev(UIDevStyleType)

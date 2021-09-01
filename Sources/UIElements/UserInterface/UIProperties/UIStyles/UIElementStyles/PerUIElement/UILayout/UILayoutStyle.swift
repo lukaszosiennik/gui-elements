@@ -5,7 +5,8 @@
 
 public struct UILayoutStyle<
     PropertiesType: UILayoutStyleProperties
->: UIElementStyle {
+>:
+    UIElementStyle {
     
     public let type: UIStyleType
     let properties: PropertiesType?

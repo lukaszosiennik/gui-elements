@@ -5,7 +5,8 @@
 
 import UIKit
 
-public struct PlaceholderUIComponentParamsPropertiesLook: UIComponentParamsProperties {
+public struct PlaceholderUIComponentParamsPropertiesLook:
+    UIComponentParamsProperties {
     
     public let color: UIColor
     

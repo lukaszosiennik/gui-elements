@@ -5,4 +5,5 @@
 
 import UIKit
 
-extension UIView: UIElementsExtendedTypeInterface {}
+extension UIView:
+    UIElementsExtendedTypeInterface {}

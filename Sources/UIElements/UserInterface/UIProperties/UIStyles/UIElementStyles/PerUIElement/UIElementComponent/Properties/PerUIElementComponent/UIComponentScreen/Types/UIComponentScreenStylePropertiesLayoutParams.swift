@@ -3,7 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentScreenStylePropertiesLayoutParams: UIElementComponentStylePropertiesLayoutParams
+public protocol UIComponentScreenStylePropertiesLayoutParams:
+    UIElementComponentStylePropertiesLayoutParams
 where
     UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIComponentScreenStylePropertiesOverwrittenLayoutParams,
     DefaultConstantPalette == DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen {}

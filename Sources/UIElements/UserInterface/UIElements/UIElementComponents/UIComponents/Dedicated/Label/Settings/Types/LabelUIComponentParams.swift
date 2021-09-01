@@ -3,7 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct LabelUIComponentParams: UIComponentParams {
+public struct LabelUIComponentParams:
+    UIComponentParams {
     
     public let text: String
     

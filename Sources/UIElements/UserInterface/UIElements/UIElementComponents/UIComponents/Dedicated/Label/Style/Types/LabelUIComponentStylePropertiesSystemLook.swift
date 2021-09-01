@@ -5,7 +5,8 @@
 
 import UIKit
 
-public struct LabelUIComponentStylePropertiesSystemLook: UIComponentStylePropertiesSystemLook {
+public struct LabelUIComponentStylePropertiesSystemLook:
+    UIComponentStylePropertiesSystemLook {
     
     public let textColor: UIColor
     

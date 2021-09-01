@@ -10,7 +10,8 @@ public final class UIElementComponentInitialization {
     public init() {}
 }
 
-public protocol UIElementComponent: UIElement {
+public protocol UIElementComponent:
+    UIElement {
     
     associatedtype UIElementComponentSettingsType: UIElementComponentSettings
     

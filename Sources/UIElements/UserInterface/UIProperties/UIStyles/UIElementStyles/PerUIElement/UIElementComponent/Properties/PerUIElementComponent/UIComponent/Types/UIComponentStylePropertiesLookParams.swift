@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentStylePropertiesLookParams: UIElementComponentStylePropertiesLookParams
+public protocol UIComponentStylePropertiesLookParams:
+    UIElementComponentStylePropertiesLookParams
 where
     UIElementComponentStylePropertiesOverwrittenLookParamsType: UIComponentStylePropertiesOverwrittenLookParams,
     DefaultConstantPalette == DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponent {}

@@ -3,7 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct InformationUIComponentScreenSettings: UIComponentScreenSettings {
+public struct InformationUIComponentScreenSettings:
+    UIComponentScreenSettings {
     
     public let params: InformationUIComponentScreenParams
     public var style: UIElementComponentStyle<InformationUIComponentScreenStyleProperties>

@@ -3,7 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentScreenSettings: UIElementComponentSettings
+public protocol UIComponentScreenSettings:
+    UIElementComponentSettings
 where
     UIElementComponentParamsType: UIComponentScreenParams,
     UIElementComponentStylePropertiesType: UIComponentScreenStyleProperties,

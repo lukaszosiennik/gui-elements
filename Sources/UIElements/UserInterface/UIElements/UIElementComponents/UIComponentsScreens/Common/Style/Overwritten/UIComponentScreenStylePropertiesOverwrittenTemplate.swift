@@ -7,7 +7,8 @@ public struct UIComponentScreenStylePropertiesOverwrittenTemplate<
     UIComponentScreenStylePropertiesOverwrittenLookType: UIComponentScreenStylePropertiesOverwrittenLook,
     UIComponentScreenStylePropertiesOverwrittenLookParamsType: UIComponentScreenStylePropertiesOverwrittenLookParams,
     UIComponentScreenStylePropertiesOverwrittenLayoutParamsType: UIComponentScreenStylePropertiesOverwrittenLayoutParams
->: UIComponentScreenStylePropertiesOverwritten {
+>:
+    UIComponentScreenStylePropertiesOverwritten {
 
     public let look: UIComponentScreenStylePropertiesOverwrittenLookType?
     public let lookParams: UIComponentScreenStylePropertiesOverwrittenLookParamsType?

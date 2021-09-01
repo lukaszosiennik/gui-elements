@@ -7,7 +7,8 @@ public struct UIComponentScreenStylePropertiesTemplate<
     UIElementComponentStylePropertiesLookInterfaceType: UIComponentScreenStylePropertiesLookInterface,
     UIComponentScreenStylePropertiesLookParamsType: UIComponentScreenStylePropertiesLookParams,
     UIComponentScreenStylePropertiesLayoutParamsType: UIComponentScreenStylePropertiesLayoutParams
->: UIComponentScreenStyleProperties {
+>:
+    UIComponentScreenStyleProperties {
 
     public let lookType: UIElementComponentStylePropertiesLookType<
         UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType,

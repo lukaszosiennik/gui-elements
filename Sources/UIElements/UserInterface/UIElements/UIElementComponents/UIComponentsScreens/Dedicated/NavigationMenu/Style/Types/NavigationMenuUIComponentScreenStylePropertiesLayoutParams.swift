@@ -5,7 +5,8 @@
 
 import UIKit
 
-public struct NavigationMenuUIComponentScreenStylePropertiesLayoutParams: UIComponentScreenStylePropertiesLayoutParams {
+public struct NavigationMenuUIComponentScreenStylePropertiesLayoutParams:
+    UIComponentScreenStylePropertiesLayoutParams {
     
     public let leftMargin: CGFloat
     public let rightMargin: CGFloat

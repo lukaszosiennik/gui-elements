@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct PlaceholderUIComponentParams: UIComponentParams {
+public struct PlaceholderUIComponentParams:
+    UIComponentParams {
     
     public let look: PlaceholderUIComponentParamsPropertiesLook?
     public let layoutParams: PlaceholderUIComponentParamsPropertiesLayoutParams?

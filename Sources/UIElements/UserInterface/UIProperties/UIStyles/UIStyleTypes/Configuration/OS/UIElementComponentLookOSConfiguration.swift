@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct UIElementComponentLookOSConfiguration: Hashable {
+public struct UIElementComponentLookOSConfiguration:
+    Hashable {
 
     let isUserFriendly: Bool
 

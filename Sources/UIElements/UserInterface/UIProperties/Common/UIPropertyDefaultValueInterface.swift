@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIPropertyDefaultValueInterface: InstanceCreatingInterface {
+public protocol UIPropertyDefaultValueInterface:
+    InstanceCreatingInterface {
     
     static var `default`: Self { get }
 }

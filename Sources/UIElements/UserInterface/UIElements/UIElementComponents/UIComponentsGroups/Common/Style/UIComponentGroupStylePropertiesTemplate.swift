@@ -7,7 +7,8 @@ public struct UIComponentGroupStylePropertiesTemplate<
     UIElementComponentStylePropertiesLookInterfaceType: UIComponentGroupStylePropertiesLookInterface,
     UIComponentGroupStylePropertiesLookParamsType: UIComponentGroupStylePropertiesLookParams,
     UIComponentGroupStylePropertiesLayoutParamsType: UIComponentGroupStylePropertiesLayoutParams
->: UIComponentGroupStyleProperties {
+>:
+    UIComponentGroupStyleProperties {
 
     public let lookType: UIElementComponentStylePropertiesLookType<
         UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType,

@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct TextAreaUIComponentSettings: UIComponentSettings {
+public struct TextAreaUIComponentSettings:
+    UIComponentSettings {
 
     public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentStylePropertiesOverwritten
 

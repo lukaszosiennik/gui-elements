@@ -5,7 +5,8 @@
 
 public struct NavigationMenuUIComponentGroupSettings<
     OptionKey: InputUIElementComponentActionsKeyInterface
->: UIComponentGroupSettings {
+>:
+    UIComponentGroupSettings {
 
     public typealias UIElementComponentStylePropertiesOverwrittenType = NavigationMenuUIComponentGroupStylePropertiesOverwritten
     

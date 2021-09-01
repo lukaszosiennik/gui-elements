@@ -5,7 +5,8 @@
 
 public struct UIElementComponentStyle<
     PropertiesType: UIElementComponentStyleProperties
->: UIElementStyle {
+>:
+    UIElementStyle {
     
     public let type: UIStyleType
     let properties: PropertiesType
@@ -34,7 +35,8 @@ public struct UIElementComponentStyle<
     }
 }
 
-extension UIElementComponentStyle: UIPropertyDefaultValueInterface {
+extension UIElementComponentStyle:
+    UIPropertyDefaultValueInterface {
 
     public static var `default`: Self {
         return `default`(

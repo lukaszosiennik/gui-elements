@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct EmptyUIComponentParams: UIComponentParams {
+public struct EmptyUIComponentParams:
+    UIComponentParams {
     
     public static var `default`: Self {
         return .init()

@@ -7,7 +7,8 @@ public struct UIComponentGroupStylePropertiesOverwrittenTemplate<
     UIComponentGroupStylePropertiesOverwrittenLookType: UIComponentGroupStylePropertiesOverwrittenLook,
     UIComponentGroupStylePropertiesOverwrittenLookParamsType: UIComponentGroupStylePropertiesOverwrittenLookParams,
     UIComponentGroupStylePropertiesOverwrittenLayoutParamsType: UIComponentGroupStylePropertiesOverwrittenLayoutParams
->: UIComponentGroupStylePropertiesOverwritten {
+>:
+    UIComponentGroupStylePropertiesOverwritten {
 
     public let look: UIComponentGroupStylePropertiesOverwrittenLookType?
     public let lookParams: UIComponentGroupStylePropertiesOverwrittenLookParamsType?

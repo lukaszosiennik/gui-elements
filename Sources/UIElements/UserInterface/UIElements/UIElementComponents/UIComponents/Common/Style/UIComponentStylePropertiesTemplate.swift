@@ -7,7 +7,8 @@ public struct UIComponentStylePropertiesTemplate<
     UIElementComponentStylePropertiesLookInterfaceType: UIComponentStylePropertiesLookInterface,
     UIComponentStylePropertiesLookParamsType: UIComponentStylePropertiesLookParams,
     UIComponentStylePropertiesLayoutParamsType: UIComponentStylePropertiesLayoutParams
->: UIComponentStyleProperties {
+>:
+    UIComponentStyleProperties {
 
     public let lookType: UIElementComponentStylePropertiesLookType<
         UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType,
