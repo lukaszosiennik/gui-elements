@@ -10,8 +10,8 @@ extension UIColor:
     UIElementsExtendedTypeInterface {}
 extension CommonsExtension
 where
-    ExtendedType:
-        UIColor {
+    ExtendedType
+        : UIColor {
     
     public static func `init`(
         hex: String

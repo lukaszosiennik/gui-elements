@@ -6,7 +6,7 @@
 public protocol UIComponentStylePropertiesLookInterface:
     UIElementComponentStylePropertiesLookInterface
 where
-    UIElementComponentStylePropertiesOSLookType:
-        UIComponentStylePropertiesOSLook,
-    UIElementComponentStylePropertiesSystemLookType:
-        UIComponentStylePropertiesSystemLook {}
+    UIElementComponentStylePropertiesOSLookType
+        : UIComponentStylePropertiesOSLook,
+    UIElementComponentStylePropertiesSystemLookType
+        : UIComponentStylePropertiesSystemLook {}

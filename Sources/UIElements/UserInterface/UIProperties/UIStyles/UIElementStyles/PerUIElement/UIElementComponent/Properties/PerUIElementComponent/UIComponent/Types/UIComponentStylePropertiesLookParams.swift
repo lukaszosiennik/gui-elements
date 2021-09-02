@@ -6,7 +6,7 @@
 public protocol UIComponentStylePropertiesLookParams:
     UIElementComponentStylePropertiesLookParams
 where
-    UIElementComponentStylePropertiesOverwrittenLookParamsType:
-        UIComponentStylePropertiesOverwrittenLookParams,
-    DefaultConstantPalette ==
-        DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponent {}
+    UIElementComponentStylePropertiesOverwrittenLookParamsType
+        : UIComponentStylePropertiesOverwrittenLookParams,
+    DefaultConstantPalette
+        == DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponent {}

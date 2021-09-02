@@ -8,8 +8,8 @@ import UIKit
 public protocol ButtonUIComponentInterface:
     UIComponent
 where
-    UIElementComponentSettingsType ==
-        ButtonUIComponentSettings {}
+    UIElementComponentSettingsType
+        == ButtonUIComponentSettings {}
 
 extension ButtonUIComponentInterface {
     

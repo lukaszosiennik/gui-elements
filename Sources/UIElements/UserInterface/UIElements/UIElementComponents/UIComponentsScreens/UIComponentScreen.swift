@@ -8,8 +8,8 @@ import UIKit
 public protocol UIComponentScreen:
     UIElementComponent
 where
-    UIElementComponentSettingsType:
-        UIComponentScreenSettings {
+    UIElementComponentSettingsType
+        : UIComponentScreenSettings {
     
     func setupScreenStyleLookOS()
 }

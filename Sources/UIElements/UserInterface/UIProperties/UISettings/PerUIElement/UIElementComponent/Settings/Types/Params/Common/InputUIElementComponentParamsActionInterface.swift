@@ -5,8 +5,8 @@
 
 public protocol InputUIElementComponentParamsActionInterface
 where
-    Self:
-        UIElementComponentParams {
+    Self
+        : UIElementComponentParams {
     
     typealias Action =
         () -> Void

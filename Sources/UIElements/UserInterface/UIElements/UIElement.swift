@@ -7,5 +7,5 @@ import UIKit
 
 public protocol UIElement
 where
-    Self:
-        UIView {}
+    Self
+        : UIView {}

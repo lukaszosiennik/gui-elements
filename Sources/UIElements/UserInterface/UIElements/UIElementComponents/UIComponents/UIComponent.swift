@@ -6,5 +6,5 @@
 public protocol UIComponent:
     UIElementComponent
 where
-    UIElementComponentSettingsType:
-        UIComponentSettings {}
+    UIElementComponentSettingsType
+        : UIComponentSettings {}

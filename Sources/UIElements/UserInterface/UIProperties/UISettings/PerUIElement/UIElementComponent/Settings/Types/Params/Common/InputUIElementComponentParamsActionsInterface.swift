@@ -5,8 +5,8 @@
 
 public protocol InputUIElementComponentParamsActionsInterface
 where
-    Self:
-        UIElementComponentParams {
+    Self
+        : UIElementComponentParams {
     
     associatedtype ActionsKey:
         InputUIElementComponentActionsKeyInterface

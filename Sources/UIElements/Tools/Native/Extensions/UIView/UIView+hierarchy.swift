@@ -8,8 +8,8 @@ import commons
 
 extension CommonsExtension
 where
-    ExtendedType:
-        UIView {
+    ExtendedType
+        : UIView {
     
     public func addSubview(
         _ view: UIView

@@ -6,10 +6,10 @@
 public protocol UIComponentScreenStylePropertiesLookParams:
     UIElementComponentStylePropertiesLookParams
 where
-    UIElementComponentStylePropertiesOverwrittenLookParamsType:
-        UIComponentScreenStylePropertiesOverwrittenLookParams,
-    DefaultConstantPalette ==
-        DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen {}
+    UIElementComponentStylePropertiesOverwrittenLookParamsType
+        : UIComponentScreenStylePropertiesOverwrittenLookParams,
+    DefaultConstantPalette
+        == DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen {}
 
 extension UIComponentScreenStylePropertiesLookParams {
     

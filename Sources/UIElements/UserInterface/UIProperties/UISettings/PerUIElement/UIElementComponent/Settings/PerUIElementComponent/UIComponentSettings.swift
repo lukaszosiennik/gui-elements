@@ -6,12 +6,12 @@
 public protocol UIComponentSettings:
     UIElementComponentSettings
 where
-    UIElementComponentParamsType:
-        UIComponentParams,
-    UIElementComponentStylePropertiesType:
-        UIComponentStyleProperties,
-    UIElementComponentStylePropertiesOverwrittenType:
-        UIComponentStylePropertiesOverwritten {}
+    UIElementComponentParamsType
+        : UIComponentParams,
+    UIElementComponentStylePropertiesType
+        : UIComponentStyleProperties,
+    UIElementComponentStylePropertiesOverwrittenType
+        : UIComponentStylePropertiesOverwritten {}
 
 extension UIComponentSettings {
         

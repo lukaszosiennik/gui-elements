@@ -6,12 +6,12 @@
 public protocol UIComponentGroupSettings:
     UIElementComponentSettings
 where
-    UIElementComponentParamsType:
-        UIComponentGroupParams,
-    UIElementComponentStylePropertiesType:
-        UIComponentGroupStyleProperties,
-    UIElementComponentStylePropertiesOverwrittenType:
-        UIComponentGroupStylePropertiesOverwritten {}
+    UIElementComponentParamsType
+        : UIComponentGroupParams,
+    UIElementComponentStylePropertiesType
+        : UIComponentGroupStyleProperties,
+    UIElementComponentStylePropertiesOverwrittenType
+        : UIComponentGroupStylePropertiesOverwritten {}
 
 extension UIComponentGroupSettings {
     
