@@ -8,7 +8,8 @@ import UIKit
 public protocol ButtonUIComponentInterface:
     UIComponent
 where
-    UIElementComponentSettingsType == ButtonUIComponentSettings {}
+    UIElementComponentSettingsType ==
+        ButtonUIComponentSettings {}
 
 extension ButtonUIComponentInterface {
     
@@ -29,14 +30,18 @@ extension ButtonUIComponentInterface {
         _ lookConfiguration: UIElementComponentLookOSConfiguration,
         for button: UIButton
     ) {
-        setupStyleLookOS(for: button)
+        setupStyleLookOS(
+            for: button
+        )
     }
     
     func setupStyleLookOS(
         _ look: ButtonUIComponentStylePropertiesOSLook,
         for button: UIButton
     ) {
-        setupStyleLookOS(for: button)
+        setupStyleLookOS(
+            for: button
+        )
     }
     
     func setupStyleLookSystem(
@@ -58,11 +63,15 @@ extension ButtonUIComponentInterface {
             type: button.buttonType
         )
         button.setTitleColor(
-            tempButton.titleColor(for: .normal),
+            tempButton.titleColor(
+                for: .normal
+            ),
             for: .normal
         )
         button.setTitleColor(
-            tempButton.titleColor(for: .highlighted),
+            tempButton.titleColor(
+                for: .highlighted
+            ),
             for: .highlighted
         )
     }
@@ -70,7 +79,9 @@ extension ButtonUIComponentInterface {
 
 extension ButtonUIComponentInterface {
     
-    func setupStyleLookParamsOS(for button: UIButton) {}
+    func setupStyleLookParamsOS(
+        for button: UIButton
+    ) {}
     
     func setupStyleLookParamsSystem(
         _ lookParams: EmptyUIComponentStylePropertiesLookParams,
@@ -80,9 +91,13 @@ extension ButtonUIComponentInterface {
 
 extension ButtonUIComponentInterface {
     
-    func setupStyleLayoutInitialization(for button: UIButton) {}
+    func setupStyleLayoutInitialization(
+        for button: UIButton
+    ) {}
     
-    func setupStyleLayoutOS(for button: UIButton) {}
+    func setupStyleLayoutOS(
+        for button: UIButton
+    ) {}
     
     func setupStyleLayoutSystem(
         _ layoutParams: ButtonUIComponentStylePropertiesLayoutParams,

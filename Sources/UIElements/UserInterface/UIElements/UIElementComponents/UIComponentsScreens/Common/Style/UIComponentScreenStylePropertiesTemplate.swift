@@ -4,9 +4,12 @@
 //
 
 public struct UIComponentScreenStylePropertiesTemplate<
-    UIElementComponentStylePropertiesLookInterfaceType: UIComponentScreenStylePropertiesLookInterface,
-    UIComponentScreenStylePropertiesLookParamsType: UIComponentScreenStylePropertiesLookParams,
-    UIComponentScreenStylePropertiesLayoutParamsType: UIComponentScreenStylePropertiesLayoutParams
+    UIElementComponentStylePropertiesLookInterfaceType:
+        UIComponentScreenStylePropertiesLookInterface,
+    UIComponentScreenStylePropertiesLookParamsType:
+        UIComponentScreenStylePropertiesLookParams,
+    UIComponentScreenStylePropertiesLayoutParamsType:
+        UIComponentScreenStylePropertiesLayoutParams
 >:
     UIComponentScreenStyleProperties {
 

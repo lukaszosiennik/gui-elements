@@ -6,13 +6,22 @@
 public protocol UIElementComponentStylePropertiesOverwritten:
     UIElementStyleProperties {
     
-    associatedtype UIElementComponentStylePropertiesOverwrittenLookType: UIElementComponentStylePropertiesOverwrittenLook
-    associatedtype UIElementComponentStylePropertiesOverwrittenLookParamsType: UIElementComponentStylePropertiesOverwrittenLookParams
-    associatedtype UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIElementComponentStylePropertiesOverwrittenLayoutParams
+    associatedtype UIElementComponentStylePropertiesOverwrittenLookType:
+        UIElementComponentStylePropertiesOverwrittenLook
+    associatedtype UIElementComponentStylePropertiesOverwrittenLookParamsType:
+        UIElementComponentStylePropertiesOverwrittenLookParams
+    associatedtype UIElementComponentStylePropertiesOverwrittenLayoutParamsType:
+        UIElementComponentStylePropertiesOverwrittenLayoutParams
     
-    var look: UIElementComponentStylePropertiesOverwrittenLookType? { get }
-    var lookParams: UIElementComponentStylePropertiesOverwrittenLookParamsType? { get }
-    var layoutParams: UIElementComponentStylePropertiesOverwrittenLayoutParamsType? { get }
+    var look: UIElementComponentStylePropertiesOverwrittenLookType? {
+        get
+    }
+    var lookParams: UIElementComponentStylePropertiesOverwrittenLookParamsType? {
+        get
+    }
+    var layoutParams: UIElementComponentStylePropertiesOverwrittenLayoutParamsType? {
+        get
+    }
     
     init(
         look: UIElementComponentStylePropertiesOverwrittenLookType?,

@@ -10,7 +10,9 @@ public struct PlaceholderUIComponentParamsPropertiesLook:
     
     public let color: UIColor
     
-    public init(color: UIColor) {
+    public init(
+        color: UIColor
+    ) {
         self.color = color
     }
 }

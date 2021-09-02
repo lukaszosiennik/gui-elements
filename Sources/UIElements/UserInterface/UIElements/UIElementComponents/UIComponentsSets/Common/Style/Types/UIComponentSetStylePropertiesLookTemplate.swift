@@ -4,7 +4,9 @@
 //
 
 public struct UIComponentSetStylePropertiesLookTemplate<
-    UIElementComponentStylePropertiesOSLookType: UIComponentSetStylePropertiesOSLook,
-    UIElementComponentStylePropertiesSystemLookType: UIComponentSetStylePropertiesSystemLook
+    UIElementComponentStylePropertiesOSLookType:
+        UIComponentSetStylePropertiesOSLook,
+    UIElementComponentStylePropertiesSystemLookType:
+        UIComponentSetStylePropertiesSystemLook
 >:
     UIComponentSetStylePropertiesLookInterface {}

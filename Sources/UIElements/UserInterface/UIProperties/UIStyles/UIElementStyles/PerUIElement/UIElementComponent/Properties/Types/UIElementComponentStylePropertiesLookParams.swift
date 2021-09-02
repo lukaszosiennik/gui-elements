@@ -6,11 +6,15 @@
 public protocol UIElementComponentStylePropertiesLookParams:
     UIElementStylePropertiesLookParams {
     
-    associatedtype UIElementComponentStylePropertiesOverwrittenLookParamsType: UIElementComponentStylePropertiesOverwrittenLookParams
+    associatedtype UIElementComponentStylePropertiesOverwrittenLookParamsType:
+        UIElementComponentStylePropertiesOverwrittenLookParams
     
-    associatedtype DefaultConstantPalette: DefaultUIPalette & UIElementComponentConstantPalette
+    associatedtype DefaultConstantPalette:
+        DefaultUIPalette & UIElementComponentConstantPalette
     
-    static var `default`: Self? { get }
+    static var `default`: Self? {
+        get
+    }
 
     init?(
         lookParams: Self?,

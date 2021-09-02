@@ -7,10 +7,14 @@ public final class DevUIComponentGroupStyleFactory:
     UIElementComponentTypeStyleFactory,
     UIComponentGroupStyleFactoryInterface {
     
-    private typealias ColorPalette = DevUIColorPalette.UIElementComponent.UIComponentGroup
-    private typealias ConstantPalette = DevUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
+    private typealias ColorPalette =
+        DevUIColorPalette.UIElementComponent.UIComponentGroup
+    private typealias ConstantPalette =
+        DevUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
     
-    public func card() -> UIElementComponentStyle<CardUIComponentGroupStyleProperties> {
+    public func card() -> UIElementComponentStyle<
+        CardUIComponentGroupStyleProperties
+    > {
         return .init(
             type: styleType,
             properties: .init(
@@ -19,19 +23,29 @@ public final class DevUIComponentGroupStyleFactory:
                         border: .init(
                             corners: .rounded,
                             width: 1,
-                            color: .init(hex: "#d9dadbff") ?? .black
+                            color: .uie.`init`(
+                                hex: "#d9dadbff"
+                            ) ?? .black
                         ),
                         separator: .init(
                             width: 1,
-                            color: .init(hex: "#d2d3d4ff") ?? .blue
+                            color: .uie.`init`(
+                                hex: "#d2d3d4ff"
+                            ) ?? .blue
                         )
                     ),
                     title: .init(
-                        backgroundColor: .init(hex: "#f0f1f2ff") ?? .red,
-                        textColor: .init(hex: "#212529ff") ?? .orange
+                        backgroundColor: .uie.`init`(
+                            hex: "#f0f1f2ff"
+                        ) ?? .red,
+                        textColor: .uie.`init`(
+                            hex: "#212529ff"
+                        ) ?? .orange
                     ),
                     body: .init(
-                        backgroundColor: .init(hex: "#f8f9faff") ?? .green
+                        backgroundColor: .uie.`init`(
+                            hex: "#f8f9faff"
+                        ) ?? .green
                     )
                 )),
                 layoutParams: .init(
@@ -52,7 +66,9 @@ public final class DevUIComponentGroupStyleFactory:
         )
     }
     
-    public func navigationMenu() -> UIElementComponentStyle<NavigationMenuUIComponentGroupStyleProperties> {
+    public func navigationMenu() -> UIElementComponentStyle<
+        NavigationMenuUIComponentGroupStyleProperties
+    > {
         return .init(
             type: styleType,
             properties: .init(

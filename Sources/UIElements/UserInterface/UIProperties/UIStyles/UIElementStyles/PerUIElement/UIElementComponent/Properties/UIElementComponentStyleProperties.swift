@@ -7,16 +7,25 @@ public protocol UIElementComponentStyleProperties:
     UIElementStyleProperties,
     SelfInstanceCreatingInterface {
     
-    associatedtype UIElementComponentStylePropertiesLookInterfaceType: UIElementComponentStylePropertiesLookInterface
-    associatedtype UIElementComponentStylePropertiesLookParamsType: UIElementComponentStylePropertiesLookParams
-    associatedtype UIElementComponentStylePropertiesLayoutParamsType: UIElementComponentStylePropertiesLayoutParams
+    associatedtype UIElementComponentStylePropertiesLookInterfaceType:
+        UIElementComponentStylePropertiesLookInterface
+    associatedtype UIElementComponentStylePropertiesLookParamsType:
+        UIElementComponentStylePropertiesLookParams
+    associatedtype UIElementComponentStylePropertiesLayoutParamsType:
+        UIElementComponentStylePropertiesLayoutParams
     
     var lookType: UIElementComponentStylePropertiesLookType<
         UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType,
         UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType
-    > { get }
-    var lookParams: UIElementComponentStylePropertiesLookParamsType? { get }
-    var layoutParams: UIElementComponentStylePropertiesLayoutParamsType? { get }
+    > {
+        get
+    }
+    var lookParams: UIElementComponentStylePropertiesLookParamsType? {
+        get
+    }
+    var layoutParams: UIElementComponentStylePropertiesLayoutParamsType? {
+        get
+    }
     
     init(
         lookType: UIElementComponentStylePropertiesLookType<
@@ -30,7 +39,9 @@ public protocol UIElementComponentStyleProperties:
 
 extension UIElementComponentStyleProperties {
     
-    static func `default`(styleType: UIStyleType) -> Self {
+    static func `default`(
+        styleType: UIStyleType
+    ) -> Self {
         var layoutParams: UIElementComponentStylePropertiesLayoutParamsType? = nil
         if case let .os(styleProperties) = styleType, styleProperties.isLayoutParamsPreferred {
             layoutParams = .preferred

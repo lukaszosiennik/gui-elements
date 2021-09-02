@@ -20,36 +20,54 @@ public final class PlaceholderUIComponent:
     }
     
     public convenience init() {
-        self.init(settings: .default)
+        self.init(
+            settings: .default
+        )
     }
     
-    public init(settings: PlaceholderUIComponentSettings) {
+    public init(
+        settings: PlaceholderUIComponentSettings
+    ) {
         self.settings = settings
-        super.init(frame: .zero)
+        super.init(
+            frame: .zero
+        )
         
         setup()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(
+        coder: NSCoder
+    ) {
+        fatalError(
+            "init(coder:) has not been implemented"
+        )
     }
     
     public func setupNestedSettings() {}
     
-    public func setupParams(_ params: PlaceholderUIComponentParams) {}
+    public func setupParams(
+        _ params: PlaceholderUIComponentParams
+    ) {}
 }
 
 extension PlaceholderUIComponent {
     
-    public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
+    public func setupStyleLookOSConfiguration(
+        _ lookConfiguration: UIElementComponentLookOSConfiguration
+    ) {
         setupStyleLookOS()
     }
     
-    public func setupStyleLookOS(_ look: EmptyUIComponentStylePropertiesOSLook) {
+    public func setupStyleLookOS(
+        _ look: EmptyUIComponentStylePropertiesOSLook
+    ) {
         setupStyleLookOS()
     }
     
-    public func setupStyleLookSystem(_ look: PlaceholderUIComponentStylePropertiesSystemLook) {
+    public func setupStyleLookSystem(
+        _ look: PlaceholderUIComponentStylePropertiesSystemLook
+    ) {
         backgroundColor = settings.params.look?.color
     }
     
@@ -63,7 +81,9 @@ extension PlaceholderUIComponent {
     
     public func setupStyleLookParamsOS() {}
     
-    public func setupStyleLookParamsSystem(_ lookParams: EmptyUIComponentStylePropertiesLookParams) {}
+    public func setupStyleLookParamsSystem(
+        _ lookParams: EmptyUIComponentStylePropertiesLookParams
+    ) {}
 }
 
 extension PlaceholderUIComponent {
@@ -72,20 +92,32 @@ extension PlaceholderUIComponent {
     
     public func setupStyleLayoutOS() {
         if let height = settings.params.layoutParams?.height {
-            setupStyleLayout(height)
+            setupStyleLayout(
+                height
+            )
             return
         }
         
-        uie.removeConstraintIfExists(with: heightConstraintID)
+        uie.removeConstraintIfExists(
+            with: heightConstraintID
+        )
     }
     
-    public func setupStyleLayoutSystem(_ layoutParams: PlaceholderUIComponentStylePropertiesLayoutParams) {}
+    public func setupStyleLayoutSystem(
+        _ layoutParams: PlaceholderUIComponentStylePropertiesLayoutParams
+    ) {}
     
-    private func setupStyleLayout(_ height: CGFloat) {
-        if let heightConstraint = uie.constraint(with: heightConstraintID) {
+    private func setupStyleLayout(
+        _ height: CGFloat
+    ) {
+        if let heightConstraint = uie.constraint(
+            with: heightConstraintID
+        ) {
             heightConstraint.constant = height
         } else {
-            let heightConstraint = heightAnchor.constraint(equalToConstant: height)
+            let heightConstraint = heightAnchor.constraint(
+                equalToConstant: height
+            )
             heightConstraint.identifier = heightConstraintID
             
             NSLayoutConstraint.activate([

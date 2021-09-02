@@ -11,10 +11,14 @@ public struct TextFieldUIComponentStylePropertiesOSLook:
     public let borderStyle: UITextField.BorderStyle
     
     public init() {
-        self.init(borderStyle: .none)
+        self.init(
+            borderStyle: .none
+        )
     }
     
-    public init(borderStyle: UITextField.BorderStyle) {
+    public init(
+        borderStyle: UITextField.BorderStyle
+    ) {
         self.borderStyle = borderStyle
     }
 }

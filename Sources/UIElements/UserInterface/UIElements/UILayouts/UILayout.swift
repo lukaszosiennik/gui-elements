@@ -6,11 +6,17 @@
 public protocol UILayout:
     UIElement {
     
-    associatedtype UILayoutSettingsType: UILayoutSettings
+    associatedtype UILayoutSettingsType:
+        UILayoutSettings
     
-    var settings: UILayoutSettingsType { get set }
+    var settings: UILayoutSettingsType {
+        get
+        set
+    }
     
-    init(settings: UILayoutSettingsType)
+    init(
+        settings: UILayoutSettingsType
+    )
     
     func setupParams()
 }

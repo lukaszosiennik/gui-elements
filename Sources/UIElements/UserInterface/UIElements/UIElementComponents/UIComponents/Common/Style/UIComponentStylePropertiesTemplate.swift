@@ -4,9 +4,12 @@
 //
 
 public struct UIComponentStylePropertiesTemplate<
-    UIElementComponentStylePropertiesLookInterfaceType: UIComponentStylePropertiesLookInterface,
-    UIComponentStylePropertiesLookParamsType: UIComponentStylePropertiesLookParams,
-    UIComponentStylePropertiesLayoutParamsType: UIComponentStylePropertiesLayoutParams
+    UIElementComponentStylePropertiesLookInterfaceType:
+        UIComponentStylePropertiesLookInterface,
+    UIComponentStylePropertiesLookParamsType:
+        UIComponentStylePropertiesLookParams,
+    UIComponentStylePropertiesLayoutParamsType:
+        UIComponentStylePropertiesLayoutParams
 >:
     UIComponentStyleProperties {
 

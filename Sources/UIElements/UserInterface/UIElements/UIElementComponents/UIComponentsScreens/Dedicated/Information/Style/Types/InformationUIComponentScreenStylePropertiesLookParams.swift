@@ -14,7 +14,9 @@ public struct InformationUIComponentScreenStylePropertiesLookParams:
         )
     }
     
-    public init(titleLinesNumber: Int) {
+    public init(
+        titleLinesNumber: Int
+    ) {
         self.titleLinesNumber = titleLinesNumber
     }
 }

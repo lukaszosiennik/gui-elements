@@ -6,24 +6,37 @@
 public struct NavigationMenuOptionUIComponentSetSettings:
     UIComponentSetSettings {
     
-    public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentSetStylePropertiesOverwritten
+    public typealias UIElementComponentStylePropertiesOverwrittenType =
+        EmptyUIComponentSetStylePropertiesOverwritten
     
     public let params: NavigationMenuOptionUIComponentSetParams
-    public var style: UIElementComponentStyle<NavigationMenuOptionUIComponentSetStyleProperties>
+    public var style: UIElementComponentStyle<
+        NavigationMenuOptionUIComponentSetStyleProperties
+    >
     
     public init(
         params: NavigationMenuOptionUIComponentSetParams,
-        style: UIElementComponentStyle<NavigationMenuOptionUIComponentSetStyleProperties>
+        style: UIElementComponentStyle<
+            NavigationMenuOptionUIComponentSetStyleProperties
+        >
     ) {
         self.params = params
         self.style = style
     }
     
-    public static var style: UIElementComponentStyle<NavigationMenuOptionUIComponentSetStyleProperties>? {
+    public static var style: UIElementComponentStyle<
+        NavigationMenuOptionUIComponentSetStyleProperties
+    >? {
         return styleFactory?.navigationMenuOption()
     }
     
-    public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<NavigationMenuOptionUIComponentSetStyleProperties>? {
-        return styleFactory(for: styleType)?.navigationMenuOption()
+    public static func style(
+        for styleType: UIStyleType
+    ) -> UIElementComponentStyle<
+        NavigationMenuOptionUIComponentSetStyleProperties
+    >? {
+        return styleFactory(
+            for: styleType
+        )?.navigationMenuOption()
     }
 }

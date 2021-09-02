@@ -7,13 +7,17 @@ public final class AppUIComponentStyleFactory:
     UIElementComponentTypeStyleFactory,
     UIComponentStyleFactoryInterface {
     
-    public func button() -> UIElementComponentStyle<ButtonUIComponentStyleProperties> {
+    public func button() -> UIElementComponentStyle<
+        ButtonUIComponentStyleProperties
+    > {
         return .default(
             styleType: styleType
         )
     }
     
-    public func label() -> UIElementComponentStyle<LabelUIComponentStyleProperties> {
+    public func label() -> UIElementComponentStyle<
+        LabelUIComponentStyleProperties
+    > {
         return .init(
             type: styleType,
             properties: .init(
@@ -26,19 +30,25 @@ public final class AppUIComponentStyleFactory:
         )
     }
     
-    public func textArea() -> UIElementComponentStyle<TextAreaUIComponentStyleProperties> {
+    public func textArea() -> UIElementComponentStyle<
+        TextAreaUIComponentStyleProperties
+    > {
         return .default(
             styleType: styleType
         )
     }
     
-    public func textField() -> UIElementComponentStyle<TextFieldUIComponentStyleProperties> {
+    public func textField() -> UIElementComponentStyle<
+        TextFieldUIComponentStyleProperties
+    > {
         return .default(
             styleType: styleType
         )
     }
     
-    public func placeholder() -> UIElementComponentStyle<PlaceholderUIComponentStyleProperties> {
+    public func placeholder() -> UIElementComponentStyle<
+        PlaceholderUIComponentStyleProperties
+    > {
         return .default(
             styleType: styleType
         )

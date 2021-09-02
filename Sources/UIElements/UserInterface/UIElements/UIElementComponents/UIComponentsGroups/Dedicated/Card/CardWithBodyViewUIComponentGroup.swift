@@ -6,7 +6,8 @@
 import UIKit
 
 public final class CardWithUIViewBodyUIComponentGroup<
-    BodyViewType: UIView
+    BodyViewType:
+        UIView
 >:
     CardUIComponentGroupBasis<
         BodyViewType,

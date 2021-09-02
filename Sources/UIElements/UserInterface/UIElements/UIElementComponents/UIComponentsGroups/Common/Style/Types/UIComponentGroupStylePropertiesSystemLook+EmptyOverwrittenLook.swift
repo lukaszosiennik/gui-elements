@@ -5,7 +5,8 @@
 
 extension UIComponentGroupStylePropertiesSystemLook
 where
-    UIElementComponentStylePropertiesOverwrittenLookType == EmptyUIComponentGroupStylePropertiesOverwrittenLook {
+    UIElementComponentStylePropertiesOverwrittenLookType ==
+        EmptyUIComponentGroupStylePropertiesOverwrittenLook {
     
     public init(
         look: Self,

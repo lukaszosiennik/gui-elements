@@ -9,8 +9,14 @@ public protocol UIElementComponentParams:
 
 extension UIElementComponentParams {
     
-    static func structName(dot propertyName: String) -> String {
-        return structName.appending(".").appending(propertyName)
+    static func structName(
+        dot propertyName: String
+    ) -> String {
+        return structName.appending(
+            "."
+        ).appending(
+            propertyName
+        )
     }
     
     static var structName: String {

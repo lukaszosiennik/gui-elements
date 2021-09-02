@@ -7,21 +7,33 @@ public struct InformationUIComponentScreenSettings:
     UIComponentScreenSettings {
     
     public let params: InformationUIComponentScreenParams
-    public var style: UIElementComponentStyle<InformationUIComponentScreenStyleProperties>
+    public var style: UIElementComponentStyle<
+        InformationUIComponentScreenStyleProperties
+    >
     
     public init(
         params: InformationUIComponentScreenParams,
-        style: UIElementComponentStyle<InformationUIComponentScreenStyleProperties>
+        style: UIElementComponentStyle<
+            InformationUIComponentScreenStyleProperties
+        >
     ) {
         self.params = params
         self.style = style
     }
     
-    public static var style: UIElementComponentStyle<InformationUIComponentScreenStyleProperties>? {
+    public static var style: UIElementComponentStyle<
+        InformationUIComponentScreenStyleProperties
+    >? {
         return styleFactory?.information()
     }
     
-    public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<InformationUIComponentScreenStyleProperties>? {
-        return styleFactory(for: styleType)?.information()
+    public static func style(
+        for styleType: UIStyleType
+    ) -> UIElementComponentStyle<
+        InformationUIComponentScreenStyleProperties
+    >? {
+        return styleFactory(
+            for: styleType
+        )?.information()
     }
 }

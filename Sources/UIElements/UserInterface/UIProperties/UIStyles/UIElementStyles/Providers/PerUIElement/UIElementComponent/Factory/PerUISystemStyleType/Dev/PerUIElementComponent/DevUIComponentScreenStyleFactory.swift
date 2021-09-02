@@ -7,10 +7,14 @@ public final class DevUIComponentScreenStyleFactory:
     UIElementComponentTypeStyleFactory,
     UIComponentScreenStyleFactoryInterface {
     
-    private typealias ColorPalette = DevUIColorPalette.UIElementComponent.UIComponentScreen
-    private typealias ConstantPalette = DevUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
+    private typealias ColorPalette =
+        DevUIColorPalette.UIElementComponent.UIComponentScreen
+    private typealias ConstantPalette =
+        DevUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
     
-    public func information() -> UIElementComponentStyle<InformationUIComponentScreenStyleProperties> {
+    public func information() -> UIElementComponentStyle<
+        InformationUIComponentScreenStyleProperties
+    > {
         return .init(
             type: styleType,
             properties: .init(
@@ -23,7 +27,9 @@ public final class DevUIComponentScreenStyleFactory:
         )
     }
     
-    public func navigationMenu() -> UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties> {
+    public func navigationMenu() -> UIElementComponentStyle<
+        NavigationMenuUIComponentScreenStyleProperties
+    > {
         return .init(
             type: styleType,
             properties: .init(

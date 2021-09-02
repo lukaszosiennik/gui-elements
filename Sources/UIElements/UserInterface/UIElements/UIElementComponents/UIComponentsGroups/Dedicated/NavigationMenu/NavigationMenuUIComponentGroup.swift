@@ -6,7 +6,8 @@
 import UIKit
 
 public final class NavigationMenuUIComponentGroup<
-    OptionKey: InputUIElementComponentActionsKeyInterface
+    OptionKey:
+        InputUIElementComponentActionsKeyInterface
 >:
     UIView,
     UIComponentGroup {
@@ -22,25 +23,39 @@ public final class NavigationMenuUIComponentGroup<
     
     public let initialization: UIElementComponentInitialization = .init()
     
-    public var settings: NavigationMenuUIComponentGroupSettings<OptionKey> {
+    public var settings: NavigationMenuUIComponentGroupSettings<
+        OptionKey
+    > {
         didSet {
             setupSettings()
         }
     }
     
     public convenience init() {
-        self.init(settings: .default)
+        self.init(
+            settings: .default
+        )
     }
     
-    public init(settings: NavigationMenuUIComponentGroupSettings<OptionKey>) {
+    public init(
+        settings: NavigationMenuUIComponentGroupSettings<
+            OptionKey
+        >
+    ) {
         self.settings = settings
-        super.init(frame: .zero)
+        super.init(
+            frame: .zero
+        )
 
         setup()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(
+        coder: NSCoder
+    ) {
+        fatalError(
+            "init(coder:) has not been implemented"
+        )
     }
     
     public func setupNestedSettings() {
@@ -57,9 +72,15 @@ public final class NavigationMenuUIComponentGroup<
         )
     }
     
-    public func setupParams(_ params: NavigationMenuUIComponentGroupParams<OptionKey>) {
+    public func setupParams(
+        _ params: NavigationMenuUIComponentGroupParams<
+            OptionKey
+        >
+    ) {
         stackView.arrangedSubviews.forEach {
-            stackView.removeArrangedSubview($0)
+            stackView.removeArrangedSubview(
+                $0
+            )
         }
         
         params.options.forEach { option in
@@ -68,29 +89,39 @@ public final class NavigationMenuUIComponentGroup<
                     params: .init(
                         title: option.value,
                         action: {
-                            params.actions?(option.key)
+                            params.actions?(
+                                option.key
+                            )
                         }
                     ),
                     styleType: settings.styleType
                 )
             )
             
-            stackView.addArrangedSubview(optionView)
+            stackView.addArrangedSubview(
+                optionView
+            )
         }
     }
 }
 
 extension NavigationMenuUIComponentGroup {
     
-    public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
+    public func setupStyleLookOSConfiguration(
+        _ lookConfiguration: UIElementComponentLookOSConfiguration
+    ) {
         setupStyleLookOS()
     }
     
-    public func setupStyleLookOS(_ look: EmptyUIComponentGroupStylePropertiesOSLook) {
+    public func setupStyleLookOS(
+        _ look: EmptyUIComponentGroupStylePropertiesOSLook
+    ) {
         setupStyleLookOS()
     }
     
-    public func setupStyleLookSystem(_ look: NavigationMenuUIComponentGroupStylePropertiesSystemLook) {
+    public func setupStyleLookSystem(
+        _ look: NavigationMenuUIComponentGroupStylePropertiesSystemLook
+    ) {
         backgroundColor = look.backgroundColor
     }
     
@@ -104,7 +135,9 @@ extension NavigationMenuUIComponentGroup {
     
     public func setupStyleLookParamsOS() {}
     
-    public func setupStyleLookParamsSystem(_ lookParams: NavigationMenuUIComponentGroupStylePropertiesLookParams) {}
+    public func setupStyleLookParamsSystem(
+        _ lookParams: NavigationMenuUIComponentGroupStylePropertiesLookParams
+    ) {}
 }
 
 extension NavigationMenuUIComponentGroup {
@@ -115,34 +148,64 @@ extension NavigationMenuUIComponentGroup {
         stackView.distribution = UIStackView.Distribution.equalSpacing
         stackView.alignment = UIStackView.Alignment.fill
         
-        uie.addSubview(titleLabelUI)
-        uie.addSubview(stackViewBackground)
-        uie.addSubview(stackView)
+        uie.addSubview(
+            titleLabelUI
+        )
+        uie.addSubview(
+            stackViewBackground
+        )
+        uie.addSubview(
+            stackView
+        )
         
-        let titleTopSpaceConstraint = titleLabelUI.topAnchor.constraint(equalTo: topAnchor)
+        let titleTopSpaceConstraint = titleLabelUI.topAnchor.constraint(
+            equalTo: topAnchor
+        )
         titleTopSpaceConstraint.identifier = titleTopSpaceConstraintID
-        let titleBottomSpaceConstraint = titleLabelUI.bottomAnchor.constraint(equalTo: stackView.topAnchor)
+        let titleBottomSpaceConstraint = titleLabelUI.bottomAnchor.constraint(
+            equalTo: stackView.topAnchor
+        )
         titleBottomSpaceConstraint.identifier = titleBottomSpaceConstraintID
         
         NSLayoutConstraint.activate([
-            titleLabelUI.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
-            titleLabelUI.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
-            titleLabelUI.centerXAnchor.constraint(equalTo: centerXAnchor),
+            titleLabelUI.leadingAnchor.constraint(
+                greaterThanOrEqualTo: leadingAnchor
+            ),
+            titleLabelUI.trailingAnchor.constraint(
+                lessThanOrEqualTo: trailingAnchor
+            ),
+            titleLabelUI.centerXAnchor.constraint(
+                equalTo: centerXAnchor
+            ),
             titleTopSpaceConstraint,
             titleBottomSpaceConstraint,
         ])
         
         NSLayoutConstraint.activate([
-            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            stackView.leadingAnchor.constraint(
+                equalTo: leadingAnchor
+            ),
+            stackView.trailingAnchor.constraint(
+                equalTo: trailingAnchor
+            ),
+            stackView.bottomAnchor.constraint(
+                equalTo: bottomAnchor
+            ),
         ])
         
         NSLayoutConstraint.activate([
-            stackViewBackground.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
-            stackViewBackground.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
-            stackViewBackground.topAnchor.constraint(equalTo: stackView.topAnchor),
-            stackViewBackground.bottomAnchor.constraint(equalTo: stackView.bottomAnchor),
+            stackViewBackground.leadingAnchor.constraint(
+                equalTo: stackView.leadingAnchor
+            ),
+            stackViewBackground.trailingAnchor.constraint(
+                equalTo: stackView.trailingAnchor
+            ),
+            stackViewBackground.topAnchor.constraint(
+                equalTo: stackView.topAnchor
+            ),
+            stackViewBackground.bottomAnchor.constraint(
+                equalTo: stackView.bottomAnchor
+            ),
         ])
     }
     
@@ -150,25 +213,41 @@ extension NavigationMenuUIComponentGroup {
         let tempStackView: UIStackView = .init()
         stackView.spacing = tempStackView.spacing
         
-        uie.constraint(with: titleTopSpaceConstraintID)?.constant = 0
-        uie.constraint(with: titleBottomSpaceConstraintID)?.constant = 0
+        uie.constraint(
+            with: titleTopSpaceConstraintID
+        )?.constant = 0
+        uie.constraint(
+            with: titleBottomSpaceConstraintID
+        )?.constant = 0
         stackView.arrangedSubviews.forEach { optionView in
-            optionView.uie.removeConstraintIfExists(with: optionViewHeightConstraintID)
+            optionView.uie.removeConstraintIfExists(
+                with: optionViewHeightConstraintID
+            )
         }
     }
     
-    public func setupStyleLayoutSystem(_ layoutParams: NavigationMenuUIComponentGroupStylePropertiesLayoutParams) {
+    public func setupStyleLayoutSystem(
+        _ layoutParams: NavigationMenuUIComponentGroupStylePropertiesLayoutParams
+    ) {
         stackView.spacing = layoutParams.optionsSpace
         
-        uie.constraint(with: titleTopSpaceConstraintID)?.constant = layoutParams.titleTopMargin
-        uie.constraint(with: titleBottomSpaceConstraintID)?.constant = -layoutParams.titleBottomMargin
+        uie.constraint(
+            with: titleTopSpaceConstraintID
+        )?.constant = layoutParams.titleTopMargin
+        uie.constraint(
+            with: titleBottomSpaceConstraintID
+        )?.constant = -layoutParams.titleBottomMargin
         if let optionHeight = layoutParams.optionHeight {
             stackView.arrangedSubviews.forEach { optionView in
-                if let constraint = optionView.uie.constraint(with: optionViewHeightConstraintID) {
+                if let constraint = optionView.uie.constraint(
+                    with: optionViewHeightConstraintID
+                ) {
                     constraint.constant = optionHeight
                 } else {
                     NSLayoutConstraint.activate([
-                        optionView.heightAnchor.constraint(equalToConstant: optionHeight),
+                        optionView.heightAnchor.constraint(
+                            equalToConstant: optionHeight
+                        ),
                     ])
                 }
             }

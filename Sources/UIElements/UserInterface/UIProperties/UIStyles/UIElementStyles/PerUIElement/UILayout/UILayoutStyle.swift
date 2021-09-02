@@ -4,7 +4,8 @@
 //
 
 public struct UILayoutStyle<
-    PropertiesType: UILayoutStyleProperties
+    PropertiesType:
+        UILayoutStyleProperties
 >:
     UIElementStyle {
     

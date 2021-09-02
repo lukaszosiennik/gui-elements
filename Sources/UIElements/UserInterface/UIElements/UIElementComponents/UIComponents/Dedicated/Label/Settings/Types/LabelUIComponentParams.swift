@@ -16,7 +16,9 @@ public struct LabelUIComponentParams:
         )
     }
     
-    public init(text: String) {
+    public init(
+        text: String
+    ) {
         self.text = text
     }
 }

@@ -6,24 +6,37 @@
 public struct LabelUIComponentSettings:
     UIComponentSettings {
 
-    public typealias UIElementComponentStylePropertiesOverwrittenType = LabelUIComponentStylePropertiesOverwritten
+    public typealias UIElementComponentStylePropertiesOverwrittenType =
+        LabelUIComponentStylePropertiesOverwritten
 
     public let params: LabelUIComponentParams
-    public var style: UIElementComponentStyle<LabelUIComponentStyleProperties>
+    public var style: UIElementComponentStyle<
+        LabelUIComponentStyleProperties
+    >
     
     public init(
         params: LabelUIComponentParams,
-        style: UIElementComponentStyle<LabelUIComponentStyleProperties>
+        style: UIElementComponentStyle<
+            LabelUIComponentStyleProperties
+        >
     ) {
         self.params = params
         self.style = style
     }
     
-    public static var style: UIElementComponentStyle<LabelUIComponentStyleProperties>? {
+    public static var style: UIElementComponentStyle<
+        LabelUIComponentStyleProperties
+    >? {
         return styleFactory?.label()
     }
     
-    public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<LabelUIComponentStyleProperties>? {
-        return styleFactory(for: styleType)?.label()
+    public static func style(
+        for styleType: UIStyleType
+    ) -> UIElementComponentStyle<
+        LabelUIComponentStyleProperties
+    >? {
+        return styleFactory(
+            for: styleType
+        )?.label()
     }
 }

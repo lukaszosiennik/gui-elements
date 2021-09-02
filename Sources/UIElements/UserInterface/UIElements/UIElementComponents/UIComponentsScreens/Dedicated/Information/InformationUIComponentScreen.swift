@@ -20,18 +20,28 @@ public final class InformationUIComponentScreen:
     }
     
     public convenience init() {
-        self.init(settings: .default)
+        self.init(
+            settings: .default
+        )
     }
     
-    public init(settings: InformationUIComponentScreenSettings) {
+    public init(
+        settings: InformationUIComponentScreenSettings
+    ) {
         self.settings = settings
-        super.init(frame: .zero)
+        super.init(
+            frame: .zero
+        )
         
         setup()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(
+        coder: NSCoder
+    ) {
+        fatalError(
+            "init(coder:) has not been implemented"
+        )
     }
     
     public func setupNestedSettings() {
@@ -48,7 +58,9 @@ public final class InformationUIComponentScreen:
         )
     }
     
-    public func setupParams(_ params: InformationUIComponentScreenParams) {}
+    public func setupParams(
+        _ params: InformationUIComponentScreenParams
+    ) {}
 }
 
 extension InformationUIComponentScreen {
@@ -57,11 +69,15 @@ extension InformationUIComponentScreen {
         setupStyleLookOS()
     }
     
-    public func setupStyleLookOS(_ look: EmptyUIComponentScreenStylePropertiesOSLook) {
+    public func setupStyleLookOS(
+        _ look: EmptyUIComponentScreenStylePropertiesOSLook
+    ) {
         setupStyleLookOS()
     }
     
-    public func setupStyleLookSystem(_ look: InformationUIComponentScreenStylePropertiesSystemLook) {
+    public func setupStyleLookSystem(
+        _ look: InformationUIComponentScreenStylePropertiesSystemLook
+    ) {
         backgroundColor = look.backgroundColor
     }
     
@@ -75,7 +91,9 @@ extension InformationUIComponentScreen {
     
     public func setupStyleLookParamsOS() {}
     
-    public func setupStyleLookParamsSystem(_ lookParams: InformationUIComponentScreenStylePropertiesLookParams) {}
+    public func setupStyleLookParamsSystem(
+        _ lookParams: InformationUIComponentScreenStylePropertiesLookParams
+    ) {}
 }
 
 extension InformationUIComponentScreen {
@@ -83,19 +101,35 @@ extension InformationUIComponentScreen {
     public func setupStyleLayoutInitialization() {
         titleLabelUI.textAlignment = .center
         
-        uie.addSubview(titleLabelUI)
+        uie.addSubview(
+            titleLabelUI
+        )
         
         NSLayoutConstraint.activate([
-            titleLabelUI.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
-            titleLabelUI.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
-            titleLabelUI.centerXAnchor.constraint(equalTo: centerXAnchor),
-            titleLabelUI.topAnchor.constraint(greaterThanOrEqualTo: topAnchor),
-            titleLabelUI.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
-            titleLabelUI.centerYAnchor.constraint(equalTo: centerYAnchor),
+            titleLabelUI.leadingAnchor.constraint(
+                greaterThanOrEqualTo: leadingAnchor
+            ),
+            titleLabelUI.trailingAnchor.constraint(
+                lessThanOrEqualTo: trailingAnchor
+            ),
+            titleLabelUI.centerXAnchor.constraint(
+                equalTo: centerXAnchor
+            ),
+            titleLabelUI.topAnchor.constraint(
+                greaterThanOrEqualTo: topAnchor
+            ),
+            titleLabelUI.bottomAnchor.constraint(
+                lessThanOrEqualTo: bottomAnchor
+            ),
+            titleLabelUI.centerYAnchor.constraint(
+                equalTo: centerYAnchor
+            ),
         ])
     }
     
     public func setupStyleLayoutOS() {}
     
-    public func setupStyleLayoutSystem(_ layoutParams: InformationUIComponentScreenStylePropertiesLayoutParams) {}
+    public func setupStyleLayoutSystem(
+        _ layoutParams: InformationUIComponentScreenStylePropertiesLayoutParams
+    ) {}
 }

@@ -4,8 +4,10 @@
 //
 
 public enum UIElementComponentStylePropertiesLookType<
-    UIElementComponentStylePropertiesOSLookType: UIElementComponentStylePropertiesOSLook,
-    UIElementComponentStylePropertiesSystemLookType: UIElementComponentStylePropertiesSystemLook
+    UIElementComponentStylePropertiesOSLookType:
+        UIElementComponentStylePropertiesOSLook,
+    UIElementComponentStylePropertiesSystemLookType:
+        UIElementComponentStylePropertiesSystemLook
 > {
     
     case os(_ look: UIElementComponentStylePropertiesOSLookType)

@@ -8,27 +8,56 @@ public protocol UIElementComponentSettings:
     UIPropertyDefaultValueInterface,
     SelfInstanceCreatingInterface {
     
-    associatedtype UIElementComponentParamsType: UIElementComponentParams
-    associatedtype UIElementComponentStylePropertiesType: UIElementComponentStyleProperties
-    associatedtype UIElementComponentStylePropertiesOverwrittenType: UIElementComponentStylePropertiesOverwritten
+    associatedtype UIElementComponentParamsType:
+        UIElementComponentParams
+    associatedtype UIElementComponentStylePropertiesType:
+        UIElementComponentStyleProperties
+    associatedtype UIElementComponentStylePropertiesOverwrittenType:
+        UIElementComponentStylePropertiesOverwritten
     
-    var params: UIElementComponentParamsType { get }
-    var style: UIElementComponentStyle<UIElementComponentStylePropertiesType> { get }
+    var params: UIElementComponentParamsType {
+        get
+    }
+    var style: UIElementComponentStyle<
+        UIElementComponentStylePropertiesType
+    > {
+        get
+    }
     
     init(
         params: UIElementComponentParamsType,
-        style: UIElementComponentStyle<UIElementComponentStylePropertiesType>
+        style: UIElementComponentStyle<
+            UIElementComponentStylePropertiesType
+        >
     )
     
-    static var style: UIElementComponentStyle<UIElementComponentStylePropertiesType>? { get }
-    static func style(for styleType: UIStyleType) -> UIElementComponentStyle<UIElementComponentStylePropertiesType>?
+    static var style: UIElementComponentStyle<
+        UIElementComponentStylePropertiesType
+    >? {
+        get
+    }
+    static func style(
+        for styleType: UIStyleType
+    ) -> UIElementComponentStyle<
+        UIElementComponentStylePropertiesType
+    >?
     
-    static var styleUnwrapped: UIElementComponentStyle<UIElementComponentStylePropertiesType> { get }
-    static func style(for styleType: UIStyleType) -> UIElementComponentStyle<UIElementComponentStylePropertiesType>
+    static var styleUnwrapped: UIElementComponentStyle<
+        UIElementComponentStylePropertiesType
+    > {
+        get
+    }
+    static func style(
+        for styleType: UIStyleType
+    ) -> UIElementComponentStyle<
+        UIElementComponentStylePropertiesType
+    >
     static func style(
         for styleType: UIStyleType,
         overwrittenBy stylePropertiesOverwritten: UIElementComponentStylePropertiesOverwrittenType
-    ) -> UIElementComponentStyle<UIElementComponentStylePropertiesType>
+    ) -> UIElementComponentStyle<
+        UIElementComponentStylePropertiesType
+    >
 }
 
 extension UIElementComponentSettings {
@@ -40,7 +69,9 @@ extension UIElementComponentSettings {
         set {
             self = .init(
                 params: params,
-                style: Self.style(for: newValue)
+                style: Self.style(
+                    for: newValue
+                )
             )
         }
     }
@@ -58,7 +89,9 @@ extension UIElementComponentSettings {
         )
     }
     
-    public init(params: UIElementComponentParamsType) {
+    public init(
+        params: UIElementComponentParamsType
+    ) {
         self.init(
             params: params,
             style: Self.styleUnwrapped
@@ -71,7 +104,9 @@ extension UIElementComponentSettings {
     ) {
         self.init(
             params: params,
-            style: Self.style(for: styleType)
+            style: Self.style(
+                for: styleType
+            )
         )
     }
     
@@ -95,8 +130,12 @@ extension UIElementComponentSettings {
     public static var mainStyleFactory: UIElementComponentStyleFactoryInterface? {
         return styleFactoryProvider.currentFactory
     }
-    public static func mainStyleFactory(for styleType: UIStyleType) -> UIElementComponentStyleFactoryInterface? {
-        return styleFactoryProvider.factory(for: styleType)
+    public static func mainStyleFactory(
+        for styleType: UIStyleType
+    ) -> UIElementComponentStyleFactoryInterface? {
+        return styleFactoryProvider.factory(
+            for: styleType
+        )
     }
     
     static private var styleFactoryProvider: UIElementComponentStyleFactoryProviderInterface.Type {
@@ -106,25 +145,44 @@ extension UIElementComponentSettings {
 
 extension UIElementComponentSettings
 where
-    UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType.UIElementComponentStylePropertiesOverwrittenLookType == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLookType,
-    UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookParamsType.UIElementComponentStylePropertiesOverwrittenLookParamsType == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLookParamsType,
-    UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLayoutParamsType.UIElementComponentStylePropertiesOverwrittenLayoutParamsType == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLayoutParamsType {
+    UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType.UIElementComponentStylePropertiesOverwrittenLookType ==
+        UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLookType,
+    UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookParamsType.UIElementComponentStylePropertiesOverwrittenLookParamsType ==
+        UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLookParamsType,
+    UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLayoutParamsType.UIElementComponentStylePropertiesOverwrittenLayoutParamsType ==
+        UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLayoutParamsType {
     
-    public static var styleUnwrapped: UIElementComponentStyle<UIElementComponentStylePropertiesType> {
+    public static var styleUnwrapped: UIElementComponentStyle<
+        UIElementComponentStylePropertiesType
+    > {
         return style ?? .default
     }
     
-    public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<UIElementComponentStylePropertiesType> {
-        return style(for: styleType) ?? .default(styleType: styleType)
+    public static func style(
+        for styleType: UIStyleType
+    ) -> UIElementComponentStyle<
+        UIElementComponentStylePropertiesType
+    > {
+        return style(
+            for: styleType
+        ) ?? .default(
+            styleType: styleType
+        )
     }
     
     public static func style(
         for styleType: UIStyleType,
         overwrittenBy stylePropertiesOverwritten: UIElementComponentStylePropertiesOverwrittenType
-    ) -> UIElementComponentStyle<UIElementComponentStylePropertiesType> {
-        guard let style = style(for: styleType)
+    ) -> UIElementComponentStyle<
+        UIElementComponentStylePropertiesType
+    > {
+        guard let style = style(
+            for: styleType
+        )
         else {
-            let defaultStyle: UIElementComponentStyle<UIElementComponentStylePropertiesType> = .default(
+            let defaultStyle: UIElementComponentStyle<
+                UIElementComponentStylePropertiesType
+            > = .default(
                 styleType: styleType
             )
             

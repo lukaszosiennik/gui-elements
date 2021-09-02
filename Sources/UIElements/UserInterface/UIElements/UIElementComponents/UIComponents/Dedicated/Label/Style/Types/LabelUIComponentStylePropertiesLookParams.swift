@@ -8,7 +8,9 @@ public struct LabelUIComponentStylePropertiesLookParams:
     
     public let linesNumber: Int
     
-    public init(linesNumber: Int) {
+    public init(
+        linesNumber: Int
+    ) {
         self.linesNumber = linesNumber
     }
     

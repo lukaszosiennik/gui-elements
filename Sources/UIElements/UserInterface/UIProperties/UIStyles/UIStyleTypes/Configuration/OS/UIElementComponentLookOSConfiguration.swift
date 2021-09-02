@@ -8,7 +8,9 @@ public struct UIElementComponentLookOSConfiguration:
 
     let isUserFriendly: Bool
 
-    public init(isUserFriendly: Bool) {
+    public init(
+        isUserFriendly: Bool
+    ) {
         self.isUserFriendly = isUserFriendly
     }
 }

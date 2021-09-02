@@ -9,10 +9,14 @@ public struct ButtonUIComponentStylePropertiesOSLook:
     public let buttonStyleType: ButtonUIComponentOSStyleType
     
     public init() {
-        self.init(buttonStyleType: .default)
+        self.init(
+            buttonStyleType: .default
+        )
     }
     
-    public init(buttonStyleType: ButtonUIComponentOSStyleType) {
+    public init(
+        buttonStyleType: ButtonUIComponentOSStyleType
+    ) {
         self.buttonStyleType = buttonStyleType
     }
 }

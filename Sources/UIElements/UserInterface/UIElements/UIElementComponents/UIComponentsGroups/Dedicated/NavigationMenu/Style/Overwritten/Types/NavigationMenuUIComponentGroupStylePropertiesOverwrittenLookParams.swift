@@ -8,7 +8,9 @@ public struct NavigationMenuUIComponentGroupStylePropertiesOverwrittenLookParams
     
     public let titleLinesNumber: Int?
     
-    init(titleLinesNumber: Int? = nil) {
+    init(
+        titleLinesNumber: Int? = nil
+    ) {
         self.titleLinesNumber = titleLinesNumber
     }
 }

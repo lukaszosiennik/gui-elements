@@ -6,7 +6,8 @@
 public protocol UIComponentScreenStylePropertiesSystemLook:
     UIElementComponentStylePropertiesSystemLook
 where
-    UIElementComponentStylePropertiesOverwrittenLookType: UIComponentScreenStylePropertiesOverwrittenLook {}
+    UIElementComponentStylePropertiesOverwrittenLookType:
+        UIComponentScreenStylePropertiesOverwrittenLook {}
 
 extension UIComponentScreenStylePropertiesSystemLook {
     

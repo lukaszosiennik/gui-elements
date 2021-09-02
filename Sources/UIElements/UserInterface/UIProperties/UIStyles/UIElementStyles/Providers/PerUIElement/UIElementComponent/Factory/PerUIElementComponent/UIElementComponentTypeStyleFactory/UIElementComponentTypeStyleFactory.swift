@@ -8,7 +8,9 @@ public class UIElementComponentTypeStyleFactory:
     
     public let styleType: UIStyleType
     
-    public required init(owner: UIElementStyleFactoryInterface) {
+    public required init(
+        owner: UIElementStyleFactoryInterface
+    ) {
         self.styleType = owner.styleType
     }
 }

@@ -4,7 +4,8 @@
 //
 
 public final class CardUIComponentGroup<
-    BodyUIElementComponentType: UIElementComponent
+    BodyUIElementComponentType:
+        UIElementComponent
 >:
     CardUIComponentGroupBasis<
         BodyUIElementComponentType,

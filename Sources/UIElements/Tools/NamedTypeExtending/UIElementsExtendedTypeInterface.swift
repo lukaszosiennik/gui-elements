@@ -9,17 +9,33 @@ public protocol UIElementsExtendedTypeInterface {
     
     associatedtype ExtendedType
 
-    static var uie: CommonsExtension<ExtendedType>.Type { get }
-    var uie: CommonsExtension<ExtendedType> { get }
+    static var uie: CommonsExtension<
+        ExtendedType
+    >.Type {
+        get
+    }
+    var uie: CommonsExtension<
+        ExtendedType
+    > {
+        get
+    }
 }
 
 extension UIElementsExtendedTypeInterface {
     
-    public static var uie: CommonsExtension<Self>.Type {
-        return CommonsExtension<Self>.self
+    public static var uie: CommonsExtension<
+        Self
+    >.Type {
+        return CommonsExtension<
+            Self
+        >.self
     }
 
-    public var uie: CommonsExtension<Self> {
-        return .init(self)
+    public var uie: CommonsExtension<
+        Self
+    > {
+        return .init(
+            self
+        )
     }
 }

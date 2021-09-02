@@ -6,24 +6,37 @@
 public struct TextAreaUIComponentSettings:
     UIComponentSettings {
 
-    public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentStylePropertiesOverwritten
+    public typealias UIElementComponentStylePropertiesOverwrittenType =
+        EmptyUIComponentStylePropertiesOverwritten
 
     public let params: TextAreaUIComponentParams
-    public var style: UIElementComponentStyle<TextAreaUIComponentStyleProperties>
+    public var style: UIElementComponentStyle<
+        TextAreaUIComponentStyleProperties
+    >
     
     public init(
         params: TextAreaUIComponentParams,
-        style: UIElementComponentStyle<TextAreaUIComponentStyleProperties>
+        style: UIElementComponentStyle<
+            TextAreaUIComponentStyleProperties
+        >
     ) {
         self.params = params
         self.style = style
     }
     
-    public static var style: UIElementComponentStyle<TextAreaUIComponentStyleProperties>? {
+    public static var style: UIElementComponentStyle<
+        TextAreaUIComponentStyleProperties
+    >? {
         return styleFactory?.textArea()
     }
     
-    public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<TextAreaUIComponentStyleProperties>? {
-        return styleFactory(for: styleType)?.textArea()
+    public static func style(
+        for styleType: UIStyleType
+    ) -> UIElementComponentStyle<
+        TextAreaUIComponentStyleProperties
+    >? {
+        return styleFactory(
+            for: styleType
+        )?.textArea()
     }
 }

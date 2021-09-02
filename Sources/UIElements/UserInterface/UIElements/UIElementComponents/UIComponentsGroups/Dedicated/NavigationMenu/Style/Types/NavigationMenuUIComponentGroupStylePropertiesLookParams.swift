@@ -14,7 +14,9 @@ public struct NavigationMenuUIComponentGroupStylePropertiesLookParams:
         )
     }
     
-    public init(titleLinesNumber: Int) {
+    public init(
+        titleLinesNumber: Int
+    ) {
         self.titleLinesNumber = titleLinesNumber
     }
     

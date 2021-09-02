@@ -4,7 +4,8 @@
 //
 
 public struct NavigationMenuUIComponentScreenParams<
-    OptionKey: InputUIElementComponentActionsKeyInterface
+    OptionKey:
+        InputUIElementComponentActionsKeyInterface
 >:
     UIComponentScreenParams,
     InputUIElementComponentParamsActionsInterface {

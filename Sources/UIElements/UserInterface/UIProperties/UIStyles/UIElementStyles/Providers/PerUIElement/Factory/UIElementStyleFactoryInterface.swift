@@ -5,5 +5,7 @@
 
 public protocol UIElementStyleFactoryInterface {
     
-    var styleType: UIStyleType { get }
+    var styleType: UIStyleType {
+        get
+    }
 }

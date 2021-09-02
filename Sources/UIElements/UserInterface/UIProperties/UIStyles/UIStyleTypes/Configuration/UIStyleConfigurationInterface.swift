@@ -5,5 +5,7 @@
 
 public protocol UIStyleConfigurationInterface {
     
-    static var current: UIStyleType { get }
+    static var current: UIStyleType {
+        get
+    }
 }

@@ -6,9 +6,12 @@
 public protocol UIComponentSettings:
     UIElementComponentSettings
 where
-    UIElementComponentParamsType: UIComponentParams,
-    UIElementComponentStylePropertiesType: UIComponentStyleProperties,
-    UIElementComponentStylePropertiesOverwrittenType: UIComponentStylePropertiesOverwritten {}
+    UIElementComponentParamsType:
+        UIComponentParams,
+    UIElementComponentStylePropertiesType:
+        UIComponentStyleProperties,
+    UIElementComponentStylePropertiesOverwrittenType:
+        UIComponentStylePropertiesOverwritten {}
 
 extension UIComponentSettings {
         
@@ -16,7 +19,11 @@ extension UIComponentSettings {
         return mainStyleFactory?.uiComponent
     }
     
-    public static func styleFactory(for styleType: UIStyleType) -> UIComponentStyleFactoryInterface? {
-        return mainStyleFactory(for: styleType)?.uiComponent
+    public static func styleFactory(
+        for styleType: UIStyleType
+    ) -> UIComponentStyleFactoryInterface? {
+        return mainStyleFactory(
+            for: styleType
+        )?.uiComponent
     }
 }

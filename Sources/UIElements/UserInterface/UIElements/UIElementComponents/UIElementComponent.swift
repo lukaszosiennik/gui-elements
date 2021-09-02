@@ -13,30 +13,50 @@ public final class UIElementComponentInitialization {
 public protocol UIElementComponent:
     UIElement {
     
-    associatedtype UIElementComponentSettingsType: UIElementComponentSettings
+    associatedtype UIElementComponentSettingsType:
+        UIElementComponentSettings
     
-    var initialization: UIElementComponentInitialization { get }
+    var initialization: UIElementComponentInitialization {
+        get
+    }
     
-    var settings: UIElementComponentSettingsType { get set }
+    var settings: UIElementComponentSettingsType {
+        get
+        set
+    }
     
     init()
-    init(settings: UIElementComponentSettingsType)
+    init(
+        settings: UIElementComponentSettingsType
+    )
     
     // it's here only for ButtonUIComponent purpose
     func setupSettings()
     
     func setupNestedSettings()
     
-    func setupParams(_ params: UIElementComponentSettingsType.UIElementComponentParamsType)
+    func setupParams(
+        _ params: UIElementComponentSettingsType.UIElementComponentParamsType
+    )
     
-    func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration)
-    func setupStyleLookOS(_ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType)
-    func setupStyleLookSystem(_ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType)
+    func setupStyleLookOSConfiguration(
+        _ lookConfiguration: UIElementComponentLookOSConfiguration
+    )
+    func setupStyleLookOS(
+        _ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType
+    )
+    func setupStyleLookSystem(
+        _ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType
+    )
     func setupStyleLookParamsOS()
-    func setupStyleLookParamsSystem(_ lookParams: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookParamsType)
+    func setupStyleLookParamsSystem(
+        _ lookParams: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookParamsType
+    )
     func setupStyleLayoutInitialization()
     func setupStyleLayoutOS()
-    func setupStyleLayoutSystem(_ layoutParams: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLayoutParamsType)
+    func setupStyleLayoutSystem(
+        _ layoutParams: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLayoutParamsType
+    )
 }
 
 extension UIElementComponent {
@@ -61,7 +81,9 @@ extension UIElementComponent {
 extension UIElementComponent {
     
     private func setupParams() {
-        setupParams(settings.params)
+        setupParams(
+            settings.params
+        )
     }
 }
 
@@ -75,13 +97,19 @@ extension UIElementComponent {
     
     private func setupStyleLook() {
         if case let .os(configuration) = settings.styleType {
-            setupStyleLookOSConfiguration(configuration.lookConfiguration)
+            setupStyleLookOSConfiguration(
+                configuration.lookConfiguration
+            )
         } else {
             switch settings.styleProperties.lookType {
             case .os(let look):
-                setupStyleLookOS(look)
+                setupStyleLookOS(
+                    look
+                )
             case .system(let look):
-                setupStyleLookSystem(look)
+                setupStyleLookSystem(
+                    look
+                )
             }
         }
     }
@@ -93,7 +121,9 @@ extension UIElementComponent {
             return
         }
         
-        setupStyleLookParamsSystem(lookParams)
+        setupStyleLookParamsSystem(
+            lookParams
+        )
     }
     
     private func setupStyleLayout() {
@@ -107,6 +137,8 @@ extension UIElementComponent {
             return
         }
         
-        setupStyleLayoutSystem(layoutParams)
+        setupStyleLayoutSystem(
+            layoutParams
+        )
     }
 }

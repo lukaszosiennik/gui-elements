@@ -5,7 +5,8 @@
 
 extension UIComponentScreenStyleProperties
 where
-    UIElementComponentStylePropertiesLookParamsType == EmptyUIComponentScreenStylePropertiesLookParams {
+    UIElementComponentStylePropertiesLookParamsType ==
+        EmptyUIComponentScreenStylePropertiesLookParams {
     
     public init(
         lookType: UIElementComponentStylePropertiesLookType<

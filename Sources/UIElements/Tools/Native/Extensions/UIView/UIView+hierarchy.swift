@@ -8,11 +8,16 @@ import commons
 
 extension CommonsExtension
 where
-    ExtendedType: UIView {
+    ExtendedType:
+        UIView {
     
-    public func addSubview(_ view: UIView) {
+    public func addSubview(
+        _ view: UIView
+    ) {
         view.translatesAutoresizingMaskIntoConstraints = false
         
-        instance.addSubview(view)
+        instance.addSubview(
+            view
+        )
     }
 }

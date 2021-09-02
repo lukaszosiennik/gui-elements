@@ -44,7 +44,10 @@ extension CardUIComponentGroupStylePropertiesSystemLook {
         public let backgroundColor: UIColor
         public let textColor: UIColor?
         
-        public init(backgroundColor: UIColor, textColor: UIColor?) {
+        public init(
+            backgroundColor: UIColor,
+            textColor: UIColor?
+        ) {
             self.backgroundColor = backgroundColor
             self.textColor = textColor
         }
@@ -54,7 +57,9 @@ extension CardUIComponentGroupStylePropertiesSystemLook {
         
         public let backgroundColor: UIColor
         
-        public init(backgroundColor: UIColor) {
+        public init(
+            backgroundColor: UIColor
+        ) {
             self.backgroundColor = backgroundColor
         }
     }

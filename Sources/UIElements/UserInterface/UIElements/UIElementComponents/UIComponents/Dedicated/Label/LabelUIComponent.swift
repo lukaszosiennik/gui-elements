@@ -18,38 +18,56 @@ public final class LabelUIComponent:
     }
     
     public convenience init() {
-        self.init(settings: .default)
+        self.init(
+            settings: .default
+        )
     }
     
-    public init(settings: LabelUIComponentSettings) {
+    public init(
+        settings: LabelUIComponentSettings
+    ) {
         self.settings = settings
-        super.init(frame: .zero)
+        super.init(
+            frame: .zero
+        )
         
         setup()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(
+        coder: NSCoder
+    ) {
+        fatalError(
+            "init(coder:) has not been implemented"
+        )
     }
     
     public func setupNestedSettings() {}
     
-    public func setupParams(_ params: LabelUIComponentParams) {
+    public func setupParams(
+        _ params: LabelUIComponentParams
+    ) {
         text = params.text
     }
 }
 
 extension LabelUIComponent {
     
-    public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
+    public func setupStyleLookOSConfiguration(
+        _ lookConfiguration: UIElementComponentLookOSConfiguration
+    ) {
         setupStyleLookOS()
     }
     
-    public func setupStyleLookOS(_ look: EmptyUIComponentStylePropertiesOSLook) {
+    public func setupStyleLookOS(
+        _ look: EmptyUIComponentStylePropertiesOSLook
+    ) {
         setupStyleLookOS()
     }
     
-    public func setupStyleLookSystem(_ look: LabelUIComponentStylePropertiesSystemLook) {
+    public func setupStyleLookSystem(
+        _ look: LabelUIComponentStylePropertiesSystemLook
+    ) {
         textColor = look.textColor
     }
     
@@ -66,7 +84,9 @@ extension LabelUIComponent {
         numberOfLines = tempLabel.numberOfLines
     }
     
-    public func setupStyleLookParamsSystem(_ lookParams: LabelUIComponentStylePropertiesLookParams) {
+    public func setupStyleLookParamsSystem(
+        _ lookParams: LabelUIComponentStylePropertiesLookParams
+    ) {
         numberOfLines = lookParams.linesNumber
     }
 }
@@ -77,5 +97,7 @@ extension LabelUIComponent {
     
     public func setupStyleLayoutOS() {}
     
-    public func setupStyleLayoutSystem(_ layoutParams: LabelUIComponentStylePropertiesLayoutParams) {}
+    public func setupStyleLayoutSystem(
+        _ layoutParams: LabelUIComponentStylePropertiesLayoutParams
+    ) {}
 }

@@ -6,8 +6,16 @@
 public protocol UIElementComponentStyleFactoryInterface:
     UIElementStyleFactoryInterface {
     
-    var uiComponent: UIComponentStyleFactoryInterface? { get }
-    var uiComponentSet: UIComponentSetStyleFactoryInterface? { get }
-    var uiComponentGroup: UIComponentGroupStyleFactoryInterface? { get }
-    var uiComponentScreen: UIComponentScreenStyleFactoryInterface? { get }
+    var uiComponent: UIComponentStyleFactoryInterface? {
+        get
+    }
+    var uiComponentSet: UIComponentSetStyleFactoryInterface? {
+        get
+    }
+    var uiComponentGroup: UIComponentGroupStyleFactoryInterface? {
+        get
+    }
+    var uiComponentScreen: UIComponentScreenStyleFactoryInterface? {
+        get
+    }
 }

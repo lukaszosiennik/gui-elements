@@ -10,7 +10,9 @@ public struct LabelUIComponentStylePropertiesOverwrittenLook:
     
     public let textColor: UIColor?
     
-    init(textColor: UIColor? = nil) {
+    init(
+        textColor: UIColor? = nil
+    ) {
         self.textColor = textColor
     }
 }

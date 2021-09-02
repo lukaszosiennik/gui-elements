@@ -5,11 +5,16 @@
 
 public protocol InputUIElementComponentParamsActionsInterface
 where
-    Self: UIElementComponentParams {
+    Self:
+        UIElementComponentParams {
     
-    associatedtype ActionsKey: InputUIElementComponentActionsKeyInterface
+    associatedtype ActionsKey:
+        InputUIElementComponentActionsKeyInterface
     
-    typealias Actions = (ActionsKey) -> Void
+    typealias Actions =
+        (ActionsKey) -> Void
     
-    var actions: Actions? { get }
+    var actions: Actions? {
+        get
+    }
 }

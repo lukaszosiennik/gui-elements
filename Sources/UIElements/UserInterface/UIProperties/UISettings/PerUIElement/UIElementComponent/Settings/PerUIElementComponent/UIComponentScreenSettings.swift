@@ -6,9 +6,12 @@
 public protocol UIComponentScreenSettings:
     UIElementComponentSettings
 where
-    UIElementComponentParamsType: UIComponentScreenParams,
-    UIElementComponentStylePropertiesType: UIComponentScreenStyleProperties,
-    UIElementComponentStylePropertiesOverwrittenType == EmptyUIComponentScreenStylePropertiesOverwritten {}
+    UIElementComponentParamsType:
+        UIComponentScreenParams,
+    UIElementComponentStylePropertiesType:
+        UIComponentScreenStyleProperties,
+    UIElementComponentStylePropertiesOverwrittenType ==
+        EmptyUIComponentScreenStylePropertiesOverwritten {}
 
 extension UIComponentScreenSettings {
     
@@ -16,7 +19,11 @@ extension UIComponentScreenSettings {
         return mainStyleFactory?.uiComponentScreen
     }
     
-    public static func styleFactory(for styleType: UIStyleType) -> UIComponentScreenStyleFactoryInterface? {
-        return mainStyleFactory(for: styleType)?.uiComponentScreen
+    public static func styleFactory(
+        for styleType: UIStyleType
+    ) -> UIComponentScreenStyleFactoryInterface? {
+        return mainStyleFactory(
+            for: styleType
+        )?.uiComponentScreen
     }
 }

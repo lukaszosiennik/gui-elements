@@ -5,6 +5,8 @@
 
 public protocol UIElementComponentStylePropertiesLookInterface {
     
-    associatedtype UIElementComponentStylePropertiesOSLookType: UIElementComponentStylePropertiesOSLook
-    associatedtype UIElementComponentStylePropertiesSystemLookType: UIElementComponentStylePropertiesSystemLook
+    associatedtype UIElementComponentStylePropertiesOSLookType:
+        UIElementComponentStylePropertiesOSLook
+    associatedtype UIElementComponentStylePropertiesSystemLookType:
+        UIElementComponentStylePropertiesSystemLook
 }

@@ -5,7 +5,8 @@
 
 extension UIComponentGroupStyleProperties
 where
-    UIElementComponentStylePropertiesLookParamsType == EmptyUIComponentGroupStylePropertiesLookParams {
+    UIElementComponentStylePropertiesLookParamsType ==
+        EmptyUIComponentGroupStylePropertiesLookParams {
     
     public init(
         lookType: UIElementComponentStylePropertiesLookType<

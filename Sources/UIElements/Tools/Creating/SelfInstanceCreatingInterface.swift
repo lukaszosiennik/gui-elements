@@ -3,5 +3,7 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
+import commons
+
 public protocol SelfInstanceCreatingInterface:
     InstanceCreatingInterface {}

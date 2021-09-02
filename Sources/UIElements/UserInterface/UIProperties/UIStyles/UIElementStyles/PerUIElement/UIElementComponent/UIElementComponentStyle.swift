@@ -4,14 +4,17 @@
 //
 
 public struct UIElementComponentStyle<
-    PropertiesType: UIElementComponentStyleProperties
+    PropertiesType:
+        UIElementComponentStyleProperties
 >:
     UIElementStyle {
     
     public let type: UIStyleType
     let properties: PropertiesType
     
-    public init(properties: PropertiesType) {
+    public init(
+        properties: PropertiesType
+    ) {
         self.type = .custom
         self.properties = properties
     }
@@ -44,7 +47,9 @@ extension UIElementComponentStyle:
         )
     }
 
-    static func `default`(styleType: UIStyleType) -> Self {
+    static func `default`(
+        styleType: UIStyleType
+    ) -> Self {
         return .init(
             type: styleType,
             properties: .default(

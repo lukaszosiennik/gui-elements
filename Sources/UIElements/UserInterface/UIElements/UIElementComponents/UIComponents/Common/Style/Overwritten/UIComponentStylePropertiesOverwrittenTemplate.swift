@@ -4,9 +4,12 @@
 //
 
 public struct UIComponentStylePropertiesOverwrittenTemplate<
-    UIComponentStylePropertiesOverwrittenLookType: UIComponentStylePropertiesOverwrittenLook,
-    UIComponentStylePropertiesOverwrittenLookParamsType: UIComponentStylePropertiesOverwrittenLookParams,
-    UIComponentStylePropertiesOverwrittenLayoutParamsType: UIComponentStylePropertiesOverwrittenLayoutParams
+    UIComponentStylePropertiesOverwrittenLookType:
+        UIComponentStylePropertiesOverwrittenLook,
+    UIComponentStylePropertiesOverwrittenLookParamsType:
+        UIComponentStylePropertiesOverwrittenLookParams,
+    UIComponentStylePropertiesOverwrittenLayoutParamsType:
+        UIComponentStylePropertiesOverwrittenLayoutParams
 >:
     UIComponentStylePropertiesOverwritten {
 

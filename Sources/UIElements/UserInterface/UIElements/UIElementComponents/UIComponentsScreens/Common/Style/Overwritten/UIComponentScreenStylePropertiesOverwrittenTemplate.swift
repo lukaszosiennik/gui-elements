@@ -4,9 +4,12 @@
 //
 
 public struct UIComponentScreenStylePropertiesOverwrittenTemplate<
-    UIComponentScreenStylePropertiesOverwrittenLookType: UIComponentScreenStylePropertiesOverwrittenLook,
-    UIComponentScreenStylePropertiesOverwrittenLookParamsType: UIComponentScreenStylePropertiesOverwrittenLookParams,
-    UIComponentScreenStylePropertiesOverwrittenLayoutParamsType: UIComponentScreenStylePropertiesOverwrittenLayoutParams
+    UIComponentScreenStylePropertiesOverwrittenLookType:
+        UIComponentScreenStylePropertiesOverwrittenLook,
+    UIComponentScreenStylePropertiesOverwrittenLookParamsType:
+        UIComponentScreenStylePropertiesOverwrittenLookParams,
+    UIComponentScreenStylePropertiesOverwrittenLayoutParamsType:
+        UIComponentScreenStylePropertiesOverwrittenLayoutParams
 >:
     UIComponentScreenStylePropertiesOverwritten {
 

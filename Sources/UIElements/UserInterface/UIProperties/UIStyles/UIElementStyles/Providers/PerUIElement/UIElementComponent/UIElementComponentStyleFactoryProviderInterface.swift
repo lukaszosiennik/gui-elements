@@ -5,7 +5,11 @@
 
 public protocol UIElementComponentStyleFactoryProviderInterface {
     
-    static var currentFactory: UIElementComponentStyleFactoryInterface? { get }
+    static var currentFactory: UIElementComponentStyleFactoryInterface? {
+        get
+    }
     
-    static func factory(for styleType: UIStyleType) -> UIElementComponentStyleFactoryInterface?
+    static func factory(
+        for styleType: UIStyleType
+    ) -> UIElementComponentStyleFactoryInterface?
 }

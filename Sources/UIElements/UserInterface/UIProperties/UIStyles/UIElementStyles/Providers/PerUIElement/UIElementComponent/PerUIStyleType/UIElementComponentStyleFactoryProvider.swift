@@ -8,7 +8,7 @@ public final class UIElementComponentStyleFactoryProvider:
     
     private let styleFactory: [UIStyleType: UIElementComponentStyleFactoryInterface]
     
-    static private let shared = UIElementComponentStyleFactoryProvider()
+    static private let shared: UIElementComponentStyleFactoryProvider = .init()
     
     private init() {
         let appStyleFactory: AppUIElementComponentStyleFactory = .init(
@@ -25,10 +25,14 @@ public final class UIElementComponentStyleFactoryProvider:
     }
     
     public static var currentFactory: UIElementComponentStyleFactoryInterface? {
-        return factory(for: UIStyleConfiguration.current)
+        return factory(
+            for: UIStyleConfiguration.current
+        )
     }
     
-    public static func factory(for styleType: UIStyleType) -> UIElementComponentStyleFactoryInterface? {
+    public static func factory(
+        for styleType: UIStyleType
+    ) -> UIElementComponentStyleFactoryInterface? {
         return shared.styleFactory[styleType]
     }
 }

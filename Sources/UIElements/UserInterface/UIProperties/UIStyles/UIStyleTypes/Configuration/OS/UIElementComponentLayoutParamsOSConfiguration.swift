@@ -8,7 +8,9 @@ public struct UIElementComponentLayoutParamsOSConfiguration:
     
     let isPreferred: Bool
     
-    public init(isPreferred: Bool) {
+    public init(
+        isPreferred: Bool
+    ) {
         self.isPreferred = isPreferred
     }
 }

@@ -16,7 +16,9 @@ public struct CardUIComponentGroupParams:
         )
     }
     
-    public init(title: String) {
+    public init(
+        title: String
+    ) {
         self.title = title
     }
 }

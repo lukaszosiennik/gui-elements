@@ -18,23 +18,35 @@ public final class CustomButtonUIComponent:
     }
     
     public convenience init() {
-        self.init(settings: .default)
+        self.init(
+            settings: .default
+        )
     }
     
-    public init(settings: ButtonUIComponentSettings) {
+    public init(
+        settings: ButtonUIComponentSettings
+    ) {
         self.settings = settings
-        super.init(frame: .zero)
+        super.init(
+            frame: .zero
+        )
         
         setup()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(
+        coder: NSCoder
+    ) {
+        fatalError(
+            "init(coder:) has not been implemented"
+        )
     }
     
     public func setupNestedSettings() {}
     
-    public func setupParams(_ params: ButtonUIComponentParams) {
+    public func setupParams(
+        _ params: ButtonUIComponentParams
+    ) {
         setupParams(
             params,
             for: self
@@ -44,21 +56,27 @@ public final class CustomButtonUIComponent:
 
 extension CustomButtonUIComponent {
     
-    public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
+    public func setupStyleLookOSConfiguration(
+        _ lookConfiguration: UIElementComponentLookOSConfiguration
+    ) {
         setupStyleLookOSConfiguration(
             lookConfiguration,
             for: self
         )
     }
     
-    public func setupStyleLookOS(_ look: ButtonUIComponentStylePropertiesOSLook) {
+    public func setupStyleLookOS(
+        _ look: ButtonUIComponentStylePropertiesOSLook
+    ) {
         setupStyleLookOS(
             look,
             for: self
         )
     }
     
-    public func setupStyleLookSystem(_ look: ButtonUIComponentStylePropertiesSystemLook) {
+    public func setupStyleLookSystem(
+        _ look: ButtonUIComponentStylePropertiesSystemLook
+    ) {
         setupStyleLookSystem(
             look,
             for: self
@@ -69,10 +87,14 @@ extension CustomButtonUIComponent {
 extension CustomButtonUIComponent {
     
     public func setupStyleLookParamsOS() {
-        setupStyleLookParamsOS(for: self)
+        setupStyleLookParamsOS(
+            for: self
+        )
     }
     
-    public func setupStyleLookParamsSystem(_ lookParams: EmptyUIComponentStylePropertiesLookParams) {
+    public func setupStyleLookParamsSystem(
+        _ lookParams: EmptyUIComponentStylePropertiesLookParams
+    ) {
         setupStyleLookParamsSystem(
             lookParams,
             for: self
@@ -83,14 +105,20 @@ extension CustomButtonUIComponent {
 extension CustomButtonUIComponent {
     
     public func setupStyleLayoutInitialization() {
-        setupStyleLayoutInitialization(for: self)
+        setupStyleLayoutInitialization(
+            for: self
+        )
     }
     
     public func setupStyleLayoutOS() {
-        setupStyleLayoutOS(for: self)
+        setupStyleLayoutOS(
+            for: self
+        )
     }
     
-    public func setupStyleLayoutSystem(_ layoutParams: ButtonUIComponentStylePropertiesLayoutParams) {
+    public func setupStyleLayoutSystem(
+        _ layoutParams: ButtonUIComponentStylePropertiesLayoutParams
+    ) {
         setupStyleLayoutSystem(
             layoutParams,
             for: self

@@ -6,4 +6,5 @@
 public protocol UIComponentStylePropertiesSystemLook:
     UIElementComponentStylePropertiesSystemLook
 where
-    UIElementComponentStylePropertiesOverwrittenLookType: UIComponentStylePropertiesOverwrittenLook {}
+    UIElementComponentStylePropertiesOverwrittenLookType:
+        UIComponentStylePropertiesOverwrittenLook {}

@@ -20,18 +20,28 @@ public final class NavigationMenuUIOptionComponentSet:
     }
     
     public convenience init() {
-        self.init(settings: .default)
+        self.init(
+            settings: .default
+        )
     }
     
-    public init(settings: NavigationMenuOptionUIComponentSetSettings) {
+    public init(
+        settings: NavigationMenuOptionUIComponentSetSettings
+    ) {
         self.settings = settings
-        super.init(frame: .zero)
+        super.init(
+            frame: .zero
+        )
         
         setup()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(
+        coder: NSCoder
+    ) {
+        fatalError(
+            "init(coder:) has not been implemented"
+        )
     }
     
     public func setupNestedSettings() {
@@ -44,20 +54,28 @@ public final class NavigationMenuUIOptionComponentSet:
         )
     }
     
-    public func setupParams(_ params: NavigationMenuOptionUIComponentSetParams) {}    
+    public func setupParams(
+        _ params: NavigationMenuOptionUIComponentSetParams
+    ) {}
 }
 
 extension NavigationMenuUIOptionComponentSet {
     
-    public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
+    public func setupStyleLookOSConfiguration(
+        _ lookConfiguration: UIElementComponentLookOSConfiguration
+    ) {
         setupStyleLookOS()
     }
     
-    public func setupStyleLookOS(_ look: EmptyUIComponentSetStylePropertiesOSLook) {
+    public func setupStyleLookOS(
+        _ look: EmptyUIComponentSetStylePropertiesOSLook
+    ) {
         setupStyleLookOS()
     }
     
-    public func setupStyleLookSystem(_ look: NavigationMenuOptionUIComponentSetStylePropertiesSystemLook) {
+    public func setupStyleLookSystem(
+        _ look: NavigationMenuOptionUIComponentSetStylePropertiesSystemLook
+    ) {
         backgroundColor = look.backgroundColor
         layer.borderColor = look.borderColor.cgColor
         layer.borderWidth = look.borderWidth
@@ -75,25 +93,43 @@ extension NavigationMenuUIOptionComponentSet {
     
     public func setupStyleLookParamsOS() {}
     
-    public func setupStyleLookParamsSystem(_ lookParams: EmptyUIComponentSetStylePropertiesLookParams) {}
+    public func setupStyleLookParamsSystem(
+        _ lookParams: EmptyUIComponentSetStylePropertiesLookParams
+    ) {}
 }
 
 extension NavigationMenuUIOptionComponentSet {
     
     public func setupStyleLayoutInitialization() {
-        uie.addSubview(optionButtonUI)
+        uie.addSubview(
+            optionButtonUI
+        )
         
         NSLayoutConstraint.activate([
-            optionButtonUI.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
-            optionButtonUI.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
-            optionButtonUI.centerXAnchor.constraint(equalTo: centerXAnchor),
-            optionButtonUI.topAnchor.constraint(greaterThanOrEqualTo: topAnchor),
-            optionButtonUI.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
-            optionButtonUI.centerYAnchor.constraint(equalTo: centerYAnchor),
+            optionButtonUI.leadingAnchor.constraint(
+                greaterThanOrEqualTo: leadingAnchor
+            ),
+            optionButtonUI.trailingAnchor.constraint(
+                lessThanOrEqualTo: trailingAnchor
+            ),
+            optionButtonUI.centerXAnchor.constraint(
+                equalTo: centerXAnchor
+            ),
+            optionButtonUI.topAnchor.constraint(
+                greaterThanOrEqualTo: topAnchor
+            ),
+            optionButtonUI.bottomAnchor.constraint(
+                lessThanOrEqualTo: bottomAnchor
+            ),
+            optionButtonUI.centerYAnchor.constraint(
+                equalTo: centerYAnchor
+            ),
         ])
     }
     
     public func setupStyleLayoutOS() {}
     
-    public func setupStyleLayoutSystem(_ layoutParams: NavigationMenuOptionUIComponentSetStylePropertiesLayoutParams) {}
+    public func setupStyleLayoutSystem(
+        _ layoutParams: NavigationMenuOptionUIComponentSetStylePropertiesLayoutParams
+    ) {}
 }

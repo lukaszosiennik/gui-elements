@@ -6,6 +6,9 @@
 public protocol UIComponentScreenStylePropertiesOverwritten:
     UIElementComponentStylePropertiesOverwritten
 where
-    UIElementComponentStylePropertiesOverwrittenLookType: UIComponentScreenStylePropertiesOverwrittenLook,
-    UIElementComponentStylePropertiesOverwrittenLookParamsType: UIComponentScreenStylePropertiesOverwrittenLookParams,
-    UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIComponentScreenStylePropertiesOverwrittenLayoutParams {}
+    UIElementComponentStylePropertiesOverwrittenLookType:
+        UIComponentScreenStylePropertiesOverwrittenLook,
+    UIElementComponentStylePropertiesOverwrittenLookParamsType:
+        UIComponentScreenStylePropertiesOverwrittenLookParams,
+    UIElementComponentStylePropertiesOverwrittenLayoutParamsType:
+        UIComponentScreenStylePropertiesOverwrittenLayoutParams {}

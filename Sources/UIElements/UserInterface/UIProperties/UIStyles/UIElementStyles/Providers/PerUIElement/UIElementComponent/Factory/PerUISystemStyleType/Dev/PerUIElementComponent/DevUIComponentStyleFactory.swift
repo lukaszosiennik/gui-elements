@@ -7,10 +7,14 @@ public final class DevUIComponentStyleFactory:
     UIElementComponentTypeStyleFactory,
     UIComponentStyleFactoryInterface {
     
-    private typealias ColorPalette = DevUIColorPalette.UIElementComponent.UIComponent
-    private typealias ConstantPalette = DevUIElementComponentConstantPalette.UIElementComponent.UIComponent
+    private typealias ColorPalette =
+        DevUIColorPalette.UIElementComponent.UIComponent
+    private typealias ConstantPalette =
+        DevUIElementComponentConstantPalette.UIElementComponent.UIComponent
     
-    public func button() -> UIElementComponentStyle<ButtonUIComponentStyleProperties> {
+    public func button() -> UIElementComponentStyle<
+        ButtonUIComponentStyleProperties
+    > {
         return .init(
             type: styleType,
             properties: .init(
@@ -23,7 +27,9 @@ public final class DevUIComponentStyleFactory:
         )
     }
     
-    public func label() -> UIElementComponentStyle<LabelUIComponentStyleProperties> {
+    public func label() -> UIElementComponentStyle<
+        LabelUIComponentStyleProperties
+    > {
         return .init(
             type: styleType,
             properties: .init(
@@ -36,7 +42,9 @@ public final class DevUIComponentStyleFactory:
         )
     }
     
-    public func textArea() -> UIElementComponentStyle<TextAreaUIComponentStyleProperties> {
+    public func textArea() -> UIElementComponentStyle<
+        TextAreaUIComponentStyleProperties
+    > {
         return .init(
             type: styleType,
             properties: .init(
@@ -46,7 +54,9 @@ public final class DevUIComponentStyleFactory:
         )
     }
     
-    public func textField() -> UIElementComponentStyle<TextFieldUIComponentStyleProperties> {
+    public func textField() -> UIElementComponentStyle<
+        TextFieldUIComponentStyleProperties
+    > {
         return .init(
             type: styleType,
             properties: .init(
@@ -58,7 +68,9 @@ public final class DevUIComponentStyleFactory:
         )
     }
     
-    public func placeholder() -> UIElementComponentStyle<PlaceholderUIComponentStyleProperties> {
+    public func placeholder() -> UIElementComponentStyle<
+        PlaceholderUIComponentStyleProperties
+    > {
         return .init(
             type: styleType,
             properties: .init(

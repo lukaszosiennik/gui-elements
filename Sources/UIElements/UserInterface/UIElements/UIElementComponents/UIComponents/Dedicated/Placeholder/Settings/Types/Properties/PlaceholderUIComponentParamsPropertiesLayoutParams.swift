@@ -10,7 +10,9 @@ public struct PlaceholderUIComponentParamsPropertiesLayoutParams:
     
     public let height: CGFloat
     
-    public init(height: CGFloat) {
+    public init(
+        height: CGFloat
+    ) {
         self.height = height
     }
 }

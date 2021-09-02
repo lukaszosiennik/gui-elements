@@ -8,7 +8,9 @@ public struct LabelUIComponentStylePropertiesOverwrittenLookParams:
     
     public let linesNumber: Int?
     
-    init(linesNumber: Int? = nil) {
+    init(
+        linesNumber: Int? = nil
+    ) {
         self.linesNumber = linesNumber
     }
 }

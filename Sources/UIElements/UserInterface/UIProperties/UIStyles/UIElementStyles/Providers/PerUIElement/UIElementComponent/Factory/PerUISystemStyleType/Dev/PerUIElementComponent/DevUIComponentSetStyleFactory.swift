@@ -7,10 +7,14 @@ public final class DevUIComponentSetStyleFactory:
     UIElementComponentTypeStyleFactory,
     UIComponentSetStyleFactoryInterface {
     
-    private typealias ColorPalette = DevUIColorPalette.UIElementComponent.UIComponentSet
-    private typealias ConstantPalette = DevUIElementComponentConstantPalette.UIElementComponent.UIComponentSet
+    private typealias ColorPalette =
+        DevUIColorPalette.UIElementComponent.UIComponentSet
+    private typealias ConstantPalette =
+        DevUIElementComponentConstantPalette.UIElementComponent.UIComponentSet
     
-    public func navigationMenuOption() -> UIElementComponentStyle<NavigationMenuOptionUIComponentSetStyleProperties> {
+    public func navigationMenuOption() -> UIElementComponentStyle<
+        NavigationMenuOptionUIComponentSetStyleProperties
+    > {
         return .init(
             type: styleType,
             properties: .init(

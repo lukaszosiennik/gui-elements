@@ -10,17 +10,20 @@ extension UIColor:
     UIElementsExtendedTypeInterface {}
 extension CommonsExtension
 where
-    ExtendedType: UIColor {}
-
-extension UIColor {
+    ExtendedType:
+        UIColor {
     
-    public convenience init?(hex: String) {
-        guard hex.hasPrefix("#")
+    public static func `init`(
+        hex: String
+    ) -> UIColor? {
+        guard hex.hasPrefix(
+            "#"
+        )
         else {
             return nil
         }
         
-        let hexColor: String = .init(
+        let hexValue: String = .init(
             hex[
                 hex.index(
                     hex.startIndex,
@@ -28,25 +31,37 @@ extension UIColor {
                 )...
             ]
         )
+        let hexColor = hexValue.count == 6
+            ? hexValue + "ff"
+            : hexValue
         guard hexColor.count == 8
         else {
             return nil
         }
 
-        let scanner: Scanner = .init(
-            string: hexColor
-        )
         var hexNumber: UInt64 = 0
-        guard scanner.scanHexInt64(&hexNumber)
+        guard Scanner(
+            string: hexColor
+        ).scanHexInt64(
+            &hexNumber
+        )
         else {
             return nil
         }
         
-        self.init(
-            red: CGFloat((hexNumber & 0xff000000) >> 24) / 255,
-            green: CGFloat((hexNumber & 0x00ff0000) >> 16) / 255,
-            blue: CGFloat((hexNumber & 0x0000ff00) >> 8) / 255,
-            alpha: CGFloat(hexNumber & 0x000000ff) / 255
+        return .init(
+            red: CGFloat(
+                (hexNumber & 0xff000000) >> 24
+            ) / 255,
+            green: CGFloat(
+                (hexNumber & 0x00ff0000) >> 16
+            ) / 255,
+            blue: CGFloat(
+                (hexNumber & 0x0000ff00) >> 8
+            ) / 255,
+            alpha: CGFloat(
+                hexNumber & 0x000000ff
+            ) / 255
         )
     }
 }

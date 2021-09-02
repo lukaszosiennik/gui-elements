@@ -16,7 +16,9 @@ public struct InformationUIComponentScreenParams:
         )
     }
     
-    public init(title: String) {
+    public init(
+        title: String
+    ) {
         self.title = title
     }
 }

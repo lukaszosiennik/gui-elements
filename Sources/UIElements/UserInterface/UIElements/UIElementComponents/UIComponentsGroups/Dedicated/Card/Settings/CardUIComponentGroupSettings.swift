@@ -4,14 +4,18 @@
 //
 
 public struct CardUIComponentGroupSettings<
-    BodyUIElementComponentSettingsType: UIElementComponentSettings
+    BodyUIElementComponentSettingsType:
+        UIElementComponentSettings
 >:
     UIComponentGroupSettings {
 
-    public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentGroupStylePropertiesOverwritten
+    public typealias UIElementComponentStylePropertiesOverwrittenType =
+        EmptyUIComponentGroupStylePropertiesOverwritten
     
     public let params: CardUIComponentGroupParams
-    public var style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>
+    public var style: UIElementComponentStyle<
+        CardUIComponentGroupStyleProperties
+    >
 
     public let bodySettings: BodyUIElementComponentSettingsType
     
@@ -30,7 +34,9 @@ public struct CardUIComponentGroupSettings<
     
     public init(
         params: CardUIComponentGroupParams,
-        style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>
+        style: UIElementComponentStyle<
+            CardUIComponentGroupStyleProperties
+        >
     ) {
         self.init(
             params: params,
@@ -49,7 +55,9 @@ public struct CardUIComponentGroupSettings<
     ) {
         self.init(
             params: params,
-            style: Self.style(for: styleType),
+            style: Self.style(
+                for: styleType
+            ),
             bodySettings: .init(
                 params: bodySettingsParams,
                 styleType: styleType
@@ -59,7 +67,9 @@ public struct CardUIComponentGroupSettings<
     
     private init(
         params: CardUIComponentGroupParams,
-        style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>,
+        style: UIElementComponentStyle<
+            CardUIComponentGroupStyleProperties
+        >,
         bodySettings: BodyUIElementComponentSettingsType
     ) {
         self.params = params
@@ -67,11 +77,19 @@ public struct CardUIComponentGroupSettings<
         self.bodySettings = bodySettings
     }
     
-    public static var style: UIElementComponentStyle<CardUIComponentGroupStyleProperties>? {
+    public static var style: UIElementComponentStyle<
+        CardUIComponentGroupStyleProperties
+    >? {
         return styleFactory?.card()
     }
     
-    public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<CardUIComponentGroupStyleProperties>? {
-        return styleFactory(for: styleType)?.card()
+    public static func style(
+        for styleType: UIStyleType
+    ) -> UIElementComponentStyle<
+        CardUIComponentGroupStyleProperties
+    >? {
+        return styleFactory(
+            for: styleType
+        )?.card()
     }
 }

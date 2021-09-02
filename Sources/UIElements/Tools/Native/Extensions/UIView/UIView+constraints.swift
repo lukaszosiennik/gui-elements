@@ -8,26 +8,39 @@ import commons
 
 extension CommonsExtension
 where
-    ExtendedType: UIView {
+    ExtendedType:
+        UIView {
 
-    public func isConstraintExists(with identifier: String) -> Bool {
-        return constraint(with: identifier) != nil
+    public func isConstraintExists(
+        with identifier: String
+    ) -> Bool {
+        return constraint(
+            with: identifier
+        ) != nil
     }
     
-    public func constraint(with identifier: String) -> NSLayoutConstraint? {
+    public func constraint(
+        with identifier: String
+    ) -> NSLayoutConstraint? {
         return instance.constraints.first {
             $0.identifier == identifier
         }
     }
     
     @discardableResult
-    public func removeConstraintIfExists(with identifier: String) -> Bool {
-        guard let constraint = constraint(with: identifier)
+    public func removeConstraintIfExists(
+        with identifier: String
+    ) -> Bool {
+        guard let constraint = constraint(
+            with: identifier
+        )
         else {
             return false
         }
         
-        instance.removeConstraint(constraint)
+        instance.removeConstraint(
+            constraint
+        )
         
         return true
     }

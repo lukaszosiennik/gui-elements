@@ -13,12 +13,22 @@ public final class AppUIElementComponentStyleFactory:
     public var uiComponentGroup: UIComponentGroupStyleFactoryInterface?
     public var uiComponentScreen: UIComponentScreenStyleFactoryInterface?
     
-    init(styleType: UIStyleType) {
+    init(
+        styleType: UIStyleType
+    ) {
         self.styleType = styleType
         
-        self.uiComponent = AppUIComponentStyleFactory(owner: self)
-        self.uiComponentSet = AppUIComponentSetStyleFactory(owner: self)
-        self.uiComponentGroup = AppUIComponentGroupStyleFactory(owner: self)
-        self.uiComponentScreen = AppUIComponentScreenStyleFactory(owner: self)
+        self.uiComponent = AppUIComponentStyleFactory(
+            owner: self
+        )
+        self.uiComponentSet = AppUIComponentSetStyleFactory(
+            owner: self
+        )
+        self.uiComponentGroup = AppUIComponentGroupStyleFactory(
+            owner: self
+        )
+        self.uiComponentScreen = AppUIComponentScreenStyleFactory(
+            owner: self
+        )
     }
 }

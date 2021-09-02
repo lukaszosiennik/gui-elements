@@ -11,7 +11,9 @@ public final class NavigationMenuUIComponentScreen<
     UIView,
     UIComponentScreen {
     
-    private let navigationMenuUI: NavigationMenuUIComponentGroup<OptionKey> = .init()
+    private let navigationMenuUI: NavigationMenuUIComponentGroup<
+        OptionKey
+    > = .init()
     
     private let container: UIView = .init()
     
@@ -20,25 +22,39 @@ public final class NavigationMenuUIComponentScreen<
     
     public let initialization: UIElementComponentInitialization = .init()
     
-    public var settings: NavigationMenuUIComponentScreenSettings<OptionKey> {
+    public var settings: NavigationMenuUIComponentScreenSettings<
+        OptionKey
+    > {
         didSet {
             setupSettings()
         }
     }
     
     public convenience init() {
-        self.init(settings: .default)
+        self.init(
+            settings: .default
+        )
     }
     
-    public init(settings: NavigationMenuUIComponentScreenSettings<OptionKey>) {
+    public init(
+        settings: NavigationMenuUIComponentScreenSettings<
+            OptionKey
+        >
+    ) {
         self.settings = settings
-        super.init(frame: .zero)
+        super.init(
+            frame: .zero
+        )
 
         setup()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(
+        coder: NSCoder
+    ) {
+        fatalError(
+            "init(coder:) has not been implemented"
+        )
     }
     
     public func setupNestedSettings() {
@@ -52,7 +68,11 @@ public final class NavigationMenuUIComponentScreen<
         )
     }
     
-    public func setupParams(_ params: NavigationMenuUIComponentScreenParams<OptionKey>) {}
+    public func setupParams(
+        _ params: NavigationMenuUIComponentScreenParams<
+            OptionKey
+        >
+    ) {}
 }
 
 extension NavigationMenuUIComponentScreen {
@@ -61,11 +81,15 @@ extension NavigationMenuUIComponentScreen {
         setupStyleLookOS()
     }
     
-    public func setupStyleLookOS(_ look: EmptyUIComponentScreenStylePropertiesOSLook) {
+    public func setupStyleLookOS(
+        _ look: EmptyUIComponentScreenStylePropertiesOSLook
+    ) {
         setupStyleLookOS()
     }
     
-    public func setupStyleLookSystem(_ look: NavigationMenuUIComponentScreenStylePropertiesSystemLook) {
+    public func setupStyleLookSystem(
+        _ look: NavigationMenuUIComponentScreenStylePropertiesSystemLook
+    ) {
         backgroundColor = look.backgroundColor
     }
     
@@ -79,41 +103,71 @@ extension NavigationMenuUIComponentScreen {
     
     public func setupStyleLookParamsOS() {}
     
-    public func setupStyleLookParamsSystem(_ lookParams: EmptyUIComponentScreenStylePropertiesLookParams) {}
+    public func setupStyleLookParamsSystem(
+        _ lookParams: EmptyUIComponentScreenStylePropertiesLookParams
+    ) {}
 }
 
 extension NavigationMenuUIComponentScreen {
     
     public func setupStyleLayoutInitialization() {
-        uie.addSubview(container)
-        container.uie.addSubview(navigationMenuUI)
+        uie.addSubview(
+            container
+        )
+        container.uie.addSubview(
+            navigationMenuUI
+        )
         
-        let leadingSpaceConstraint = container.leadingAnchor.constraint(equalTo: leadingAnchor)
+        let leadingSpaceConstraint = container.leadingAnchor.constraint(
+            equalTo: leadingAnchor
+        )
         leadingSpaceConstraint.identifier = leadingSpaceConstraintID
-        let trailingSpaceConstraint = container.trailingAnchor.constraint(equalTo: trailingAnchor)
+        let trailingSpaceConstraint = container.trailingAnchor.constraint(
+            equalTo: trailingAnchor
+        )
         trailingSpaceConstraint.identifier = trailingSpaceConstraintID
         
         NSLayoutConstraint.activate([
             leadingSpaceConstraint,
             trailingSpaceConstraint,
-            container.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            container.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            container.topAnchor.constraint(
+                equalTo: safeAreaLayoutGuide.topAnchor
+            ),
+            container.bottomAnchor.constraint(
+                equalTo: safeAreaLayoutGuide.bottomAnchor
+            ),
         ])
         
         NSLayoutConstraint.activate([
-            navigationMenuUI.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-            navigationMenuUI.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-            navigationMenuUI.centerYAnchor.constraint(equalTo: container.centerYAnchor),
+            navigationMenuUI.leadingAnchor.constraint(
+                equalTo: container.leadingAnchor
+            ),
+            navigationMenuUI.trailingAnchor.constraint(
+                equalTo: container.trailingAnchor
+            ),
+            navigationMenuUI.centerYAnchor.constraint(
+                equalTo: container.centerYAnchor
+            ),
         ])
     }
     
     public func setupStyleLayoutOS() {
-        uie.constraint(with: leadingSpaceConstraintID)?.constant = 0
-        uie.constraint(with: trailingSpaceConstraintID)?.constant = 0
+        uie.constraint(
+            with: leadingSpaceConstraintID
+        )?.constant = 0
+        uie.constraint(
+            with: trailingSpaceConstraintID
+        )?.constant = 0
     }
     
-    public func setupStyleLayoutSystem(_ layoutParams: NavigationMenuUIComponentScreenStylePropertiesLayoutParams) {
-        uie.constraint(with: leadingSpaceConstraintID)?.constant = layoutParams.leftMargin
-        uie.constraint(with: trailingSpaceConstraintID)?.constant = -layoutParams.rightMargin
+    public func setupStyleLayoutSystem(
+        _ layoutParams: NavigationMenuUIComponentScreenStylePropertiesLayoutParams
+    ) {
+        uie.constraint(
+            with: leadingSpaceConstraintID
+        )?.constant = layoutParams.leftMargin
+        uie.constraint(
+            with: trailingSpaceConstraintID
+        )?.constant = -layoutParams.rightMargin
     }
 }

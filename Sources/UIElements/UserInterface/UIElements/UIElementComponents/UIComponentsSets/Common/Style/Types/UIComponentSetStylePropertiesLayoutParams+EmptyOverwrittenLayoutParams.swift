@@ -5,7 +5,8 @@
 
 extension UIComponentSetStylePropertiesLayoutParams
 where
-    UIElementComponentStylePropertiesOverwrittenLayoutParamsType == EmptyUIComponentSetStylePropertiesOverwrittenLayoutParams {
+    UIElementComponentStylePropertiesOverwrittenLayoutParamsType ==
+        EmptyUIComponentSetStylePropertiesOverwrittenLayoutParams {
     
     public init?(
         layoutParams: Self?,

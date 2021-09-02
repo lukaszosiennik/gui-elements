@@ -4,9 +4,12 @@
 //
 
 public struct UIComponentGroupStylePropertiesTemplate<
-    UIElementComponentStylePropertiesLookInterfaceType: UIComponentGroupStylePropertiesLookInterface,
-    UIComponentGroupStylePropertiesLookParamsType: UIComponentGroupStylePropertiesLookParams,
-    UIComponentGroupStylePropertiesLayoutParamsType: UIComponentGroupStylePropertiesLayoutParams
+    UIElementComponentStylePropertiesLookInterfaceType:
+        UIComponentGroupStylePropertiesLookInterface,
+    UIComponentGroupStylePropertiesLookParamsType:
+        UIComponentGroupStylePropertiesLookParams,
+    UIComponentGroupStylePropertiesLayoutParamsType:
+        UIComponentGroupStylePropertiesLayoutParams
 >:
     UIComponentGroupStyleProperties {
 

@@ -10,7 +10,9 @@ public struct NavigationMenuUIComponentScreenStylePropertiesSystemLook:
     
     public let backgroundColor: UIColor
     
-    public init(backgroundColor: UIColor) {
+    public init(
+        backgroundColor: UIColor
+    ) {
         self.backgroundColor = backgroundColor
     }
 }

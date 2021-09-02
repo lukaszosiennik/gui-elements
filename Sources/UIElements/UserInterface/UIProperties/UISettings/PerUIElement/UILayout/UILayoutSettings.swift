@@ -7,15 +7,31 @@ public protocol UILayoutSettings:
     UIElementSettings,
     UIPropertyDefaultValueInterface {
     
-    associatedtype UILayoutStylePropertiesType: UILayoutStyleProperties
+    associatedtype UILayoutStylePropertiesType:
+        UILayoutStyleProperties
     
-    var stylePack: UILayoutStylePack<UILayoutStylePropertiesType> { get set }
+    var stylePack: UILayoutStylePack<
+        UILayoutStylePropertiesType
+    > {
+        get
+        set
+    }
     
     init()
-    init(styleType: UIStyleType)
-    init(stylePack: UILayoutStylePack<UILayoutStylePropertiesType>)
+    init(
+        styleType: UIStyleType
+    )
+    init(
+        stylePack: UILayoutStylePack<
+            UILayoutStylePropertiesType
+        >
+    )
     
-    static func stylePack(for styleType: UIStyleType) -> UILayoutStylePack<UILayoutStylePropertiesType>
+    static func stylePack(
+        for styleType: UIStyleType
+    ) -> UILayoutStylePack<
+        UILayoutStylePropertiesType
+    >
 }
 
 extension UILayoutSettings {
@@ -25,7 +41,9 @@ extension UILayoutSettings {
             return stylePack.factory?.styleType ?? stylePack.style.type
         }
         set {
-            stylePack = Self.stylePack(for: newValue)
+            stylePack = Self.stylePack(
+                for: newValue
+            )
         }
     }
 }

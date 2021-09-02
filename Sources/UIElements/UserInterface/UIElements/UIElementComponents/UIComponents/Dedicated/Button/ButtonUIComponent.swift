@@ -22,18 +22,28 @@ public final class ButtonUIComponent:
     }
     
     public convenience init() {
-        self.init(settings: .default)
+        self.init(
+            settings: .default
+        )
     }
     
-    public init(settings: ButtonUIComponentSettings) {
+    public init(
+        settings: ButtonUIComponentSettings
+    ) {
         self.settings = settings
-        super.init(frame: .zero)
+        super.init(
+            frame: .zero
+        )
         
         setup()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(
+        coder: NSCoder
+    ) {
+        fatalError(
+            "init(coder:) has not been implemented"
+        )
     }
     
     public func setupSettings() {
@@ -52,12 +62,16 @@ public final class ButtonUIComponent:
     public func setupNestedSettings() {}
     
     public func setupParams() {
-        setupParams(settings.params)
+        setupParams(
+            settings.params
+        )
         
         setupActions()
     }
     
-    public func setupParams(_ params: ButtonUIComponentParams) {
+    public func setupParams(
+        _ params: ButtonUIComponentParams
+    ) {
         setupParams(
             params,
             for: button
@@ -67,7 +81,9 @@ public final class ButtonUIComponent:
     private func setupActions() {
         button.addTarget(
             self,
-            action: #selector(defaultAction),
+            action: #selector(
+                defaultAction
+            ),
             for: .touchUpInside
         )
     }
@@ -79,21 +95,27 @@ public final class ButtonUIComponent:
 
 extension ButtonUIComponent {
     
-    public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {
+    public func setupStyleLookOSConfiguration(
+        _ lookConfiguration: UIElementComponentLookOSConfiguration
+    ) {
         setupStyleLookOSConfiguration(
             lookConfiguration,
             for: button
         )
     }
     
-    public func setupStyleLookOS(_ look: ButtonUIComponentStylePropertiesOSLook) {
+    public func setupStyleLookOS(
+        _ look: ButtonUIComponentStylePropertiesOSLook
+    ) {
         setupStyleLookOS(
             look,
             for: button
         )
     }
     
-    public func setupStyleLookSystem(_ look: ButtonUIComponentStylePropertiesSystemLook) {
+    public func setupStyleLookSystem(
+        _ look: ButtonUIComponentStylePropertiesSystemLook
+    ) {
         setupStyleLookSystem(
             look,
             for: button
@@ -131,10 +153,14 @@ extension ButtonUIComponent {
 extension ButtonUIComponent {
     
     public func setupStyleLookParamsOS() {
-        setupStyleLookParamsOS(for: button)
+        setupStyleLookParamsOS(
+            for: button
+        )
     }
     
-    public func setupStyleLookParamsSystem(_ lookParams: EmptyUIComponentStylePropertiesLookParams) {
+    public func setupStyleLookParamsSystem(
+        _ lookParams: EmptyUIComponentStylePropertiesLookParams
+    ) {
         setupStyleLookParamsSystem(
             lookParams,
             for: button
@@ -145,16 +171,22 @@ extension ButtonUIComponent {
 extension ButtonUIComponent {
     
     public func setupStyleLayoutInitialization() {
-        setupStyleLayoutInitialization(for: button)
+        setupStyleLayoutInitialization(
+            for: button
+        )
     }
     
     public func setupStyleLayoutOS() {
         setupStyleLayout()
         
-        setupStyleLayoutOS(for: button)
+        setupStyleLayoutOS(
+            for: button
+        )
     }
     
-    public func setupStyleLayoutSystem(_ layoutParams: ButtonUIComponentStylePropertiesLayoutParams) {
+    public func setupStyleLayoutSystem(
+        _ layoutParams: ButtonUIComponentStylePropertiesLayoutParams
+    ) {
         setupStyleLayout()
         
         setupStyleLayoutSystem(
@@ -167,13 +199,23 @@ extension ButtonUIComponent {
         subviews.forEach { subview in
             subview.removeFromSuperview()
         }
-        uie.addSubview(button)
+        uie.addSubview(
+            button
+        )
         
         NSLayoutConstraint.activate([
-            button.leadingAnchor.constraint(equalTo: leadingAnchor),
-            button.trailingAnchor.constraint(equalTo: trailingAnchor),
-            button.topAnchor.constraint(equalTo: topAnchor),
-            button.bottomAnchor.constraint(equalTo: bottomAnchor),
+            button.leadingAnchor.constraint(
+                equalTo: leadingAnchor
+            ),
+            button.trailingAnchor.constraint(
+                equalTo: trailingAnchor
+            ),
+            button.topAnchor.constraint(
+                equalTo: topAnchor
+            ),
+            button.bottomAnchor.constraint(
+                equalTo: bottomAnchor
+            ),
         ])
     }
 }

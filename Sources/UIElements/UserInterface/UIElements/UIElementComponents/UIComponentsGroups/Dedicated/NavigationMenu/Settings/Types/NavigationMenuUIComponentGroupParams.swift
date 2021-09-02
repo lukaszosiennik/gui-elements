@@ -4,12 +4,14 @@
 //
 
 public struct NavigationMenuUIComponentGroupParams<
-    OptionKey: InputUIElementComponentActionsKeyInterface
+    OptionKey:
+        InputUIElementComponentActionsKeyInterface
 >:
     UIComponentGroupParams,
     InputUIElementComponentParamsActionsInterface {
     
-    public typealias ActionsKey = OptionKey
+    public typealias ActionsKey =
+        OptionKey
     
     public let title: String
     public let options: KeyValuePairs<

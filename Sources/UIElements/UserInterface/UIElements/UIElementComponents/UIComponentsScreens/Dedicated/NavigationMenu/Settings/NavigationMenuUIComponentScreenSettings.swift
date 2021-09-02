@@ -4,26 +4,43 @@
 //
 
 public struct NavigationMenuUIComponentScreenSettings<
-    OptionKey: InputUIElementComponentActionsKeyInterface
+    OptionKey:
+        InputUIElementComponentActionsKeyInterface
 >:
     UIComponentScreenSettings {
     
-    public let params: NavigationMenuUIComponentScreenParams<OptionKey>
-    public var style: UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>
+    public let params: NavigationMenuUIComponentScreenParams<
+        OptionKey
+    >
+    public var style: UIElementComponentStyle<
+        NavigationMenuUIComponentScreenStyleProperties
+    >
     
     public init(
-        params: NavigationMenuUIComponentScreenParams<OptionKey>,
-        style: UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>
+        params: NavigationMenuUIComponentScreenParams<
+            OptionKey
+        >,
+        style: UIElementComponentStyle<
+            NavigationMenuUIComponentScreenStyleProperties
+        >
     ) {
         self.params = params
         self.style = style
     }
     
-    public static var style: UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>? {
+    public static var style: UIElementComponentStyle<
+        NavigationMenuUIComponentScreenStyleProperties
+    >? {
         return styleFactory?.navigationMenu()
     }
     
-    public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<NavigationMenuUIComponentScreenStyleProperties>? {
-        return styleFactory(for: styleType)?.navigationMenu()
+    public static func style(
+        for styleType: UIStyleType
+    ) -> UIElementComponentStyle<
+        NavigationMenuUIComponentScreenStyleProperties
+    >? {
+        return styleFactory(
+            for: styleType
+        )?.navigationMenu()
     }
 }

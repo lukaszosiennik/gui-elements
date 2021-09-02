@@ -6,5 +6,7 @@
 public protocol UIElementComponentTypeStyleFactoryInterface:
     UIElementStyleFactoryInterface {
     
-    init(owner: UIElementStyleFactoryInterface)
+    init(
+        owner: UIElementStyleFactoryInterface
+    )
 }

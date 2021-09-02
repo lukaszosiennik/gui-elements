@@ -6,5 +6,7 @@
 public protocol UIComponentGroupStylePropertiesLayoutParams:
     UIElementComponentStylePropertiesLayoutParams
 where
-    UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIComponentGroupStylePropertiesOverwrittenLayoutParams,
-    DefaultConstantPalette == DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup {}
+    UIElementComponentStylePropertiesOverwrittenLayoutParamsType:
+        UIComponentGroupStylePropertiesOverwrittenLayoutParams,
+    DefaultConstantPalette ==
+        DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup {}

@@ -18,39 +18,60 @@ public final class TextAreaUIComponent:
     }
     
     public convenience init() {
-        self.init(settings: .default)
+        self.init(
+            settings: .default
+        )
     }
     
-    public init(settings: TextAreaUIComponentSettings) {
+    public init(
+        settings: TextAreaUIComponentSettings
+    ) {
         self.settings = settings
-        super.init(frame: .zero, textContainer: nil)
+        super.init(
+            frame: .zero,
+            textContainer: nil
+        )
         
         setup()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(
+        coder: NSCoder
+    ) {
+        fatalError(
+            "init(coder:) has not been implemented"
+        )
     }
     
     public func setupNestedSettings() {}
     
-    public func setupParams(_ params: TextAreaUIComponentParams) {}
+    public func setupParams(
+        _ params: TextAreaUIComponentParams
+    ) {}
 }
 
 extension TextAreaUIComponent {
     
-    public func setupStyleLookOSConfiguration(_ lookConfiguration: UIElementComponentLookOSConfiguration) {}
+    public func setupStyleLookOSConfiguration(
+        _ lookConfiguration: UIElementComponentLookOSConfiguration
+    ) {}
     
-    public func setupStyleLookOS(_ look: EmptyUIComponentStylePropertiesOSLook) {}
+    public func setupStyleLookOS(
+        _ look: EmptyUIComponentStylePropertiesOSLook
+    ) {}
     
-    public func setupStyleLookSystem(_ look: TextAreaUIComponentStylePropertiesSystemLook) {}
+    public func setupStyleLookSystem(
+        _ look: TextAreaUIComponentStylePropertiesSystemLook
+    ) {}
 }
 
 extension TextAreaUIComponent {
     
     public func setupStyleLookParamsOS() {}
     
-    public func setupStyleLookParamsSystem(_ lookParams: EmptyUIComponentStylePropertiesLookParams) {}
+    public func setupStyleLookParamsSystem(
+        _ lookParams: EmptyUIComponentStylePropertiesLookParams
+    ) {}
 }
 
 extension TextAreaUIComponent {
@@ -59,5 +80,7 @@ extension TextAreaUIComponent {
     
     public func setupStyleLayoutOS() {}
     
-    public func setupStyleLayoutSystem(_ layoutParams: TextAreaUIComponentStylePropertiesLayoutParams) {}
+    public func setupStyleLayoutSystem(
+        _ layoutParams: TextAreaUIComponentStylePropertiesLayoutParams
+    ) {}
 }

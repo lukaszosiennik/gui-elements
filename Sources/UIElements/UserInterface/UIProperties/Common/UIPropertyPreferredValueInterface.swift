@@ -3,8 +3,12 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
+import commons
+
 public protocol UIPropertyPreferredValueInterface:
     InstanceCreatingInterface {
     
-    static var preferred: Self? { get }
+    static var preferred: Self? {
+        get
+    }
 }

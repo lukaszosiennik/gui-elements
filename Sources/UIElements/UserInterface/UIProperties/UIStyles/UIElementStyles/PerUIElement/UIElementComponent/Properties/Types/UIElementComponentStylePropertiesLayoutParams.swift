@@ -7,9 +7,11 @@ public protocol UIElementComponentStylePropertiesLayoutParams:
     UIElementStylePropertiesLayoutParams,
     UIPropertyPreferredValueInterface {
     
-    associatedtype UIElementComponentStylePropertiesOverwrittenLayoutParamsType: UIElementComponentStylePropertiesOverwrittenLayoutParams
+    associatedtype UIElementComponentStylePropertiesOverwrittenLayoutParamsType:
+        UIElementComponentStylePropertiesOverwrittenLayoutParams
     
-    associatedtype DefaultConstantPalette: DefaultUIPalette & UIElementComponentConstantPalette
+    associatedtype DefaultConstantPalette:
+        DefaultUIPalette & UIElementComponentConstantPalette
 
     init?(
         layoutParams: Self?,

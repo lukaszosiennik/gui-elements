@@ -5,7 +5,8 @@
 
 extension UIComponentSetStyleProperties
 where
-    UIElementComponentStylePropertiesLookParamsType == EmptyUIComponentSetStylePropertiesLookParams {
+    UIElementComponentStylePropertiesLookParamsType ==
+        EmptyUIComponentSetStylePropertiesLookParams {
     
     public init(
         lookType: UIElementComponentStylePropertiesLookType<

@@ -6,24 +6,37 @@
 public struct ButtonUIComponentSettings:
     UIComponentSettings {
 
-    public typealias UIElementComponentStylePropertiesOverwrittenType = EmptyUIComponentStylePropertiesOverwritten
+    public typealias UIElementComponentStylePropertiesOverwrittenType =
+        EmptyUIComponentStylePropertiesOverwritten
     
     public let params: ButtonUIComponentParams
-    public var style: UIElementComponentStyle<ButtonUIComponentStyleProperties>
+    public var style: UIElementComponentStyle<
+        ButtonUIComponentStyleProperties
+    >
     
     public init(
         params: ButtonUIComponentParams,
-        style: UIElementComponentStyle<ButtonUIComponentStyleProperties>
+        style: UIElementComponentStyle<
+            ButtonUIComponentStyleProperties
+        >
     ) {
         self.params = params
         self.style = style
     }
     
-    public static var style: UIElementComponentStyle<ButtonUIComponentStyleProperties>? {
+    public static var style: UIElementComponentStyle<
+        ButtonUIComponentStyleProperties
+    >? {
         return styleFactory?.button()
     }
     
-    public static func style(for styleType: UIStyleType) -> UIElementComponentStyle<ButtonUIComponentStyleProperties>? {
-        return styleFactory(for: styleType)?.button()
+    public static func style(
+        for styleType: UIStyleType
+    ) -> UIElementComponentStyle<
+        ButtonUIComponentStyleProperties
+    >? {
+        return styleFactory(
+            for: styleType
+        )?.button()
     }
 }
