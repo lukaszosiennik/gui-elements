@@ -23,19 +23,19 @@ public final class DevSoftwareEngineerUIComponentGroupStyleFactory:
                         border: .init(
                             corners: .rounded,
                             width: ConstantPalette.Card.UILook.borderWidth_1,
-                            color: ColorPalette.Card.border_gray_d9dadb
+                            color: ColorPalette.Card.border_gray2_d9dadb
                         ),
                         separator: .init(
                             width: ConstantPalette.Card.UILook.borderWidth_1,
-                            color: ColorPalette.Card.border_gray_d2d3d4
+                            color: ColorPalette.Card.border_gray2_d2d3d4
                         )
                     ),
                     title: .init(
-                        backgroundColor: ColorPalette.Card.background_gray_f0f1f2,
+                        backgroundColor: ColorPalette.Card.background_gray2_f0f1f2,
                         textColor: ColorPalette.Card.text_black_212529
                     ),
                     body: .init(
-                        backgroundColor: ColorPalette.Card.background_gray_f8f9fa
+                        backgroundColor: ColorPalette.Card.background_gray2_f8f9fa
                     )
                 )),
                 layoutParams: .init(
