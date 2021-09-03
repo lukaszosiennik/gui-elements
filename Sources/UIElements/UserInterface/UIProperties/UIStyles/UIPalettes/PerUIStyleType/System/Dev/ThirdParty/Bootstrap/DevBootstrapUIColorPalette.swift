@@ -180,76 +180,84 @@ extension DevBootstrapUIColorPalette.UIElementComponent {
         
         enum Card {
             
-            enum Primary {
+            enum Primary:
+                CardUIComponentGroupColorPalette {
                 
-                static let background_blue1_0dc4e8: UIColor = Property.Background.blue1_0dc4e8
-                static let background_blue1_0dcaf0: UIColor = Property.Background.blue1_0dcaf0
-                static let border_blue1_0babcb: UIColor = Property.Border.blue1_0babcb
-                static let border_blue1_0bb1d2: UIColor = Property.Border.blue1_0bb1d2
-                static let text_white: UIColor = Property.Text.white
+                static let titleBackground: UIColor = Property.Background.blue1_0dc4e8
+                static let titleText: UIColor = Property.Text.white
+                static let bodyBackground: UIColor = Property.Background.blue1_0dcaf0
+                static let border: UIColor = Property.Border.blue1_0bb1d2
+                static let separator: UIColor = Property.Border.blue1_0babcb
             }
             
-            enum Secondary {
+            enum Secondary:
+                CardUIComponentGroupColorPalette {
                 
-                static let background_gray1_697179: UIColor = Property.Background.gray1_697179
-                static let background_gray1_6c757d: UIColor = Property.Background.gray1_6c757d
-                static let border_gray1_5c636a: UIColor = Property.Border.gray1_5c636a
-                static let border_gray1_5e666d: UIColor = Property.Border.gray1_5e666d
-                static let text_white: UIColor = Property.Text.white
+                static let titleBackground: UIColor = Property.Background.gray1_697179
+                static let titleText: UIColor = Property.Text.white
+                static let bodyBackground: UIColor = Property.Background.gray1_6c757d
+                static let border: UIColor = Property.Border.gray1_5e666d
+                static let separator: UIColor = Property.Border.gray1_5c636a
             }
             
-            enum Success {
+            enum Success:
+                CardUIComponentGroupColorPalette {
                 
-                static let background_green_f0f1f2: UIColor = Property.Background.green_188351
-                static let background_green_f8f9fa: UIColor = Property.Background.green_198754
-                static let border_green_157347: UIColor = Property.Border.green_157347
-                static let border_green_167649: UIColor = Property.Border.green_167649
-                static let text_white: UIColor = Property.Text.white
+                static let titleBackground: UIColor = Property.Background.green_188351
+                static let titleText: UIColor = Property.Text.white
+                static let bodyBackground: UIColor = Property.Background.green_198754
+                static let border: UIColor = Property.Border.green_167649
+                static let separator: UIColor = Property.Border.green_157347
             }
             
-            enum Danger {
+            enum Danger:
+                CardUIComponentGroupColorPalette {
                 
-                static let background_red_d53343: UIColor = Property.Background.red_d53343
-                static let background_red_dc3545: UIColor = Property.Background.red_dc3545
-                static let border_red_ba2d3b: UIColor = Property.Border.red_ba2d3b
-                static let border_red_c02e3c: UIColor = Property.Border.red_c02e3c
-                static let text_white: UIColor = Property.Text.white
+                static let titleBackground: UIColor = Property.Background.red_d53343
+                static let titleText: UIColor = Property.Text.white
+                static let bodyBackground: UIColor = Property.Background.red_dc3545
+                static let border: UIColor = Property.Border.red_c02e3c
+                static let separator: UIColor = Property.Border.red_ba2d3b
             }
             
-            enum Warning {
+            enum Warning:
+                CardUIComponentGroupColorPalette {
                 
-                static let background_yellow_f0f1f2: UIColor = Property.Background.yellow_f0f1f2
-                static let background_yellow_f8f9fa: UIColor = Property.Background.yellow_f8f9fa
-                static let border_yellow_d8a406: UIColor = Property.Border.yellow_d8a406
-                static let border_yellow_dfa906: UIColor = Property.Border.yellow_dfa906
-                static let text_black_212529: UIColor = Property.Text.black_212529
+                static let titleBackground: UIColor = Property.Background.yellow_f0f1f2
+                static let titleText: UIColor = Property.Text.black_212529
+                static let bodyBackground: UIColor = Property.Background.yellow_f8f9fa
+                static let border: UIColor = Property.Border.yellow_dfa906
+                static let separator: UIColor = Property.Border.yellow_d8a406
             }
             
-            enum Info {
+            enum Info:
+                CardUIComponentGroupColorPalette {
                 
-                static let background_blue2_0d6bf5: UIColor = Property.Background.blue2_0d6bf5
-                static let background_blue2_0d6efd: UIColor = Property.Background.blue2_0d6efd
-                static let border_blue2_0b5ed6: UIColor = Property.Border.blue2_0b5ed6
-                static let border_blue2_0b60dd: UIColor = Property.Border.blue2_0b60dd
-                static let text_black_212529: UIColor = Property.Text.black_212529
+                static let titleBackground: UIColor = Property.Background.blue2_0d6bf5
+                static let titleText: UIColor = Property.Text.black_212529
+                static let bodyBackground: UIColor = Property.Background.blue2_0d6efd
+                static let border: UIColor = Property.Border.blue2_0b60dd
+                static let separator: UIColor = Property.Border.blue2_0b5ed6
             }
             
-            enum Light {
+            enum Light:
+                CardUIComponentGroupColorPalette {
                 
-                static let background_gray2_f0f1f2: UIColor = Property.Background.gray2_f0f1f2
-                static let background_gray2_f8f9fa: UIColor = Property.Background.gray2_f8f9fa
-                static let border_gray2_d2d3d4: UIColor = Property.Border.gray2_d2d3d4
-                static let border_gray2_d9dadb: UIColor = Property.Border.gray2_d9dadb
-                static let text_black_212529: UIColor = Property.Text.black_212529
+                static let titleBackground: UIColor = Property.Background.gray2_f0f1f2
+                static let titleText: UIColor = Property.Text.black_212529
+                static let bodyBackground: UIColor = Property.Background.gray2_f8f9fa
+                static let border: UIColor = Property.Border.gray2_d9dadb
+                static let separator: UIColor = Property.Border.gray2_d2d3d4
             }
             
-            enum Dark {
+            enum Dark:
+                CardUIComponentGroupColorPalette {
                 
-                static let background_black_202428: UIColor = Property.Background.black_202428
-                static let background_black_212529: UIColor = Property.Background.black_212529
-                static let border_black_1c1f23: UIColor = Property.Border.black_1c1f23
-                static let border_black_1d2024: UIColor = Property.Border.black_1d2024
-                static let text_white: UIColor = Property.Text.white
+                static let titleBackground: UIColor = Property.Background.black_202428
+                static let titleText: UIColor = Property.Text.white
+                static let bodyBackground: UIColor = Property.Background.black_212529
+                static let border: UIColor = Property.Border.black_1d2024
+                static let separator: UIColor = Property.Border.black_1c1f23
             }
         }
     }

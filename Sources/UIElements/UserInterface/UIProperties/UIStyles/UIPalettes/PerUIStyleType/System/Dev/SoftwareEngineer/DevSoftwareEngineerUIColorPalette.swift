@@ -81,13 +81,14 @@ extension DevSoftwareEngineerUIColorPalette.UIElementComponent {
         DevSoftwareEngineerUIPalette,
         UIColorPalette {
         
-        enum Card {
+        enum Card:
+            CardUIComponentGroupColorPalette {
             
-            static let background_gray2_f0f1f2: UIColor = DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup.Card.Light.background_gray2_f0f1f2
-            static let background_gray2_f8f9fa: UIColor = DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup.Card.Light.background_gray2_f8f9fa
-            static let border_gray2_d2d3d4: UIColor = DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup.Card.Light.border_gray2_d2d3d4
-            static let border_gray2_d9dadb: UIColor = DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup.Card.Light.border_gray2_d9dadb
-            static let text_black_212529: UIColor = DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup.Card.Light.text_black_212529
+            static let titleBackground: UIColor = DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup.Card.Light.titleBackground
+            static let titleText: UIColor = DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup.Card.Light.titleText
+            static let bodyBackground: UIColor = DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup.Card.Light.bodyBackground
+            static let border: UIColor = DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup.Card.Light.border
+            static let separator: UIColor = DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup.Card.Light.separator
         }
         
         enum NavigationMenu {
