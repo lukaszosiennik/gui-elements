@@ -6,5 +6,7 @@
 public struct EmptyUIComponentScreenStylePropertiesOSLook:
     UIComponentScreenStylePropertiesOSLook {
     
-    public init() {}
+    public static var `default`: Self {
+        return .init()
+    }
 }

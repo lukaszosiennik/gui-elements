@@ -6,5 +6,7 @@
 public struct EmptyUIComponentStylePropertiesOSLook:
     UIComponentStylePropertiesOSLook {
     
-    public init() {}
+    public static var `default`: Self {
+        return .init()
+    }
 }

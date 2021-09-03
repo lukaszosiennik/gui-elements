@@ -8,8 +8,8 @@ public struct ButtonUIComponentStylePropertiesOSLook:
     
     public let buttonStyleType: ButtonUIComponentOSStyleType
     
-    public init() {
-        self.init(
+    public static var `default`: Self {
+        return .init(
             buttonStyleType: .default
         )
     }

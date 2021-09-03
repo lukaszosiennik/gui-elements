@@ -3,10 +3,12 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
+import commons
+
 public protocol UIElementComponentSettings:
     UIElementSettings,
     UIPropertyDefaultValueInterface,
-    SelfInstanceCreatingInterface {
+    SelfInstanceOverwrittingInterface {
     
     associatedtype UIElementComponentParamsType:
         UIElementComponentParams

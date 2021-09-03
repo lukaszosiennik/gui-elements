@@ -10,8 +10,8 @@ public struct TextFieldUIComponentStylePropertiesOSLook:
     
     public let borderStyle: UITextField.BorderStyle
     
-    public init() {
-        self.init(
+    public static var `default`: Self {
+        return .init(
             borderStyle: .none
         )
     }

@@ -6,5 +6,7 @@
 public struct EmptyUIComponentGroupStylePropertiesOSLook:
     UIComponentGroupStylePropertiesOSLook {
     
-    public init() {}
+    public static var `default`: Self {
+        return .init()
+    }
 }

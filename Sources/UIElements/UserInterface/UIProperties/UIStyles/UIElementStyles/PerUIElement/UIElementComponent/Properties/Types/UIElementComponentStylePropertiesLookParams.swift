@@ -4,7 +4,8 @@
 //
 
 public protocol UIElementComponentStylePropertiesLookParams:
-    UIElementStylePropertiesLookParams {
+    UIElementStylePropertiesLookParams,
+    UIPropertyDefaultOptionalValueInterface {
     
     associatedtype UIElementComponentStylePropertiesOverwrittenLookParamsType:
         UIElementComponentStylePropertiesOverwrittenLookParams

@@ -13,10 +13,10 @@ public enum UISystemStyleType:
 extension UISystemStyleType {
     
     public static var app: Self {
-        return .app(.default)
+        return .app(.companySpecific)
     }
     
     public static var dev: Self {
-        return .dev(.default)
+        return .dev(.softwareEngineer)
     }
 }

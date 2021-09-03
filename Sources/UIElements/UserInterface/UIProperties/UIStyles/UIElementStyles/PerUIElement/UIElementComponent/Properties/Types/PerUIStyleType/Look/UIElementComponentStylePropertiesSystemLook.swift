@@ -4,8 +4,7 @@
 //
 
 public protocol UIElementComponentStylePropertiesSystemLook:
-    UIElementStylePropertiesLook,
-    SelfInstanceCreatingInterface {
+    UIElementStylePropertiesLook {
     
     associatedtype UIElementComponentStylePropertiesOverwrittenLookType:
         UIElementComponentStylePropertiesOverwrittenLook

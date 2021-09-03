@@ -5,7 +5,7 @@
 
 public protocol UIElementComponentStyleProperties:
     UIElementStyleProperties,
-    SelfInstanceCreatingInterface {
+    UIPropertyDefaultValueBasedOnInputInterface {
     
     associatedtype UIElementComponentStylePropertiesLookInterfaceType:
         UIElementComponentStylePropertiesLookInterface
@@ -39,7 +39,7 @@ public protocol UIElementComponentStyleProperties:
 
 extension UIElementComponentStyleProperties {
     
-    static func `default`(
+    public static func `default`(
         styleType: UIStyleType
     ) -> Self {
         var layoutParams: UIElementComponentStylePropertiesLayoutParamsType? = nil
@@ -48,7 +48,7 @@ extension UIElementComponentStyleProperties {
         }
         
         return .init(
-            lookType: .os(.init()),
+            lookType: .os(.default),
             lookParams: .default,
             layoutParams: layoutParams
         )
