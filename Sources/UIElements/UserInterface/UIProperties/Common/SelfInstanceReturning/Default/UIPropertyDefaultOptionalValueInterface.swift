@@ -6,7 +6,7 @@
 import commons
 
 public protocol UIPropertyDefaultOptionalValueInterface:
-    SelfInstanceReturningInterface {
+    SelfSingleInstanceReturningInterface {
     
     static var `default`: Self? {
         get
@@ -14,6 +14,7 @@ public protocol UIPropertyDefaultOptionalValueInterface:
 }
 
 extension UIPropertyDefaultOptionalValueInterface {
+// : SelfSingleInstanceReturningInterface
     
     public static var valueName: Self? {
         return `default`

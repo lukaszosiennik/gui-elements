@@ -9,5 +9,11 @@ extension CommonsExtension:
     SelfInstanceReturningBasedOnInputInterface
 where
     ExtendedType
-        == Void
-{}
+        == Void {
+    
+    public static func valueName(
+        input: Void
+    ) -> ExtendedType {
+        return
+    }
+}

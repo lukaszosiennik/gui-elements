@@ -6,7 +6,7 @@
 import commons
 
 public protocol UIPropertyPreferredValueInterface:
-    SelfInstanceReturningInterface {
+    SelfSingleInstanceReturningInterface {
     
     static var preferred: Self? {
         get
@@ -14,6 +14,7 @@ public protocol UIPropertyPreferredValueInterface:
 }
 
 extension UIPropertyPreferredValueInterface {
+// : SelfSingleInstanceReturningInterface
     
     public static var valueName: Self? {
         return preferred

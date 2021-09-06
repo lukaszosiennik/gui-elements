@@ -14,8 +14,13 @@ public protocol UIPropertyDefaultValueBasedOnInputInterface:
 }
 
 extension UIPropertyDefaultValueBasedOnInputInterface {
+// : SelfInstanceReturningBasedOnInputInterface
     
-    public static var valueName: Void {
-        return
+    public static func valueName(
+        input: UIStyleType
+    ) -> Self {
+        return `default`(
+            styleType: input
+        )
     }
 }
