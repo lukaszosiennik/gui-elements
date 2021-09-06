@@ -12,7 +12,9 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "UIElements",
-            targets: ["UIElements"]
+            targets: [
+                "UIElements",
+            ]
         ),
     ],
     dependencies: [
@@ -28,7 +30,7 @@ let package = Package(
         .target(
             name: "UIElements",
             dependencies: [
-                .byName(name: "commons")
+                .byName(name: "commons"),
             ]
         ),
     ]
