@@ -15,10 +15,14 @@ public enum UIStyleType:
 extension UIStyleType {
     
     public static var os: Self {
-        return .os(preferredLayoutParams: false)
+        return .os(
+            preferredLayoutParams: false
+        )
     }
     
-    public static func os(preferredLayoutParams: Bool) -> Self {
+    public static func os(
+        preferredLayoutParams: Bool
+    ) -> Self {
         return .os(
             .init(
                 lookConfiguration: .init(
