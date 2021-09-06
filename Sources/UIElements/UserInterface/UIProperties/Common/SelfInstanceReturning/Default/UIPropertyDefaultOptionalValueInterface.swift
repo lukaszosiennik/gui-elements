@@ -12,3 +12,10 @@ public protocol UIPropertyDefaultOptionalValueInterface:
         get
     }
 }
+
+extension UIPropertyDefaultOptionalValueInterface {
+    
+    public static var valueName: Self? {
+        return `default`
+    }
+}

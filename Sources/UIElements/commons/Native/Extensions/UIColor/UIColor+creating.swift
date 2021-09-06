@@ -11,10 +11,13 @@ extension UIColor:
 
 extension CommonsExtension:
     SelfInstanceCreatingInterface,
-    SelfInstanceReturningInterface
+    SelfInstanceReturningInterface,
+    SelfManyInstancesReturningInterface
 where
     ExtendedType
-        : UIColor {
+        == UIColor {
+    
+    typealias SelfInstanceType = UIColor
     
     private static var `default`: UIColor {
         return .black
@@ -76,5 +79,21 @@ where
                 hexNumber & 0x000000ff
             ) / 255
         )
+    }
+}
+
+extension CommonsExtension:
+    SelfInstanceReturningBasedOnInputInterface
+where
+    ExtendedType
+        == String // == UIColor
+{}
+extension CommonsExtension
+where
+    ExtendedType
+        == UIColor {
+    
+    public static var valueName: UIColor {
+        return `default`
     }
 }

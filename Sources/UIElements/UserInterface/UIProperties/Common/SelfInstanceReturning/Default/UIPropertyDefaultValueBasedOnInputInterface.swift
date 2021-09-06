@@ -6,9 +6,18 @@
 import commons
 
 public protocol UIPropertyDefaultValueBasedOnInputInterface:
-    SelfInstanceReturningInterface {
+    SelfInstanceReturningBasedOnInputInterface {
     
     static func `default`(
         styleType: UIStyleType
     ) -> Self
+}
+
+extension UIPropertyDefaultValueBasedOnInputInterface {
+    
+    public static var valueName: Self {
+        return `default`(
+            styleType: UIStyleConfiguration.current
+        )
+    }
 }

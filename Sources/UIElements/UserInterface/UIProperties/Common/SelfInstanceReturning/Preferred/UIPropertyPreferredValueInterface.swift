@@ -12,3 +12,10 @@ public protocol UIPropertyPreferredValueInterface:
         get
     }
 }
+
+extension UIPropertyPreferredValueInterface {
+    
+    public static var valueName: Self? {
+        return preferred
+    }
+}
