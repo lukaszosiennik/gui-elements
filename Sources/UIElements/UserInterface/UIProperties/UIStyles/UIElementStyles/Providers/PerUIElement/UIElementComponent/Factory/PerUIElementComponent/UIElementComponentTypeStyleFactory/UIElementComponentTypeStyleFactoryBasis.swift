@@ -4,7 +4,7 @@
 //
 
 public class UIElementComponentTypeStyleFactoryBasis<
-    Paletts: SystemUIPaletts
+    Paletts: SystemUIElementPaletts
 >:
     UIElementComponentTypeStyleFactory {
     

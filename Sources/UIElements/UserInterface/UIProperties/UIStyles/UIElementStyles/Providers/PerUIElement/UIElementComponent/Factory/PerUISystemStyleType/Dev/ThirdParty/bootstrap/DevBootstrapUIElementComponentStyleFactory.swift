@@ -6,7 +6,7 @@
 public final class DevBootstrapUIElementComponentStyleFactory:
     UIElementComponentStyleFactoryBasis<
         DevBootstrapUIColorPalette.UIElementComponent,
-        DevBootstrapUIFontPalette,
+        DevBootstrapUIFontPalette.UIElementComponent,
         DevBootstrapUIElementComponentConstantPalette.UIElementComponent
     > {
     

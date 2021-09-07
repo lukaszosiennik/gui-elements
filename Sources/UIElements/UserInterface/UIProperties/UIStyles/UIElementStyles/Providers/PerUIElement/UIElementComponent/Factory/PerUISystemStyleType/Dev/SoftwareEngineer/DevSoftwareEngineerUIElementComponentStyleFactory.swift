@@ -6,7 +6,7 @@
 public final class DevSoftwareEngineerUIElementComponentStyleFactory:
     UIElementComponentStyleFactoryBasis<
         DevSoftwareEngineerUIColorPalette.UIElementComponent,
-        DevSoftwareEngineerUIFontPalette,
+        DevSoftwareEngineerUIFontPalette.UIElementComponent,
         DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponent
     > {
     

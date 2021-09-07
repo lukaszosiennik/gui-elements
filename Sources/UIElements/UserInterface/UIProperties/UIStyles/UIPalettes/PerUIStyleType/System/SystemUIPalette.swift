@@ -5,12 +5,3 @@
 
 public protocol SystemUIPalette:
     UIPalette {}
-
-
-public protocol SystemUIPaletts:
-    UIPalette {
-    
-    associatedtype ColorPalette: UIColorPalette
-    associatedtype FontPalette: UIFontPalette
-    associatedtype ConstantPalette: UIElementComponentConstantPalette
-}

@@ -5,10 +5,3 @@
 
 public protocol AppUIPalette:
     SystemUIPalette {}
-
-public protocol AppUIPaletts:
-    SystemUIPaletts
-where
-    ColorPalette: AppUIPalette,
-    FontPalette: AppUIPalette,
-    ConstantPalette: AppUIPalette {}
