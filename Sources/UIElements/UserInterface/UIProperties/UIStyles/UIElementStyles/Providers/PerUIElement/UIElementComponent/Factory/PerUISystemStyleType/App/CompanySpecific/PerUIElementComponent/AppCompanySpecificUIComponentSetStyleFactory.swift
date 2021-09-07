@@ -4,7 +4,11 @@
 //
 
 public final class AppCompanySpecificUIComponentSetStyleFactory:
-    UIElementComponentTypeStyleFactory,
+    UIElementComponentTypeStyleFactoryBasis<
+        AppCompanySpecificUIColorPalette.UIElementComponent.UIComponentSet,
+        AppCompanySpecificUIFontPalette,
+        AppCompanySpecificUIElementComponentConstantPalette.UIElementComponent.UIComponentSet
+    >,
     UIComponentSetStyleFactoryInterface {
     
     public func navigationMenuOption() -> UIElementComponentStyle<

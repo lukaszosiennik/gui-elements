@@ -4,7 +4,11 @@
 //
 
 public final class AppCompanySpecificUIComponentScreenStyleFactory:
-    UIElementComponentTypeStyleFactory,
+    UIElementComponentTypeStyleFactoryBasis<
+        AppCompanySpecificUIColorPalette.UIElementComponent.UIComponentScreen,
+        AppCompanySpecificUIFontPalette,
+        AppCompanySpecificUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
+    >,
     UIComponentScreenStyleFactoryInterface {
     
     public func information() -> UIElementComponentStyle<

@@ -4,13 +4,12 @@
 //
 
 public final class DevSoftwareEngineerUIComponentSetStyleFactory:
-    UIElementComponentTypeStyleFactory,
-    UIComponentSetStyleFactoryInterface {
-    
-    private typealias ColorPalette =
-        DevSoftwareEngineerUIColorPalette.UIElementComponent.UIComponentSet
-    private typealias ConstantPalette =
+    UIElementComponentTypeStyleFactoryBasis<
+        DevSoftwareEngineerUIColorPalette.UIElementComponent.UIComponentSet,
+        DevSoftwareEngineerUIFontPalette,
         DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponent.UIComponentSet
+    >,
+    UIComponentSetStyleFactoryInterface {
     
     public func navigationMenuOption() -> UIElementComponentStyle<
         NavigationMenuOptionUIComponentSetStyleProperties

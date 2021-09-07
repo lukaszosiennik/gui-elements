@@ -4,7 +4,11 @@
 //
 
 public final class AppCompanySpecificUIComponentStyleFactory:
-    UIElementComponentTypeStyleFactory,
+    UIElementComponentTypeStyleFactoryBasis<
+        AppCompanySpecificUIColorPalette.UIElementComponent.UIComponent,
+        AppCompanySpecificUIFontPalette,
+        AppCompanySpecificUIElementComponentConstantPalette.UIElementComponent.UIComponent
+    >,
     UIComponentStyleFactoryInterface {
     
     public func button() -> UIElementComponentStyle<

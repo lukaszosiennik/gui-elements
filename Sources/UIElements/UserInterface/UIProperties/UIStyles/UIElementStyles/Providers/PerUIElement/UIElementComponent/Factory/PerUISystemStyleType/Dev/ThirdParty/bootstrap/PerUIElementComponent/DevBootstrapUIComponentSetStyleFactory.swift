@@ -4,7 +4,11 @@
 //
 
 public final class DevBootstrapUIComponentSetStyleFactory:
-    UIElementComponentTypeStyleFactory,
+    UIElementComponentTypeStyleFactoryBasis<
+        DevBootstrapUIColorPalette.UIElementComponent.UIComponentSet,
+        DevBootstrapUIFontPalette,
+        DevBootstrapUIElementComponentConstantPalette.UIElementComponent.UIComponentSet
+    >,
     UIComponentSetStyleFactoryInterface {
     
     public func navigationMenuOption() -> UIElementComponentStyle<

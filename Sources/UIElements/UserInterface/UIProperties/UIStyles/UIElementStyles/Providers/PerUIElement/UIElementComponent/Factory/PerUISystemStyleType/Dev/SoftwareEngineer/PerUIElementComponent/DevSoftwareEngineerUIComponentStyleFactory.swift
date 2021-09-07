@@ -4,13 +4,12 @@
 //
 
 public final class DevSoftwareEngineerUIComponentStyleFactory:
-    UIElementComponentTypeStyleFactory,
-    UIComponentStyleFactoryInterface {
-    
-    private typealias ColorPalette =
-        DevSoftwareEngineerUIColorPalette.UIElementComponent.UIComponent
-    private typealias ConstantPalette =
+    UIElementComponentTypeStyleFactoryBasis<
+        DevSoftwareEngineerUIColorPalette.UIElementComponent.UIComponent,
+        DevSoftwareEngineerUIFontPalette,
         DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponent.UIComponent
+    >,
+    UIComponentStyleFactoryInterface {
     
     public func button() -> UIElementComponentStyle<
         ButtonUIComponentStyleProperties

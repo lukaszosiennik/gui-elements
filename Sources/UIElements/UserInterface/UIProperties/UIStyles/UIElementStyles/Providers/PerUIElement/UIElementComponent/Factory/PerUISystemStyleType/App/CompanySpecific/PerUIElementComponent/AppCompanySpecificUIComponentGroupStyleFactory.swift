@@ -4,7 +4,11 @@
 //
 
 public final class AppCompanySpecificUIComponentGroupStyleFactory:
-    UIElementComponentTypeStyleFactory,
+    UIElementComponentTypeStyleFactoryBasis<
+        AppCompanySpecificUIColorPalette.UIElementComponent.UIComponentGroup,
+        AppCompanySpecificUIFontPalette,
+        AppCompanySpecificUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
+    >,
     UIComponentGroupStyleFactoryInterface {
     
     public func card() -> UIElementComponentStyle<

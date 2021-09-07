@@ -4,7 +4,11 @@
 //
 
 public final class DevBootstrapUIComponentGroupStyleFactory:
-    UIElementComponentTypeStyleFactory,
+    UIElementComponentTypeStyleFactoryBasis<
+        DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup,
+        DevBootstrapUIFontPalette,
+        DevBootstrapUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
+    >,
     UIComponentGroupStyleFactoryInterface {
     
     public func card() -> UIElementComponentStyle<

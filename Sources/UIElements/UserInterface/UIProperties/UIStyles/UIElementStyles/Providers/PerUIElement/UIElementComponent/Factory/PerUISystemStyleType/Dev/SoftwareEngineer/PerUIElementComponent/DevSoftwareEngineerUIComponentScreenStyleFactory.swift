@@ -4,13 +4,12 @@
 //
 
 public final class DevSoftwareEngineerUIComponentScreenStyleFactory:
-    UIElementComponentTypeStyleFactory,
-    UIComponentScreenStyleFactoryInterface {
-    
-    private typealias ColorPalette =
-        DevSoftwareEngineerUIColorPalette.UIElementComponent.UIComponentScreen
-    private typealias ConstantPalette =
+    UIElementComponentTypeStyleFactoryBasis<
+        DevSoftwareEngineerUIColorPalette.UIElementComponent.UIComponentScreen,
+        DevSoftwareEngineerUIFontPalette,
         DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
+    >,
+    UIComponentScreenStyleFactoryInterface {
     
     public func information() -> UIElementComponentStyle<
         InformationUIComponentScreenStyleProperties

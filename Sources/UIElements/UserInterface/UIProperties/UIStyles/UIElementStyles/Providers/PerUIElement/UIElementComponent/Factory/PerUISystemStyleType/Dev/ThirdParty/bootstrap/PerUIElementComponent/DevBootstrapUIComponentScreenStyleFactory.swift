@@ -4,7 +4,11 @@
 //
 
 public final class DevBootstrapUIComponentScreenStyleFactory:
-    UIElementComponentTypeStyleFactory,
+    UIElementComponentTypeStyleFactoryBasis<
+        DevBootstrapUIColorPalette.UIElementComponent.UIComponentScreen,
+        DevBootstrapUIFontPalette,
+        DevBootstrapUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
+    >,
     UIComponentScreenStyleFactoryInterface {
     
     public func information() -> UIElementComponentStyle<

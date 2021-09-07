@@ -4,7 +4,11 @@
 //
 
 public final class DevBootstrapUIComponentStyleFactory:
-    UIElementComponentTypeStyleFactory,
+    UIElementComponentTypeStyleFactoryBasis<
+        DevBootstrapUIColorPalette.UIElementComponent.UIComponent,
+        DevBootstrapUIFontPalette,
+        DevBootstrapUIElementComponentConstantPalette.UIElementComponent.UIComponent
+    >,
     UIComponentStyleFactoryInterface {
     
     public func button() -> UIElementComponentStyle<

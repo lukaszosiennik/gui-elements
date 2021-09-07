@@ -4,13 +4,12 @@
 //
 
 public final class DevSoftwareEngineerUIComponentGroupStyleFactory:
-    UIElementComponentTypeStyleFactory,
-    UIComponentGroupStyleFactoryInterface {
-    
-    private typealias ColorPalette =
-        DevSoftwareEngineerUIColorPalette.UIElementComponent.UIComponentGroup
-    private typealias ConstantPalette =
+    UIElementComponentTypeStyleFactoryBasis<
+        DevSoftwareEngineerUIColorPalette.UIElementComponent.UIComponentGroup,
+        DevSoftwareEngineerUIFontPalette,
         DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
+    >,
+    UIComponentGroupStyleFactoryInterface {
     
     public func card() -> UIElementComponentStyle<
         CardUIComponentGroupStyleProperties
