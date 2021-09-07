@@ -69,10 +69,12 @@ extension UIElementComponentSettings {
             return style.type
         }
         set {
-            self = .init(
-                params: params,
-                style: Self.style(
-                    for: newValue
+            selfOverwrite(
+                with: .init(
+                    params: params,
+                    style: Self.style(
+                        for: newValue
+                    )
                 )
             )
         }

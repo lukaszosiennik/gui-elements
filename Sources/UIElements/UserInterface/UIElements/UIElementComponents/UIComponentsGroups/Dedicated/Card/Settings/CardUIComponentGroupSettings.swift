@@ -24,10 +24,12 @@ public struct CardUIComponentGroupSettings<
             return style.type
         }
         set {
-            self = .init(
-                params: params,
-                styleType: newValue,
-                bodySettingsParams: bodySettings.params
+            selfOverwrite(
+                with: .init(
+                    params: params,
+                    styleType: newValue,
+                    bodySettingsParams: bodySettings.params
+                )
             )
         }
     }
