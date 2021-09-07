@@ -11,15 +11,9 @@ public final class UIElementComponentStyleFactoryProvider:
     static private let shared: UIElementComponentStyleFactoryProvider = .init()
     
     private init() {
-        let appCompanySpecificStyleFactory: AppCompanySpecificUIElementComponentStyleFactory = .init(
-            styleType: .system(.app(.companySpecific))
-        )
-        let devSoftwareEngineerStyleFactory: DevSoftwareEngineerUIElementComponentStyleFactory = .init(
-            styleType: .system(.dev(.softwareEngineer))
-        )
-        let devBootstrapStyleFactory: DevBootstrapUIElementComponentStyleFactory = .init(
-            styleType: .system(.dev(.thirdParty(.bootstrap)))
-        )
+        let appCompanySpecificStyleFactory: AppCompanySpecificUIElementComponentStyleFactory = .init()
+        let devSoftwareEngineerStyleFactory: DevSoftwareEngineerUIElementComponentStyleFactory = .init()
+        let devBootstrapStyleFactory: DevBootstrapUIElementComponentStyleFactory = .init()
         
         self.styleFactory = [
             appCompanySpecificStyleFactory.styleType: appCompanySpecificStyleFactory,

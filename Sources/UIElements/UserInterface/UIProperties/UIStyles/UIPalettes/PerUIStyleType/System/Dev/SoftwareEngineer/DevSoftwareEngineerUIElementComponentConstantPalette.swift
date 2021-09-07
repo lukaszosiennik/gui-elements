@@ -17,7 +17,9 @@ public enum DevSoftwareEngineerUIElementComponentConstantPalette {
         static let value_50: CGFloat = 50
     }
     
-    public enum UIElementComponent {
+    public enum UIElementComponent:
+        DevSoftwareEngineerUIPalette,
+        UIElementComponentConstantPalette {
         
         fileprivate typealias UIElementComponentPalette = UIElementComponent
         

@@ -4,31 +4,19 @@
 //
 
 public final class DevSoftwareEngineerUIElementComponentStyleFactory:
-    UIElementComponentStyleFactoryInterface {
+    UIElementComponentStyleFactoryBasis<
+        DevSoftwareEngineerUIColorPalette.UIElementComponent,
+        DevSoftwareEngineerUIFontPalette,
+        DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponent
+    > {
     
-    public let styleType: UIStyleType
-    
-    public var uiComponent: UIComponentStyleFactoryInterface?
-    public var uiComponentSet: UIComponentSetStyleFactoryInterface?
-    public var uiComponentGroup: UIComponentGroupStyleFactoryInterface?
-    public var uiComponentScreen: UIComponentScreenStyleFactoryInterface?
-    
-    init(
-        styleType: UIStyleType
-    ) {
-        self.styleType = styleType
-        
-        self.uiComponent = DevSoftwareEngineerUIComponentStyleFactory(
-            owner: self
-        )
-        self.uiComponentSet = DevSoftwareEngineerUIComponentSetStyleFactory(
-            owner: self
-        )
-        self.uiComponentGroup = DevSoftwareEngineerUIComponentGroupStyleFactory(
-            owner: self
-        )
-        self.uiComponentScreen = DevSoftwareEngineerUIComponentScreenStyleFactory(
-            owner: self
+    init() {
+        super.init(
+            styleType: .system(.dev(.softwareEngineer)),
+            uiComponentStyleFactoryType: DevSoftwareEngineerUIComponentStyleFactory.self,
+            uiComponentSetStyleFactoryType: DevSoftwareEngineerUIComponentSetStyleFactory.self,
+            uiComponentGroupStyleFactoryType: DevSoftwareEngineerUIComponentGroupStyleFactory.self,
+            uiComponentScreenStyleFactoryType: DevSoftwareEngineerUIComponentScreenStyleFactory.self
         )
     }
 }

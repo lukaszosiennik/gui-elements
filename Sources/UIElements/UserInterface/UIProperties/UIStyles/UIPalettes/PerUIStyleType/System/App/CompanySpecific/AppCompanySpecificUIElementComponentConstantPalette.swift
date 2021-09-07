@@ -5,7 +5,9 @@
 
 public enum AppCompanySpecificUIElementComponentConstantPalette {
     
-    public enum UIElementComponent {}
+    public enum UIElementComponent:
+        AppCompanySpecificUIPalette,
+        UIElementComponentConstantPalette {}
 }
 
 extension AppCompanySpecificUIElementComponentConstantPalette.UIElementComponent {

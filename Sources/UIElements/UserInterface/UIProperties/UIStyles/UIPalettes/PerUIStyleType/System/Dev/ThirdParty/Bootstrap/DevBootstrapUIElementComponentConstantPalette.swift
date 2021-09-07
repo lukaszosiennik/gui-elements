@@ -5,7 +5,9 @@
 
 public enum DevBootstrapUIElementComponentConstantPalette {
     
-    public enum UIElementComponent {}
+    public enum UIElementComponent:
+        DevBootstrapUIPalette,
+        UIElementComponentConstantPalette {}
 }
 
 extension DevBootstrapUIElementComponentConstantPalette.UIElementComponent {

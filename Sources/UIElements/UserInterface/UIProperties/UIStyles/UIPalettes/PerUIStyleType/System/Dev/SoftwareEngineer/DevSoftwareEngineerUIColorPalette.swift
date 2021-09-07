@@ -19,7 +19,9 @@ public enum DevSoftwareEngineerUIColorPalette {
         static let red: UIColor = .red
     }
     
-    public enum UIElementComponent {
+    public enum UIElementComponent:
+        DevSoftwareEngineerUIPalette,
+        UIColorPalette {
         
         fileprivate typealias UIElementComponentPalette = UIElementComponent
         

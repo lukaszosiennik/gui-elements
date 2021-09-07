@@ -5,7 +5,9 @@
 
 public enum AppCompanySpecificUIColorPalette {
     
-    public enum UIElementComponent {}
+    public enum UIElementComponent:
+        AppCompanySpecificUIPalette,
+        UIColorPalette {}
 }
 
 extension AppCompanySpecificUIColorPalette.UIElementComponent {

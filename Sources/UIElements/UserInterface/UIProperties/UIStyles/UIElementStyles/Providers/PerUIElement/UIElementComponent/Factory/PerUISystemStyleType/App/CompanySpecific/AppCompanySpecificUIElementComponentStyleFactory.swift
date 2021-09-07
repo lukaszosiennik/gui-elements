@@ -4,31 +4,19 @@
 //
 
 public final class AppCompanySpecificUIElementComponentStyleFactory:
-    UIElementComponentStyleFactoryInterface {
+    UIElementComponentStyleFactoryBasis<
+        AppCompanySpecificUIColorPalette.UIElementComponent,
+        AppCompanySpecificUIFontPalette,
+        AppCompanySpecificUIElementComponentConstantPalette.UIElementComponent
+    > {
     
-    public let styleType: UIStyleType
-    
-    public var uiComponent: UIComponentStyleFactoryInterface?
-    public var uiComponentSet: UIComponentSetStyleFactoryInterface?
-    public var uiComponentGroup: UIComponentGroupStyleFactoryInterface?
-    public var uiComponentScreen: UIComponentScreenStyleFactoryInterface?
-    
-    init(
-        styleType: UIStyleType
-    ) {
-        self.styleType = styleType
-        
-        self.uiComponent = AppCompanySpecificUIComponentStyleFactory(
-            owner: self
-        )
-        self.uiComponentSet = AppCompanySpecificUIComponentSetStyleFactory(
-            owner: self
-        )
-        self.uiComponentGroup = AppCompanySpecificUIComponentGroupStyleFactory(
-            owner: self
-        )
-        self.uiComponentScreen = AppCompanySpecificUIComponentScreenStyleFactory(
-            owner: self
+    init() {
+        super.init(
+            styleType: .system(.app(.companySpecific)),
+            uiComponentStyleFactoryType: AppCompanySpecificUIComponentStyleFactory.self,
+            uiComponentSetStyleFactoryType: AppCompanySpecificUIComponentSetStyleFactory.self,
+            uiComponentGroupStyleFactoryType: AppCompanySpecificUIComponentGroupStyleFactory.self,
+            uiComponentScreenStyleFactoryType: AppCompanySpecificUIComponentScreenStyleFactory.self
         )
     }
 }

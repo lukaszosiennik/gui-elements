@@ -3,6 +3,6 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-enum DevBootstrapUIFontPalette:
+public enum DevBootstrapUIFontPalette:
     DevBootstrapUIPalette,
     UIFontPalette {}

@@ -3,6 +3,6 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-enum AppCompanySpecificUIFontPalette:
+public enum AppCompanySpecificUIFontPalette:
     AppCompanySpecificUIPalette,
     UIFontPalette {}
