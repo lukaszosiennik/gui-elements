@@ -5,9 +5,7 @@
 
 public final class DevBootstrapUIComponentGroupStyleFactory:
     UIElementComponentTypeStyleFactoryBasis<
-        DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup,
-        DevBootstrapUIFontPalette,
-        DevBootstrapUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
+        DevBootstrapUIComponentGroupPaletts
     >,
     UIComponentGroupStyleFactoryInterface {
     

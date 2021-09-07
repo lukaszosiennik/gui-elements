@@ -4,13 +4,11 @@
 //
 
 public class UIElementComponentTypeStyleFactoryBasis<
-    ColorPalette: UIColorPalette,
-    FontPalette: UIFontPalette,
-    ConstantPalette: UIElementComponentConstantPalette
+    Paletts: SystemUIPaletts
 >:
     UIElementComponentTypeStyleFactory {
     
-    typealias ColorPalette = ColorPalette
-    typealias FontPalette = FontPalette
-    typealias ConstantPalette = ConstantPalette
+    typealias ColorPalette = Paletts.ColorPalette
+    typealias FontPalette = Paletts.FontPalette
+    typealias ConstantPalette = Paletts.ConstantPalette
 }

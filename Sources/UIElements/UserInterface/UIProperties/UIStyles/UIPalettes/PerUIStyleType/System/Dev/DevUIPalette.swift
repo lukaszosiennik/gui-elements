@@ -5,3 +5,10 @@
 
 public protocol DevUIPalette:
     SystemUIPalette {}
+
+public protocol DevUIPaletts:
+    SystemUIPaletts
+where
+    ColorPalette: DevUIPalette,
+    FontPalette: DevUIPalette,
+    ConstantPalette: DevUIPalette {}

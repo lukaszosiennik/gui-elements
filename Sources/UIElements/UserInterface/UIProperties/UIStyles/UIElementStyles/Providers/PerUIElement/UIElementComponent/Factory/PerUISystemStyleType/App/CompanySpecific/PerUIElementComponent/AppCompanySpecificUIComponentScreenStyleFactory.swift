@@ -5,9 +5,7 @@
 
 public final class AppCompanySpecificUIComponentScreenStyleFactory:
     UIElementComponentTypeStyleFactoryBasis<
-        AppCompanySpecificUIColorPalette.UIElementComponent.UIComponentScreen,
-        AppCompanySpecificUIFontPalette,
-        AppCompanySpecificUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
+        AppCompanySpecificUIComponentScreenPaletts
     >,
     UIComponentScreenStyleFactoryInterface {
     
