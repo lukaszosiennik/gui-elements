@@ -5,7 +5,8 @@
 
 import UIKit
 
-public enum DevSoftwareEngineerUIElementComponentConstantPalette {
+public enum DevSoftwareEngineerUIElementComponentConstantPalette:
+    DevUIElementComponentConstantPaletteInterface {
     
     fileprivate enum All {
         
@@ -18,7 +19,8 @@ public enum DevSoftwareEngineerUIElementComponentConstantPalette {
     }
     
     public enum UIElementComponent:
-        DevSoftwareEngineerUIPalette,
+        SystemUIElementComponentPaletteInterface,
+        DevUIPalette,
         UIElementComponentConstantPalette {
         
         fileprivate typealias UIElementComponentPalette = UIElementComponent
@@ -85,11 +87,11 @@ public enum DevSoftwareEngineerUIElementComponentConstantPalette {
 extension DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponent {
         
     public enum UIComponent:
-        DevSoftwareEngineerUIPalette,
+        DevUIPalette,
         UIElementComponentConstantPalette {}
     
     public enum UIComponentSet:
-        DevSoftwareEngineerUIPalette,
+        DevUIPalette,
         UIElementComponentConstantPalette {
         
         enum NavigationMenuOption {
@@ -102,7 +104,7 @@ extension DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponen
     }
     
     public enum UIComponentGroup:
-        DevSoftwareEngineerUIPalette,
+        DevUIPalette,
         UIElementComponentConstantPalette {
         
         enum Card {
@@ -137,6 +139,6 @@ extension DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponen
     }
     
     public enum UIComponentScreen:
-        DevSoftwareEngineerUIPalette,
+        DevUIPalette,
         UIElementComponentConstantPalette {}
 }

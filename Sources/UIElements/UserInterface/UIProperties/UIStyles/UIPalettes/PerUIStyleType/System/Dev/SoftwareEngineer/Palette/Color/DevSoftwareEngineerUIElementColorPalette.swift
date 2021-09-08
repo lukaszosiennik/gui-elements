@@ -5,7 +5,8 @@
 
 import UIKit
 
-public enum DevSoftwareEngineerUIColorPalette {
+public enum DevSoftwareEngineerUIElementColorPalette:
+    DevUIElementColorPaletteInterface {
     
     fileprivate enum All {
         
@@ -20,7 +21,8 @@ public enum DevSoftwareEngineerUIColorPalette {
     }
     
     public enum UIElementComponent:
-        DevSoftwareEngineerUIPalette,
+        SystemUIElementComponentPaletteInterface,
+        DevUIPalette,
         UIColorPalette {
         
         fileprivate typealias UIElementComponentPalette = UIElementComponent
@@ -49,10 +51,10 @@ public enum DevSoftwareEngineerUIColorPalette {
     }
 }
 
-extension DevSoftwareEngineerUIColorPalette.UIElementComponent {
+extension DevSoftwareEngineerUIElementColorPalette.UIElementComponent {
         
     public enum UIComponent:
-        DevSoftwareEngineerUIPalette,
+        DevUIPalette,
         UIColorPalette {
         
         enum Button {
@@ -68,7 +70,7 @@ extension DevSoftwareEngineerUIColorPalette.UIElementComponent {
     }
     
     public enum UIComponentSet:
-        DevSoftwareEngineerUIPalette,
+        DevUIPalette,
         UIColorPalette {
         
         enum NavigationMenuOption {
@@ -80,7 +82,7 @@ extension DevSoftwareEngineerUIColorPalette.UIElementComponent {
     }
     
     public enum UIComponentGroup:
-        DevSoftwareEngineerUIPalette,
+        DevUIPalette,
         UIColorPalette {
         
         enum Card:
@@ -101,7 +103,7 @@ extension DevSoftwareEngineerUIColorPalette.UIElementComponent {
     }
     
     public enum UIComponentScreen:
-        DevSoftwareEngineerUIPalette,
+        DevUIPalette,
         UIColorPalette {
         
         fileprivate enum Property {

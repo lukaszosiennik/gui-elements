@@ -3,28 +3,30 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum AppCompanySpecificUIColorPalette {
+public enum AppCompanySpecificUIColorPalette:
+    AppUIElementColorPaletteInterface {
     
     public enum UIElementComponent:
-        AppCompanySpecificUIPalette,
+        SystemUIElementComponentPaletteInterface,
+        AppUIPalette,
         UIColorPalette {}
 }
 
 extension AppCompanySpecificUIColorPalette.UIElementComponent {
         
     public enum UIComponent:
-        AppCompanySpecificUIPalette,
+        AppUIPalette,
         UIColorPalette {}
     
     public enum UIComponentSet:
-        AppCompanySpecificUIPalette,
+        AppUIPalette,
         UIColorPalette {}
     
     public enum UIComponentGroup:
-        AppCompanySpecificUIPalette,
+        AppUIPalette,
         UIColorPalette {}
     
     public enum UIComponentScreen:
-        AppCompanySpecificUIPalette,
+        AppUIPalette,
         UIColorPalette {}
 }

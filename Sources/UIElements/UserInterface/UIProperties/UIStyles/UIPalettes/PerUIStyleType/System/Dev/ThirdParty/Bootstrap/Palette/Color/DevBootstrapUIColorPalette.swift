@@ -5,7 +5,8 @@
 
 import UIKit
 
-public enum DevBootstrapUIColorPalette {
+public enum DevBootstrapUIColorPalette:
+    DevUIElementColorPaletteInterface {
     
     fileprivate enum All {
         
@@ -110,7 +111,8 @@ public enum DevBootstrapUIColorPalette {
     }
     
     public enum UIElementComponent:
-        DevBootstrapUIPalette,
+        SystemUIElementComponentPaletteInterface,
+        DevUIPalette,
         UIColorPalette {
         
         fileprivate typealias UIElementComponentPalette = UIElementComponent
@@ -169,15 +171,15 @@ public enum DevBootstrapUIColorPalette {
 extension DevBootstrapUIColorPalette.UIElementComponent {
         
     public enum UIComponent:
-        DevBootstrapUIPalette,
+        DevUIPalette,
         UIColorPalette {}
     
     public enum UIComponentSet:
-        DevBootstrapUIPalette,
+        DevUIPalette,
         UIColorPalette {}
     
     public enum UIComponentGroup:
-        DevBootstrapUIPalette,
+        DevUIPalette,
         UIColorPalette {
         
         enum Card {
@@ -265,6 +267,6 @@ extension DevBootstrapUIColorPalette.UIElementComponent {
     }
     
     public enum UIComponentScreen:
-        DevBootstrapUIPalette,
+        DevUIPalette,
         UIColorPalette {}
 }

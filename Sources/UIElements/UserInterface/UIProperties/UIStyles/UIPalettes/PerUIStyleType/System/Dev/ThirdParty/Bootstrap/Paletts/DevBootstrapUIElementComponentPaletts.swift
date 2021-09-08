@@ -4,7 +4,7 @@
 //
 
 public struct DevBootstrapUIComponentPaletts:
-    DevBootstrapUIElementPaletts {
+    DevUIElementPaletts {
     
     public typealias ColorPalette =
         DevBootstrapUIColorPalette.UIElementComponent.UIComponent
@@ -15,7 +15,7 @@ public struct DevBootstrapUIComponentPaletts:
 }
 
 public struct DevBootstrapUIComponentSetPaletts:
-    DevBootstrapUIElementPaletts {
+    DevUIElementPaletts {
     
     public typealias ColorPalette =
         DevBootstrapUIColorPalette.UIElementComponent.UIComponentSet
@@ -26,7 +26,7 @@ public struct DevBootstrapUIComponentSetPaletts:
 }
 
 public struct DevBootstrapUIComponentGroupPaletts:
-    DevBootstrapUIElementPaletts {
+    DevUIElementPaletts {
     
     public typealias ColorPalette =
         DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup
@@ -37,7 +37,7 @@ public struct DevBootstrapUIComponentGroupPaletts:
 }
 
 public struct DevBootstrapUIComponentScreenPaletts:
-    DevBootstrapUIElementPaletts {
+    DevUIElementPaletts {
     
     public typealias ColorPalette =
         DevBootstrapUIColorPalette.UIElementComponent.UIComponentScreen

@@ -3,28 +3,30 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum DevBootstrapUIElementComponentConstantPalette {
+public enum DevBootstrapUIElementComponentConstantPalette:
+    DevUIElementComponentConstantPaletteInterface {
     
     public enum UIElementComponent:
-        DevBootstrapUIPalette,
+        SystemUIElementComponentPaletteInterface,
+        DevUIPalette,
         UIElementComponentConstantPalette {}
 }
 
 extension DevBootstrapUIElementComponentConstantPalette.UIElementComponent {
         
     public enum UIComponent:
-        DevBootstrapUIPalette,
+        DevUIPalette,
         UIElementComponentConstantPalette {}
     
     public enum UIComponentSet:
-        DevBootstrapUIPalette,
+        DevUIPalette,
         UIElementComponentConstantPalette {}
     
     public enum UIComponentGroup:
-        DevBootstrapUIPalette,
+        DevUIPalette,
         UIElementComponentConstantPalette {}
     
     public enum UIComponentScreen:
-        DevBootstrapUIPalette,
+        DevUIPalette,
         UIElementComponentConstantPalette {}
 }

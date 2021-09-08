@@ -4,45 +4,45 @@
 //
 
 public struct DevSoftwareEngineerUIComponentPaletts:
-    DevSoftwareEngineerUIElementPaletts {
+    DevUIElementPaletts {
     
     public typealias ColorPalette =
-        DevSoftwareEngineerUIColorPalette.UIElementComponent.UIComponent
+        DevSoftwareEngineerUIElementColorPalette.UIElementComponent.UIComponent
     public typealias FontPalette =
-        DevSoftwareEngineerUIFontPalette.UIElementComponent.UIComponentScreen
+        DevSoftwareEngineerUIElementFontPalette.UIElementComponent.UIComponentScreen
     public typealias ConstantPalette =
         DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponent.UIComponent
 }
 
 public struct DevSoftwareEngineerUIComponentSetPaletts:
-    DevSoftwareEngineerUIElementPaletts {
+    DevUIElementPaletts {
     
     public typealias ColorPalette =
-        DevSoftwareEngineerUIColorPalette.UIElementComponent.UIComponentSet
+        DevSoftwareEngineerUIElementColorPalette.UIElementComponent.UIComponentSet
     public typealias FontPalette =
-        DevSoftwareEngineerUIFontPalette.UIElementComponent.UIComponentScreen
+        DevSoftwareEngineerUIElementFontPalette.UIElementComponent.UIComponentScreen
     public typealias ConstantPalette =
         DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponent.UIComponentSet
 }
 
 public struct DevSoftwareEngineerUIComponentGroupPaletts:
-    DevSoftwareEngineerUIElementPaletts {
+    DevUIElementPaletts {
     
     public typealias ColorPalette =
-        DevSoftwareEngineerUIColorPalette.UIElementComponent.UIComponentGroup
+        DevSoftwareEngineerUIElementColorPalette.UIElementComponent.UIComponentGroup
     public typealias FontPalette =
-        DevSoftwareEngineerUIFontPalette.UIElementComponent.UIComponentScreen
+        DevSoftwareEngineerUIElementFontPalette.UIElementComponent.UIComponentScreen
     public typealias ConstantPalette =
         DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
 }
 
 public struct DevSoftwareEngineerUIComponentScreenPaletts:
-    DevSoftwareEngineerUIElementPaletts {
+    DevUIElementPaletts {
     
     public typealias ColorPalette =
-        DevSoftwareEngineerUIColorPalette.UIElementComponent.UIComponentScreen
+        DevSoftwareEngineerUIElementColorPalette.UIElementComponent.UIComponentScreen
     public typealias FontPalette =
-        DevSoftwareEngineerUIFontPalette.UIElementComponent.UIComponentScreen
+        DevSoftwareEngineerUIElementFontPalette.UIElementComponent.UIComponentScreen
     public typealias ConstantPalette =
         DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
 }

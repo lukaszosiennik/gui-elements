@@ -4,7 +4,7 @@
 //
 
 public struct AppCompanySpecificUIComponentPaletts:
-    AppCompanySpecificUIElementPaletts {
+    AppUIElementPaletts {
     
     public typealias ColorPalette =
         AppCompanySpecificUIColorPalette.UIElementComponent.UIComponent
@@ -15,7 +15,7 @@ public struct AppCompanySpecificUIComponentPaletts:
 }
 
 public struct AppCompanySpecificUIComponentSetPaletts:
-    AppCompanySpecificUIElementPaletts {
+    AppUIElementPaletts {
     
     public typealias ColorPalette =
         AppCompanySpecificUIColorPalette.UIElementComponent.UIComponentSet
@@ -26,7 +26,7 @@ public struct AppCompanySpecificUIComponentSetPaletts:
 }
 
 public struct AppCompanySpecificUIComponentGroupPaletts:
-    AppCompanySpecificUIElementPaletts {
+    AppUIElementPaletts {
     
     public typealias ColorPalette =
         AppCompanySpecificUIColorPalette.UIElementComponent.UIComponentGroup
@@ -37,7 +37,7 @@ public struct AppCompanySpecificUIComponentGroupPaletts:
 }
 
 public struct AppCompanySpecificUIComponentScreenPaletts:
-    AppCompanySpecificUIElementPaletts {
+    AppUIElementPaletts {
     
     public typealias ColorPalette =
         AppCompanySpecificUIColorPalette.UIElementComponent.UIComponentScreen
