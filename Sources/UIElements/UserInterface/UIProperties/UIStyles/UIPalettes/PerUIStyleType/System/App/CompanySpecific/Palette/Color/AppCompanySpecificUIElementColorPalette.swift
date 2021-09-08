@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum AppCompanySpecificUIColorPalette:
+public enum AppCompanySpecificUIElementColorPalette:
     AppUIElementColorPaletteInterface {
     
     public enum UIElementComponent:
@@ -12,7 +12,7 @@ public enum AppCompanySpecificUIColorPalette:
         UIColorPalette {}
 }
 
-extension AppCompanySpecificUIColorPalette.UIElementComponent {
+extension AppCompanySpecificUIElementColorPalette.UIElementComponent {
         
     public enum UIComponent:
         AppUIPalette,

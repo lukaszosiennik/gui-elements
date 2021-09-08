@@ -5,7 +5,7 @@
 
 import UIKit
 
-public enum DevBootstrapUIColorPalette:
+public enum DevBootstrapUIElementColorPalette:
     DevUIElementColorPaletteInterface {
     
     fileprivate enum All {
@@ -168,7 +168,7 @@ public enum DevBootstrapUIColorPalette:
     }
 }
 
-extension DevBootstrapUIColorPalette.UIElementComponent {
+extension DevBootstrapUIElementColorPalette.UIElementComponent {
         
     public enum UIComponent:
         DevUIPalette,

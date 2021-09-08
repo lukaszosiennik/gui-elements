@@ -3,7 +3,7 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum AppCompanySpecificUIFontPalette:
+public enum AppCompanySpecificUIElementFontPalette:
     AppUIElementFontPaletteInterface {
     
     public enum UIElementComponent:
@@ -12,7 +12,7 @@ public enum AppCompanySpecificUIFontPalette:
         UIFontPalette {}
 }
 
-extension AppCompanySpecificUIFontPalette.UIElementComponent {
+extension AppCompanySpecificUIElementFontPalette.UIElementComponent {
         
     public enum UIComponent:
         AppUIPalette,

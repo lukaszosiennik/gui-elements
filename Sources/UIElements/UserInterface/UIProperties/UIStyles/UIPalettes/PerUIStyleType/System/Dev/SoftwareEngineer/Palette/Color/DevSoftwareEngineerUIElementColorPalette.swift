@@ -88,11 +88,11 @@ extension DevSoftwareEngineerUIElementColorPalette.UIElementComponent {
         enum Card:
             CardUIComponentGroupColorPalette {
             
-            static let titleBackground: UIColor = DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup.Card.Light.titleBackground
-            static let titleText: UIColor = DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup.Card.Light.titleText
-            static let bodyBackground: UIColor = DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup.Card.Light.bodyBackground
-            static let border: UIColor = DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup.Card.Light.border
-            static let separator: UIColor = DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup.Card.Light.separator
+            static let titleBackground: UIColor = DevBootstrapUIElementColorPalette.UIElementComponent.UIComponentGroup.Card.Light.titleBackground
+            static let titleText: UIColor = DevBootstrapUIElementColorPalette.UIElementComponent.UIComponentGroup.Card.Light.titleText
+            static let bodyBackground: UIColor = DevBootstrapUIElementColorPalette.UIElementComponent.UIComponentGroup.Card.Light.bodyBackground
+            static let border: UIColor = DevBootstrapUIElementColorPalette.UIElementComponent.UIComponentGroup.Card.Light.border
+            static let separator: UIColor = DevBootstrapUIElementColorPalette.UIElementComponent.UIComponentGroup.Card.Light.separator
         }
         
         enum NavigationMenu {

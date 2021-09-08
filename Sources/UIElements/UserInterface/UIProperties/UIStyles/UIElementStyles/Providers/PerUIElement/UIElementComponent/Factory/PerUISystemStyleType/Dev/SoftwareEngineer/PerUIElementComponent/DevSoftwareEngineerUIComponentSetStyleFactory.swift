@@ -4,7 +4,7 @@
 //
 
 public final class DevSoftwareEngineerUIComponentSetStyleFactory:
-    UIElementComponentTypeStyleFactoryBasis<
+    UIComponentSetTypeStyleFactory<
         DevSoftwareEngineerUIComponentSetPaletts
     >,
     UIComponentSetStyleFactoryInterface {

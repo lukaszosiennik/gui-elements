@@ -3,7 +3,10 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public class UIElementComponentTypeStyleFactory:
+public class UIElementComponentTypeStyleFactory<
+    Paletts:
+        SystemUIElementPalettsInterface
+>:
     UIElementComponentTypeStyleFactoryInterface {
     
     public let styleType: UIStyleType

@@ -4,7 +4,7 @@
 //
 
 public final class DevBootstrapUIComponentSetStyleFactory:
-    UIElementComponentTypeStyleFactoryBasis<
+    UIComponentSetTypeStyleFactory<
         DevBootstrapUIComponentSetPaletts
     >,
     UIComponentSetStyleFactoryInterface {

@@ -4,7 +4,7 @@
 //
 
 public final class AppCompanySpecificUIComponentStyleFactory:
-    UIElementComponentTypeStyleFactoryBasis<
+    UIComponentTypeStyleFactory<
         AppCompanySpecificUIComponentPaletts
     >,
     UIComponentStyleFactoryInterface {

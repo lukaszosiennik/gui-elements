@@ -4,45 +4,33 @@
 //
 
 public struct DevBootstrapUIComponentPaletts:
-    DevUIElementPaletts {
+    DevUIComponentPalettsInterface {
     
-    public typealias ColorPalette =
-        DevBootstrapUIColorPalette.UIElementComponent.UIComponent
-    public typealias FontPalette =
-        DevBootstrapUIFontPalette.UIElementComponent.UIComponent
-    public typealias ConstantPalette =
-        DevBootstrapUIElementComponentConstantPalette.UIElementComponent.UIComponent
+    public typealias SystemUIElementColorPalette = DevBootstrapUIElementColorPalette
+    public typealias SystemUIElementFontPalette = DevBootstrapUIElementFontPalette
+    public typealias SystemUIElementComponentConstantPalette = DevBootstrapUIElementComponentConstantPalette
 }
 
 public struct DevBootstrapUIComponentSetPaletts:
-    DevUIElementPaletts {
+    DevUIComponentSetPalettsInterface {
     
-    public typealias ColorPalette =
-        DevBootstrapUIColorPalette.UIElementComponent.UIComponentSet
-    public typealias FontPalette =
-        DevBootstrapUIFontPalette.UIElementComponent.UIComponent
-    public typealias ConstantPalette =
-        DevBootstrapUIElementComponentConstantPalette.UIElementComponent.UIComponentSet
+    public typealias SystemUIElementColorPalette = DevBootstrapUIElementColorPalette
+    public typealias SystemUIElementFontPalette = DevBootstrapUIElementFontPalette
+    public typealias SystemUIElementComponentConstantPalette = DevBootstrapUIElementComponentConstantPalette
 }
 
 public struct DevBootstrapUIComponentGroupPaletts:
-    DevUIElementPaletts {
+    DevUIComponentGroupPalettsInterface {
     
-    public typealias ColorPalette =
-        DevBootstrapUIColorPalette.UIElementComponent.UIComponentGroup
-    public typealias FontPalette =
-        DevBootstrapUIFontPalette.UIElementComponent.UIComponent
-    public typealias ConstantPalette =
-        DevBootstrapUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
+    public typealias SystemUIElementColorPalette = DevBootstrapUIElementColorPalette
+    public typealias SystemUIElementFontPalette = DevBootstrapUIElementFontPalette
+    public typealias SystemUIElementComponentConstantPalette = DevBootstrapUIElementComponentConstantPalette
 }
 
 public struct DevBootstrapUIComponentScreenPaletts:
-    DevUIElementPaletts {
+    DevUIComponentScreenPalettsInterface {
     
-    public typealias ColorPalette =
-        DevBootstrapUIColorPalette.UIElementComponent.UIComponentScreen
-    public typealias FontPalette =
-        DevBootstrapUIFontPalette.UIElementComponent.UIComponent
-    public typealias ConstantPalette =
-        DevBootstrapUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
+    public typealias SystemUIElementColorPalette = DevBootstrapUIElementColorPalette
+    public typealias SystemUIElementFontPalette = DevBootstrapUIElementFontPalette
+    public typealias SystemUIElementComponentConstantPalette = DevBootstrapUIElementComponentConstantPalette
 }

@@ -3,7 +3,7 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum DevBootstrapUIFontPalette:
+public enum DevBootstrapUIElementFontPalette:
     DevUIElementFontPaletteInterface {
     
     public enum UIElementComponent:
@@ -12,7 +12,7 @@ public enum DevBootstrapUIFontPalette:
         UIFontPalette {}
 }
 
-extension DevBootstrapUIFontPalette.UIElementComponent {
+extension DevBootstrapUIElementFontPalette.UIElementComponent {
         
     public enum UIComponent:
         DevUIPalette,

@@ -4,46 +4,33 @@
 //
 
 public struct AppCompanySpecificUIComponentPaletts:
-    AppUIElementPaletts {
+    AppUIComponentPalettsInterface {
     
-    public typealias ColorPalette =
-        AppCompanySpecificUIColorPalette.UIElementComponent.UIComponent
-    public typealias FontPalette =
-        AppCompanySpecificUIFontPalette.UIElementComponent.UIComponent
-    public typealias ConstantPalette =
-        AppCompanySpecificUIElementComponentConstantPalette.UIElementComponent.UIComponent
+    public typealias SystemUIElementColorPalette = AppCompanySpecificUIElementColorPalette
+    public typealias SystemUIElementFontPalette = AppCompanySpecificUIElementFontPalette
+    public typealias SystemUIElementComponentConstantPalette = AppCompanySpecificUIElementComponentConstantPalette
 }
 
 public struct AppCompanySpecificUIComponentSetPaletts:
-    AppUIElementPaletts {
+    AppUIComponentSetPalettsInterface {
     
-    public typealias ColorPalette =
-        AppCompanySpecificUIColorPalette.UIElementComponent.UIComponentSet
-    public typealias FontPalette =
-        AppCompanySpecificUIFontPalette.UIElementComponent.UIComponent
-    public typealias ConstantPalette =
-        AppCompanySpecificUIElementComponentConstantPalette.UIElementComponent.UIComponentSet
+    public typealias SystemUIElementColorPalette = AppCompanySpecificUIElementColorPalette
+    public typealias SystemUIElementFontPalette = AppCompanySpecificUIElementFontPalette
+    public typealias SystemUIElementComponentConstantPalette = AppCompanySpecificUIElementComponentConstantPalette
 }
 
 public struct AppCompanySpecificUIComponentGroupPaletts:
-    AppUIElementPaletts {
+    AppUIComponentGroupPalettsInterface {
     
-    public typealias ColorPalette =
-        AppCompanySpecificUIColorPalette.UIElementComponent.UIComponentGroup
-    public typealias FontPalette =
-        AppCompanySpecificUIFontPalette.UIElementComponent.UIComponent
-    public typealias ConstantPalette =
-        AppCompanySpecificUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
+    public typealias SystemUIElementColorPalette = AppCompanySpecificUIElementColorPalette
+    public typealias SystemUIElementFontPalette = AppCompanySpecificUIElementFontPalette
+    public typealias SystemUIElementComponentConstantPalette = AppCompanySpecificUIElementComponentConstantPalette
 }
 
 public struct AppCompanySpecificUIComponentScreenPaletts:
-    AppUIElementPaletts {
+    AppUIComponentScreenPalettsInterface {
     
-    public typealias ColorPalette =
-        AppCompanySpecificUIColorPalette.UIElementComponent.UIComponentScreen
-    public typealias FontPalette =
-        AppCompanySpecificUIFontPalette.UIElementComponent.UIComponent
-    public typealias ConstantPalette =
-        AppCompanySpecificUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
+    public typealias SystemUIElementColorPalette = AppCompanySpecificUIElementColorPalette
+    public typealias SystemUIElementFontPalette = AppCompanySpecificUIElementFontPalette
+    public typealias SystemUIElementComponentConstantPalette = AppCompanySpecificUIElementComponentConstantPalette
 }
-

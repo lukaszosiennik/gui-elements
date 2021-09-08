@@ -4,7 +4,7 @@
 //
 
 public final class DevBootstrapUIComponentScreenStyleFactory:
-    UIElementComponentTypeStyleFactoryBasis<
+    UIComponentScreenTypeStyleFactory<
         DevBootstrapUIComponentScreenPaletts
     >,
     UIComponentScreenStyleFactoryInterface {

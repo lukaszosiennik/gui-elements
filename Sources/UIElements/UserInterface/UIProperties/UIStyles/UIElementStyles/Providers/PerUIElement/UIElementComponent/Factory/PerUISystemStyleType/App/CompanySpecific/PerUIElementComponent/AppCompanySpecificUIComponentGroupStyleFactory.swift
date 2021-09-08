@@ -4,7 +4,7 @@
 //
 
 public final class AppCompanySpecificUIComponentGroupStyleFactory:
-    UIElementComponentTypeStyleFactoryBasis<
+    UIComponentGroupTypeStyleFactory<
         AppCompanySpecificUIComponentGroupPaletts
     >,
     UIComponentGroupStyleFactoryInterface {
