@@ -83,6 +83,7 @@ public class CardUIComponentGroupBasis<
                             return nil
                         }
                         
+                        print("op-\(look.title?.textColor)")
                         return look.title?.textColor
                     }()
                 )
