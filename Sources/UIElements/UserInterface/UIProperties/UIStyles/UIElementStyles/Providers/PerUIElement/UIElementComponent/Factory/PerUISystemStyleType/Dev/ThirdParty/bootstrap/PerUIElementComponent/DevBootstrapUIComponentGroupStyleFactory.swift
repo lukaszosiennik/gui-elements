@@ -20,19 +20,19 @@ public final class DevBootstrapUIComponentGroupStyleFactory:
                         border: .init(
                             corners: .rounded,
                             width: ConstantPalette.Card.UILook.borderWidth_1,
-                            color: ColorPalette.Card.Dark.border
+                            color: ColorPalette.Card.Success.border
                         ),
                         separator: .init(
                             width: ConstantPalette.Card.UILook.borderWidth_1,
-                            color: ColorPalette.Card.Dark.separator
+                            color: ColorPalette.Card.Success.separator
                         )
                     ),
                     title: .init(
-                        backgroundColor: ColorPalette.Card.Dark.titleBackground,
-                        textColor: ColorPalette.Card.Dark.titleText
+                        backgroundColor: ColorPalette.Card.Success.titleBackground,
+                        textColor: ColorPalette.Card.Success.titleText
                     ),
                     body: .init(
-                        backgroundColor: ColorPalette.Card.Dark.bodyBackground
+                        backgroundColor: ColorPalette.Card.Success.bodyBackground
                     )
                 )),
                 layoutParams: .init(
