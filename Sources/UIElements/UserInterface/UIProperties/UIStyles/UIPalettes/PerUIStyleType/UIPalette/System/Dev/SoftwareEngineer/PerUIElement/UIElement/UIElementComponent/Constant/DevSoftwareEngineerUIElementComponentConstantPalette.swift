@@ -13,7 +13,6 @@ public enum DevSoftwareEngineerUIElementComponentConstantPalette:
         static let value_0: CGFloat = DefaultUIElementComponentConstantPalette.All.value_0
         static let value_1: CGFloat = 1
         static let value_8: CGFloat = 8
-        static let value_12: CGFloat = 12
         static let value_16: CGFloat = DefaultUIElementComponentConstantPalette.All.value_16
         static let value_50: CGFloat = 50
     }
@@ -51,11 +50,6 @@ public enum DevSoftwareEngineerUIElementComponentConstantPalette:
                 
                 enum Margin {
                     
-                    static let top_12: CGFloat = All.value_12
-                    static let bottom_12: CGFloat = All.value_12
-                    
-                    static let left_16: CGFloat = All.value_16
-                    static let right_16: CGFloat = All.value_16
                     static let top_16: CGFloat = All.value_16
                     static let bottom_16: CGFloat = All.value_16
                 }
@@ -111,18 +105,18 @@ extension DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponen
             
             enum UILook {
                 
-                static let borderWidth_1: CGFloat = UILookPalette.Property.BorderWidth.value_1
+                static let borderWidth_1: CGFloat = DevBootstrapUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup.Card.UILook.borderWidth_1
             }
             
             enum UILayoutParams {
                 
-                static let margin_top_12: CGFloat = UILayoutParamsPalette.Property.Margin.top_12
-                static let margin_bottom_12: CGFloat = UILayoutParamsPalette.Property.Margin.bottom_12
+                static let margin_top_12: CGFloat = DevBootstrapUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup.Card.UILayoutParams.margin_top_12
+                static let margin_bottom_12: CGFloat = DevBootstrapUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup.Card.UILayoutParams.margin_bottom_12
                 
-                static let margin_left_16: CGFloat = UILayoutParamsPalette.Property.Margin.left_16
-                static let margin_right_16: CGFloat = UILayoutParamsPalette.Property.Margin.right_16
-                static let margin_top_16: CGFloat = UILayoutParamsPalette.Property.Margin.top_16
-                static let margin_bottom_16: CGFloat = UILayoutParamsPalette.Property.Margin.bottom_16
+                static let margin_left_16: CGFloat = DevBootstrapUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup.Card.UILayoutParams.margin_left_16
+                static let margin_right_16: CGFloat = DevBootstrapUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup.Card.UILayoutParams.margin_right_16
+                static let margin_top_16: CGFloat = DevBootstrapUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup.Card.UILayoutParams.margin_top_16
+                static let margin_bottom_16: CGFloat = DevBootstrapUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup.Card.UILayoutParams.margin_bottom_16
             }
         }
         
