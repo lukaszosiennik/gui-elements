@@ -20,8 +20,15 @@ public final class DevBootstrapUIComponentStyleFactory:
     public func label() -> UIElementComponentStyle<
         LabelUIComponentStyleProperties
     > {
-        return .default(
-            styleType: styleType
+        return .init(
+            type: styleType,
+            properties: .init(
+                lookType: .system(.init(
+                    textColor: ColorPalette.Label.text_black_212529
+                )),
+                lookParams: .default,
+                layoutParams: .init()
+            )
         )
     }
     

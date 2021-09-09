@@ -172,7 +172,13 @@ extension DevBootstrapUIElementComponentColorPalette.UIElementComponent {
         
     public enum UIComponent:
         DevUIPalette,
-        UIElementComponentColorPalette {}
+        UIElementComponentColorPalette {
+        
+        enum Label {
+            
+            static let text_black_212529: UIColor = Property.Text.black_212529
+        }
+    }
     
     public enum UIComponentSet:
         DevUIPalette,
