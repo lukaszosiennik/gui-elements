@@ -5,8 +5,8 @@
 
 public final class AppCompanySpecificUIElementComponentStyleFactory:
     UIElementComponentStyleFactoryBasis<
-        AppCompanySpecificUIElementColorPalette.UIElementComponent,
-        AppCompanySpecificUIElementFontPalette.UIElementComponent,
+        AppCompanySpecificUIElementComponentColorPalette.UIElementComponent,
+        AppCompanySpecificUIElementComponentFontPalette.UIElementComponent,
         AppCompanySpecificUIElementComponentConstantPalette.UIElementComponent
     > {
     

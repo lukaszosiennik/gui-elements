@@ -4,8 +4,8 @@
 //
 
 public class UIElementComponentStyleFactoryBasis<
-    ColorPalette: UIColorPalette,
-    FontPalette: UIFontPalette,
+    ColorPalette: UIElementComponentColorPalette,
+    FontPalette: UIElementComponentFontPalette,
     ConstantPalette: UIElementComponentConstantPalette
 >:
     UIElementComponentStyleFactoryInterface {
