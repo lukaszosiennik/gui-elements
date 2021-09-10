@@ -18,9 +18,11 @@ public enum DevBootstrapUIElementComponentConstantPalette:
     public enum UIElementComponent:
         SystemUIElementComponentPaletteInterface {
         
-        fileprivate typealias UIElementComponentPalette = UIElementComponent
+        fileprivate typealias UIElementComponentPalette =
+            UIElementComponent
         
-        fileprivate typealias UILookPalette = UILook
+        fileprivate typealias UILookPalette =
+            UILook
         fileprivate enum UILook {
             
             enum Property {
@@ -32,10 +34,12 @@ public enum DevBootstrapUIElementComponentConstantPalette:
             }
         }
         
-        fileprivate typealias UILookParamsPalette = UILookParams
+        fileprivate typealias UILookParamsPalette =
+            UILookParams
         fileprivate enum UILookParams {}
         
-        fileprivate typealias UILayoutParamsPalette = UILayoutParams
+        fileprivate typealias UILayoutParamsPalette =
+            UILayoutParams
         fileprivate enum UILayoutParams {
             
             enum Property {

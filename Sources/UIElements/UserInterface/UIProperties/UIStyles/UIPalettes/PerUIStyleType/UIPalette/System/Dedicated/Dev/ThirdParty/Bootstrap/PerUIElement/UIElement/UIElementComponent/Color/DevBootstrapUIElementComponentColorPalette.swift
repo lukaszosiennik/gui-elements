@@ -113,7 +113,8 @@ public enum DevBootstrapUIElementComponentColorPalette:
     public enum UIElementComponent:
         SystemUIElementComponentPaletteInterface {
         
-        fileprivate typealias UIElementComponentPalette = UIElementComponent
+        fileprivate typealias UIElementComponentPalette =
+            UIElementComponent
         
         fileprivate enum Property {
             

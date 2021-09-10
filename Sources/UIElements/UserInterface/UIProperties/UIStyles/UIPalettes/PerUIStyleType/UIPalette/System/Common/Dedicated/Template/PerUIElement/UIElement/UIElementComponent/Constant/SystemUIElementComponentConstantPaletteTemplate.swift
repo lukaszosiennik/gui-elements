@@ -11,9 +11,11 @@ public enum SystemUIElementComponentConstantPaletteTemplate:
     public enum UIElementComponent:
         SystemUIElementComponentPaletteInterface {
         
-        fileprivate typealias UIElementComponentPalette = UIElementComponent
+        fileprivate typealias UIElementComponentPalette =
+            UIElementComponent
         
-        fileprivate typealias UILookPalette = UILook
+        fileprivate typealias UILookPalette =
+            UILook
         fileprivate enum UILook {
             
             enum Property {
@@ -24,7 +26,8 @@ public enum SystemUIElementComponentConstantPaletteTemplate:
             }
         }
         
-        fileprivate typealias UILookParamsPalette = UILookParams
+        fileprivate typealias UILookParamsPalette =
+            UILookParams
         fileprivate enum UILookParams {
             
             enum Property {
@@ -39,7 +42,8 @@ public enum SystemUIElementComponentConstantPaletteTemplate:
             }
         }
         
-        fileprivate typealias UILayoutParamsPalette = UILayoutParams
+        fileprivate typealias UILayoutParamsPalette =
+            UILayoutParams
         fileprivate enum UILayoutParams {
             
             enum Property {

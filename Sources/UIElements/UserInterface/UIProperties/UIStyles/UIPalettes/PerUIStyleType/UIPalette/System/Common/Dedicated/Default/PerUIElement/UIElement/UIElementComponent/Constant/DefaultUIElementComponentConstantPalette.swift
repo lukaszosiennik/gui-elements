@@ -19,7 +19,8 @@ public enum DefaultUIElementComponentConstantPalette:
     public enum UIElementComponent:
         SystemUIElementComponentPaletteInterface {
         
-        fileprivate typealias UILookParamsPalette = UILookParams
+        fileprivate typealias UILookParamsPalette =
+            UILookParams
         fileprivate enum UILookParams {
             
             enum Property {
@@ -37,7 +38,8 @@ public enum DefaultUIElementComponentConstantPalette:
             }
         }
         
-        fileprivate typealias UILayoutParamsPalette = UILayoutParams
+        fileprivate typealias UILayoutParamsPalette =
+            UILayoutParams
         fileprivate enum UILayoutParams {
             
             enum Property {
