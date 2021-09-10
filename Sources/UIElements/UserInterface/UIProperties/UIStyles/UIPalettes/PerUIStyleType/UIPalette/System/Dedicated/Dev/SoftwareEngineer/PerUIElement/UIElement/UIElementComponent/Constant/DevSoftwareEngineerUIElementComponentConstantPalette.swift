@@ -79,12 +79,12 @@ public enum DevSoftwareEngineerUIElementComponentConstantPalette:
 extension DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponent {
         
     public enum UIComponent:
-        DevUIPalette,
-        UIElementComponentConstantPalette {}
+        UIElementComponentConstantPalette,
+        DevUIPalette {}
     
     public enum UIComponentSet:
-        DevUIPalette,
-        UIElementComponentConstantPalette {
+        UIElementComponentConstantPalette,
+        DevUIPalette {
         
         enum NavigationMenuOption {
             
@@ -96,8 +96,8 @@ extension DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponen
     }
     
     public enum UIComponentGroup:
-        DevUIPalette,
-        UIElementComponentConstantPalette {
+        UIElementComponentConstantPalette,
+        DevUIPalette {
         
         enum Card {
             
@@ -131,6 +131,6 @@ extension DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponen
     }
     
     public enum UIComponentScreen:
-        DevUIPalette,
-        UIElementComponentConstantPalette {}
+        UIElementComponentConstantPalette,
+        DevUIPalette {}
 }

@@ -5,7 +5,8 @@
 
 import UIKit
 
-public enum DefaultUIElementComponentConstantPalette {
+public enum DefaultUIElementComponentConstantPalette:
+    SystemUIElementComponentConstantPaletteInterface {
     
     enum All {
         
@@ -15,7 +16,8 @@ public enum DefaultUIElementComponentConstantPalette {
         static let value_100: CGFloat = 100
     }
     
-    public enum UIElementComponent {
+    public enum UIElementComponent:
+        SystemUIElementComponentPaletteInterface {
         
         fileprivate typealias UILookParamsPalette = UILookParams
         fileprivate enum UILookParams {
@@ -73,8 +75,8 @@ public enum DefaultUIElementComponentConstantPalette {
 extension DefaultUIElementComponentConstantPalette.UIElementComponent {
     
     public enum UIComponent:
-        DefaultUIPalette,
-        UIElementComponentConstantPalette {
+        UIElementComponentConstantPalette,
+        DefaultUIPalette {
         
         enum Placeholder {
             
@@ -86,12 +88,12 @@ extension DefaultUIElementComponentConstantPalette.UIElementComponent {
     }
     
     public enum UIComponentSet:
-        DefaultUIPalette,
-        UIElementComponentConstantPalette {}
+        UIElementComponentConstantPalette,
+        DefaultUIPalette {}
     
     public enum UIComponentGroup:
-        DefaultUIPalette,
-        UIElementComponentConstantPalette {
+        UIElementComponentConstantPalette,
+        DefaultUIPalette {
         
         enum NavigationMenu {
             
@@ -110,8 +112,8 @@ extension DefaultUIElementComponentConstantPalette.UIElementComponent {
     }
     
     public enum UIComponentScreen:
-        DefaultUIPalette,
-        UIElementComponentConstantPalette {
+        UIElementComponentConstantPalette,
+        DefaultUIPalette {
         
         enum Information {
             

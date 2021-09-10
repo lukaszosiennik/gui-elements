@@ -169,8 +169,8 @@ public enum DevBootstrapUIElementComponentColorPalette:
 extension DevBootstrapUIElementComponentColorPalette.UIElementComponent {
         
     public enum UIComponent:
-        DevUIPalette,
-        UIElementComponentColorPalette {
+        UIElementComponentColorPalette,
+        DevUIPalette {
         
         enum Label {
             
@@ -179,12 +179,12 @@ extension DevBootstrapUIElementComponentColorPalette.UIElementComponent {
     }
     
     public enum UIComponentSet:
-        DevUIPalette,
-        UIElementComponentColorPalette {}
+        UIElementComponentColorPalette,
+        DevUIPalette {}
     
     public enum UIComponentGroup:
-        DevUIPalette,
-        UIElementComponentColorPalette {
+        UIElementComponentColorPalette,
+        DevUIPalette {
         
         enum Card {
             
@@ -271,6 +271,6 @@ extension DevBootstrapUIElementComponentColorPalette.UIElementComponent {
     }
     
     public enum UIComponentScreen:
-        DevUIPalette,
-        UIElementComponentColorPalette {}
+        UIElementComponentColorPalette,
+        DevUIPalette {}
 }

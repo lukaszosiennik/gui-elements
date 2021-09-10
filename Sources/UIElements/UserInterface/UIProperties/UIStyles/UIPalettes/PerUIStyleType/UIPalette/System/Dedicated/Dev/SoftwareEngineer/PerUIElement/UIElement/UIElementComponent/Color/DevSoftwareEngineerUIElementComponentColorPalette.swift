@@ -52,8 +52,8 @@ public enum DevSoftwareEngineerUIElementComponentColorPalette:
 extension DevSoftwareEngineerUIElementComponentColorPalette.UIElementComponent {
         
     public enum UIComponent:
-        DevUIPalette,
-        UIElementComponentColorPalette {
+        UIElementComponentColorPalette,
+        DevUIPalette {
         
         enum Button {
             
@@ -68,8 +68,8 @@ extension DevSoftwareEngineerUIElementComponentColorPalette.UIElementComponent {
     }
     
     public enum UIComponentSet:
-        DevUIPalette,
-        UIElementComponentColorPalette {
+        UIElementComponentColorPalette,
+        DevUIPalette {
         
         enum NavigationMenuOption {
             
@@ -80,8 +80,8 @@ extension DevSoftwareEngineerUIElementComponentColorPalette.UIElementComponent {
     }
     
     public enum UIComponentGroup:
-        DevUIPalette,
-        UIElementComponentColorPalette {
+        UIElementComponentColorPalette,
+        DevUIPalette {
         
         enum Card:
             CardUIComponentGroupColorPalette {
@@ -101,8 +101,8 @@ extension DevSoftwareEngineerUIElementComponentColorPalette.UIElementComponent {
     }
     
     public enum UIComponentScreen:
-        DevUIPalette,
-        UIElementComponentColorPalette {
+        UIElementComponentColorPalette,
+        DevUIPalette {
         
         fileprivate enum Property {
             

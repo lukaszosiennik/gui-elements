@@ -4,4 +4,4 @@
 //
 
 public protocol DefaultUIPalette:
-    UIPalette {}
+    SystemUIPalette {}

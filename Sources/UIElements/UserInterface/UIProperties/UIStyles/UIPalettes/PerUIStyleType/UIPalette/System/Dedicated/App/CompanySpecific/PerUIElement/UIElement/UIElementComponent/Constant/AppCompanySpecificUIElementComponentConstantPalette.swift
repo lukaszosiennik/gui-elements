@@ -13,18 +13,18 @@ public enum AppCompanySpecificUIElementComponentConstantPalette:
 extension AppCompanySpecificUIElementComponentConstantPalette.UIElementComponent {
         
     public enum UIComponent:
-        AppUIPalette,
-        UIElementComponentConstantPalette {}
+        UIElementComponentConstantPalette,
+        AppUIPalette {}
     
     public enum UIComponentSet:
-        AppUIPalette,
-        UIElementComponentConstantPalette {}
+        UIElementComponentConstantPalette,
+        AppUIPalette {}
     
     public enum UIComponentGroup:
-        AppUIPalette,
-        UIElementComponentConstantPalette {}
+        UIElementComponentConstantPalette,
+        AppUIPalette {}
     
     public enum UIComponentScreen:
-        AppUIPalette,
-        UIElementComponentConstantPalette {}
+        UIElementComponentConstantPalette,
+        AppUIPalette {}
 }

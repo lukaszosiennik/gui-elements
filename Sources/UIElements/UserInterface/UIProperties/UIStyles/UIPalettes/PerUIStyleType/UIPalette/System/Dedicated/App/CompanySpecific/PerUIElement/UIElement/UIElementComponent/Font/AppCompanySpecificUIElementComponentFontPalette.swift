@@ -13,18 +13,18 @@ public enum AppCompanySpecificUIElementComponentFontPalette:
 extension AppCompanySpecificUIElementComponentFontPalette.UIElementComponent {
         
     public enum UIComponent:
-        AppUIPalette,
-        UIElementComponentFontPalette {}
+        UIElementComponentFontPalette,
+        AppUIPalette {}
     
     public enum UIComponentSet:
-        AppUIPalette,
-        UIElementComponentFontPalette {}
+        UIElementComponentFontPalette,
+        AppUIPalette {}
     
     public enum UIComponentGroup:
-        AppUIPalette,
-        UIElementComponentFontPalette {}
+        UIElementComponentFontPalette,
+        AppUIPalette {}
     
     public enum UIComponentScreen:
-        AppUIPalette,
-        UIElementComponentFontPalette {}
+        UIElementComponentFontPalette,
+        AppUIPalette {}
 }

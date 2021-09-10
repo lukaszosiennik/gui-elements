@@ -13,18 +13,18 @@ public enum DevSoftwareEngineerUIElementComponentFontPalette:
 extension DevSoftwareEngineerUIElementComponentFontPalette.UIElementComponent {
         
     public enum UIComponent:
-        DevUIPalette,
-        UIElementComponentFontPalette {}
+        UIElementComponentFontPalette,
+        DevUIPalette {}
     
     public enum UIComponentSet:
-        DevUIPalette,
-        UIElementComponentFontPalette {}
+        UIElementComponentFontPalette,
+        DevUIPalette {}
     
     public enum UIComponentGroup:
-        DevUIPalette,
-        UIElementComponentFontPalette {}
+        UIElementComponentFontPalette,
+        DevUIPalette {}
     
     public enum UIComponentScreen:
-        DevUIPalette,
-        UIElementComponentFontPalette {}
+        UIElementComponentFontPalette,
+        DevUIPalette {}
 }

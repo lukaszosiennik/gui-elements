@@ -58,16 +58,16 @@ public enum DevBootstrapUIElementComponentConstantPalette:
 extension DevBootstrapUIElementComponentConstantPalette.UIElementComponent {
         
     public enum UIComponent:
-        DevUIPalette,
-        UIElementComponentConstantPalette {}
+        UIElementComponentConstantPalette,
+        DevUIPalette {}
     
     public enum UIComponentSet:
-        DevUIPalette,
-        UIElementComponentConstantPalette {}
+        UIElementComponentConstantPalette,
+        DevUIPalette {}
     
     public enum UIComponentGroup:
-        DevUIPalette,
-        UIElementComponentConstantPalette {
+        UIElementComponentConstantPalette,
+        DevUIPalette {
         
         enum Card {
             
@@ -90,6 +90,6 @@ extension DevBootstrapUIElementComponentConstantPalette.UIElementComponent {
     }
     
     public enum UIComponentScreen:
-        DevUIPalette,
-        UIElementComponentConstantPalette {}
+        UIElementComponentConstantPalette,
+        DevUIPalette {}
 }
