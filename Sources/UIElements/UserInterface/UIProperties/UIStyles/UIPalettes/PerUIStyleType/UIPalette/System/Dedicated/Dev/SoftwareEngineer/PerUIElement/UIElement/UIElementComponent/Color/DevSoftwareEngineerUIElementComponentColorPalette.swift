@@ -21,9 +21,7 @@ public enum DevSoftwareEngineerUIElementComponentColorPalette:
     }
     
     public enum UIElementComponent:
-        SystemUIElementComponentPaletteInterface,
-        DevUIPalette,
-        UIElementComponentColorPalette {
+        SystemUIElementComponentPaletteInterface {
         
         fileprivate typealias UIElementComponentPalette = UIElementComponent
         

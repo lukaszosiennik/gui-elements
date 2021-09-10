@@ -4,11 +4,7 @@
 //
 
 public final class AppCompanySpecificUIElementComponentStyleFactory:
-    UIElementComponentStyleFactoryBasis<
-        AppCompanySpecificUIElementComponentColorPalette.UIElementComponent,
-        AppCompanySpecificUIElementComponentFontPalette.UIElementComponent,
-        AppCompanySpecificUIElementComponentConstantPalette.UIElementComponent
-    > {
+    UIElementComponentStyleFactoryBasis {
     
     init() {
         super.init(

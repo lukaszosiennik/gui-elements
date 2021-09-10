@@ -3,11 +3,7 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public class UIElementComponentStyleFactoryBasis<
-    ColorPalette: UIElementComponentColorPalette,
-    FontPalette: UIElementComponentFontPalette,
-    ConstantPalette: UIElementComponentConstantPalette
->:
+public class UIElementComponentStyleFactoryBasis:
     UIElementComponentStyleFactoryInterface {
     
     public let styleType: UIStyleType

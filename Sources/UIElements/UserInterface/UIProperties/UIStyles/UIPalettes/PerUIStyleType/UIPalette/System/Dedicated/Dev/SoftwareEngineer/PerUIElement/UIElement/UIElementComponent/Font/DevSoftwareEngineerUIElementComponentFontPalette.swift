@@ -7,9 +7,7 @@ public enum DevSoftwareEngineerUIElementComponentFontPalette:
     DevUIElementComponentFontPaletteInterface {
     
     public enum UIElementComponent:
-        SystemUIElementComponentPaletteInterface,
-        DevUIPalette,
-        UIElementComponentFontPalette {}
+        SystemUIElementComponentPaletteInterface {}
 }
 
 extension DevSoftwareEngineerUIElementComponentFontPalette.UIElementComponent {

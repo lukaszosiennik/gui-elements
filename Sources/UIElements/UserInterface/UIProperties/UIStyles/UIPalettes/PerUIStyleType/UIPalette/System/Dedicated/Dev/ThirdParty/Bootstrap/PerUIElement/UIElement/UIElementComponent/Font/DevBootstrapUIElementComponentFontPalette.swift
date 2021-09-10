@@ -7,9 +7,7 @@ public enum DevBootstrapUIElementComponentFontPalette:
     DevUIElementComponentFontPaletteInterface {
     
     public enum UIElementComponent:
-        SystemUIElementComponentPaletteInterface,
-        DevUIPalette,
-        UIElementComponentFontPalette {}
+        SystemUIElementComponentPaletteInterface {}
 }
 
 extension DevBootstrapUIElementComponentFontPalette.UIElementComponent {

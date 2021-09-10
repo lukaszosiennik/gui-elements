@@ -7,9 +7,7 @@ public enum AppCompanySpecificUIElementComponentConstantPalette:
     AppUIElementComponentConstantPaletteInterface {
     
     public enum UIElementComponent:
-        SystemUIElementComponentPaletteInterface,
-        AppUIPalette,
-        UIElementComponentConstantPalette {}
+        SystemUIElementComponentPaletteInterface {}
 }
 
 extension AppCompanySpecificUIElementComponentConstantPalette.UIElementComponent {

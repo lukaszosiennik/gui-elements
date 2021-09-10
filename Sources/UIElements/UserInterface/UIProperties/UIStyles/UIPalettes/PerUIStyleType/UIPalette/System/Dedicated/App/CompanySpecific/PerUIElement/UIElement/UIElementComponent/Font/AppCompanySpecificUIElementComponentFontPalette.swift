@@ -7,9 +7,7 @@ public enum AppCompanySpecificUIElementComponentFontPalette:
     AppUIElementComponentFontPaletteInterface {
     
     public enum UIElementComponent:
-        SystemUIElementComponentPaletteInterface,
-        AppUIPalette,
-        UIElementComponentFontPalette {}
+        SystemUIElementComponentPaletteInterface {}
 }
 
 extension AppCompanySpecificUIElementComponentFontPalette.UIElementComponent {

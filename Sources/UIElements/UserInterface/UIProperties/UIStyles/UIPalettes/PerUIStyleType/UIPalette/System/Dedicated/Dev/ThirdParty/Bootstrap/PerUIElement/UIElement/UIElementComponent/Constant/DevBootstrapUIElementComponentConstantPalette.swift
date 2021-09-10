@@ -16,9 +16,7 @@ public enum DevBootstrapUIElementComponentConstantPalette:
     }
     
     public enum UIElementComponent:
-        SystemUIElementComponentPaletteInterface,
-        DevUIPalette,
-        UIElementComponentConstantPalette {
+        SystemUIElementComponentPaletteInterface {
         
         fileprivate typealias UIElementComponentPalette = UIElementComponent
         

@@ -4,11 +4,7 @@
 //
 
 public final class DevBootstrapUIElementComponentStyleFactory:
-    UIElementComponentStyleFactoryBasis<
-        DevBootstrapUIElementComponentColorPalette.UIElementComponent,
-        DevBootstrapUIElementComponentFontPalette.UIElementComponent,
-        DevBootstrapUIElementComponentConstantPalette.UIElementComponent
-    > {
+    UIElementComponentStyleFactoryBasis {
     
     init() {
         super.init(

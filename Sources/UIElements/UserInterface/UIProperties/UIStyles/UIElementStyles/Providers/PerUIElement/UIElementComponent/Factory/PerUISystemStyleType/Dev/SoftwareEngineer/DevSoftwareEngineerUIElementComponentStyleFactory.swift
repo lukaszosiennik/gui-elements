@@ -4,11 +4,7 @@
 //
 
 public final class DevSoftwareEngineerUIElementComponentStyleFactory:
-    UIElementComponentStyleFactoryBasis<
-        DevSoftwareEngineerUIElementComponentColorPalette.UIElementComponent,
-        DevSoftwareEngineerUIElementComponentFontPalette.UIElementComponent,
-        DevSoftwareEngineerUIElementComponentConstantPalette.UIElementComponent
-    > {
+    UIElementComponentStyleFactoryBasis {
     
     init() {
         super.init(
