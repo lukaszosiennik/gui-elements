@@ -119,7 +119,7 @@ extension DevSoftwareEngineerUIElementComponentColorPalette.UIElementComponent {
             static let background_white: UIColor = Property.Background.white
         }
         
-        enum NavigationMenuOption {
+        enum NavigationMenu {
             
             static let background_white: UIColor = Property.Background.white
         }

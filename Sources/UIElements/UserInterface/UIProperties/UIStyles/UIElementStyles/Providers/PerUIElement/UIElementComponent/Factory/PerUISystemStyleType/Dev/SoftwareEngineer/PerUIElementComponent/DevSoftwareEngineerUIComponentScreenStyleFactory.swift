@@ -31,7 +31,7 @@ public final class DevSoftwareEngineerUIComponentScreenStyleFactory:
             type: styleType,
             properties: .init(
                 lookType: .system(.init(
-                    backgroundColor: ColorPalette.NavigationMenuOption.background_white
+                    backgroundColor: ColorPalette.NavigationMenu.background_white
                 )),
                 layoutParams: .preferred
             )
