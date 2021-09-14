@@ -11,7 +11,8 @@ public protocol UIElementComponentStylePropertiesLayoutParams:
         UIElementComponentStylePropertiesOverwrittenLayoutParams
     
     associatedtype DefaultConstantPalette:
-        DefaultUIPalette & UIElementComponentConstantPalette
+        DefaultUIPalette &
+        UIElementComponentConstantPalette
 
     init?(
         layoutParams: Self?,

@@ -11,7 +11,8 @@ public protocol UIElementComponentStylePropertiesLookParams:
         UIElementComponentStylePropertiesOverwrittenLookParams
     
     associatedtype DefaultConstantPalette:
-        DefaultUIPalette & UIElementComponentConstantPalette
+        DefaultUIPalette &
+        UIElementComponentConstantPalette
     
     static var `default`: Self? {
         get

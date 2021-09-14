@@ -11,7 +11,10 @@ public class UIComponentScreenTypeStyleFactory<
         Paletts
     > {
     
-    typealias ColorPalette = Paletts.ColorPalette
-    typealias FontPalette = Paletts.FontPalette
-    typealias ConstantPalette = Paletts.ConstantPalette
+    typealias ColorPalette =
+        Paletts.ColorPalette
+    typealias FontPalette =
+        Paletts.FontPalette
+    typealias ConstantPalette =
+        Paletts.ConstantPalette
 }
