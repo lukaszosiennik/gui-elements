@@ -10,7 +10,8 @@ public struct NavigationMenuUIComponentScreenParams<
     UIComponentScreenParams,
     InputUIElementComponentParamsActionsInterface {
     
-    public typealias ActionsKey = OptionKey
+    public typealias ActionsKey =
+        OptionKey
     
     public let title: String
     public let options: KeyValuePairs<

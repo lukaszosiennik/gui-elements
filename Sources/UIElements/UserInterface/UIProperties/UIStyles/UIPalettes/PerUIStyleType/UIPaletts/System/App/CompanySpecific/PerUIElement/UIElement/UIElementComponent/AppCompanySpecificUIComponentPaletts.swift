@@ -6,7 +6,10 @@
 public struct AppCompanySpecificUIComponentPaletts:
     AppUIComponentPalettsInterface {
     
-    public typealias SystemUIElementColorPalette = AppCompanySpecificUIElementComponentColorPalette
-    public typealias SystemUIElementFontPalette = AppCompanySpecificUIElementComponentFontPalette
-    public typealias SystemUIElementComponentConstantPalette = AppCompanySpecificUIElementComponentConstantPalette
+    public typealias SystemUIElementColorPalette =
+        AppCompanySpecificUIElementComponentColorPalette
+    public typealias SystemUIElementFontPalette =
+        AppCompanySpecificUIElementComponentFontPalette
+    public typealias SystemUIElementComponentConstantPalette =
+        AppCompanySpecificUIElementComponentConstantPalette
 }

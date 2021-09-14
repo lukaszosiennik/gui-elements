@@ -6,7 +6,10 @@
 public struct DevSoftwareEngineerUIComponentScreenPaletts:
     DevUIComponentScreenPalettsInterface {
     
-    public typealias SystemUIElementColorPalette = DevSoftwareEngineerUIElementComponentColorPalette
-    public typealias SystemUIElementFontPalette = DevSoftwareEngineerUIElementComponentFontPalette
-    public typealias SystemUIElementComponentConstantPalette = DevSoftwareEngineerUIElementComponentConstantPalette
+    public typealias SystemUIElementColorPalette =
+        DevSoftwareEngineerUIElementComponentColorPalette
+    public typealias SystemUIElementFontPalette =
+        DevSoftwareEngineerUIElementComponentFontPalette
+    public typealias SystemUIElementComponentConstantPalette =
+        DevSoftwareEngineerUIElementComponentConstantPalette
 }

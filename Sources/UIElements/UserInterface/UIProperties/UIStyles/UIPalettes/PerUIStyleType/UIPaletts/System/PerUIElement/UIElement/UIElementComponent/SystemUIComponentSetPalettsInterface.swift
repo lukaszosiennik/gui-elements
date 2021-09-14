@@ -6,7 +6,10 @@
 public protocol SystemUIComponentSetPalettsInterface:
     SystemUIElementPalettsInterface {
     
-    typealias ColorPalette = SystemUIElementColorPalette.UIElementComponent.UIComponentSet
-    typealias FontPalette = SystemUIElementFontPalette.UIElementComponent.UIComponentSet
-    typealias ConstantPalette = SystemUIElementComponentConstantPalette.UIElementComponent.UIComponentSet
+    typealias ColorPalette =
+        SystemUIElementColorPalette.UIElementComponent.UIComponentSet
+    typealias FontPalette =
+        SystemUIElementFontPalette.UIElementComponent.UIComponentSet
+    typealias ConstantPalette =
+        SystemUIElementComponentConstantPalette.UIElementComponent.UIComponentSet
 }

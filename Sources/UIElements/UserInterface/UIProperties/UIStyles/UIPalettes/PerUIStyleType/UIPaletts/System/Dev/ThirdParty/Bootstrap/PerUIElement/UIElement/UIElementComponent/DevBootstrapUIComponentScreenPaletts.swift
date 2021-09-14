@@ -6,7 +6,10 @@
 public struct DevBootstrapUIComponentScreenPaletts:
     DevUIComponentScreenPalettsInterface {
     
-    public typealias SystemUIElementColorPalette = DevBootstrapUIElementComponentColorPalette
-    public typealias SystemUIElementFontPalette = DevBootstrapUIElementComponentFontPalette
-    public typealias SystemUIElementComponentConstantPalette = DevBootstrapUIElementComponentConstantPalette
+    public typealias SystemUIElementColorPalette =
+        DevBootstrapUIElementComponentColorPalette
+    public typealias SystemUIElementFontPalette =
+        DevBootstrapUIElementComponentFontPalette
+    public typealias SystemUIElementComponentConstantPalette =
+        DevBootstrapUIElementComponentConstantPalette
 }
