@@ -5,12 +5,15 @@
 
 public struct NavigationMenuUIComponentScreenSettings<
     OptionKey:
-        InputUIElementComponentActionsKeyInterface
+        InputUIElementComponentActionsKeyInterface,
+    OptionValue:
+        NavigationMenuUIComponentGroupParamsOptionValueObjectInterface
 >:
     UIComponentScreenSettings {
     
     public let params: NavigationMenuUIComponentScreenParams<
-        OptionKey
+        OptionKey,
+        OptionValue
     >
     public var style: UIElementComponentStyle<
         NavigationMenuUIComponentScreenStyleProperties
@@ -18,7 +21,8 @@ public struct NavigationMenuUIComponentScreenSettings<
     
     public init(
         params: NavigationMenuUIComponentScreenParams<
-            OptionKey
+            OptionKey,
+            OptionValue
         >,
         style: UIElementComponentStyle<
             NavigationMenuUIComponentScreenStyleProperties

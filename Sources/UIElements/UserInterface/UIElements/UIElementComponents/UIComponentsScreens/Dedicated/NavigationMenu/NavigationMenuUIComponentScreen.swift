@@ -6,13 +6,17 @@
 import UIKit
 
 public final class NavigationMenuUIComponentScreen<
-    OptionKey: InputUIElementComponentActionsKeyInterface
+    OptionKey:
+        InputUIElementComponentActionsKeyInterface,
+    OptionValue:
+        NavigationMenuUIComponentGroupParamsOptionValueObjectInterface
 >:
     UIView,
     UIComponentScreen {
     
     private let navigationMenuUI: NavigationMenuUIComponentGroup<
-        OptionKey
+        OptionKey,
+        OptionValue
     > = .init()
     
     private let container: UIView = .init()
@@ -23,7 +27,8 @@ public final class NavigationMenuUIComponentScreen<
     public let initialization: UIElementComponentInitialization = .init()
     
     public var settings: NavigationMenuUIComponentScreenSettings<
-        OptionKey
+        OptionKey,
+        OptionValue
     > {
         didSet {
             setupSettings()
@@ -38,7 +43,8 @@ public final class NavigationMenuUIComponentScreen<
     
     public init(
         settings: NavigationMenuUIComponentScreenSettings<
-            OptionKey
+            OptionKey,
+            OptionValue
         >
     ) {
         self.settings = settings
@@ -70,7 +76,8 @@ public final class NavigationMenuUIComponentScreen<
     
     public func setupParams(
         _ params: NavigationMenuUIComponentScreenParams<
-            OptionKey
+            OptionKey,
+            OptionValue
         >
     ) {}
 }

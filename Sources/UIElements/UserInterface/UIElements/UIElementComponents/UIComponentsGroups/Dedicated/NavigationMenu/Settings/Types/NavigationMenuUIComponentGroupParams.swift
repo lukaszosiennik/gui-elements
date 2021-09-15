@@ -5,7 +5,9 @@
 
 public struct NavigationMenuUIComponentGroupParams<
     OptionKey:
-        InputUIElementComponentActionsKeyInterface
+        InputUIElementComponentActionsKeyInterface,
+    OptionValue:
+        NavigationMenuUIComponentGroupParamsOptionValueObjectInterface
 >:
     UIComponentGroupParams,
     InputUIElementComponentParamsActionsInterface {
@@ -16,7 +18,7 @@ public struct NavigationMenuUIComponentGroupParams<
     public let title: String
     public let options: KeyValuePairs<
         OptionKey,
-        String
+        OptionValue
     >
     
     public let actions: Actions?
@@ -35,7 +37,7 @@ public struct NavigationMenuUIComponentGroupParams<
         title: String,
         options: KeyValuePairs<
             OptionKey,
-            String
+            OptionValue
         >,
         actions: Actions?
     ) {

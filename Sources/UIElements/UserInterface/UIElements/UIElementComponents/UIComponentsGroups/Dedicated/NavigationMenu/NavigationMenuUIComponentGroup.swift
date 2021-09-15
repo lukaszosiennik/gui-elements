@@ -7,7 +7,9 @@ import UIKit
 
 public final class NavigationMenuUIComponentGroup<
     OptionKey:
-        InputUIElementComponentActionsKeyInterface
+        InputUIElementComponentActionsKeyInterface,
+    OptionValue:
+        NavigationMenuUIComponentGroupParamsOptionValueObjectInterface
 >:
     UIView,
     UIComponentGroup {
@@ -24,7 +26,8 @@ public final class NavigationMenuUIComponentGroup<
     public let initialization: UIElementComponentInitialization = .init()
     
     public var settings: NavigationMenuUIComponentGroupSettings<
-        OptionKey
+        OptionKey,
+        OptionValue
     > {
         didSet {
             setupSettings()
@@ -39,7 +42,8 @@ public final class NavigationMenuUIComponentGroup<
     
     public init(
         settings: NavigationMenuUIComponentGroupSettings<
-            OptionKey
+            OptionKey,
+            OptionValue
         >
     ) {
         self.settings = settings
@@ -74,7 +78,8 @@ public final class NavigationMenuUIComponentGroup<
     
     public func setupParams(
         _ params: NavigationMenuUIComponentGroupParams<
-            OptionKey
+            OptionKey,
+            OptionValue
         >
     ) {
         stackView.arrangedSubviews.forEach {
@@ -87,7 +92,7 @@ public final class NavigationMenuUIComponentGroup<
             let optionView: NavigationMenuUIOptionComponentSet = .init(
                 settings: .init(
                     params: .init(
-                        title: option.value,
+                        title: option.value.title,
                         action: {
                             params.actions?(
                                 option.key
