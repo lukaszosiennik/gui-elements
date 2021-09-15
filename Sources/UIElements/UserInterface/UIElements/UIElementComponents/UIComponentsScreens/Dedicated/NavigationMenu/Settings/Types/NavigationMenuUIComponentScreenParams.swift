@@ -9,6 +9,7 @@ public struct NavigationMenuUIComponentScreenParams<
     OptionValue:
         NavigationMenuUIComponentGroupParamsOptionValueObjectInterface
 >:
+    NavigationMenuUIComponentGroupParamsInterface,
     UIComponentScreenParams,
     InputUIElementComponentParamsActionsInterface {
     
