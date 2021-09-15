@@ -7,12 +7,12 @@ import UIKit
 
 public final class NavigationMenuUIComponentScreen<
     OptionKey:
-        InputUIElementComponentActionsKeyInterface,
-    OptionValue:
-        NavigationMenuUIComponentGroupParamsOptionValueObjectInterface
+        InputUIElementComponentActionsKeyInterface
 >:
     UIView,
     UIComponentScreen {
+    
+    public typealias OptionValue = NavigationMenuUIComponentGroupParamsOptionValueObject
     
     private let navigationMenuUI: NavigationMenuUIComponentGroup<
         OptionKey,
