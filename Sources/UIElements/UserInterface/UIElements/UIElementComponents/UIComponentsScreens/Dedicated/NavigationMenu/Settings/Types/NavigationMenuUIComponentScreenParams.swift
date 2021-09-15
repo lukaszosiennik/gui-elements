@@ -3,46 +3,14 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuUIComponentScreenParams<
+public final class NavigationMenuUIComponentScreenParams<
     OptionKey:
         InputUIElementComponentActionsKeyInterface,
     OptionValue:
-        NavigationMenuUIComponentGroupParamsOptionValueObjectInterface
+        NavigationMenuUIElementComponentParamsOptionValueObjectInterface
 >:
-    NavigationMenuUIComponentGroupParamsInterface,
-    UIComponentScreenParams,
-    InputUIElementComponentParamsActionsInterface {
-    
-    public typealias OptionKeyType =
-        OptionKey
-    public typealias OptionValueType =
+    NavigationMenuUIElementComponentParamsBasis<
+        OptionKey,
         OptionValue
-    
-    public typealias ActionsKeyType =
-        OptionKey
-    
-    public let title: String
-    public let options: Options
-    
-    public let actions: Actions?
-    
-    public static var `default`: Self {
-        return .init(
-            title: structName(
-                dot: "title"
-            ),
-            options: [:],
-            actions: nil
-        )
-    }
-    
-    public init(
-        title: String,
-        options: Options,
-        actions: Actions?
-    ) {
-        self.title = title
-        self.options = options
-        self.actions = actions
-    }
-}
+    >,
+    UIComponentScreenParams {}

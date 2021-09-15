@@ -9,7 +9,7 @@ public final class NavigationMenuUIComponentGroup<
     OptionKey:
         InputUIElementComponentActionsKeyInterface,
     OptionValue:
-        NavigationMenuUIComponentGroupParamsOptionValueObjectInterface
+        NavigationMenuUIElementComponentParamsOptionValueObjectInterface
 >:
     UIView,
     UIComponentGroup {

@@ -7,7 +7,7 @@ public struct NavigationMenuUIComponentScreenSettings<
     OptionKey:
         InputUIElementComponentActionsKeyInterface,
     OptionValue:
-        NavigationMenuUIComponentGroupParamsOptionValueObjectInterface
+        NavigationMenuUIElementComponentParamsOptionValueObjectInterface
 >:
     UIComponentScreenSettings {
     
