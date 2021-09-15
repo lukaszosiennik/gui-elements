@@ -8,11 +8,11 @@ where
     Self
         : UIElementComponentParams {
     
-    associatedtype ActionsKey:
+    associatedtype ActionsKeyType:
         InputUIElementComponentActionsKeyInterface
     
     typealias Actions =
-        (ActionsKey) -> Void
+        (ActionsKeyType) -> Void
     
     var actions: Actions? {
         get

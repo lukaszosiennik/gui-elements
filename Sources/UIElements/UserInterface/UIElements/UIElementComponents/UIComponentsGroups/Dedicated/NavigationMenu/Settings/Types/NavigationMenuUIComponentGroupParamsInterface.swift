@@ -11,14 +11,17 @@ public protocol NavigationMenuUIComponentGroupParamsInterface {
         NavigationMenuUIComponentGroupParamsOptionValueObjectInterface
     associatedtype ActionsType
     
+    typealias Options =
+        KeyValuePairs<
+            OptionKeyType,
+            OptionValueType
+        >
+    
     var title: String {
         get
     }
     
-    var options: KeyValuePairs<
-        OptionKeyType,
-        OptionValueType
-    > {
+    var options: Options {
         get
     }
     

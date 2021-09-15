@@ -13,14 +13,16 @@ public struct NavigationMenuUIComponentScreenParams<
     UIComponentScreenParams,
     InputUIElementComponentParamsActionsInterface {
     
-    public typealias ActionsKey =
+    public typealias OptionKeyType =
+        OptionKey
+    public typealias OptionValueType =
+        OptionValue
+    
+    public typealias ActionsKeyType =
         OptionKey
     
     public let title: String
-    public let options: KeyValuePairs<
-        OptionKey,
-        OptionValue
-    >
+    public let options: Options
     
     public let actions: Actions?
     
@@ -36,10 +38,7 @@ public struct NavigationMenuUIComponentScreenParams<
     
     public init(
         title: String,
-        options: KeyValuePairs<
-            OptionKey,
-            OptionValue
-        >,
+        options: Options,
         actions: Actions?
     ) {
         self.title = title
