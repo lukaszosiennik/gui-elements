@@ -5,26 +5,23 @@
 
 public class NavigationMenuUIElementComponentParamsBasis<
     OptionKey:
-        InputUIElementComponentActionsKeyInterface,
+        InputUIElementComponentActionKeyInterface,
     OptionValue:
-        NavigationMenuUIElementComponentParamsOptionValueObjectInterface
+        NavigationMenuUIElementComponentParamsOptionValueObjectInterface,
+    ActionsFunction
 >:
     NavigationMenuUIElementComponentParamsInterface,
-    UIElementComponentParams,
-    InputUIElementComponentParamsActionsInterface {
+    UIElementComponentParams {
     
     public typealias OptionKeyType =
         OptionKey
     public typealias OptionValueType =
         OptionValue
     
-    public typealias ActionsKeyType =
-        OptionKey
-    
     public let title: String
     public let options: Options
     
-    public let actions: Actions?
+    public let actions: ActionsFunction?
     
     public static var `default`: Self {
         return .init(
@@ -39,7 +36,7 @@ public class NavigationMenuUIElementComponentParamsBasis<
     public required init(
         title: String,
         options: Options,
-        actions: Actions?
+        actions: ActionsFunction?
     ) {
         self.title = title
         self.options = options

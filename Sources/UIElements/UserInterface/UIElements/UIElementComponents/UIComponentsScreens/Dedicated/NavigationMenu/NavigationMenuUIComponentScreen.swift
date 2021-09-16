@@ -7,7 +7,7 @@ import UIKit
 
 public final class NavigationMenuUIComponentScreen<
     OptionKey:
-        InputUIElementComponentActionsKeyInterface
+        InputUIElementComponentActionKeyInterface
 >:
     UIView,
     UIComponentScreen {

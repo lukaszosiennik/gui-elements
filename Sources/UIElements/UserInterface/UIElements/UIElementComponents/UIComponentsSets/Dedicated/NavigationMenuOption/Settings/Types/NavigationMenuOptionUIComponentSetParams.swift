@@ -5,7 +5,7 @@
 
 public struct NavigationMenuOptionUIComponentSetParams:
     UIComponentSetParams,
-    InputUIElementComponentParamsActionInterface {
+    InputUIElementComponentParamsPlainActionInterface {
     
     public let title: String
     public let action: Action?

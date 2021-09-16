@@ -5,12 +5,15 @@
 
 public final class NavigationMenuUIComponentScreenParams<
     OptionKey:
-        InputUIElementComponentActionsKeyInterface,
+        InputUIElementComponentActionKeyInterface,
     OptionValue:
         NavigationMenuUIElementComponentParamsOptionValueObjectInterface
 >:
     NavigationMenuUIElementComponentParamsBasis<
         OptionKey,
-        OptionValue
+        OptionValue,
+        InputUIElementComponentParamsPlainActionsFunction<
+            OptionKey
+        >
     >,
     UIComponentScreenParams {}

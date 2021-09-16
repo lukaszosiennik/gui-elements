@@ -5,7 +5,7 @@
 
 public struct ButtonUIComponentParams:
     UIComponentParams,
-    InputUIElementComponentParamsActionInterface {
+    InputUIElementComponentParamsPlainActionInterface {
     
     public let title: String
     public let action: Action?

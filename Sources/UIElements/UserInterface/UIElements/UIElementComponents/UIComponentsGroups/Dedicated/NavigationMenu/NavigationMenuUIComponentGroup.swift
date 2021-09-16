@@ -7,7 +7,7 @@ import UIKit
 
 public final class NavigationMenuUIComponentGroup<
     OptionKey:
-        InputUIElementComponentActionsKeyInterface,
+        InputUIElementComponentActionKeyInterface,
     OptionValue:
         NavigationMenuUIElementComponentParamsOptionValueObjectInterface
 >:

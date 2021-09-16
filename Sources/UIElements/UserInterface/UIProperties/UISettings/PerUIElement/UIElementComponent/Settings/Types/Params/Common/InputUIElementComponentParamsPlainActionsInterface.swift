@@ -3,16 +3,16 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol InputUIElementComponentParamsActionsInterface
+public protocol InputUIElementComponentParamsPlainActionsInterface
 where
     Self
         : UIElementComponentParams {
     
-    associatedtype ActionsKeyType:
-        InputUIElementComponentActionsKeyInterface
+    associatedtype ActionKeyType:
+        InputUIElementComponentActionKeyInterface
     
     typealias Actions =
-        (ActionsKeyType) -> Void
+        InputUIElementComponentParamsPlainActionsFunction<ActionKeyType>
     
     var actions: Actions? {
         get

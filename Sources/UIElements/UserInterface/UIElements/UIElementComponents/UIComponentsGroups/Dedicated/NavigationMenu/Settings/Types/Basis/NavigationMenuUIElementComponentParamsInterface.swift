@@ -6,10 +6,10 @@
 public protocol NavigationMenuUIElementComponentParamsInterface {
     
     associatedtype OptionKeyType:
-        InputUIElementComponentActionsKeyInterface
+        InputUIElementComponentActionKeyInterface
     associatedtype OptionValueType:
         NavigationMenuUIElementComponentParamsOptionValueObjectInterface
-    associatedtype ActionsType
+    associatedtype ActionsFunctionType
     
     typealias Options =
         KeyValuePairs<
@@ -25,7 +25,7 @@ public protocol NavigationMenuUIElementComponentParamsInterface {
         get
     }
     
-    var actions: ActionsType? {
+    var actions: ActionsFunctionType? {
         get
     }
 }
