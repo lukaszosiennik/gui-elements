@@ -11,8 +11,8 @@ public protocol NavigationMenuUIElementComponentParamsInterface {
     
     typealias Options =
         KeyValuePairs<
-            OptionsKeyValueType.OptionKeyType,
-            OptionsKeyValueType.OptionValueType
+            OptionsKeyValueType.KeyType,
+            OptionsKeyValueType.ValueType
         >
     
     var title: String {

@@ -4,9 +4,9 @@
 //
 
 public struct NavigationMenuUIElementComponentParamsOptionsKeyValueTemplate<
-    OptionKeyType:
+    KeyType:
         InputUIElementComponentActionKeyInterface,
-    OptionValueType:
+    ValueType:
         NavigationMenuUIElementComponentParamsOptionValueObjectInterface
 >:
     NavigationMenuUIElementComponentParamsOptionsKeyValueInterface {}
