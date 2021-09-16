@@ -1,45 +1,47 @@
 //
-//  Created by Łukasz Osiennik on 15/09/2021.
+//  Created by Łukasz Osiennik on 16/09/2021.
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-open class NavigationMenuUIElementComponentParamsBasis<
+public class NavigationMenuUIElementComponentParamsBasis<
     OptionKey:
         InputUIElementComponentActionKeyInterface,
     OptionValue:
         NavigationMenuUIElementComponentParamsOptionValueObjectInterface,
     ActionsFunction
 >:
-    NavigationMenuUIElementComponentParamsInterface,
-    UIElementComponentParams {
+    NavigationMenuUIElementComponentParamsExtendedBasis<
+        OptionKey,
+        OptionValue,
+        ActionsFunction,
+        
+        VoidUIPropertyDefaultOptionalValue
+    > {
     
-    public typealias OptionKeyType =
-        OptionKey
-    public typealias OptionValueType =
-        OptionValue
-    
-    public let title: String
-    public let options: Options
-    
-    public let actions: ActionsFunction?
-    
-    public static var `default`: Self {
-        return .init(
-            title: structName(
-                dot: "title"
-            ),
-            options: [:],
-            actions: nil
+    public init(
+        title: String,
+        options: Options,
+        actions: ActionsFunction?
+    ) {
+        super.init(
+            title: title,
+            options: options,
+            actions: actions,
+            additional: .default
         )
     }
     
     public required init(
         title: String,
         options: Options,
-        actions: ActionsFunction?
+        actions: ActionsFunction?,
+        additional: AdditionalParams?
     ) {
-        self.title = title
-        self.options = options
-        self.actions = actions
+        super.init(
+            title: title,
+            options: options,
+            actions: actions,
+            additional: additional
+        )
     }
 }
