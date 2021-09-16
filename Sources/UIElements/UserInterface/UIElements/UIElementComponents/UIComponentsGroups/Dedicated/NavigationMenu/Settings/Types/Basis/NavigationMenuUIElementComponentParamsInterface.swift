@@ -5,16 +5,14 @@
 
 public protocol NavigationMenuUIElementComponentParamsInterface {
     
-    associatedtype OptionKeyType:
-        InputUIElementComponentActionKeyInterface
-    associatedtype OptionValueType:
-        NavigationMenuUIElementComponentParamsOptionValueObjectInterface
+    associatedtype OptionsKeyValueType:
+        NavigationMenuUIElementComponentParamsOptionsKeyValueInterface
     associatedtype ActionsFunctionType
     
     typealias Options =
         KeyValuePairs<
-            OptionKeyType,
-            OptionValueType
+            OptionsKeyValueType.OptionKeyType,
+            OptionsKeyValueType.OptionValueType
         >
     
     var title: String {

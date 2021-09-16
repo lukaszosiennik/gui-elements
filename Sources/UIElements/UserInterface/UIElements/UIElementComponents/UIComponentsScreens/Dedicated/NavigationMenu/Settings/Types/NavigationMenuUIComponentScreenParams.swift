@@ -10,8 +10,10 @@ public final class NavigationMenuUIComponentScreenParams<
         NavigationMenuUIElementComponentParamsOptionValueObjectInterface
 >:
     NavigationMenuUIElementComponentParamsBasis<
-        OptionKey,
-        OptionValue,
+        NavigationMenuUIElementComponentParamsOptionsKeyValueTemplate<
+            OptionKey,
+            OptionValue
+        >,
         InputUIElementComponentParamsPlainActionsFunction<
             OptionKey
         >

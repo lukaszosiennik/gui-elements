@@ -3,19 +3,18 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
+public typealias EmptyNavigationMenuUIElementComponentParamsAdditional = VoidUIPropertyDefaultValue
+
 public class NavigationMenuUIElementComponentParamsBasis<
-    OptionKey:
-        InputUIElementComponentActionKeyInterface,
-    OptionValue:
-        NavigationMenuUIElementComponentParamsOptionValueObjectInterface,
+    OptionsKeyValue:
+        NavigationMenuUIElementComponentParamsOptionsKeyValueInterface,
     ActionsFunction
 >:
     NavigationMenuUIElementComponentParamsExtendedBasis<
-        OptionKey,
-        OptionValue,
+        OptionsKeyValue,
         ActionsFunction,
         
-        VoidUIPropertyDefaultValue
+        EmptyNavigationMenuUIElementComponentParamsAdditional
     > {
     
     public init(

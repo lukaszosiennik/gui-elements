@@ -4,10 +4,8 @@
 //
 
 open class NavigationMenuUIElementComponentParamsExtendedBasis<
-    OptionKey:
-        InputUIElementComponentActionKeyInterface,
-    OptionValue:
-        NavigationMenuUIElementComponentParamsOptionValueObjectInterface,
+    OptionsKeyValue:
+        NavigationMenuUIElementComponentParamsOptionsKeyValueInterface,
     ActionsFunction,
     
     AdditionalParams:
@@ -16,10 +14,8 @@ open class NavigationMenuUIElementComponentParamsExtendedBasis<
     NavigationMenuUIElementComponentParamsInterface,
     UIElementComponentParams {
     
-    public typealias OptionKeyType =
-        OptionKey
-    public typealias OptionValueType =
-        OptionValue
+    public typealias OptionsKeyValueType =
+        OptionsKeyValue
     
     public typealias AdditionalParams =
         AdditionalParams
