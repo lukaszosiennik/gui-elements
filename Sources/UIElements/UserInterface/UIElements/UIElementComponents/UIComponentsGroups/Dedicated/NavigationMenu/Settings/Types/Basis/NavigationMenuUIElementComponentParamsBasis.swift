@@ -15,7 +15,7 @@ public class NavigationMenuUIElementComponentParamsBasis<
         OptionValue,
         ActionsFunction,
         
-        VoidUIPropertyDefaultOptionalValue
+        VoidUIPropertyDefaultValue
     > {
     
     public init(
@@ -35,7 +35,7 @@ public class NavigationMenuUIElementComponentParamsBasis<
         title: String,
         options: Options,
         actions: ActionsFunction?,
-        additional: AdditionalParams?
+        additional: AdditionalParams
     ) {
         super.init(
             title: title,

@@ -3,10 +3,10 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct VoidUIPropertyDefaultOptionalValue:
-    UIPropertyDefaultOptionalValueInterface {
+public struct VoidUIPropertyDefaultValue:
+    UIPropertyDefaultValueInterface {
     
-    public static var `default`: Self? {
-        return nil
+    public static var `default`: Self {
+        return .init()
     }
 }

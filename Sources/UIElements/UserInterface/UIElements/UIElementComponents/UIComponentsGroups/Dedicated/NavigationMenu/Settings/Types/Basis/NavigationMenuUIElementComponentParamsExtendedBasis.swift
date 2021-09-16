@@ -11,7 +11,7 @@ open class NavigationMenuUIElementComponentParamsExtendedBasis<
     ActionsFunction,
     
     AdditionalParams:
-        UIPropertyDefaultOptionalValueInterface
+        UIPropertyDefaultValueInterface
 >:
     NavigationMenuUIElementComponentParamsInterface,
     UIElementComponentParams {
@@ -28,7 +28,7 @@ open class NavigationMenuUIElementComponentParamsExtendedBasis<
     public let options: Options
     public let actions: ActionsFunction?
     
-    public let additional: AdditionalParams?
+    public let additional: AdditionalParams
     
     public static var `default`: Self {
         return .init(
@@ -37,7 +37,7 @@ open class NavigationMenuUIElementComponentParamsExtendedBasis<
             ),
             options: [:],
             actions: nil,
-            additional: nil
+            additional: .default
         )
     }
     
@@ -45,7 +45,7 @@ open class NavigationMenuUIElementComponentParamsExtendedBasis<
         title: String,
         options: Options,
         actions: ActionsFunction?,
-        additional: AdditionalParams?
+        additional: AdditionalParams
     ) {
         self.title = title
         self.options = options
