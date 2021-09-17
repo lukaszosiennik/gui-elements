@@ -43,9 +43,8 @@ where
                 )...
             ]
         )
-        let hexColor = hexValue.count == 6
-            ? hexValue + "ff"
-            : hexValue
+        let hexColor = hexValue.count == 6 ?
+            hexValue + "ff" : hexValue
         guard hexColor.count == 8
         else {
             return nil
