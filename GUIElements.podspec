@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint UIElements.podspec' to ensure this is a
+# Be sure to run `pod lib lint GUIElements.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'UIElements'
+  s.name             = 'GUIElements'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of UIElements.'
+  s.summary          = 'A short description of GUIElements.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://lukaszosiennik@bitbucket.org/openplainness/uielements.git'
+  s.homepage         = 'https://lukaszosiennik@bitbucket.org/openplainness/guielements.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Łukasz Osiennik' => 'lukasz.osiennik@gmail.com' }
-  s.source           = { :git => 'https://lukaszosiennik@bitbucket.org/openplainness/uielements.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://lukaszosiennik@bitbucket.org/openplainness/guielements.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '14.5'
@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'Sources/**/*'
 
   # s.resource_bundles = {
-  #   'UIElements' => ['UIElements/Assets/*.png']
+  #   'GUIElements' => ['GUIElements/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
