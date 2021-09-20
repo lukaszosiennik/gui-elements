@@ -12,7 +12,8 @@ public final class NavigationMenuGUIComponentScreen<
     UIView,
     GUIComponentScreen {
     
-    public typealias OptionValue = NavigationMenuGUIElementComponentParamsOptionValueObject
+    public typealias OptionValue =
+        NavigationMenuGUIElementComponentParamsOptionValueObject
     
     private let navigationMenuUI: NavigationMenuGUIComponentGroup<
         OptionKey,

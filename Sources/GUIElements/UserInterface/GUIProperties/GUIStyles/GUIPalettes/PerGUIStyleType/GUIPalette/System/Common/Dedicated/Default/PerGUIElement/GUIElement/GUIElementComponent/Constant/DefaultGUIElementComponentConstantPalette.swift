@@ -19,9 +19,9 @@ public enum DefaultGUIElementComponentConstantPalette:
     public enum GUIElementComponent:
         SystemGUIElementComponentPaletteInterface {
         
-        fileprivate typealias UILookParamsPalette =
-            UILookParams
-        fileprivate enum UILookParams {
+        fileprivate typealias GUILookParamsPalette =
+            GUILookParams
+        fileprivate enum GUILookParams {
             
             enum Property {
                  
@@ -38,9 +38,9 @@ public enum DefaultGUIElementComponentConstantPalette:
             }
         }
         
-        fileprivate typealias UILayoutParamsPalette =
-            UILayoutParams
-        fileprivate enum UILayoutParams {
+        fileprivate typealias GUILayoutParamsPalette =
+            GUILayoutParams
+        fileprivate enum GUILayoutParams {
             
             enum Property {
                 
@@ -84,7 +84,7 @@ extension DefaultGUIElementComponentConstantPalette.GUIElementComponent {
             
             enum UILayoutParams {
                 
-                static let height_100: CGFloat = UILayoutParamsPalette.Property.Size.Vertical.Height.value_100
+                static let height_100: CGFloat = GUILayoutParamsPalette.Property.Size.Vertical.Height.value_100
             }
         }
     }
@@ -101,14 +101,14 @@ extension DefaultGUIElementComponentConstantPalette.GUIElementComponent {
             
             enum UILookParams {
                 
-                static let title_linesNumber_0: Int = Int(UILookParamsPalette.Property.Size.Vertical.LinesNumber.value_0)
+                static let title_linesNumber_0: Int = Int(GUILookParamsPalette.Property.Size.Vertical.LinesNumber.value_0)
             }
             
             enum UILayoutParams {
                 
-                static let options_space_0: CGFloat = UILayoutParamsPalette.Property.Space.value_0
-                static let title_margin_top_4: CGFloat = UILayoutParamsPalette.Property.Margin.top_4
-                static let title_margin_bottom_4: CGFloat = UILayoutParamsPalette.Property.Margin.bottom_4
+                static let options_space_0: CGFloat = GUILayoutParamsPalette.Property.Space.value_0
+                static let title_margin_top_4: CGFloat = GUILayoutParamsPalette.Property.Margin.top_4
+                static let title_margin_bottom_4: CGFloat = GUILayoutParamsPalette.Property.Margin.bottom_4
             }
         }
     }
@@ -121,7 +121,7 @@ extension DefaultGUIElementComponentConstantPalette.GUIElementComponent {
             
             enum UILookParams {
                 
-                static let title_linesNumber_0: Int = Int(UILookParamsPalette.Property.Size.Vertical.LinesNumber.value_0)
+                static let title_linesNumber_0: Int = Int(GUILookParamsPalette.Property.Size.Vertical.LinesNumber.value_0)
             }
         }
             
@@ -129,8 +129,8 @@ extension DefaultGUIElementComponentConstantPalette.GUIElementComponent {
             
             enum UILayoutParams {
             
-                static let margin_left_16: CGFloat = UILayoutParamsPalette.Property.Margin.left_16
-                static let margin_right_16: CGFloat = UILayoutParamsPalette.Property.Margin.right_16
+                static let margin_left_16: CGFloat = GUILayoutParamsPalette.Property.Margin.left_16
+                static let margin_right_16: CGFloat = GUILayoutParamsPalette.Property.Margin.right_16
             }
         }
     }
