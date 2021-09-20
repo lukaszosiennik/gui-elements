@@ -5,19 +5,19 @@
 
 import UIKit
 
-public protocol UIComponentScreen:
-    UIElementComponent
+public protocol GUIComponentScreen:
+    GUIElementComponent
 where
-    UIElementComponentSettingsType
-        : UIComponentScreenSettings {
+    GUIElementComponentSettingsType
+        : GUIComponentScreenSettings {
     
     func setupScreenStyleLookOS()
 }
 
-extension UIComponentScreen {
+extension GUIComponentScreen {
     
     public func setupStyleLookOSConfiguration(
-        _ lookConfiguration: UIElementComponentLookOSConfiguration
+        _ lookConfiguration: GUIElementComponentLookOSConfiguration
     ) {
         setupStyleLookOSForUserFriendliness(
             lookConfiguration.isUserFriendly

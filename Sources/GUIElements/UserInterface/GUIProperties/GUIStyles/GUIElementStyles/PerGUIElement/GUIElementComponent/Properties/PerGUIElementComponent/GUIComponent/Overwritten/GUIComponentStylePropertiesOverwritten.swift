@@ -3,12 +3,12 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentStylePropertiesOverwritten:
-    UIElementComponentStylePropertiesOverwritten
+public protocol GUIComponentStylePropertiesOverwritten:
+    GUIElementComponentStylePropertiesOverwritten
 where
-    UIElementComponentStylePropertiesOverwrittenLookType
-        : UIComponentStylePropertiesOverwrittenLook,
-    UIElementComponentStylePropertiesOverwrittenLookParamsType
-        : UIComponentStylePropertiesOverwrittenLookParams,
-    UIElementComponentStylePropertiesOverwrittenLayoutParamsType
-        : UIComponentStylePropertiesOverwrittenLayoutParams {}
+    GUIElementComponentStylePropertiesOverwrittenLookType
+        : GUIComponentStylePropertiesOverwrittenLook,
+    GUIElementComponentStylePropertiesOverwrittenLookParamsType
+        : GUIComponentStylePropertiesOverwrittenLookParams,
+    GUIElementComponentStylePropertiesOverwrittenLayoutParamsType
+        : GUIComponentStylePropertiesOverwrittenLayoutParams {}

@@ -3,9 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuOptionUIComponentSetParams:
-    UIComponentSetParams,
-    InputUIElementComponentParamsPlainActionInterface {
+public struct NavigationMenuOptionGUIComponentSetParams:
+    GUIComponentSetParams,
+    InputGUIElementComponentParamsPlainActionInterface {
     
     public let title: String
     public let action: Action?

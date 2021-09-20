@@ -3,13 +3,13 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIElementComponentStyleFactoryProviderInterface {
+public protocol GUIElementComponentStyleFactoryProviderInterface {
     
-    static var currentFactory: UIElementComponentStyleFactoryInterface? {
+    static var currentFactory: GUIElementComponentStyleFactoryInterface? {
         get
     }
     
     static func factory(
-        for styleType: UIStyleType
-    ) -> UIElementComponentStyleFactoryInterface?
+        for styleType: GUIStyleType
+    ) -> GUIElementComponentStyleFactoryInterface?
 }

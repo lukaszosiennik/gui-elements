@@ -3,22 +3,22 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol SystemUIElementPaletteInterface {
+public protocol SystemGUIElementPaletteInterface {
     
-    associatedtype UIElementComponent:
-        SystemUIElementComponentPaletteInterface
+    associatedtype GUIElementComponent:
+        SystemGUIElementComponentPaletteInterface
 }
-public protocol SystemUIElementComponentPaletteInterface {
+public protocol SystemGUIElementComponentPaletteInterface {
     
-    associatedtype UIComponent:
-        SystemUIPalette
+    associatedtype GUIComponent:
+        SystemGUIPalette
     
-    associatedtype UIComponentSet:
-        SystemUIPalette
+    associatedtype GUIComponentSet:
+        SystemGUIPalette
     
-    associatedtype UIComponentGroup:
-        SystemUIPalette
+    associatedtype GUIComponentGroup:
+        SystemGUIPalette
     
-    associatedtype UIComponentScreen:
-        SystemUIPalette
+    associatedtype GUIComponentScreen:
+        SystemGUIPalette
 }

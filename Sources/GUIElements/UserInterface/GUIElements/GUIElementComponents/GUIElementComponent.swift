@@ -3,31 +3,31 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class UIElementComponentInitialization {
+public final class GUIElementComponentInitialization {
     
     fileprivate var isRunning: Bool = false
     
     public init() {}
 }
 
-public protocol UIElementComponent:
-    UIElement {
+public protocol GUIElementComponent:
+    GUIElement {
     
-    associatedtype UIElementComponentSettingsType:
-        UIElementComponentSettings
+    associatedtype GUIElementComponentSettingsType:
+        GUIElementComponentSettings
     
-    var initialization: UIElementComponentInitialization {
+    var initialization: GUIElementComponentInitialization {
         get
     }
     
-    var settings: UIElementComponentSettingsType {
+    var settings: GUIElementComponentSettingsType {
         get
         set
     }
     
     init()
     init(
-        settings: UIElementComponentSettingsType
+        settings: GUIElementComponentSettingsType
     )
     
     // it's here only for ButtonUIComponent purpose
@@ -36,30 +36,30 @@ public protocol UIElementComponent:
     func setupNestedSettings()
     
     func setupParams(
-        _ params: UIElementComponentSettingsType.UIElementComponentParamsType
+        _ params: GUIElementComponentSettingsType.GUIElementComponentParamsType
     )
     
     func setupStyleLookOSConfiguration(
-        _ lookConfiguration: UIElementComponentLookOSConfiguration
+        _ lookConfiguration: GUIElementComponentLookOSConfiguration
     )
     func setupStyleLookOS(
-        _ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType
+        _ look: GUIElementComponentSettingsType.GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesOSLookType
     )
     func setupStyleLookSystem(
-        _ look: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType
+        _ look: GUIElementComponentSettingsType.GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesSystemLookType
     )
     func setupStyleLookParamsOS()
     func setupStyleLookParamsSystem(
-        _ lookParams: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookParamsType
+        _ lookParams: GUIElementComponentSettingsType.GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLookParamsType
     )
     func setupStyleLayoutInitialization()
     func setupStyleLayoutOS()
     func setupStyleLayoutSystem(
-        _ layoutParams: UIElementComponentSettingsType.UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLayoutParamsType
+        _ layoutParams: GUIElementComponentSettingsType.GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLayoutParamsType
     )
 }
 
-extension UIElementComponent {
+extension GUIElementComponent {
     
     public func setup() {
         initialization.isRunning = true
@@ -68,7 +68,7 @@ extension UIElementComponent {
     }
 }
 
-extension UIElementComponent {
+extension GUIElementComponent {
     
     public func setupSettings() {
         setupNestedSettings()
@@ -78,7 +78,7 @@ extension UIElementComponent {
     }
 }
 
-extension UIElementComponent {
+extension GUIElementComponent {
     
     private func setupParams() {
         setupParams(
@@ -87,7 +87,7 @@ extension UIElementComponent {
     }
 }
 
-extension UIElementComponent {
+extension GUIElementComponent {
     
     func setupStyle() {
         setupStyleLook()

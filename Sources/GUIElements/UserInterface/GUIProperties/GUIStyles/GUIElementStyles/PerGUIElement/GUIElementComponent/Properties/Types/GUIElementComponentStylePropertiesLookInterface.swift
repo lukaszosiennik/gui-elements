@@ -3,10 +3,10 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIElementComponentStylePropertiesLookInterface {
+public protocol GUIElementComponentStylePropertiesLookInterface {
     
-    associatedtype UIElementComponentStylePropertiesOSLookType:
-        UIElementComponentStylePropertiesOSLook
-    associatedtype UIElementComponentStylePropertiesSystemLookType:
-        UIElementComponentStylePropertiesSystemLook
+    associatedtype GUIElementComponentStylePropertiesOSLookType:
+        GUIElementComponentStylePropertiesOSLook
+    associatedtype GUIElementComponentStylePropertiesSystemLookType:
+        GUIElementComponentStylePropertiesSystemLook
 }

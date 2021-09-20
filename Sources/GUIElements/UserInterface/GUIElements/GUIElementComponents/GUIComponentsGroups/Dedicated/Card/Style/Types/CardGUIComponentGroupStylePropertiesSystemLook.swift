@@ -5,8 +5,8 @@
 
 import UIKit
 
-public struct CardUIComponentGroupStylePropertiesSystemLook:
-    UIComponentGroupStylePropertiesSystemLook {
+public struct CardGUIComponentGroupStylePropertiesSystemLook:
+    GUIComponentGroupStylePropertiesSystemLook {
     
     public let whole: Whole?
     public let title: Title?
@@ -23,7 +23,7 @@ public struct CardUIComponentGroupStylePropertiesSystemLook:
     }
 }
 
-extension CardUIComponentGroupStylePropertiesSystemLook {
+extension CardGUIComponentGroupStylePropertiesSystemLook {
     
     public struct Whole {
         
@@ -65,7 +65,7 @@ extension CardUIComponentGroupStylePropertiesSystemLook {
     }
 }
 
-extension CardUIComponentGroupStylePropertiesSystemLook.Whole {
+extension CardGUIComponentGroupStylePropertiesSystemLook.Whole {
     
     public struct Border {
         
@@ -99,7 +99,7 @@ extension CardUIComponentGroupStylePropertiesSystemLook.Whole {
     }
 }
 
-extension CardUIComponentGroupStylePropertiesSystemLook.Whole {
+extension CardGUIComponentGroupStylePropertiesSystemLook.Whole {
     
     public enum CornerType {
         

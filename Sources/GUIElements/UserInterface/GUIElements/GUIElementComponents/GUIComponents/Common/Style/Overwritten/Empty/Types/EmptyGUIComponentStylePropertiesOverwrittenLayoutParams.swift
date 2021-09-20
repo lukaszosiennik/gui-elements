@@ -3,5 +3,5 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct EmptyUIComponentStylePropertiesOverwrittenLayoutParams:
-    UIComponentStylePropertiesOverwrittenLayoutParams {}
+public struct EmptyGUIComponentStylePropertiesOverwrittenLayoutParams:
+    GUIComponentStylePropertiesOverwrittenLayoutParams {}

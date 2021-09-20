@@ -3,10 +3,10 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol NavigationMenuUIElementComponentParamsInterface {
+public protocol NavigationMenuGUIElementComponentParamsInterface {
     
     associatedtype OptionsKeyValueType:
-        NavigationMenuUIElementComponentParamsOptionsKeyValueInterface
+        NavigationMenuGUIElementComponentParamsOptionsKeyValueInterface
     associatedtype ActionsFunctionType
     
     typealias Options =

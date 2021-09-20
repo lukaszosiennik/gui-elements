@@ -3,14 +3,14 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class DevSoftwareEngineerUIComponentStyleFactory:
-    UIComponentTypeStyleFactory<
-        DevSoftwareEngineerUIComponentPaletts
+public final class DevSoftwareEngineerGUIComponentStyleFactory:
+    GUIComponentTypeStyleFactory<
+        DevSoftwareEngineerGUIComponentPaletts
     >,
-    UIComponentStyleFactoryInterface {
+    GUIComponentStyleFactoryInterface {
     
-    public func button() -> UIElementComponentStyle<
-        ButtonUIComponentStyleProperties
+    public func button() -> GUIElementComponentStyle<
+        ButtonGUIComponentStyleProperties
     > {
         return .init(
             type: styleType,
@@ -24,8 +24,8 @@ public final class DevSoftwareEngineerUIComponentStyleFactory:
         )
     }
     
-    public func label() -> UIElementComponentStyle<
-        LabelUIComponentStyleProperties
+    public func label() -> GUIElementComponentStyle<
+        LabelGUIComponentStyleProperties
     > {
         return .init(
             type: styleType,
@@ -39,8 +39,8 @@ public final class DevSoftwareEngineerUIComponentStyleFactory:
         )
     }
     
-    public func textArea() -> UIElementComponentStyle<
-        TextAreaUIComponentStyleProperties
+    public func textArea() -> GUIElementComponentStyle<
+        TextAreaGUIComponentStyleProperties
     > {
         return .init(
             type: styleType,
@@ -51,8 +51,8 @@ public final class DevSoftwareEngineerUIComponentStyleFactory:
         )
     }
     
-    public func textField() -> UIElementComponentStyle<
-        TextFieldUIComponentStyleProperties
+    public func textField() -> GUIElementComponentStyle<
+        TextFieldGUIComponentStyleProperties
     > {
         return .init(
             type: styleType,
@@ -65,8 +65,8 @@ public final class DevSoftwareEngineerUIComponentStyleFactory:
         )
     }
     
-    public func placeholder() -> UIElementComponentStyle<
-        PlaceholderUIComponentStyleProperties
+    public func placeholder() -> GUIElementComponentStyle<
+        PlaceholderGUIComponentStyleProperties
     > {
         return .init(
             type: styleType,

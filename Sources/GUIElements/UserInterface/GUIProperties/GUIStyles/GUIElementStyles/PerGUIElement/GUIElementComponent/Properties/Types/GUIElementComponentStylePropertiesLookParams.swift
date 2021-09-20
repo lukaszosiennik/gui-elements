@@ -3,16 +3,16 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIElementComponentStylePropertiesLookParams:
-    UIElementStylePropertiesLookParams,
-    UIPropertyDefaultOptionalValueInterface {
+public protocol GUIElementComponentStylePropertiesLookParams:
+    GUIElementStylePropertiesLookParams,
+    GUIPropertyDefaultOptionalValueInterface {
     
-    associatedtype UIElementComponentStylePropertiesOverwrittenLookParamsType:
-        UIElementComponentStylePropertiesOverwrittenLookParams
+    associatedtype GUIElementComponentStylePropertiesOverwrittenLookParamsType:
+        GUIElementComponentStylePropertiesOverwrittenLookParams
     
     associatedtype DefaultConstantPalette:
-        DefaultUIPalette &
-        UIElementComponentConstantPalette
+        DefaultGUIPalette &
+        GUIElementComponentConstantPalette
     
     static var `default`: Self? {
         get
@@ -20,11 +20,11 @@ public protocol UIElementComponentStylePropertiesLookParams:
 
     init?(
         lookParams: Self?,
-        overwrittenBy newLookParams: UIElementComponentStylePropertiesOverwrittenLookParamsType?
+        overwrittenBy newLookParams: GUIElementComponentStylePropertiesOverwrittenLookParamsType?
     )
 }
 
-extension UIElementComponentStylePropertiesLookParams {
+extension GUIElementComponentStylePropertiesLookParams {
     
     public static var `default`: Self? {
         return nil

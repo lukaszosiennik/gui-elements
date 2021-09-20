@@ -3,16 +3,16 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum SystemUIElementComponentColorPaletteTemplate:
-    SystemUIElementComponentColorPaletteInterface {
+public enum SystemGUIElementComponentColorPaletteTemplate:
+    SystemGUIElementComponentColorPaletteInterface {
     
     fileprivate enum All {}
     
-    public enum UIElementComponent:
-        SystemUIElementComponentPaletteInterface {
+    public enum GUIElementComponent:
+        SystemGUIElementComponentPaletteInterface {
         
-        fileprivate typealias UIElementComponentPalette =
-            UIElementComponent
+        fileprivate typealias GUIElementComponentPalette =
+            GUIElementComponent
         
         fileprivate enum Property {
             
@@ -23,11 +23,11 @@ public enum SystemUIElementComponentColorPaletteTemplate:
     }
 }
 
-extension SystemUIElementComponentColorPaletteTemplate.UIElementComponent {
+extension SystemGUIElementComponentColorPaletteTemplate.GUIElementComponent {
         
-    public enum UIComponent:
-        UIElementComponentColorPalette,
-        SystemUIPalette {
+    public enum GUIComponent:
+        GUIElementComponentColorPalette,
+        SystemGUIPalette {
         
         fileprivate enum Property {}
         
@@ -38,18 +38,18 @@ extension SystemUIElementComponentColorPaletteTemplate.UIElementComponent {
         enum Placeholder {}
     }
     
-    public enum UIComponentSet:
-        UIElementComponentColorPalette,
-        SystemUIPalette {
+    public enum GUIComponentSet:
+        GUIElementComponentColorPalette,
+        SystemGUIPalette {
         
         fileprivate enum Property {}
         
         enum NavigationMenuOption {}
     }
     
-    public enum UIComponentGroup:
-        UIElementComponentColorPalette,
-        SystemUIPalette {
+    public enum GUIComponentGroup:
+        GUIElementComponentColorPalette,
+        SystemGUIPalette {
         
         fileprivate enum Property {}
         
@@ -57,9 +57,9 @@ extension SystemUIElementComponentColorPaletteTemplate.UIElementComponent {
         enum NavigationMenu {}
     }
     
-    public enum UIComponentScreen:
-        UIElementComponentColorPalette,
-        SystemUIPalette {
+    public enum GUIComponentScreen:
+        GUIElementComponentColorPalette,
+        SystemGUIPalette {
         
         fileprivate enum Property {}
         

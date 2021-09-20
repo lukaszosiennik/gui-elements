@@ -3,19 +3,19 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class NavigationMenuUIComponentGroupParams<
+public final class NavigationMenuGUIComponentGroupParams<
     OptionKey:
-        InputUIElementComponentActionKeyInterface,
+        InputGUIElementComponentActionKeyInterface,
     OptionValue:
-        NavigationMenuUIElementComponentParamsOptionValueObjectInterface
+        NavigationMenuGUIElementComponentParamsOptionValueObjectInterface
 >:
-    NavigationMenuUIElementComponentParamsBasis<
-        NavigationMenuUIElementComponentParamsOptionsKeyValueTemplate<
+    NavigationMenuGUIElementComponentParamsBasis<
+        NavigationMenuGUIElementComponentParamsOptionsKeyValueTemplate<
             OptionKey,
             OptionValue
         >,
-        InputUIElementComponentParamsPlainActionsFunction<
+        InputGUIElementComponentParamsPlainActionsFunction<
             OptionKey
         >
     >,
-    UIComponentGroupParams {}
+    GUIComponentGroupParams {}

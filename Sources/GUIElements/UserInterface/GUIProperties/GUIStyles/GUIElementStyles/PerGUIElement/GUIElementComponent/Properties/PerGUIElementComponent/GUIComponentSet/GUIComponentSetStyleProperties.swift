@@ -3,12 +3,12 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentSetStyleProperties:
-    UIElementComponentStyleProperties
+public protocol GUIComponentSetStyleProperties:
+    GUIElementComponentStyleProperties
 where
-    UIElementComponentStylePropertiesLookInterfaceType
-        : UIComponentSetStylePropertiesLookInterface,
-    UIElementComponentStylePropertiesLookParamsType
-        : UIComponentSetStylePropertiesLookParams,
-    UIElementComponentStylePropertiesLayoutParamsType
-        : UIComponentSetStylePropertiesLayoutParams {}
+    GUIElementComponentStylePropertiesLookInterfaceType
+        : GUIComponentSetStylePropertiesLookInterface,
+    GUIElementComponentStylePropertiesLookParamsType
+        : GUIComponentSetStylePropertiesLookParams,
+    GUIElementComponentStylePropertiesLayoutParamsType
+        : GUIComponentSetStylePropertiesLayoutParams {}

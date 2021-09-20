@@ -3,24 +3,24 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct UIComponentSetStylePropertiesOverwrittenTemplate<
-    UIComponentSetStylePropertiesOverwrittenLookType:
-        UIComponentSetStylePropertiesOverwrittenLook,
-    UIComponentSetStylePropertiesOverwrittenLookParamsType:
-        UIComponentSetStylePropertiesOverwrittenLookParams,
-    UIComponentSetStylePropertiesOverwrittenLayoutParamsType:
-        UIComponentSetStylePropertiesOverwrittenLayoutParams
+public struct GUIComponentSetStylePropertiesOverwrittenTemplate<
+    GUIComponentSetStylePropertiesOverwrittenLookType:
+        GUIComponentSetStylePropertiesOverwrittenLook,
+    GUIComponentSetStylePropertiesOverwrittenLookParamsType:
+        GUIComponentSetStylePropertiesOverwrittenLookParams,
+    GUIComponentSetStylePropertiesOverwrittenLayoutParamsType:
+        GUIComponentSetStylePropertiesOverwrittenLayoutParams
 >:
-    UIComponentSetStylePropertiesOverwritten {
+    GUIComponentSetStylePropertiesOverwritten {
 
-    public let look: UIComponentSetStylePropertiesOverwrittenLookType?
-    public let lookParams: UIComponentSetStylePropertiesOverwrittenLookParamsType?
-    public let layoutParams: UIComponentSetStylePropertiesOverwrittenLayoutParamsType?
+    public let look: GUIComponentSetStylePropertiesOverwrittenLookType?
+    public let lookParams: GUIComponentSetStylePropertiesOverwrittenLookParamsType?
+    public let layoutParams: GUIComponentSetStylePropertiesOverwrittenLayoutParamsType?
     
     public init(
-        look: UIComponentSetStylePropertiesOverwrittenLookType? = nil,
-        lookParams: UIComponentSetStylePropertiesOverwrittenLookParamsType? = nil,
-        layoutParams: UIComponentSetStylePropertiesOverwrittenLayoutParamsType? = nil
+        look: GUIComponentSetStylePropertiesOverwrittenLookType? = nil,
+        lookParams: GUIComponentSetStylePropertiesOverwrittenLookParamsType? = nil,
+        layoutParams: GUIComponentSetStylePropertiesOverwrittenLayoutParamsType? = nil
     ) {
         self.look = look
         self.lookParams = lookParams

@@ -5,8 +5,8 @@
 
 import UIKit
 
-public struct LabelUIComponentStylePropertiesSystemLook:
-    UIComponentStylePropertiesSystemLook {
+public struct LabelGUIComponentStylePropertiesSystemLook:
+    GUIComponentStylePropertiesSystemLook {
     
     public let textColor: UIColor
     
@@ -18,7 +18,7 @@ public struct LabelUIComponentStylePropertiesSystemLook:
     
     public init(
         look: Self,
-        overwrittenBy newLook: LabelUIComponentStylePropertiesOverwrittenLook?
+        overwrittenBy newLook: LabelGUIComponentStylePropertiesOverwrittenLook?
     ) {
         guard let textColor = newLook?.textColor
         else {

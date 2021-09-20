@@ -3,16 +3,16 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class AppCompanySpecificUIElementComponentStyleFactory:
-    UIElementComponentStyleFactoryBasis {
+public final class AppCompanySpecificGUIElementComponentStyleFactory:
+    GUIElementComponentStyleFactoryBasis {
     
     init() {
         super.init(
             styleType: .system(.app(.companySpecific)),
-            uiComponentStyleFactoryType: AppCompanySpecificUIComponentStyleFactory.self,
-            uiComponentSetStyleFactoryType: AppCompanySpecificUIComponentSetStyleFactory.self,
-            uiComponentGroupStyleFactoryType: AppCompanySpecificUIComponentGroupStyleFactory.self,
-            uiComponentScreenStyleFactoryType: AppCompanySpecificUIComponentScreenStyleFactory.self
+            uiComponentStyleFactoryType: AppCompanySpecificGUIComponentStyleFactory.self,
+            uiComponentSetStyleFactoryType: AppCompanySpecificGUIComponentSetStyleFactory.self,
+            uiComponentGroupStyleFactoryType: AppCompanySpecificGUIComponentGroupStyleFactory.self,
+            uiComponentScreenStyleFactoryType: AppCompanySpecificGUIComponentScreenStyleFactory.self
         )
     }
 }

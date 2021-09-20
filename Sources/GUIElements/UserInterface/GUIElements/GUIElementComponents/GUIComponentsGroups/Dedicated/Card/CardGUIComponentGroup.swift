@@ -3,13 +3,13 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class CardUIComponentGroup<
-    BodyUIElementComponentType:
-        UIElementComponent
+public final class CardGUIComponentGroup<
+    BodyGUIElementComponentType:
+        GUIElementComponent
 >:
-    CardUIComponentGroupBasis<
-        BodyUIElementComponentType,
-        BodyUIElementComponentType.UIElementComponentSettingsType
+    CardGUIComponentGroupBasis<
+        BodyGUIElementComponentType,
+        BodyGUIElementComponentType.GUIElementComponentSettingsType
     > {
 
     override func setupBodyNestedSettings() {

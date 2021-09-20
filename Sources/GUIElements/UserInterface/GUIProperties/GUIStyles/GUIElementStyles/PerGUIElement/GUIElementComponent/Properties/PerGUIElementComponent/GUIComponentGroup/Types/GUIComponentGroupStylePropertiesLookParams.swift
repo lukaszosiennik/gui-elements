@@ -3,10 +3,10 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentGroupStylePropertiesLookParams:
-    UIElementComponentStylePropertiesLookParams
+public protocol GUIComponentGroupStylePropertiesLookParams:
+    GUIElementComponentStylePropertiesLookParams
 where
-    UIElementComponentStylePropertiesOverwrittenLookParamsType
-        : UIComponentGroupStylePropertiesOverwrittenLookParams,
+    GUIElementComponentStylePropertiesOverwrittenLookParamsType
+        : GUIComponentGroupStylePropertiesOverwrittenLookParams,
     DefaultConstantPalette
-        == DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup {}
+        == DefaultGUIElementComponentConstantPalette.GUIElementComponent.GUIComponentGroup {}

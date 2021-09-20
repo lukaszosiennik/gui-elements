@@ -3,24 +3,24 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct UIComponentStylePropertiesOverwrittenTemplate<
-    UIComponentStylePropertiesOverwrittenLookType:
-        UIComponentStylePropertiesOverwrittenLook,
-    UIComponentStylePropertiesOverwrittenLookParamsType:
-        UIComponentStylePropertiesOverwrittenLookParams,
-    UIComponentStylePropertiesOverwrittenLayoutParamsType:
-        UIComponentStylePropertiesOverwrittenLayoutParams
+public struct GUIComponentStylePropertiesOverwrittenTemplate<
+    GUIComponentStylePropertiesOverwrittenLookType:
+        GUIComponentStylePropertiesOverwrittenLook,
+    GUIComponentStylePropertiesOverwrittenLookParamsType:
+        GUIComponentStylePropertiesOverwrittenLookParams,
+    GUIComponentStylePropertiesOverwrittenLayoutParamsType:
+        GUIComponentStylePropertiesOverwrittenLayoutParams
 >:
-    UIComponentStylePropertiesOverwritten {
+    GUIComponentStylePropertiesOverwritten {
 
-    public let look: UIComponentStylePropertiesOverwrittenLookType?
-    public let lookParams: UIComponentStylePropertiesOverwrittenLookParamsType?
-    public let layoutParams: UIComponentStylePropertiesOverwrittenLayoutParamsType?
+    public let look: GUIComponentStylePropertiesOverwrittenLookType?
+    public let lookParams: GUIComponentStylePropertiesOverwrittenLookParamsType?
+    public let layoutParams: GUIComponentStylePropertiesOverwrittenLayoutParamsType?
     
     public init(
-        look: UIComponentStylePropertiesOverwrittenLookType? = nil,
-        lookParams: UIComponentStylePropertiesOverwrittenLookParamsType? = nil,
-        layoutParams: UIComponentStylePropertiesOverwrittenLayoutParamsType? = nil
+        look: GUIComponentStylePropertiesOverwrittenLookType? = nil,
+        lookParams: GUIComponentStylePropertiesOverwrittenLookParamsType? = nil,
+        layoutParams: GUIComponentStylePropertiesOverwrittenLayoutParamsType? = nil
     ) {
         self.look = look
         self.lookParams = lookParams

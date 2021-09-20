@@ -3,8 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentStylePropertiesSystemLook:
-    UIElementComponentStylePropertiesSystemLook
+public protocol GUIComponentStylePropertiesSystemLook:
+    GUIElementComponentStylePropertiesSystemLook
 where
-    UIElementComponentStylePropertiesOverwrittenLookType
-        : UIComponentStylePropertiesOverwrittenLook {}
+    GUIElementComponentStylePropertiesOverwrittenLookType
+        : GUIComponentStylePropertiesOverwrittenLook {}

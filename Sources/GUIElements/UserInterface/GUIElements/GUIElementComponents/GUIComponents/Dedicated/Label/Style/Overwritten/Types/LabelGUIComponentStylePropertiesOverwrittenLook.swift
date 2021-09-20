@@ -5,8 +5,8 @@
 
 import UIKit
 
-public struct LabelUIComponentStylePropertiesOverwrittenLook:
-    UIComponentStylePropertiesOverwrittenLook {
+public struct LabelGUIComponentStylePropertiesOverwrittenLook:
+    GUIComponentStylePropertiesOverwrittenLook {
     
     public let textColor: UIColor?
     

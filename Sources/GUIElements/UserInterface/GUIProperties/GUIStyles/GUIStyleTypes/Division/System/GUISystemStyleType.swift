@@ -3,14 +3,14 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum UISystemStyleType:
+public enum GUISystemStyleType:
     Hashable {
     
-    case app(UIAppStyleType)
-    case dev(UIDevStyleType)
+    case app(GUIAppStyleType)
+    case dev(GUIDevStyleType)
 }
 
-extension UISystemStyleType {
+extension GUISystemStyleType {
     
     public static var app: Self {
         return .app(.companySpecific)

@@ -3,11 +3,11 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct PlaceholderUIComponentParams:
-    UIComponentParams {
+public struct PlaceholderGUIComponentParams:
+    GUIComponentParams {
     
-    public let look: PlaceholderUIComponentParamsPropertiesLook?
-    public let layoutParams: PlaceholderUIComponentParamsPropertiesLayoutParams?
+    public let look: PlaceholderGUIComponentParamsPropertiesLook?
+    public let layoutParams: PlaceholderGUIComponentParamsPropertiesLayoutParams?
     
     public static var `default`: Self {
         return .init(
@@ -17,8 +17,8 @@ public struct PlaceholderUIComponentParams:
     }
     
     public init(
-        look: PlaceholderUIComponentParamsPropertiesLook? = nil,
-        layoutParams: PlaceholderUIComponentParamsPropertiesLayoutParams?
+        look: PlaceholderGUIComponentParamsPropertiesLook? = nil,
+        layoutParams: PlaceholderGUIComponentParamsPropertiesLayoutParams?
     ) {
         self.look = look
         self.layoutParams = layoutParams

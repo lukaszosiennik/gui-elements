@@ -3,11 +3,11 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIElementComponentParams:
-    UIElementParams,
-    UIPropertyDefaultValueInterface {}
+public protocol GUIElementComponentParams:
+    GUIElementParams,
+    GUIPropertyDefaultValueInterface {}
 
-extension UIElementComponentParams {
+extension GUIElementComponentParams {
     
     static func structName(
         dot propertyName: String

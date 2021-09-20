@@ -3,12 +3,12 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias NavigationMenuUIComponentGroupStyleProperties =
-    UIComponentGroupStylePropertiesTemplate<
-        UIComponentGroupStylePropertiesLookTemplate<
-            EmptyUIComponentGroupStylePropertiesOSLook,
-            NavigationMenuUIComponentGroupStylePropertiesSystemLook
+public typealias NavigationMenuGUIComponentGroupStyleProperties =
+    GUIComponentGroupStylePropertiesTemplate<
+        GUIComponentGroupStylePropertiesLookTemplate<
+            EmptyGUIComponentGroupStylePropertiesOSLook,
+            NavigationMenuGUIComponentGroupStylePropertiesSystemLook
         >,
-        NavigationMenuUIComponentGroupStylePropertiesLookParams,
-        NavigationMenuUIComponentGroupStylePropertiesLayoutParams
+        NavigationMenuGUIComponentGroupStylePropertiesLookParams,
+        NavigationMenuGUIComponentGroupStylePropertiesLayoutParams
     >

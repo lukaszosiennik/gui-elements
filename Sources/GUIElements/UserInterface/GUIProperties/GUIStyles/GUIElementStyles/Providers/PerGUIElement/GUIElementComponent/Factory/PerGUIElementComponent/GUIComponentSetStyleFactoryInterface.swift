@@ -3,10 +3,10 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentSetStyleFactoryInterface:
-    UIElementComponentTypeStyleFactoryInterface {
+public protocol GUIComponentSetStyleFactoryInterface:
+    GUIElementComponentTypeStyleFactoryInterface {
     
-    func navigationMenuOption() -> UIElementComponentStyle<
-        NavigationMenuOptionUIComponentSetStyleProperties
+    func navigationMenuOption() -> GUIElementComponentStyle<
+        NavigationMenuOptionGUIComponentSetStyleProperties
     >
 }

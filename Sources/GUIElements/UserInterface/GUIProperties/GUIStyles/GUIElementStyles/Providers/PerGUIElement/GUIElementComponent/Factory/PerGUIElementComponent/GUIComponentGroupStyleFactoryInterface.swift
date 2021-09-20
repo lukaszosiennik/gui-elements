@@ -3,13 +3,13 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentGroupStyleFactoryInterface:
-    UIElementComponentTypeStyleFactoryInterface {
+public protocol GUIComponentGroupStyleFactoryInterface:
+    GUIElementComponentTypeStyleFactoryInterface {
     
-    func card() -> UIElementComponentStyle<
-        CardUIComponentGroupStyleProperties
+    func card() -> GUIElementComponentStyle<
+        CardGUIComponentGroupStyleProperties
     >
-    func navigationMenu() -> UIElementComponentStyle<
-        NavigationMenuUIComponentGroupStyleProperties
+    func navigationMenu() -> GUIElementComponentStyle<
+        NavigationMenuGUIComponentGroupStyleProperties
     >
 }

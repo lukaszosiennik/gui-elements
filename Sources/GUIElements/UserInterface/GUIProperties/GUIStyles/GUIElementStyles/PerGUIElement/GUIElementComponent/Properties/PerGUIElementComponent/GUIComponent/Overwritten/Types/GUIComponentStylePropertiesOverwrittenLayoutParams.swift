@@ -3,5 +3,5 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentStylePropertiesOverwrittenLayoutParams:
-    UIElementComponentStylePropertiesOverwrittenLayoutParams {}
+public protocol GUIComponentStylePropertiesOverwrittenLayoutParams:
+    GUIElementComponentStylePropertiesOverwrittenLayoutParams {}

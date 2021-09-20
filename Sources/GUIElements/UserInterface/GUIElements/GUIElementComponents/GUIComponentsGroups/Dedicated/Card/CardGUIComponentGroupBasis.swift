@@ -5,17 +5,17 @@
 
 import UIKit
 
-public class CardUIComponentGroupBasis<
+public class CardGUIComponentGroupBasis<
     BodyViewType:
         UIView,
-    BodyUIElementComponentSettingsType:
-        UIElementComponentSettings
+    BodyGUIElementComponentSettingsType:
+        GUIElementComponentSettings
 >:
     UIView,
-    UIComponentGroup {
+    GUIComponentGroup {
 
     private let titleContainer: UIView = .init()
-    private let titleLabelUI: LabelUIComponent = .init()
+    private let titleLabelUI: LabelGUIComponent = .init()
     
     private let separatorView: UIView = .init()
     
@@ -34,9 +34,9 @@ public class CardUIComponentGroupBasis<
     private let bodyContainerContentTopSpaceConstraintID: String = "bodyContainerContentTopSpace"
     private let bodyContainerContentBottomSpaceConstraintID: String = "bodyContainerContentBottomSpace"
     
-    public let initialization: UIElementComponentInitialization = .init()
+    public let initialization: GUIElementComponentInitialization = .init()
     
-    public var settings: CardUIComponentGroupSettings<BodyUIElementComponentSettingsType> {
+    public var settings: CardGUIComponentGroupSettings<BodyGUIElementComponentSettingsType> {
         didSet {
             setupSettings()
         }
@@ -49,8 +49,8 @@ public class CardUIComponentGroupBasis<
     }
     
     public required init(
-        settings: CardUIComponentGroupSettings<
-            BodyUIElementComponentSettingsType
+        settings: CardGUIComponentGroupSettings<
+            BodyGUIElementComponentSettingsType
         > = .default
     ) {
         self.settings = settings
@@ -95,26 +95,26 @@ public class CardUIComponentGroupBasis<
     func setupBodyNestedSettings() {}
     
     public func setupParams(
-        _ params: CardUIComponentGroupParams
+        _ params: CardGUIComponentGroupParams
     ) {}
 }
 
-extension CardUIComponentGroupBasis {
+extension CardGUIComponentGroupBasis {
     
     public func setupStyleLookOSConfiguration(
-        _ lookConfiguration: UIElementComponentLookOSConfiguration
+        _ lookConfiguration: GUIElementComponentLookOSConfiguration
     ) {
         setupStyleLookOS()
     }
     
     public func setupStyleLookOS(
-        _ look: EmptyUIComponentGroupStylePropertiesOSLook
+        _ look: EmptyGUIComponentGroupStylePropertiesOSLook
     ) {
         setupStyleLookOS()
     }
     
     public func setupStyleLookSystem(
-        _ look: CardUIComponentGroupStylePropertiesSystemLook
+        _ look: CardGUIComponentGroupStylePropertiesSystemLook
     ) {
         if let whole = look.whole {
             if let border = whole.border {
@@ -155,16 +155,16 @@ extension CardUIComponentGroupBasis {
     }
 }
 
-extension CardUIComponentGroupBasis {
+extension CardGUIComponentGroupBasis {
     
     public func setupStyleLookParamsOS() {}
     
     public func setupStyleLookParamsSystem(
-        _ lookParams: EmptyUIComponentGroupStylePropertiesLookParams
+        _ lookParams: EmptyGUIComponentGroupStylePropertiesLookParams
     ) {}
 }
 
-extension CardUIComponentGroupBasis {
+extension CardGUIComponentGroupBasis {
     
     public func setupStyleLayoutInitialization() {
         titleLabelUI.textAlignment = .center
@@ -313,7 +313,7 @@ extension CardUIComponentGroupBasis {
     }
     
     public func setupStyleLayoutSystem(
-        _ layoutParams: CardUIComponentGroupStylePropertiesLayoutParams
+        _ layoutParams: CardGUIComponentGroupStylePropertiesLayoutParams
     ) {
         if let title = layoutParams.title {
             titleContainer.uie.constraint(

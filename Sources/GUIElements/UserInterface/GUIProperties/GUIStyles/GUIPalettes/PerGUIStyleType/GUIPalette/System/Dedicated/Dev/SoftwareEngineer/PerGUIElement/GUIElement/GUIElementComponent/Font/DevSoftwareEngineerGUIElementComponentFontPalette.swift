@@ -3,28 +3,28 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum DevSoftwareEngineerUIElementComponentFontPalette:
-    DevUIElementComponentFontPaletteInterface {
+public enum DevSoftwareEngineerGUIElementComponentFontPalette:
+    DevGUIElementComponentFontPaletteInterface {
     
-    public enum UIElementComponent:
-        SystemUIElementComponentPaletteInterface {}
+    public enum GUIElementComponent:
+        SystemGUIElementComponentPaletteInterface {}
 }
 
-extension DevSoftwareEngineerUIElementComponentFontPalette.UIElementComponent {
+extension DevSoftwareEngineerGUIElementComponentFontPalette.GUIElementComponent {
         
-    public enum UIComponent:
-        UIElementComponentFontPalette,
-        DevUIPalette {}
+    public enum GUIComponent:
+        GUIElementComponentFontPalette,
+        DevGUIPalette {}
     
-    public enum UIComponentSet:
-        UIElementComponentFontPalette,
-        DevUIPalette {}
+    public enum GUIComponentSet:
+        GUIElementComponentFontPalette,
+        DevGUIPalette {}
     
-    public enum UIComponentGroup:
-        UIElementComponentFontPalette,
-        DevUIPalette {}
+    public enum GUIComponentGroup:
+        GUIElementComponentFontPalette,
+        DevGUIPalette {}
     
-    public enum UIComponentScreen:
-        UIElementComponentFontPalette,
-        DevUIPalette {}
+    public enum GUIComponentScreen:
+        GUIElementComponentFontPalette,
+        DevGUIPalette {}
 }

@@ -3,12 +3,12 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias NavigationMenuOptionUIComponentSetStyleProperties =
-    UIComponentSetStylePropertiesTemplate<
-        UIComponentSetStylePropertiesLookTemplate<
-            EmptyUIComponentSetStylePropertiesOSLook,
-            NavigationMenuOptionUIComponentSetStylePropertiesSystemLook
+public typealias NavigationMenuOptionGUIComponentSetStyleProperties =
+    GUIComponentSetStylePropertiesTemplate<
+        GUIComponentSetStylePropertiesLookTemplate<
+            EmptyGUIComponentSetStylePropertiesOSLook,
+            NavigationMenuOptionGUIComponentSetStylePropertiesSystemLook
         >,
-        EmptyUIComponentSetStylePropertiesLookParams,
-        NavigationMenuOptionUIComponentSetStylePropertiesLayoutParams
+        EmptyGUIComponentSetStylePropertiesLookParams,
+        NavigationMenuOptionGUIComponentSetStylePropertiesLayoutParams
     >

@@ -3,28 +3,28 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum AppCompanySpecificUIElementComponentFontPalette:
-    AppUIElementComponentFontPaletteInterface {
+public enum AppCompanySpecificGUIElementComponentFontPalette:
+    AppGUIElementComponentFontPaletteInterface {
     
-    public enum UIElementComponent:
-        SystemUIElementComponentPaletteInterface {}
+    public enum GUIElementComponent:
+        SystemGUIElementComponentPaletteInterface {}
 }
 
-extension AppCompanySpecificUIElementComponentFontPalette.UIElementComponent {
+extension AppCompanySpecificGUIElementComponentFontPalette.GUIElementComponent {
         
-    public enum UIComponent:
-        UIElementComponentFontPalette,
-        AppUIPalette {}
+    public enum GUIComponent:
+        GUIElementComponentFontPalette,
+        AppGUIPalette {}
     
-    public enum UIComponentSet:
-        UIElementComponentFontPalette,
-        AppUIPalette {}
+    public enum GUIComponentSet:
+        GUIElementComponentFontPalette,
+        AppGUIPalette {}
     
-    public enum UIComponentGroup:
-        UIElementComponentFontPalette,
-        AppUIPalette {}
+    public enum GUIComponentGroup:
+        GUIElementComponentFontPalette,
+        AppGUIPalette {}
     
-    public enum UIComponentScreen:
-        UIElementComponentFontPalette,
-        AppUIPalette {}
+    public enum GUIComponentScreen:
+        GUIElementComponentFontPalette,
+        AppGUIPalette {}
 }

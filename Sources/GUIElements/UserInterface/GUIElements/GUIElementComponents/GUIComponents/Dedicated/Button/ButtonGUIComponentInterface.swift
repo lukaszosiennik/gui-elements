@@ -5,16 +5,16 @@
 
 import UIKit
 
-public protocol ButtonUIComponentInterface:
-    UIComponent
+public protocol ButtonGUIComponentInterface:
+    GUIComponent
 where
-    UIElementComponentSettingsType
-        == ButtonUIComponentSettings {}
+    GUIElementComponentSettingsType
+        == ButtonGUIComponentSettings {}
 
-extension ButtonUIComponentInterface {
+extension ButtonGUIComponentInterface {
     
     func setupParams(
-        _ params: ButtonUIComponentParams,
+        _ params: ButtonGUIComponentParams,
         for button: UIButton
     ) {
         button.setTitle(
@@ -24,10 +24,10 @@ extension ButtonUIComponentInterface {
     }
 }
 
-extension ButtonUIComponentInterface {
+extension ButtonGUIComponentInterface {
     
     func setupStyleLookOSConfiguration(
-        _ lookConfiguration: UIElementComponentLookOSConfiguration,
+        _ lookConfiguration: GUIElementComponentLookOSConfiguration,
         for button: UIButton
     ) {
         setupStyleLookOS(
@@ -36,7 +36,7 @@ extension ButtonUIComponentInterface {
     }
     
     func setupStyleLookOS(
-        _ look: ButtonUIComponentStylePropertiesOSLook,
+        _ look: ButtonGUIComponentStylePropertiesOSLook,
         for button: UIButton
     ) {
         setupStyleLookOS(
@@ -45,7 +45,7 @@ extension ButtonUIComponentInterface {
     }
     
     func setupStyleLookSystem(
-        _ look: ButtonUIComponentStylePropertiesSystemLook,
+        _ look: ButtonGUIComponentStylePropertiesSystemLook,
         for button: UIButton
     ) {
         button.setTitleColor(
@@ -77,19 +77,19 @@ extension ButtonUIComponentInterface {
     }
 }
 
-extension ButtonUIComponentInterface {
+extension ButtonGUIComponentInterface {
     
     func setupStyleLookParamsOS(
         for button: UIButton
     ) {}
     
     func setupStyleLookParamsSystem(
-        _ lookParams: EmptyUIComponentStylePropertiesLookParams,
+        _ lookParams: EmptyGUIComponentStylePropertiesLookParams,
         for button: UIButton
     ) {}
 }
 
-extension ButtonUIComponentInterface {
+extension ButtonGUIComponentInterface {
     
     func setupStyleLayoutInitialization(
         for button: UIButton
@@ -100,7 +100,7 @@ extension ButtonUIComponentInterface {
     ) {}
     
     func setupStyleLayoutSystem(
-        _ layoutParams: ButtonUIComponentStylePropertiesLayoutParams,
+        _ layoutParams: ButtonGUIComponentStylePropertiesLayoutParams,
         for button: UIButton
     ) {}
 }

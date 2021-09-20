@@ -5,8 +5,8 @@
 
 import UIKit
 
-public struct CardUIComponentGroupStylePropertiesLayoutParams:
-    UIComponentGroupStylePropertiesLayoutParams {
+public struct CardGUIComponentGroupStylePropertiesLayoutParams:
+    GUIComponentGroupStylePropertiesLayoutParams {
     
     public let title: Title?
     public let body: Body?
@@ -24,7 +24,7 @@ public struct CardUIComponentGroupStylePropertiesLayoutParams:
     }
 }
 
-extension CardUIComponentGroupStylePropertiesLayoutParams {
+extension CardGUIComponentGroupStylePropertiesLayoutParams {
     
     public struct Title {
         

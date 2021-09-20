@@ -3,12 +3,12 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias LabelUIComponentStyleProperties =
-    UIComponentStylePropertiesTemplate<
-        UIComponentStylePropertiesLookTemplate<
-            EmptyUIComponentStylePropertiesOSLook,
-            LabelUIComponentStylePropertiesSystemLook
+public typealias LabelGUIComponentStyleProperties =
+    GUIComponentStylePropertiesTemplate<
+        GUIComponentStylePropertiesLookTemplate<
+            EmptyGUIComponentStylePropertiesOSLook,
+            LabelGUIComponentStylePropertiesSystemLook
         >,
-        LabelUIComponentStylePropertiesLookParams,
-        LabelUIComponentStylePropertiesLayoutParams
+        LabelGUIComponentStylePropertiesLookParams,
+        LabelGUIComponentStylePropertiesLayoutParams
     >

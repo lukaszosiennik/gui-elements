@@ -5,15 +5,15 @@
 
 import UIKit
 
-public final class NavigationMenuUIOptionComponentSet:
+public final class NavigationMenuGUIOptionComponentSet:
     UIView,
-    UIComponentSet {
+    GUIComponentSet {
     
-    private let optionButtonUI: ButtonUIComponent = .init()
+    private let optionButtonUI: ButtonGUIComponent = .init()
     
-    public let initialization: UIElementComponentInitialization = .init()
+    public let initialization: GUIElementComponentInitialization = .init()
     
-    public var settings: NavigationMenuOptionUIComponentSetSettings {
+    public var settings: NavigationMenuOptionGUIComponentSetSettings {
         didSet {
             setupSettings()
         }
@@ -26,7 +26,7 @@ public final class NavigationMenuUIOptionComponentSet:
     }
     
     public init(
-        settings: NavigationMenuOptionUIComponentSetSettings
+        settings: NavigationMenuOptionGUIComponentSetSettings
     ) {
         self.settings = settings
         super.init(
@@ -55,26 +55,26 @@ public final class NavigationMenuUIOptionComponentSet:
     }
     
     public func setupParams(
-        _ params: NavigationMenuOptionUIComponentSetParams
+        _ params: NavigationMenuOptionGUIComponentSetParams
     ) {}
 }
 
-extension NavigationMenuUIOptionComponentSet {
+extension NavigationMenuGUIOptionComponentSet {
     
     public func setupStyleLookOSConfiguration(
-        _ lookConfiguration: UIElementComponentLookOSConfiguration
+        _ lookConfiguration: GUIElementComponentLookOSConfiguration
     ) {
         setupStyleLookOS()
     }
     
     public func setupStyleLookOS(
-        _ look: EmptyUIComponentSetStylePropertiesOSLook
+        _ look: EmptyGUIComponentSetStylePropertiesOSLook
     ) {
         setupStyleLookOS()
     }
     
     public func setupStyleLookSystem(
-        _ look: NavigationMenuOptionUIComponentSetStylePropertiesSystemLook
+        _ look: NavigationMenuOptionGUIComponentSetStylePropertiesSystemLook
     ) {
         backgroundColor = look.backgroundColor
         layer.borderColor = look.borderColor.cgColor
@@ -89,16 +89,16 @@ extension NavigationMenuUIOptionComponentSet {
     }
 }
 
-extension NavigationMenuUIOptionComponentSet {
+extension NavigationMenuGUIOptionComponentSet {
     
     public func setupStyleLookParamsOS() {}
     
     public func setupStyleLookParamsSystem(
-        _ lookParams: EmptyUIComponentSetStylePropertiesLookParams
+        _ lookParams: EmptyGUIComponentSetStylePropertiesLookParams
     ) {}
 }
 
-extension NavigationMenuUIOptionComponentSet {
+extension NavigationMenuGUIOptionComponentSet {
     
     public func setupStyleLayoutInitialization() {
         uie.addSubview(
@@ -130,6 +130,6 @@ extension NavigationMenuUIOptionComponentSet {
     public func setupStyleLayoutOS() {}
     
     public func setupStyleLayoutSystem(
-        _ layoutParams: NavigationMenuOptionUIComponentSetStylePropertiesLayoutParams
+        _ layoutParams: NavigationMenuOptionGUIComponentSetStylePropertiesLayoutParams
     ) {}
 }

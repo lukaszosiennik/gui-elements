@@ -5,13 +5,13 @@
 
 import UIKit
 
-public final class CustomButtonUIComponent:
+public final class CustomButtonGUIComponent:
     UIButton,
-    ButtonUIComponentInterface {
+    ButtonGUIComponentInterface {
 
-    public let initialization: UIElementComponentInitialization = .init()
+    public let initialization: GUIElementComponentInitialization = .init()
     
-    public var settings: ButtonUIComponentSettings {
+    public var settings: ButtonGUIComponentSettings {
         didSet {
             setupSettings()
         }
@@ -24,7 +24,7 @@ public final class CustomButtonUIComponent:
     }
     
     public init(
-        settings: ButtonUIComponentSettings
+        settings: ButtonGUIComponentSettings
     ) {
         self.settings = settings
         super.init(
@@ -45,7 +45,7 @@ public final class CustomButtonUIComponent:
     public func setupNestedSettings() {}
     
     public func setupParams(
-        _ params: ButtonUIComponentParams
+        _ params: ButtonGUIComponentParams
     ) {
         setupParams(
             params,
@@ -54,10 +54,10 @@ public final class CustomButtonUIComponent:
     }
 }
 
-extension CustomButtonUIComponent {
+extension CustomButtonGUIComponent {
     
     public func setupStyleLookOSConfiguration(
-        _ lookConfiguration: UIElementComponentLookOSConfiguration
+        _ lookConfiguration: GUIElementComponentLookOSConfiguration
     ) {
         setupStyleLookOSConfiguration(
             lookConfiguration,
@@ -66,7 +66,7 @@ extension CustomButtonUIComponent {
     }
     
     public func setupStyleLookOS(
-        _ look: ButtonUIComponentStylePropertiesOSLook
+        _ look: ButtonGUIComponentStylePropertiesOSLook
     ) {
         setupStyleLookOS(
             look,
@@ -75,7 +75,7 @@ extension CustomButtonUIComponent {
     }
     
     public func setupStyleLookSystem(
-        _ look: ButtonUIComponentStylePropertiesSystemLook
+        _ look: ButtonGUIComponentStylePropertiesSystemLook
     ) {
         setupStyleLookSystem(
             look,
@@ -84,7 +84,7 @@ extension CustomButtonUIComponent {
     }
 }
 
-extension CustomButtonUIComponent {
+extension CustomButtonGUIComponent {
     
     public func setupStyleLookParamsOS() {
         setupStyleLookParamsOS(
@@ -93,7 +93,7 @@ extension CustomButtonUIComponent {
     }
     
     public func setupStyleLookParamsSystem(
-        _ lookParams: EmptyUIComponentStylePropertiesLookParams
+        _ lookParams: EmptyGUIComponentStylePropertiesLookParams
     ) {
         setupStyleLookParamsSystem(
             lookParams,
@@ -102,7 +102,7 @@ extension CustomButtonUIComponent {
     }
 }
 
-extension CustomButtonUIComponent {
+extension CustomButtonGUIComponent {
     
     public func setupStyleLayoutInitialization() {
         setupStyleLayoutInitialization(
@@ -117,7 +117,7 @@ extension CustomButtonUIComponent {
     }
     
     public func setupStyleLayoutSystem(
-        _ layoutParams: ButtonUIComponentStylePropertiesLayoutParams
+        _ layoutParams: ButtonGUIComponentStylePropertiesLayoutParams
     ) {
         setupStyleLayoutSystem(
             layoutParams,

@@ -3,9 +3,9 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias NavigationMenuUIComponentGroupStylePropertiesOverwritten =
-    UIComponentGroupStylePropertiesOverwrittenTemplate<
-        EmptyUIComponentGroupStylePropertiesOverwrittenLook,
-        NavigationMenuUIComponentGroupStylePropertiesOverwrittenLookParams,
-        EmptyUIComponentGroupStylePropertiesOverwrittenLayoutParams
+public typealias NavigationMenuGUIComponentGroupStylePropertiesOverwritten =
+    GUIComponentGroupStylePropertiesOverwrittenTemplate<
+        EmptyGUIComponentGroupStylePropertiesOverwrittenLook,
+        NavigationMenuGUIComponentGroupStylePropertiesOverwrittenLookParams,
+        EmptyGUIComponentGroupStylePropertiesOverwrittenLayoutParams
     >

@@ -3,10 +3,10 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuUIElementComponentParamsOptionsKeyValueTemplate<
+public struct NavigationMenuGUIElementComponentParamsOptionsKeyValueTemplate<
     KeyType:
-        InputUIElementComponentActionKeyInterface,
+        InputGUIElementComponentActionKeyInterface,
     ValueType:
-        NavigationMenuUIElementComponentParamsOptionValueObjectInterface
+        NavigationMenuGUIElementComponentParamsOptionValueObjectInterface
 >:
-    NavigationMenuUIElementComponentParamsOptionsKeyValueInterface {}
+    NavigationMenuGUIElementComponentParamsOptionsKeyValueInterface {}

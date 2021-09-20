@@ -3,17 +3,17 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-extension UIComponentScreenStyleProperties
+extension GUIComponentScreenStyleProperties
 where
-    UIElementComponentStylePropertiesLookParamsType
-        == EmptyUIComponentScreenStylePropertiesLookParams {
+    GUIElementComponentStylePropertiesLookParamsType
+        == EmptyGUIComponentScreenStylePropertiesLookParams {
     
     public init(
-        lookType: UIElementComponentStylePropertiesLookType<
-            UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType,
-            UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType
+        lookType: GUIElementComponentStylePropertiesLookType<
+            GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesOSLookType,
+            GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesSystemLookType
         >,
-        layoutParams: UIElementComponentStylePropertiesLayoutParamsType?
+        layoutParams: GUIElementComponentStylePropertiesLayoutParamsType?
     ) {
         self = .init(
             lookType: lookType,

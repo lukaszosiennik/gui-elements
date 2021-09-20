@@ -3,25 +3,25 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentScreenSettings:
-    UIElementComponentSettings
+public protocol GUIComponentScreenSettings:
+    GUIElementComponentSettings
 where
-    UIElementComponentParamsType
-        : UIComponentScreenParams,
-    UIElementComponentStylePropertiesType
-        : UIComponentScreenStyleProperties,
-    UIElementComponentStylePropertiesOverwrittenType
-        == EmptyUIComponentScreenStylePropertiesOverwritten {}
+    GUIElementComponentParamsType
+        : GUIComponentScreenParams,
+    GUIElementComponentStylePropertiesType
+        : GUIComponentScreenStyleProperties,
+    GUIElementComponentStylePropertiesOverwrittenType
+        == EmptyGUIComponentScreenStylePropertiesOverwritten {}
 
-extension UIComponentScreenSettings {
+extension GUIComponentScreenSettings {
     
-    public static var styleFactory: UIComponentScreenStyleFactoryInterface? {
+    public static var styleFactory: GUIComponentScreenStyleFactoryInterface? {
         return mainStyleFactory?.uiComponentScreen
     }
     
     public static func styleFactory(
-        for styleType: UIStyleType
-    ) -> UIComponentScreenStyleFactoryInterface? {
+        for styleType: GUIStyleType
+    ) -> GUIComponentScreenStyleFactoryInterface? {
         return mainStyleFactory(
             for: styleType
         )?.uiComponentScreen

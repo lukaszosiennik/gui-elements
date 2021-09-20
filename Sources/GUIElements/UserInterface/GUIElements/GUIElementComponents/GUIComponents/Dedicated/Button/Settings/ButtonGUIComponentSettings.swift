@@ -3,37 +3,37 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct ButtonUIComponentSettings:
-    UIComponentSettings {
+public struct ButtonGUIComponentSettings:
+    GUIComponentSettings {
 
-    public typealias UIElementComponentStylePropertiesOverwrittenType =
-        EmptyUIComponentStylePropertiesOverwritten
+    public typealias GUIElementComponentStylePropertiesOverwrittenType =
+        EmptyGUIComponentStylePropertiesOverwritten
     
-    public let params: ButtonUIComponentParams
-    public var style: UIElementComponentStyle<
-        ButtonUIComponentStyleProperties
+    public let params: ButtonGUIComponentParams
+    public var style: GUIElementComponentStyle<
+        ButtonGUIComponentStyleProperties
     >
     
     public init(
-        params: ButtonUIComponentParams,
-        style: UIElementComponentStyle<
-            ButtonUIComponentStyleProperties
+        params: ButtonGUIComponentParams,
+        style: GUIElementComponentStyle<
+            ButtonGUIComponentStyleProperties
         >
     ) {
         self.params = params
         self.style = style
     }
     
-    public static var style: UIElementComponentStyle<
-        ButtonUIComponentStyleProperties
+    public static var style: GUIElementComponentStyle<
+        ButtonGUIComponentStyleProperties
     >? {
         return styleFactory?.button()
     }
     
     public static func style(
-        for styleType: UIStyleType
-    ) -> UIElementComponentStyle<
-        ButtonUIComponentStyleProperties
+        for styleType: GUIStyleType
+    ) -> GUIElementComponentStyle<
+        ButtonGUIComponentStyleProperties
     >? {
         return styleFactory(
             for: styleType

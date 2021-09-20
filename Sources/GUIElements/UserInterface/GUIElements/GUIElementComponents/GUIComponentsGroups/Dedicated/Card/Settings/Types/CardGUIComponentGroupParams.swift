@@ -3,8 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct CardUIComponentGroupParams:
-    UIComponentGroupParams {
+public struct CardGUIComponentGroupParams:
+    GUIComponentGroupParams {
     
     public let title: String
     

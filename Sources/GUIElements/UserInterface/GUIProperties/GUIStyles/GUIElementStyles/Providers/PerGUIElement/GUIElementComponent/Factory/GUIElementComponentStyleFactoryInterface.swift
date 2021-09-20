@@ -3,19 +3,19 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIElementComponentStyleFactoryInterface:
-    UIElementStyleFactoryInterface {
+public protocol GUIElementComponentStyleFactoryInterface:
+    GUIElementStyleFactoryInterface {
     
-    var uiComponent: UIComponentStyleFactoryInterface? {
+    var uiComponent: GUIComponentStyleFactoryInterface? {
         get
     }
-    var uiComponentSet: UIComponentSetStyleFactoryInterface? {
+    var uiComponentSet: GUIComponentSetStyleFactoryInterface? {
         get
     }
-    var uiComponentGroup: UIComponentGroupStyleFactoryInterface? {
+    var uiComponentGroup: GUIComponentGroupStyleFactoryInterface? {
         get
     }
-    var uiComponentScreen: UIComponentScreenStyleFactoryInterface? {
+    var uiComponentScreen: GUIComponentScreenStyleFactoryInterface? {
         get
     }
 }

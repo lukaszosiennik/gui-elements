@@ -3,16 +3,16 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum UIStyleType:
+public enum GUIStyleType:
     Hashable {
     
     case custom
     
-    case os(_ configuration: UIElementComponentOSConfiguration)
-    case system(UISystemStyleType)
+    case os(_ configuration: GUIElementComponentOSConfiguration)
+    case system(GUISystemStyleType)
 }
 
-extension UIStyleType {
+extension GUIStyleType {
     
     public static var os: Self {
         return .os(
@@ -36,7 +36,7 @@ extension UIStyleType {
     }
 }
 
-extension UIStyleType {
+extension GUIStyleType {
     
     var isOS: Bool {
         guard case .os = self

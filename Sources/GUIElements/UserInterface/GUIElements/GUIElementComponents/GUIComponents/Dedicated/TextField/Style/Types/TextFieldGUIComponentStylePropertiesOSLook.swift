@@ -5,8 +5,8 @@
 
 import UIKit
 
-public struct TextFieldUIComponentStylePropertiesOSLook:
-    UIComponentStylePropertiesOSLook {
+public struct TextFieldGUIComponentStylePropertiesOSLook:
+    GUIComponentStylePropertiesOSLook {
     
     public let borderStyle: UITextField.BorderStyle
     

@@ -3,5 +3,5 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct EmptyUIComponentScreenStylePropertiesLookParams:
-    UIComponentScreenStylePropertiesLookParams {}
+public struct EmptyGUIComponentScreenStylePropertiesLookParams:
+    GUIComponentScreenStylePropertiesLookParams {}

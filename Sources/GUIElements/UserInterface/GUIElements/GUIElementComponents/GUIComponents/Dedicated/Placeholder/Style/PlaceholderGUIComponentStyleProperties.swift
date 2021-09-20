@@ -3,12 +3,12 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias PlaceholderUIComponentStyleProperties =
-    UIComponentStylePropertiesTemplate<
-        UIComponentStylePropertiesLookTemplate<
-            EmptyUIComponentStylePropertiesOSLook,
-            PlaceholderUIComponentStylePropertiesSystemLook
+public typealias PlaceholderGUIComponentStyleProperties =
+    GUIComponentStylePropertiesTemplate<
+        GUIComponentStylePropertiesLookTemplate<
+            EmptyGUIComponentStylePropertiesOSLook,
+            PlaceholderGUIComponentStylePropertiesSystemLook
         >,
-        EmptyUIComponentStylePropertiesLookParams,
-        PlaceholderUIComponentStylePropertiesLayoutParams
+        EmptyGUIComponentStylePropertiesLookParams,
+        PlaceholderGUIComponentStylePropertiesLayoutParams
     >

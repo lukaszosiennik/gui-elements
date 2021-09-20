@@ -5,7 +5,7 @@
 
 import UIKit
 
-public protocol UIElement
+public protocol GUIElement
 where
     Self
         : UIView {}

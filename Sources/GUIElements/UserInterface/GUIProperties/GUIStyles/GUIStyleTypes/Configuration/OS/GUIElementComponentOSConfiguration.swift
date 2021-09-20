@@ -3,22 +3,22 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct UIElementComponentOSConfiguration:
+public struct GUIElementComponentOSConfiguration:
     Hashable {
     
-    let lookConfiguration: UIElementComponentLookOSConfiguration
-    let layoutParamsConfiguration: UIElementComponentLayoutParamsOSConfiguration
+    let lookConfiguration: GUIElementComponentLookOSConfiguration
+    let layoutParamsConfiguration: GUIElementComponentLayoutParamsOSConfiguration
     
     public init(
-        lookConfiguration: UIElementComponentLookOSConfiguration,
-        layoutParamsConfiguration: UIElementComponentLayoutParamsOSConfiguration
+        lookConfiguration: GUIElementComponentLookOSConfiguration,
+        layoutParamsConfiguration: GUIElementComponentLayoutParamsOSConfiguration
     ) {
         self.lookConfiguration = lookConfiguration
         self.layoutParamsConfiguration = layoutParamsConfiguration
     }
 }
 
-extension UIElementComponentOSConfiguration {
+extension GUIElementComponentOSConfiguration {
     
     var isLookUserFriendly: Bool {
         return lookConfiguration.isUserFriendly

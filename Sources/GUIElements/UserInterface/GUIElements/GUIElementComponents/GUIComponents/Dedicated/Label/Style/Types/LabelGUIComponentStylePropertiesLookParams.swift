@@ -3,8 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct LabelUIComponentStylePropertiesLookParams:
-    UIComponentStylePropertiesLookParams {
+public struct LabelGUIComponentStylePropertiesLookParams:
+    GUIComponentStylePropertiesLookParams {
     
     public let linesNumber: Int
     
@@ -16,7 +16,7 @@ public struct LabelUIComponentStylePropertiesLookParams:
     
     public init?(
         lookParams: Self?,
-        overwrittenBy newLookParams: LabelUIComponentStylePropertiesOverwrittenLookParams?
+        overwrittenBy newLookParams: LabelGUIComponentStylePropertiesOverwrittenLookParams?
     ) {
         guard let linesNumber = newLookParams?.linesNumber ?? lookParams?.linesNumber
         else {

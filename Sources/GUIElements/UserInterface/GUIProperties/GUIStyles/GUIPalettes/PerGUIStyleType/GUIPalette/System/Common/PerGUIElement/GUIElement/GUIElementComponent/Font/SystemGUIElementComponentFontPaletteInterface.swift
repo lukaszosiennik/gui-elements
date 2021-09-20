@@ -3,14 +3,14 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol SystemUIElementComponentFontPaletteInterface:
-    SystemUIElementPaletteInterface
+public protocol SystemGUIElementComponentFontPaletteInterface:
+    SystemGUIElementPaletteInterface
 where
-    UIElementComponent.UIComponent
-        : UIElementComponentFontPalette,
-    UIElementComponent.UIComponentSet
-        : UIElementComponentFontPalette,
-    UIElementComponent.UIComponentGroup
-        : UIElementComponentFontPalette,
-    UIElementComponent.UIComponentScreen
-        : UIElementComponentFontPalette {}
+    GUIElementComponent.GUIComponent
+        : GUIElementComponentFontPalette,
+    GUIElementComponent.GUIComponentSet
+        : GUIElementComponentFontPalette,
+    GUIElementComponent.GUIComponentGroup
+        : GUIElementComponentFontPalette,
+    GUIElementComponent.GUIComponentScreen
+        : GUIElementComponentFontPalette {}

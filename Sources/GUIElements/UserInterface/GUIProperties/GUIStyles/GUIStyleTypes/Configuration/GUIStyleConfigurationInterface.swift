@@ -3,9 +3,9 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIStyleConfigurationInterface {
+public protocol GUIStyleConfigurationInterface {
     
-    static var current: UIStyleType {
+    static var current: GUIStyleType {
         get
     }
 }

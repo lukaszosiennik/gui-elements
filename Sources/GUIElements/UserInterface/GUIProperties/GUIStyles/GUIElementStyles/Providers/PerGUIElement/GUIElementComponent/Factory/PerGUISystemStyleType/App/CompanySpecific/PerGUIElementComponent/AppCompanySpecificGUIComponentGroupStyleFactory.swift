@@ -3,22 +3,22 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class AppCompanySpecificUIComponentGroupStyleFactory:
-    UIComponentGroupTypeStyleFactory<
-        AppCompanySpecificUIComponentGroupPaletts
+public final class AppCompanySpecificGUIComponentGroupStyleFactory:
+    GUIComponentGroupTypeStyleFactory<
+        AppCompanySpecificGUIComponentGroupPaletts
     >,
-    UIComponentGroupStyleFactoryInterface {
+    GUIComponentGroupStyleFactoryInterface {
     
-    public func card() -> UIElementComponentStyle<
-        CardUIComponentGroupStyleProperties
+    public func card() -> GUIElementComponentStyle<
+        CardGUIComponentGroupStyleProperties
     > {
         return .default(
             styleType: styleType
         )
     }
     
-    public func navigationMenu() -> UIElementComponentStyle<
-        NavigationMenuUIComponentGroupStyleProperties
+    public func navigationMenu() -> GUIElementComponentStyle<
+        NavigationMenuGUIComponentGroupStyleProperties
     > {
         return .default(
             styleType: styleType

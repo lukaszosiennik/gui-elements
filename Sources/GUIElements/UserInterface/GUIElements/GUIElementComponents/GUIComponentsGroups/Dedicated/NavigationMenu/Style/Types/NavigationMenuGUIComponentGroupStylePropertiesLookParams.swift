@@ -3,8 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuUIComponentGroupStylePropertiesLookParams:
-    UIComponentGroupStylePropertiesLookParams {
+public struct NavigationMenuGUIComponentGroupStylePropertiesLookParams:
+    GUIComponentGroupStylePropertiesLookParams {
     
     public let titleLinesNumber: Int
     
@@ -22,7 +22,7 @@ public struct NavigationMenuUIComponentGroupStylePropertiesLookParams:
     
     public init?(
         lookParams: Self?,
-        overwrittenBy newLookParams: NavigationMenuUIComponentGroupStylePropertiesOverwrittenLookParams?
+        overwrittenBy newLookParams: NavigationMenuGUIComponentGroupStylePropertiesOverwrittenLookParams?
     ) {
         guard let titleLinesNumber = newLookParams?.titleLinesNumber ?? lookParams?.titleLinesNumber
         else {

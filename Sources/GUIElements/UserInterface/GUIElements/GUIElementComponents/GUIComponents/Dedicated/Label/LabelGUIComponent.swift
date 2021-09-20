@@ -5,13 +5,13 @@
 
 import UIKit
 
-public final class LabelUIComponent:
+public final class LabelGUIComponent:
     UILabel,
-    UIComponent {
+    GUIComponent {
 
-    public let initialization: UIElementComponentInitialization = .init()
+    public let initialization: GUIElementComponentInitialization = .init()
     
-    public var settings: LabelUIComponentSettings {
+    public var settings: LabelGUIComponentSettings {
         didSet {
             setupSettings()
         }
@@ -24,7 +24,7 @@ public final class LabelUIComponent:
     }
     
     public init(
-        settings: LabelUIComponentSettings
+        settings: LabelGUIComponentSettings
     ) {
         self.settings = settings
         super.init(
@@ -45,28 +45,28 @@ public final class LabelUIComponent:
     public func setupNestedSettings() {}
     
     public func setupParams(
-        _ params: LabelUIComponentParams
+        _ params: LabelGUIComponentParams
     ) {
         text = params.text
     }
 }
 
-extension LabelUIComponent {
+extension LabelGUIComponent {
     
     public func setupStyleLookOSConfiguration(
-        _ lookConfiguration: UIElementComponentLookOSConfiguration
+        _ lookConfiguration: GUIElementComponentLookOSConfiguration
     ) {
         setupStyleLookOS()
     }
     
     public func setupStyleLookOS(
-        _ look: EmptyUIComponentStylePropertiesOSLook
+        _ look: EmptyGUIComponentStylePropertiesOSLook
     ) {
         setupStyleLookOS()
     }
     
     public func setupStyleLookSystem(
-        _ look: LabelUIComponentStylePropertiesSystemLook
+        _ look: LabelGUIComponentStylePropertiesSystemLook
     ) {
         textColor = look.textColor
     }
@@ -77,7 +77,7 @@ extension LabelUIComponent {
     }
 }
 
-extension LabelUIComponent {
+extension LabelGUIComponent {
     
     public func setupStyleLookParamsOS() {
         let tempLabel: UILabel = .init()
@@ -85,19 +85,19 @@ extension LabelUIComponent {
     }
     
     public func setupStyleLookParamsSystem(
-        _ lookParams: LabelUIComponentStylePropertiesLookParams
+        _ lookParams: LabelGUIComponentStylePropertiesLookParams
     ) {
         numberOfLines = lookParams.linesNumber
     }
 }
 
-extension LabelUIComponent {
+extension LabelGUIComponent {
     
     public func setupStyleLayoutInitialization() {}
     
     public func setupStyleLayoutOS() {}
     
     public func setupStyleLayoutSystem(
-        _ layoutParams: LabelUIComponentStylePropertiesLayoutParams
+        _ layoutParams: LabelGUIComponentStylePropertiesLayoutParams
     ) {}
 }

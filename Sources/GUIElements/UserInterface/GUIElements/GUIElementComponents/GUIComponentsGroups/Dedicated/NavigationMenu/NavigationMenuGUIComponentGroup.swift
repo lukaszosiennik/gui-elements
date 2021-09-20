@@ -5,16 +5,16 @@
 
 import UIKit
 
-public final class NavigationMenuUIComponentGroup<
+public final class NavigationMenuGUIComponentGroup<
     OptionKey:
-        InputUIElementComponentActionKeyInterface,
+        InputGUIElementComponentActionKeyInterface,
     OptionValue:
-        NavigationMenuUIElementComponentParamsOptionValueObjectInterface
+        NavigationMenuGUIElementComponentParamsOptionValueObjectInterface
 >:
     UIView,
-    UIComponentGroup {
+    GUIComponentGroup {
     
-    private let titleLabelUI: LabelUIComponent = .init()
+    private let titleLabelUI: LabelGUIComponent = .init()
     
     private let stackViewBackground: UIView = .init()
     private let stackView: UIStackView = .init()
@@ -23,9 +23,9 @@ public final class NavigationMenuUIComponentGroup<
     private let titleBottomSpaceConstraintID: String = "titleBottomSpace"
     private let optionViewHeightConstraintID: String = "optionViewHeight"
     
-    public let initialization: UIElementComponentInitialization = .init()
+    public let initialization: GUIElementComponentInitialization = .init()
     
-    public var settings: NavigationMenuUIComponentGroupSettings<
+    public var settings: NavigationMenuGUIComponentGroupSettings<
         OptionKey,
         OptionValue
     > {
@@ -41,7 +41,7 @@ public final class NavigationMenuUIComponentGroup<
     }
     
     public init(
-        settings: NavigationMenuUIComponentGroupSettings<
+        settings: NavigationMenuGUIComponentGroupSettings<
             OptionKey,
             OptionValue
         >
@@ -77,7 +77,7 @@ public final class NavigationMenuUIComponentGroup<
     }
     
     public func setupParams(
-        _ params: NavigationMenuUIComponentGroupParams<
+        _ params: NavigationMenuGUIComponentGroupParams<
             OptionKey,
             OptionValue
         >
@@ -89,7 +89,7 @@ public final class NavigationMenuUIComponentGroup<
         }
         
         params.options.forEach { option in
-            let optionView: NavigationMenuUIOptionComponentSet = .init(
+            let optionView: NavigationMenuGUIOptionComponentSet = .init(
                 settings: .init(
                     params: .init(
                         title: option.value.title,
@@ -110,22 +110,22 @@ public final class NavigationMenuUIComponentGroup<
     }
 }
 
-extension NavigationMenuUIComponentGroup {
+extension NavigationMenuGUIComponentGroup {
     
     public func setupStyleLookOSConfiguration(
-        _ lookConfiguration: UIElementComponentLookOSConfiguration
+        _ lookConfiguration: GUIElementComponentLookOSConfiguration
     ) {
         setupStyleLookOS()
     }
     
     public func setupStyleLookOS(
-        _ look: EmptyUIComponentGroupStylePropertiesOSLook
+        _ look: EmptyGUIComponentGroupStylePropertiesOSLook
     ) {
         setupStyleLookOS()
     }
     
     public func setupStyleLookSystem(
-        _ look: NavigationMenuUIComponentGroupStylePropertiesSystemLook
+        _ look: NavigationMenuGUIComponentGroupStylePropertiesSystemLook
     ) {
         backgroundColor = look.backgroundColor
     }
@@ -136,16 +136,16 @@ extension NavigationMenuUIComponentGroup {
     }
 }
 
-extension NavigationMenuUIComponentGroup {
+extension NavigationMenuGUIComponentGroup {
     
     public func setupStyleLookParamsOS() {}
     
     public func setupStyleLookParamsSystem(
-        _ lookParams: NavigationMenuUIComponentGroupStylePropertiesLookParams
+        _ lookParams: NavigationMenuGUIComponentGroupStylePropertiesLookParams
     ) {}
 }
 
-extension NavigationMenuUIComponentGroup {
+extension NavigationMenuGUIComponentGroup {
     
     public func setupStyleLayoutInitialization() {
         titleLabelUI.textAlignment = .center
@@ -232,7 +232,7 @@ extension NavigationMenuUIComponentGroup {
     }
     
     public func setupStyleLayoutSystem(
-        _ layoutParams: NavigationMenuUIComponentGroupStylePropertiesLayoutParams
+        _ layoutParams: NavigationMenuGUIComponentGroupStylePropertiesLayoutParams
     ) {
         stackView.spacing = layoutParams.optionsSpace
         

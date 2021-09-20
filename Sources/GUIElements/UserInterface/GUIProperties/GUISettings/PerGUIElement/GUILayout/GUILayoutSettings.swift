@@ -3,15 +3,15 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UILayoutSettings:
-    UIElementSettings,
-    UIPropertyDefaultValueInterface {
+public protocol GUILayoutSettings:
+    GUIElementSettings,
+    GUIPropertyDefaultValueInterface {
     
-    associatedtype UILayoutStylePropertiesType:
-        UILayoutStyleProperties
+    associatedtype GUILayoutStylePropertiesType:
+        GUILayoutStyleProperties
     
-    var stylePack: UILayoutStylePack<
-        UILayoutStylePropertiesType
+    var stylePack: GUILayoutStylePack<
+        GUILayoutStylePropertiesType
     > {
         get
         set
@@ -19,24 +19,24 @@ public protocol UILayoutSettings:
     
     init()
     init(
-        styleType: UIStyleType
+        styleType: GUIStyleType
     )
     init(
-        stylePack: UILayoutStylePack<
-            UILayoutStylePropertiesType
+        stylePack: GUILayoutStylePack<
+            GUILayoutStylePropertiesType
         >
     )
     
     static func stylePack(
-        for styleType: UIStyleType
-    ) -> UILayoutStylePack<
-        UILayoutStylePropertiesType
+        for styleType: GUIStyleType
+    ) -> GUILayoutStylePack<
+        GUILayoutStylePropertiesType
     >
 }
 
-extension UILayoutSettings {
+extension GUILayoutSettings {
     
-    public var styleType: UIStyleType {
+    public var styleType: GUIStyleType {
         get {
             return stylePack.factory?.styleType ?? stylePack.style.type
         }
@@ -48,7 +48,7 @@ extension UILayoutSettings {
     }
 }
 
-extension UILayoutSettings {
+extension GUILayoutSettings {
     
     static var `default`: Self {
         return .init()

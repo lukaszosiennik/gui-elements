@@ -5,8 +5,8 @@
 
 import UIKit
 
-public enum DevSoftwareEngineerUIElementComponentColorPalette:
-    DevUIElementComponentColorPaletteInterface {
+public enum DevSoftwareEngineerGUIElementComponentColorPalette:
+    DevGUIElementComponentColorPaletteInterface {
     
     fileprivate enum All {
         
@@ -20,11 +20,11 @@ public enum DevSoftwareEngineerUIElementComponentColorPalette:
         static let red: UIColor = .red
     }
     
-    public enum UIElementComponent:
-        SystemUIElementComponentPaletteInterface {
+    public enum GUIElementComponent:
+        SystemGUIElementComponentPaletteInterface {
         
-        fileprivate typealias UIElementComponentPalette =
-            UIElementComponent
+        fileprivate typealias GUIElementComponentPalette =
+            GUIElementComponent
         
         fileprivate enum Property {
             
@@ -50,11 +50,11 @@ public enum DevSoftwareEngineerUIElementComponentColorPalette:
     }
 }
 
-extension DevSoftwareEngineerUIElementComponentColorPalette.UIElementComponent {
+extension DevSoftwareEngineerGUIElementComponentColorPalette.GUIElementComponent {
         
-    public enum UIComponent:
-        UIElementComponentColorPalette,
-        DevUIPalette {
+    public enum GUIComponent:
+        GUIElementComponentColorPalette,
+        DevGUIPalette {
         
         enum Button {
             
@@ -68,9 +68,9 @@ extension DevSoftwareEngineerUIElementComponentColorPalette.UIElementComponent {
         }
     }
     
-    public enum UIComponentSet:
-        UIElementComponentColorPalette,
-        DevUIPalette {
+    public enum GUIComponentSet:
+        GUIElementComponentColorPalette,
+        DevGUIPalette {
         
         enum NavigationMenuOption {
             
@@ -80,18 +80,18 @@ extension DevSoftwareEngineerUIElementComponentColorPalette.UIElementComponent {
         }
     }
     
-    public enum UIComponentGroup:
-        UIElementComponentColorPalette,
-        DevUIPalette {
+    public enum GUIComponentGroup:
+        GUIElementComponentColorPalette,
+        DevGUIPalette {
         
         enum Card:
-            CardUIComponentGroupColorPalette {
+            CardGUIComponentGroupColorPalette {
             
-            static let titleBackground: UIColor = DevBootstrapUIElementComponentColorPalette.UIElementComponent.UIComponentGroup.Card.Light.titleBackground
-            static let titleText: UIColor = DevBootstrapUIElementComponentColorPalette.UIElementComponent.UIComponentGroup.Card.Light.titleText
-            static let bodyBackground: UIColor = DevBootstrapUIElementComponentColorPalette.UIElementComponent.UIComponentGroup.Card.Light.bodyBackground
-            static let border: UIColor = DevBootstrapUIElementComponentColorPalette.UIElementComponent.UIComponentGroup.Card.Light.border
-            static let separator: UIColor = DevBootstrapUIElementComponentColorPalette.UIElementComponent.UIComponentGroup.Card.Light.separator
+            static let titleBackground: UIColor = DevBootstrapGUIElementComponentColorPalette.GUIElementComponent.GUIComponentGroup.Card.Light.titleBackground
+            static let titleText: UIColor = DevBootstrapGUIElementComponentColorPalette.GUIElementComponent.GUIComponentGroup.Card.Light.titleText
+            static let bodyBackground: UIColor = DevBootstrapGUIElementComponentColorPalette.GUIElementComponent.GUIComponentGroup.Card.Light.bodyBackground
+            static let border: UIColor = DevBootstrapGUIElementComponentColorPalette.GUIElementComponent.GUIComponentGroup.Card.Light.border
+            static let separator: UIColor = DevBootstrapGUIElementComponentColorPalette.GUIElementComponent.GUIComponentGroup.Card.Light.separator
         }
         
         enum NavigationMenu {
@@ -101,15 +101,15 @@ extension DevSoftwareEngineerUIElementComponentColorPalette.UIElementComponent {
         }
     }
     
-    public enum UIComponentScreen:
-        UIElementComponentColorPalette,
-        DevUIPalette {
+    public enum GUIComponentScreen:
+        GUIElementComponentColorPalette,
+        DevGUIPalette {
         
         fileprivate enum Property {
             
             enum Background {
                 
-                static let white: UIColor = UIElementComponentPalette.Property.Background.white
+                static let white: UIColor = GUIElementComponentPalette.Property.Background.white
             }
         }
         

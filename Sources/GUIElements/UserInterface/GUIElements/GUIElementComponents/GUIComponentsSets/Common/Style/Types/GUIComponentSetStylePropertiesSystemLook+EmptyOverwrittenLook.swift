@@ -3,14 +3,14 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-extension UIComponentSetStylePropertiesSystemLook
+extension GUIComponentSetStylePropertiesSystemLook
 where
-    UIElementComponentStylePropertiesOverwrittenLookType
-        == EmptyUIComponentSetStylePropertiesOverwrittenLook {
+    GUIElementComponentStylePropertiesOverwrittenLookType
+        == EmptyGUIComponentSetStylePropertiesOverwrittenLook {
     
     public init(
         look: Self,
-        overwrittenBy newLook: EmptyUIComponentSetStylePropertiesOverwrittenLook?
+        overwrittenBy newLook: EmptyGUIComponentSetStylePropertiesOverwrittenLook?
     ) {
         self = look
     }

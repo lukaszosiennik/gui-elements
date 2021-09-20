@@ -3,9 +3,9 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias LabelUIComponentStylePropertiesOverwritten =
-    UIComponentStylePropertiesOverwrittenTemplate<
-        LabelUIComponentStylePropertiesOverwrittenLook,
-        LabelUIComponentStylePropertiesOverwrittenLookParams,
-        EmptyUIComponentStylePropertiesOverwrittenLayoutParams
+public typealias LabelGUIComponentStylePropertiesOverwritten =
+    GUIComponentStylePropertiesOverwrittenTemplate<
+        LabelGUIComponentStylePropertiesOverwrittenLook,
+        LabelGUIComponentStylePropertiesOverwrittenLookParams,
+        EmptyGUIComponentStylePropertiesOverwrittenLayoutParams
     >

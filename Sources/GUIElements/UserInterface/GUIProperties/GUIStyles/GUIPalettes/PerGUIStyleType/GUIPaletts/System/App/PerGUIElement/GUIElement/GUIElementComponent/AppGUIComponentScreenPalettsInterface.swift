@@ -3,12 +3,12 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol AppUIComponentScreenPalettsInterface:
-    SystemUIComponentScreenPalettsInterface
+public protocol AppGUIComponentScreenPalettsInterface:
+    SystemGUIComponentScreenPalettsInterface
 where
-    SystemUIElementColorPalette
-        : AppUIElementComponentColorPaletteInterface,
-    SystemUIElementFontPalette
-        : AppUIElementComponentFontPaletteInterface,
-    SystemUIElementComponentConstantPalette
-        : AppUIElementComponentConstantPaletteInterface {}
+    SystemGUIElementColorPalette
+        : AppGUIElementComponentColorPaletteInterface,
+    SystemGUIElementFontPalette
+        : AppGUIElementComponentFontPaletteInterface,
+    SystemGUIElementComponentConstantPalette
+        : AppGUIElementComponentConstantPaletteInterface {}

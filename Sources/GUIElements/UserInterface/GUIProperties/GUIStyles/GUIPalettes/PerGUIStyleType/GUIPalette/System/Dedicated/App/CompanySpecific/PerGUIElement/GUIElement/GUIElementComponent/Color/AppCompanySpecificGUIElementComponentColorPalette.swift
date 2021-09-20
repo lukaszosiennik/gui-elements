@@ -3,28 +3,28 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum AppCompanySpecificUIElementComponentColorPalette:
-    AppUIElementComponentColorPaletteInterface {
+public enum AppCompanySpecificGUIElementComponentColorPalette:
+    AppGUIElementComponentColorPaletteInterface {
     
-    public enum UIElementComponent:
-        SystemUIElementComponentPaletteInterface {}
+    public enum GUIElementComponent:
+        SystemGUIElementComponentPaletteInterface {}
 }
 
-extension AppCompanySpecificUIElementComponentColorPalette.UIElementComponent {
+extension AppCompanySpecificGUIElementComponentColorPalette.GUIElementComponent {
         
-    public enum UIComponent:
-        UIElementComponentColorPalette,
-        AppUIPalette {}
+    public enum GUIComponent:
+        GUIElementComponentColorPalette,
+        AppGUIPalette {}
     
-    public enum UIComponentSet:
-        UIElementComponentColorPalette,
-        AppUIPalette {}
+    public enum GUIComponentSet:
+        GUIElementComponentColorPalette,
+        AppGUIPalette {}
     
-    public enum UIComponentGroup:
-        UIElementComponentColorPalette,
-        AppUIPalette {}
+    public enum GUIComponentGroup:
+        GUIElementComponentColorPalette,
+        AppGUIPalette {}
     
-    public enum UIComponentScreen:
-        UIElementComponentColorPalette,
-        AppUIPalette {}
+    public enum GUIComponentScreen:
+        GUIElementComponentColorPalette,
+        AppGUIPalette {}
 }

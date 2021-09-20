@@ -3,14 +3,14 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class DevBootstrapUIComponentSetStyleFactory:
-    UIComponentSetTypeStyleFactory<
-        DevBootstrapUIComponentSetPaletts
+public final class DevBootstrapGUIComponentSetStyleFactory:
+    GUIComponentSetTypeStyleFactory<
+        DevBootstrapGUIComponentSetPaletts
     >,
-    UIComponentSetStyleFactoryInterface {
+    GUIComponentSetStyleFactoryInterface {
     
-    public func navigationMenuOption() -> UIElementComponentStyle<
-        NavigationMenuOptionUIComponentSetStyleProperties
+    public func navigationMenuOption() -> GUIElementComponentStyle<
+        NavigationMenuOptionGUIComponentSetStyleProperties
     > {
         return .default(
             styleType: styleType

@@ -3,25 +3,25 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentGroupSettings:
-    UIElementComponentSettings
+public protocol GUIComponentGroupSettings:
+    GUIElementComponentSettings
 where
-    UIElementComponentParamsType
-        : UIComponentGroupParams,
-    UIElementComponentStylePropertiesType
-        : UIComponentGroupStyleProperties,
-    UIElementComponentStylePropertiesOverwrittenType
-        : UIComponentGroupStylePropertiesOverwritten {}
+    GUIElementComponentParamsType
+        : GUIComponentGroupParams,
+    GUIElementComponentStylePropertiesType
+        : GUIComponentGroupStyleProperties,
+    GUIElementComponentStylePropertiesOverwrittenType
+        : GUIComponentGroupStylePropertiesOverwritten {}
 
-extension UIComponentGroupSettings {
+extension GUIComponentGroupSettings {
     
-    public static var styleFactory: UIComponentGroupStyleFactoryInterface? {
+    public static var styleFactory: GUIComponentGroupStyleFactoryInterface? {
         return mainStyleFactory?.uiComponentGroup
     }
     
     public static func styleFactory(
-        for styleType: UIStyleType
-    ) -> UIComponentGroupStyleFactoryInterface? {
+        for styleType: GUIStyleType
+    ) -> GUIComponentGroupStyleFactoryInterface? {
         return mainStyleFactory(
             for: styleType
         )?.uiComponentGroup

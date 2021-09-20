@@ -3,28 +3,28 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum AppCompanySpecificUIElementComponentConstantPalette:
-    AppUIElementComponentConstantPaletteInterface {
+public enum AppCompanySpecificGUIElementComponentConstantPalette:
+    AppGUIElementComponentConstantPaletteInterface {
     
-    public enum UIElementComponent:
-        SystemUIElementComponentPaletteInterface {}
+    public enum GUIElementComponent:
+        SystemGUIElementComponentPaletteInterface {}
 }
 
-extension AppCompanySpecificUIElementComponentConstantPalette.UIElementComponent {
+extension AppCompanySpecificGUIElementComponentConstantPalette.GUIElementComponent {
         
-    public enum UIComponent:
-        UIElementComponentConstantPalette,
-        AppUIPalette {}
+    public enum GUIComponent:
+        GUIElementComponentConstantPalette,
+        AppGUIPalette {}
     
-    public enum UIComponentSet:
-        UIElementComponentConstantPalette,
-        AppUIPalette {}
+    public enum GUIComponentSet:
+        GUIElementComponentConstantPalette,
+        AppGUIPalette {}
     
-    public enum UIComponentGroup:
-        UIElementComponentConstantPalette,
-        AppUIPalette {}
+    public enum GUIComponentGroup:
+        GUIElementComponentConstantPalette,
+        AppGUIPalette {}
     
-    public enum UIComponentScreen:
-        UIElementComponentConstantPalette,
-        AppUIPalette {}
+    public enum GUIComponentScreen:
+        GUIElementComponentConstantPalette,
+        AppGUIPalette {}
 }

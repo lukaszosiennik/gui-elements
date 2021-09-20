@@ -6,4 +6,4 @@
 import UIKit
 
 extension UIView:
-    UIElementsExtendedTypeInterface {}
+    GUIElementsExtendedTypeInterface {}

@@ -3,12 +3,12 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct UILayoutStyle<
+public struct GUILayoutStyle<
     PropertiesType:
-        UILayoutStyleProperties
+        GUILayoutStyleProperties
 >:
-    UIElementStyle {
+    GUIElementStyle {
     
-    public let type: UIStyleType
+    public let type: GUIStyleType
     let properties: PropertiesType?
 }

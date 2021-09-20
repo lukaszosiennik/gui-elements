@@ -3,11 +3,11 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public class UIComponentTypeStyleFactory<
+public class GUIComponentTypeStyleFactory<
     Paletts:
-        SystemUIComponentPalettsInterface
+        SystemGUIComponentPalettsInterface
 >:
-    UIElementComponentTypeStyleFactory<
+    GUIElementComponentTypeStyleFactory<
         Paletts
     > {
     

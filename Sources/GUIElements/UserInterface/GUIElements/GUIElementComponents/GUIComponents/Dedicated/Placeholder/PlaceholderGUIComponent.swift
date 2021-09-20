@@ -5,15 +5,15 @@
 
 import UIKit
 
-public final class PlaceholderUIComponent:
+public final class PlaceholderGUIComponent:
     UIView,
-    UIComponent {
+    GUIComponent {
     
     private let heightConstraintID: String = "height"
     
-    public let initialization: UIElementComponentInitialization = .init()
+    public let initialization: GUIElementComponentInitialization = .init()
     
-    public var settings: PlaceholderUIComponentSettings {
+    public var settings: PlaceholderGUIComponentSettings {
         didSet {
             setupSettings()
         }
@@ -26,7 +26,7 @@ public final class PlaceholderUIComponent:
     }
     
     public init(
-        settings: PlaceholderUIComponentSettings
+        settings: PlaceholderGUIComponentSettings
     ) {
         self.settings = settings
         super.init(
@@ -47,26 +47,26 @@ public final class PlaceholderUIComponent:
     public func setupNestedSettings() {}
     
     public func setupParams(
-        _ params: PlaceholderUIComponentParams
+        _ params: PlaceholderGUIComponentParams
     ) {}
 }
 
-extension PlaceholderUIComponent {
+extension PlaceholderGUIComponent {
     
     public func setupStyleLookOSConfiguration(
-        _ lookConfiguration: UIElementComponentLookOSConfiguration
+        _ lookConfiguration: GUIElementComponentLookOSConfiguration
     ) {
         setupStyleLookOS()
     }
     
     public func setupStyleLookOS(
-        _ look: EmptyUIComponentStylePropertiesOSLook
+        _ look: EmptyGUIComponentStylePropertiesOSLook
     ) {
         setupStyleLookOS()
     }
     
     public func setupStyleLookSystem(
-        _ look: PlaceholderUIComponentStylePropertiesSystemLook
+        _ look: PlaceholderGUIComponentStylePropertiesSystemLook
     ) {
         backgroundColor = settings.params.look?.color
     }
@@ -77,16 +77,16 @@ extension PlaceholderUIComponent {
     }
 }
 
-extension PlaceholderUIComponent {
+extension PlaceholderGUIComponent {
     
     public func setupStyleLookParamsOS() {}
     
     public func setupStyleLookParamsSystem(
-        _ lookParams: EmptyUIComponentStylePropertiesLookParams
+        _ lookParams: EmptyGUIComponentStylePropertiesLookParams
     ) {}
 }
 
-extension PlaceholderUIComponent {
+extension PlaceholderGUIComponent {
     
     public func setupStyleLayoutInitialization() {}
     
@@ -104,7 +104,7 @@ extension PlaceholderUIComponent {
     }
     
     public func setupStyleLayoutSystem(
-        _ layoutParams: PlaceholderUIComponentStylePropertiesLayoutParams
+        _ layoutParams: PlaceholderGUIComponentStylePropertiesLayoutParams
     ) {}
     
     private func setupStyleLayout(

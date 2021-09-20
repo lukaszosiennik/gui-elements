@@ -3,13 +3,13 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct AppCompanySpecificUIComponentSetPaletts:
-    AppUIComponentSetPalettsInterface {
+public struct AppCompanySpecificGUIComponentSetPaletts:
+    AppGUIComponentSetPalettsInterface {
     
-    public typealias SystemUIElementColorPalette =
-        AppCompanySpecificUIElementComponentColorPalette
-    public typealias SystemUIElementFontPalette =
-        AppCompanySpecificUIElementComponentFontPalette
-    public typealias SystemUIElementComponentConstantPalette =
-        AppCompanySpecificUIElementComponentConstantPalette
+    public typealias SystemGUIElementColorPalette =
+        AppCompanySpecificGUIElementComponentColorPalette
+    public typealias SystemGUIElementFontPalette =
+        AppCompanySpecificGUIElementComponentFontPalette
+    public typealias SystemGUIElementComponentConstantPalette =
+        AppCompanySpecificGUIElementComponentConstantPalette
 }

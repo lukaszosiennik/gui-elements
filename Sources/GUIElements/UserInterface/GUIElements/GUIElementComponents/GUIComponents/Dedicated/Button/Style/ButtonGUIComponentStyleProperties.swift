@@ -3,12 +3,12 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias ButtonUIComponentStyleProperties =
-    UIComponentStylePropertiesTemplate<
-        UIComponentStylePropertiesLookTemplate<
-            ButtonUIComponentStylePropertiesOSLook,
-            ButtonUIComponentStylePropertiesSystemLook
+public typealias ButtonGUIComponentStyleProperties =
+    GUIComponentStylePropertiesTemplate<
+        GUIComponentStylePropertiesLookTemplate<
+            ButtonGUIComponentStylePropertiesOSLook,
+            ButtonGUIComponentStylePropertiesSystemLook
         >,
-        EmptyUIComponentStylePropertiesLookParams,
-        ButtonUIComponentStylePropertiesLayoutParams
+        EmptyGUIComponentStylePropertiesLookParams,
+        ButtonGUIComponentStylePropertiesLayoutParams
     >

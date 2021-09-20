@@ -3,8 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct VoidUIPropertyDefaultValue:
-    UIPropertyDefaultValueInterface {
+public struct VoidGUIPropertyDefaultValue:
+    GUIPropertyDefaultValueInterface {
     
     public static var `default`: Self {
         return .init()

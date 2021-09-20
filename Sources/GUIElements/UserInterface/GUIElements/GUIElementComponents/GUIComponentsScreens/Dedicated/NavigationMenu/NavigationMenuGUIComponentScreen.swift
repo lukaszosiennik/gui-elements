@@ -5,16 +5,16 @@
 
 import UIKit
 
-public final class NavigationMenuUIComponentScreen<
+public final class NavigationMenuGUIComponentScreen<
     OptionKey:
-        InputUIElementComponentActionKeyInterface
+        InputGUIElementComponentActionKeyInterface
 >:
     UIView,
-    UIComponentScreen {
+    GUIComponentScreen {
     
-    public typealias OptionValue = NavigationMenuUIElementComponentParamsOptionValueObject
+    public typealias OptionValue = NavigationMenuGUIElementComponentParamsOptionValueObject
     
-    private let navigationMenuUI: NavigationMenuUIComponentGroup<
+    private let navigationMenuUI: NavigationMenuGUIComponentGroup<
         OptionKey,
         OptionValue
     > = .init()
@@ -24,9 +24,9 @@ public final class NavigationMenuUIComponentScreen<
     private let leadingSpaceConstraintID: String = "leadingSpace"
     private let trailingSpaceConstraintID: String = "trailingSpace"
     
-    public let initialization: UIElementComponentInitialization = .init()
+    public let initialization: GUIElementComponentInitialization = .init()
     
-    public var settings: NavigationMenuUIComponentScreenSettings<
+    public var settings: NavigationMenuGUIComponentScreenSettings<
         OptionKey,
         OptionValue
     > {
@@ -42,7 +42,7 @@ public final class NavigationMenuUIComponentScreen<
     }
     
     public init(
-        settings: NavigationMenuUIComponentScreenSettings<
+        settings: NavigationMenuGUIComponentScreenSettings<
             OptionKey,
             OptionValue
         >
@@ -75,27 +75,27 @@ public final class NavigationMenuUIComponentScreen<
     }
     
     public func setupParams(
-        _ params: NavigationMenuUIComponentScreenParams<
+        _ params: NavigationMenuGUIComponentScreenParams<
             OptionKey,
             OptionValue
         >
     ) {}
 }
 
-extension NavigationMenuUIComponentScreen {
+extension NavigationMenuGUIComponentScreen {
     
     public func setupScreenStyleLookOS() {
         setupStyleLookOS()
     }
     
     public func setupStyleLookOS(
-        _ look: EmptyUIComponentScreenStylePropertiesOSLook
+        _ look: EmptyGUIComponentScreenStylePropertiesOSLook
     ) {
         setupStyleLookOS()
     }
     
     public func setupStyleLookSystem(
-        _ look: NavigationMenuUIComponentScreenStylePropertiesSystemLook
+        _ look: NavigationMenuGUIComponentScreenStylePropertiesSystemLook
     ) {
         backgroundColor = look.backgroundColor
     }
@@ -106,16 +106,16 @@ extension NavigationMenuUIComponentScreen {
     }
 }
 
-extension NavigationMenuUIComponentScreen {
+extension NavigationMenuGUIComponentScreen {
     
     public func setupStyleLookParamsOS() {}
     
     public func setupStyleLookParamsSystem(
-        _ lookParams: EmptyUIComponentScreenStylePropertiesLookParams
+        _ lookParams: EmptyGUIComponentScreenStylePropertiesLookParams
     ) {}
 }
 
-extension NavigationMenuUIComponentScreen {
+extension NavigationMenuGUIComponentScreen {
     
     public func setupStyleLayoutInitialization() {
         uie.addSubview(
@@ -168,7 +168,7 @@ extension NavigationMenuUIComponentScreen {
     }
     
     public func setupStyleLayoutSystem(
-        _ layoutParams: NavigationMenuUIComponentScreenStylePropertiesLayoutParams
+        _ layoutParams: NavigationMenuGUIComponentScreenStylePropertiesLayoutParams
     ) {
         uie.constraint(
             with: leadingSpaceConstraintID

@@ -7,7 +7,7 @@ import UIKit
 import commons
 
 extension UIColor:
-    UIElementsExtendedTypeInterface {}
+    GUIElementsExtendedTypeInterface {}
 
 extension CommonsExtension
 // : SelfInstanceReturningBasedOnInputInterface

@@ -5,15 +5,15 @@
 
 import UIKit
 
-public final class InformationUIComponentScreen:
+public final class InformationGUIComponentScreen:
     UIView,
-    UIComponentScreen {
+    GUIComponentScreen {
     
-    private let titleLabelUI: LabelUIComponent = .init()
+    private let titleLabelUI: LabelGUIComponent = .init()
     
-    public let initialization: UIElementComponentInitialization = .init()
+    public let initialization: GUIElementComponentInitialization = .init()
     
-    public var settings: InformationUIComponentScreenSettings {
+    public var settings: InformationGUIComponentScreenSettings {
         didSet {
             setupSettings()
         }
@@ -26,7 +26,7 @@ public final class InformationUIComponentScreen:
     }
     
     public init(
-        settings: InformationUIComponentScreenSettings
+        settings: InformationGUIComponentScreenSettings
     ) {
         self.settings = settings
         super.init(
@@ -59,24 +59,24 @@ public final class InformationUIComponentScreen:
     }
     
     public func setupParams(
-        _ params: InformationUIComponentScreenParams
+        _ params: InformationGUIComponentScreenParams
     ) {}
 }
 
-extension InformationUIComponentScreen {
+extension InformationGUIComponentScreen {
     
     public func setupScreenStyleLookOS() {
         setupStyleLookOS()
     }
     
     public func setupStyleLookOS(
-        _ look: EmptyUIComponentScreenStylePropertiesOSLook
+        _ look: EmptyGUIComponentScreenStylePropertiesOSLook
     ) {
         setupStyleLookOS()
     }
     
     public func setupStyleLookSystem(
-        _ look: InformationUIComponentScreenStylePropertiesSystemLook
+        _ look: InformationGUIComponentScreenStylePropertiesSystemLook
     ) {
         backgroundColor = look.backgroundColor
     }
@@ -87,16 +87,16 @@ extension InformationUIComponentScreen {
     }
 }
 
-extension InformationUIComponentScreen {
+extension InformationGUIComponentScreen {
     
     public func setupStyleLookParamsOS() {}
     
     public func setupStyleLookParamsSystem(
-        _ lookParams: InformationUIComponentScreenStylePropertiesLookParams
+        _ lookParams: InformationGUIComponentScreenStylePropertiesLookParams
     ) {}
 }
 
-extension InformationUIComponentScreen {
+extension InformationGUIComponentScreen {
     
     public func setupStyleLayoutInitialization() {
         titleLabelUI.textAlignment = .center
@@ -130,6 +130,6 @@ extension InformationUIComponentScreen {
     public func setupStyleLayoutOS() {}
     
     public func setupStyleLayoutSystem(
-        _ layoutParams: InformationUIComponentScreenStylePropertiesLayoutParams
+        _ layoutParams: InformationGUIComponentScreenStylePropertiesLayoutParams
     ) {}
 }

@@ -5,8 +5,8 @@
 
 import UIKit
 
-public struct NavigationMenuOptionUIComponentSetStylePropertiesSystemLook:
-    UIComponentSetStylePropertiesSystemLook {
+public struct NavigationMenuOptionGUIComponentSetStylePropertiesSystemLook:
+    GUIComponentSetStylePropertiesSystemLook {
     
     public let backgroundColor: UIColor
     public let borderColor: UIColor

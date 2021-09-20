@@ -3,14 +3,14 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol DevUIElementComponentFontPaletteInterface:
-    SystemUIElementComponentFontPaletteInterface
+public protocol DevGUIElementComponentFontPaletteInterface:
+    SystemGUIElementComponentFontPaletteInterface
 where
-    UIElementComponent.UIComponent
-        : DevUIPalette,
-    UIElementComponent.UIComponentSet
-        : DevUIPalette,
-    UIElementComponent.UIComponentGroup
-        : DevUIPalette,
-    UIElementComponent.UIComponentScreen
-        : DevUIPalette {}
+    GUIElementComponent.GUIComponent
+        : DevGUIPalette,
+    GUIElementComponent.GUIComponentSet
+        : DevGUIPalette,
+    GUIElementComponent.GUIComponentGroup
+        : DevGUIPalette,
+    GUIElementComponent.GUIComponentScreen
+        : DevGUIPalette {}

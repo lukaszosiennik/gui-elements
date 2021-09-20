@@ -3,14 +3,14 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class DevSoftwareEngineerUIComponentGroupStyleFactory:
-    UIComponentGroupTypeStyleFactory<
-        DevSoftwareEngineerUIComponentGroupPaletts
+public final class DevSoftwareEngineerGUIComponentGroupStyleFactory:
+    GUIComponentGroupTypeStyleFactory<
+        DevSoftwareEngineerGUIComponentGroupPaletts
     >,
-    UIComponentGroupStyleFactoryInterface {
+    GUIComponentGroupStyleFactoryInterface {
     
-    public func card() -> UIElementComponentStyle<
-        CardUIComponentGroupStyleProperties
+    public func card() -> GUIElementComponentStyle<
+        CardGUIComponentGroupStyleProperties
     > {
         return .init(
             type: styleType,
@@ -19,11 +19,11 @@ public final class DevSoftwareEngineerUIComponentGroupStyleFactory:
                     whole: .init(
                         border: .init(
                             corners: .rounded,
-                            width: ConstantPalette.Card.UILook.borderWidth_1,
+                            width: ConstantPalette.Card.GUILook.borderWidth_1,
                             color: ColorPalette.Card.border
                         ),
                         separator: .init(
-                            width: ConstantPalette.Card.UILook.borderWidth_1,
+                            width: ConstantPalette.Card.GUILook.borderWidth_1,
                             color: ColorPalette.Card.separator
                         )
                     ),
@@ -37,24 +37,24 @@ public final class DevSoftwareEngineerUIComponentGroupStyleFactory:
                 )),
                 layoutParams: .init(
                     title: .init(
-                        leftMargin: ConstantPalette.Card.UILayoutParams.margin_left_16,
-                        rightMargin: ConstantPalette.Card.UILayoutParams.margin_right_16,
-                        topMargin: ConstantPalette.Card.UILayoutParams.margin_top_12,
-                        bottomMargin: ConstantPalette.Card.UILayoutParams.margin_bottom_12
+                        leftMargin: ConstantPalette.Card.GUILayoutParams.margin_left_16,
+                        rightMargin: ConstantPalette.Card.GUILayoutParams.margin_right_16,
+                        topMargin: ConstantPalette.Card.GUILayoutParams.margin_top_12,
+                        bottomMargin: ConstantPalette.Card.GUILayoutParams.margin_bottom_12
                     ),
                     body: .init(
-                        leftMargin: ConstantPalette.Card.UILayoutParams.margin_left_16,
-                        rightMargin: ConstantPalette.Card.UILayoutParams.margin_right_16,
-                        topMargin: ConstantPalette.Card.UILayoutParams.margin_top_16,
-                        bottomMargin: ConstantPalette.Card.UILayoutParams.margin_bottom_16
+                        leftMargin: ConstantPalette.Card.GUILayoutParams.margin_left_16,
+                        rightMargin: ConstantPalette.Card.GUILayoutParams.margin_right_16,
+                        topMargin: ConstantPalette.Card.GUILayoutParams.margin_top_16,
+                        bottomMargin: ConstantPalette.Card.GUILayoutParams.margin_bottom_16
                     )
                 )
             )
         )
     }
     
-    public func navigationMenu() -> UIElementComponentStyle<
-        NavigationMenuUIComponentGroupStyleProperties
+    public func navigationMenu() -> GUIElementComponentStyle<
+        NavigationMenuGUIComponentGroupStyleProperties
     > {
         return .init(
             type: styleType,
@@ -64,10 +64,10 @@ public final class DevSoftwareEngineerUIComponentGroupStyleFactory:
                 )),
                 lookParams: .default,
                 layoutParams: .init(
-                    optionHeight: ConstantPalette.NavigationMenu.UILayoutParams.height_50,
-                    optionsSpace: ConstantPalette.NavigationMenu.UILayoutParams.space_8,
-                    titleTopMargin: ConstantPalette.NavigationMenu.UILayoutParams.margin_top_16,
-                    titleBottomMargin: ConstantPalette.NavigationMenu.UILayoutParams.margin_bottom_16
+                    optionHeight: ConstantPalette.NavigationMenu.GUILayoutParams.height_50,
+                    optionsSpace: ConstantPalette.NavigationMenu.GUILayoutParams.space_8,
+                    titleTopMargin: ConstantPalette.NavigationMenu.GUILayoutParams.margin_top_16,
+                    titleBottomMargin: ConstantPalette.NavigationMenu.GUILayoutParams.margin_bottom_16
                 )
             )
         )

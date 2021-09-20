@@ -3,12 +3,12 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias InformationUIComponentScreenStyleProperties =
-    UIComponentScreenStylePropertiesTemplate<
-        UIComponentScreenStylePropertiesLookTemplate<
-            EmptyUIComponentScreenStylePropertiesOSLook,
-            InformationUIComponentScreenStylePropertiesSystemLook
+public typealias InformationGUIComponentScreenStyleProperties =
+    GUIComponentScreenStylePropertiesTemplate<
+        GUIComponentScreenStylePropertiesLookTemplate<
+            EmptyGUIComponentScreenStylePropertiesOSLook,
+            InformationGUIComponentScreenStylePropertiesSystemLook
         >,
-        InformationUIComponentScreenStylePropertiesLookParams,
-        InformationUIComponentScreenStylePropertiesLayoutParams
+        InformationGUIComponentScreenStylePropertiesLookParams,
+        InformationGUIComponentScreenStylePropertiesLayoutParams
     >

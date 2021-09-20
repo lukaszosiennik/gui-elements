@@ -3,25 +3,25 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UILayout:
-    UIElement {
+public protocol GUILayout:
+    GUIElement {
     
-    associatedtype UILayoutSettingsType:
-        UILayoutSettings
+    associatedtype GUILayoutSettingsType:
+        GUILayoutSettings
     
-    var settings: UILayoutSettingsType {
+    var settings: GUILayoutSettingsType {
         get
         set
     }
     
     init(
-        settings: UILayoutSettingsType
+        settings: GUILayoutSettingsType
     )
     
     func setupParams()
 }
 
-extension UILayout {
+extension GUILayout {
     
     func setupSettings() {
         setupParams()

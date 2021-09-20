@@ -3,7 +3,7 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum UIDevThirdPartyStyleType {
+public enum GUIDevThirdPartyStyleType {
     
     case bootstrap
 }

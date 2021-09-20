@@ -3,45 +3,45 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuUIComponentScreenSettings<
+public struct NavigationMenuGUIComponentScreenSettings<
     OptionKey:
-        InputUIElementComponentActionKeyInterface,
+        InputGUIElementComponentActionKeyInterface,
     OptionValue:
-        NavigationMenuUIElementComponentParamsOptionValueObjectInterface
+        NavigationMenuGUIElementComponentParamsOptionValueObjectInterface
 >:
-    UIComponentScreenSettings {
+    GUIComponentScreenSettings {
     
-    public let params: NavigationMenuUIComponentScreenParams<
+    public let params: NavigationMenuGUIComponentScreenParams<
         OptionKey,
         OptionValue
     >
-    public var style: UIElementComponentStyle<
-        NavigationMenuUIComponentScreenStyleProperties
+    public var style: GUIElementComponentStyle<
+        NavigationMenuGUIComponentScreenStyleProperties
     >
     
     public init(
-        params: NavigationMenuUIComponentScreenParams<
+        params: NavigationMenuGUIComponentScreenParams<
             OptionKey,
             OptionValue
         >,
-        style: UIElementComponentStyle<
-            NavigationMenuUIComponentScreenStyleProperties
+        style: GUIElementComponentStyle<
+            NavigationMenuGUIComponentScreenStyleProperties
         >
     ) {
         self.params = params
         self.style = style
     }
     
-    public static var style: UIElementComponentStyle<
-        NavigationMenuUIComponentScreenStyleProperties
+    public static var style: GUIElementComponentStyle<
+        NavigationMenuGUIComponentScreenStyleProperties
     >? {
         return styleFactory?.navigationMenu()
     }
     
     public static func style(
-        for styleType: UIStyleType
-    ) -> UIElementComponentStyle<
-        NavigationMenuUIComponentScreenStyleProperties
+        for styleType: GUIStyleType
+    ) -> GUIElementComponentStyle<
+        NavigationMenuGUIComponentScreenStyleProperties
     >? {
         return styleFactory(
             for: styleType

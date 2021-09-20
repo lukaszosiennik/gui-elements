@@ -5,8 +5,8 @@
 
 import UIKit
 
-public struct ButtonUIComponentStylePropertiesSystemLook:
-    UIComponentStylePropertiesSystemLook {
+public struct ButtonGUIComponentStylePropertiesSystemLook:
+    GUIComponentStylePropertiesSystemLook {
     
     public let titleColorNormal: UIColor
     public let titleColorHighlighted: UIColor

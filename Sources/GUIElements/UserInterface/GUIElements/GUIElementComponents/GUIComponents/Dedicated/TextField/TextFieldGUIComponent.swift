@@ -5,13 +5,13 @@
 
 import UIKit
 
-public final class TextFieldUIComponent:
+public final class TextFieldGUIComponent:
     UITextField,
-    UIComponent {
+    GUIComponent {
 
-    public let initialization: UIElementComponentInitialization = .init()
+    public let initialization: GUIElementComponentInitialization = .init()
     
-    public var settings: TextFieldUIComponentSettings {
+    public var settings: TextFieldGUIComponentSettings {
         didSet {
             setupSettings()
         }
@@ -24,7 +24,7 @@ public final class TextFieldUIComponent:
     }
     
     public init(
-        settings: TextFieldUIComponentSettings
+        settings: TextFieldGUIComponentSettings
     ) {
         self.settings = settings
         super.init(
@@ -45,26 +45,26 @@ public final class TextFieldUIComponent:
     public func setupNestedSettings() {}
     
     public func setupParams(
-        _ params: TextFieldUIComponentParams
+        _ params: TextFieldGUIComponentParams
     ) {}
 }
 
-extension TextFieldUIComponent {
+extension TextFieldGUIComponent {
     
     public func setupStyleLookOSConfiguration(
-        _ lookConfiguration: UIElementComponentLookOSConfiguration
+        _ lookConfiguration: GUIElementComponentLookOSConfiguration
     ) {
         setupStyleLookOS()
     }
     
     public func setupStyleLookOS(
-        _ look: TextFieldUIComponentStylePropertiesOSLook
+        _ look: TextFieldGUIComponentStylePropertiesOSLook
     ) {
         borderStyle = look.borderStyle
     }
     
     public func setupStyleLookSystem(
-        _ look: TextFieldUIComponentStylePropertiesSystemLook
+        _ look: TextFieldGUIComponentStylePropertiesSystemLook
     ) {
         setupStyleLookOS()
     }
@@ -75,22 +75,22 @@ extension TextFieldUIComponent {
     }
 }
 
-extension TextFieldUIComponent {
+extension TextFieldGUIComponent {
     
     public func setupStyleLookParamsOS() {}
     
     public func setupStyleLookParamsSystem(
-        _ lookParams: EmptyUIComponentStylePropertiesLookParams
+        _ lookParams: EmptyGUIComponentStylePropertiesLookParams
     ) {}
 }
 
-extension TextFieldUIComponent {
+extension TextFieldGUIComponent {
     
     public func setupStyleLayoutInitialization() {}
     
     public func setupStyleLayoutOS() {}
     
     public func setupStyleLayoutSystem(
-        _ layoutParams: TextFieldUIComponentStylePropertiesLayoutParams
+        _ layoutParams: TextFieldGUIComponentStylePropertiesLayoutParams
     ) {}
 }

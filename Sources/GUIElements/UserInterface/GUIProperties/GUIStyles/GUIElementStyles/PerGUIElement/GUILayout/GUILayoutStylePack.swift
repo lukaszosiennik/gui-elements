@@ -3,13 +3,13 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct UILayoutStylePack<
+public struct GUILayoutStylePack<
     StylePropertiesType:
-        UILayoutStyleProperties
+        GUILayoutStyleProperties
 > {
     
-    let factory: UIElementStyleFactoryInterface?
-    let style: UILayoutStyle<
+    let factory: GUIElementStyleFactoryInterface?
+    let style: GUILayoutStyle<
         StylePropertiesType
     >
 }

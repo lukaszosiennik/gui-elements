@@ -5,5 +5,5 @@
 
 import UIKit
 
-public struct PlaceholderUIComponentStylePropertiesSystemLook:
-    UIComponentStylePropertiesSystemLook {}
+public struct PlaceholderGUIComponentStylePropertiesSystemLook:
+    GUIComponentStylePropertiesSystemLook {}

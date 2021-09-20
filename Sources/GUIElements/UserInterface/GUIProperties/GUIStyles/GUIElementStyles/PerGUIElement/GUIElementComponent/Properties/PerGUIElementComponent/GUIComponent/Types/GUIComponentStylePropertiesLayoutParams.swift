@@ -3,10 +3,10 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentStylePropertiesLayoutParams:
-    UIElementComponentStylePropertiesLayoutParams
+public protocol GUIComponentStylePropertiesLayoutParams:
+    GUIElementComponentStylePropertiesLayoutParams
 where
-    UIElementComponentStylePropertiesOverwrittenLayoutParamsType
-        : UIComponentStylePropertiesOverwrittenLayoutParams,
+    GUIElementComponentStylePropertiesOverwrittenLayoutParamsType
+        : GUIComponentStylePropertiesOverwrittenLayoutParams,
     DefaultConstantPalette
-        == DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponent {}
+        == DefaultGUIElementComponentConstantPalette.GUIElementComponent.GUIComponent {}

@@ -3,8 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct LabelUIComponentStylePropertiesOverwrittenLookParams:
-    UIComponentStylePropertiesOverwrittenLookParams {
+public struct LabelGUIComponentStylePropertiesOverwrittenLookParams:
+    GUIComponentStylePropertiesOverwrittenLookParams {
     
     public let linesNumber: Int?
     

@@ -3,9 +3,9 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIElementSettings {
+public protocol GUIElementSettings {
     
-    var styleType: UIStyleType {
+    var styleType: GUIStyleType {
         get
     }
 }

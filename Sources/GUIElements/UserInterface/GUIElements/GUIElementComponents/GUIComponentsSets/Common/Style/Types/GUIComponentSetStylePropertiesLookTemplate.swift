@@ -3,10 +3,10 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct UIComponentSetStylePropertiesLookTemplate<
-    UIElementComponentStylePropertiesOSLookType:
-        UIComponentSetStylePropertiesOSLook,
-    UIElementComponentStylePropertiesSystemLookType:
-        UIComponentSetStylePropertiesSystemLook
+public struct GUIComponentSetStylePropertiesLookTemplate<
+    GUIElementComponentStylePropertiesOSLookType:
+        GUIComponentSetStylePropertiesOSLook,
+    GUIElementComponentStylePropertiesSystemLookType:
+        GUIComponentSetStylePropertiesSystemLook
 >:
-    UIComponentSetStylePropertiesLookInterface {}
+    GUIComponentSetStylePropertiesLookInterface {}

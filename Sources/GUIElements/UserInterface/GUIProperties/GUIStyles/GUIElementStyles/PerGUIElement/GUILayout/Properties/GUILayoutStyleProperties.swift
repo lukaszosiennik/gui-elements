@@ -3,18 +3,18 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UILayoutStyleProperties:
-    UIElementStyleProperties {
+public protocol GUILayoutStyleProperties:
+    GUIElementStyleProperties {
     
-    associatedtype UILayoutStylePropertiesParamsType:
-        UILayoutStylePropertiesParams
+    associatedtype GUILayoutStylePropertiesParamsType:
+        GUILayoutStylePropertiesParams
     
-    var params: UILayoutStylePropertiesParamsType {
+    var params: GUILayoutStylePropertiesParamsType {
         get
     }
     
     init?(
-        styleType: UIStyleType?,
-        params: UILayoutStylePropertiesParamsType
+        styleType: GUIStyleType?,
+        params: GUILayoutStylePropertiesParamsType
     )
 }

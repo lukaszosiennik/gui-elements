@@ -3,13 +3,13 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct DevBootstrapUIComponentPaletts:
-    DevUIComponentPalettsInterface {
+public struct DevBootstrapGUIComponentPaletts:
+    DevGUIComponentPalettsInterface {
     
-    public typealias SystemUIElementColorPalette =
-        DevBootstrapUIElementComponentColorPalette
-    public typealias SystemUIElementFontPalette =
-        DevBootstrapUIElementComponentFontPalette
-    public typealias SystemUIElementComponentConstantPalette =
-        DevBootstrapUIElementComponentConstantPalette
+    public typealias SystemGUIElementColorPalette =
+        DevBootstrapGUIElementComponentColorPalette
+    public typealias SystemGUIElementFontPalette =
+        DevBootstrapGUIElementComponentFontPalette
+    public typealias SystemGUIElementComponentConstantPalette =
+        DevBootstrapGUIElementComponentConstantPalette
 }

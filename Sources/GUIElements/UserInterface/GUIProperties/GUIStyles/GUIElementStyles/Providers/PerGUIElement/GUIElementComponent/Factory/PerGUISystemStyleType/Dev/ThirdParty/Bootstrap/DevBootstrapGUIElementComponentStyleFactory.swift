@@ -3,16 +3,16 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class DevBootstrapUIElementComponentStyleFactory:
-    UIElementComponentStyleFactoryBasis {
+public final class DevBootstrapGUIElementComponentStyleFactory:
+    GUIElementComponentStyleFactoryBasis {
     
     init() {
         super.init(
             styleType: .system(.dev(.thirdParty(.bootstrap))),
-            uiComponentStyleFactoryType: DevBootstrapUIComponentStyleFactory.self,
-            uiComponentSetStyleFactoryType: DevBootstrapUIComponentSetStyleFactory.self,
-            uiComponentGroupStyleFactoryType: DevBootstrapUIComponentGroupStyleFactory.self,
-            uiComponentScreenStyleFactoryType: DevBootstrapUIComponentScreenStyleFactory.self
+            uiComponentStyleFactoryType: DevBootstrapGUIComponentStyleFactory.self,
+            uiComponentSetStyleFactoryType: DevBootstrapGUIComponentSetStyleFactory.self,
+            uiComponentGroupStyleFactoryType: DevBootstrapGUIComponentGroupStyleFactory.self,
+            uiComponentScreenStyleFactoryType: DevBootstrapGUIComponentScreenStyleFactory.self
         )
     }
 }

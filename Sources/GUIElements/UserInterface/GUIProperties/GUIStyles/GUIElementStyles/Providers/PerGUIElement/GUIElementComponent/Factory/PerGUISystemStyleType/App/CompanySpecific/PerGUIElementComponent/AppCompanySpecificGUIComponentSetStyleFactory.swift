@@ -3,14 +3,14 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class AppCompanySpecificUIComponentSetStyleFactory:
-    UIComponentSetTypeStyleFactory<
-        AppCompanySpecificUIComponentSetPaletts
+public final class AppCompanySpecificGUIComponentSetStyleFactory:
+    GUIComponentSetTypeStyleFactory<
+        AppCompanySpecificGUIComponentSetPaletts
     >,
-    UIComponentSetStyleFactoryInterface {
+    GUIComponentSetStyleFactoryInterface {
     
-    public func navigationMenuOption() -> UIElementComponentStyle<
-        NavigationMenuOptionUIComponentSetStyleProperties
+    public func navigationMenuOption() -> GUIElementComponentStyle<
+        NavigationMenuOptionGUIComponentSetStyleProperties
     > {
         return .default(
             styleType: styleType

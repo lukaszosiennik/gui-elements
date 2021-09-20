@@ -3,37 +3,37 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct TextAreaUIComponentSettings:
-    UIComponentSettings {
+public struct TextAreaGUIComponentSettings:
+    GUIComponentSettings {
 
-    public typealias UIElementComponentStylePropertiesOverwrittenType =
-        EmptyUIComponentStylePropertiesOverwritten
+    public typealias GUIElementComponentStylePropertiesOverwrittenType =
+        EmptyGUIComponentStylePropertiesOverwritten
 
-    public let params: TextAreaUIComponentParams
-    public var style: UIElementComponentStyle<
-        TextAreaUIComponentStyleProperties
+    public let params: TextAreaGUIComponentParams
+    public var style: GUIElementComponentStyle<
+        TextAreaGUIComponentStyleProperties
     >
     
     public init(
-        params: TextAreaUIComponentParams,
-        style: UIElementComponentStyle<
-            TextAreaUIComponentStyleProperties
+        params: TextAreaGUIComponentParams,
+        style: GUIElementComponentStyle<
+            TextAreaGUIComponentStyleProperties
         >
     ) {
         self.params = params
         self.style = style
     }
     
-    public static var style: UIElementComponentStyle<
-        TextAreaUIComponentStyleProperties
+    public static var style: GUIElementComponentStyle<
+        TextAreaGUIComponentStyleProperties
     >? {
         return styleFactory?.textArea()
     }
     
     public static func style(
-        for styleType: UIStyleType
-    ) -> UIElementComponentStyle<
-        TextAreaUIComponentStyleProperties
+        for styleType: GUIStyleType
+    ) -> GUIElementComponentStyle<
+        TextAreaGUIComponentStyleProperties
     >? {
         return styleFactory(
             for: styleType

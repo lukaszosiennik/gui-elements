@@ -3,12 +3,12 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol DevUIComponentSetPalettsInterface:
-    SystemUIComponentSetPalettsInterface
+public protocol DevGUIComponentSetPalettsInterface:
+    SystemGUIComponentSetPalettsInterface
 where
-    SystemUIElementColorPalette
-        : DevUIElementComponentColorPaletteInterface,
-    SystemUIElementFontPalette
-        : DevUIElementComponentFontPaletteInterface,
-    SystemUIElementComponentConstantPalette
-        : DevUIElementComponentConstantPaletteInterface {}
+    SystemGUIElementColorPalette
+        : DevGUIElementComponentColorPaletteInterface,
+    SystemGUIElementFontPalette
+        : DevGUIElementComponentFontPaletteInterface,
+    SystemGUIElementComponentConstantPalette
+        : DevGUIElementComponentConstantPaletteInterface {}

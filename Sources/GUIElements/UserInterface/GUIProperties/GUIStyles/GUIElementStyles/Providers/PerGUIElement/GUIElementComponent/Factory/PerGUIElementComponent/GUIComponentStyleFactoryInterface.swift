@@ -3,23 +3,23 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentStyleFactoryInterface:
-    UIElementComponentTypeStyleFactoryInterface {
+public protocol GUIComponentStyleFactoryInterface:
+    GUIElementComponentTypeStyleFactoryInterface {
     
-    func button() -> UIElementComponentStyle<
-        ButtonUIComponentStyleProperties
+    func button() -> GUIElementComponentStyle<
+        ButtonGUIComponentStyleProperties
     >
-    func label() -> UIElementComponentStyle<
-        LabelUIComponentStyleProperties
+    func label() -> GUIElementComponentStyle<
+        LabelGUIComponentStyleProperties
     >
-    func textArea() -> UIElementComponentStyle<
-        TextAreaUIComponentStyleProperties
+    func textArea() -> GUIElementComponentStyle<
+        TextAreaGUIComponentStyleProperties
     >
-    func textField() -> UIElementComponentStyle<
-        TextFieldUIComponentStyleProperties
+    func textField() -> GUIElementComponentStyle<
+        TextFieldGUIComponentStyleProperties
     >
     
-    func placeholder() -> UIElementComponentStyle<
-        PlaceholderUIComponentStyleProperties
+    func placeholder() -> GUIElementComponentStyle<
+        PlaceholderGUIComponentStyleProperties
     >
 }

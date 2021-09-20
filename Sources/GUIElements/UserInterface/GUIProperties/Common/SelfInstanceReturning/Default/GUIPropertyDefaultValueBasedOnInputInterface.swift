@@ -5,19 +5,19 @@
 
 import commons
 
-public protocol UIPropertyDefaultValueBasedOnInputInterface:
+public protocol GUIPropertyDefaultValueBasedOnInputInterface:
     SelfInstanceReturningBasedOnInputInterface {
     
     static func `default`(
-        styleType: UIStyleType
+        styleType: GUIStyleType
     ) -> Self
 }
 
-extension UIPropertyDefaultValueBasedOnInputInterface {
+extension GUIPropertyDefaultValueBasedOnInputInterface {
 // : SelfInstanceReturningBasedOnInputInterface
     
     public static func valueName(
-        input: UIStyleType
+        input: GUIStyleType
     ) -> Self {
         return `default`(
             styleType: input

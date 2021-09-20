@@ -3,19 +3,19 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIElementComponentStylePropertiesLayoutParams:
-    UIElementStylePropertiesLayoutParams,
-    UIPropertyPreferredValueInterface {
+public protocol GUIElementComponentStylePropertiesLayoutParams:
+    GUIElementStylePropertiesLayoutParams,
+    GUIPropertyPreferredValueInterface {
     
-    associatedtype UIElementComponentStylePropertiesOverwrittenLayoutParamsType:
-        UIElementComponentStylePropertiesOverwrittenLayoutParams
+    associatedtype GUIElementComponentStylePropertiesOverwrittenLayoutParamsType:
+        GUIElementComponentStylePropertiesOverwrittenLayoutParams
     
     associatedtype DefaultConstantPalette:
-        DefaultUIPalette &
-        UIElementComponentConstantPalette
+        DefaultGUIPalette &
+        GUIElementComponentConstantPalette
 
     init?(
         layoutParams: Self?,
-        overwrittenBy newLayoutParams: UIElementComponentStylePropertiesOverwrittenLayoutParamsType?
+        overwrittenBy newLayoutParams: GUIElementComponentStylePropertiesOverwrittenLayoutParamsType?
     )
 }

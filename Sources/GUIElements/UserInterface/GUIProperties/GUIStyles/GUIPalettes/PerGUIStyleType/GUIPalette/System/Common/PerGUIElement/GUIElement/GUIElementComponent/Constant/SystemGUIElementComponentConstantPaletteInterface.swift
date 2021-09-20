@@ -3,14 +3,14 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol SystemUIElementComponentConstantPaletteInterface:
-    SystemUIElementPaletteInterface
+public protocol SystemGUIElementComponentConstantPaletteInterface:
+    SystemGUIElementPaletteInterface
 where
-    UIElementComponent.UIComponent
-        : UIElementComponentConstantPalette,
-    UIElementComponent.UIComponentSet
-        : UIElementComponentConstantPalette,
-    UIElementComponent.UIComponentGroup
-        : UIElementComponentConstantPalette,
-    UIElementComponent.UIComponentScreen
-        : UIElementComponentConstantPalette {}
+    GUIElementComponent.GUIComponent
+        : GUIElementComponentConstantPalette,
+    GUIElementComponent.GUIComponentSet
+        : GUIElementComponentConstantPalette,
+    GUIElementComponent.GUIComponentGroup
+        : GUIElementComponentConstantPalette,
+    GUIElementComponent.GUIComponentScreen
+        : GUIElementComponentConstantPalette {}

@@ -3,22 +3,22 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public class UIElementComponentStyleFactoryBasis:
-    UIElementComponentStyleFactoryInterface {
+public class GUIElementComponentStyleFactoryBasis:
+    GUIElementComponentStyleFactoryInterface {
     
-    public let styleType: UIStyleType
+    public let styleType: GUIStyleType
     
-    public var uiComponent: UIComponentStyleFactoryInterface?
-    public var uiComponentSet: UIComponentSetStyleFactoryInterface?
-    public var uiComponentGroup: UIComponentGroupStyleFactoryInterface?
-    public var uiComponentScreen: UIComponentScreenStyleFactoryInterface?
+    public var uiComponent: GUIComponentStyleFactoryInterface?
+    public var uiComponentSet: GUIComponentSetStyleFactoryInterface?
+    public var uiComponentGroup: GUIComponentGroupStyleFactoryInterface?
+    public var uiComponentScreen: GUIComponentScreenStyleFactoryInterface?
     
     init(
-        styleType: UIStyleType,
-        uiComponentStyleFactoryType: UIComponentStyleFactoryInterface.Type,
-        uiComponentSetStyleFactoryType: UIComponentSetStyleFactoryInterface.Type,
-        uiComponentGroupStyleFactoryType: UIComponentGroupStyleFactoryInterface.Type,
-        uiComponentScreenStyleFactoryType: UIComponentScreenStyleFactoryInterface.Type
+        styleType: GUIStyleType,
+        uiComponentStyleFactoryType: GUIComponentStyleFactoryInterface.Type,
+        uiComponentSetStyleFactoryType: GUIComponentSetStyleFactoryInterface.Type,
+        uiComponentGroupStyleFactoryType: GUIComponentGroupStyleFactoryInterface.Type,
+        uiComponentScreenStyleFactoryType: GUIComponentScreenStyleFactoryInterface.Type
     ) {
         self.styleType = styleType
         

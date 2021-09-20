@@ -3,5 +3,5 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol SystemUIPalette:
-    UIPalette {}
+public protocol SystemGUIPalette:
+    GUIPalette {}

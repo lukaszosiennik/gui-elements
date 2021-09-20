@@ -3,8 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum UIDevStyleType: Hashable {
+public enum GUIDevStyleType: Hashable {
     
     case softwareEngineer
-    case thirdParty(UIDevThirdPartyStyleType)
+    case thirdParty(GUIDevThirdPartyStyleType)
 }

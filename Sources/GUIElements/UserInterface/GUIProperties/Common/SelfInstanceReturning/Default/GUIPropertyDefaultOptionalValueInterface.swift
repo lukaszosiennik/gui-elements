@@ -5,7 +5,7 @@
 
 import commons
 
-public protocol UIPropertyDefaultOptionalValueInterface:
+public protocol GUIPropertyDefaultOptionalValueInterface:
     SelfSingleInstanceReturningInterface {
     
     static var `default`: Self? {
@@ -13,7 +13,7 @@ public protocol UIPropertyDefaultOptionalValueInterface:
     }
 }
 
-extension UIPropertyDefaultOptionalValueInterface {
+extension GUIPropertyDefaultOptionalValueInterface {
 // : SelfSingleInstanceReturningInterface
     
     public static var valueName: Self? {

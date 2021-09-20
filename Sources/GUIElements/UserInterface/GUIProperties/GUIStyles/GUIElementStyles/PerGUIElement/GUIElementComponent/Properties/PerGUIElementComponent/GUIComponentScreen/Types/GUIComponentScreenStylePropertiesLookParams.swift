@@ -3,19 +3,19 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentScreenStylePropertiesLookParams:
-    UIElementComponentStylePropertiesLookParams
+public protocol GUIComponentScreenStylePropertiesLookParams:
+    GUIElementComponentStylePropertiesLookParams
 where
-    UIElementComponentStylePropertiesOverwrittenLookParamsType
-        : UIComponentScreenStylePropertiesOverwrittenLookParams,
+    GUIElementComponentStylePropertiesOverwrittenLookParamsType
+        : GUIComponentScreenStylePropertiesOverwrittenLookParams,
     DefaultConstantPalette
-        == DefaultUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen {}
+        == DefaultGUIElementComponentConstantPalette.GUIElementComponent.GUIComponentScreen {}
 
-extension UIComponentScreenStylePropertiesLookParams {
+extension GUIComponentScreenStylePropertiesLookParams {
     
     public init?(
         lookParams: Self?,
-        overwrittenBy newLookParams: EmptyUIComponentScreenStylePropertiesOverwrittenLookParams?
+        overwrittenBy newLookParams: EmptyGUIComponentScreenStylePropertiesOverwrittenLookParams?
     ) {
         return nil
     }

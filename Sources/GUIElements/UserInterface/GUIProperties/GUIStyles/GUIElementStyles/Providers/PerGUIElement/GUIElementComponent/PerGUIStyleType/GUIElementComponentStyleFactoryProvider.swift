@@ -3,17 +3,17 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class UIElementComponentStyleFactoryProvider:
-    UIElementComponentStyleFactoryProviderInterface {
+public final class GUIElementComponentStyleFactoryProvider:
+    GUIElementComponentStyleFactoryProviderInterface {
     
-    private let styleFactory: [UIStyleType: UIElementComponentStyleFactoryInterface]
+    private let styleFactory: [GUIStyleType: GUIElementComponentStyleFactoryInterface]
     
-    static private let shared: UIElementComponentStyleFactoryProvider = .init()
+    static private let shared: GUIElementComponentStyleFactoryProvider = .init()
     
     private init() {
-        let appCompanySpecificStyleFactory: AppCompanySpecificUIElementComponentStyleFactory = .init()
-        let devSoftwareEngineerStyleFactory: DevSoftwareEngineerUIElementComponentStyleFactory = .init()
-        let devBootstrapStyleFactory: DevBootstrapUIElementComponentStyleFactory = .init()
+        let appCompanySpecificStyleFactory: AppCompanySpecificGUIElementComponentStyleFactory = .init()
+        let devSoftwareEngineerStyleFactory: DevSoftwareEngineerGUIElementComponentStyleFactory = .init()
+        let devBootstrapStyleFactory: DevBootstrapGUIElementComponentStyleFactory = .init()
         
         self.styleFactory = [
             appCompanySpecificStyleFactory.styleType: appCompanySpecificStyleFactory,
@@ -22,15 +22,15 @@ public final class UIElementComponentStyleFactoryProvider:
         ]
     }
     
-    public static var currentFactory: UIElementComponentStyleFactoryInterface? {
+    public static var currentFactory: GUIElementComponentStyleFactoryInterface? {
         return factory(
-            for: UIStyleConfiguration.current
+            for: GUIStyleConfiguration.current
         )
     }
     
     public static func factory(
-        for styleType: UIStyleType
-    ) -> UIElementComponentStyleFactoryInterface? {
+        for styleType: GUIStyleType
+    ) -> GUIElementComponentStyleFactoryInterface? {
         return shared.styleFactory[styleType]
     }
 }

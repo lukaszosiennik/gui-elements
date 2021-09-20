@@ -3,29 +3,29 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIElementComponentStylePropertiesOverwritten:
-    UIElementStyleProperties {
+public protocol GUIElementComponentStylePropertiesOverwritten:
+    GUIElementStyleProperties {
     
-    associatedtype UIElementComponentStylePropertiesOverwrittenLookType:
-        UIElementComponentStylePropertiesOverwrittenLook
-    associatedtype UIElementComponentStylePropertiesOverwrittenLookParamsType:
-        UIElementComponentStylePropertiesOverwrittenLookParams
-    associatedtype UIElementComponentStylePropertiesOverwrittenLayoutParamsType:
-        UIElementComponentStylePropertiesOverwrittenLayoutParams
+    associatedtype GUIElementComponentStylePropertiesOverwrittenLookType:
+        GUIElementComponentStylePropertiesOverwrittenLook
+    associatedtype GUIElementComponentStylePropertiesOverwrittenLookParamsType:
+        GUIElementComponentStylePropertiesOverwrittenLookParams
+    associatedtype GUIElementComponentStylePropertiesOverwrittenLayoutParamsType:
+        GUIElementComponentStylePropertiesOverwrittenLayoutParams
     
-    var look: UIElementComponentStylePropertiesOverwrittenLookType? {
+    var look: GUIElementComponentStylePropertiesOverwrittenLookType? {
         get
     }
-    var lookParams: UIElementComponentStylePropertiesOverwrittenLookParamsType? {
+    var lookParams: GUIElementComponentStylePropertiesOverwrittenLookParamsType? {
         get
     }
-    var layoutParams: UIElementComponentStylePropertiesOverwrittenLayoutParamsType? {
+    var layoutParams: GUIElementComponentStylePropertiesOverwrittenLayoutParamsType? {
         get
     }
     
     init(
-        look: UIElementComponentStylePropertiesOverwrittenLookType?,
-        lookParams: UIElementComponentStylePropertiesOverwrittenLookParamsType?,
-        layoutParams: UIElementComponentStylePropertiesOverwrittenLayoutParamsType?
+        look: GUIElementComponentStylePropertiesOverwrittenLookType?,
+        lookParams: GUIElementComponentStylePropertiesOverwrittenLookParamsType?,
+        layoutParams: GUIElementComponentStylePropertiesOverwrittenLayoutParamsType?
     )
 }

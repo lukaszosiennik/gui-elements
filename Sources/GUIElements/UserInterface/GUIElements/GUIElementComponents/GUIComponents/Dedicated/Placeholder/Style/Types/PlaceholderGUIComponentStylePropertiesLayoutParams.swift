@@ -5,8 +5,8 @@
 
 import UIKit
 
-public struct PlaceholderUIComponentStylePropertiesLayoutParams:
-    UIComponentStylePropertiesLayoutParams {
+public struct PlaceholderGUIComponentStylePropertiesLayoutParams:
+    GUIComponentStylePropertiesLayoutParams {
     
     public static var preferred: Self? {
         return nil

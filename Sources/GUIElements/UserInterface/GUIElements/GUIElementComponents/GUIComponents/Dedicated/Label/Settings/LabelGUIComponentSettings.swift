@@ -3,37 +3,37 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct LabelUIComponentSettings:
-    UIComponentSettings {
+public struct LabelGUIComponentSettings:
+    GUIComponentSettings {
 
-    public typealias UIElementComponentStylePropertiesOverwrittenType =
-        LabelUIComponentStylePropertiesOverwritten
+    public typealias GUIElementComponentStylePropertiesOverwrittenType =
+        LabelGUIComponentStylePropertiesOverwritten
 
-    public let params: LabelUIComponentParams
-    public var style: UIElementComponentStyle<
-        LabelUIComponentStyleProperties
+    public let params: LabelGUIComponentParams
+    public var style: GUIElementComponentStyle<
+        LabelGUIComponentStyleProperties
     >
     
     public init(
-        params: LabelUIComponentParams,
-        style: UIElementComponentStyle<
-            LabelUIComponentStyleProperties
+        params: LabelGUIComponentParams,
+        style: GUIElementComponentStyle<
+            LabelGUIComponentStyleProperties
         >
     ) {
         self.params = params
         self.style = style
     }
     
-    public static var style: UIElementComponentStyle<
-        LabelUIComponentStyleProperties
+    public static var style: GUIElementComponentStyle<
+        LabelGUIComponentStyleProperties
     >? {
         return styleFactory?.label()
     }
     
     public static func style(
-        for styleType: UIStyleType
-    ) -> UIElementComponentStyle<
-        LabelUIComponentStyleProperties
+        for styleType: GUIStyleType
+    ) -> GUIElementComponentStyle<
+        LabelGUIComponentStyleProperties
     >? {
         return styleFactory(
             for: styleType

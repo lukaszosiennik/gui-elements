@@ -3,16 +3,16 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-open class NavigationMenuUIElementComponentParamsExtendedBasis<
+open class NavigationMenuGUIElementComponentParamsExtendedBasis<
     OptionsKeyValue:
-        NavigationMenuUIElementComponentParamsOptionsKeyValueInterface,
+        NavigationMenuGUIElementComponentParamsOptionsKeyValueInterface,
     ActionsFunction,
-    
+
     AdditionalParams:
-        UIPropertyDefaultValueInterface
+        GUIPropertyDefaultValueInterface
 >:
-    NavigationMenuUIElementComponentParamsInterface,
-    UIElementComponentParams {
+    NavigationMenuGUIElementComponentParamsInterface,
+    GUIElementComponentParams {
     
     public typealias OptionsKeyValueType =
         OptionsKeyValue

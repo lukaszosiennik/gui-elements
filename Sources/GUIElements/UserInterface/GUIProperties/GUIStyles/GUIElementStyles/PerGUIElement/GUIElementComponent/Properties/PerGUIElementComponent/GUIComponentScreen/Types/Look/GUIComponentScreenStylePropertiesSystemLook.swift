@@ -3,17 +3,17 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentScreenStylePropertiesSystemLook:
-    UIElementComponentStylePropertiesSystemLook
+public protocol GUIComponentScreenStylePropertiesSystemLook:
+    GUIElementComponentStylePropertiesSystemLook
 where
-    UIElementComponentStylePropertiesOverwrittenLookType
-        : UIComponentScreenStylePropertiesOverwrittenLook {}
+    GUIElementComponentStylePropertiesOverwrittenLookType
+        : GUIComponentScreenStylePropertiesOverwrittenLook {}
 
-extension UIComponentScreenStylePropertiesSystemLook {
+extension GUIComponentScreenStylePropertiesSystemLook {
     
     public init(
         look: Self,
-        overwrittenBy newLook: EmptyUIComponentScreenStylePropertiesOverwrittenLook?
+        overwrittenBy newLook: EmptyGUIComponentScreenStylePropertiesOverwrittenLook?
     ) {
         self = look
     }

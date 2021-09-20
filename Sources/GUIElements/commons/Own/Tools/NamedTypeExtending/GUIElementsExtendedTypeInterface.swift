@@ -5,7 +5,7 @@
 
 import commons
 
-public protocol UIElementsExtendedTypeInterface {
+public protocol GUIElementsExtendedTypeInterface {
     
     associatedtype ExtendedType
 
@@ -21,7 +21,7 @@ public protocol UIElementsExtendedTypeInterface {
     }
 }
 
-extension UIElementsExtendedTypeInterface {
+extension GUIElementsExtendedTypeInterface {
     
     public static var uie: CommonsExtension<
         Self

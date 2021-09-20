@@ -5,13 +5,13 @@
 
 import UIKit
 
-public final class TextAreaUIComponent:
+public final class TextAreaGUIComponent:
     UITextView,
-    UIComponent {
+    GUIComponent {
 
-    public let initialization: UIElementComponentInitialization = .init()
+    public let initialization: GUIElementComponentInitialization = .init()
     
-    public var settings: TextAreaUIComponentSettings {
+    public var settings: TextAreaGUIComponentSettings {
         didSet {
             setupSettings()
         }
@@ -24,7 +24,7 @@ public final class TextAreaUIComponent:
     }
     
     public init(
-        settings: TextAreaUIComponentSettings
+        settings: TextAreaGUIComponentSettings
     ) {
         self.settings = settings
         super.init(
@@ -46,41 +46,41 @@ public final class TextAreaUIComponent:
     public func setupNestedSettings() {}
     
     public func setupParams(
-        _ params: TextAreaUIComponentParams
+        _ params: TextAreaGUIComponentParams
     ) {}
 }
 
-extension TextAreaUIComponent {
+extension TextAreaGUIComponent {
     
     public func setupStyleLookOSConfiguration(
-        _ lookConfiguration: UIElementComponentLookOSConfiguration
+        _ lookConfiguration: GUIElementComponentLookOSConfiguration
     ) {}
     
     public func setupStyleLookOS(
-        _ look: EmptyUIComponentStylePropertiesOSLook
+        _ look: EmptyGUIComponentStylePropertiesOSLook
     ) {}
     
     public func setupStyleLookSystem(
-        _ look: TextAreaUIComponentStylePropertiesSystemLook
+        _ look: TextAreaGUIComponentStylePropertiesSystemLook
     ) {}
 }
 
-extension TextAreaUIComponent {
+extension TextAreaGUIComponent {
     
     public func setupStyleLookParamsOS() {}
     
     public func setupStyleLookParamsSystem(
-        _ lookParams: EmptyUIComponentStylePropertiesLookParams
+        _ lookParams: EmptyGUIComponentStylePropertiesLookParams
     ) {}
 }
 
-extension TextAreaUIComponent {
+extension TextAreaGUIComponent {
     
     public func setupStyleLayoutInitialization() {}
     
     public func setupStyleLayoutOS() {}
     
     public func setupStyleLayoutSystem(
-        _ layoutParams: TextAreaUIComponentStylePropertiesLayoutParams
+        _ layoutParams: TextAreaGUIComponentStylePropertiesLayoutParams
     ) {}
 }

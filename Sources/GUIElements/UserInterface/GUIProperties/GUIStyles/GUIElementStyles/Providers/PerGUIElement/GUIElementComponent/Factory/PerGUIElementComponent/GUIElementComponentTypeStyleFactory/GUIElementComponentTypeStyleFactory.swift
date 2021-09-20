@@ -3,16 +3,16 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public class UIElementComponentTypeStyleFactory<
+public class GUIElementComponentTypeStyleFactory<
     Paletts:
-        SystemUIElementPalettsInterface
+        SystemGUIElementPalettsInterface
 >:
-    UIElementComponentTypeStyleFactoryInterface {
+    GUIElementComponentTypeStyleFactoryInterface {
     
-    public let styleType: UIStyleType
+    public let styleType: GUIStyleType
     
     public required init(
-        owner: UIElementStyleFactoryInterface
+        owner: GUIElementStyleFactoryInterface
     ) {
         self.styleType = owner.styleType
     }

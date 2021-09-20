@@ -3,46 +3,46 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIElementComponentStyleProperties:
-    UIElementStyleProperties,
-    UIPropertyDefaultValueBasedOnInputInterface {
+public protocol GUIElementComponentStyleProperties:
+    GUIElementStyleProperties,
+    GUIPropertyDefaultValueBasedOnInputInterface {
     
-    associatedtype UIElementComponentStylePropertiesLookInterfaceType:
-        UIElementComponentStylePropertiesLookInterface
-    associatedtype UIElementComponentStylePropertiesLookParamsType:
-        UIElementComponentStylePropertiesLookParams
-    associatedtype UIElementComponentStylePropertiesLayoutParamsType:
-        UIElementComponentStylePropertiesLayoutParams
+    associatedtype GUIElementComponentStylePropertiesLookInterfaceType:
+        GUIElementComponentStylePropertiesLookInterface
+    associatedtype GUIElementComponentStylePropertiesLookParamsType:
+        GUIElementComponentStylePropertiesLookParams
+    associatedtype GUIElementComponentStylePropertiesLayoutParamsType:
+        GUIElementComponentStylePropertiesLayoutParams
     
-    var lookType: UIElementComponentStylePropertiesLookType<
-        UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType,
-        UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType
+    var lookType: GUIElementComponentStylePropertiesLookType<
+        GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesOSLookType,
+        GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesSystemLookType
     > {
         get
     }
-    var lookParams: UIElementComponentStylePropertiesLookParamsType? {
+    var lookParams: GUIElementComponentStylePropertiesLookParamsType? {
         get
     }
-    var layoutParams: UIElementComponentStylePropertiesLayoutParamsType? {
+    var layoutParams: GUIElementComponentStylePropertiesLayoutParamsType? {
         get
     }
     
     init(
-        lookType: UIElementComponentStylePropertiesLookType<
-            UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType,
-            UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType
+        lookType: GUIElementComponentStylePropertiesLookType<
+            GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesOSLookType,
+            GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesSystemLookType
         >,
-        lookParams: UIElementComponentStylePropertiesLookParamsType?,
-        layoutParams: UIElementComponentStylePropertiesLayoutParamsType?
+        lookParams: GUIElementComponentStylePropertiesLookParamsType?,
+        layoutParams: GUIElementComponentStylePropertiesLayoutParamsType?
     )
 }
 
-extension UIElementComponentStyleProperties {
+extension GUIElementComponentStyleProperties {
     
     public static func `default`(
-        styleType: UIStyleType
+        styleType: GUIStyleType
     ) -> Self {
-        var layoutParams: UIElementComponentStylePropertiesLayoutParamsType? = nil
+        var layoutParams: GUIElementComponentStylePropertiesLayoutParamsType? = nil
         if case let .os(styleProperties) = styleType, styleProperties.isLayoutParamsPreferred {
             layoutParams = .preferred
         }

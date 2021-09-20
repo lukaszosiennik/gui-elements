@@ -5,17 +5,17 @@
 
 import UIKit
 
-public final class ButtonUIComponent:
+public final class ButtonGUIComponent:
     UIView,
-    ButtonUIComponentInterface {
+    ButtonGUIComponentInterface {
     
     private(set) var button: UIButton = .init(
         type: .custom
     )
     
-    public let initialization: UIElementComponentInitialization = .init()
+    public let initialization: GUIElementComponentInitialization = .init()
     
-    public var settings: ButtonUIComponentSettings {
+    public var settings: ButtonGUIComponentSettings {
         didSet {
             setupSettings()
         }
@@ -28,7 +28,7 @@ public final class ButtonUIComponent:
     }
     
     public init(
-        settings: ButtonUIComponentSettings
+        settings: ButtonGUIComponentSettings
     ) {
         self.settings = settings
         super.init(
@@ -70,7 +70,7 @@ public final class ButtonUIComponent:
     }
     
     public func setupParams(
-        _ params: ButtonUIComponentParams
+        _ params: ButtonGUIComponentParams
     ) {
         setupParams(
             params,
@@ -93,10 +93,10 @@ public final class ButtonUIComponent:
     }
 }
 
-extension ButtonUIComponent {
+extension ButtonGUIComponent {
     
     public func setupStyleLookOSConfiguration(
-        _ lookConfiguration: UIElementComponentLookOSConfiguration
+        _ lookConfiguration: GUIElementComponentLookOSConfiguration
     ) {
         setupStyleLookOSConfiguration(
             lookConfiguration,
@@ -105,7 +105,7 @@ extension ButtonUIComponent {
     }
     
     public func setupStyleLookOS(
-        _ look: ButtonUIComponentStylePropertiesOSLook
+        _ look: ButtonGUIComponentStylePropertiesOSLook
     ) {
         setupStyleLookOS(
             look,
@@ -114,7 +114,7 @@ extension ButtonUIComponent {
     }
     
     public func setupStyleLookSystem(
-        _ look: ButtonUIComponentStylePropertiesSystemLook
+        _ look: ButtonGUIComponentStylePropertiesSystemLook
     ) {
         setupStyleLookSystem(
             look,
@@ -123,9 +123,9 @@ extension ButtonUIComponent {
     }
     
     private func styleLookButtonType(
-        from lookType: UIElementComponentStylePropertiesLookType<
-            ButtonUIComponentStylePropertiesOSLook,
-            ButtonUIComponentStylePropertiesSystemLook
+        from lookType: GUIElementComponentStylePropertiesLookType<
+            ButtonGUIComponentStylePropertiesOSLook,
+            ButtonGUIComponentStylePropertiesSystemLook
         >
     ) -> UIButton.ButtonType {
         switch lookType {
@@ -150,7 +150,7 @@ extension ButtonUIComponent {
     }
 }
 
-extension ButtonUIComponent {
+extension ButtonGUIComponent {
     
     public func setupStyleLookParamsOS() {
         setupStyleLookParamsOS(
@@ -159,7 +159,7 @@ extension ButtonUIComponent {
     }
     
     public func setupStyleLookParamsSystem(
-        _ lookParams: EmptyUIComponentStylePropertiesLookParams
+        _ lookParams: EmptyGUIComponentStylePropertiesLookParams
     ) {
         setupStyleLookParamsSystem(
             lookParams,
@@ -168,7 +168,7 @@ extension ButtonUIComponent {
     }
 }
 
-extension ButtonUIComponent {
+extension ButtonGUIComponent {
     
     public func setupStyleLayoutInitialization() {
         setupStyleLayoutInitialization(
@@ -185,7 +185,7 @@ extension ButtonUIComponent {
     }
     
     public func setupStyleLayoutSystem(
-        _ layoutParams: ButtonUIComponentStylePropertiesLayoutParams
+        _ layoutParams: ButtonGUIComponentStylePropertiesLayoutParams
     ) {
         setupStyleLayout()
         

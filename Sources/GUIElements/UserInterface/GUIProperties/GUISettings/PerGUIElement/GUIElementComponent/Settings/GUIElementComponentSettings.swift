@@ -5,66 +5,66 @@
 
 import commons
 
-public protocol UIElementComponentSettings:
-    UIElementSettings,
-    UIPropertyDefaultValueInterface,
+public protocol GUIElementComponentSettings:
+    GUIElementSettings,
+    GUIPropertyDefaultValueInterface,
     SelfInstanceOverwrittingInterface {
     
-    associatedtype UIElementComponentParamsType:
-        UIElementComponentParams
-    associatedtype UIElementComponentStylePropertiesType:
-        UIElementComponentStyleProperties
-    associatedtype UIElementComponentStylePropertiesOverwrittenType:
-        UIElementComponentStylePropertiesOverwritten
+    associatedtype GUIElementComponentParamsType:
+        GUIElementComponentParams
+    associatedtype GUIElementComponentStylePropertiesType:
+        GUIElementComponentStyleProperties
+    associatedtype GUIElementComponentStylePropertiesOverwrittenType:
+        GUIElementComponentStylePropertiesOverwritten
     
-    var params: UIElementComponentParamsType {
+    var params: GUIElementComponentParamsType {
         get
     }
-    var style: UIElementComponentStyle<
-        UIElementComponentStylePropertiesType
+    var style: GUIElementComponentStyle<
+        GUIElementComponentStylePropertiesType
     > {
         get
     }
     
     init(
-        params: UIElementComponentParamsType,
-        style: UIElementComponentStyle<
-            UIElementComponentStylePropertiesType
+        params: GUIElementComponentParamsType,
+        style: GUIElementComponentStyle<
+            GUIElementComponentStylePropertiesType
         >
     )
     
-    static var style: UIElementComponentStyle<
-        UIElementComponentStylePropertiesType
+    static var style: GUIElementComponentStyle<
+        GUIElementComponentStylePropertiesType
     >? {
         get
     }
     static func style(
-        for styleType: UIStyleType
-    ) -> UIElementComponentStyle<
-        UIElementComponentStylePropertiesType
+        for styleType: GUIStyleType
+    ) -> GUIElementComponentStyle<
+        GUIElementComponentStylePropertiesType
     >?
     
-    static var styleUnwrapped: UIElementComponentStyle<
-        UIElementComponentStylePropertiesType
+    static var styleUnwrapped: GUIElementComponentStyle<
+        GUIElementComponentStylePropertiesType
     > {
         get
     }
     static func style(
-        for styleType: UIStyleType
-    ) -> UIElementComponentStyle<
-        UIElementComponentStylePropertiesType
+        for styleType: GUIStyleType
+    ) -> GUIElementComponentStyle<
+        GUIElementComponentStylePropertiesType
     >
     static func style(
-        for styleType: UIStyleType,
-        overwrittenBy stylePropertiesOverwritten: UIElementComponentStylePropertiesOverwrittenType
-    ) -> UIElementComponentStyle<
-        UIElementComponentStylePropertiesType
+        for styleType: GUIStyleType,
+        overwrittenBy stylePropertiesOverwritten: GUIElementComponentStylePropertiesOverwrittenType
+    ) -> GUIElementComponentStyle<
+        GUIElementComponentStylePropertiesType
     >
 }
 
-extension UIElementComponentSettings {
+extension GUIElementComponentSettings {
     
-    public var styleType: UIStyleType {
+    public var styleType: GUIStyleType {
         get {
             return style.type
         }
@@ -80,12 +80,12 @@ extension UIElementComponentSettings {
         }
     }
     
-    public var styleProperties: UIElementComponentStylePropertiesType {
+    public var styleProperties: GUIElementComponentStylePropertiesType {
         return style.properties
     }
 }
 
-extension UIElementComponentSettings {
+extension GUIElementComponentSettings {
     
     public static var `default`: Self {
         return .init(
@@ -94,7 +94,7 @@ extension UIElementComponentSettings {
     }
     
     public init(
-        params: UIElementComponentParamsType
+        params: GUIElementComponentParamsType
     ) {
         self.init(
             params: params,
@@ -103,8 +103,8 @@ extension UIElementComponentSettings {
     }
     
     public init(
-        params: UIElementComponentParamsType,
-        styleType: UIStyleType
+        params: GUIElementComponentParamsType,
+        styleType: GUIStyleType
     ) {
         self.init(
             params: params,
@@ -115,9 +115,9 @@ extension UIElementComponentSettings {
     }
     
     public init(
-        params: UIElementComponentParamsType,
-        styleType: UIStyleType,
-        overwrittenBy styleProperties: UIElementComponentStylePropertiesOverwrittenType
+        params: GUIElementComponentParamsType,
+        styleType: GUIStyleType,
+        overwrittenBy styleProperties: GUIElementComponentStylePropertiesOverwrittenType
     ) {
         self.init(
             params: params,
@@ -129,43 +129,43 @@ extension UIElementComponentSettings {
     }
 }
 
-extension UIElementComponentSettings {
+extension GUIElementComponentSettings {
     
-    public static var mainStyleFactory: UIElementComponentStyleFactoryInterface? {
+    public static var mainStyleFactory: GUIElementComponentStyleFactoryInterface? {
         return styleFactoryProvider.currentFactory
     }
     public static func mainStyleFactory(
-        for styleType: UIStyleType
-    ) -> UIElementComponentStyleFactoryInterface? {
+        for styleType: GUIStyleType
+    ) -> GUIElementComponentStyleFactoryInterface? {
         return styleFactoryProvider.factory(
             for: styleType
         )
     }
     
-    static private var styleFactoryProvider: UIElementComponentStyleFactoryProviderInterface.Type {
-        return UIElementComponentStyleFactoryProvider.self
+    static private var styleFactoryProvider: GUIElementComponentStyleFactoryProviderInterface.Type {
+        return GUIElementComponentStyleFactoryProvider.self
     }
 }
 
-extension UIElementComponentSettings
+extension GUIElementComponentSettings
 where
-    UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType.UIElementComponentStylePropertiesOverwrittenLookType
-        == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLookType,
-    UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookParamsType.UIElementComponentStylePropertiesOverwrittenLookParamsType
-        == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLookParamsType,
-    UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLayoutParamsType.UIElementComponentStylePropertiesOverwrittenLayoutParamsType
-        == UIElementComponentStylePropertiesOverwrittenType.UIElementComponentStylePropertiesOverwrittenLayoutParamsType {
+    GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesSystemLookType.GUIElementComponentStylePropertiesOverwrittenLookType
+        == GUIElementComponentStylePropertiesOverwrittenType.GUIElementComponentStylePropertiesOverwrittenLookType,
+    GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLookParamsType.GUIElementComponentStylePropertiesOverwrittenLookParamsType
+        == GUIElementComponentStylePropertiesOverwrittenType.GUIElementComponentStylePropertiesOverwrittenLookParamsType,
+    GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLayoutParamsType.GUIElementComponentStylePropertiesOverwrittenLayoutParamsType
+        == GUIElementComponentStylePropertiesOverwrittenType.GUIElementComponentStylePropertiesOverwrittenLayoutParamsType {
     
-    public static var styleUnwrapped: UIElementComponentStyle<
-        UIElementComponentStylePropertiesType
+    public static var styleUnwrapped: GUIElementComponentStyle<
+        GUIElementComponentStylePropertiesType
     > {
         return style ?? .default
     }
     
     public static func style(
-        for styleType: UIStyleType
-    ) -> UIElementComponentStyle<
-        UIElementComponentStylePropertiesType
+        for styleType: GUIStyleType
+    ) -> GUIElementComponentStyle<
+        GUIElementComponentStylePropertiesType
     > {
         return style(
             for: styleType
@@ -175,17 +175,17 @@ where
     }
     
     public static func style(
-        for styleType: UIStyleType,
-        overwrittenBy stylePropertiesOverwritten: UIElementComponentStylePropertiesOverwrittenType
-    ) -> UIElementComponentStyle<
-        UIElementComponentStylePropertiesType
+        for styleType: GUIStyleType,
+        overwrittenBy stylePropertiesOverwritten: GUIElementComponentStylePropertiesOverwrittenType
+    ) -> GUIElementComponentStyle<
+        GUIElementComponentStylePropertiesType
     > {
         guard let style = style(
             for: styleType
         )
         else {
-            let defaultStyle: UIElementComponentStyle<
-                UIElementComponentStylePropertiesType
+            let defaultStyle: GUIElementComponentStyle<
+                GUIElementComponentStylePropertiesType
             > = .default(
                 styleType: styleType
             )
@@ -213,9 +213,9 @@ where
         
         let styleProperties = style.properties
         
-        let lookType: UIElementComponentStylePropertiesLookType<
-            UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType,
-            UIElementComponentStylePropertiesType.UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType
+        let lookType: GUIElementComponentStylePropertiesLookType<
+            GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesOSLookType,
+            GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesSystemLookType
         >
         if case let .system(look) = styleProperties.lookType {
             lookType = .system(.init(

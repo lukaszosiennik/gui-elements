@@ -3,37 +3,37 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuOptionUIComponentSetSettings:
-    UIComponentSetSettings {
+public struct NavigationMenuOptionGUIComponentSetSettings:
+    GUIComponentSetSettings {
     
-    public typealias UIElementComponentStylePropertiesOverwrittenType =
-        EmptyUIComponentSetStylePropertiesOverwritten
+    public typealias GUIElementComponentStylePropertiesOverwrittenType =
+        EmptyGUIComponentSetStylePropertiesOverwritten
     
-    public let params: NavigationMenuOptionUIComponentSetParams
-    public var style: UIElementComponentStyle<
-        NavigationMenuOptionUIComponentSetStyleProperties
+    public let params: NavigationMenuOptionGUIComponentSetParams
+    public var style: GUIElementComponentStyle<
+        NavigationMenuOptionGUIComponentSetStyleProperties
     >
     
     public init(
-        params: NavigationMenuOptionUIComponentSetParams,
-        style: UIElementComponentStyle<
-            NavigationMenuOptionUIComponentSetStyleProperties
+        params: NavigationMenuOptionGUIComponentSetParams,
+        style: GUIElementComponentStyle<
+            NavigationMenuOptionGUIComponentSetStyleProperties
         >
     ) {
         self.params = params
         self.style = style
     }
     
-    public static var style: UIElementComponentStyle<
-        NavigationMenuOptionUIComponentSetStyleProperties
+    public static var style: GUIElementComponentStyle<
+        NavigationMenuOptionGUIComponentSetStyleProperties
     >? {
         return styleFactory?.navigationMenuOption()
     }
     
     public static func style(
-        for styleType: UIStyleType
-    ) -> UIElementComponentStyle<
-        NavigationMenuOptionUIComponentSetStyleProperties
+        for styleType: GUIStyleType
+    ) -> GUIElementComponentStyle<
+        NavigationMenuOptionGUIComponentSetStyleProperties
     >? {
         return styleFactory(
             for: styleType

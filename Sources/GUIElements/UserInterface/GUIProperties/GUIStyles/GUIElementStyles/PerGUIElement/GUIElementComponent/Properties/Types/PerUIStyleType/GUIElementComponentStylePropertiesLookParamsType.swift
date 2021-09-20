@@ -3,11 +3,11 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum UIElementComponentStylePropertiesLookParamsType<
-    UIElementComponentStylePropertiesLookParamsType:
-        UIElementComponentStylePropertiesLookParams
+public enum GUIElementComponentStylePropertiesLookParamsType<
+    GUIElementComponentStylePropertiesLookParamsType:
+        GUIElementComponentStylePropertiesLookParams
 > {
     
     case os
-    case system(_ lookParams: UIElementComponentStylePropertiesLookParamsType)
+    case system(_ lookParams: GUIElementComponentStylePropertiesLookParamsType)
 }

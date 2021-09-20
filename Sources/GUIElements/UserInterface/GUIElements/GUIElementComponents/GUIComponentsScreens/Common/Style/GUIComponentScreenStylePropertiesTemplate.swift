@@ -3,30 +3,30 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct UIComponentScreenStylePropertiesTemplate<
-    UIElementComponentStylePropertiesLookInterfaceType:
-        UIComponentScreenStylePropertiesLookInterface,
-    UIComponentScreenStylePropertiesLookParamsType:
-        UIComponentScreenStylePropertiesLookParams,
-    UIComponentScreenStylePropertiesLayoutParamsType:
-        UIComponentScreenStylePropertiesLayoutParams
+public struct GUIComponentScreenStylePropertiesTemplate<
+    GUIElementComponentStylePropertiesLookInterfaceType:
+        GUIComponentScreenStylePropertiesLookInterface,
+    GUIComponentScreenStylePropertiesLookParamsType:
+        GUIComponentScreenStylePropertiesLookParams,
+    GUIComponentScreenStylePropertiesLayoutParamsType:
+        GUIComponentScreenStylePropertiesLayoutParams
 >:
-    UIComponentScreenStyleProperties {
+    GUIComponentScreenStyleProperties {
 
-    public let lookType: UIElementComponentStylePropertiesLookType<
-        UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType,
-        UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType
+    public let lookType: GUIElementComponentStylePropertiesLookType<
+        GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesOSLookType,
+        GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesSystemLookType
     >
-    public let lookParams: UIComponentScreenStylePropertiesLookParamsType?
-    public let layoutParams: UIComponentScreenStylePropertiesLayoutParamsType?
+    public let lookParams: GUIComponentScreenStylePropertiesLookParamsType?
+    public let layoutParams: GUIComponentScreenStylePropertiesLayoutParamsType?
     
     public init(
-        lookType: UIElementComponentStylePropertiesLookType<
-            UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesOSLookType,
-            UIElementComponentStylePropertiesLookInterfaceType.UIElementComponentStylePropertiesSystemLookType
+        lookType: GUIElementComponentStylePropertiesLookType<
+            GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesOSLookType,
+            GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesSystemLookType
         >,
-        lookParams: UIComponentScreenStylePropertiesLookParamsType?,
-        layoutParams: UIComponentScreenStylePropertiesLayoutParamsType?
+        lookParams: GUIComponentScreenStylePropertiesLookParamsType?,
+        layoutParams: GUIComponentScreenStylePropertiesLayoutParamsType?
     ) {
         self.lookType = lookType
         self.lookParams = lookParams

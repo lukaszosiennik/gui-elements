@@ -3,48 +3,48 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuUIComponentGroupSettings<
+public struct NavigationMenuGUIComponentGroupSettings<
     OptionKey:
-        InputUIElementComponentActionKeyInterface,
+        InputGUIElementComponentActionKeyInterface,
     OptionValue:
-        NavigationMenuUIElementComponentParamsOptionValueObjectInterface
+        NavigationMenuGUIElementComponentParamsOptionValueObjectInterface
 >:
-    UIComponentGroupSettings {
+    GUIComponentGroupSettings {
 
-    public typealias UIElementComponentStylePropertiesOverwrittenType =
-        NavigationMenuUIComponentGroupStylePropertiesOverwritten
+    public typealias GUIElementComponentStylePropertiesOverwrittenType =
+        NavigationMenuGUIComponentGroupStylePropertiesOverwritten
     
-    public let params: NavigationMenuUIComponentGroupParams<
+    public let params: NavigationMenuGUIComponentGroupParams<
         OptionKey,
         OptionValue
     >
-    public var style: UIElementComponentStyle<
-        NavigationMenuUIComponentGroupStyleProperties
+    public var style: GUIElementComponentStyle<
+        NavigationMenuGUIComponentGroupStyleProperties
     >
     
     public init(
-        params: NavigationMenuUIComponentGroupParams<
+        params: NavigationMenuGUIComponentGroupParams<
             OptionKey,
             OptionValue
         >,
-        style: UIElementComponentStyle<
-            NavigationMenuUIComponentGroupStyleProperties
+        style: GUIElementComponentStyle<
+            NavigationMenuGUIComponentGroupStyleProperties
         >
     ) {
         self.params = params
         self.style = style
     }
     
-    public static var style: UIElementComponentStyle<
-        NavigationMenuUIComponentGroupStyleProperties
+    public static var style: GUIElementComponentStyle<
+        NavigationMenuGUIComponentGroupStyleProperties
     >? {
         return styleFactory?.navigationMenu()
     }
     
     public static func style(
-        for styleType: UIStyleType
-    ) -> UIElementComponentStyle<
-        NavigationMenuUIComponentGroupStyleProperties
+        for styleType: GUIStyleType
+    ) -> GUIElementComponentStyle<
+        NavigationMenuGUIComponentGroupStyleProperties
     >? {
         return styleFactory(
             for: styleType

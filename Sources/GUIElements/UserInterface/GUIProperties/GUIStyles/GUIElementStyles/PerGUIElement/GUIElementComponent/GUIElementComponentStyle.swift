@@ -3,13 +3,13 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct UIElementComponentStyle<
+public struct GUIElementComponentStyle<
     PropertiesType:
-        UIElementComponentStyleProperties
+        GUIElementComponentStyleProperties
 >:
-    UIElementStyle {
+    GUIElementStyle {
     
-    public let type: UIStyleType
+    public let type: GUIStyleType
     let properties: PropertiesType
     
     public init(
@@ -20,7 +20,7 @@ public struct UIElementComponentStyle<
     }
     
     init(
-        type: UIStyleType,
+        type: GUIStyleType,
         properties: PropertiesType
     ) {
         self.type = type
@@ -38,8 +38,8 @@ public struct UIElementComponentStyle<
     }
 }
 
-extension UIElementComponentStyle:
-    UIPropertyDefaultValueInterface {
+extension GUIElementComponentStyle:
+    GUIPropertyDefaultValueInterface {
 
     public static var `default`: Self {
         return `default`(
@@ -48,7 +48,7 @@ extension UIElementComponentStyle:
     }
 
     static func `default`(
-        styleType: UIStyleType
+        styleType: GUIStyleType
     ) -> Self {
         return .init(
             type: styleType,

@@ -3,14 +3,14 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class DevBootstrapUIComponentGroupStyleFactory:
-    UIComponentGroupTypeStyleFactory<
-        DevBootstrapUIComponentGroupPaletts
+public final class DevBootstrapGUIComponentGroupStyleFactory:
+    GUIComponentGroupTypeStyleFactory<
+        DevBootstrapGUIComponentGroupPaletts
     >,
-    UIComponentGroupStyleFactoryInterface {
+    GUIComponentGroupStyleFactoryInterface {
     
-    public func card() -> UIElementComponentStyle<
-        CardUIComponentGroupStyleProperties
+    public func card() -> GUIElementComponentStyle<
+        CardGUIComponentGroupStyleProperties
     > {
         return .init(
             type: styleType,
@@ -19,11 +19,11 @@ public final class DevBootstrapUIComponentGroupStyleFactory:
                     whole: .init(
                         border: .init(
                             corners: .rounded,
-                            width: ConstantPalette.Card.UILook.borderWidth_1,
+                            width: ConstantPalette.Card.GUILook.borderWidth_1,
                             color: ColorPalette.Card.Success.border
                         ),
                         separator: .init(
-                            width: ConstantPalette.Card.UILook.borderWidth_1,
+                            width: ConstantPalette.Card.GUILook.borderWidth_1,
                             color: ColorPalette.Card.Success.separator
                         )
                     ),
@@ -37,24 +37,24 @@ public final class DevBootstrapUIComponentGroupStyleFactory:
                 )),
                 layoutParams: .init(
                     title: .init(
-                        leftMargin: ConstantPalette.Card.UILayoutParams.margin_left_16,
-                        rightMargin: ConstantPalette.Card.UILayoutParams.margin_right_16,
-                        topMargin: ConstantPalette.Card.UILayoutParams.margin_top_12,
-                        bottomMargin: ConstantPalette.Card.UILayoutParams.margin_bottom_12
+                        leftMargin: ConstantPalette.Card.GUILayoutParams.margin_left_16,
+                        rightMargin: ConstantPalette.Card.GUILayoutParams.margin_right_16,
+                        topMargin: ConstantPalette.Card.GUILayoutParams.margin_top_12,
+                        bottomMargin: ConstantPalette.Card.GUILayoutParams.margin_bottom_12
                     ),
                     body: .init(
-                        leftMargin: ConstantPalette.Card.UILayoutParams.margin_left_16,
-                        rightMargin: ConstantPalette.Card.UILayoutParams.margin_right_16,
-                        topMargin: ConstantPalette.Card.UILayoutParams.margin_top_16,
-                        bottomMargin: ConstantPalette.Card.UILayoutParams.margin_bottom_16
+                        leftMargin: ConstantPalette.Card.GUILayoutParams.margin_left_16,
+                        rightMargin: ConstantPalette.Card.GUILayoutParams.margin_right_16,
+                        topMargin: ConstantPalette.Card.GUILayoutParams.margin_top_16,
+                        bottomMargin: ConstantPalette.Card.GUILayoutParams.margin_bottom_16
                     )
                 )
             )
         )
     }
     
-    public func navigationMenu() -> UIElementComponentStyle<
-        NavigationMenuUIComponentGroupStyleProperties
+    public func navigationMenu() -> GUIElementComponentStyle<
+        NavigationMenuGUIComponentGroupStyleProperties
     > {
         return .default(
             styleType: styleType

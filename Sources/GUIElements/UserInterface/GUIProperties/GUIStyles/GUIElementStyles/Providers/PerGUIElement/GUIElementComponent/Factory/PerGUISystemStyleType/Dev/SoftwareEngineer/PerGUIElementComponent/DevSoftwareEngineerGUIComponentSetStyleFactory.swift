@@ -3,14 +3,14 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class DevSoftwareEngineerUIComponentSetStyleFactory:
-    UIComponentSetTypeStyleFactory<
-        DevSoftwareEngineerUIComponentSetPaletts
+public final class DevSoftwareEngineerGUIComponentSetStyleFactory:
+    GUIComponentSetTypeStyleFactory<
+        DevSoftwareEngineerGUIComponentSetPaletts
     >,
-    UIComponentSetStyleFactoryInterface {
+    GUIComponentSetStyleFactoryInterface {
     
-    public func navigationMenuOption() -> UIElementComponentStyle<
-        NavigationMenuOptionUIComponentSetStyleProperties
+    public func navigationMenuOption() -> GUIElementComponentStyle<
+        NavigationMenuOptionGUIComponentSetStyleProperties
     > {
         return .init(
             type: styleType,
@@ -18,7 +18,7 @@ public final class DevSoftwareEngineerUIComponentSetStyleFactory:
                 lookType: .system(.init(
                     backgroundColor: ColorPalette.NavigationMenuOption.background_white,
                     borderColor: ColorPalette.NavigationMenuOption.border_black,
-                    borderWidth: ConstantPalette.NavigationMenuOption.UILook.borderWidth_1
+                    borderWidth: ConstantPalette.NavigationMenuOption.GUILook.borderWidth_1
                 )),
                 layoutParams: .init()
             )

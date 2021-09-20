@@ -3,14 +3,14 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-extension UIComponentGroupStylePropertiesLayoutParams
+extension GUIComponentGroupStylePropertiesLayoutParams
 where
-    UIElementComponentStylePropertiesOverwrittenLayoutParamsType
-        == EmptyUIComponentGroupStylePropertiesOverwrittenLayoutParams {
+    GUIElementComponentStylePropertiesOverwrittenLayoutParamsType
+        == EmptyGUIComponentGroupStylePropertiesOverwrittenLayoutParams {
     
     public init?(
         layoutParams: Self?,
-        overwrittenBy newLayoutParams: EmptyUIComponentGroupStylePropertiesOverwrittenLayoutParams?
+        overwrittenBy newLayoutParams: EmptyGUIComponentGroupStylePropertiesOverwrittenLayoutParams?
     ) {
         return nil
     }

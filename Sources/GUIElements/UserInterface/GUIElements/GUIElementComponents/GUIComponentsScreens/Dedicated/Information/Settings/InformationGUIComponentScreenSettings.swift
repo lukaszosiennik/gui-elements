@@ -3,34 +3,34 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct InformationUIComponentScreenSettings:
-    UIComponentScreenSettings {
+public struct InformationGUIComponentScreenSettings:
+    GUIComponentScreenSettings {
     
-    public let params: InformationUIComponentScreenParams
-    public var style: UIElementComponentStyle<
-        InformationUIComponentScreenStyleProperties
+    public let params: InformationGUIComponentScreenParams
+    public var style: GUIElementComponentStyle<
+        InformationGUIComponentScreenStyleProperties
     >
     
     public init(
-        params: InformationUIComponentScreenParams,
-        style: UIElementComponentStyle<
-            InformationUIComponentScreenStyleProperties
+        params: InformationGUIComponentScreenParams,
+        style: GUIElementComponentStyle<
+            InformationGUIComponentScreenStyleProperties
         >
     ) {
         self.params = params
         self.style = style
     }
     
-    public static var style: UIElementComponentStyle<
-        InformationUIComponentScreenStyleProperties
+    public static var style: GUIElementComponentStyle<
+        InformationGUIComponentScreenStyleProperties
     >? {
         return styleFactory?.information()
     }
     
     public static func style(
-        for styleType: UIStyleType
-    ) -> UIElementComponentStyle<
-        InformationUIComponentScreenStyleProperties
+        for styleType: GUIStyleType
+    ) -> GUIElementComponentStyle<
+        InformationGUIComponentScreenStyleProperties
     >? {
         return styleFactory(
             for: styleType

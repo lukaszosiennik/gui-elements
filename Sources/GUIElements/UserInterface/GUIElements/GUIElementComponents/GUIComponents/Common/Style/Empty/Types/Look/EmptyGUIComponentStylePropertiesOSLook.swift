@@ -3,8 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct EmptyUIComponentStylePropertiesOSLook:
-    UIComponentStylePropertiesOSLook {
+public struct EmptyGUIComponentStylePropertiesOSLook:
+    GUIComponentStylePropertiesOSLook {
     
     public static var `default`: Self {
         return .init()

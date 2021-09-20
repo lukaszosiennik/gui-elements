@@ -5,8 +5,8 @@
 
 import UIKit
 
-public enum DefaultUIElementComponentConstantPalette:
-    SystemUIElementComponentConstantPaletteInterface {
+public enum DefaultGUIElementComponentConstantPalette:
+    SystemGUIElementComponentConstantPaletteInterface {
     
     enum All {
         
@@ -16,8 +16,8 @@ public enum DefaultUIElementComponentConstantPalette:
         static let value_100: CGFloat = 100
     }
     
-    public enum UIElementComponent:
-        SystemUIElementComponentPaletteInterface {
+    public enum GUIElementComponent:
+        SystemGUIElementComponentPaletteInterface {
         
         fileprivate typealias UILookParamsPalette =
             UILookParams
@@ -74,11 +74,11 @@ public enum DefaultUIElementComponentConstantPalette:
     }
 }
 
-extension DefaultUIElementComponentConstantPalette.UIElementComponent {
+extension DefaultGUIElementComponentConstantPalette.GUIElementComponent {
     
-    public enum UIComponent:
-        UIElementComponentConstantPalette,
-        DefaultUIPalette {
+    public enum GUIComponent:
+        GUIElementComponentConstantPalette,
+        DefaultGUIPalette {
         
         enum Placeholder {
             
@@ -89,13 +89,13 @@ extension DefaultUIElementComponentConstantPalette.UIElementComponent {
         }
     }
     
-    public enum UIComponentSet:
-        UIElementComponentConstantPalette,
-        DefaultUIPalette {}
+    public enum GUIComponentSet:
+        GUIElementComponentConstantPalette,
+        DefaultGUIPalette {}
     
-    public enum UIComponentGroup:
-        UIElementComponentConstantPalette,
-        DefaultUIPalette {
+    public enum GUIComponentGroup:
+        GUIElementComponentConstantPalette,
+        DefaultGUIPalette {
         
         enum NavigationMenu {
             
@@ -113,9 +113,9 @@ extension DefaultUIElementComponentConstantPalette.UIElementComponent {
         }
     }
     
-    public enum UIComponentScreen:
-        UIElementComponentConstantPalette,
-        DefaultUIPalette {
+    public enum GUIComponentScreen:
+        GUIElementComponentConstantPalette,
+        DefaultGUIPalette {
         
         enum Information {
             

@@ -3,13 +3,13 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol SystemUIComponentGroupPalettsInterface:
-    SystemUIElementPalettsInterface {
+public protocol SystemGUIComponentGroupPalettsInterface:
+    SystemGUIElementPalettsInterface {
     
     typealias ColorPalette =
-        SystemUIElementColorPalette.UIElementComponent.UIComponentGroup
+        SystemGUIElementColorPalette.GUIElementComponent.GUIComponentGroup
     typealias FontPalette =
-        SystemUIElementFontPalette.UIElementComponent.UIComponentGroup
+        SystemGUIElementFontPalette.GUIElementComponent.GUIComponentGroup
     typealias ConstantPalette =
-        SystemUIElementComponentConstantPalette.UIElementComponent.UIComponentGroup
+        SystemGUIElementComponentConstantPalette.GUIElementComponent.GUIComponentGroup
 }

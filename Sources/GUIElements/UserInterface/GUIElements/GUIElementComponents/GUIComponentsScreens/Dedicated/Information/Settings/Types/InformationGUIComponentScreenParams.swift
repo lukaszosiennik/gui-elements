@@ -3,8 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct InformationUIComponentScreenParams:
-    UIComponentScreenParams {
+public struct InformationGUIComponentScreenParams:
+    GUIComponentScreenParams {
     
     public let title: String
     

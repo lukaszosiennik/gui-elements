@@ -3,14 +3,14 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct EmptyUIComponentGroupStylePropertiesLookParams:
-    UIComponentGroupStylePropertiesLookParams {
+public struct EmptyGUIComponentGroupStylePropertiesLookParams:
+    GUIComponentGroupStylePropertiesLookParams {
     
     init() {}
     
     public init?(
         lookParams: Self?,
-        overwrittenBy newLookParams: EmptyUIComponentGroupStylePropertiesOverwrittenLookParams?
+        overwrittenBy newLookParams: EmptyGUIComponentGroupStylePropertiesOverwrittenLookParams?
     ) {
         return nil
     }

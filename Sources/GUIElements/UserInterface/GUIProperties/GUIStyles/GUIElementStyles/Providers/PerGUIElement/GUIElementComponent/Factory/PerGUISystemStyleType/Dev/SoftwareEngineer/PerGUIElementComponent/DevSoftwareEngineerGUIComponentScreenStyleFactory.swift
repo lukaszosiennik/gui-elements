@@ -3,14 +3,14 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class DevSoftwareEngineerUIComponentScreenStyleFactory:
-    UIComponentScreenTypeStyleFactory<
-        DevSoftwareEngineerUIComponentScreenPaletts
+public final class DevSoftwareEngineerGUIComponentScreenStyleFactory:
+    GUIComponentScreenTypeStyleFactory<
+        DevSoftwareEngineerGUIComponentScreenPaletts
     >,
-    UIComponentScreenStyleFactoryInterface {
+    GUIComponentScreenStyleFactoryInterface {
     
-    public func information() -> UIElementComponentStyle<
-        InformationUIComponentScreenStyleProperties
+    public func information() -> GUIElementComponentStyle<
+        InformationGUIComponentScreenStyleProperties
     > {
         return .init(
             type: styleType,
@@ -24,8 +24,8 @@ public final class DevSoftwareEngineerUIComponentScreenStyleFactory:
         )
     }
     
-    public func navigationMenu() -> UIElementComponentStyle<
-        NavigationMenuUIComponentScreenStyleProperties
+    public func navigationMenu() -> GUIElementComponentStyle<
+        NavigationMenuGUIComponentScreenStyleProperties
     > {
         return .init(
             type: styleType,

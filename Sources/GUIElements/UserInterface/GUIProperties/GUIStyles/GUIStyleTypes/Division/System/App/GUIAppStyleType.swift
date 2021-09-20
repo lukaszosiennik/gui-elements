@@ -3,10 +3,10 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum UIAppStyleType:
+public enum GUIAppStyleType:
     Hashable {
  
     case wireframe
     case companySpecific
-    case appSpecific(UIAppSpecificStyleType)
+    case appSpecific(GUIAppSpecificStyleType)
 }

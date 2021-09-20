@@ -5,8 +5,8 @@
 
 import UIKit
 
-public struct PlaceholderUIComponentParamsPropertiesLayoutParams:
-    UIComponentParamsProperties {
+public struct PlaceholderGUIComponentParamsPropertiesLayoutParams:
+    GUIComponentParamsProperties {
     
     public let height: CGFloat
     

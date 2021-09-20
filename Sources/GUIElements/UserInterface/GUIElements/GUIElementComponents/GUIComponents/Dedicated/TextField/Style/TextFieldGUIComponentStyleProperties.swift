@@ -3,12 +3,12 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias TextFieldUIComponentStyleProperties =
-    UIComponentStylePropertiesTemplate<
-        UIComponentStylePropertiesLookTemplate<
-            TextFieldUIComponentStylePropertiesOSLook,
-            TextFieldUIComponentStylePropertiesSystemLook
+public typealias TextFieldGUIComponentStyleProperties =
+    GUIComponentStylePropertiesTemplate<
+        GUIComponentStylePropertiesLookTemplate<
+            TextFieldGUIComponentStylePropertiesOSLook,
+            TextFieldGUIComponentStylePropertiesSystemLook
         >,
-        EmptyUIComponentStylePropertiesLookParams,
-        TextFieldUIComponentStylePropertiesLayoutParams
+        EmptyGUIComponentStylePropertiesLookParams,
+        TextFieldGUIComponentStylePropertiesLayoutParams
     >

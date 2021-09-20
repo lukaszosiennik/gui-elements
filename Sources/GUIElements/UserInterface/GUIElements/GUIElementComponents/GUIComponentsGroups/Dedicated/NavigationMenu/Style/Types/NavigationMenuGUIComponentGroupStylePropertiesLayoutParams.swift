@@ -5,8 +5,8 @@
 
 import UIKit
 
-public struct NavigationMenuUIComponentGroupStylePropertiesLayoutParams:
-    UIComponentGroupStylePropertiesLayoutParams {
+public struct NavigationMenuGUIComponentGroupStylePropertiesLayoutParams:
+    GUIComponentGroupStylePropertiesLayoutParams {
     
     public let optionHeight: CGFloat?
     public let optionsSpace: CGFloat

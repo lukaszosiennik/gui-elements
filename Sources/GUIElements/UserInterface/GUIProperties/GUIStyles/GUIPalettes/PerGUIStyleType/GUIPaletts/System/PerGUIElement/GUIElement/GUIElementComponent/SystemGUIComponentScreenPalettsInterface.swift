@@ -3,13 +3,13 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol SystemUIComponentScreenPalettsInterface:
-    SystemUIElementPalettsInterface {
+public protocol SystemGUIComponentScreenPalettsInterface:
+    SystemGUIElementPalettsInterface {
     
     typealias ColorPalette =
-        SystemUIElementColorPalette.UIElementComponent.UIComponentScreen
+        SystemGUIElementColorPalette.GUIElementComponent.GUIComponentScreen
     typealias FontPalette =
-        SystemUIElementFontPalette.UIElementComponent.UIComponentScreen
+        SystemGUIElementFontPalette.GUIElementComponent.GUIComponentScreen
     typealias ConstantPalette =
-        SystemUIElementComponentConstantPalette.UIElementComponent.UIComponentScreen
+        SystemGUIElementComponentConstantPalette.GUIElementComponent.GUIComponentScreen
 }

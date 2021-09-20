@@ -5,25 +5,25 @@
 
 import UIKit
 
-public enum DevBootstrapUIElementComponentConstantPalette:
-    DevUIElementComponentConstantPaletteInterface {
+public enum DevBootstrapGUIElementComponentConstantPalette:
+    DevGUIElementComponentConstantPaletteInterface {
     
     fileprivate enum All {
         
         static let value_1: CGFloat = 1
         static let value_12: CGFloat = 12
-        static let value_16: CGFloat = DefaultUIElementComponentConstantPalette.All.value_16
+        static let value_16: CGFloat = DefaultGUIElementComponentConstantPalette.All.value_16
     }
     
-    public enum UIElementComponent:
-        SystemUIElementComponentPaletteInterface {
+    public enum GUIElementComponent:
+        SystemGUIElementComponentPaletteInterface {
         
-        fileprivate typealias UIElementComponentPalette =
-            UIElementComponent
+        fileprivate typealias GUIElementComponentPalette =
+            GUIElementComponent
         
-        fileprivate typealias UILookPalette =
-            UILook
-        fileprivate enum UILook {
+        fileprivate typealias GUILookPalette =
+            GUILook
+        fileprivate enum GUILook {
             
             enum Property {
                 
@@ -34,13 +34,13 @@ public enum DevBootstrapUIElementComponentConstantPalette:
             }
         }
         
-        fileprivate typealias UILookParamsPalette =
-            UILookParams
-        fileprivate enum UILookParams {}
+        fileprivate typealias GUILookParamsPalette =
+            GUILookParams
+        fileprivate enum GUILookParams {}
         
-        fileprivate typealias UILayoutParamsPalette =
-            UILayoutParams
-        fileprivate enum UILayoutParams {
+        fileprivate typealias GUILayoutParamsPalette =
+            GUILayoutParams
+        fileprivate enum GUILayoutParams {
             
             enum Property {
                 
@@ -59,41 +59,41 @@ public enum DevBootstrapUIElementComponentConstantPalette:
     }
 }
 
-extension DevBootstrapUIElementComponentConstantPalette.UIElementComponent {
+extension DevBootstrapGUIElementComponentConstantPalette.GUIElementComponent {
         
-    public enum UIComponent:
-        UIElementComponentConstantPalette,
-        DevUIPalette {}
+    public enum GUIComponent:
+        GUIElementComponentConstantPalette,
+        DevGUIPalette {}
     
-    public enum UIComponentSet:
-        UIElementComponentConstantPalette,
-        DevUIPalette {}
+    public enum GUIComponentSet:
+        GUIElementComponentConstantPalette,
+        DevGUIPalette {}
     
-    public enum UIComponentGroup:
-        UIElementComponentConstantPalette,
-        DevUIPalette {
+    public enum GUIComponentGroup:
+        GUIElementComponentConstantPalette,
+        DevGUIPalette {
         
         enum Card {
             
-            enum UILook {
+            enum GUILook {
                 
-                static let borderWidth_1: CGFloat = UILookPalette.Property.BorderWidth.value_1
+                static let borderWidth_1: CGFloat = GUILookPalette.Property.BorderWidth.value_1
             }
             
-            enum UILayoutParams {
+            enum GUILayoutParams {
                 
-                static let margin_top_12: CGFloat = UILayoutParamsPalette.Property.Margin.top_12
-                static let margin_bottom_12: CGFloat = UILayoutParamsPalette.Property.Margin.bottom_12
+                static let margin_top_12: CGFloat = GUILayoutParamsPalette.Property.Margin.top_12
+                static let margin_bottom_12: CGFloat = GUILayoutParamsPalette.Property.Margin.bottom_12
                 
-                static let margin_left_16: CGFloat = UILayoutParamsPalette.Property.Margin.left_16
-                static let margin_right_16: CGFloat = UILayoutParamsPalette.Property.Margin.right_16
-                static let margin_top_16: CGFloat = UILayoutParamsPalette.Property.Margin.top_16
-                static let margin_bottom_16: CGFloat = UILayoutParamsPalette.Property.Margin.bottom_16
+                static let margin_left_16: CGFloat = GUILayoutParamsPalette.Property.Margin.left_16
+                static let margin_right_16: CGFloat = GUILayoutParamsPalette.Property.Margin.right_16
+                static let margin_top_16: CGFloat = GUILayoutParamsPalette.Property.Margin.top_16
+                static let margin_bottom_16: CGFloat = GUILayoutParamsPalette.Property.Margin.bottom_16
             }
         }
     }
     
-    public enum UIComponentScreen:
-        UIElementComponentConstantPalette,
-        DevUIPalette {}
+    public enum GUIComponentScreen:
+        GUIElementComponentConstantPalette,
+        DevGUIPalette {}
 }

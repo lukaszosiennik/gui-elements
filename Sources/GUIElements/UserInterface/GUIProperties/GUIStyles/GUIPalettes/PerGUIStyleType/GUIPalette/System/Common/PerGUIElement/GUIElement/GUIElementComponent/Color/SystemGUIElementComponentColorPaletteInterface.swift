@@ -3,14 +3,14 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol SystemUIElementComponentColorPaletteInterface:
-    SystemUIElementPaletteInterface
+public protocol SystemGUIElementComponentColorPaletteInterface:
+    SystemGUIElementPaletteInterface
 where
-    UIElementComponent.UIComponent
-        : UIElementComponentColorPalette,
-    UIElementComponent.UIComponentSet
-        : UIElementComponentColorPalette,
-    UIElementComponent.UIComponentGroup
-        : UIElementComponentColorPalette,
-    UIElementComponent.UIComponentScreen
-        : UIElementComponentColorPalette {}
+    GUIElementComponent.GUIComponent
+        : GUIElementComponentColorPalette,
+    GUIElementComponent.GUIComponentSet
+        : GUIElementComponentColorPalette,
+    GUIElementComponent.GUIComponentGroup
+        : GUIElementComponentColorPalette,
+    GUIElementComponent.GUIComponentScreen
+        : GUIElementComponentColorPalette {}

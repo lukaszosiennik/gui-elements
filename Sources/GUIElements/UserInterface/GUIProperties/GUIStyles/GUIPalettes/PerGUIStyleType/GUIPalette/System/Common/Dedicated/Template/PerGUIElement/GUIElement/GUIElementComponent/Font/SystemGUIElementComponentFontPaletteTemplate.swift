@@ -3,18 +3,18 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum SystemUIElementComponentFontPaletteTemplate:
-    SystemUIElementComponentFontPaletteInterface {
+public enum SystemGUIElementComponentFontPaletteTemplate:
+    SystemGUIElementComponentFontPaletteInterface {
     
-    public enum UIElementComponent:
-        SystemUIElementComponentPaletteInterface {}
+    public enum GUIElementComponent:
+        SystemGUIElementComponentPaletteInterface {}
 }
 
-extension SystemUIElementComponentFontPaletteTemplate.UIElementComponent {
+extension SystemGUIElementComponentFontPaletteTemplate.GUIElementComponent {
         
-    public enum UIComponent:
-        UIElementComponentFontPalette,
-        SystemUIPalette {
+    public enum GUIComponent:
+        GUIElementComponentFontPalette,
+        SystemGUIPalette {
         
         enum Button {}
         enum Label {}
@@ -23,24 +23,24 @@ extension SystemUIElementComponentFontPaletteTemplate.UIElementComponent {
         enum Placeholder {}
     }
     
-    public enum UIComponentSet:
-        UIElementComponentFontPalette,
-        SystemUIPalette {
+    public enum GUIComponentSet:
+        GUIElementComponentFontPalette,
+        SystemGUIPalette {
         
         enum NavigationMenuOption {}
     }
     
-    public enum UIComponentGroup:
-        UIElementComponentFontPalette,
-        SystemUIPalette {
+    public enum GUIComponentGroup:
+        GUIElementComponentFontPalette,
+        SystemGUIPalette {
         
         enum Card {}
         enum NavigationMenu {}
     }
     
-    public enum UIComponentScreen:
-        UIElementComponentFontPalette,
-        SystemUIPalette {
+    public enum GUIComponentScreen:
+        GUIElementComponentFontPalette,
+        SystemGUIPalette {
         
         enum Information {}
         enum NavigationMenu {}

@@ -3,12 +3,12 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public typealias EmptyUIComponentStyleProperties =
-    UIComponentStylePropertiesTemplate<
-        UIComponentStylePropertiesLookTemplate<
-            EmptyUIComponentStylePropertiesOSLook,
-            EmptyUIComponentStylePropertiesSystemLook
+public typealias EmptyGUIComponentStyleProperties =
+    GUIComponentStylePropertiesTemplate<
+        GUIComponentStylePropertiesLookTemplate<
+            EmptyGUIComponentStylePropertiesOSLook,
+            EmptyGUIComponentStylePropertiesSystemLook
         >,
-        EmptyUIComponentStylePropertiesLookParams,
-        EmptyUIComponentStylePropertiesLayoutParams
+        EmptyGUIComponentStylePropertiesLookParams,
+        EmptyGUIComponentStylePropertiesLayoutParams
     >

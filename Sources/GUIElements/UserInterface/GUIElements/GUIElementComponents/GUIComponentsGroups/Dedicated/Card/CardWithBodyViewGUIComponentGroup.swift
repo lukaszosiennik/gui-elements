@@ -5,13 +5,13 @@
 
 import UIKit
 
-public final class CardWithUIViewBodyUIComponentGroup<
+public final class CardWithGUIViewBodyUIComponentGroup<
     BodyViewType:
         UIView
 >:
-    CardUIComponentGroupBasis<
+    CardGUIComponentGroupBasis<
         BodyViewType,
-        EmptyUIComponentSettings
+        EmptyGUIComponentSettings
     > {
     
     public var bodyView: BodyViewType {

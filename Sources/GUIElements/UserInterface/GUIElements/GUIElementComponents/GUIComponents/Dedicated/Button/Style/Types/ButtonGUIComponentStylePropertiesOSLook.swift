@@ -3,10 +3,10 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct ButtonUIComponentStylePropertiesOSLook:
-    UIComponentStylePropertiesOSLook {
+public struct ButtonGUIComponentStylePropertiesOSLook:
+    GUIComponentStylePropertiesOSLook {
     
-    public let buttonStyleType: ButtonUIComponentOSStyleType
+    public let buttonStyleType: ButtonGUIComponentOSStyleType
     
     public static var `default`: Self {
         return .init(
@@ -15,7 +15,7 @@ public struct ButtonUIComponentStylePropertiesOSLook:
     }
     
     public init(
-        buttonStyleType: ButtonUIComponentOSStyleType
+        buttonStyleType: ButtonGUIComponentOSStyleType
     ) {
         self.buttonStyleType = buttonStyleType
     }

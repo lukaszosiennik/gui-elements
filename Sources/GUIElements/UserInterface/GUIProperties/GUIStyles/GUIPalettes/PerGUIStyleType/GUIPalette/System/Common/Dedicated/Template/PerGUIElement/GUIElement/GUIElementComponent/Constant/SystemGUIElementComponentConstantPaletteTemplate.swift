@@ -3,20 +3,20 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public enum SystemUIElementComponentConstantPaletteTemplate:
-    SystemUIElementComponentConstantPaletteInterface {
+public enum SystemGUIElementComponentConstantPaletteTemplate:
+    SystemGUIElementComponentConstantPaletteInterface {
     
     fileprivate enum All {}
     
-    public enum UIElementComponent:
-        SystemUIElementComponentPaletteInterface {
+    public enum GUIElementComponent:
+        SystemGUIElementComponentPaletteInterface {
         
-        fileprivate typealias UIElementComponentPalette =
-            UIElementComponent
+        fileprivate typealias GUIElementComponentPalette =
+            GUIElementComponent
         
-        fileprivate typealias UILookPalette =
-            UILook
-        fileprivate enum UILook {
+        fileprivate typealias GUILookPalette =
+            GUILook
+        fileprivate enum GUILook {
             
             enum Property {
                 
@@ -26,9 +26,9 @@ public enum SystemUIElementComponentConstantPaletteTemplate:
             }
         }
         
-        fileprivate typealias UILookParamsPalette =
-            UILookParams
-        fileprivate enum UILookParams {
+        fileprivate typealias GUILookParamsPalette =
+            GUILookParams
+        fileprivate enum GUILookParams {
             
             enum Property {
                  
@@ -42,9 +42,9 @@ public enum SystemUIElementComponentConstantPaletteTemplate:
             }
         }
         
-        fileprivate typealias UILayoutParamsPalette =
-            UILayoutParams
-        fileprivate enum UILayoutParams {
+        fileprivate typealias GUILayoutParamsPalette =
+            GUILayoutParams
+        fileprivate enum GUILayoutParams {
             
             enum Property {
                 
@@ -69,95 +69,95 @@ public enum SystemUIElementComponentConstantPaletteTemplate:
     }
 }
 
-extension SystemUIElementComponentConstantPaletteTemplate.UIElementComponent {
+extension SystemGUIElementComponentConstantPaletteTemplate.GUIElementComponent {
         
-    public enum UIComponent:
-        UIElementComponentConstantPalette,
-        SystemUIPalette {
+    public enum GUIComponent:
+        GUIElementComponentConstantPalette,
+        SystemGUIPalette {
         
         enum Button {
             
-            enum UILook {}
-            enum UILookParams {}
-            enum UILayoutParams {}
+            enum GUILook {}
+            enum GUILookParams {}
+            enum GUILayoutParams {}
         }
         
         enum Label {
             
-            enum UILook {}
-            enum UILookParams {}
-            enum UILayoutParams {}
+            enum GUILook {}
+            enum GUILookParams {}
+            enum GUILayoutParams {}
         }
         
         enum TextArea {
             
-            enum UILook {}
-            enum UILookParams {}
-            enum UILayoutParams {}
+            enum GUILook {}
+            enum GUILookParams {}
+            enum GUILayoutParams {}
         }
         
         enum TextField {
             
-            enum UILook {}
-            enum UILookParams {}
-            enum UILayoutParams {}
+            enum GUILook {}
+            enum GUILookParams {}
+            enum GUILayoutParams {}
         }
         
         enum Placeholder {
             
-            enum UILook {}
-            enum UILookParams {}
-            enum UILayoutParams {}
+            enum GUILook {}
+            enum GUILookParams {}
+            enum GUILayoutParams {}
         }
     }
     
-    public enum UIComponentSet:
-        UIElementComponentConstantPalette,
-        SystemUIPalette {
+    public enum GUIComponentSet:
+        GUIElementComponentConstantPalette,
+        SystemGUIPalette {
         
         enum NavigationMenuOption {
             
-            enum UILook {}
-            enum UILookParams {}
-            enum UILayoutParams {}
+            enum GUILook {}
+            enum GUILookParams {}
+            enum GUILayoutParams {}
         }
     }
     
-    public enum UIComponentGroup:
-        UIElementComponentConstantPalette,
-        SystemUIPalette {
+    public enum GUIComponentGroup:
+        GUIElementComponentConstantPalette,
+        SystemGUIPalette {
         
         enum Card {
             
-            enum UILook {}
-            enum UILookParams {}
-            enum UILayoutParams {}
+            enum GUILook {}
+            enum GUILookParams {}
+            enum GUILayoutParams {}
         }
         
         enum NavigationMenu {
             
-            enum UILook {}
-            enum UILookParams {}
-            enum UILayoutParams {}
+            enum GUILook {}
+            enum GUILookParams {}
+            enum GUILayoutParams {}
         }
     }
     
-    public enum UIComponentScreen:
-        UIElementComponentConstantPalette,
-        SystemUIPalette {
+    public enum GUIComponentScreen:
+        GUIElementComponentConstantPalette,
+        SystemGUIPalette {
         
         enum Information {
             
-            enum UILook {}
-            enum UILookParams {}
-            enum UILayoutParams {}
+            enum GUILook {}
+            enum GUILookParams {}
+            enum GUILayoutParams {}
         }
         
         enum NavigationMenu {
             
-            enum UILook {}
-            enum UILookParams {}
-            enum UILayoutParams {}
+            enum GUILook {}
+            enum GUILookParams {}
+            enum GUILayoutParams {}
         }
     }
 }

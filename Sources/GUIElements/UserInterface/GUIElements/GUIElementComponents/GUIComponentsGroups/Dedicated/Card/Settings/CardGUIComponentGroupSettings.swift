@@ -3,23 +3,23 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct CardUIComponentGroupSettings<
-    BodyUIElementComponentSettingsType:
-        UIElementComponentSettings
+public struct CardGUIComponentGroupSettings<
+    BodyGUIElementComponentSettingsType:
+        GUIElementComponentSettings
 >:
-    UIComponentGroupSettings {
+    GUIComponentGroupSettings {
 
-    public typealias UIElementComponentStylePropertiesOverwrittenType =
-        EmptyUIComponentGroupStylePropertiesOverwritten
+    public typealias GUIElementComponentStylePropertiesOverwrittenType =
+        EmptyGUIComponentGroupStylePropertiesOverwritten
     
-    public let params: CardUIComponentGroupParams
-    public var style: UIElementComponentStyle<
-        CardUIComponentGroupStyleProperties
+    public let params: CardGUIComponentGroupParams
+    public var style: GUIElementComponentStyle<
+        CardGUIComponentGroupStyleProperties
     >
 
-    public let bodySettings: BodyUIElementComponentSettingsType
+    public let bodySettings: BodyGUIElementComponentSettingsType
     
-    public var styleType: UIStyleType {
+    public var styleType: GUIStyleType {
         get {
             return style.type
         }
@@ -35,9 +35,9 @@ public struct CardUIComponentGroupSettings<
     }
     
     public init(
-        params: CardUIComponentGroupParams,
-        style: UIElementComponentStyle<
-            CardUIComponentGroupStyleProperties
+        params: CardGUIComponentGroupParams,
+        style: GUIElementComponentStyle<
+            CardGUIComponentGroupStyleProperties
         >
     ) {
         self.init(
@@ -51,9 +51,9 @@ public struct CardUIComponentGroupSettings<
     }
     
     public init(
-        params: CardUIComponentGroupParams,
-        styleType: UIStyleType,
-        bodySettingsParams: BodyUIElementComponentSettingsType.UIElementComponentParamsType
+        params: CardGUIComponentGroupParams,
+        styleType: GUIStyleType,
+        bodySettingsParams: BodyGUIElementComponentSettingsType.GUIElementComponentParamsType
     ) {
         self.init(
             params: params,
@@ -68,27 +68,27 @@ public struct CardUIComponentGroupSettings<
     }
     
     private init(
-        params: CardUIComponentGroupParams,
-        style: UIElementComponentStyle<
-            CardUIComponentGroupStyleProperties
+        params: CardGUIComponentGroupParams,
+        style: GUIElementComponentStyle<
+            CardGUIComponentGroupStyleProperties
         >,
-        bodySettings: BodyUIElementComponentSettingsType
+        bodySettings: BodyGUIElementComponentSettingsType
     ) {
         self.params = params
         self.style = style
         self.bodySettings = bodySettings
     }
     
-    public static var style: UIElementComponentStyle<
-        CardUIComponentGroupStyleProperties
+    public static var style: GUIElementComponentStyle<
+        CardGUIComponentGroupStyleProperties
     >? {
         return styleFactory?.card()
     }
     
     public static func style(
-        for styleType: UIStyleType
-    ) -> UIElementComponentStyle<
-        CardUIComponentGroupStyleProperties
+        for styleType: GUIStyleType
+    ) -> GUIElementComponentStyle<
+        CardGUIComponentGroupStyleProperties
     >? {
         return styleFactory(
             for: styleType

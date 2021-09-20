@@ -3,8 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct TextAreaUIComponentStylePropertiesSystemLook:
-    UIComponentStylePropertiesSystemLook {
+public struct TextAreaGUIComponentStylePropertiesSystemLook:
+    GUIComponentStylePropertiesSystemLook {
     
     public init() {}
 }

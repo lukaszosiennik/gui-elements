@@ -3,14 +3,14 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIElementComponentStylePropertiesSystemLook:
-    UIElementStylePropertiesLook {
+public protocol GUIElementComponentStylePropertiesSystemLook:
+    GUIElementStylePropertiesLook {
     
-    associatedtype UIElementComponentStylePropertiesOverwrittenLookType:
-        UIElementComponentStylePropertiesOverwrittenLook
+    associatedtype GUIElementComponentStylePropertiesOverwrittenLookType:
+        GUIElementComponentStylePropertiesOverwrittenLook
 
     init(
         look: Self,
-        overwrittenBy newLook: UIElementComponentStylePropertiesOverwrittenLookType?
+        overwrittenBy newLook: GUIElementComponentStylePropertiesOverwrittenLookType?
     )
 }

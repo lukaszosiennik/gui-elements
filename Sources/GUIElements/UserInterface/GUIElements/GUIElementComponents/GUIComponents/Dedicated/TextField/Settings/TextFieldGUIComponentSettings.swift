@@ -3,37 +3,37 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct TextFieldUIComponentSettings:
-    UIComponentSettings {
+public struct TextFieldGUIComponentSettings:
+    GUIComponentSettings {
 
-    public typealias UIElementComponentStylePropertiesOverwrittenType =
-        EmptyUIComponentStylePropertiesOverwritten
+    public typealias GUIElementComponentStylePropertiesOverwrittenType =
+        EmptyGUIComponentStylePropertiesOverwritten
 
-    public let params: TextFieldUIComponentParams
-    public var style: UIElementComponentStyle<
-        TextFieldUIComponentStyleProperties
+    public let params: TextFieldGUIComponentParams
+    public var style: GUIElementComponentStyle<
+        TextFieldGUIComponentStyleProperties
     >
     
     public init(
-        params: TextFieldUIComponentParams,
-        style: UIElementComponentStyle<
-            TextFieldUIComponentStyleProperties
+        params: TextFieldGUIComponentParams,
+        style: GUIElementComponentStyle<
+            TextFieldGUIComponentStyleProperties
         >
     ) {
         self.params = params
         self.style = style
     }
     
-    public static var style: UIElementComponentStyle<
-        TextFieldUIComponentStyleProperties
+    public static var style: GUIElementComponentStyle<
+        TextFieldGUIComponentStyleProperties
     >? {
         return styleFactory?.textField()
     }
     
     public static func style(
-        for styleType: UIStyleType
-    ) -> UIElementComponentStyle<
-        TextFieldUIComponentStyleProperties
+        for styleType: GUIStyleType
+    ) -> GUIElementComponentStyle<
+        TextFieldGUIComponentStyleProperties
     >? {
         return styleFactory(
             for: styleType

@@ -3,15 +3,15 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol SystemUIElementPalettsInterface:
-    UIElementPalettsInterface {
+public protocol SystemGUIElementPalettsInterface:
+    GUIElementPalettsInterface {
         
-    associatedtype SystemUIElementColorPalette:
-        SystemUIElementComponentColorPaletteInterface
+    associatedtype SystemGUIElementColorPalette:
+        SystemGUIElementComponentColorPaletteInterface
     
-    associatedtype SystemUIElementFontPalette:
-        SystemUIElementComponentFontPaletteInterface
+    associatedtype SystemGUIElementFontPalette:
+        SystemGUIElementComponentFontPaletteInterface
     
-    associatedtype SystemUIElementComponentConstantPalette:
-        SystemUIElementComponentConstantPaletteInterface
+    associatedtype SystemGUIElementComponentConstantPalette:
+        SystemGUIElementComponentConstantPaletteInterface
 }

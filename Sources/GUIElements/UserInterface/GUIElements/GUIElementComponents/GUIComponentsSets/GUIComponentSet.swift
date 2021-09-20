@@ -3,8 +3,8 @@
 //  Copyright © 2020 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol UIComponentSet:
-    UIElementComponent
+public protocol GUIComponentSet:
+    GUIElementComponent
 where
-    UIElementComponentSettingsType
-        : UIComponentSetSettings {}
+    GUIElementComponentSettingsType
+        : GUIComponentSetSettings {}
