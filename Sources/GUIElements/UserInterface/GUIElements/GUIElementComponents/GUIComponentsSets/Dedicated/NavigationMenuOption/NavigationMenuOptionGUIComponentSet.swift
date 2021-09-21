@@ -9,7 +9,7 @@ public final class NavigationMenuGUIOptionComponentSet:
     UIView,
     GUIComponentSet {
     
-    private let optionButtonUI: ButtonGUIComponent = .init()
+    private let optionButtonGUI: ButtonGUIComponent = .init()
     
     public let initialization: GUIElementComponentInitialization = .init()
     
@@ -45,7 +45,7 @@ public final class NavigationMenuGUIOptionComponentSet:
     }
     
     public func setupNestedSettings() {
-        optionButtonUI.settings = .init(
+        optionButtonGUI.settings = .init(
             params: .init(
                 title: settings.params.title,
                 action: settings.params.action
@@ -102,26 +102,26 @@ extension NavigationMenuGUIOptionComponentSet {
     
     public func setupStyleLayoutInitialization() {
         uie.addSubview(
-            optionButtonUI
+            optionButtonGUI
         )
         
         NSLayoutConstraint.activate([
-            optionButtonUI.leadingAnchor.constraint(
+            optionButtonGUI.leadingAnchor.constraint(
                 greaterThanOrEqualTo: leadingAnchor
             ),
-            optionButtonUI.trailingAnchor.constraint(
+            optionButtonGUI.trailingAnchor.constraint(
                 lessThanOrEqualTo: trailingAnchor
             ),
-            optionButtonUI.centerXAnchor.constraint(
+            optionButtonGUI.centerXAnchor.constraint(
                 equalTo: centerXAnchor
             ),
-            optionButtonUI.topAnchor.constraint(
+            optionButtonGUI.topAnchor.constraint(
                 greaterThanOrEqualTo: topAnchor
             ),
-            optionButtonUI.bottomAnchor.constraint(
+            optionButtonGUI.bottomAnchor.constraint(
                 lessThanOrEqualTo: bottomAnchor
             ),
-            optionButtonUI.centerYAnchor.constraint(
+            optionButtonGUI.centerYAnchor.constraint(
                 equalTo: centerYAnchor
             ),
         ])

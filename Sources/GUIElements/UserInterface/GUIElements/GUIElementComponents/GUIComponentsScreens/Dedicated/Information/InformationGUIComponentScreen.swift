@@ -9,7 +9,7 @@ public final class InformationGUIComponentScreen:
     UIView,
     GUIComponentScreen {
     
-    private let titleLabelUI: LabelGUIComponent = .init()
+    private let titleLabelGUI: LabelGUIComponent = .init()
     
     public let initialization: GUIElementComponentInitialization = .init()
     
@@ -45,7 +45,7 @@ public final class InformationGUIComponentScreen:
     }
     
     public func setupNestedSettings() {
-        titleLabelUI.settings = .init(
+        titleLabelGUI.settings = .init(
             params: .init(
                 text: settings.params.title
             ),
@@ -99,29 +99,29 @@ extension InformationGUIComponentScreen {
 extension InformationGUIComponentScreen {
     
     public func setupStyleLayoutInitialization() {
-        titleLabelUI.textAlignment = .center
+        titleLabelGUI.textAlignment = .center
         
         uie.addSubview(
-            titleLabelUI
+            titleLabelGUI
         )
         
         NSLayoutConstraint.activate([
-            titleLabelUI.leadingAnchor.constraint(
+            titleLabelGUI.leadingAnchor.constraint(
                 greaterThanOrEqualTo: leadingAnchor
             ),
-            titleLabelUI.trailingAnchor.constraint(
+            titleLabelGUI.trailingAnchor.constraint(
                 lessThanOrEqualTo: trailingAnchor
             ),
-            titleLabelUI.centerXAnchor.constraint(
+            titleLabelGUI.centerXAnchor.constraint(
                 equalTo: centerXAnchor
             ),
-            titleLabelUI.topAnchor.constraint(
+            titleLabelGUI.topAnchor.constraint(
                 greaterThanOrEqualTo: topAnchor
             ),
-            titleLabelUI.bottomAnchor.constraint(
+            titleLabelGUI.bottomAnchor.constraint(
                 lessThanOrEqualTo: bottomAnchor
             ),
-            titleLabelUI.centerYAnchor.constraint(
+            titleLabelGUI.centerYAnchor.constraint(
                 equalTo: centerYAnchor
             ),
         ])

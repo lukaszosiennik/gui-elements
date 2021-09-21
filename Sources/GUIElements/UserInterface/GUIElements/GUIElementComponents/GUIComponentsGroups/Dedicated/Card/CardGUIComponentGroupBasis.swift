@@ -15,17 +15,17 @@ public class CardGUIComponentGroupBasis<
     GUIComponentGroup {
 
     private let titleContainer: UIView = .init()
-    private let titleLabelUI: LabelGUIComponent = .init()
+    private let titleLabelGUI: LabelGUIComponent = .init()
     
     private let separatorView: UIView = .init()
     
     private let bodyContainer: UIView = .init()
     let bodyContainerContent: BodyViewType = .init()
     
-    private let titleLabelUILeadingSpaceConstraintID: String = "titleLabelUILeadingSpace"
-    private let titleLabelUITrailingSpaceConstraintID: String = "titleLabelUITrailingSpace"
-    private let titleLabelUITopSpaceConstraintID: String = "titleLabelUITopSpace"
-    private let titleLabelUIBottomSpaceConstraintID: String = "titleLabelUIBottomSpace"
+    private let titleLabelGUILeadingSpaceConstraintID: String = "titleLabelGUILeadingSpace"
+    private let titleLabelGUITrailingSpaceConstraintID: String = "titleLabelGUITrailingSpace"
+    private let titleLabelGUITopSpaceConstraintID: String = "titleLabelGUITopSpace"
+    private let titleLabelGUIBottomSpaceConstraintID: String = "titleLabelGUIBottomSpace"
     
     private let separatorViewHeightConstraintID: String = "separatorViewHeight"
     
@@ -70,7 +70,7 @@ public class CardGUIComponentGroupBasis<
     }
     
     public func setupNestedSettings() {
-        titleLabelUI.settings = .init(
+        titleLabelGUI.settings = .init(
             params: .init(
                 text: settings.params.title
             ),
@@ -167,13 +167,13 @@ extension CardGUIComponentGroupBasis {
 extension CardGUIComponentGroupBasis {
     
     public func setupStyleLayoutInitialization() {
-        titleLabelUI.textAlignment = .center
+        titleLabelGUI.textAlignment = .center
         
         uie.addSubview(
             titleContainer
         )
         titleContainer.uie.addSubview(
-            titleLabelUI
+            titleLabelGUI
         )
         uie.addSubview(
             separatorView
@@ -200,32 +200,32 @@ extension CardGUIComponentGroupBasis {
             ),
         ])
         
-        let titleLabelUILeadingSpaceConstraint = titleLabelUI.leadingAnchor.constraint(
+        let titleLabelGUILeadingSpaceConstraint = titleLabelGUI.leadingAnchor.constraint(
             greaterThanOrEqualTo: titleContainer.leadingAnchor
         )
-        titleLabelUILeadingSpaceConstraint.identifier = titleLabelUILeadingSpaceConstraintID
-        let titleLabelUITrailingSpaceConstraint = titleLabelUI.trailingAnchor.constraint(
+        titleLabelGUILeadingSpaceConstraint.identifier = titleLabelGUILeadingSpaceConstraintID
+        let titleLabelGUITrailingSpaceConstraint = titleLabelGUI.trailingAnchor.constraint(
             lessThanOrEqualTo: titleContainer.trailingAnchor
         )
-        titleLabelUITrailingSpaceConstraint.identifier = titleLabelUITrailingSpaceConstraintID
-        let titleLabelUITopSpaceConstraint = titleLabelUI.topAnchor.constraint(
+        titleLabelGUITrailingSpaceConstraint.identifier = titleLabelGUITrailingSpaceConstraintID
+        let titleLabelGUITopSpaceConstraint = titleLabelGUI.topAnchor.constraint(
             greaterThanOrEqualTo: titleContainer.topAnchor
         )
-        titleLabelUITopSpaceConstraint.identifier = titleLabelUITopSpaceConstraintID
-        let titleLabelUIBottomSpaceConstraint = titleLabelUI.bottomAnchor.constraint(
+        titleLabelGUITopSpaceConstraint.identifier = titleLabelGUITopSpaceConstraintID
+        let titleLabelGUIBottomSpaceConstraint = titleLabelGUI.bottomAnchor.constraint(
             lessThanOrEqualTo: titleContainer.bottomAnchor
         )
-        titleLabelUIBottomSpaceConstraint.identifier = titleLabelUIBottomSpaceConstraintID
+        titleLabelGUIBottomSpaceConstraint.identifier = titleLabelGUIBottomSpaceConstraintID
         
         NSLayoutConstraint.activate([
-            titleLabelUILeadingSpaceConstraint,
-            titleLabelUITrailingSpaceConstraint,
-            titleLabelUI.centerXAnchor.constraint(
+            titleLabelGUILeadingSpaceConstraint,
+            titleLabelGUITrailingSpaceConstraint,
+            titleLabelGUI.centerXAnchor.constraint(
                 equalTo: titleContainer.centerXAnchor
             ),
-            titleLabelUITopSpaceConstraint,
-            titleLabelUIBottomSpaceConstraint,
-            titleLabelUI.centerYAnchor.constraint(
+            titleLabelGUITopSpaceConstraint,
+            titleLabelGUIBottomSpaceConstraint,
+            titleLabelGUI.centerYAnchor.constraint(
                 equalTo: titleContainer.centerYAnchor
             ),
         ])
@@ -287,16 +287,16 @@ extension CardGUIComponentGroupBasis {
     
     public func setupStyleLayoutOS() {
         titleContainer.uie.constraint(
-            with: titleLabelUILeadingSpaceConstraintID
+            with: titleLabelGUILeadingSpaceConstraintID
         )?.constant = 0
         titleContainer.uie.constraint(
-            with: titleLabelUITrailingSpaceConstraintID
+            with: titleLabelGUITrailingSpaceConstraintID
         )?.constant = 0
         titleContainer.uie.constraint(
-            with: titleLabelUITopSpaceConstraintID
+            with: titleLabelGUITopSpaceConstraintID
         )?.constant = 0
         titleContainer.uie.constraint(
-            with: titleLabelUIBottomSpaceConstraintID
+            with: titleLabelGUIBottomSpaceConstraintID
         )?.constant = 0
         bodyContainer.uie.constraint(
             with: bodyContainerContentLeadingSpaceConstraintID
@@ -317,16 +317,16 @@ extension CardGUIComponentGroupBasis {
     ) {
         if let title = layoutParams.title {
             titleContainer.uie.constraint(
-                with: titleLabelUILeadingSpaceConstraintID
+                with: titleLabelGUILeadingSpaceConstraintID
             )?.constant = title.leftMargin
             titleContainer.uie.constraint(
-                with: titleLabelUITrailingSpaceConstraintID
+                with: titleLabelGUITrailingSpaceConstraintID
             )?.constant = -title.rightMargin
             titleContainer.uie.constraint(
-                with: titleLabelUITopSpaceConstraintID
+                with: titleLabelGUITopSpaceConstraintID
             )?.constant = title.topMargin
             titleContainer.uie.constraint(
-                with: titleLabelUIBottomSpaceConstraintID
+                with: titleLabelGUIBottomSpaceConstraintID
             )?.constant = -title.bottomMargin
         }
         if let body = layoutParams.body {

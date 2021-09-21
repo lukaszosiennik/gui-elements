@@ -30,7 +30,7 @@ public protocol GUIElementComponent:
         settings: GUIElementComponentSettingsType
     )
     
-    // it's here only for ButtonUIComponent purpose
+    // it's here only for ButtonGUIComponent purpose
     func setupSettings()
     
     func setupNestedSettings()

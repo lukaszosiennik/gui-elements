@@ -10,7 +10,7 @@ public struct NavigationMenuGUIComponentGroupStylePropertiesLookParams:
     
     public static var `default`: Self? {
         return .init(
-            titleLinesNumber: DefaultConstantPalette.NavigationMenu.UILookParams.title_linesNumber_0
+            titleLinesNumber: DefaultConstantPalette.NavigationMenu.GUILookParams.title_linesNumber_0
         )
     }
     

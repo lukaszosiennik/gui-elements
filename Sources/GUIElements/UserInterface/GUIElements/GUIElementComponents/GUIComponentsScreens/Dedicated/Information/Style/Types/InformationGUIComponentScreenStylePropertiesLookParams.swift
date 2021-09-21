@@ -10,7 +10,7 @@ public struct InformationGUIComponentScreenStylePropertiesLookParams:
     
     public static var `default`: Self? {
         return .init(
-            titleLinesNumber: DefaultConstantPalette.Information.UILookParams.title_linesNumber_0
+            titleLinesNumber: DefaultConstantPalette.Information.GUILookParams.title_linesNumber_0
         )
     }
     

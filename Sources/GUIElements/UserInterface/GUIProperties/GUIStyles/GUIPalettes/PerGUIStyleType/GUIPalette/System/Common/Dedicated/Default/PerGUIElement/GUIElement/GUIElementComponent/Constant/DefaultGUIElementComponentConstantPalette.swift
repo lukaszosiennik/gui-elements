@@ -82,7 +82,7 @@ extension DefaultGUIElementComponentConstantPalette.GUIElementComponent {
         
         enum Placeholder {
             
-            enum UILayoutParams {
+            enum GUILayoutParams {
                 
                 static let height_100: CGFloat = GUILayoutParamsPalette.Property.Size.Vertical.Height.value_100
             }
@@ -99,12 +99,12 @@ extension DefaultGUIElementComponentConstantPalette.GUIElementComponent {
         
         enum NavigationMenu {
             
-            enum UILookParams {
+            enum GUILookParams {
                 
                 static let title_linesNumber_0: Int = Int(GUILookParamsPalette.Property.Size.Vertical.LinesNumber.value_0)
             }
             
-            enum UILayoutParams {
+            enum GUILayoutParams {
                 
                 static let options_space_0: CGFloat = GUILayoutParamsPalette.Property.Space.value_0
                 static let title_margin_top_4: CGFloat = GUILayoutParamsPalette.Property.Margin.top_4
@@ -119,7 +119,7 @@ extension DefaultGUIElementComponentConstantPalette.GUIElementComponent {
         
         enum Information {
             
-            enum UILookParams {
+            enum GUILookParams {
                 
                 static let title_linesNumber_0: Int = Int(GUILookParamsPalette.Property.Size.Vertical.LinesNumber.value_0)
             }
@@ -127,7 +127,7 @@ extension DefaultGUIElementComponentConstantPalette.GUIElementComponent {
             
         enum NavigationMenu {
             
-            enum UILayoutParams {
+            enum GUILayoutParams {
             
                 static let margin_left_16: CGFloat = GUILayoutParamsPalette.Property.Margin.left_16
                 static let margin_right_16: CGFloat = GUILayoutParamsPalette.Property.Margin.right_16

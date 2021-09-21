@@ -14,7 +14,7 @@ public final class NavigationMenuGUIComponentGroup<
     UIView,
     GUIComponentGroup {
     
-    private let titleLabelUI: LabelGUIComponent = .init()
+    private let titleLabelGUI: LabelGUIComponent = .init()
     
     private let stackViewBackground: UIView = .init()
     private let stackView: UIStackView = .init()
@@ -63,7 +63,7 @@ public final class NavigationMenuGUIComponentGroup<
     }
     
     public func setupNestedSettings() {
-        titleLabelUI.settings = .init(
+        titleLabelGUI.settings = .init(
             params: .init(
                 text: settings.params.title
             ),
@@ -148,13 +148,13 @@ extension NavigationMenuGUIComponentGroup {
 extension NavigationMenuGUIComponentGroup {
     
     public func setupStyleLayoutInitialization() {
-        titleLabelUI.textAlignment = .center
+        titleLabelGUI.textAlignment = .center
         stackView.axis = .vertical
         stackView.distribution = UIStackView.Distribution.equalSpacing
         stackView.alignment = UIStackView.Alignment.fill
         
         uie.addSubview(
-            titleLabelUI
+            titleLabelGUI
         )
         uie.addSubview(
             stackViewBackground
@@ -163,23 +163,23 @@ extension NavigationMenuGUIComponentGroup {
             stackView
         )
         
-        let titleTopSpaceConstraint = titleLabelUI.topAnchor.constraint(
+        let titleTopSpaceConstraint = titleLabelGUI.topAnchor.constraint(
             equalTo: topAnchor
         )
         titleTopSpaceConstraint.identifier = titleTopSpaceConstraintID
-        let titleBottomSpaceConstraint = titleLabelUI.bottomAnchor.constraint(
+        let titleBottomSpaceConstraint = titleLabelGUI.bottomAnchor.constraint(
             equalTo: stackView.topAnchor
         )
         titleBottomSpaceConstraint.identifier = titleBottomSpaceConstraintID
         
         NSLayoutConstraint.activate([
-            titleLabelUI.leadingAnchor.constraint(
+            titleLabelGUI.leadingAnchor.constraint(
                 greaterThanOrEqualTo: leadingAnchor
             ),
-            titleLabelUI.trailingAnchor.constraint(
+            titleLabelGUI.trailingAnchor.constraint(
                 lessThanOrEqualTo: trailingAnchor
             ),
-            titleLabelUI.centerXAnchor.constraint(
+            titleLabelGUI.centerXAnchor.constraint(
                 equalTo: centerXAnchor
             ),
             titleTopSpaceConstraint,

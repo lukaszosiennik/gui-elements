@@ -15,7 +15,7 @@ public final class NavigationMenuGUIComponentScreen<
     public typealias OptionValue =
         NavigationMenuGUIElementComponentParamsOptionValueObject
     
-    private let navigationMenuUI: NavigationMenuGUIComponentGroup<
+    private let navigationMenuGUI: NavigationMenuGUIComponentGroup<
         OptionKey,
         OptionValue
     > = .init()
@@ -65,7 +65,7 @@ public final class NavigationMenuGUIComponentScreen<
     }
     
     public func setupNestedSettings() {
-        navigationMenuUI.settings = .init(
+        navigationMenuGUI.settings = .init(
             params: .init(
                 title: settings.params.title,
                 options: settings.params.options,
@@ -123,7 +123,7 @@ extension NavigationMenuGUIComponentScreen {
             container
         )
         container.uie.addSubview(
-            navigationMenuUI
+            navigationMenuGUI
         )
         
         let leadingSpaceConstraint = container.leadingAnchor.constraint(
@@ -147,13 +147,13 @@ extension NavigationMenuGUIComponentScreen {
         ])
         
         NSLayoutConstraint.activate([
-            navigationMenuUI.leadingAnchor.constraint(
+            navigationMenuGUI.leadingAnchor.constraint(
                 equalTo: container.leadingAnchor
             ),
-            navigationMenuUI.trailingAnchor.constraint(
+            navigationMenuGUI.trailingAnchor.constraint(
                 equalTo: container.trailingAnchor
             ),
-            navigationMenuUI.centerYAnchor.constraint(
+            navigationMenuGUI.centerYAnchor.constraint(
                 equalTo: container.centerYAnchor
             ),
         ])

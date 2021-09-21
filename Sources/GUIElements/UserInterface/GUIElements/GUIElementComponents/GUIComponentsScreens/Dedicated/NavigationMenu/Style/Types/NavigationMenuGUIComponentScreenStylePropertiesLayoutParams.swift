@@ -13,8 +13,8 @@ public struct NavigationMenuGUIComponentScreenStylePropertiesLayoutParams:
     
     public static var preferred: Self? {
         return .init(
-            leftMargin: DefaultConstantPalette.NavigationMenu.UILayoutParams.margin_left_16,
-            rightMargin: DefaultConstantPalette.NavigationMenu.UILayoutParams.margin_left_16
+            leftMargin: DefaultConstantPalette.NavigationMenu.GUILayoutParams.margin_left_16,
+            rightMargin: DefaultConstantPalette.NavigationMenu.GUILayoutParams.margin_left_16
         )
     }
     

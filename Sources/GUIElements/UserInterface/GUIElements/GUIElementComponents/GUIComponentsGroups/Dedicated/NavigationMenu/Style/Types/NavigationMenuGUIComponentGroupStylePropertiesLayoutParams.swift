@@ -16,9 +16,9 @@ public struct NavigationMenuGUIComponentGroupStylePropertiesLayoutParams:
     public static var preferred: Self? {
         return .init(
             optionHeight: nil,
-            optionsSpace: DefaultConstantPalette.NavigationMenu.UILayoutParams.options_space_0,
-            titleTopMargin: DefaultConstantPalette.NavigationMenu.UILayoutParams.title_margin_top_4,
-            titleBottomMargin: DefaultConstantPalette.NavigationMenu.UILayoutParams.title_margin_bottom_4
+            optionsSpace: DefaultConstantPalette.NavigationMenu.GUILayoutParams.options_space_0,
+            titleTopMargin: DefaultConstantPalette.NavigationMenu.GUILayoutParams.title_margin_top_4,
+            titleBottomMargin: DefaultConstantPalette.NavigationMenu.GUILayoutParams.title_margin_bottom_4
         )
     }
     

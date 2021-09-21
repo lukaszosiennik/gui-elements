@@ -5,7 +5,7 @@
 
 import UIKit
 
-public final class CardWithGUIViewBodyUIComponentGroup<
+public final class CardWithUIViewBodyGUIComponentGroup<
     BodyViewType:
         UIView
 >:
