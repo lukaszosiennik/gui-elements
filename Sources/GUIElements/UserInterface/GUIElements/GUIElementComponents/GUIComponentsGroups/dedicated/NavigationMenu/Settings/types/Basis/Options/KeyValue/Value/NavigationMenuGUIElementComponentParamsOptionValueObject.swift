@@ -6,11 +6,26 @@
 public struct NavigationMenuGUIElementComponentParamsOptionValueObject:
     NavigationMenuGUIElementComponentParamsOptionValueObjectInterface {
     
-    public let title: String
+    public let strings: LocalizationStrings
     
     public init(
-        title: String
+        strings: LocalizationStrings
     ) {
-        self.title = title
+        self.strings = strings
+    }
+}
+
+extension NavigationMenuGUIElementComponentParamsOptionValueObject {
+    
+    public struct LocalizationStrings:
+        NavigationMenuGUIElementComponentParamsOptionValueObjectLocalizationStringsInterface {
+        
+        public let title: String
+        
+        public init(
+            title: String
+        ) {
+            self.title = title
+        }
     }
 }

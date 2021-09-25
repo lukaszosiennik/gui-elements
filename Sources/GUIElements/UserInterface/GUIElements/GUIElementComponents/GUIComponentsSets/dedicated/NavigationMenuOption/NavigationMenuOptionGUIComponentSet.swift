@@ -47,7 +47,9 @@ public final class NavigationMenuGUIOptionComponentSet:
     public func setupNestedSettings() {
         optionButtonGUI.settings = .init(
             params: .init(
-                title: settings.params.title,
+                strings: .init(
+                    title: settings.params.strings.title
+                ),
                 action: settings.params.action
             ),
             styleType: settings.styleType

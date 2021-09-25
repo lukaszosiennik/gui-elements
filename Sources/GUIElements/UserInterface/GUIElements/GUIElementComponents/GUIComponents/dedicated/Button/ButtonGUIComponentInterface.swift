@@ -18,7 +18,7 @@ extension ButtonGUIComponentInterface {
         for button: UIButton
     ) {
         button.setTitle(
-            params.title,
+            params.strings.title,
             for: .normal
         )
     }

@@ -5,6 +5,9 @@
 
 public protocol NavigationMenuGUIElementComponentParamsInterface {
     
+    associatedtype LocalizationStrings:
+        NavigationMenuGUIElementComponentParamsLocalizationStringsInterface
+    
     associatedtype OptionsKeyValueType:
         NavigationMenuGUIElementComponentParamsOptionsKeyValueInterface
     associatedtype ActionsFunctionType
@@ -15,7 +18,7 @@ public protocol NavigationMenuGUIElementComponentParamsInterface {
             OptionsKeyValueType.ValueType
         >
     
-    var title: String {
+    var strings: LocalizationStrings {
         get
     }
     
@@ -24,6 +27,13 @@ public protocol NavigationMenuGUIElementComponentParamsInterface {
     }
     
     var actions: ActionsFunctionType? {
+        get
+    }
+}
+
+public protocol NavigationMenuGUIElementComponentParamsLocalizationStringsInterface {
+    
+    var title: String {
         get
     }
 }

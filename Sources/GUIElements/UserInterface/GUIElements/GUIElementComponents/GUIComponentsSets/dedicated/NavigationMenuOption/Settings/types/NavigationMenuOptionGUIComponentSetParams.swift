@@ -7,23 +7,40 @@ public struct NavigationMenuOptionGUIComponentSetParams:
     GUIComponentSetParams,
     InputGUIElementComponentParamsPlainActionInterface {
     
-    public let title: String
+    public let strings: LocalizationStrings
+    
     public let action: Action?
     
     public static var `default`: Self {
         return .init(
-            title: structName(
-                dot: "title"
+            strings: .init(
+                title: structName(
+                    dot: "title"
+                )
             ),
             action: nil
         )
     }
     
     public init(
-        title: String,
+        strings: LocalizationStrings,
         action: Action?
     ) {
-        self.title = title
+        self.strings = strings
         self.action = action
+    }
+}
+
+extension NavigationMenuOptionGUIComponentSetParams {
+    
+    public struct LocalizationStrings {
+        
+        public let title: String
+        
+        public init(
+            title: String
+        ) {
+            self.title = title
+        }
     }
 }

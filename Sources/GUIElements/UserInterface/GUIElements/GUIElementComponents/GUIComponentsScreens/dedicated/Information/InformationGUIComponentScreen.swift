@@ -47,7 +47,9 @@ public final class InformationGUIComponentScreen:
     public func setupNestedSettings() {
         titleLabelGUI.settings = .init(
             params: .init(
-                text: settings.params.title
+                strings: .init(
+                    text: settings.params.strings.title
+                )
             ),
             styleType: settings.styleType,
             overwrittenBy: .init(

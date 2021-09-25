@@ -47,7 +47,7 @@ public final class LabelGUIComponent:
     public func setupParams(
         _ params: LabelGUIComponentParams
     ) {
-        text = params.text
+        text = params.strings.text
     }
 }
 

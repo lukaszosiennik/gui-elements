@@ -65,7 +65,9 @@ public final class NavigationMenuGUIComponentGroup<
     public func setupNestedSettings() {
         titleLabelGUI.settings = .init(
             params: .init(
-                text: settings.params.title
+                strings: .init(
+                    text: settings.params.strings.title
+                )
             ),
             styleType: settings.styleType,
             overwrittenBy: .init(
@@ -92,7 +94,9 @@ public final class NavigationMenuGUIComponentGroup<
             let optionView: NavigationMenuGUIOptionComponentSet = .init(
                 settings: .init(
                     params: .init(
-                        title: option.value.title,
+                        strings: .init(
+                            title: option.value.strings.title
+                        ),
                         action: {
                             params.actions?(
                                 option.key

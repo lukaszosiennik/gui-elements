@@ -20,7 +20,8 @@ open class NavigationMenuGUIElementComponentParamsExtendedBasis<
     public typealias AdditionalParams =
         AdditionalParams
     
-    public let title: String
+    public let strings: LocalizationStrings
+    
     public let options: Options
     public let actions: ActionsFunction?
     
@@ -28,8 +29,10 @@ open class NavigationMenuGUIElementComponentParamsExtendedBasis<
     
     public static var `default`: Self {
         return .init(
-            title: structName(
-                dot: "title"
+            strings: .init(
+                title: structName(
+                    dot: "title"
+                )
             ),
             options: [:],
             actions: nil,
@@ -38,14 +41,29 @@ open class NavigationMenuGUIElementComponentParamsExtendedBasis<
     }
     
     public required init(
-        title: String,
+        strings: LocalizationStrings,
         options: Options,
         actions: ActionsFunction?,
         additional: AdditionalParams
     ) {
-        self.title = title
+        self.strings = strings
         self.options = options
         self.actions = actions
         self.additional = additional
+    }
+}
+
+extension NavigationMenuGUIElementComponentParamsExtendedBasis {
+    
+    public struct LocalizationStrings:
+        NavigationMenuGUIElementComponentParamsLocalizationStringsInterface {
+        
+        public let title: String
+        
+        public init(
+            title: String
+        ) {
+            self.title = title
+        }
     }
 }

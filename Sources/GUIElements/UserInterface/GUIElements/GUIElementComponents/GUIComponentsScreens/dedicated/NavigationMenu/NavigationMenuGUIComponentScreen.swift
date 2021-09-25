@@ -67,7 +67,9 @@ public final class NavigationMenuGUIComponentScreen<
     public func setupNestedSettings() {
         navigationMenuGUI.settings = .init(
             params: .init(
-                title: settings.params.title,
+                strings: .init(
+                    title: settings.params.strings.title
+                ),
                 options: settings.params.options,
                 actions: settings.params.actions
             ),

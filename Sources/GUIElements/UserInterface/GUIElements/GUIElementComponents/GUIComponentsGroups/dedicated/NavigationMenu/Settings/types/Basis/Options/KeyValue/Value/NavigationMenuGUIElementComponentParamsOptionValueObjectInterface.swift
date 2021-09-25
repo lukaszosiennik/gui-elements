@@ -5,6 +5,16 @@
 
 public protocol NavigationMenuGUIElementComponentParamsOptionValueObjectInterface {
     
+    associatedtype LocalizationStrings:
+        NavigationMenuGUIElementComponentParamsOptionValueObjectLocalizationStringsInterface
+    
+    var strings: LocalizationStrings {
+        get
+    }
+}
+
+public protocol NavigationMenuGUIElementComponentParamsOptionValueObjectLocalizationStringsInterface {
+    
     var title: String {
         get
     }

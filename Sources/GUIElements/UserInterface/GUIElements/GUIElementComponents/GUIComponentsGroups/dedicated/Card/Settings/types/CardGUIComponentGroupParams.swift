@@ -6,19 +6,35 @@
 public struct CardGUIComponentGroupParams:
     GUIComponentGroupParams {
     
-    public let title: String
+    public let strings: LocalizationStrings
     
     public static var `default`: Self {
         return .init(
-            title: structName(
-                dot: "title"
+            strings: .init(
+                title: structName(
+                    dot: "title"
+                )
             )
         )
     }
     
     public init(
-        title: String
+        strings: LocalizationStrings
     ) {
-        self.title = title
+        self.strings = strings
+    }
+}
+
+extension CardGUIComponentGroupParams {
+    
+    public struct LocalizationStrings {
+        
+        public let title: String
+        
+        public init(
+            title: String
+        ) {
+            self.title = title
+        }
     }
 }

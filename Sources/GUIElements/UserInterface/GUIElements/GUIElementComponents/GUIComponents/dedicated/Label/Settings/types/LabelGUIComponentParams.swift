@@ -6,19 +6,35 @@
 public struct LabelGUIComponentParams:
     GUIComponentParams {
     
-    public let text: String
+    public let strings: LocalizationStrings
     
     public static var `default`: Self {
         return .init(
-            text: structName(
-                dot: "text"
+            strings: .init(
+                text: structName(
+                    dot: "text"
+                )
             )
         )
     }
     
     public init(
-        text: String
+        strings: LocalizationStrings
     ) {
-        self.text = text
+        self.strings = strings
+    }
+}
+
+extension LabelGUIComponentParams {
+    
+    public struct LocalizationStrings {
+        
+        public let text: String
+        
+        public init(
+            text: String
+        ) {
+            self.text = text
+        }
     }
 }

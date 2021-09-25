@@ -19,12 +19,12 @@ public class NavigationMenuGUIElementComponentParamsBasis<
     > {
     
     public init(
-        title: String,
+        strings: LocalizationStrings,
         options: Options,
         actions: ActionsFunction?
     ) {
         super.init(
-            title: title,
+            strings: strings,
             options: options,
             actions: actions,
             additional: .default
@@ -32,13 +32,13 @@ public class NavigationMenuGUIElementComponentParamsBasis<
     }
     
     public required init(
-        title: String,
+        strings: LocalizationStrings,
         options: Options,
         actions: ActionsFunction?,
         additional: AdditionalParams
     ) {
         super.init(
-            title: title,
+            strings: strings,
             options: options,
             actions: actions,
             additional: additional
