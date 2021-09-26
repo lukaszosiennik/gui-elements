@@ -3,15 +3,11 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol NavigationMenuGUIElementComponentParamsOptionValueObjectInterface {
-    
-    associatedtype LocalizationStrings:
-        NavigationMenuGUIElementComponentParamsOptionValueObjectLocalizationStringsInterface
-    
-    var strings: LocalizationStrings {
-        get
-    }
-}
+public protocol NavigationMenuGUIElementComponentParamsOptionValueObjectInterface:
+    GUIElementComponentParamsLocalizationStrings
+where
+    LocalizationStrings
+        : NavigationMenuGUIElementComponentParamsOptionValueObjectLocalizationStringsInterface {}
 
 public protocol NavigationMenuGUIElementComponentParamsOptionValueObjectLocalizationStringsInterface {
     

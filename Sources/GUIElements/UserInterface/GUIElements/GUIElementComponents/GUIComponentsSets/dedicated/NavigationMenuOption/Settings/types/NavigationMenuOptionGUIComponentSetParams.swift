@@ -5,6 +5,7 @@
 
 public struct NavigationMenuOptionGUIComponentSetParams:
     GUIComponentSetParams,
+    GUIElementComponentParamsLocalizationStrings,
     InputGUIElementComponentParamsPlainActionInterface {
     
     public let strings: LocalizationStrings

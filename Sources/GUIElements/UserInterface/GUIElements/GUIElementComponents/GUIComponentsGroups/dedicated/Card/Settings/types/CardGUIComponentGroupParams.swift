@@ -4,7 +4,8 @@
 //
 
 public struct CardGUIComponentGroupParams:
-    GUIComponentGroupParams {
+    GUIComponentGroupParams,
+    GUIElementComponentParamsLocalizationStrings {
     
     public let strings: LocalizationStrings
     

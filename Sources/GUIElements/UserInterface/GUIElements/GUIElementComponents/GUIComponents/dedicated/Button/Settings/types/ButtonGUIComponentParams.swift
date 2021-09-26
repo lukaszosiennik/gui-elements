@@ -5,6 +5,7 @@
 
 public struct ButtonGUIComponentParams:
     GUIComponentParams,
+    GUIElementComponentParamsLocalizationStrings,
     InputGUIElementComponentParamsPlainActionInterface {
     
     public let strings: LocalizationStrings

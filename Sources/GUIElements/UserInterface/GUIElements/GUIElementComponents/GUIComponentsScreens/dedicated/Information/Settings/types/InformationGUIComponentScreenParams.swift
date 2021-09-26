@@ -4,7 +4,8 @@
 //
 
 public struct InformationGUIComponentScreenParams:
-    GUIComponentScreenParams {
+    GUIComponentScreenParams,
+    GUIElementComponentParamsLocalizationStrings {
     
     public let strings: LocalizationStrings
     
