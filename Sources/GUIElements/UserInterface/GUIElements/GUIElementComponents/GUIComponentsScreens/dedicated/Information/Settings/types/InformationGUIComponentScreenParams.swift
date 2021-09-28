@@ -28,7 +28,8 @@ public struct InformationGUIComponentScreenParams:
 
 extension InformationGUIComponentScreenParams {
     
-    public struct LocalizationStrings {
+    public struct LocalizationStrings:
+        LocalizationStringsInterface {
         
         public let title: String
         

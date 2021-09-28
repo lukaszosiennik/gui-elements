@@ -28,7 +28,8 @@ public struct LabelGUIComponentParams:
 
 extension LabelGUIComponentParams {
     
-    public struct LocalizationStrings {
+    public struct LocalizationStrings:
+        LocalizationStringsInterface {
         
         public let text: String
         

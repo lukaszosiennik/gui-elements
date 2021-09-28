@@ -5,7 +5,8 @@
 
 public protocol GUIElementComponentParamsLocalizationStrings {
     
-    associatedtype LocalizationStrings
+    associatedtype LocalizationStrings:
+        LocalizationStringsInterface
     
     var strings: LocalizationStrings {
         get

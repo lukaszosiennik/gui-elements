@@ -34,7 +34,8 @@ public struct NavigationMenuOptionGUIComponentSetParams:
 
 extension NavigationMenuOptionGUIComponentSetParams {
     
-    public struct LocalizationStrings {
+    public struct LocalizationStrings:
+        LocalizationStringsInterface {
         
         public let title: String
         

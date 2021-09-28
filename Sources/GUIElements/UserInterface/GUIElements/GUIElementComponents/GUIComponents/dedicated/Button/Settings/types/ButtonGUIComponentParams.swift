@@ -34,7 +34,8 @@ public struct ButtonGUIComponentParams:
 
 extension ButtonGUIComponentParams {
     
-    public struct LocalizationStrings {
+    public struct LocalizationStrings:
+        LocalizationStringsInterface {
         
         public let title: String
         

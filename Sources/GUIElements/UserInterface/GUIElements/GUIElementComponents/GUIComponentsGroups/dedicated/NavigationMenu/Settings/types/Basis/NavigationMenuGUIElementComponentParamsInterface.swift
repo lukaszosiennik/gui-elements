@@ -28,7 +28,8 @@ where
     }
 }
 
-public protocol NavigationMenuGUIElementComponentParamsLocalizationStringsInterface {
+public protocol NavigationMenuGUIElementComponentParamsLocalizationStringsInterface:
+    LocalizationStringsInterface {
     
     var title: String {
         get

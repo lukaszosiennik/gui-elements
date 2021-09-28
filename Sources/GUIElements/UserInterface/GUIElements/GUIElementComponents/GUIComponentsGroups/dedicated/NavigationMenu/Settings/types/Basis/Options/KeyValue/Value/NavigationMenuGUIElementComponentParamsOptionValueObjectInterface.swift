@@ -9,7 +9,8 @@ where
     LocalizationStrings
         : NavigationMenuGUIElementComponentParamsOptionValueObjectLocalizationStringsInterface {}
 
-public protocol NavigationMenuGUIElementComponentParamsOptionValueObjectLocalizationStringsInterface {
+public protocol NavigationMenuGUIElementComponentParamsOptionValueObjectLocalizationStringsInterface:
+    LocalizationStringsInterface {
     
     var title: String {
         get

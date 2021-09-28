@@ -28,7 +28,8 @@ public struct CardGUIComponentGroupParams:
 
 extension CardGUIComponentGroupParams {
     
-    public struct LocalizationStrings {
+    public struct LocalizationStrings:
+        LocalizationStringsInterface {
         
         public let title: String
         
