@@ -9,4 +9,4 @@ public struct GUIComponentStylePropertiesLookTemplate<
     GUIElementComponentStylePropertiesSystemLookType:
         GUIComponentStylePropertiesSystemLook
 >:
-    GUIComponentStylePropertiesLookInterface {}
+    GUIComponentStylePropertiesLook {}

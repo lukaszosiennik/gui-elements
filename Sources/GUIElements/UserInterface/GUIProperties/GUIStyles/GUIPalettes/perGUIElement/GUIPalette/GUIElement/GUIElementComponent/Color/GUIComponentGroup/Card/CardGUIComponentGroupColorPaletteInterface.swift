@@ -5,7 +5,7 @@
 
 import UIKit
 
-protocol CardGUIComponentGroupColorPalette {
+protocol CardGUIComponentGroupColorPaletteInterface {
     
     static var titleBackground: UIColor {
         get

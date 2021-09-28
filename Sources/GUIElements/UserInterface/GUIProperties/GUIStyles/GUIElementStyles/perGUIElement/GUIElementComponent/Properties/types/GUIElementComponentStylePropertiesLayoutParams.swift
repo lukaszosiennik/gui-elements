@@ -11,8 +11,8 @@ public protocol GUIElementComponentStylePropertiesLayoutParams:
         GUIElementComponentStylePropertiesOverwrittenLayoutParams
     
     associatedtype DefaultConstantPalette:
-        DefaultGUIPalette &
-        GUIElementComponentConstantPalette
+        DefaultGUIPaletteInterface &
+        GUIElementComponentConstantPaletteInterface
 
     init?(
         layoutParams: Self?,

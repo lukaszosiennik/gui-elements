@@ -53,8 +53,8 @@ public enum DevSoftwareEngineerGUIElementComponentColorPalette:
 extension DevSoftwareEngineerGUIElementComponentColorPalette.GUIElementComponent {
         
     public enum GUIComponent:
-        GUIElementComponentColorPalette,
-        DevGUIPalette {
+        GUIElementComponentColorPaletteInterface,
+        DevGUIPaletteInterface {
         
         enum Button {
             
@@ -69,8 +69,8 @@ extension DevSoftwareEngineerGUIElementComponentColorPalette.GUIElementComponent
     }
     
     public enum GUIComponentSet:
-        GUIElementComponentColorPalette,
-        DevGUIPalette {
+        GUIElementComponentColorPaletteInterface,
+        DevGUIPaletteInterface {
         
         enum NavigationMenuOption {
             
@@ -81,11 +81,11 @@ extension DevSoftwareEngineerGUIElementComponentColorPalette.GUIElementComponent
     }
     
     public enum GUIComponentGroup:
-        GUIElementComponentColorPalette,
-        DevGUIPalette {
+        GUIElementComponentColorPaletteInterface,
+        DevGUIPaletteInterface {
         
         enum Card:
-            CardGUIComponentGroupColorPalette {
+            CardGUIComponentGroupColorPaletteInterface {
             
             static let titleBackground: UIColor = DevBootstrapGUIElementComponentColorPalette.GUIElementComponent.GUIComponentGroup.Card.Light.titleBackground
             static let titleText: UIColor = DevBootstrapGUIElementComponentColorPalette.GUIElementComponent.GUIComponentGroup.Card.Light.titleText
@@ -102,8 +102,8 @@ extension DevSoftwareEngineerGUIElementComponentColorPalette.GUIElementComponent
     }
     
     public enum GUIComponentScreen:
-        GUIElementComponentColorPalette,
-        DevGUIPalette {
+        GUIElementComponentColorPaletteInterface,
+        DevGUIPaletteInterface {
         
         fileprivate enum Property {
             

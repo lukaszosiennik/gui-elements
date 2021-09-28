@@ -5,7 +5,7 @@
 
 public struct GUIComponentSetStylePropertiesTemplate<
     GUIElementComponentStylePropertiesLookInterfaceType:
-        GUIComponentSetStylePropertiesLookInterface,
+        GUIComponentSetStylePropertiesLook,
     GUIComponentSetStylePropertiesLookParamsType:
         GUIComponentSetStylePropertiesLookParams,
     GUIComponentSetStylePropertiesLayoutParamsType:

@@ -7,10 +7,10 @@ public protocol SystemGUIElementComponentColorPaletteInterface:
     SystemGUIElementPaletteInterface
 where
     GUIElementComponent.GUIComponent
-        : GUIElementComponentColorPalette,
+        : GUIElementComponentColorPaletteInterface,
     GUIElementComponent.GUIComponentSet
-        : GUIElementComponentColorPalette,
+        : GUIElementComponentColorPaletteInterface,
     GUIElementComponent.GUIComponentGroup
-        : GUIElementComponentColorPalette,
+        : GUIElementComponentColorPaletteInterface,
     GUIElementComponent.GUIComponentScreen
-        : GUIElementComponentColorPalette {}
+        : GUIElementComponentColorPaletteInterface {}

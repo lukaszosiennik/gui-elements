@@ -13,18 +13,18 @@ public enum AppCompanySpecificGUIElementComponentFontPalette:
 extension AppCompanySpecificGUIElementComponentFontPalette.GUIElementComponent {
         
     public enum GUIComponent:
-        GUIElementComponentFontPalette,
-        AppGUIPalette {}
+        GUIElementComponentFontPaletteInterface,
+        AppGUIPaletteInterface {}
     
     public enum GUIComponentSet:
-        GUIElementComponentFontPalette,
-        AppGUIPalette {}
+        GUIElementComponentFontPaletteInterface,
+        AppGUIPaletteInterface {}
     
     public enum GUIComponentGroup:
-        GUIElementComponentFontPalette,
-        AppGUIPalette {}
+        GUIElementComponentFontPaletteInterface,
+        AppGUIPaletteInterface {}
     
     public enum GUIComponentScreen:
-        GUIElementComponentFontPalette,
-        AppGUIPalette {}
+        GUIElementComponentFontPaletteInterface,
+        AppGUIPaletteInterface {}
 }

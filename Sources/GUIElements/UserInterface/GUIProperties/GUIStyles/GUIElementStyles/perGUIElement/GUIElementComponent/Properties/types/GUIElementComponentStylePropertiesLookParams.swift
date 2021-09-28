@@ -11,8 +11,8 @@ public protocol GUIElementComponentStylePropertiesLookParams:
         GUIElementComponentStylePropertiesOverwrittenLookParams
     
     associatedtype DefaultConstantPalette:
-        DefaultGUIPalette &
-        GUIElementComponentConstantPalette
+        DefaultGUIPaletteInterface &
+        GUIElementComponentConstantPaletteInterface
     
     static var `default`: Self? {
         get

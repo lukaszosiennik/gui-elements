@@ -13,8 +13,8 @@ public enum SystemGUIElementComponentFontPaletteTemplate:
 extension SystemGUIElementComponentFontPaletteTemplate.GUIElementComponent {
         
     public enum GUIComponent:
-        GUIElementComponentFontPalette,
-        SystemGUIPalette {
+        GUIElementComponentFontPaletteInterface,
+        SystemGUIPaletteInterface {
         
         enum Button {}
         enum Label {}
@@ -24,23 +24,23 @@ extension SystemGUIElementComponentFontPaletteTemplate.GUIElementComponent {
     }
     
     public enum GUIComponentSet:
-        GUIElementComponentFontPalette,
-        SystemGUIPalette {
+        GUIElementComponentFontPaletteInterface,
+        SystemGUIPaletteInterface {
         
         enum NavigationMenuOption {}
     }
     
     public enum GUIComponentGroup:
-        GUIElementComponentFontPalette,
-        SystemGUIPalette {
+        GUIElementComponentFontPaletteInterface,
+        SystemGUIPaletteInterface {
         
         enum Card {}
         enum NavigationMenu {}
     }
     
     public enum GUIComponentScreen:
-        GUIElementComponentFontPalette,
-        SystemGUIPalette {
+        GUIElementComponentFontPaletteInterface,
+        SystemGUIPaletteInterface {
         
         enum Information {}
         enum NavigationMenu {}

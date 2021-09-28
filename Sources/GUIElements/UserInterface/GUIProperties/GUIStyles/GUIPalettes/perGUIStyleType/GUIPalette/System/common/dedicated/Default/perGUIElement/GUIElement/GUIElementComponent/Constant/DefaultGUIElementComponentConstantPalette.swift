@@ -77,8 +77,8 @@ public enum DefaultGUIElementComponentConstantPalette:
 extension DefaultGUIElementComponentConstantPalette.GUIElementComponent {
     
     public enum GUIComponent:
-        GUIElementComponentConstantPalette,
-        DefaultGUIPalette {
+        GUIElementComponentConstantPaletteInterface,
+        DefaultGUIPaletteInterface {
         
         enum Placeholder {
             
@@ -90,12 +90,12 @@ extension DefaultGUIElementComponentConstantPalette.GUIElementComponent {
     }
     
     public enum GUIComponentSet:
-        GUIElementComponentConstantPalette,
-        DefaultGUIPalette {}
+        GUIElementComponentConstantPaletteInterface,
+        DefaultGUIPaletteInterface {}
     
     public enum GUIComponentGroup:
-        GUIElementComponentConstantPalette,
-        DefaultGUIPalette {
+        GUIElementComponentConstantPaletteInterface,
+        DefaultGUIPaletteInterface {
         
         enum NavigationMenu {
             
@@ -114,8 +114,8 @@ extension DefaultGUIElementComponentConstantPalette.GUIElementComponent {
     }
     
     public enum GUIComponentScreen:
-        GUIElementComponentConstantPalette,
-        DefaultGUIPalette {
+        GUIElementComponentConstantPaletteInterface,
+        DefaultGUIPaletteInterface {
         
         enum Information {
             

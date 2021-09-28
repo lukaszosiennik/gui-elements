@@ -13,18 +13,18 @@ public enum DevBootstrapGUIElementComponentFontPalette:
 extension DevBootstrapGUIElementComponentFontPalette.GUIElementComponent {
         
     public enum GUIComponent:
-        GUIElementComponentFontPalette,
-        DevGUIPalette {}
+        GUIElementComponentFontPaletteInterface,
+        DevGUIPaletteInterface {}
     
     public enum GUIComponentSet:
-        GUIElementComponentFontPalette,
-        DevGUIPalette {}
+        GUIElementComponentFontPaletteInterface,
+        DevGUIPaletteInterface {}
     
     public enum GUIComponentGroup:
-        GUIElementComponentFontPalette,
-        DevGUIPalette {}
+        GUIElementComponentFontPaletteInterface,
+        DevGUIPaletteInterface {}
     
     public enum GUIComponentScreen:
-        GUIElementComponentFontPalette,
-        DevGUIPalette {}
+        GUIElementComponentFontPaletteInterface,
+        DevGUIPaletteInterface {}
 }

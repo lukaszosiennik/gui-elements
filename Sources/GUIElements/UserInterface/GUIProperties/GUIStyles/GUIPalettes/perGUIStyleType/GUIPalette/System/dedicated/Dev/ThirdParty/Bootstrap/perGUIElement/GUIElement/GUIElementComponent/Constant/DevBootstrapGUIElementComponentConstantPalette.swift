@@ -62,16 +62,16 @@ public enum DevBootstrapGUIElementComponentConstantPalette:
 extension DevBootstrapGUIElementComponentConstantPalette.GUIElementComponent {
         
     public enum GUIComponent:
-        GUIElementComponentConstantPalette,
-        DevGUIPalette {}
+        GUIElementComponentConstantPaletteInterface,
+        DevGUIPaletteInterface {}
     
     public enum GUIComponentSet:
-        GUIElementComponentConstantPalette,
-        DevGUIPalette {}
+        GUIElementComponentConstantPaletteInterface,
+        DevGUIPaletteInterface {}
     
     public enum GUIComponentGroup:
-        GUIElementComponentConstantPalette,
-        DevGUIPalette {
+        GUIElementComponentConstantPaletteInterface,
+        DevGUIPaletteInterface {
         
         enum Card {
             
@@ -94,6 +94,6 @@ extension DevBootstrapGUIElementComponentConstantPalette.GUIElementComponent {
     }
     
     public enum GUIComponentScreen:
-        GUIElementComponentConstantPalette,
-        DevGUIPalette {}
+        GUIElementComponentConstantPaletteInterface,
+        DevGUIPaletteInterface {}
 }

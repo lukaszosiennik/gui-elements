@@ -72,8 +72,8 @@ public enum SystemGUIElementComponentConstantPaletteTemplate:
 extension SystemGUIElementComponentConstantPaletteTemplate.GUIElementComponent {
         
     public enum GUIComponent:
-        GUIElementComponentConstantPalette,
-        SystemGUIPalette {
+        GUIElementComponentConstantPaletteInterface,
+        SystemGUIPaletteInterface {
         
         enum Button {
             
@@ -112,8 +112,8 @@ extension SystemGUIElementComponentConstantPaletteTemplate.GUIElementComponent {
     }
     
     public enum GUIComponentSet:
-        GUIElementComponentConstantPalette,
-        SystemGUIPalette {
+        GUIElementComponentConstantPaletteInterface,
+        SystemGUIPaletteInterface {
         
         enum NavigationMenuOption {
             
@@ -124,8 +124,8 @@ extension SystemGUIElementComponentConstantPaletteTemplate.GUIElementComponent {
     }
     
     public enum GUIComponentGroup:
-        GUIElementComponentConstantPalette,
-        SystemGUIPalette {
+        GUIElementComponentConstantPaletteInterface,
+        SystemGUIPaletteInterface {
         
         enum Card {
             
@@ -143,8 +143,8 @@ extension SystemGUIElementComponentConstantPaletteTemplate.GUIElementComponent {
     }
     
     public enum GUIComponentScreen:
-        GUIElementComponentConstantPalette,
-        SystemGUIPalette {
+        GUIElementComponentConstantPaletteInterface,
+        SystemGUIPaletteInterface {
         
         enum Information {
             

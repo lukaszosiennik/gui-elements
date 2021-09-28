@@ -170,8 +170,8 @@ public enum DevBootstrapGUIElementComponentColorPalette:
 extension DevBootstrapGUIElementComponentColorPalette.GUIElementComponent {
         
     public enum GUIComponent:
-        GUIElementComponentColorPalette,
-        DevGUIPalette {
+        GUIElementComponentColorPaletteInterface,
+        DevGUIPaletteInterface {
         
         enum Label {
             
@@ -180,17 +180,17 @@ extension DevBootstrapGUIElementComponentColorPalette.GUIElementComponent {
     }
     
     public enum GUIComponentSet:
-        GUIElementComponentColorPalette,
-        DevGUIPalette {}
+        GUIElementComponentColorPaletteInterface,
+        DevGUIPaletteInterface {}
     
     public enum GUIComponentGroup:
-        GUIElementComponentColorPalette,
-        DevGUIPalette {
+        GUIElementComponentColorPaletteInterface,
+        DevGUIPaletteInterface {
         
         enum Card {
             
             enum Primary:
-                CardGUIComponentGroupColorPalette {
+                CardGUIComponentGroupColorPaletteInterface {
                 
                 static let titleBackground: UIColor = Property.Background.blue1_0dc4e8
                 static let titleText: UIColor = Property.Text.white
@@ -200,7 +200,7 @@ extension DevBootstrapGUIElementComponentColorPalette.GUIElementComponent {
             }
             
             enum Secondary:
-                CardGUIComponentGroupColorPalette {
+                CardGUIComponentGroupColorPaletteInterface {
                 
                 static let titleBackground: UIColor = Property.Background.gray1_697179
                 static let titleText: UIColor = Property.Text.white
@@ -210,7 +210,7 @@ extension DevBootstrapGUIElementComponentColorPalette.GUIElementComponent {
             }
             
             enum Success:
-                CardGUIComponentGroupColorPalette {
+                CardGUIComponentGroupColorPaletteInterface {
                 
                 static let titleBackground: UIColor = Property.Background.green_188351
                 static let titleText: UIColor = Property.Text.white
@@ -220,7 +220,7 @@ extension DevBootstrapGUIElementComponentColorPalette.GUIElementComponent {
             }
             
             enum Danger:
-                CardGUIComponentGroupColorPalette {
+                CardGUIComponentGroupColorPaletteInterface {
                 
                 static let titleBackground: UIColor = Property.Background.red_d53343
                 static let titleText: UIColor = Property.Text.white
@@ -230,7 +230,7 @@ extension DevBootstrapGUIElementComponentColorPalette.GUIElementComponent {
             }
             
             enum Warning:
-                CardGUIComponentGroupColorPalette {
+                CardGUIComponentGroupColorPaletteInterface {
                 
                 static let titleBackground: UIColor = Property.Background.yellow_f0f1f2
                 static let titleText: UIColor = Property.Text.black_212529
@@ -240,7 +240,7 @@ extension DevBootstrapGUIElementComponentColorPalette.GUIElementComponent {
             }
             
             enum Info:
-                CardGUIComponentGroupColorPalette {
+                CardGUIComponentGroupColorPaletteInterface {
                 
                 static let titleBackground: UIColor = Property.Background.blue2_0d6bf5
                 static let titleText: UIColor = Property.Text.black_212529
@@ -250,7 +250,7 @@ extension DevBootstrapGUIElementComponentColorPalette.GUIElementComponent {
             }
             
             enum Light:
-                CardGUIComponentGroupColorPalette {
+                CardGUIComponentGroupColorPaletteInterface {
                 
                 static let titleBackground: UIColor = Property.Background.gray2_f0f1f2
                 static let titleText: UIColor = Property.Text.black_212529
@@ -260,7 +260,7 @@ extension DevBootstrapGUIElementComponentColorPalette.GUIElementComponent {
             }
             
             enum Dark:
-                CardGUIComponentGroupColorPalette {
+                CardGUIComponentGroupColorPaletteInterface {
                 
                 static let titleBackground: UIColor = Property.Background.black_202428
                 static let titleText: UIColor = Property.Text.white
@@ -272,6 +272,6 @@ extension DevBootstrapGUIElementComponentColorPalette.GUIElementComponent {
     }
     
     public enum GUIComponentScreen:
-        GUIElementComponentColorPalette,
-        DevGUIPalette {}
+        GUIElementComponentColorPaletteInterface,
+        DevGUIPaletteInterface {}
 }

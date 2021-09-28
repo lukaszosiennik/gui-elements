@@ -11,14 +11,14 @@ public protocol SystemGUIElementPaletteInterface {
 public protocol SystemGUIElementComponentPaletteInterface {
     
     associatedtype GUIComponent:
-        SystemGUIPalette
+        SystemGUIPaletteInterface
     
     associatedtype GUIComponentSet:
-        SystemGUIPalette
+        SystemGUIPaletteInterface
     
     associatedtype GUIComponentGroup:
-        SystemGUIPalette
+        SystemGUIPaletteInterface
     
     associatedtype GUIComponentScreen:
-        SystemGUIPalette
+        SystemGUIPaletteInterface
 }

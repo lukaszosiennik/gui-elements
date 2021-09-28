@@ -26,8 +26,8 @@ public enum SystemGUIElementComponentColorPaletteTemplate:
 extension SystemGUIElementComponentColorPaletteTemplate.GUIElementComponent {
         
     public enum GUIComponent:
-        GUIElementComponentColorPalette,
-        SystemGUIPalette {
+        GUIElementComponentColorPaletteInterface,
+        SystemGUIPaletteInterface {
         
         fileprivate enum Property {}
         
@@ -39,8 +39,8 @@ extension SystemGUIElementComponentColorPaletteTemplate.GUIElementComponent {
     }
     
     public enum GUIComponentSet:
-        GUIElementComponentColorPalette,
-        SystemGUIPalette {
+        GUIElementComponentColorPaletteInterface,
+        SystemGUIPaletteInterface {
         
         fileprivate enum Property {}
         
@@ -48,8 +48,8 @@ extension SystemGUIElementComponentColorPaletteTemplate.GUIElementComponent {
     }
     
     public enum GUIComponentGroup:
-        GUIElementComponentColorPalette,
-        SystemGUIPalette {
+        GUIElementComponentColorPaletteInterface,
+        SystemGUIPaletteInterface {
         
         fileprivate enum Property {}
         
@@ -58,8 +58,8 @@ extension SystemGUIElementComponentColorPaletteTemplate.GUIElementComponent {
     }
     
     public enum GUIComponentScreen:
-        GUIElementComponentColorPalette,
-        SystemGUIPalette {
+        GUIElementComponentColorPaletteInterface,
+        SystemGUIPaletteInterface {
         
         fileprivate enum Property {}
         

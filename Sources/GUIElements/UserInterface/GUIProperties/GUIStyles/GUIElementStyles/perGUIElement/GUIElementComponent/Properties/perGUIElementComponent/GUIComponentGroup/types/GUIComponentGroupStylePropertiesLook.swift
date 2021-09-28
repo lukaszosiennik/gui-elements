@@ -3,8 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol GUIComponentGroupStylePropertiesLookInterface:
-    GUIElementComponentStylePropertiesLookInterface
+public protocol GUIComponentGroupStylePropertiesLook:
+    GUIElementComponentStylePropertiesLook
 where
     GUIElementComponentStylePropertiesOSLookType
         : GUIComponentGroupStylePropertiesOSLook,

@@ -83,12 +83,12 @@ public enum DevSoftwareEngineerGUIElementComponentConstantPalette:
 extension DevSoftwareEngineerGUIElementComponentConstantPalette.GUIElementComponent {
         
     public enum GUIComponent:
-        GUIElementComponentConstantPalette,
-        DevGUIPalette {}
+        GUIElementComponentConstantPaletteInterface,
+        DevGUIPaletteInterface {}
     
     public enum GUIComponentSet:
-        GUIElementComponentConstantPalette,
-        DevGUIPalette {
+        GUIElementComponentConstantPaletteInterface,
+        DevGUIPaletteInterface {
         
         enum NavigationMenuOption {
             
@@ -100,8 +100,8 @@ extension DevSoftwareEngineerGUIElementComponentConstantPalette.GUIElementCompon
     }
     
     public enum GUIComponentGroup:
-        GUIElementComponentConstantPalette,
-        DevGUIPalette {
+        GUIElementComponentConstantPaletteInterface,
+        DevGUIPaletteInterface {
         
         enum Card {
             
@@ -135,6 +135,6 @@ extension DevSoftwareEngineerGUIElementComponentConstantPalette.GUIElementCompon
     }
     
     public enum GUIComponentScreen:
-        GUIElementComponentConstantPalette,
-        DevGUIPalette {}
+        GUIElementComponentConstantPaletteInterface,
+        DevGUIPaletteInterface {}
 }

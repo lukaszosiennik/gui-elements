@@ -7,10 +7,10 @@ public protocol SystemGUIElementComponentFontPaletteInterface:
     SystemGUIElementPaletteInterface
 where
     GUIElementComponent.GUIComponent
-        : GUIElementComponentFontPalette,
+        : GUIElementComponentFontPaletteInterface,
     GUIElementComponent.GUIComponentSet
-        : GUIElementComponentFontPalette,
+        : GUIElementComponentFontPaletteInterface,
     GUIElementComponent.GUIComponentGroup
-        : GUIElementComponentFontPalette,
+        : GUIElementComponentFontPaletteInterface,
     GUIElementComponent.GUIComponentScreen
-        : GUIElementComponentFontPalette {}
+        : GUIElementComponentFontPaletteInterface {}

@@ -13,18 +13,18 @@ public enum AppCompanySpecificGUIElementComponentColorPalette:
 extension AppCompanySpecificGUIElementComponentColorPalette.GUIElementComponent {
         
     public enum GUIComponent:
-        GUIElementComponentColorPalette,
-        AppGUIPalette {}
+        GUIElementComponentColorPaletteInterface,
+        AppGUIPaletteInterface {}
     
     public enum GUIComponentSet:
-        GUIElementComponentColorPalette,
-        AppGUIPalette {}
+        GUIElementComponentColorPaletteInterface,
+        AppGUIPaletteInterface {}
     
     public enum GUIComponentGroup:
-        GUIElementComponentColorPalette,
-        AppGUIPalette {}
+        GUIElementComponentColorPaletteInterface,
+        AppGUIPaletteInterface {}
     
     public enum GUIComponentScreen:
-        GUIElementComponentColorPalette,
-        AppGUIPalette {}
+        GUIElementComponentColorPaletteInterface,
+        AppGUIPaletteInterface {}
 }

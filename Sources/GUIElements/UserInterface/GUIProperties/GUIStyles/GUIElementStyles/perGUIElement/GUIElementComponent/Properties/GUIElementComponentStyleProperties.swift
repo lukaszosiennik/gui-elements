@@ -8,7 +8,7 @@ public protocol GUIElementComponentStyleProperties:
     GUIPropertyDefaultValueBasedOnInputInterface {
     
     associatedtype GUIElementComponentStylePropertiesLookInterfaceType:
-        GUIElementComponentStylePropertiesLookInterface
+        GUIElementComponentStylePropertiesLook
     associatedtype GUIElementComponentStylePropertiesLookParamsType:
         GUIElementComponentStylePropertiesLookParams
     associatedtype GUIElementComponentStylePropertiesLayoutParamsType:

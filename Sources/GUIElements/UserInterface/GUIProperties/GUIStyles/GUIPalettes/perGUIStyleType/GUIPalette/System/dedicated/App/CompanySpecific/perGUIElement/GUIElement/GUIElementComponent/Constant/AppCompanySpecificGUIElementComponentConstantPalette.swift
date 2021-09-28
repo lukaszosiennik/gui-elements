@@ -13,18 +13,18 @@ public enum AppCompanySpecificGUIElementComponentConstantPalette:
 extension AppCompanySpecificGUIElementComponentConstantPalette.GUIElementComponent {
         
     public enum GUIComponent:
-        GUIElementComponentConstantPalette,
-        AppGUIPalette {}
+        GUIElementComponentConstantPaletteInterface,
+        AppGUIPaletteInterface {}
     
     public enum GUIComponentSet:
-        GUIElementComponentConstantPalette,
-        AppGUIPalette {}
+        GUIElementComponentConstantPaletteInterface,
+        AppGUIPaletteInterface {}
     
     public enum GUIComponentGroup:
-        GUIElementComponentConstantPalette,
-        AppGUIPalette {}
+        GUIElementComponentConstantPaletteInterface,
+        AppGUIPaletteInterface {}
     
     public enum GUIComponentScreen:
-        GUIElementComponentConstantPalette,
-        AppGUIPalette {}
+        GUIElementComponentConstantPaletteInterface,
+        AppGUIPaletteInterface {}
 }

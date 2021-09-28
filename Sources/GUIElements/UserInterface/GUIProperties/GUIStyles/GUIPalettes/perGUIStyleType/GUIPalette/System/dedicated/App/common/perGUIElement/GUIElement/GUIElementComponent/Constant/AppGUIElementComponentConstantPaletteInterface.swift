@@ -7,10 +7,10 @@ public protocol AppGUIElementComponentConstantPaletteInterface:
     SystemGUIElementComponentConstantPaletteInterface
 where
     GUIElementComponent.GUIComponent
-        : AppGUIPalette,
+        : AppGUIPaletteInterface,
     GUIElementComponent.GUIComponentSet
-        : AppGUIPalette,
+        : AppGUIPaletteInterface,
     GUIElementComponent.GUIComponentGroup
-        : AppGUIPalette,
+        : AppGUIPaletteInterface,
     GUIElementComponent.GUIComponentScreen
-        : AppGUIPalette {}
+        : AppGUIPaletteInterface {}

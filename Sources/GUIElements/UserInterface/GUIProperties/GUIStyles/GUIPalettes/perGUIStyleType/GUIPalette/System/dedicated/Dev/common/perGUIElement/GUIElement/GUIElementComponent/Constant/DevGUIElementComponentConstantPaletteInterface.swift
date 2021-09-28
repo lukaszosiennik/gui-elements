@@ -7,10 +7,10 @@ public protocol DevGUIElementComponentConstantPaletteInterface:
     SystemGUIElementComponentConstantPaletteInterface
 where
     GUIElementComponent.GUIComponent
-        : DevGUIPalette,
+        : DevGUIPaletteInterface,
     GUIElementComponent.GUIComponentSet
-        : DevGUIPalette,
+        : DevGUIPaletteInterface,
     GUIElementComponent.GUIComponentGroup
-        : DevGUIPalette,
+        : DevGUIPaletteInterface,
     GUIElementComponent.GUIComponentScreen
-        : DevGUIPalette {}
+        : DevGUIPaletteInterface {}
