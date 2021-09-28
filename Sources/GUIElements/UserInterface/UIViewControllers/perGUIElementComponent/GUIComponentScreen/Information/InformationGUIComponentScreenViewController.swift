@@ -15,15 +15,15 @@ final public class InformationGUIComponentScreenViewController:
         return view as? View
     }
     
-    private let note: String
+    private let strings: View.Params.LocalizationStrings
     
     private let styleType: GUIStyleType
     
     public init(
-        note: String,
+        strings: View.Params.LocalizationStrings,
         styleType: GUIStyleType
     ) {
-        self.note = note
+        self.strings = strings
         self.styleType = styleType
         super.init(
             nibName: nil,
@@ -43,9 +43,7 @@ final public class InformationGUIComponentScreenViewController:
         view = View(
             settings: .init(
                 params: .init(
-                    strings: .init(
-                        title: note
-                    )
+                    strings: strings
                 ),
                 styleType: styleType
             )
