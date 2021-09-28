@@ -8,7 +8,7 @@ import UIKit
 final public class InformationGUIComponentScreenViewController:
     UIViewController {
     
-    typealias View =
+    public typealias View =
         InformationGUIComponentScreen
     
     var customView: View? {
