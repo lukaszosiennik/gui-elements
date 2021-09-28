@@ -6,11 +6,11 @@
 public protocol GUIComponentGroupSettings:
     GUIElementComponentSettings
 where
-    GUIElementComponentParamsType
+    Params
         : GUIComponentGroupParams,
-    GUIElementComponentStylePropertiesType
+    StyleProperties
         : GUIComponentGroupStyleProperties,
-    GUIElementComponentStylePropertiesOverwrittenType
+    StylePropertiesOverwritten
         : GUIComponentGroupStylePropertiesOverwritten {}
 
 extension GUIComponentGroupSettings {

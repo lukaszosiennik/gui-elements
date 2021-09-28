@@ -7,7 +7,7 @@ public protocol GUIElementComponentStylePropertiesLookParams:
     GUIElementStylePropertiesLookParams,
     GUIPropertyDefaultOptionalValueInterface {
     
-    associatedtype GUIElementComponentStylePropertiesOverwrittenLookParamsType:
+    associatedtype OverwrittenLookParams:
         GUIElementComponentStylePropertiesOverwrittenLookParams
     
     associatedtype DefaultConstantPalette:
@@ -20,7 +20,7 @@ public protocol GUIElementComponentStylePropertiesLookParams:
 
     init?(
         lookParams: Self?,
-        overwrittenBy newLookParams: GUIElementComponentStylePropertiesOverwrittenLookParamsType?
+        overwrittenBy newLookParams: OverwrittenLookParams?
     )
 }
 

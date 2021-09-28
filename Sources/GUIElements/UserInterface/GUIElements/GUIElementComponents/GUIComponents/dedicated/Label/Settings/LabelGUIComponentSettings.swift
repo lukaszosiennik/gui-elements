@@ -6,7 +6,7 @@
 public struct LabelGUIComponentSettings:
     GUIComponentSettings {
 
-    public typealias GUIElementComponentStylePropertiesOverwrittenType =
+    public typealias StylePropertiesOverwritten =
         LabelGUIComponentStylePropertiesOverwritten
 
     public let params: LabelGUIComponentParams

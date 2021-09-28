@@ -6,10 +6,10 @@
 public struct DevBootstrapGUIComponentGroupPaletts:
     DevGUIComponentGroupPalettsInterface {
     
-    public typealias SystemGUIElementColorPalette =
+    public typealias GUIElementColorPalette =
         DevBootstrapGUIElementComponentColorPalette
-    public typealias SystemGUIElementFontPalette =
+    public typealias GUIElementFontPalette =
         DevBootstrapGUIElementComponentFontPalette
-    public typealias SystemGUIElementComponentConstantPalette =
+    public typealias GUIElementComponentConstantPalette =
         DevBootstrapGUIElementComponentConstantPalette
 }

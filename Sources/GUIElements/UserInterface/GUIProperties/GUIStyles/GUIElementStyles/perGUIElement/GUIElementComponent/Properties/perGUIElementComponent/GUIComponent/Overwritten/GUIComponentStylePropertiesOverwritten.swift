@@ -6,9 +6,9 @@
 public protocol GUIComponentStylePropertiesOverwritten:
     GUIElementComponentStylePropertiesOverwritten
 where
-    GUIElementComponentStylePropertiesOverwrittenLookType
+    Look
         : GUIComponentStylePropertiesOverwrittenLook,
-    GUIElementComponentStylePropertiesOverwrittenLookParamsType
+    LookParams
         : GUIComponentStylePropertiesOverwrittenLookParams,
-    GUIElementComponentStylePropertiesOverwrittenLayoutParamsType
+    LayoutParams
         : GUIComponentStylePropertiesOverwrittenLayoutParams {}

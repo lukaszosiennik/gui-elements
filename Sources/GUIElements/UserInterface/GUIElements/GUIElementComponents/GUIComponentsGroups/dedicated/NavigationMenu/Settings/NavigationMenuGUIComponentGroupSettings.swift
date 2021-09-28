@@ -11,7 +11,7 @@ public struct NavigationMenuGUIComponentGroupSettings<
 >:
     GUIComponentGroupSettings {
 
-    public typealias GUIElementComponentStylePropertiesOverwrittenType =
+    public typealias StylePropertiesOverwritten =
         NavigationMenuGUIComponentGroupStylePropertiesOverwritten
     
     public let params: NavigationMenuGUIComponentGroupParams<

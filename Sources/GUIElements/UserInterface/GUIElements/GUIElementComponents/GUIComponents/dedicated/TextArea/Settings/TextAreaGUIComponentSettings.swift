@@ -6,7 +6,7 @@
 public struct TextAreaGUIComponentSettings:
     GUIComponentSettings {
 
-    public typealias GUIElementComponentStylePropertiesOverwrittenType =
+    public typealias StylePropertiesOverwritten =
         EmptyGUIComponentStylePropertiesOverwritten
 
     public let params: TextAreaGUIComponentParams

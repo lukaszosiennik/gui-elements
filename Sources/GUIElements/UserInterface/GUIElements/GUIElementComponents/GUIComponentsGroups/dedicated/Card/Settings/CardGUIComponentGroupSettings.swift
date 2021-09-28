@@ -9,7 +9,7 @@ public struct CardGUIComponentGroupSettings<
 >:
     GUIComponentGroupSettings {
 
-    public typealias GUIElementComponentStylePropertiesOverwrittenType =
+    public typealias StylePropertiesOverwritten =
         EmptyGUIComponentGroupStylePropertiesOverwritten
     
     public let params: CardGUIComponentGroupParams
@@ -53,7 +53,7 @@ public struct CardGUIComponentGroupSettings<
     public init(
         params: CardGUIComponentGroupParams,
         styleType: GUIStyleType,
-        bodySettingsParams: BodyGUIElementComponentSettingsType.GUIElementComponentParamsType
+        bodySettingsParams: BodyGUIElementComponentSettingsType.Params
     ) {
         self.init(
             params: params,

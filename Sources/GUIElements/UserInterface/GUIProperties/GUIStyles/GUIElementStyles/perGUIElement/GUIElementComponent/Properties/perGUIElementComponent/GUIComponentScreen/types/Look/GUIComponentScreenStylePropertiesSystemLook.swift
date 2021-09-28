@@ -6,7 +6,7 @@
 public protocol GUIComponentScreenStylePropertiesSystemLook:
     GUIElementComponentStylePropertiesSystemLook
 where
-    GUIElementComponentStylePropertiesOverwrittenLookType
+    OverwrittenLook
         : GUIComponentScreenStylePropertiesOverwrittenLook {}
 
 extension GUIComponentScreenStylePropertiesSystemLook {

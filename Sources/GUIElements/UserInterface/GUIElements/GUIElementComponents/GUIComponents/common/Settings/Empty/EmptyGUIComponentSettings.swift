@@ -6,7 +6,7 @@
 public struct EmptyGUIComponentSettings:
     GUIComponentSettings {
 
-    public typealias GUIElementComponentStylePropertiesOverwrittenType =
+    public typealias StylePropertiesOverwritten =
         EmptyGUIComponentStylePropertiesOverwritten
     
     public let params: EmptyGUIComponentParams

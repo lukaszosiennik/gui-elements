@@ -9,7 +9,7 @@ public final class CardGUIComponentGroup<
 >:
     CardGUIComponentGroupBasis<
         BodyGUIElementComponentType,
-        BodyGUIElementComponentType.GUIElementComponentSettingsType
+        BodyGUIElementComponentType.Settings
     > {
 
     override func setupBodyNestedSettings() {

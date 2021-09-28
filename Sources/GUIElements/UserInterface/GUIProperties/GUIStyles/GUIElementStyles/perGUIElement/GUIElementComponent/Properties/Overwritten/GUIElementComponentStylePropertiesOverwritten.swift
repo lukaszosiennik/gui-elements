@@ -6,26 +6,26 @@
 public protocol GUIElementComponentStylePropertiesOverwritten:
     GUIElementStyleProperties {
     
-    associatedtype GUIElementComponentStylePropertiesOverwrittenLookType:
+    associatedtype Look:
         GUIElementComponentStylePropertiesOverwrittenLook
-    associatedtype GUIElementComponentStylePropertiesOverwrittenLookParamsType:
+    associatedtype LookParams:
         GUIElementComponentStylePropertiesOverwrittenLookParams
-    associatedtype GUIElementComponentStylePropertiesOverwrittenLayoutParamsType:
+    associatedtype LayoutParams:
         GUIElementComponentStylePropertiesOverwrittenLayoutParams
     
-    var look: GUIElementComponentStylePropertiesOverwrittenLookType? {
+    var look: Look? {
         get
     }
-    var lookParams: GUIElementComponentStylePropertiesOverwrittenLookParamsType? {
+    var lookParams: LookParams? {
         get
     }
-    var layoutParams: GUIElementComponentStylePropertiesOverwrittenLayoutParamsType? {
+    var layoutParams: LayoutParams? {
         get
     }
     
     init(
-        look: GUIElementComponentStylePropertiesOverwrittenLookType?,
-        lookParams: GUIElementComponentStylePropertiesOverwrittenLookParamsType?,
-        layoutParams: GUIElementComponentStylePropertiesOverwrittenLayoutParamsType?
+        look: Look?,
+        lookParams: LookParams?,
+        layoutParams: LayoutParams?
     )
 }

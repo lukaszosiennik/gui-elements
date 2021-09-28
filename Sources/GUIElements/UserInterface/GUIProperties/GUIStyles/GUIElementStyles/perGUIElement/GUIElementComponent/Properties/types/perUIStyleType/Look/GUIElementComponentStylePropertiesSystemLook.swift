@@ -6,11 +6,11 @@
 public protocol GUIElementComponentStylePropertiesSystemLook:
     GUIElementStylePropertiesLook {
     
-    associatedtype GUIElementComponentStylePropertiesOverwrittenLookType:
+    associatedtype OverwrittenLook:
         GUIElementComponentStylePropertiesOverwrittenLook
 
     init(
         look: Self,
-        overwrittenBy newLook: GUIElementComponentStylePropertiesOverwrittenLookType?
+        overwrittenBy newLook: OverwrittenLook?
     )
 }

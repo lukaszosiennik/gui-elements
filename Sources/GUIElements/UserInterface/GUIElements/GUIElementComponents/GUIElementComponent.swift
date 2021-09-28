@@ -13,21 +13,21 @@ public final class GUIElementComponentInitialization {
 public protocol GUIElementComponent:
     GUIElement {
     
-    associatedtype GUIElementComponentSettingsType:
+    associatedtype Settings:
         GUIElementComponentSettings
     
     var initialization: GUIElementComponentInitialization {
         get
     }
     
-    var settings: GUIElementComponentSettingsType {
+    var settings: Settings {
         get
         set
     }
     
     init()
     init(
-        settings: GUIElementComponentSettingsType
+        settings: Settings
     )
     
     // it's here only for ButtonGUIComponent purpose
@@ -36,26 +36,26 @@ public protocol GUIElementComponent:
     func setupNestedSettings()
     
     func setupParams(
-        _ params: GUIElementComponentSettingsType.GUIElementComponentParamsType
+        _ params: Settings.Params
     )
     
     func setupStyleLookOSConfiguration(
         _ lookConfiguration: GUIElementComponentLookOSConfiguration
     )
     func setupStyleLookOS(
-        _ look: GUIElementComponentSettingsType.GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesOSLookType
+        _ look: Settings.StyleProperties.Look.OSLook
     )
     func setupStyleLookSystem(
-        _ look: GUIElementComponentSettingsType.GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesSystemLookType
+        _ look: Settings.StyleProperties.Look.SystemLook
     )
     func setupStyleLookParamsOS()
     func setupStyleLookParamsSystem(
-        _ lookParams: GUIElementComponentSettingsType.GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLookParamsType
+        _ lookParams: Settings.StyleProperties.LookParams
     )
     func setupStyleLayoutInitialization()
     func setupStyleLayoutOS()
     func setupStyleLayoutSystem(
-        _ layoutParams: GUIElementComponentSettingsType.GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLayoutParamsType
+        _ layoutParams: Settings.StyleProperties.LayoutParams
     )
 }
 

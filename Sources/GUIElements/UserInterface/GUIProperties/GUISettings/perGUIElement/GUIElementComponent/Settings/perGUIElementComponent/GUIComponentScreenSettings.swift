@@ -6,11 +6,11 @@
 public protocol GUIComponentScreenSettings:
     GUIElementComponentSettings
 where
-    GUIElementComponentParamsType
+    Params
         : GUIComponentScreenParams,
-    GUIElementComponentStylePropertiesType
+    StyleProperties
         : GUIComponentScreenStyleProperties,
-    GUIElementComponentStylePropertiesOverwrittenType
+    StylePropertiesOverwritten
         == EmptyGUIComponentScreenStylePropertiesOverwritten {}
 
 extension GUIComponentScreenSettings {

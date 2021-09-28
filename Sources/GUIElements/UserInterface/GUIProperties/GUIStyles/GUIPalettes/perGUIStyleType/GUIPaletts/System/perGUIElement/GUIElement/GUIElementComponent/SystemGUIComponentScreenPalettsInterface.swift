@@ -7,9 +7,9 @@ public protocol SystemGUIComponentScreenPalettsInterface:
     SystemGUIElementPalettsInterface {
     
     typealias ColorPalette =
-        SystemGUIElementColorPalette.GUIElementComponent.GUIComponentScreen
+        GUIElementColorPalette.GUIElementComponent.GUIComponentScreen
     typealias FontPalette =
-        SystemGUIElementFontPalette.GUIElementComponent.GUIComponentScreen
+        GUIElementFontPalette.GUIElementComponent.GUIComponentScreen
     typealias ConstantPalette =
-        SystemGUIElementComponentConstantPalette.GUIElementComponent.GUIComponentScreen
+        GUIElementComponentConstantPalette.GUIElementComponent.GUIComponentScreen
 }

@@ -8,11 +8,11 @@ import UIKit
 public protocol GUIComponentScreen:
     GUIElementComponent
 where
-    GUIElementComponentSettingsType
+    Settings
         : GUIComponentScreenSettings {
             
     typealias ParamsType =
-        GUIElementComponentSettingsType.GUIElementComponentParamsType
+        Settings.Params
     
     func setupScreenStyleLookOS()
 }

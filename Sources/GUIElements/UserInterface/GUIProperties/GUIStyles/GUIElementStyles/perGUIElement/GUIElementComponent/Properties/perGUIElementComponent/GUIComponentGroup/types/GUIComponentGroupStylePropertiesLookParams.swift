@@ -6,7 +6,7 @@
 public protocol GUIComponentGroupStylePropertiesLookParams:
     GUIElementComponentStylePropertiesLookParams
 where
-    GUIElementComponentStylePropertiesOverwrittenLookParamsType
+    OverwrittenLookParams
         : GUIComponentGroupStylePropertiesOverwrittenLookParams,
     DefaultConstantPalette
         == DefaultGUIElementComponentConstantPalette.GUIElementComponent.GUIComponentGroup {}

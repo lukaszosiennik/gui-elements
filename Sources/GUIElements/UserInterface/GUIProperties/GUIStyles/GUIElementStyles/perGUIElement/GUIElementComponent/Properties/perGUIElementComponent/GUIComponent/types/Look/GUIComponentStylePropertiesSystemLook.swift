@@ -6,5 +6,5 @@
 public protocol GUIComponentStylePropertiesSystemLook:
     GUIElementComponentStylePropertiesSystemLook
 where
-    GUIElementComponentStylePropertiesOverwrittenLookType
+    OverwrittenLook
         : GUIComponentStylePropertiesOverwrittenLook {}

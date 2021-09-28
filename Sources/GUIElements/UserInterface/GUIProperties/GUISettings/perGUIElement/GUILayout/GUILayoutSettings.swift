@@ -7,11 +7,11 @@ public protocol GUILayoutSettings:
     GUIElementSettings,
     GUIPropertyDefaultValueInterface {
     
-    associatedtype GUILayoutStylePropertiesType:
+    associatedtype StyleProperties:
         GUILayoutStyleProperties
     
     var stylePack: GUILayoutStylePack<
-        GUILayoutStylePropertiesType
+        StyleProperties
     > {
         get
         set
@@ -23,14 +23,14 @@ public protocol GUILayoutSettings:
     )
     init(
         stylePack: GUILayoutStylePack<
-            GUILayoutStylePropertiesType
+            StyleProperties
         >
     )
     
     static func stylePack(
         for styleType: GUIStyleType
     ) -> GUILayoutStylePack<
-        GUILayoutStylePropertiesType
+        StyleProperties
     >
 }
 

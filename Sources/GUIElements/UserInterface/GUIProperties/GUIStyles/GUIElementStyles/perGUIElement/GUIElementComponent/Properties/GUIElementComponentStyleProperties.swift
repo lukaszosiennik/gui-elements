@@ -7,33 +7,33 @@ public protocol GUIElementComponentStyleProperties:
     GUIElementStyleProperties,
     GUIPropertyDefaultValueBasedOnInputInterface {
     
-    associatedtype GUIElementComponentStylePropertiesLookInterfaceType:
+    associatedtype Look:
         GUIElementComponentStylePropertiesLook
-    associatedtype GUIElementComponentStylePropertiesLookParamsType:
+    associatedtype LookParams:
         GUIElementComponentStylePropertiesLookParams
-    associatedtype GUIElementComponentStylePropertiesLayoutParamsType:
+    associatedtype LayoutParams:
         GUIElementComponentStylePropertiesLayoutParams
     
     var lookType: GUIElementComponentStylePropertiesLookType<
-        GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesOSLookType,
-        GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesSystemLookType
+        Look.OSLook,
+        Look.SystemLook
     > {
         get
     }
-    var lookParams: GUIElementComponentStylePropertiesLookParamsType? {
+    var lookParams: LookParams? {
         get
     }
-    var layoutParams: GUIElementComponentStylePropertiesLayoutParamsType? {
+    var layoutParams: LayoutParams? {
         get
     }
     
     init(
         lookType: GUIElementComponentStylePropertiesLookType<
-            GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesOSLookType,
-            GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesSystemLookType
+            Look.OSLook,
+            Look.SystemLook
         >,
-        lookParams: GUIElementComponentStylePropertiesLookParamsType?,
-        layoutParams: GUIElementComponentStylePropertiesLayoutParamsType?
+        lookParams: LookParams?,
+        layoutParams: LayoutParams?
     )
 }
 
@@ -42,7 +42,7 @@ extension GUIElementComponentStyleProperties {
     public static func `default`(
         styleType: GUIStyleType
     ) -> Self {
-        var layoutParams: GUIElementComponentStylePropertiesLayoutParamsType? = nil
+        var layoutParams: LayoutParams? = nil
         if case let .os(styleProperties) = styleType, styleProperties.isLayoutParamsPreferred {
             layoutParams = .preferred
         }

@@ -5,8 +5,8 @@
 
 public protocol GUIElementComponentStylePropertiesLook {
     
-    associatedtype GUIElementComponentStylePropertiesOSLookType:
+    associatedtype OSLook:
         GUIElementComponentStylePropertiesOSLook
-    associatedtype GUIElementComponentStylePropertiesSystemLookType:
+    associatedtype SystemLook:
         GUIElementComponentStylePropertiesSystemLook
 }

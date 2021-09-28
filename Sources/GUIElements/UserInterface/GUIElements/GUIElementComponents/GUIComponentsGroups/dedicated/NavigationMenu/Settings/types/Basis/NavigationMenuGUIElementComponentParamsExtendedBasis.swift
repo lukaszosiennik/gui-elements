@@ -14,7 +14,7 @@ open class NavigationMenuGUIElementComponentParamsExtendedBasis<
     NavigationMenuGUIElementComponentParamsInterface,
     GUIElementComponentParams {
     
-    public typealias OptionsKeyValueType =
+    public typealias OptionsKeyValue =
         OptionsKeyValue
     
     public typealias AdditionalParams =

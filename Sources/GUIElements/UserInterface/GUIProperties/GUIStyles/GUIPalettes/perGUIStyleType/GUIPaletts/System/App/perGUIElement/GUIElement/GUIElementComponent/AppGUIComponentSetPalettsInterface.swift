@@ -6,9 +6,9 @@
 public protocol AppGUIComponentSetPalettsInterface:
     SystemGUIComponentSetPalettsInterface
 where
-    SystemGUIElementColorPalette
+    GUIElementColorPalette
         : AppGUIElementComponentColorPaletteInterface,
-    SystemGUIElementFontPalette
+    GUIElementFontPalette
         : AppGUIElementComponentFontPaletteInterface,
-    SystemGUIElementComponentConstantPalette
+    GUIElementComponentConstantPalette
         : AppGUIElementComponentConstantPaletteInterface {}

@@ -6,11 +6,11 @@
 public protocol GUIComponentSetSettings:
     GUIElementComponentSettings
 where
-    GUIElementComponentParamsType
+    Params
         : GUIComponentSetParams,
-    GUIElementComponentStylePropertiesType
+    StyleProperties
         : GUIComponentSetStyleProperties,
-    GUIElementComponentStylePropertiesOverwrittenType
+    StylePropertiesOverwritten
         : GUIComponentSetStylePropertiesOverwritten {}
 
 extension GUIComponentSetSettings {

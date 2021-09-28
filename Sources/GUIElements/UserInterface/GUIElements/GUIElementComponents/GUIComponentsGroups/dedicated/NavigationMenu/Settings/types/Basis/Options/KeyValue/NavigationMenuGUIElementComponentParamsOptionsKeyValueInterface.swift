@@ -5,8 +5,8 @@
 
 public protocol NavigationMenuGUIElementComponentParamsOptionsKeyValueInterface {
     
-    associatedtype KeyType:
+    associatedtype Key:
         InputGUIElementComponentActionKeyInterface
-    associatedtype ValueType:
+    associatedtype Value:
         NavigationMenuGUIElementComponentParamsOptionValueObjectInterface
 }

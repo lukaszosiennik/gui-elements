@@ -5,7 +5,7 @@
 
 extension GUIComponentStylePropertiesSystemLook
 where
-    GUIElementComponentStylePropertiesOverwrittenLookType
+    OverwrittenLook
         == EmptyGUIComponentStylePropertiesOverwrittenLook {
     
     public init(

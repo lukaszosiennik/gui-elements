@@ -5,15 +5,15 @@
 
 extension GUIComponentGroupStyleProperties
 where
-    GUIElementComponentStylePropertiesLookParamsType
+    LookParams
         == EmptyGUIComponentGroupStylePropertiesLookParams {
     
     public init(
         lookType: GUIElementComponentStylePropertiesLookType<
-            GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesOSLookType,
-            GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesSystemLookType
+            Look.OSLook,
+            Look.SystemLook
         >,
-        layoutParams: GUIElementComponentStylePropertiesLayoutParamsType?
+        layoutParams: LayoutParams?
     ) {
         self = .init(
             lookType: lookType,

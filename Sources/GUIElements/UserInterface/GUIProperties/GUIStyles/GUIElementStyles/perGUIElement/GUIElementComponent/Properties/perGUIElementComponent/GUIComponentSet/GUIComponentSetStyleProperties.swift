@@ -6,9 +6,9 @@
 public protocol GUIComponentSetStyleProperties:
     GUIElementComponentStyleProperties
 where
-    GUIElementComponentStylePropertiesLookInterfaceType
+    Look
         : GUIComponentSetStylePropertiesLook,
-    GUIElementComponentStylePropertiesLookParamsType
+    LookParams
         : GUIComponentSetStylePropertiesLookParams,
-    GUIElementComponentStylePropertiesLayoutParamsType
+    LayoutParams
         : GUIComponentSetStylePropertiesLayoutParams {}

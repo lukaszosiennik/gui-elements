@@ -6,7 +6,7 @@
 public protocol GUIComponentScreenStylePropertiesLayoutParams:
     GUIElementComponentStylePropertiesLayoutParams
 where
-    GUIElementComponentStylePropertiesOverwrittenLayoutParamsType
+    OverwrittenLayoutParams
         : GUIComponentScreenStylePropertiesOverwrittenLayoutParams,
     DefaultConstantPalette
         == DefaultGUIElementComponentConstantPalette.GUIElementComponent.GUIComponentScreen {}

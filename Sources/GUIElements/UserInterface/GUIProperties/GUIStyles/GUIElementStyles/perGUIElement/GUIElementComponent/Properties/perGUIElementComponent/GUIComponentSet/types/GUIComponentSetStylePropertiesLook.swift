@@ -6,7 +6,7 @@
 public protocol GUIComponentSetStylePropertiesLook:
     GUIElementComponentStylePropertiesLook
 where
-    GUIElementComponentStylePropertiesOSLookType
+    OSLook
         : GUIComponentSetStylePropertiesOSLook,
-    GUIElementComponentStylePropertiesSystemLookType
+    SystemLook
         : GUIComponentSetStylePropertiesSystemLook {}

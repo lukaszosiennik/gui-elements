@@ -6,12 +6,12 @@
 public protocol SystemGUIElementPalettsInterface:
     GUIElementPalettsInterface {
         
-    associatedtype SystemGUIElementColorPalette:
+    associatedtype GUIElementColorPalette:
         SystemGUIElementComponentColorPaletteInterface
     
-    associatedtype SystemGUIElementFontPalette:
+    associatedtype GUIElementFontPalette:
         SystemGUIElementComponentFontPaletteInterface
     
-    associatedtype SystemGUIElementComponentConstantPalette:
+    associatedtype GUIElementComponentConstantPalette:
         SystemGUIElementComponentConstantPaletteInterface
 }

@@ -7,7 +7,7 @@ public protocol GUIElementComponentStylePropertiesLayoutParams:
     GUIElementStylePropertiesLayoutParams,
     GUIPropertyPreferredValueInterface {
     
-    associatedtype GUIElementComponentStylePropertiesOverwrittenLayoutParamsType:
+    associatedtype OverwrittenLayoutParams:
         GUIElementComponentStylePropertiesOverwrittenLayoutParams
     
     associatedtype DefaultConstantPalette:
@@ -16,6 +16,6 @@ public protocol GUIElementComponentStylePropertiesLayoutParams:
 
     init?(
         layoutParams: Self?,
-        overwrittenBy newLayoutParams: GUIElementComponentStylePropertiesOverwrittenLayoutParamsType?
+        overwrittenBy newLayoutParams: OverwrittenLayoutParams?
     )
 }

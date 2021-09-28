@@ -6,16 +6,16 @@
 public protocol GUILayout:
     GUIElement {
     
-    associatedtype GUILayoutSettingsType:
+    associatedtype Settings:
         GUILayoutSettings
     
-    var settings: GUILayoutSettingsType {
+    var settings: Settings {
         get
         set
     }
     
     init(
-        settings: GUILayoutSettingsType
+        settings: Settings
     )
     
     func setupParams()

@@ -4,29 +4,29 @@
 //
 
 public struct GUIComponentSetStylePropertiesTemplate<
-    GUIElementComponentStylePropertiesLookInterfaceType:
+    Look:
         GUIComponentSetStylePropertiesLook,
-    GUIComponentSetStylePropertiesLookParamsType:
+    LookParams:
         GUIComponentSetStylePropertiesLookParams,
-    GUIComponentSetStylePropertiesLayoutParamsType:
+    LayoutParams:
         GUIComponentSetStylePropertiesLayoutParams
 >:
     GUIComponentSetStyleProperties {
 
     public let lookType: GUIElementComponentStylePropertiesLookType<
-        GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesOSLookType,
-        GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesSystemLookType
+        Look.OSLook,
+        Look.SystemLook
     >
-    public let lookParams: GUIComponentSetStylePropertiesLookParamsType?
-    public let layoutParams: GUIComponentSetStylePropertiesLayoutParamsType?
+    public let lookParams: LookParams?
+    public let layoutParams: LayoutParams?
     
     public init(
         lookType: GUIElementComponentStylePropertiesLookType<
-            GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesOSLookType,
-            GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesSystemLookType
+            Look.OSLook,
+            Look.SystemLook
         >,
-        lookParams: GUIComponentSetStylePropertiesLookParamsType?,
-        layoutParams: GUIComponentSetStylePropertiesLayoutParamsType?
+        lookParams: LookParams?,
+        layoutParams: LayoutParams?
     ) {
         self.lookType = lookType
         self.lookParams = lookParams

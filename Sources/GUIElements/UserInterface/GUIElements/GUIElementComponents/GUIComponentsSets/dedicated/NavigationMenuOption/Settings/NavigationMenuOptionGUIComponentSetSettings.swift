@@ -6,7 +6,7 @@
 public struct NavigationMenuOptionGUIComponentSetSettings:
     GUIComponentSetSettings {
     
-    public typealias GUIElementComponentStylePropertiesOverwrittenType =
+    public typealias StylePropertiesOverwritten =
         EmptyGUIComponentSetStylePropertiesOverwritten
     
     public let params: NavigationMenuOptionGUIComponentSetParams

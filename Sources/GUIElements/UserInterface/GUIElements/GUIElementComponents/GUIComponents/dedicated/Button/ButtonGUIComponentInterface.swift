@@ -8,7 +8,7 @@ import UIKit
 public protocol ButtonGUIComponentInterface:
     GUIComponent
 where
-    GUIElementComponentSettingsType
+    Settings
         == ButtonGUIComponentSettings {}
 
 extension ButtonGUIComponentInterface {

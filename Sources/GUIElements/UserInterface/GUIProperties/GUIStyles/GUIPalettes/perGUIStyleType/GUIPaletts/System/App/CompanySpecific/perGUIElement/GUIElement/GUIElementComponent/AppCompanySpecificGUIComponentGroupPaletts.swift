@@ -6,10 +6,10 @@
 public struct AppCompanySpecificGUIComponentGroupPaletts:
     AppGUIComponentGroupPalettsInterface {
     
-    public typealias SystemGUIElementColorPalette =
+    public typealias GUIElementColorPalette =
         AppCompanySpecificGUIElementComponentColorPalette
-    public typealias SystemGUIElementFontPalette =
+    public typealias GUIElementFontPalette =
         AppCompanySpecificGUIElementComponentFontPalette
-    public typealias SystemGUIElementComponentConstantPalette =
+    public typealias GUIElementComponentConstantPalette =
         AppCompanySpecificGUIElementComponentConstantPalette
 }

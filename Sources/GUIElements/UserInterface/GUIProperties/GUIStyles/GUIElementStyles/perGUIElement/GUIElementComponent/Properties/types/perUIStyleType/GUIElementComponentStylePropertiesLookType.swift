@@ -4,12 +4,12 @@
 //
 
 public enum GUIElementComponentStylePropertiesLookType<
-    GUIElementComponentStylePropertiesOSLookType:
+    OSLook:
         GUIElementComponentStylePropertiesOSLook,
-    GUIElementComponentStylePropertiesSystemLookType:
+    SystemLook:
         GUIElementComponentStylePropertiesSystemLook
 > {
     
-    case os(_ look: GUIElementComponentStylePropertiesOSLookType)
-    case system(_ look: GUIElementComponentStylePropertiesSystemLookType)
+    case os(_ look: OSLook)
+    case system(_ look: SystemLook)
 }

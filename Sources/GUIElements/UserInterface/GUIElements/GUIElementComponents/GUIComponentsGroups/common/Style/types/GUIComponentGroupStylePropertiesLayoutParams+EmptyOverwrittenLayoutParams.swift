@@ -5,7 +5,7 @@
 
 extension GUIComponentGroupStylePropertiesLayoutParams
 where
-    GUIElementComponentStylePropertiesOverwrittenLayoutParamsType
+    OverwrittenLayoutParams
         == EmptyGUIComponentGroupStylePropertiesOverwrittenLayoutParams {
     
     public init?(

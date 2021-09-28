@@ -10,55 +10,55 @@ public protocol GUIElementComponentSettings:
     GUIPropertyDefaultValueInterface,
     SelfInstanceOverwrittingInterface {
     
-    associatedtype GUIElementComponentParamsType:
+    associatedtype Params:
         GUIElementComponentParams
-    associatedtype GUIElementComponentStylePropertiesType:
+    associatedtype StyleProperties:
         GUIElementComponentStyleProperties
-    associatedtype GUIElementComponentStylePropertiesOverwrittenType:
+    associatedtype StylePropertiesOverwritten:
         GUIElementComponentStylePropertiesOverwritten
     
-    var params: GUIElementComponentParamsType {
+    var params: Params {
         get
     }
     var style: GUIElementComponentStyle<
-        GUIElementComponentStylePropertiesType
+        StyleProperties
     > {
         get
     }
     
     init(
-        params: GUIElementComponentParamsType,
+        params: Params,
         style: GUIElementComponentStyle<
-            GUIElementComponentStylePropertiesType
+            StyleProperties
         >
     )
     
     static var style: GUIElementComponentStyle<
-        GUIElementComponentStylePropertiesType
+        StyleProperties
     >? {
         get
     }
     static func style(
         for styleType: GUIStyleType
     ) -> GUIElementComponentStyle<
-        GUIElementComponentStylePropertiesType
+        StyleProperties
     >?
     
     static var styleUnwrapped: GUIElementComponentStyle<
-        GUIElementComponentStylePropertiesType
+        StyleProperties
     > {
         get
     }
     static func style(
         for styleType: GUIStyleType
     ) -> GUIElementComponentStyle<
-        GUIElementComponentStylePropertiesType
+        StyleProperties
     >
     static func style(
         for styleType: GUIStyleType,
-        overwrittenBy stylePropertiesOverwritten: GUIElementComponentStylePropertiesOverwrittenType
+        overwrittenBy stylePropertiesOverwritten: StylePropertiesOverwritten
     ) -> GUIElementComponentStyle<
-        GUIElementComponentStylePropertiesType
+        StyleProperties
     >
 }
 
@@ -80,7 +80,7 @@ extension GUIElementComponentSettings {
         }
     }
     
-    public var styleProperties: GUIElementComponentStylePropertiesType {
+    public var styleProperties: StyleProperties {
         return style.properties
     }
 }
@@ -94,7 +94,7 @@ extension GUIElementComponentSettings {
     }
     
     public init(
-        params: GUIElementComponentParamsType
+        params: Params
     ) {
         self.init(
             params: params,
@@ -103,7 +103,7 @@ extension GUIElementComponentSettings {
     }
     
     public init(
-        params: GUIElementComponentParamsType,
+        params: Params,
         styleType: GUIStyleType
     ) {
         self.init(
@@ -115,9 +115,9 @@ extension GUIElementComponentSettings {
     }
     
     public init(
-        params: GUIElementComponentParamsType,
+        params: Params,
         styleType: GUIStyleType,
-        overwrittenBy styleProperties: GUIElementComponentStylePropertiesOverwrittenType
+        overwrittenBy styleProperties: StylePropertiesOverwritten
     ) {
         self.init(
             params: params,
@@ -149,15 +149,15 @@ extension GUIElementComponentSettings {
 
 extension GUIElementComponentSettings
 where
-    GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesSystemLookType.GUIElementComponentStylePropertiesOverwrittenLookType
-        == GUIElementComponentStylePropertiesOverwrittenType.GUIElementComponentStylePropertiesOverwrittenLookType,
-    GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLookParamsType.GUIElementComponentStylePropertiesOverwrittenLookParamsType
-        == GUIElementComponentStylePropertiesOverwrittenType.GUIElementComponentStylePropertiesOverwrittenLookParamsType,
-    GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLayoutParamsType.GUIElementComponentStylePropertiesOverwrittenLayoutParamsType
-        == GUIElementComponentStylePropertiesOverwrittenType.GUIElementComponentStylePropertiesOverwrittenLayoutParamsType {
+    StyleProperties.Look.SystemLook.OverwrittenLook
+        == StylePropertiesOverwritten.Look,
+    StyleProperties.LookParams.OverwrittenLookParams
+        == StylePropertiesOverwritten.LookParams,
+    StyleProperties.LayoutParams.OverwrittenLayoutParams
+        == StylePropertiesOverwritten.LayoutParams {
     
     public static var styleUnwrapped: GUIElementComponentStyle<
-        GUIElementComponentStylePropertiesType
+        StyleProperties
     > {
         return style ?? .default
     }
@@ -165,7 +165,7 @@ where
     public static func style(
         for styleType: GUIStyleType
     ) -> GUIElementComponentStyle<
-        GUIElementComponentStylePropertiesType
+        StyleProperties
     > {
         return style(
             for: styleType
@@ -176,16 +176,16 @@ where
     
     public static func style(
         for styleType: GUIStyleType,
-        overwrittenBy stylePropertiesOverwritten: GUIElementComponentStylePropertiesOverwrittenType
+        overwrittenBy stylePropertiesOverwritten: StylePropertiesOverwritten
     ) -> GUIElementComponentStyle<
-        GUIElementComponentStylePropertiesType
+        StyleProperties
     > {
         guard let style = style(
             for: styleType
         )
         else {
             let defaultStyle: GUIElementComponentStyle<
-                GUIElementComponentStylePropertiesType
+                StyleProperties
             > = .default(
                 styleType: styleType
             )
@@ -214,8 +214,8 @@ where
         let styleProperties = style.properties
         
         let lookType: GUIElementComponentStylePropertiesLookType<
-            GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesOSLookType,
-            GUIElementComponentStylePropertiesType.GUIElementComponentStylePropertiesLookInterfaceType.GUIElementComponentStylePropertiesSystemLookType
+            StyleProperties.Look.OSLook,
+            StyleProperties.Look.SystemLook
         >
         if case let .system(look) = styleProperties.lookType {
             lookType = .system(.init(

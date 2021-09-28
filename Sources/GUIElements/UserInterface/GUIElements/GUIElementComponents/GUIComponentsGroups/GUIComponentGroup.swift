@@ -6,5 +6,5 @@
 public protocol GUIComponentGroup:
     GUIElementComponent
 where
-    GUIElementComponentSettingsType
+    Settings
         : GUIComponentGroupSettings {}

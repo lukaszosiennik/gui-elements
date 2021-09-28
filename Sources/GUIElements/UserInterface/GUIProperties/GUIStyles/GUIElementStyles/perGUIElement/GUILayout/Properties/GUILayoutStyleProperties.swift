@@ -6,15 +6,15 @@
 public protocol GUILayoutStyleProperties:
     GUIElementStyleProperties {
     
-    associatedtype GUILayoutStylePropertiesParamsType:
+    associatedtype Params:
         GUILayoutStylePropertiesParams
     
-    var params: GUILayoutStylePropertiesParamsType {
+    var params: Params {
         get
     }
     
     init?(
         styleType: GUIStyleType?,
-        params: GUILayoutStylePropertiesParamsType
+        params: Params
     )
 }

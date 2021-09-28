@@ -9,21 +9,21 @@ where
     LocalizationStrings
         : NavigationMenuGUIElementComponentParamsLocalizationStringsInterface {
     
-    associatedtype OptionsKeyValueType:
+    associatedtype OptionsKeyValue:
         NavigationMenuGUIElementComponentParamsOptionsKeyValueInterface
-    associatedtype ActionsFunctionType
+    associatedtype ActionsFunction
     
     typealias Options =
         KeyValuePairs<
-            OptionsKeyValueType.KeyType,
-            OptionsKeyValueType.ValueType
+            OptionsKeyValue.Key,
+            OptionsKeyValue.Value
         >
     
     var options: Options {
         get
     }
     
-    var actions: ActionsFunctionType? {
+    var actions: ActionsFunction? {
         get
     }
 }
