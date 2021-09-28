@@ -11,7 +11,7 @@ where
     Settings
         : GUIComponentScreenSettings {
             
-    typealias ParamsType =
+    typealias Params =
         Settings.Params
     
     func setupScreenStyleLookOS()
