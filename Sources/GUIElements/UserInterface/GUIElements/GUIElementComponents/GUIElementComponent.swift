@@ -16,6 +16,9 @@ public protocol GUIElementComponent:
     associatedtype GUIElementComponentSettingsType:
         GUIElementComponentSettings
     
+    typealias ParamsType =
+        GUIElementComponentSettingsType.GUIElementComponentParamsType
+    
     var initialization: GUIElementComponentInitialization {
         get
     }
@@ -36,7 +39,7 @@ public protocol GUIElementComponent:
     func setupNestedSettings()
     
     func setupParams(
-        _ params: GUIElementComponentSettingsType.GUIElementComponentParamsType
+        _ params: ParamsType
     )
     
     func setupStyleLookOSConfiguration(
