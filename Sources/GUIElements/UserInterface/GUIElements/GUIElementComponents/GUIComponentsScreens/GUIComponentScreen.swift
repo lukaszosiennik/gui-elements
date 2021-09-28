@@ -10,6 +10,9 @@ public protocol GUIComponentScreen:
 where
     GUIElementComponentSettingsType
         : GUIComponentScreenSettings {
+            
+    typealias ParamsType =
+        GUIElementComponentSettingsType.GUIElementComponentParamsType
     
     func setupScreenStyleLookOS()
 }
