@@ -9,7 +9,7 @@ public protocol GUIElementComponentParams:
 
 extension GUIElementComponentParams {
     
-    static func structName(
+    public static func structName(
         dot propertyName: String
     ) -> String {
         return structName.appending(
