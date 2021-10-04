@@ -7,26 +7,22 @@ public typealias EmptyNavigationMenuGUIElementComponentParamsAdditional =
     VoidGUIPropertyDefaultValue
 
 public class NavigationMenuGUIElementComponentParamsBasis<
-    OptionsKeyValue:
-        NavigationMenuGUIElementComponentParamsOptionsKeyValueInterface,
-    ActionsFunction
+    Option:
+        NavigationMenuGUIElementComponentParamsOptionInterface
 >:
     NavigationMenuGUIElementComponentParamsExtendedBasis<
-        OptionsKeyValue,
-        ActionsFunction,
+        Option,
         
         EmptyNavigationMenuGUIElementComponentParamsAdditional
     > {
     
     public init(
         strings: LocalizationStrings,
-        options: Options,
-        actions: ActionsFunction?
+        options: Options
     ) {
         super.init(
             strings: strings,
             options: options,
-            actions: actions,
             additional: .default
         )
     }
@@ -34,13 +30,11 @@ public class NavigationMenuGUIElementComponentParamsBasis<
     public required init(
         strings: LocalizationStrings,
         options: Options,
-        actions: ActionsFunction?,
         additional: AdditionalParams
     ) {
         super.init(
             strings: strings,
             options: options,
-            actions: actions,
             additional: additional
         )
     }

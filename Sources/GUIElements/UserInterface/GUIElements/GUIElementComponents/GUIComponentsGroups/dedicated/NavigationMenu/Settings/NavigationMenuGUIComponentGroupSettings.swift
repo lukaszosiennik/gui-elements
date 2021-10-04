@@ -4,10 +4,8 @@
 //
 
 public struct NavigationMenuGUIComponentGroupSettings<
-    OptionKey:
-        InputGUIElementComponentActionKeyInterface,
     OptionValue:
-        NavigationMenuGUIElementComponentParamsOptionValueObjectInterface
+        NavigationMenuGUIElementComponentParamsOptionValueInterface
 >:
     GUIComponentGroupSettings {
 
@@ -15,7 +13,6 @@ public struct NavigationMenuGUIComponentGroupSettings<
         NavigationMenuGUIComponentGroupStylePropertiesOverwritten
     
     public let params: NavigationMenuGUIComponentGroupParams<
-        OptionKey,
         OptionValue
     >
     public var style: GUIElementComponentStyle<
@@ -24,7 +21,6 @@ public struct NavigationMenuGUIComponentGroupSettings<
     
     public init(
         params: NavigationMenuGUIComponentGroupParams<
-            OptionKey,
             OptionValue
         >,
         style: GUIElementComponentStyle<

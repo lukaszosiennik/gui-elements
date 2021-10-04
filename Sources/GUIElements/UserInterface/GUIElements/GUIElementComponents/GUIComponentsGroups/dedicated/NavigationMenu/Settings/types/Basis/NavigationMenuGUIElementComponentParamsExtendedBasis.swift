@@ -4,9 +4,8 @@
 //
 
 open class NavigationMenuGUIElementComponentParamsExtendedBasis<
-    OptionsKeyValue:
-        NavigationMenuGUIElementComponentParamsOptionsKeyValueInterface,
-    ActionsFunction,
+    Option:
+        NavigationMenuGUIElementComponentParamsOptionInterface,
 
     AdditionalParams:
         GUIPropertyDefaultValueInterface
@@ -14,8 +13,8 @@ open class NavigationMenuGUIElementComponentParamsExtendedBasis<
     NavigationMenuGUIElementComponentParamsInterface,
     GUIElementComponentParams {
     
-    public typealias OptionsKeyValue =
-        OptionsKeyValue
+    public typealias Option =
+        Option
     
     public typealias AdditionalParams =
         AdditionalParams
@@ -23,7 +22,6 @@ open class NavigationMenuGUIElementComponentParamsExtendedBasis<
     public let strings: LocalizationStrings
     
     public let options: Options
-    public let actions: ActionsFunction?
     
     public let additional: AdditionalParams
     
@@ -34,8 +32,7 @@ open class NavigationMenuGUIElementComponentParamsExtendedBasis<
                     dot: "title"
                 )
             ),
-            options: [:],
-            actions: nil,
+            options: [],
             additional: .default
         )
     }
@@ -43,12 +40,10 @@ open class NavigationMenuGUIElementComponentParamsExtendedBasis<
     public required init(
         strings: LocalizationStrings,
         options: Options,
-        actions: ActionsFunction?,
         additional: AdditionalParams
     ) {
         self.strings = strings
         self.options = options
-        self.actions = actions
         self.additional = additional
     }
 }

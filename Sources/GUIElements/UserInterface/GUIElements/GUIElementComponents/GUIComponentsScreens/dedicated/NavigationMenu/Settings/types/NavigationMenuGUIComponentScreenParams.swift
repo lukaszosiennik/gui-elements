@@ -4,18 +4,12 @@
 //
 
 public final class NavigationMenuGUIComponentScreenParams<
-    OptionKey:
-        InputGUIElementComponentActionKeyInterface,
     OptionValue:
-        NavigationMenuGUIElementComponentParamsOptionValueObjectInterface
+        NavigationMenuGUIElementComponentParamsOptionValueInterface
 >:
     NavigationMenuGUIElementComponentParamsBasis<
-        NavigationMenuGUIElementComponentParamsOptionsKeyValueTemplate<
-            OptionKey,
+        NavigationMenuGUIElementComponentParamsOption<
             OptionValue
-        >,
-        InputGUIElementComponentParamsPlainActionsFunction<
-            OptionKey
         >
     >,
     GUIComponentScreenParams {}

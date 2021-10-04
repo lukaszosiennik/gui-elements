@@ -4,15 +4,12 @@
 //
 
 public struct NavigationMenuGUIComponentScreenSettings<
-    OptionKey:
-        InputGUIElementComponentActionKeyInterface,
     OptionValue:
-        NavigationMenuGUIElementComponentParamsOptionValueObjectInterface
+        NavigationMenuGUIElementComponentParamsOptionValueInterface
 >:
     GUIComponentScreenSettings {
     
     public let params: NavigationMenuGUIComponentScreenParams<
-        OptionKey,
         OptionValue
     >
     public var style: GUIElementComponentStyle<
@@ -21,7 +18,6 @@ public struct NavigationMenuGUIComponentScreenSettings<
     
     public init(
         params: NavigationMenuGUIComponentScreenParams<
-            OptionKey,
             OptionValue
         >,
         style: GUIElementComponentStyle<

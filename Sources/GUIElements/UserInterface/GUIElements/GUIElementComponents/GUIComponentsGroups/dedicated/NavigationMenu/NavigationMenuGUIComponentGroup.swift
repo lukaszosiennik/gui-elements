@@ -6,10 +6,8 @@
 import UIKit
 
 public final class NavigationMenuGUIComponentGroup<
-    OptionKey:
-        InputGUIElementComponentActionKeyInterface,
     OptionValue:
-        NavigationMenuGUIElementComponentParamsOptionValueObjectInterface
+        NavigationMenuGUIElementComponentParamsOptionValueInterface
 >:
     UIView,
     GUIComponentGroup {
@@ -26,7 +24,6 @@ public final class NavigationMenuGUIComponentGroup<
     public let initialization: GUIElementComponentInitialization = .init()
     
     public var settings: NavigationMenuGUIComponentGroupSettings<
-        OptionKey,
         OptionValue
     > {
         didSet {
@@ -42,7 +39,6 @@ public final class NavigationMenuGUIComponentGroup<
     
     public init(
         settings: NavigationMenuGUIComponentGroupSettings<
-            OptionKey,
             OptionValue
         >
     ) {
@@ -80,7 +76,6 @@ public final class NavigationMenuGUIComponentGroup<
     
     public func setupParams(
         _ params: NavigationMenuGUIComponentGroupParams<
-            OptionKey,
             OptionValue
         >
     ) {
@@ -95,12 +90,10 @@ public final class NavigationMenuGUIComponentGroup<
                 settings: .init(
                     params: .init(
                         strings: .init(
-                            title: option.value.strings.title
+                            title: option.strings.title
                         ),
                         action: {
-                            params.actions?(
-                                option.key
-                            )
+                            option.action?()
                         }
                     ),
                     styleType: settings.styleType

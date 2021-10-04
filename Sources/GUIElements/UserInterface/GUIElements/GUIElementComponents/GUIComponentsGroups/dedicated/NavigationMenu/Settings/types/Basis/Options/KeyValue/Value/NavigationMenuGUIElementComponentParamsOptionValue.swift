@@ -3,22 +3,26 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public struct NavigationMenuGUIElementComponentParamsOptionValueObject:
-    NavigationMenuGUIElementComponentParamsOptionValueObjectInterface {
+public struct NavigationMenuGUIElementComponentParamsOptionValue:
+    NavigationMenuGUIElementComponentParamsOptionValueInterface {
     
     public let strings: LocalizationStrings
     
+    public let action: Action?
+    
     public init(
-        strings: LocalizationStrings
+        strings: LocalizationStrings,
+        action: Action?
     ) {
         self.strings = strings
+        self.action = action
     }
 }
 
-extension NavigationMenuGUIElementComponentParamsOptionValueObject {
+extension NavigationMenuGUIElementComponentParamsOptionValue {
     
     public struct LocalizationStrings:
-        NavigationMenuGUIElementComponentParamsOptionValueObjectLocalizationStringsInterface {
+        NavigationMenuGUIElementComponentParamsOptionValueLocalizationStringsInterface {
         
         public let title: String
         
