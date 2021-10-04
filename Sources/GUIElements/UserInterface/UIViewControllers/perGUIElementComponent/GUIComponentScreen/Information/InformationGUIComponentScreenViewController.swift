@@ -5,7 +5,7 @@
 
 import UIKit
 
-final public class InformationGUIComponentScreenViewController:
+public final class InformationGUIComponentScreenViewController:
     UIViewController {
     
     public typealias View =
@@ -39,7 +39,7 @@ final public class InformationGUIComponentScreenViewController:
         )
     }
     
-    override public func loadView() {
+    public override func loadView() {
         view = View(
             settings: .init(
                 params: .init(
