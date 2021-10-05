@@ -15,16 +15,12 @@ public final class InformationGUIComponentScreenViewController:
         return view as? View
     }
     
-    private let strings: View.Params.LocalizationStrings
-    
-    private let styleType: GUIStyleType
+    private let params: Params
     
     public init(
-        strings: View.Params.LocalizationStrings,
-        styleType: GUIStyleType
+        params: Params
     ) {
-        self.strings = strings
-        self.styleType = styleType
+        self.params = params
         super.init(
             nibName: nil,
             bundle: nil
@@ -43,10 +39,19 @@ public final class InformationGUIComponentScreenViewController:
         view = View(
             settings: .init(
                 params: .init(
-                    strings: strings
+                    strings: params.strings
                 ),
-                styleType: styleType
+                styleType: params.styleType
             )
         )
+    }
+}
+
+extension InformationGUIComponentScreenViewController {
+    
+    public struct Params {
+        
+        public let strings: View.Params.LocalizationStrings
+        public let styleType: GUIStyleType
     }
 }
