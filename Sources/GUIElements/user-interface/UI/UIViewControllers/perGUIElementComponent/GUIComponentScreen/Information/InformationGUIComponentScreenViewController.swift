@@ -51,7 +51,15 @@ extension InformationGUIComponentScreenViewController {
     
     public struct Params {
         
-        public let strings: View.Params.LocalizationStrings
-        public let styleType: GUIStyleType
+        let strings: View.Params.LocalizationStrings
+        let styleType: GUIStyleType
+        
+        public init(
+            strings: View.Params.LocalizationStrings,
+            styleType: GUIStyleType
+        ) {
+            self.strings = strings
+            self.styleType = styleType
+        }
     }
 }
