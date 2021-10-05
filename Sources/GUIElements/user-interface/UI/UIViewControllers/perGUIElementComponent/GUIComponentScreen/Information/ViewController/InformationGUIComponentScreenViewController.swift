@@ -11,16 +11,22 @@ public final class InformationGUIComponentScreenViewController:
     public typealias View =
         InformationGUIComponentScreen
     
-    var customView: View? {
-        return view as? View
-    }
+    typealias ViewModel =
+        InformationGUIComponentScreenViewModel
     
     private let params: Params
+    
+    private let viewModel: ViewModel
     
     public init(
         params: Params
     ) {
         self.params = params
+        self.viewModel = .init(
+            input: Mapper.map(
+                params: params
+            )
+        )
         super.init(
             nibName: nil,
             bundle: nil
@@ -35,31 +41,15 @@ public final class InformationGUIComponentScreenViewController:
         )
     }
     
+    var customView: View? {
+        return view as? View
+    }
+    
     public override func loadView() {
         view = View(
-            settings: .init(
-                params: .init(
-                    strings: params.strings
-                ),
-                styleType: params.styleType
+            settings: Mapper.map(
+                params: params
             )
         )
-    }
-}
-
-extension InformationGUIComponentScreenViewController {
-    
-    public struct Params {
-        
-        let strings: View.Params.LocalizationStrings
-        let styleType: GUIStyleType
-        
-        public init(
-            strings: View.Params.LocalizationStrings,
-            styleType: GUIStyleType
-        ) {
-            self.strings = strings
-            self.styleType = styleType
-        }
     }
 }
