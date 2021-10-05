@@ -5,6 +5,6 @@
 
 extension InformationGUIComponentScreenViewModel {
     
-    typealias Output =
-        Input
+    public struct Output:
+        ViewModelOutputInterface {}
 }

@@ -5,9 +5,16 @@
 
 extension InformationGUIComponentScreenViewController {
     
-    enum Mapper {
+    public enum Mapper:
+        ViewControllerMapperInterface {
         
-        static func map(
+        public typealias ViewController =
+            InformationGUIComponentScreenViewController
+        
+        public typealias ViewModel =
+            InformationGUIComponentScreenViewModel
+        
+        public static func map(
             params: Params
         ) -> View.Settings {
             return .init(
@@ -16,13 +23,13 @@ extension InformationGUIComponentScreenViewController {
             )
         }
         
-        static func map(
+        public static func map(
             params: Params
         ) -> ViewModel.Input {
             return .init()
         }
         
-        static func map(
+        public static func map(
             output: ViewModel.Output
         ) -> View.Params? {
             return nil

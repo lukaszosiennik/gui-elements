@@ -3,8 +3,4 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-extension InformationGUIComponentScreenViewModel {
-    
-    public struct Input:
-        ViewModelInputInterface {}
-}
+public protocol ViewModelInputInterface {}

@@ -6,12 +6,13 @@
 import UIKit
 
 public final class InformationGUIComponentScreenViewController:
-    UIViewController {
+    UIViewController,
+    ViewControllerInterface {
     
     public typealias View =
         InformationGUIComponentScreen
     
-    typealias ViewModel =
+    public typealias ViewModel =
         InformationGUIComponentScreenViewModel
     
     private let params: Params
@@ -39,10 +40,6 @@ public final class InformationGUIComponentScreenViewController:
         fatalError(
             "init(coder:) has not been implemented"
         )
-    }
-    
-    var customView: View? {
-        return view as? View
     }
     
     public override func loadView() {

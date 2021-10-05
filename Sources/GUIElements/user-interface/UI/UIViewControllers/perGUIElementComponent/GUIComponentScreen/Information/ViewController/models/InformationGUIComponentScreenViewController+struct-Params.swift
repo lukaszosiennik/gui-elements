@@ -5,7 +5,8 @@
 
 extension InformationGUIComponentScreenViewController {
     
-    public struct Params {
+    public struct Params:
+        ViewControllerParamsInterface {
         
         let viewParams: View.Params
         let styleType: GUIStyleType

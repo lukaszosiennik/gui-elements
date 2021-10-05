@@ -3,7 +3,8 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-final class InformationGUIComponentScreenViewModel {
+public final class InformationGUIComponentScreenViewModel:
+    ViewModelInterface {
     
     private let input: Input
     
@@ -14,6 +15,6 @@ final class InformationGUIComponentScreenViewModel {
     }
     
     var output: Output {
-        return input
+        return .init()
     }
 }
