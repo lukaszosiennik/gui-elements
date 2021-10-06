@@ -22,7 +22,9 @@ where
     public static func `init`(
         hex: String
     ) -> UIColor {
-        return `init`(hex: hex) ?? `default`
+        return `init`(
+            hex: hex
+        ) ?? `default`
     }
     
     public static func `init`(
@@ -86,6 +88,8 @@ where
     public static func valueName(
         input: String
     ) -> ExtendedType {
-        return `init`(hex: input)
+        return `init`(
+            hex: input
+        )
     }
 }
