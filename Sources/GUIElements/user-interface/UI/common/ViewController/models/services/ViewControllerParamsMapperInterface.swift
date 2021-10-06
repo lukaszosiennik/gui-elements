@@ -3,7 +3,7 @@
 //  Copyright © 2021 open plainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol ViewControllerMapperInterface {
+public protocol ViewControllerParamsMapperInterface {
     
     associatedtype ViewController:
         ViewControllerInterface
@@ -13,13 +13,13 @@ public protocol ViewControllerMapperInterface {
     
     static func map(
         params: ViewController.Params
-    ) -> ViewController.View.Settings
+    ) -> ViewController.View.Settings?
     
     static func map(
         params: ViewController.Params
-    ) -> ViewModel.Input
+    ) -> ViewModel.InputParams?
     
     static func map(
-        output: ViewModel.Output
+        output: ViewModel.OutputParams
     ) -> ViewController.View.Settings.Params?
 }

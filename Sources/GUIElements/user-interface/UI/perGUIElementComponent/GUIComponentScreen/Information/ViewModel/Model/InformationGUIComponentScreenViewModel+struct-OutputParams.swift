@@ -5,6 +5,6 @@
 
 extension InformationGUIComponentScreenViewModel {
     
-    public struct Input:
-        ViewModelInputInterface {}
+    public typealias OutputParams =
+        EmptyViewModelOutputParams
 }

@@ -6,15 +6,15 @@
 public final class InformationGUIComponentScreenViewModel:
     ViewModelInterface {
     
-    private let input: Input
+    private let inputParams: InputParams
     
-    init(
-        input: Input
+    public init(
+        inputParams: InputParams
     ) {
-        self.input = input
+        self.inputParams = inputParams
     }
     
-    var output: Output {
+    public var outputParams: OutputParams {
         return .init()
     }
 }

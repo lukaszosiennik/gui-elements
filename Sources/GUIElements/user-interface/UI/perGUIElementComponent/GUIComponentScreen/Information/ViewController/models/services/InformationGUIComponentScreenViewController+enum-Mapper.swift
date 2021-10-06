@@ -6,7 +6,7 @@
 extension InformationGUIComponentScreenViewController {
     
     public enum Mapper:
-        ViewControllerMapperInterface {
+        ViewControllerParamsMapperInterface {
         
         public typealias ViewController =
             InformationGUIComponentScreenViewController
@@ -16,7 +16,7 @@ extension InformationGUIComponentScreenViewController {
         
         public static func map(
             params: Params
-        ) -> View.Settings {
+        ) -> View.Settings? {
             return .init(
                 params: params.viewParams,
                 styleType: params.styleType
@@ -25,14 +25,25 @@ extension InformationGUIComponentScreenViewController {
         
         public static func map(
             params: Params
-        ) -> ViewModel.Input {
-            return .init()
+        ) -> ViewModel.InputParams? {
+            return nil
         }
         
         public static func map(
-            output: ViewModel.Output
+            output: ViewModel.OutputParams
         ) -> View.Params? {
             return nil
         }
+    }
+}
+
+extension InformationGUIComponentScreenViewController.Mapper {
+    
+    public static func map(
+        params: ViewController.Params
+    ) -> ViewController.View.Settings {
+        return map(
+            params: params
+        )!
     }
 }

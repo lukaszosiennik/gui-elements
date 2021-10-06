@@ -10,17 +10,23 @@ where
     Self
         : UIViewController {
             
+    associatedtype Params:
+        ViewControllerParamsInterface
+            
+    associatedtype Mapper:
+        ViewControllerParamsMapperInterface
+            
     associatedtype View:
         GUIElementComponent
             
     associatedtype ViewModel:
         ViewModelInterface
             
-    associatedtype Params:
-        ViewControllerParamsInterface
+    init(
+        params: Params
+    )
             
-    associatedtype Mapper:
-        ViewControllerMapperInterface
+    func loadView()
 }
 
 extension ViewControllerInterface {

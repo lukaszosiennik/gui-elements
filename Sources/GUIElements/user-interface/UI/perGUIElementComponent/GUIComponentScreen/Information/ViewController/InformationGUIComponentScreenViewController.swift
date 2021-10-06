@@ -23,11 +23,7 @@ public final class InformationGUIComponentScreenViewController:
         params: Params
     ) {
         self.params = params
-        self.viewModel = .init(
-            input: Mapper.map(
-                params: params
-            )
-        )
+        self.viewModel = .init()
         super.init(
             nibName: nil,
             bundle: nil
