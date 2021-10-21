@@ -6,6 +6,7 @@
 import commons
 
 extension CommonsExtension:
+    InstanceReturningBasedOnInputInterface,
     SelfInstanceReturningBasedOnInputInterface
 where
     ExtendedType
