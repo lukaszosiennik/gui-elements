@@ -10,31 +10,31 @@ public enum NavigationMenuGUIData {
         
         public let title: String
         public let options: [Option]
-    }
-    
-    public struct Option: 
-        Decodable {
         
-        public let name: String
-        public let type: `Type`
-        
-        public enum `Type`:
+        public struct Option:
             Decodable {
             
-            case submenu(Menu)
-            case option(ActionId)
+            public let name: String
+            public let type: `Type`
             
-            public enum ActionId:
+            public enum `Type`:
                 Decodable {
                 
-                case defined(_ actionId: String)
-                case undefined
+                case submenu(Menu)
+                case option(ActionId)
+                
+                public enum ActionId:
+                    Decodable {
+                    
+                    case defined(_ actionId: String)
+                    case undefined
+                }
             }
         }
     }
 }
 
-extension NavigationMenuGUIData.Option {
+extension NavigationMenuGUIData.Menu.Option {
     
     private enum CodingKeys: 
         String,
@@ -72,7 +72,7 @@ extension NavigationMenuGUIData.Option {
     }
 }
 
-extension NavigationMenuGUIData.Option.`Type`.ActionId:
+extension NavigationMenuGUIData.Menu.Option.`Type`.ActionId:
     CustomStringConvertible {
     
     public var description: String {
