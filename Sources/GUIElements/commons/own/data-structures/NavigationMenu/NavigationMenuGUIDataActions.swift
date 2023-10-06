@@ -13,8 +13,8 @@ public final class NavigationMenuGUIDataActions<
     public enum ActionsError:
         Error {
         
-        case undefinedActionNotAssigned
-        case unlinkedActionNotAssigned
+        case notAssignedUndefinedAction
+        case notAssignedUnlinkedAction
     }
     
     public typealias ActionId =
@@ -36,7 +36,7 @@ public final class NavigationMenuGUIDataActions<
     public var undefined: Action {
         get throws {
             guard let action = actions[.undefined] else {
-                throw ActionsError.undefinedActionNotAssigned
+                throw ActionsError.notAssignedUndefinedAction
             }
             
             return action
@@ -46,7 +46,7 @@ public final class NavigationMenuGUIDataActions<
     public var unlinked: Action {
         get throws {
             guard let action = actions[.unlinked] else {
-                throw ActionsError.unlinkedActionNotAssigned
+                throw ActionsError.notAssignedUnlinkedAction
             }
             
             return action
