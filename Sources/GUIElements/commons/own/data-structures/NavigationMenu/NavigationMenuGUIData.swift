@@ -29,6 +29,7 @@ public enum NavigationMenuGUIData {
                     
                     case defined(_ actionId: String)
                     case undefined
+                    case unlinked
                 }
             }
         }
@@ -82,6 +83,8 @@ extension NavigationMenuGUIData.Menu.Option.Kind.ActionId:
             return actionId
         case .undefined:
             return "UndefinedActionId"
+        case .unlinked:
+            return "UnlinkedActionId"
         }
     }
 }

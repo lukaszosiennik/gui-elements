@@ -7,7 +7,7 @@ import Foundation
 
 public final class NavigationMenuGUIDataDecoder {
     
-    public enum ParserError:
+    public enum DecoderError:
         Error {
         
         case fileNotFound
@@ -31,7 +31,7 @@ public final class NavigationMenuGUIDataDecoder {
                 forResource: fileName,
                 withExtension: Self.fileExtension
             ) else {
-                throw ParserError.fileNotFound
+                throw DecoderError.fileNotFound
             }
             
             return try JSONDecoder().decode(
@@ -41,7 +41,7 @@ public final class NavigationMenuGUIDataDecoder {
                 )
             )
         } catch {
-            throw ParserError.nestedError(
+            throw DecoderError.nestedError(
                 error
             )
         }
