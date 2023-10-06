@@ -24,7 +24,8 @@ public enum NavigationMenuGUIData {
                 case option(ActionId)
                 
                 public enum ActionId:
-                    Decodable {
+                    Decodable,
+                    Hashable {
                     
                     case defined(_ actionId: String)
                     case undefined
