@@ -7,9 +7,6 @@ import Foundation
 
 public final class NavigationMenuGUIDataDecoder {
     
-    public typealias Menu =
-        NavigationMenuGUIData.Menu
-    
     public enum ParserError:
         Error {
         
@@ -28,7 +25,7 @@ public final class NavigationMenuGUIDataDecoder {
         self.fileName = fileName
     }
 
-    public func decode() throws -> Menu {
+    public func decode() throws -> NavigationMenuGUIData.Menu {
         do {
             guard let fileURL = Bundle.main.url(
                 forResource: fileName,
@@ -38,7 +35,7 @@ public final class NavigationMenuGUIDataDecoder {
             }
             
             return try JSONDecoder().decode(
-                Menu.self,
+                NavigationMenuGUIData.Menu.self,
                 from: try Data(
                     contentsOf: fileURL
                 )

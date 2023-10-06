@@ -15,9 +15,9 @@ public enum NavigationMenuGUIData {
             Decodable {
             
             public let name: String
-            public let type: `Type`
+            public let kind: Kind
             
-            public enum `Type`:
+            public enum Kind:
                 Decodable {
                 
                 case submenu(Menu)
@@ -60,19 +60,19 @@ extension NavigationMenuGUIData.Menu.Option {
             String.self,
             forKey: .actionId
         ) {
-            self.type = .option(.defined(actionId))
+            self.kind = .option(.defined(actionId))
         } else if let menu = try values.decodeIfPresent(
             NavigationMenuGUIData.Menu.self,
             forKey: .submenu
         ) {
-            self.type = .submenu(menu)
+            self.kind = .submenu(menu)
         } else {
-            self.type = .option(.undefined)
+            self.kind = .option(.undefined)
         }
     }
 }
 
-extension NavigationMenuGUIData.Menu.Option.`Type`.ActionId:
+extension NavigationMenuGUIData.Menu.Option.Kind.ActionId:
     CustomStringConvertible {
     
     public var description: String {
