@@ -11,7 +11,8 @@ public final class NavigationMenuGUIDataDecoder:
     public enum DecoderError:
         Error {
         
-        case fileNotFound
+        case classNotFound
+        case jsonFileNotFound
         
         case nestedError(_ error: Error)
     }
@@ -28,11 +29,15 @@ public final class NavigationMenuGUIDataDecoder:
 
     public func decode() throws -> NavigationMenuGUIData.Menu {
         do {
-            guard let fileURL = Bundle.main.url(
+            guard let anyClass = NSClassFromString(fileName) else {
+                throw DecoderError.classNotFound
+            }
+            
+            guard let fileURL = Bundle(for: anyClass).url(
                 forResource: fileName,
                 withExtension: Self.fileExtension
             ) else {
-                throw DecoderError.fileNotFound
+                throw DecoderError.jsonFileNotFound
             }
             
             return try JSONDecoder().decode(
