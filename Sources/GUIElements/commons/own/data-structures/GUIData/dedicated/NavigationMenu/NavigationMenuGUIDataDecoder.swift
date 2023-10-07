@@ -5,7 +5,8 @@
 
 import Foundation
 
-public final class NavigationMenuGUIDataDecoder {
+public final class NavigationMenuGUIDataDecoder:
+    GUIDataDecoder {
     
     public enum DecoderError:
         Error {

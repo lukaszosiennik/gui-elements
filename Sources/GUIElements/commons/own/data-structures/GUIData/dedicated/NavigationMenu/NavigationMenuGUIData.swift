@@ -6,24 +6,28 @@
 public enum NavigationMenuGUIData {
         
     public struct Menu:
+        GUIData,
         Decodable {
         
         public let title: String
         public let options: [Option]
         
         public struct Option:
+            GUIData,
             Decodable {
             
             public let name: String
             public let kind: Kind
             
             public enum Kind:
+                GUIData,
                 Decodable {
                 
                 case submenu(Menu)
                 case option(ActionId)
                 
                 public enum ActionId:
+                    GUIData,
                     Decodable,
                     Hashable {
                     
