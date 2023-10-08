@@ -19,26 +19,22 @@ public final class NavigationMenuGUIDataDecoder:
     
     private static let fileExtension: String = "json"
     
-    private let bundleIdentifier: String
+    private let bundleName: String
     private let fileName: String
     
     public init(
-        bundleIdentifier: String,
+        bundleName: String,
         fileName: String
     ) {
-        self.bundleIdentifier = bundleIdentifier
+        self.bundleName = bundleName
         self.fileName = fileName
     }
 
     public func decode() throws -> NavigationMenuGUIData.Menu {
         do {
-            guard let bundle = bundle(
-                with: bundleIdentifier
-            ) else {
-                throw DecoderError.bundleNotFound
-            }
-            
-            guard let fileURL = bundle.url(
+            guard let fileURL = try bundle(
+                with: bundleName
+            ).url(
                 forResource: fileName,
                 withExtension: Self.fileExtension
             ) else {
@@ -59,12 +55,17 @@ public final class NavigationMenuGUIDataDecoder:
     }
     
     private func bundle(
-        with identifier: String
-    ) -> Bundle? {
-        return Bundle.allBundles.filter {
-            $0.bundleIdentifier?.starts(
-                with: bundleIdentifier
-            ) ?? false
-        }.first
+        with name: String
+    ) throws -> Bundle {
+        guard let url = Bundle.main.url(
+            forResource: name,
+            withExtension: "bundle"
+        ), let bundle = Bundle(
+            url: url
+        ) else {
+            throw DecoderError.bundleNotFound
+        }
+        
+        return bundle
     }
 }
