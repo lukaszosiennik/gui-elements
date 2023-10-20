@@ -3,4 +3,10 @@
 //  Copyright © 2023 openplainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol GUIDataDecoder {}
+public protocol GUIDataDecoder {
+    
+    associatedtype DecodedGUIData:
+        GUIData
+    
+    func decode() throws -> DecodedGUIData
+}
