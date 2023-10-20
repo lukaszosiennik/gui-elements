@@ -5,14 +5,9 @@
 
 import commons
 
-final class NavigationMenuHierarchyProvider {
-    
-    typealias NavigationMenuHierarchyActions =
-        NavigationMenuGUIDataActions<
-            MenuHierarchyNodeChildrenLeafAction
-        >
+public final class NavigationMenuHierarchyProviderService {
         
-    enum ProviderError:
+    public enum ProviderError:
         Error {
         
         case nestedError(_ error: Error)
@@ -20,13 +15,13 @@ final class NavigationMenuHierarchyProvider {
     
     private let decoder: NavigationMenuGUIDataDecoder
     
-    init(
+    public init(
         decoder: NavigationMenuGUIDataDecoder
     ) {
         self.decoder = decoder
     }
     
-    func rootNode(
+    public func rootNode(
         styleType: GUIStyleType,
         actions: NavigationMenuHierarchyActions
     ) throws -> MenuHierarchyNode {

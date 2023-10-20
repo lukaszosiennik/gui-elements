@@ -6,10 +6,10 @@
 import UIKit
 import commons
 
-struct MenuHierarchyNodeChildrenLeafAction:
+public struct MenuHierarchyNodeChildrenLeafAction:
     HierarchyNodeChildrenLeafActionInterface {
  
-    static var none: (
+    public static var none: (
         UIViewController?
     ) -> Void {
         return { _ in }

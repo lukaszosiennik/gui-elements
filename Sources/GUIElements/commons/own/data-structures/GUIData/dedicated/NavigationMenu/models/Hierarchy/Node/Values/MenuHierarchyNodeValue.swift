@@ -5,18 +5,18 @@
 
 import commons
 
-struct MenuHierarchyNodeValue:
+public struct MenuHierarchyNodeValue:
     HierarchyNodeValueInterface,
     GUIElementComponentParamsLocalizationStrings {
     
-    let strings: LocalizationStrings
+    public let strings: LocalizationStrings
 }
 
 extension MenuHierarchyNodeValue {
     
-    struct LocalizationStrings:
+    public struct LocalizationStrings:
         LocalizationStringsInterface {
         
-        let title: String
+        public let title: String
     }
 }

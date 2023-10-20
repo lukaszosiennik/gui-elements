@@ -3,10 +3,7 @@
 //  Copyright © 2023 openplainness (https://www.openplainness.com). All rights reserved.
 //
 
-import commons
-
-typealias MenuHierarchyNode =
-    HierarchyNode<
-        MenuHierarchyNodeValue,
+public typealias NavigationMenuHierarchyActions =
+    NavigationMenuGUIDataActions<
         MenuHierarchyNodeChildrenLeafAction
     >
