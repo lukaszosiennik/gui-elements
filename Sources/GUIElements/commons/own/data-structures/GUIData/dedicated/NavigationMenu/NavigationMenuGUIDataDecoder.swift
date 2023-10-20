@@ -32,8 +32,8 @@ public final class NavigationMenuGUIDataDecoder:
 
     public func decode() throws -> NavigationMenuGUIData.Menu {
         do {
-            guard let fileURL = try bundle(
-                with: bundleName
+            guard let fileURL = try Bundle.package(
+                name: bundleName
             ).url(
                 forResource: fileName,
                 withExtension: Self.fileExtension
@@ -52,20 +52,5 @@ public final class NavigationMenuGUIDataDecoder:
                 error
             )
         }
-    }
-    
-    private func bundle(
-        with name: String
-    ) throws -> Bundle {
-        guard let url = Bundle.main.url(
-            forResource: name,
-            withExtension: "bundle"
-        ), let bundle = Bundle(
-            url: url
-        ) else {
-            throw DecoderError.bundleNotFound
-        }
-        
-        return bundle
     }
 }
