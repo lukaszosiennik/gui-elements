@@ -20,3 +20,12 @@ extension MenuHierarchyNodeValue {
         public let title: String
     }
 }
+
+extension MenuHierarchyNodeValue.LocalizationStrings {
+    
+    public static var fatalError: Self {
+        .init(
+            title: "fatalError"
+        )
+    }
+}
