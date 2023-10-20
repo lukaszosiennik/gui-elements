@@ -21,6 +21,15 @@ extension MenuHierarchyNodeValue {
     }
 }
 
+extension MenuHierarchyNodeValue {
+    
+    public static var fatalError: Self {
+        .init(
+            strings: .fatalError
+        )
+    }
+}
+
 extension MenuHierarchyNodeValue.LocalizationStrings {
     
     public static var fatalError: Self {
