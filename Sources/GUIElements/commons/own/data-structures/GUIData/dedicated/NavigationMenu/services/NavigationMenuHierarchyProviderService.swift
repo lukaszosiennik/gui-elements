@@ -7,7 +7,7 @@ import commons
 
 public final class NavigationMenuHierarchyProviderService {
         
-    public enum ProviderError:
+    public enum ServiceError:
         Error {
         
         case nestedError(_ error: Error)
@@ -31,7 +31,7 @@ public final class NavigationMenuHierarchyProviderService {
                 with: actions
             )
         } catch {
-            throw ProviderError.nestedError(
+            throw ServiceError.nestedError(
                 error
             )
         }
