@@ -23,6 +23,12 @@ extension MenuHierarchyNodeValue {
 
 extension MenuHierarchyNodeValue {
     
+    public static var empty: Self {
+        .init(
+            strings: .empty
+        )
+    }
+    
     public static var fatalError: Self {
         .init(
             strings: .fatalError
@@ -31,6 +37,12 @@ extension MenuHierarchyNodeValue {
 }
 
 extension MenuHierarchyNodeValue.LocalizationStrings {
+    
+    public static var empty: Self {
+        .init(
+            title: "EMPTY"
+        )
+    }
     
     public static var fatalError: Self {
         .init(
