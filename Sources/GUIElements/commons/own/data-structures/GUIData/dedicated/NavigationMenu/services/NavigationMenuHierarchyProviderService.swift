@@ -22,7 +22,6 @@ public final class NavigationMenuHierarchyProviderService {
     }
     
     public func rootNode(
-        styleType: GUIStyleType,
         actions: NavigationMenuHierarchyActions
     ) throws -> MenuHierarchyNode {
         do {

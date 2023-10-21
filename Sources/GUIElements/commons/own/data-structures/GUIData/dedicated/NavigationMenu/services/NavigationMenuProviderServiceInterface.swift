@@ -18,24 +18,18 @@ public protocol NavigationMenuProviderServiceInterface {
         hierarchyActions: NavigationMenuHierarchyActions
     )
     
-    func rootNode(
-        styleType: GUIStyleType
-    ) -> MenuHierarchyNode
+    var rootNode: MenuHierarchyNode {
+        get
+    }
     
-    func rootNodeThrows(
-        styleType: GUIStyleType
-    ) throws -> MenuHierarchyNode
+    func rootNodeThrows() throws -> MenuHierarchyNode
 }
 
 extension NavigationMenuProviderServiceInterface {
     
-    public func rootNode(
-        styleType: GUIStyleType
-    ) -> MenuHierarchyNode {
+    public var rootNode: MenuHierarchyNode {
         do {
-            return try rootNodeThrows(
-                styleType: styleType
-            )
+            return try rootNodeThrows()
         } catch {
             return .init(
                 value: .fatalError
@@ -43,11 +37,8 @@ extension NavigationMenuProviderServiceInterface {
         }
     }
     
-    public func rootNodeThrows(
-        styleType: GUIStyleType
-    ) throws -> MenuHierarchyNode {
+    public func rootNodeThrows() throws -> MenuHierarchyNode {
         return try hierarchyProviderService.rootNode(
-            styleType: styleType,
             actions: hierarchyActions
         )
     }
