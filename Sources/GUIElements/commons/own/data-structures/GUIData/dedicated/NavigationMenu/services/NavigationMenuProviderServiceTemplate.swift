@@ -6,14 +6,11 @@
 public final class NavigationMenuProviderServiceTemplate:
     NavigationMenuProviderServiceInterface {
  
-    public let hierarchyProviderService: NavigationMenuHierarchyProviderService
-    public let hierarchyActions: NavigationMenuHierarchyActions
+    public let hierarchyProviderService: NavigationMenuHierarchyProviderServiceInterface
     
     public init(
-        hierarchyProviderService: NavigationMenuHierarchyProviderService,
-        hierarchyActions: NavigationMenuHierarchyActions
+        hierarchyProviderService: NavigationMenuHierarchyProviderServiceInterface
     ) {
         self.hierarchyProviderService = hierarchyProviderService
-        self.hierarchyActions = hierarchyActions
     }
 }

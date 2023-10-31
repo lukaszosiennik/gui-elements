@@ -5,7 +5,8 @@
 
 import commons
 
-public final class NavigationMenuHierarchyProviderService {
+public final class NavigationMenuHierarchyDecoderProviderService:
+    NavigationMenuHierarchyProviderServiceInterface {
         
     public enum ServiceError:
         Error {
@@ -14,20 +15,20 @@ public final class NavigationMenuHierarchyProviderService {
     }
     
     private let decoder: NavigationMenuGUIDataDecoder
+    private let actions: NavigationMenuHierarchyActions
     
     public init(
-        decoder: NavigationMenuGUIDataDecoder
+        decoder: NavigationMenuGUIDataDecoder,
+        actions: NavigationMenuHierarchyActions
     ) {
         self.decoder = decoder
+        self.actions = actions
     }
     
-    public func rootNode(
-        actions: NavigationMenuHierarchyActions
-    ) throws -> MenuHierarchyNode {
+    public func rootNode() throws -> MenuHierarchyNode {
         do {
             return try node(
-                from: try decoder.decode(),
-                with: actions
+                from: try decoder.decode()
             )
         } catch {
             throw ServiceError.nestedError(
@@ -36,9 +37,12 @@ public final class NavigationMenuHierarchyProviderService {
         }
     }
     
+    public func currentNode() throws -> MenuHierarchyNode {
+        return try rootNode()
+    }
+    
     private func node(
-        from menu: NavigationMenuGUIData.Menu,
-        with actions: NavigationMenuHierarchyActions
+        from menu: NavigationMenuGUIData.Menu
     ) throws -> MenuHierarchyNode {
         return .init(
             value: .init(
@@ -48,16 +52,14 @@ public final class NavigationMenuHierarchyProviderService {
             ),
             childrenValue: .branch(
                 children: try children(
-                    from: menu.options,
-                    with: actions
+                    from: menu.options
                 )
             )
         )
     }
     
     private func children(
-        from options: [NavigationMenuGUIData.Menu.Option],
-        with actions: NavigationMenuHierarchyActions
+        from options: [NavigationMenuGUIData.Menu.Option]
     ) throws -> [MenuHierarchyNode] {
         var children: [MenuHierarchyNode] = []
         
@@ -69,8 +71,7 @@ public final class NavigationMenuHierarchyProviderService {
                     )
                 ),
                 childrenValue: try childrenValue(
-                    from: option.kind,
-                    with: actions
+                    from: option.kind
                 )
             ))
         }
@@ -79,8 +80,7 @@ public final class NavigationMenuHierarchyProviderService {
     }
     
     private func childrenValue(
-        from optionKind: NavigationMenuGUIData.Menu.Option.Kind,
-        with actions: NavigationMenuHierarchyActions
+        from optionKind: NavigationMenuGUIData.Menu.Option.Kind
     ) throws -> HierarchyNodeChildrenValueUnion<
         MenuHierarchyNode,
         MenuHierarchyNodeChildrenLeafAction
@@ -89,8 +89,7 @@ public final class NavigationMenuHierarchyProviderService {
         case .submenu(let menu):
             return .branch(
                 children: try children(
-                    from: menu.options,
-                    with: actions
+                    from: menu.options
                 )
             )
         case .option(let actionId):

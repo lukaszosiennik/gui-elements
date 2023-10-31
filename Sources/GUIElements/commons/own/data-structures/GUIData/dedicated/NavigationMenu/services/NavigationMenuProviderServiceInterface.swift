@@ -5,31 +5,28 @@
 
 public protocol NavigationMenuProviderServiceInterface {
     
-    var hierarchyProviderService: NavigationMenuHierarchyProviderService {
-        get
-    }
-    
-    var hierarchyActions: NavigationMenuHierarchyActions {
+    var hierarchyProviderService: NavigationMenuHierarchyProviderServiceInterface {
         get
     }
     
     init(
-        hierarchyProviderService: NavigationMenuHierarchyProviderService,
-        hierarchyActions: NavigationMenuHierarchyActions
+        hierarchyProviderService: NavigationMenuHierarchyProviderServiceInterface
     )
     
     var rootNode: MenuHierarchyNode {
         get
     }
     
-    func rootNodeThrows() throws -> MenuHierarchyNode
+    var currentNode: MenuHierarchyNode {
+        get
+    }
 }
 
 extension NavigationMenuProviderServiceInterface {
     
     public var rootNode: MenuHierarchyNode {
         do {
-            return try rootNodeThrows()
+            return try hierarchyProviderService.rootNode()
         } catch {
             return .init(
                 value: .fatalError
@@ -37,9 +34,13 @@ extension NavigationMenuProviderServiceInterface {
         }
     }
     
-    public func rootNodeThrows() throws -> MenuHierarchyNode {
-        return try hierarchyProviderService.rootNode(
-            actions: hierarchyActions
-        )
+    public var currentNode: MenuHierarchyNode {
+        do {
+            return try hierarchyProviderService.currentNode()
+        } catch {
+            return .init(
+                value: .fatalError
+            )
+        }
     }
 }
