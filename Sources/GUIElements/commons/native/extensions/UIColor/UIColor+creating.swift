@@ -10,7 +10,6 @@ extension UIColor:
     GUIElementsExtendedTypeInterface {}
 
 extension CommonsExtension
-// : SelfInstanceReturningBasedOnInputInterface
 where
     ExtendedType
         == UIColor {
@@ -75,21 +74,6 @@ where
             alpha: CGFloat(
                 hexNumber & 0x000000ff
             ) / 255
-        )
-    }
-}
-
-extension CommonsExtension
-// : SelfInstanceReturningBasedOnInputInterface
-where
-    ExtendedType
-        == UIColor {
-    
-    public static func valueName(
-        input: String
-    ) -> ExtendedType {
-        return `init`(
-            hex: input
         )
     }
 }

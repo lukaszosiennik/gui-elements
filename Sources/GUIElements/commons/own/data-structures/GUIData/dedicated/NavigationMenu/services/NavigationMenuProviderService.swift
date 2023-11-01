@@ -18,7 +18,7 @@ public final class NavigationMenuProviderService {
             return try hierarchyProviderService.currentNode()
         } catch {
             return .init(
-                value: .fatalError
+                value: .initAsFatalError
             )
         }
     }

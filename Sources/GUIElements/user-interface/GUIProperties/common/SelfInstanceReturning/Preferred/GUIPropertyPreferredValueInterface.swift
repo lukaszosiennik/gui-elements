@@ -3,20 +3,9 @@
 //  Copyright © 2021 openplainness (https://www.openplainness.com). All rights reserved.
 //
 
-import commons
-
-public protocol GUIPropertyPreferredValueInterface:
-    SelfSingleInstanceReturningInterface {
+public protocol GUIPropertyPreferredValueInterface {
     
     static var preferred: Self? {
         get
-    }
-}
-
-extension GUIPropertyPreferredValueInterface {
-// : SelfSingleInstanceReturningInterface
-    
-    public static var valueName: Self? {
-        return preferred
     }
 }

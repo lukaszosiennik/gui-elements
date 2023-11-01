@@ -6,41 +6,45 @@
 import commons
 
 extension MenuHierarchyNodeValue:
-    EmptyDataInterface {
+    BasicGroupedInitDataInterface {
     
-    public static var empty: Self {
+    public static var initAsEmpty: Self {
         .init(
-            strings: .empty
+            strings: .initAsEmpty
         )
     }
-}
-
-extension MenuHierarchyNodeValue:
-    FatalErrorDataInterface {
     
-    public static var fatalError: Self {
+    public static var initAsFatalError: Self {
         .init(
-            strings: .fatalError
+            strings: .initAsFatalError
         )
     }
-}
-
-extension MenuHierarchyNodeValue.LocalizationStrings:
-    EmptyDataInterface {
     
-    public static var empty: Self {
+    public static var initAsMock: Self {
         .init(
-            title: String.commons.empty
+            strings: .initAsMock
         )
     }
 }
 
 extension MenuHierarchyNodeValue.LocalizationStrings:
-    FatalErrorDataInterface {
+    BasicGroupedInitDataInterface {
     
-    public static var fatalError: Self {
+    public static var initAsEmpty: Self {
         .init(
-            title: String.commons.fatalError
+            title: String.commons.initAsEmpty
+        )
+    }
+    
+    public static var initAsFatalError: Self {
+        .init(
+            title: String.commons.initAsFatalError
+        )
+    }
+    
+    public static var initAsMock: Self {
+        .init(
+            title: String.commons.initAsMock
         )
     }
 }
