@@ -3,26 +3,15 @@
 //  Copyright © 2023 openplainness (https://www.openplainness.com). All rights reserved.
 //
 
-public protocol NavigationMenuProviderServiceInterface {
+public final class NavigationMenuProviderServiceTemplate {
+ 
+    private let hierarchyProviderService: NavigationMenuHierarchyProviderServiceInterface
     
-    var hierarchyProviderService: NavigationMenuHierarchyProviderServiceInterface {
-        get
-    }
-    
-    init(
+    public init(
         hierarchyProviderService: NavigationMenuHierarchyProviderServiceInterface
-    )
-    
-    var rootNode: MenuHierarchyNode {
-        get
+    ) {
+        self.hierarchyProviderService = hierarchyProviderService
     }
-    
-    var currentNode: MenuHierarchyNode {
-        get
-    }
-}
-
-extension NavigationMenuProviderServiceInterface {
     
     public var rootNode: MenuHierarchyNode {
         do {
