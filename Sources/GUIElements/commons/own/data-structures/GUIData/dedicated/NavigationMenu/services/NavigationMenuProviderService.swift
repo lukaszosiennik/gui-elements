@@ -3,7 +3,7 @@
 //  Copyright © 2023 openplainness (https://www.openplainness.com). All rights reserved.
 //
 
-public final class NavigationMenuProviderServiceTemplate {
+public final class NavigationMenuProviderService {
  
     private let hierarchyProviderService: NavigationMenuHierarchyProviderServiceInterface
     
