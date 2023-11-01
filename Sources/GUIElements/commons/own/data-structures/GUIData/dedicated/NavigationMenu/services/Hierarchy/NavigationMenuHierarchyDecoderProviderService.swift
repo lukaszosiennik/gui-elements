@@ -25,7 +25,11 @@ public final class NavigationMenuHierarchyDecoderProviderService:
         self.actions = actions
     }
     
-    public func rootNode() throws -> MenuHierarchyNode {
+    public func currentNode() throws -> MenuHierarchyNode {
+        return try rootNode()
+    }
+    
+    private func rootNode() throws -> MenuHierarchyNode {
         do {
             return try node(
                 from: try decoder.decode()
@@ -35,10 +39,6 @@ public final class NavigationMenuHierarchyDecoderProviderService:
                 error
             )
         }
-    }
-    
-    public func currentNode() throws -> MenuHierarchyNode {
-        return try rootNode()
     }
     
     private func node(

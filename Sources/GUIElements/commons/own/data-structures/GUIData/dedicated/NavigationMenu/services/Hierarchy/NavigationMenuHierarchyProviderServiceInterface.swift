@@ -5,7 +5,5 @@
 
 public protocol NavigationMenuHierarchyProviderServiceInterface {
     
-    func rootNode() throws -> MenuHierarchyNode
-    
     func currentNode() throws -> MenuHierarchyNode
 }

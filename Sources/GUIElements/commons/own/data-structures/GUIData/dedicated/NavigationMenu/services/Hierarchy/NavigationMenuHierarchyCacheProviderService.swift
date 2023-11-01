@@ -6,19 +6,12 @@
 public final class NavigationMenuHierarchyCacheProviderService: 
     NavigationMenuHierarchyProviderServiceInterface {
     
-    private let rootHierarchyNode: MenuHierarchyNode
     private let currentHierarchyNode: MenuHierarchyNode
     
     public init(
-        rootNode: MenuHierarchyNode,
         currentNode: MenuHierarchyNode
     ) {
-        self.rootHierarchyNode = rootNode
         self.currentHierarchyNode = currentNode
-    }
-    
-    public func rootNode() throws -> MenuHierarchyNode {
-        return rootHierarchyNode
     }
     
     public func currentNode() throws -> MenuHierarchyNode {

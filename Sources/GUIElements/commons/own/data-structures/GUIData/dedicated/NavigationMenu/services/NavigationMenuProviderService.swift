@@ -13,16 +13,6 @@ public final class NavigationMenuProviderService {
         self.hierarchyProviderService = hierarchyProviderService
     }
     
-    public var rootNode: MenuHierarchyNode {
-        do {
-            return try hierarchyProviderService.rootNode()
-        } catch {
-            return .init(
-                value: .fatalError
-            )
-        }
-    }
-    
     public var currentNode: MenuHierarchyNode {
         do {
             return try hierarchyProviderService.currentNode()
