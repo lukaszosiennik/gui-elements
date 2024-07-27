@@ -17,7 +17,7 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "git@gitlab.com:openplainness/libraries/apple/commons.git",
+            url: "git@github.com:lukaszosiennik/commons.git",
             .branch("develop")
         ),
     ],
