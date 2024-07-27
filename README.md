@@ -4,7 +4,8 @@
 
 ### Library architecture
 
-![image info](./docs/UML/class-diagrams/library_architecture.png)
+![svg info](./docs/UML/class-diagrams/library_architecture.svg)
+[Download diagram as PDF](./docs/UML/class-diagrams/library_architecture.pdf)
 
 ### All GUI-related components division
 
