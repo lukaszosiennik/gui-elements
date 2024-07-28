@@ -15,13 +15,11 @@ let package = Package(
             ]
         ),
     ],
-    dependencies: [
-        .package(
-            url: "git@github.com:lukaszosiennik/commons.git",
-            .branch("develop")
-        ),
-    ],
     targets: [
+        .target(
+            name: "commons",
+            dependencies: []
+        ),
         .target(
             name: "GUIElements",
             dependencies: [
