@@ -17,8 +17,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "commons",
-            dependencies: []
+            name: "commons"
         ),
         .target(
             name: "GUIElements",
