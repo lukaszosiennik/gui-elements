@@ -1,6 +1,6 @@
 //
 //  Created by Łukasz Osiennik on 16/08/2021.
-//  Copyright © 2020 openplainness (https://www.openplainness.com). All rights reserved.
+//  Copyright © 2020 Łukasz Osiennik. All rights reserved.
 //
 
 public struct InformationGUIComponentScreenStylePropertiesLookParams:
