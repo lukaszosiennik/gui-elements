@@ -3,7 +3,7 @@
     "pins": [
       {
         "package": "commons",
-        "repositoryURL": "git@gitlab.com:openplainness/libraries/apple/commons.git",
+        "repositoryURL": "git@github.com:lukaszosiennik/commons.git",
         "state": {
           "branch": "develop",
           "revision": "2d9d102cf2d28bab59860643435e6f8a2686d0be",
